@@ -1,0 +1,113 @@
+
+#nullable enable
+
+namespace Opik
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class DatasetWrite
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public global::System.Guid? Id { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Name { get; set; }
+
+        /// <summary>
+        /// Project ID. Takes precedence over project_name when both are provided.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
+        public global::System.Guid? ProjectId { get; set; }
+
+        /// <summary>
+        /// For project scope, specify either project_id or project_name. If project_name is provided and the project does not exist, it will be created. Ignored when project_id is provided. If neither is provided, the dataset is created at workspace level.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("project_name")]
+        public string? ProjectName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.DatasetWriteTypeJsonConverter))]
+        public global::Opik.DatasetWriteType? Type { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.DatasetWriteVisibilityJsonConverter))]
+        public global::Opik.DatasetWriteVisibility? Visibility { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.IList<string>? Tags { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DatasetWrite" /> class.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="projectId">
+        /// Project ID. Takes precedence over project_name when both are provided.
+        /// </param>
+        /// <param name="projectName">
+        /// For project scope, specify either project_id or project_name. If project_name is provided and the project does not exist, it will be created. Ignored when project_id is provided. If neither is provided, the dataset is created at workspace level.
+        /// </param>
+        /// <param name="type"></param>
+        /// <param name="visibility"></param>
+        /// <param name="tags"></param>
+        /// <param name="description"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public DatasetWrite(
+            string name,
+            global::System.Guid? id,
+            global::System.Guid? projectId,
+            string? projectName,
+            global::Opik.DatasetWriteType? type,
+            global::Opik.DatasetWriteVisibility? visibility,
+            global::System.Collections.Generic.IList<string>? tags,
+            string? description)
+        {
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Id = id;
+            this.ProjectId = projectId;
+            this.ProjectName = projectName;
+            this.Type = type;
+            this.Visibility = visibility;
+            this.Tags = tags;
+            this.Description = description;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DatasetWrite" /> class.
+        /// </summary>
+        public DatasetWrite()
+        {
+        }
+    }
+}

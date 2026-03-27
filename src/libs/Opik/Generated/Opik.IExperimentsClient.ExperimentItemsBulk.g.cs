@@ -1,0 +1,37 @@
+#nullable enable
+
+namespace Opik
+{
+    public partial interface IExperimentsClient
+    {
+        /// <summary>
+        /// Record experiment items in bulk<br/>
+        /// Record experiment items in bulk with traces, spans, and feedback scores. Maximum request size is 4MB.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task ExperimentItemsBulkAsync(
+
+            global::Opik.ExperimentItemBulkUploadExperimentItemBulkWriteView request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Record experiment items in bulk<br/>
+        /// Record experiment items in bulk with traces, spans, and feedback scores. Maximum request size is 4MB.
+        /// </summary>
+        /// <param name="experimentName"></param>
+        /// <param name="datasetName"></param>
+        /// <param name="experimentId">
+        /// Optional experiment ID. If provided, items will be added to the existing experiment and experimentName will be ignored. If not provided or experiment with that ID doesn't exist, a new experiment will be created with the given experimentName
+        /// </param>
+        /// <param name="items"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task ExperimentItemsBulkAsync(
+            string experimentName,
+            string datasetName,
+            global::System.Collections.Generic.IList<global::Opik.ExperimentItemBulkRecordExperimentItemBulkWriteView> items,
+            global::System.Guid? experimentId = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

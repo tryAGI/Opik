@@ -1,0 +1,45 @@
+#nullable enable
+
+namespace Opik
+{
+    public partial interface IAttachmentsClient
+    {
+        /// <summary>
+        /// Complete multipart attachment upload<br/>
+        /// Complete multipart attachment upload
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task CompleteMultiPartUploadAsync(
+
+            global::Opik.CompleteMultipartUploadRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Complete multipart attachment upload<br/>
+        /// Complete multipart attachment upload
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="projectName">
+        /// If null, the default project is used
+        /// </param>
+        /// <param name="entityType"></param>
+        /// <param name="entityId"></param>
+        /// <param name="fileSize"></param>
+        /// <param name="mimeType"></param>
+        /// <param name="uploadId"></param>
+        /// <param name="uploadedFileParts"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task CompleteMultiPartUploadAsync(
+            string fileName,
+            global::Opik.CompleteMultipartUploadRequestEntityType entityType,
+            global::System.Guid entityId,
+            long fileSize,
+            string uploadId,
+            global::System.Collections.Generic.IList<global::Opik.MultipartUploadPart> uploadedFileParts,
+            string? projectName = default,
+            string? mimeType = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

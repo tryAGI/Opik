@@ -1,0 +1,178 @@
+
+#nullable enable
+
+namespace Opik
+{
+    public partial class WorkspacesClient
+    {
+        partial void PrepareGetWorkspaceVersionArguments(
+            global::System.Net.Http.HttpClient httpClient);
+        partial void PrepareGetWorkspaceVersionRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage);
+        partial void ProcessGetWorkspaceVersionResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessGetWorkspaceVersionResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// Get workspace version<br/>
+        /// Determines whether the workspace should use Opik V1 (legacy workspace-scoped)<br/>
+        /// or Opik V2 (project-first) navigation. The backend is the single authority for this<br/>
+        /// determination, clients must never derive the version themselves.<br/>
+        /// Determination logic (priority order):<br/>
+        /// 1) Feature flag override (TOGGLE_FORCE_WORKSPACE_VERSION)<br/>
+        /// 2) Auth one-way V2 gate (authenticated mode only, not yet implemented)<br/>
+        /// 3) Version 1 entity check (entities without project_id)<br/>
+        /// 4) Fallback on failure<br/>
+        /// In unauthenticated mode (authentication.enabled=false), auth steps are skipped.<br/>
+        /// Called by the frontend on workspace load.
+        /// </summary>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Opik.WorkspaceVersion> GetWorkspaceVersionAsync(
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            PrepareArguments(
+                client: HttpClient);
+            PrepareGetWorkspaceVersionArguments(
+                httpClient: HttpClient);
+
+            var __pathBuilder = new global::Opik.PathBuilder(
+                path: "/v1/private/workspaces/versions",
+                baseUri: HttpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
+            using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                method: global::System.Net.Http.HttpMethod.Get,
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+#if NET6_0_OR_GREATER
+            __httpRequest.Version = global::System.Net.HttpVersion.Version11;
+            __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
+#endif
+
+            foreach (var __authorization in Authorizations)
+            {
+                if (__authorization.Type == "Http" ||
+                    __authorization.Type == "OAuth2")
+                {
+                    __httpRequest.Headers.Authorization = new global::System.Net.Http.Headers.AuthenticationHeaderValue(
+                        scheme: __authorization.Name,
+                        parameter: __authorization.Value);
+                }
+                else if (__authorization.Type == "ApiKey" &&
+                         __authorization.Location == "Header")
+                {
+                    __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
+                }
+            }
+
+            PrepareRequest(
+                client: HttpClient,
+                request: __httpRequest);
+            PrepareGetWorkspaceVersionRequest(
+                httpClient: HttpClient,
+                httpRequestMessage: __httpRequest);
+
+            using var __response = await HttpClient.SendAsync(
+                request: __httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+
+            ProcessResponse(
+                client: HttpClient,
+                response: __response);
+            ProcessGetWorkspaceVersionResponse(
+                httpClient: HttpClient,
+                httpResponseMessage: __response);
+
+            if (ReadResponseAsString)
+            {
+                var __content = await __response.Content.ReadAsStringAsync(
+#if NET5_0_OR_GREATER
+                    cancellationToken
+#endif
+                ).ConfigureAwait(false);
+
+                ProcessResponseContent(
+                    client: HttpClient,
+                    response: __response,
+                    content: ref __content);
+                ProcessGetWorkspaceVersionResponseContent(
+                    httpClient: HttpClient,
+                    httpResponseMessage: __response,
+                    content: ref __content);
+
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+
+                    return
+                        global::Opik.WorkspaceVersion.FromJson(__content, JsonSerializerContext) ??
+                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                }
+                catch (global::System.Exception __ex)
+                {
+                    throw new global::Opik.ApiException(
+                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseBody = __content,
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+            }
+            else
+            {
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+
+                    using var __content = await __response.Content.ReadAsStreamAsync(
+#if NET5_0_OR_GREATER
+                        cancellationToken
+#endif
+                    ).ConfigureAwait(false);
+
+                    return
+                        await global::Opik.WorkspaceVersion.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                }
+                catch (global::System.Exception __ex)
+                {
+                    string? __content = null;
+                    try
+                    {
+                        __content = await __response.Content.ReadAsStringAsync(
+#if NET5_0_OR_GREATER
+                            cancellationToken
+#endif
+                        ).ConfigureAwait(false);
+                    }
+                    catch (global::System.Exception)
+                    {
+                    }
+
+                    throw new global::Opik.ApiException(
+                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseBody = __content,
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+            }
+        }
+    }
+}

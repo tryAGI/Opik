@@ -1,0 +1,60 @@
+#nullable enable
+
+namespace Opik.JsonConverters
+{
+    /// <inheritdoc />
+    public sealed class DashboardPublicTypeNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Opik.DashboardPublicType?>
+    {
+        /// <inheritdoc />
+        public override global::Opik.DashboardPublicType? Read(
+            ref global::System.Text.Json.Utf8JsonReader reader,
+            global::System.Type typeToConvert,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            switch (reader.TokenType)
+            {
+                case global::System.Text.Json.JsonTokenType.String:
+                {
+                    var stringValue = reader.GetString();
+                    if (stringValue != null)
+                    {
+                        return global::Opik.DashboardPublicTypeExtensions.ToEnum(stringValue);
+                    }
+                    
+                    break;
+                }
+                case global::System.Text.Json.JsonTokenType.Number:
+                {
+                    var numValue = reader.GetInt32();
+                    return (global::Opik.DashboardPublicType)numValue;
+                }
+                case global::System.Text.Json.JsonTokenType.Null:
+                {
+                    return default(global::Opik.DashboardPublicType?);
+                }
+                default:
+                    throw new global::System.ArgumentOutOfRangeException(nameof(reader));
+            }
+
+            return default;
+        }
+
+        /// <inheritdoc />
+        public override void Write(
+            global::System.Text.Json.Utf8JsonWriter writer,
+            global::Opik.DashboardPublicType? value,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
+
+            if (value == null)
+            {
+                writer.WriteNullValue();
+            }
+            else
+            {
+                writer.WriteStringValue(global::Opik.DashboardPublicTypeExtensions.ToValueString(value.Value));
+            }
+        }
+    }
+}
