@@ -3,56 +3,55 @@
 
 namespace Opik
 {
-    public partial class ExperimentsClient
+    public partial class ProjectsClient
     {
-        partial void PrepareFindFeedbackScoreNamesArguments(
+        partial void PrepareGetProjectKpiCardsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string? experimentIds,
-            ref global::System.Guid? projectId);
-        partial void PrepareFindFeedbackScoreNamesRequest(
+            ref global::System.Guid id,
+            global::Opik.KpiCardRequest request);
+        partial void PrepareGetProjectKpiCardsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string? experimentIds,
-            global::System.Guid? projectId);
-        partial void ProcessFindFeedbackScoreNamesResponse(
+            global::System.Guid id,
+            global::Opik.KpiCardRequest request);
+        partial void ProcessGetProjectKpiCardsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessFindFeedbackScoreNamesResponseContent(
+        partial void ProcessGetProjectKpiCardsResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Find Feedback Score names<br/>
-        /// Find Feedback Score names
+        /// Get Project KPI Cards<br/>
+        /// Gets KPI card metrics for a project
         /// </summary>
-        /// <param name="experimentIds"></param>
-        /// <param name="projectId"></param>
+        /// <param name="id"></param>
+        /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.FeedbackScoreNamesPublic> FindFeedbackScoreNamesAsync(
-            string? experimentIds = default,
-            global::System.Guid? projectId = default,
+        public async global::System.Threading.Tasks.Task<global::Opik.KpiCardResponse> GetProjectKpiCardsAsync(
+            global::System.Guid id,
+
+            global::Opik.KpiCardRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
-            PrepareFindFeedbackScoreNamesArguments(
+            PrepareGetProjectKpiCardsArguments(
                 httpClient: HttpClient,
-                experimentIds: ref experimentIds,
-                projectId: ref projectId);
+                id: ref id,
+                request: request);
 
             var __pathBuilder = new global::Opik.PathBuilder(
-                path: "/v1/private/experiments/feedback-scores/names",
+                path: $"/v1/private/projects/{id}/kpi-cards",
                 baseUri: HttpClient.BaseAddress); 
-            __pathBuilder
-                .AddOptionalParameter("experiment_ids", experimentIds)
-                .AddOptionalParameter("project_id", projectId?.ToString()) 
-                ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Get,
+                method: global::System.Net.Http.HttpMethod.Post,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -74,15 +73,21 @@ namespace Opik
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                content: __httpRequestContentBody,
+                encoding: global::System.Text.Encoding.UTF8,
+                mediaType: "application/json");
+            __httpRequest.Content = __httpRequestContent;
 
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareFindFeedbackScoreNamesRequest(
+            PrepareGetProjectKpiCardsRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
-                experimentIds: experimentIds,
-                projectId: projectId);
+                id: id,
+                request: request);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
@@ -92,9 +97,47 @@ namespace Opik
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessFindFeedbackScoreNamesResponse(
+            ProcessGetProjectKpiCardsResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
+            // Bad Request
+            if ((int)__response.StatusCode == 400)
+            {
+                string? __content_400 = null;
+                global::System.Exception? __exception_400 = null;
+                global::Opik.ErrorMessage? __value_400 = null;
+                try
+                {
+                    if (ReadResponseAsString)
+                    {
+                        __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
+                    }
+                    else
+                    {
+                        __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+
+                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
+                    }
+                }
+                catch (global::System.Exception __ex)
+                {
+                    __exception_400 = __ex;
+                }
+
+                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                    innerException: __exception_400,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_400,
+                    ResponseObject = __value_400,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
 
             if (ReadResponseAsString)
             {
@@ -108,7 +151,7 @@ namespace Opik
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessFindFeedbackScoreNamesResponseContent(
+                ProcessGetProjectKpiCardsResponseContent(
                     httpClient: HttpClient,
                     httpResponseMessage: __response,
                     content: ref __content);
@@ -118,7 +161,7 @@ namespace Opik
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Opik.FeedbackScoreNamesPublic.FromJson(__content, JsonSerializerContext) ??
+                        global::Opik.KpiCardResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -149,7 +192,7 @@ namespace Opik
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Opik.FeedbackScoreNamesPublic.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::Opik.KpiCardResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -180,6 +223,38 @@ namespace Opik
                     };
                 }
             }
+        }
+        /// <summary>
+        /// Get Project KPI Cards<br/>
+        /// Gets KPI card metrics for a project
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="entityType"></param>
+        /// <param name="filters"></param>
+        /// <param name="intervalStart"></param>
+        /// <param name="intervalEnd"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Opik.KpiCardResponse> GetProjectKpiCardsAsync(
+            global::System.Guid id,
+            global::Opik.KpiCardRequestEntityType entityType,
+            global::System.DateTime intervalStart,
+            global::System.DateTime intervalEnd,
+            string? filters = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::Opik.KpiCardRequest
+            {
+                EntityType = entityType,
+                Filters = filters,
+                IntervalStart = intervalStart,
+                IntervalEnd = intervalEnd,
+            };
+
+            return await GetProjectKpiCardsAsync(
+                id: id,
+                request: __request,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
