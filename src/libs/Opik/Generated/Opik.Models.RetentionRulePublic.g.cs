@@ -79,6 +79,20 @@ namespace Opik
         public global::System.DateTime? LastUpdatedAt { get; set; }
 
         /// <summary>
+        /// Current position of historical data cleanup<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("catch_up_cursor")]
+        public global::System.Guid? CatchUpCursor { get; set; }
+
+        /// <summary>
+        /// Whether historical catch-up is complete<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("catch_up_done")]
+        public bool? CatchUpDone { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -115,6 +129,14 @@ namespace Opik
         /// <param name="lastUpdatedAt">
         /// Included only in responses
         /// </param>
+        /// <param name="catchUpCursor">
+        /// Current position of historical data cleanup<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="catchUpDone">
+        /// Whether historical catch-up is complete<br/>
+        /// Included only in responses
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -129,7 +151,9 @@ namespace Opik
             string? createdBy,
             global::System.DateTime? createdAt,
             string? lastUpdatedBy,
-            global::System.DateTime? lastUpdatedAt)
+            global::System.DateTime? lastUpdatedAt,
+            global::System.Guid? catchUpCursor,
+            bool? catchUpDone)
         {
             this.Retention = retention;
             this.Id = id;
@@ -142,6 +166,8 @@ namespace Opik
             this.CreatedAt = createdAt;
             this.LastUpdatedBy = lastUpdatedBy;
             this.LastUpdatedAt = lastUpdatedAt;
+            this.CatchUpCursor = catchUpCursor;
+            this.CatchUpDone = catchUpDone;
         }
 
         /// <summary>
