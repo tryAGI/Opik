@@ -605,6 +605,14 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.ProjectPublicVisibilityNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.KpiMetricTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.KpiMetricTypeNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.KpiCardRequestEntityTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.KpiCardRequestEntityTypeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeNullableJsonConverter),
@@ -1546,6 +1554,12 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ScoreName>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ScoreName))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TokenUsageNames))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.KpiCardResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.KpiMetric>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.KpiMetric))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.KpiMetricType))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.KpiCardRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.KpiCardRequestEntityType))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DataPointNumberPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectMetricResponsePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectMetricResponsePublicMetricType))]
@@ -1834,6 +1848,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.PromptPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ScoreName>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.KpiMetric>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ResultsNumberPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.DataPointNumberPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectStatsSummaryItem>))]
