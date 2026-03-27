@@ -19,15 +19,15 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        Equal,
+        Eq,
         /// <summary>
         /// 
         /// </summary>
-        GreaterOrEqual,
+        Gt,
         /// <summary>
         /// 
         /// </summary>
-        GreaterThan,
+        Gte,
         /// <summary>
         /// 
         /// </summary>
@@ -39,19 +39,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        LessOrEqual,
+        Lt,
         /// <summary>
         /// 
         /// </summary>
-        LessThan,
+        Lte,
+        /// <summary>
+        /// 
+        /// </summary>
+        Neq,
         /// <summary>
         /// 
         /// </summary>
         NotContains,
-        /// <summary>
-        /// 
-        /// </summary>
-        NotEqual,
         /// <summary>
         /// 
         /// </summary>
@@ -72,15 +72,15 @@ namespace Opik
             {
                 SpanFilterWriteOperator.Contains => "contains",
                 SpanFilterWriteOperator.EndsWith => "ends_with",
-                SpanFilterWriteOperator.Equal => "equal",
-                SpanFilterWriteOperator.GreaterOrEqual => "greater_or_equal",
-                SpanFilterWriteOperator.GreaterThan => "greater_than",
+                SpanFilterWriteOperator.Eq => "eq",
+                SpanFilterWriteOperator.Gt => "gt",
+                SpanFilterWriteOperator.Gte => "gte",
                 SpanFilterWriteOperator.IsEmpty => "is_empty",
                 SpanFilterWriteOperator.IsNotEmpty => "is_not_empty",
-                SpanFilterWriteOperator.LessOrEqual => "less_or_equal",
-                SpanFilterWriteOperator.LessThan => "less_than",
+                SpanFilterWriteOperator.Lt => "lt",
+                SpanFilterWriteOperator.Lte => "lte",
+                SpanFilterWriteOperator.Neq => "neq",
                 SpanFilterWriteOperator.NotContains => "not_contains",
-                SpanFilterWriteOperator.NotEqual => "not_equal",
                 SpanFilterWriteOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -94,15 +94,15 @@ namespace Opik
             {
                 "contains" => SpanFilterWriteOperator.Contains,
                 "ends_with" => SpanFilterWriteOperator.EndsWith,
-                "equal" => SpanFilterWriteOperator.Equal,
-                "greater_or_equal" => SpanFilterWriteOperator.GreaterOrEqual,
-                "greater_than" => SpanFilterWriteOperator.GreaterThan,
+                "eq" => SpanFilterWriteOperator.Eq,
+                "gt" => SpanFilterWriteOperator.Gt,
+                "gte" => SpanFilterWriteOperator.Gte,
                 "is_empty" => SpanFilterWriteOperator.IsEmpty,
                 "is_not_empty" => SpanFilterWriteOperator.IsNotEmpty,
-                "less_or_equal" => SpanFilterWriteOperator.LessOrEqual,
-                "less_than" => SpanFilterWriteOperator.LessThan,
+                "lt" => SpanFilterWriteOperator.Lt,
+                "lte" => SpanFilterWriteOperator.Lte,
+                "neq" => SpanFilterWriteOperator.Neq,
                 "not_contains" => SpanFilterWriteOperator.NotContains,
-                "not_equal" => SpanFilterWriteOperator.NotEqual,
                 "starts_with" => SpanFilterWriteOperator.StartsWith,
                 _ => null,
             };

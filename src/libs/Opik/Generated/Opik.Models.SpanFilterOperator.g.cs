@@ -19,15 +19,15 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        Equal,
+        Eq,
         /// <summary>
         /// 
         /// </summary>
-        GreaterOrEqual,
+        Gt,
         /// <summary>
         /// 
         /// </summary>
-        GreaterThan,
+        Gte,
         /// <summary>
         /// 
         /// </summary>
@@ -39,19 +39,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        LessOrEqual,
+        Lt,
         /// <summary>
         /// 
         /// </summary>
-        LessThan,
+        Lte,
+        /// <summary>
+        /// 
+        /// </summary>
+        Neq,
         /// <summary>
         /// 
         /// </summary>
         NotContains,
-        /// <summary>
-        /// 
-        /// </summary>
-        NotEqual,
         /// <summary>
         /// 
         /// </summary>
@@ -72,15 +72,15 @@ namespace Opik
             {
                 SpanFilterOperator.Contains => "contains",
                 SpanFilterOperator.EndsWith => "ends_with",
-                SpanFilterOperator.Equal => "equal",
-                SpanFilterOperator.GreaterOrEqual => "greater_or_equal",
-                SpanFilterOperator.GreaterThan => "greater_than",
+                SpanFilterOperator.Eq => "eq",
+                SpanFilterOperator.Gt => "gt",
+                SpanFilterOperator.Gte => "gte",
                 SpanFilterOperator.IsEmpty => "is_empty",
                 SpanFilterOperator.IsNotEmpty => "is_not_empty",
-                SpanFilterOperator.LessOrEqual => "less_or_equal",
-                SpanFilterOperator.LessThan => "less_than",
+                SpanFilterOperator.Lt => "lt",
+                SpanFilterOperator.Lte => "lte",
+                SpanFilterOperator.Neq => "neq",
                 SpanFilterOperator.NotContains => "not_contains",
-                SpanFilterOperator.NotEqual => "not_equal",
                 SpanFilterOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -94,15 +94,15 @@ namespace Opik
             {
                 "contains" => SpanFilterOperator.Contains,
                 "ends_with" => SpanFilterOperator.EndsWith,
-                "equal" => SpanFilterOperator.Equal,
-                "greater_or_equal" => SpanFilterOperator.GreaterOrEqual,
-                "greater_than" => SpanFilterOperator.GreaterThan,
+                "eq" => SpanFilterOperator.Eq,
+                "gt" => SpanFilterOperator.Gt,
+                "gte" => SpanFilterOperator.Gte,
                 "is_empty" => SpanFilterOperator.IsEmpty,
                 "is_not_empty" => SpanFilterOperator.IsNotEmpty,
-                "less_or_equal" => SpanFilterOperator.LessOrEqual,
-                "less_than" => SpanFilterOperator.LessThan,
+                "lt" => SpanFilterOperator.Lt,
+                "lte" => SpanFilterOperator.Lte,
+                "neq" => SpanFilterOperator.Neq,
                 "not_contains" => SpanFilterOperator.NotContains,
-                "not_equal" => SpanFilterOperator.NotEqual,
                 "starts_with" => SpanFilterOperator.StartsWith,
                 _ => null,
             };

@@ -19,15 +19,15 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        Equal,
+        Eq,
         /// <summary>
         /// 
         /// </summary>
-        GreaterOrEqual,
+        Gt,
         /// <summary>
         /// 
         /// </summary>
-        GreaterThan,
+        Gte,
         /// <summary>
         /// 
         /// </summary>
@@ -39,19 +39,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        LessOrEqual,
+        Lt,
         /// <summary>
         /// 
         /// </summary>
-        LessThan,
+        Lte,
+        /// <summary>
+        /// 
+        /// </summary>
+        Neq,
         /// <summary>
         /// 
         /// </summary>
         NotContains,
-        /// <summary>
-        /// 
-        /// </summary>
-        NotEqual,
         /// <summary>
         /// 
         /// </summary>
@@ -72,15 +72,15 @@ namespace Opik
             {
                 SpanFilterPublicOperator.Contains => "contains",
                 SpanFilterPublicOperator.EndsWith => "ends_with",
-                SpanFilterPublicOperator.Equal => "equal",
-                SpanFilterPublicOperator.GreaterOrEqual => "greater_or_equal",
-                SpanFilterPublicOperator.GreaterThan => "greater_than",
+                SpanFilterPublicOperator.Eq => "eq",
+                SpanFilterPublicOperator.Gt => "gt",
+                SpanFilterPublicOperator.Gte => "gte",
                 SpanFilterPublicOperator.IsEmpty => "is_empty",
                 SpanFilterPublicOperator.IsNotEmpty => "is_not_empty",
-                SpanFilterPublicOperator.LessOrEqual => "less_or_equal",
-                SpanFilterPublicOperator.LessThan => "less_than",
+                SpanFilterPublicOperator.Lt => "lt",
+                SpanFilterPublicOperator.Lte => "lte",
+                SpanFilterPublicOperator.Neq => "neq",
                 SpanFilterPublicOperator.NotContains => "not_contains",
-                SpanFilterPublicOperator.NotEqual => "not_equal",
                 SpanFilterPublicOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -94,15 +94,15 @@ namespace Opik
             {
                 "contains" => SpanFilterPublicOperator.Contains,
                 "ends_with" => SpanFilterPublicOperator.EndsWith,
-                "equal" => SpanFilterPublicOperator.Equal,
-                "greater_or_equal" => SpanFilterPublicOperator.GreaterOrEqual,
-                "greater_than" => SpanFilterPublicOperator.GreaterThan,
+                "eq" => SpanFilterPublicOperator.Eq,
+                "gt" => SpanFilterPublicOperator.Gt,
+                "gte" => SpanFilterPublicOperator.Gte,
                 "is_empty" => SpanFilterPublicOperator.IsEmpty,
                 "is_not_empty" => SpanFilterPublicOperator.IsNotEmpty,
-                "less_or_equal" => SpanFilterPublicOperator.LessOrEqual,
-                "less_than" => SpanFilterPublicOperator.LessThan,
+                "lt" => SpanFilterPublicOperator.Lt,
+                "lte" => SpanFilterPublicOperator.Lte,
+                "neq" => SpanFilterPublicOperator.Neq,
                 "not_contains" => SpanFilterPublicOperator.NotContains,
-                "not_equal" => SpanFilterPublicOperator.NotEqual,
                 "starts_with" => SpanFilterPublicOperator.StartsWith,
                 _ => null,
             };

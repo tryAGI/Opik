@@ -19,15 +19,15 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        Equal,
+        Eq,
         /// <summary>
         /// 
         /// </summary>
-        GreaterOrEqual,
+        Gt,
         /// <summary>
         /// 
         /// </summary>
-        GreaterThan,
+        Gte,
         /// <summary>
         /// 
         /// </summary>
@@ -39,19 +39,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        LessOrEqual,
+        Lt,
         /// <summary>
         /// 
         /// </summary>
-        LessThan,
+        Lte,
+        /// <summary>
+        /// 
+        /// </summary>
+        Neq,
         /// <summary>
         /// 
         /// </summary>
         NotContains,
-        /// <summary>
-        /// 
-        /// </summary>
-        NotEqual,
         /// <summary>
         /// 
         /// </summary>
@@ -72,15 +72,15 @@ namespace Opik
             {
                 TraceThreadFilterOperator.Contains => "contains",
                 TraceThreadFilterOperator.EndsWith => "ends_with",
-                TraceThreadFilterOperator.Equal => "equal",
-                TraceThreadFilterOperator.GreaterOrEqual => "greater_or_equal",
-                TraceThreadFilterOperator.GreaterThan => "greater_than",
+                TraceThreadFilterOperator.Eq => "eq",
+                TraceThreadFilterOperator.Gt => "gt",
+                TraceThreadFilterOperator.Gte => "gte",
                 TraceThreadFilterOperator.IsEmpty => "is_empty",
                 TraceThreadFilterOperator.IsNotEmpty => "is_not_empty",
-                TraceThreadFilterOperator.LessOrEqual => "less_or_equal",
-                TraceThreadFilterOperator.LessThan => "less_than",
+                TraceThreadFilterOperator.Lt => "lt",
+                TraceThreadFilterOperator.Lte => "lte",
+                TraceThreadFilterOperator.Neq => "neq",
                 TraceThreadFilterOperator.NotContains => "not_contains",
-                TraceThreadFilterOperator.NotEqual => "not_equal",
                 TraceThreadFilterOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -94,15 +94,15 @@ namespace Opik
             {
                 "contains" => TraceThreadFilterOperator.Contains,
                 "ends_with" => TraceThreadFilterOperator.EndsWith,
-                "equal" => TraceThreadFilterOperator.Equal,
-                "greater_or_equal" => TraceThreadFilterOperator.GreaterOrEqual,
-                "greater_than" => TraceThreadFilterOperator.GreaterThan,
+                "eq" => TraceThreadFilterOperator.Eq,
+                "gt" => TraceThreadFilterOperator.Gt,
+                "gte" => TraceThreadFilterOperator.Gte,
                 "is_empty" => TraceThreadFilterOperator.IsEmpty,
                 "is_not_empty" => TraceThreadFilterOperator.IsNotEmpty,
-                "less_or_equal" => TraceThreadFilterOperator.LessOrEqual,
-                "less_than" => TraceThreadFilterOperator.LessThan,
+                "lt" => TraceThreadFilterOperator.Lt,
+                "lte" => TraceThreadFilterOperator.Lte,
+                "neq" => TraceThreadFilterOperator.Neq,
                 "not_contains" => TraceThreadFilterOperator.NotContains,
-                "not_equal" => TraceThreadFilterOperator.NotEqual,
                 "starts_with" => TraceThreadFilterOperator.StartsWith,
                 _ => null,
             };

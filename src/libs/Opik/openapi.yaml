@@ -489,19 +489,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/BlueprintPage_History"
+                $ref: "#/components/schemas/BlueprintPageHistory"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_History"
+                $ref: "#/components/schemas/ErrorMessageHistory"
         "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_History"
+                $ref: "#/components/schemas/ErrorMessageHistory"
   /v1/private/agent-configs/blueprints/{blueprint_id}/deltas:
     get:
       tags:
@@ -2189,7 +2189,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetItemPage_Compare"
+                $ref: "#/components/schemas/DatasetItemPageCompare"
   /v1/private/datasets/retrieve:
     post:
       tags:
@@ -2911,7 +2911,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ExperimentItemBulkUpload_ExperimentItemBulkWriteView"
+              $ref: "#/components/schemas/ExperimentItemBulkUploadExperimentItemBulkWriteView"
       responses:
         "204":
           description: No content
@@ -5236,32 +5236,32 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ProjectRetrieve_Detailed"
+              $ref: "#/components/schemas/ProjectRetrieveDetailed"
       responses:
         "200":
           description: Project resource
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Project_Detailed"
+                $ref: "#/components/schemas/ProjectDetailed"
         "422":
           description: Unprocessable Content
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detailed"
+                $ref: "#/components/schemas/ErrorMessageDetailed"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detailed"
+                $ref: "#/components/schemas/ErrorMessageDetailed"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detailed"
+                $ref: "#/components/schemas/ErrorMessageDetailed"
   /v1/private/prompts:
     get:
       tags:
@@ -5359,32 +5359,32 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/CreatePromptVersion_Detail"
+              $ref: "#/components/schemas/CreatePromptVersionDetail"
       responses:
         "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptVersion_Detail"
+                $ref: "#/components/schemas/PromptVersionDetail"
         "422":
           description: Unprocessable Content
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
         "409":
           description: Conflict
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
     patch:
       tags:
         - Prompts
@@ -5435,13 +5435,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Prompt_Detail"
+                $ref: "#/components/schemas/PromptDetail"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
     put:
       tags:
         - Prompts
@@ -5459,7 +5459,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Prompt_Updatable"
+              $ref: "#/components/schemas/PromptUpdatable"
       responses:
         "204":
           description: No content
@@ -5538,25 +5538,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Prompt_Detail"
+                $ref: "#/components/schemas/PromptDetail"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
         "409":
           description: Conflict
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
   /v1/private/prompts/versions/{versionId}:
     get:
       tags:
@@ -5577,13 +5577,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptVersion_Detail"
+                $ref: "#/components/schemas/PromptVersionDetail"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
   /v1/private/prompts/{id}/versions:
     get:
       tags:
@@ -5679,19 +5679,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptVersion_Detail"
+                $ref: "#/components/schemas/PromptVersionDetail"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
   /v1/private/prompts/versions/retrieve:
     post:
       tags:
@@ -5703,32 +5703,32 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/PromptVersionRetrieve_Detail"
+              $ref: "#/components/schemas/PromptVersionRetrieveDetail"
       responses:
         "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptVersion_Detail"
+                $ref: "#/components/schemas/PromptVersionDetail"
         "422":
           description: Unprocessable Content
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessage_Detail"
+                $ref: "#/components/schemas/ErrorMessageDetail"
   /v1/private/retention/rules:
     get:
       tags:
@@ -7951,7 +7951,7 @@ components:
           type: string
         details:
           type: string
-    AgentBlueprint_History:
+    AgentBlueprintHistory:
       required:
         - type
         - values
@@ -7997,8 +7997,8 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/AgentConfigValue_History"
-    AgentConfigValue_History:
+            $ref: "#/components/schemas/AgentConfigValueHistory"
+    AgentConfigValueHistory:
       required:
         - key
         - type
@@ -8037,7 +8037,7 @@ components:
           type: string
           format: uuid
           readOnly: true
-    BlueprintPage_History:
+    BlueprintPageHistory:
       type: object
       properties:
         page:
@@ -8052,8 +8052,8 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/AgentBlueprint_History"
-    ErrorMessage_History:
+            $ref: "#/components/schemas/AgentBlueprintHistory"
+    ErrorMessageHistory:
       type: object
       properties:
         errors:
@@ -9306,12 +9306,12 @@ components:
             - not_contains
             - starts_with
             - ends_with
-            - equal
-            - not_equal
-            - greater_than
-            - greater_or_equal
-            - less_than
-            - less_or_equal
+            - eq
+            - neq
+            - gt
+            - gte
+            - lt
+            - lte
             - is_empty
             - is_not_empty
         key:
@@ -9365,12 +9365,12 @@ components:
             - not_contains
             - starts_with
             - ends_with
-            - equal
-            - not_equal
-            - greater_than
-            - greater_or_equal
-            - less_than
-            - less_or_equal
+            - eq
+            - neq
+            - gt
+            - gte
+            - lt
+            - lte
             - is_empty
             - is_not_empty
         key:
@@ -9389,12 +9389,12 @@ components:
             - not_contains
             - starts_with
             - ends_with
-            - equal
-            - not_equal
-            - greater_than
-            - greater_or_equal
-            - less_than
-            - less_or_equal
+            - eq
+            - neq
+            - gt
+            - gte
+            - lt
+            - lte
             - is_empty
             - is_not_empty
         key:
@@ -9719,12 +9719,12 @@ components:
             - not_contains
             - starts_with
             - ends_with
-            - equal
-            - not_equal
-            - greater_than
-            - greater_or_equal
-            - less_than
-            - less_or_equal
+            - eq
+            - neq
+            - gt
+            - gte
+            - lt
+            - lte
             - is_empty
             - is_not_empty
         key:
@@ -9778,12 +9778,12 @@ components:
             - not_contains
             - starts_with
             - ends_with
-            - equal
-            - not_equal
-            - greater_than
-            - greater_or_equal
-            - less_than
-            - less_or_equal
+            - eq
+            - neq
+            - gt
+            - gte
+            - lt
+            - lte
             - is_empty
             - is_not_empty
         key:
@@ -9802,12 +9802,12 @@ components:
             - not_contains
             - starts_with
             - ends_with
-            - equal
-            - not_equal
-            - greater_than
-            - greater_or_equal
-            - less_than
-            - less_or_equal
+            - eq
+            - neq
+            - gt
+            - gte
+            - lt
+            - lte
             - is_empty
             - is_not_empty
         key:
@@ -10188,12 +10188,12 @@ components:
             - not_contains
             - starts_with
             - ends_with
-            - equal
-            - not_equal
-            - greater_than
-            - greater_or_equal
-            - less_than
-            - less_or_equal
+            - eq
+            - neq
+            - gt
+            - gte
+            - lt
+            - lte
             - is_empty
             - is_not_empty
         key:
@@ -10247,12 +10247,12 @@ components:
             - not_contains
             - starts_with
             - ends_with
-            - equal
-            - not_equal
-            - greater_than
-            - greater_or_equal
-            - less_than
-            - less_or_equal
+            - eq
+            - neq
+            - gt
+            - gte
+            - lt
+            - lte
             - is_empty
             - is_not_empty
         key:
@@ -10271,12 +10271,12 @@ components:
             - not_contains
             - starts_with
             - ends_with
-            - equal
-            - not_equal
-            - greater_than
-            - greater_or_equal
-            - less_than
-            - less_or_equal
+            - eq
+            - neq
+            - gt
+            - gte
+            - lt
+            - lte
             - is_empty
             - is_not_empty
         key:
@@ -11112,12 +11112,12 @@ components:
             - not_contains
             - starts_with
             - ends_with
-            - equal
-            - not_equal
-            - greater_than
-            - greater_or_equal
-            - less_than
-            - less_or_equal
+            - eq
+            - neq
+            - gt
+            - gte
+            - lt
+            - lte
             - is_empty
             - is_not_empty
         key:
@@ -11992,7 +11992,7 @@ components:
         custom_prompt:
           type: string
           description: Custom prompt to use for generation instead of auto-generated one
-    AssertionResult_Compare:
+    AssertionResultCompare:
       type: object
       properties:
         value:
@@ -12002,7 +12002,7 @@ components:
         reason:
           type: string
       readOnly: true
-    Column_Compare:
+    ColumnCompare:
       type: object
       properties:
         name:
@@ -12025,7 +12025,7 @@ components:
           type: string
           description: The field to use for filtering
           readOnly: true
-    Comment_Compare:
+    CommentCompare:
       required:
         - text
       type: object
@@ -12052,13 +12052,13 @@ components:
           type: string
           readOnly: true
       readOnly: true
-    DatasetItemPage_Compare:
+    DatasetItemPageCompare:
       type: object
       properties:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/DatasetItem_Compare"
+            $ref: "#/components/schemas/DatasetItemCompare"
         page:
           type: integer
           format: int32
@@ -12072,12 +12072,12 @@ components:
           uniqueItems: true
           type: array
           items:
-            $ref: "#/components/schemas/Column_Compare"
+            $ref: "#/components/schemas/ColumnCompare"
         sortableBy:
           type: array
           items:
             type: string
-    DatasetItem_Compare:
+    DatasetItemCompare:
       required:
         - data
         - source
@@ -12125,18 +12125,18 @@ components:
         evaluators:
           type: array
           items:
-            $ref: "#/components/schemas/EvaluatorItem_Compare"
+            $ref: "#/components/schemas/EvaluatorItemCompare"
         execution_policy:
-          $ref: "#/components/schemas/ExecutionPolicy_Compare"
+          $ref: "#/components/schemas/ExecutionPolicyCompare"
         experiment_items:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/ExperimentItem_Compare"
+            $ref: "#/components/schemas/ExperimentItemCompare"
         run_summaries_by_experiment:
           type: object
           additionalProperties:
-            $ref: "#/components/schemas/ExperimentRunSummary_Compare"
+            $ref: "#/components/schemas/ExperimentRunSummaryCompare"
           readOnly: true
         dataset_id:
           type: string
@@ -12156,7 +12156,7 @@ components:
         last_updated_by:
           type: string
           readOnly: true
-    EvaluatorItem_Compare:
+    EvaluatorItemCompare:
       required:
         - config
         - name
@@ -12172,8 +12172,8 @@ components:
             - llm_judge
             - code_metric
         config:
-          $ref: "#/components/schemas/JsonNode_Compare"
-    ExecutionPolicy_Compare:
+          $ref: "#/components/schemas/JsonNodeCompare"
+    ExecutionPolicyCompare:
       type: object
       properties:
         runs_per_item:
@@ -12186,7 +12186,7 @@ components:
           minimum: 1
           type: integer
           format: int32
-    ExperimentItem_Compare:
+    ExperimentItemCompare:
       required:
         - dataset_item_id
         - experiment_id
@@ -12210,19 +12210,19 @@ components:
           format: uuid
           readOnly: true
         input:
-          $ref: "#/components/schemas/JsonListString_Compare"
+          $ref: "#/components/schemas/JsonListStringCompare"
         output:
-          $ref: "#/components/schemas/JsonListString_Compare"
+          $ref: "#/components/schemas/JsonListStringCompare"
         feedback_scores:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScore_Compare"
+            $ref: "#/components/schemas/FeedbackScoreCompare"
         comments:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/Comment_Compare"
+            $ref: "#/components/schemas/CommentCompare"
         total_estimated_cost:
           type: number
           readOnly: true
@@ -12264,7 +12264,7 @@ components:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/AssertionResult_Compare"
+            $ref: "#/components/schemas/AssertionResultCompare"
         status:
           type: string
           readOnly: true
@@ -12272,7 +12272,7 @@ components:
             - passed
             - failed
       readOnly: true
-    ExperimentRunSummary_Compare:
+    ExperimentRunSummaryCompare:
       type: object
       properties:
         passed_runs:
@@ -12287,7 +12287,7 @@ components:
             - passed
             - failed
       readOnly: true
-    FeedbackScore_Compare:
+    FeedbackScoreCompare:
       required:
         - name
         - source
@@ -12330,10 +12330,10 @@ components:
         value_by_author:
           type: object
           additionalProperties:
-            $ref: "#/components/schemas/ValueEntry_Compare"
+            $ref: "#/components/schemas/ValueEntryCompare"
           readOnly: true
       readOnly: true
-    JsonListString_Compare:
+    JsonListStringCompare:
       type: object
       readOnly: true
       anyOf:
@@ -12342,9 +12342,9 @@ components:
           items:
             type: object
         - type: string
-    JsonNode_Compare:
+    JsonNodeCompare:
       type: object
-    ValueEntry_Compare:
+    ValueEntryCompare:
       type: object
       properties:
         value:
@@ -13724,7 +13724,7 @@ components:
             - experiment
             - playground
             - optimization
-    ErrorInfo_ExperimentItemBulkWriteView:
+    ErrorInfoExperimentItemBulkWriteView:
       required:
         - exception_type
         - traceback
@@ -13738,7 +13738,7 @@ components:
         traceback:
           minLength: 1
           type: string
-    ExperimentItemBulkRecord_ExperimentItemBulkWriteView:
+    ExperimentItemBulkRecordExperimentItemBulkWriteView:
       required:
         - dataset_item_id
       type: object
@@ -13747,22 +13747,22 @@ components:
           type: string
           format: uuid
         evaluate_task_result:
-          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
         trace:
-          $ref: "#/components/schemas/Trace_ExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/TraceExperimentItemBulkWriteView"
         spans:
           maxItems: 100
           minItems: 0
           type: array
           items:
-            $ref: "#/components/schemas/Span_ExperimentItemBulkWriteView"
+            $ref: "#/components/schemas/SpanExperimentItemBulkWriteView"
         feedback_scores:
           maxItems: 100
           minItems: 0
           type: array
           items:
-            $ref: "#/components/schemas/FeedbackScore_ExperimentItemBulkWriteView"
-    ExperimentItemBulkUpload_ExperimentItemBulkWriteView:
+            $ref: "#/components/schemas/FeedbackScoreExperimentItemBulkWriteView"
+    ExperimentItemBulkUploadExperimentItemBulkWriteView:
       required:
         - dataset_name
         - experiment_name
@@ -13784,8 +13784,8 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/ExperimentItemBulkRecord_ExperimentItemBulkWriteView"
-    FeedbackScore_ExperimentItemBulkWriteView:
+            $ref: "#/components/schemas/ExperimentItemBulkRecordExperimentItemBulkWriteView"
+    FeedbackScoreExperimentItemBulkWriteView:
       required:
         - name
         - source
@@ -13828,9 +13828,9 @@ components:
         value_by_author:
           type: object
           additionalProperties:
-            $ref: "#/components/schemas/ValueEntry_ExperimentItemBulkWriteView"
+            $ref: "#/components/schemas/ValueEntryExperimentItemBulkWriteView"
           readOnly: true
-    JsonListString_ExperimentItemBulkWriteView:
+    JsonListStringExperimentItemBulkWriteView:
       type: object
       anyOf:
         - type: object
@@ -13838,7 +13838,7 @@ components:
           items:
             type: object
         - type: string
-    Span_ExperimentItemBulkWriteView:
+    SpanExperimentItemBulkWriteView:
       required:
         - start_time
       type: object
@@ -13865,11 +13865,11 @@ components:
           type: string
           format: date-time
         input:
-          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
         output:
-          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
         metadata:
-          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
         model:
           type: string
         provider:
@@ -13885,7 +13885,7 @@ components:
             type: integer
             format: int32
         error_info:
-          $ref: "#/components/schemas/ErrorInfo_ExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/ErrorInfoExperimentItemBulkWriteView"
         last_updated_at:
           type: string
           format: date-time
@@ -13906,7 +13906,7 @@ components:
             - experiment
             - playground
             - optimization
-    Trace_ExperimentItemBulkWriteView:
+    TraceExperimentItemBulkWriteView:
       required:
         - start_time
       type: object
@@ -13927,18 +13927,18 @@ components:
           type: string
           format: date-time
         input:
-          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
         output:
-          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
         metadata:
-          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
         tags:
           uniqueItems: true
           type: array
           items:
             type: string
         error_info:
-          $ref: "#/components/schemas/ErrorInfo_ExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/ErrorInfoExperimentItemBulkWriteView"
         last_updated_at:
           type: string
           format: date-time
@@ -13956,7 +13956,7 @@ components:
             - playground
             - optimization
       description: "Please provide either none, only one of evaluate_task_result or trace, but never both"
-    ValueEntry_ExperimentItemBulkWriteView:
+    ValueEntryExperimentItemBulkWriteView:
       type: object
       properties:
         value:
@@ -16534,7 +16534,7 @@ components:
           format: int64
         error_count:
           $ref: "#/components/schemas/ErrorCountWithDeviation"
-    ErrorCountWithDeviation_Detailed:
+    ErrorCountWithDeviationDetailed:
       type: object
       properties:
         count:
@@ -16547,7 +16547,7 @@ components:
           type: integer
           format: int64
       readOnly: true
-    FeedbackScoreAverage_Detailed:
+    FeedbackScoreAverageDetailed:
       required:
         - name
         - value
@@ -16559,7 +16559,7 @@ components:
         value:
           type: number
       readOnly: true
-    PercentageValues_Detailed:
+    PercentageValuesDetailed:
       type: object
       properties:
         p50:
@@ -16569,7 +16569,7 @@ components:
         p99:
           type: number
       readOnly: true
-    Project_Detailed:
+    ProjectDetailed:
       required:
         - name
       type: object
@@ -16612,9 +16612,9 @@ components:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScoreAverage_Detailed"
+            $ref: "#/components/schemas/FeedbackScoreAverageDetailed"
         duration:
-          $ref: "#/components/schemas/PercentageValues_Detailed"
+          $ref: "#/components/schemas/PercentageValuesDetailed"
         total_estimated_cost:
           type: number
           format: double
@@ -16643,15 +16643,15 @@ components:
           format: int64
           readOnly: true
         error_count:
-          $ref: "#/components/schemas/ErrorCountWithDeviation_Detailed"
-    ErrorMessage_Detailed:
+          $ref: "#/components/schemas/ErrorCountWithDeviationDetailed"
+    ErrorMessageDetailed:
       type: object
       properties:
         errors:
           type: array
           items:
             type: string
-    ProjectRetrieve_Detailed:
+    ProjectRetrieveDetailed:
       required:
         - name
       type: object
@@ -16848,9 +16848,9 @@ components:
           type: array
           items:
             type: string
-    JsonNode_Detail:
+    JsonNodeDetail:
       type: object
-    PromptVersion_Detail:
+    PromptVersionDetail:
       required:
         - template
       type: object
@@ -16871,7 +16871,7 @@ components:
           minLength: 1
           type: string
         metadata:
-          $ref: "#/components/schemas/JsonNode_Detail"
+          $ref: "#/components/schemas/JsonNodeDetail"
         type:
           type: string
           enum:
@@ -16905,7 +16905,7 @@ components:
         created_by:
           type: string
           readOnly: true
-    ErrorMessage_Detail:
+    ErrorMessageDetail:
       type: object
       properties:
         code:
@@ -16915,7 +16915,7 @@ components:
           type: string
         details:
           type: string
-    CreatePromptVersion_Detail:
+    CreatePromptVersionDetail:
       required:
         - name
         - version
@@ -16925,7 +16925,7 @@ components:
           minLength: 1
           type: string
         version:
-          $ref: "#/components/schemas/PromptVersion_Detail"
+          $ref: "#/components/schemas/PromptVersionDetail"
         template_structure:
           type: string
           description: "Template structure for the prompt: 'text' or 'chat'. Note: This field is only used when creating a new prompt. If a prompt with the given name already exists, this field is ignored and the existing prompt's template structure is used. Template structure is immutable after prompt creation."
@@ -16949,7 +16949,7 @@ components:
           pattern: (?s)^\s*(\S.*\S|\S)\s*$
           type: string
           description: "If provided, scopes the prompt to the specified project. Ignored when project_id is provided."
-    Prompt_Detail:
+    PromptDetail:
       required:
         - name
       type: object
@@ -17000,9 +17000,9 @@ components:
           format: int64
           readOnly: true
         latest_version:
-          $ref: "#/components/schemas/PromptVersion_Detail"
+          $ref: "#/components/schemas/PromptVersionDetail"
         requested_version:
-          $ref: "#/components/schemas/PromptVersion_Detail"
+          $ref: "#/components/schemas/PromptVersionDetail"
     PromptVersionPagePublic:
       type: object
       properties:
@@ -17083,7 +17083,7 @@ components:
           items:
             minLength: 1
             type: string
-    PromptVersionRetrieve_Detail:
+    PromptVersionRetrieveDetail:
       required:
         - name
       type: object
@@ -17097,7 +17097,7 @@ components:
           pattern: (?s)^\s*(\S.*\S|\S)\s*$
           type: string
           description: "If provided, scopes the search to the specified project"
-    Prompt_Updatable:
+    PromptUpdatable:
       required:
         - name
       type: object

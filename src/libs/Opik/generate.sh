@@ -2,55 +2,50 @@ dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
 curl -o openapi.yaml https://raw.githubusercontent.com/comet-ml/opik/main/sdks/code_generation/fern/openapi/openapi.yaml
 
-# Inject securitySchemes (http/bearer) and top-level security array
-yq -i '.components.securitySchemes.ApiKeyAuth.type = "http"
-  | .components.securitySchemes.ApiKeyAuth.scheme = "bearer"
-  | .security = [{"ApiKeyAuth": []}]' openapi.yaml
+# Fix 1: Replace operator enum values that collide after sanitization
+# = != > >= < <= all sanitize to x_ or x__ causing CS0102 duplicate members
+sed -i '' \
+  -e "s/^          - =$/          - eq/" \
+  -e "s/^          - '!='$/          - neq/" \
+  -e "s/^          - '>'$/          - gt/" \
+  -e "s/^          - '>='$/          - gte/" \
+  -e "s/^          - <$/          - lt/" \
+  -e "s/^          - <=$/          - lte/" \
+  openapi.yaml
 
-# Rename operator enum values from symbols to valid C# identifiers
-# Handles both quoted and unquoted YAML variants
+# Fix 2: Remove underscores from schema names that cause AutoSDK JsonDerivedType reference mismatches.
+# AutoSDK strips underscores in type names but not in JsonDerivedType typeof() references.
+# We rename schemas like Foo_Public -> FooPublic, Foo_Write -> FooWrite, etc.
 python3 -c "
-import re, sys
+import re
+import sys
 
 with open('openapi.yaml', 'r') as f:
     content = f.read()
 
-# Replace operator enum values (both quoted and unquoted forms)
-# Order matters: longer patterns first to avoid partial matches
-replacements = [
-    # Quoted forms (single quotes)
-    (r\"- '!='\", '- not_equal'),
-    (r\"- '>='\", '- greater_or_equal'),
-    (r\"- '<='\", '- less_or_equal'),
-    (r\"- '>'\", '- greater_than'),
-    (r\"- '<'\", '- less_than'),
-    (r\"- '='\", '- equal'),
-]
-for old, new in replacements:
-    content = content.replace(old, new)
+# Find all unique schema names with underscores from definitions
+# Match lines like '    SchemaName_Suffix:' (exactly 4 spaces indent = top-level schema)
+schema_pattern = re.compile(r'^    ([A-Za-z][A-Za-z0-9]*(?:_[A-Za-z][A-Za-z0-9]*)+):', re.MULTILINE)
+schemas_with_underscores = set(schema_pattern.findall(content))
 
-# Unquoted forms: must be careful not to replace YAML = in other contexts
-# These appear as enum list items with specific indentation
-# Match lines like '          - =' at end of line (no trailing content)
-content = re.sub(r'^(\s+)- >=$', r'\1- greater_or_equal', content, flags=re.MULTILINE)
-content = re.sub(r'^(\s+)- <=$', r'\1- less_or_equal', content, flags=re.MULTILINE)
-content = re.sub(r'^(\s+)- !=$', r'\1- not_equal', content, flags=re.MULTILINE)
-content = re.sub(r'^(\s+)- =$', r'\1- equal', content, flags=re.MULTILINE)
-content = re.sub(r'^(\s+)- >$', r'\1- greater_than', content, flags=re.MULTILINE)
-content = re.sub(r'^(\s+)- <$', r'\1- less_than', content, flags=re.MULTILINE)
+print(f'Found {len(schemas_with_underscores)} schemas with underscores', file=sys.stderr)
 
-# Remove underscores before common suffixes in schema names and references
-# These appear in schema definition keys and \$ref paths
-content = content.replace('_Write', 'Write')
-content = content.replace('_Public', 'Public')
-content = content.replace('_Create', 'Create')
-content = content.replace('_Update', 'Update')
+# Sort by length descending to avoid partial replacements
+for schema in sorted(schemas_with_underscores, key=len, reverse=True):
+    new_name = schema.replace('_', '')
+    # Replace in \$ref paths
+    content = content.replace(f'schemas/{schema}', f'schemas/{new_name}')
+    # Replace in schema definitions (4-space indent)
+    content = content.replace(f'    {schema}:', f'    {new_name}:')
 
 with open('openapi.yaml', 'w') as f:
     f.write(content)
-
-print('Spec transformations applied successfully')
 "
+
+# Fix 3: Add securitySchemes and top-level security (spec has no auth declaration)
+yq -i '.components.securitySchemes.ApiKeyAuth.type = "http"' openapi.yaml
+yq -i '.components.securitySchemes.ApiKeyAuth.scheme = "bearer"' openapi.yaml
+yq -i '.security = [{"ApiKeyAuth": []}]' openapi.yaml
 
 autosdk generate openapi.yaml \
   --namespace Opik \

@@ -19,15 +19,15 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        Equal,
+        Eq,
         /// <summary>
         /// 
         /// </summary>
-        GreaterOrEqual,
+        Gt,
         /// <summary>
         /// 
         /// </summary>
-        GreaterThan,
+        Gte,
         /// <summary>
         /// 
         /// </summary>
@@ -39,19 +39,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        LessOrEqual,
+        Lt,
         /// <summary>
         /// 
         /// </summary>
-        LessThan,
+        Lte,
+        /// <summary>
+        /// 
+        /// </summary>
+        Neq,
         /// <summary>
         /// 
         /// </summary>
         NotContains,
-        /// <summary>
-        /// 
-        /// </summary>
-        NotEqual,
         /// <summary>
         /// 
         /// </summary>
@@ -72,15 +72,15 @@ namespace Opik
             {
                 DatasetItemFilterOperator.Contains => "contains",
                 DatasetItemFilterOperator.EndsWith => "ends_with",
-                DatasetItemFilterOperator.Equal => "equal",
-                DatasetItemFilterOperator.GreaterOrEqual => "greater_or_equal",
-                DatasetItemFilterOperator.GreaterThan => "greater_than",
+                DatasetItemFilterOperator.Eq => "eq",
+                DatasetItemFilterOperator.Gt => "gt",
+                DatasetItemFilterOperator.Gte => "gte",
                 DatasetItemFilterOperator.IsEmpty => "is_empty",
                 DatasetItemFilterOperator.IsNotEmpty => "is_not_empty",
-                DatasetItemFilterOperator.LessOrEqual => "less_or_equal",
-                DatasetItemFilterOperator.LessThan => "less_than",
+                DatasetItemFilterOperator.Lt => "lt",
+                DatasetItemFilterOperator.Lte => "lte",
+                DatasetItemFilterOperator.Neq => "neq",
                 DatasetItemFilterOperator.NotContains => "not_contains",
-                DatasetItemFilterOperator.NotEqual => "not_equal",
                 DatasetItemFilterOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -94,15 +94,15 @@ namespace Opik
             {
                 "contains" => DatasetItemFilterOperator.Contains,
                 "ends_with" => DatasetItemFilterOperator.EndsWith,
-                "equal" => DatasetItemFilterOperator.Equal,
-                "greater_or_equal" => DatasetItemFilterOperator.GreaterOrEqual,
-                "greater_than" => DatasetItemFilterOperator.GreaterThan,
+                "eq" => DatasetItemFilterOperator.Eq,
+                "gt" => DatasetItemFilterOperator.Gt,
+                "gte" => DatasetItemFilterOperator.Gte,
                 "is_empty" => DatasetItemFilterOperator.IsEmpty,
                 "is_not_empty" => DatasetItemFilterOperator.IsNotEmpty,
-                "less_or_equal" => DatasetItemFilterOperator.LessOrEqual,
-                "less_than" => DatasetItemFilterOperator.LessThan,
+                "lt" => DatasetItemFilterOperator.Lt,
+                "lte" => DatasetItemFilterOperator.Lte,
+                "neq" => DatasetItemFilterOperator.Neq,
                 "not_contains" => DatasetItemFilterOperator.NotContains,
-                "not_equal" => DatasetItemFilterOperator.NotEqual,
                 "starts_with" => DatasetItemFilterOperator.StartsWith,
                 _ => null,
             };
