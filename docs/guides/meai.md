@@ -12,6 +12,8 @@ allowing any `IChatClient` to interact with Opik's observability and prompt mana
 | `AsGetTraceTool()` | `GetTrace` | Retrieves a trace by ID with name, times, and tags. |
 | `AsListPromptsTool()` | `ListPrompts` | Lists prompts with optional name filtering. |
 | `AsCreateProjectTool()` | `CreateProject` | Creates a new project for organizing traces. |
+| `AsCreateTraceTool()` | `CreateTrace` | Logs a new trace for an LLM operation. |
+| `AsCreateSpanTool()` | `CreateSpan` | Logs a span within a trace for a sub-operation. |
 
 ## Usage
 
@@ -28,6 +30,8 @@ var tools = new[]
     opik.AsGetTraceTool(),
     opik.AsListPromptsTool(),
     opik.AsCreateProjectTool(),
+    opik.AsCreateTraceTool(),
+    opik.AsCreateSpanTool(),
 };
 
 // Use with any IChatClient
@@ -63,3 +67,15 @@ var tool = opik.AsListPromptsTool(size: 20);
 
 Creates a new project for organizing traces and experiments.
 Accepts a required name and optional description.
+
+### CreateTrace
+
+Logs a new trace for an LLM operation. Requires a name.
+Optionally specify a project name and comma-separated tags.
+Returns the generated trace ID.
+
+### CreateSpan
+
+Logs a span within an existing trace for a sub-operation (e.g., an LLM call).
+Requires a trace ID and name. Optionally specify project name, model, and provider.
+Returns the generated span ID.

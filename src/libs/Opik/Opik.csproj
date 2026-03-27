@@ -7,7 +7,7 @@
   <PropertyGroup Label="Nuget">
     <PackageId>tryAGI.Opik</PackageId>
     <Description>C# SDK based on Opik OpenAPI specification.</Description>
-    <PackageTags>api;client;sdk;dotnet;swagger;openapi;specification;generated;nswag</PackageTags>
+    <PackageTags>api;client;sdk;dotnet;openapi;opik;observability;tracing;llm;ai</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

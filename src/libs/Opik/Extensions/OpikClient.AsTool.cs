@@ -126,4 +126,76 @@ public static class OpikToolExtensions
             name: "CreateProject",
             description: "Creates a new project in Opik for organizing traces and experiments. Requires a name, with optional description.");
     }
+
+    /// <summary>
+    /// Creates an <see cref="AIFunction"/> that logs a trace in Opik.
+    /// </summary>
+    /// <param name="client">The Opik client.</param>
+    /// <returns>An AIFunction that can be passed to ChatOptions.Tools.</returns>
+    public static AIFunction AsCreateTraceTool(this OpikClient client)
+    {
+        ArgumentNullException.ThrowIfNull(client);
+
+        return AIFunctionFactory.Create(
+            async (string name, string? projectName, string? tags, CancellationToken cancellationToken) =>
+            {
+                var traceId = Guid.NewGuid();
+                var tagList = tags?.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                    .ToList();
+
+                await client.Traces.CreateTraceAsync(
+                    startTime: DateTime.UtcNow,
+                    id: traceId,
+                    projectName: projectName,
+                    name: name,
+                    tags: tagList,
+                    cancellationToken: cancellationToken).ConfigureAwait(false);
+
+                return JsonSerializer.Serialize(new
+                {
+                    id = traceId,
+                    name,
+                    project_name = projectName,
+                    status = "created",
+                });
+            },
+            name: "CreateTrace",
+            description: "Creates a new trace in Opik for logging an LLM operation. Requires a name. Optionally specify a project name and comma-separated tags. Returns the trace ID.");
+    }
+
+    /// <summary>
+    /// Creates an <see cref="AIFunction"/> that logs a span within a trace in Opik.
+    /// </summary>
+    /// <param name="client">The Opik client.</param>
+    /// <returns>An AIFunction that can be passed to ChatOptions.Tools.</returns>
+    public static AIFunction AsCreateSpanTool(this OpikClient client)
+    {
+        ArgumentNullException.ThrowIfNull(client);
+
+        return AIFunctionFactory.Create(
+            async (string traceId, string name, string? projectName, string? model, string? provider, CancellationToken cancellationToken) =>
+            {
+                var spanId = Guid.NewGuid();
+
+                await client.Spans.CreateSpanAsync(
+                    startTime: DateTime.UtcNow,
+                    id: spanId,
+                    traceId: Guid.Parse(traceId),
+                    projectName: projectName,
+                    name: name,
+                    model: model,
+                    provider: provider,
+                    cancellationToken: cancellationToken).ConfigureAwait(false);
+
+                return JsonSerializer.Serialize(new
+                {
+                    id = spanId,
+                    trace_id = traceId,
+                    name,
+                    status = "created",
+                });
+            },
+            name: "CreateSpan",
+            description: "Creates a new span within an Opik trace for logging a sub-operation (e.g., an LLM call). Requires a trace ID and name. Optionally specify project name, model, and provider. Returns the span ID.");
+    }
 }

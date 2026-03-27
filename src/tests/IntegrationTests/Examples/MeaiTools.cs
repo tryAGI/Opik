@@ -73,4 +73,28 @@ public partial class Tests
         tool.Name.Should().Be("CreateProject");
         tool.Description.Should().Contain("project");
     }
+
+    [TestMethod]
+    public async Task Meai_AsCreateTraceTool()
+    {
+        using var client = GetAuthenticatedClient();
+
+        //// Create a tool that logs a trace for an LLM operation:
+        var tool = client.AsCreateTraceTool();
+
+        tool.Name.Should().Be("CreateTrace");
+        tool.Description.Should().Contain("trace");
+    }
+
+    [TestMethod]
+    public async Task Meai_AsCreateSpanTool()
+    {
+        using var client = GetAuthenticatedClient();
+
+        //// Create a tool that logs a span within a trace:
+        var tool = client.AsCreateSpanTool();
+
+        tool.Name.Should().Be("CreateSpan");
+        tool.Description.Should().Contain("span");
+    }
 }
