@@ -47,19 +47,16 @@ with open('openapi.yaml', 'w') as f:
     f.write(content)
 "
 
-# Fix 3: Add securitySchemes and top-level security (spec has no auth declaration)
-yq -i '.components.securitySchemes.ApiKeyAuth.type = "http"' openapi.yaml
-yq -i '.components.securitySchemes.ApiKeyAuth.scheme = "bearer"' openapi.yaml
-yq -i '.security = [{"ApiKeyAuth": []}]' openapi.yaml
-
+# Auth: --security-scheme injects bearer auth (spec has no securitySchemes declaration).
 autosdk generate openapi.yaml \
   --namespace Opik \
   --clientClassName OpikClient \
   --targetFramework net10.0 \
   --output Generated \
-  --exclude-deprecated-operations
+  --exclude-deprecated-operations \
+  --security-scheme Http:Header:Bearer
 
-# Fix 4: Suppress CS0108 (member hiding) and CS8618 (non-nullable uninitialized) in derived types.
+# Fix 3: Suppress CS0108 (member hiding) and CS8618 (non-nullable uninitialized) in derived types.
 # The OpenAPI spec uses allOf inheritance where derived types redeclare parent properties
 # (e.g., *FeedbackDefinition* extends Feedback, AutomationRuleEvaluator* extends AutomationRuleEvaluator).
 # AutoSDK generates both parent and child with the same properties, causing:
