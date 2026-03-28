@@ -23,23 +23,22 @@ var client = new OpikClient(apiKey); // OPIK_API_KEY env var
 ## Key Files
 
 - `src/libs/Opik/openapi.yaml` — OpenAPI spec (downloaded from comet-ml/opik)
-- `src/libs/Opik/generate.sh` — Downloads spec, fixes operator enums + underscore schema names, runs autosdk with `--security-scheme`
+- `src/libs/Opik/generate.sh` — Downloads spec, fixes operator enums, runs autosdk with `--security-scheme`
 - `src/libs/Opik/Generated/` — **Never edit** — auto-generated code (~2400 files)
 - `src/tests/IntegrationTests/Tests.cs` — Test helper with bearer auth
 - `src/tests/IntegrationTests/Examples/` — Example tests (also generate docs)
 
 ## Spec Notes
 
-The `generate.sh` applies fixes via `sed` and Python (pre-generation), `--security-scheme` for auth, and `sed` (post-generation):
+The `generate.sh` applies fixes via `sed` (pre-generation), `--security-scheme` for auth, and pragma injection (post-generation):
 
 **Pre-generation:**
 1. **Operator enum fix:** Symbolic values (`=`, `!=`, `>`, `>=`, `<`, `<=`) replaced with C#-safe identifiers (`eq`, `neq`, `gt`, `gte`, `lt`, `lte`) via `sed`
-2. **Underscore schema fix:** Python script renames 239 schemas with underscores (e.g., `Foo_Public` to `FooPublic`) to prevent AutoSDK `JsonDerivedType` reference mismatches
 
 **Auth:** `--security-scheme Http:Header:Bearer` injects bearer auth (spec has no `securitySchemes` declaration).
 
 **Post-generation:**
-3. **Pragma suppression:** `sed` injects `#pragma warning disable CS0108` (member hiding) and `CS8618` (non-nullable uninitialized) in FeedbackDefinition and AutomationRuleEvaluator types caused by allOf inheritance
+2. **Pragma suppression:** Injects `#pragma warning disable CS0108` (member hiding) and `CS8618` (non-nullable uninitialized) in FeedbackDefinition and AutomationRuleEvaluator types caused by allOf inheritance
 
 Uses `--exclude-deprecated-operations` flag.
 

@@ -18,35 +18,6 @@ sed \
   -e "s/^          - <=$/          - lte/" \
   openapi.yaml > openapi.yaml.tmp && mv openapi.yaml.tmp openapi.yaml
 
-# Fix 2: Remove underscores from schema names that cause AutoSDK JsonDerivedType reference mismatches.
-# AutoSDK strips underscores in type names but not in JsonDerivedType typeof() references.
-# We rename schemas like Foo_Public -> FooPublic, Foo_Write -> FooWrite, etc.
-python3 -c "
-import re
-import sys
-
-with open('openapi.yaml', 'r') as f:
-    content = f.read()
-
-# Find all unique schema names with underscores from definitions
-# Match lines like '    SchemaName_Suffix:' (exactly 4 spaces indent = top-level schema)
-schema_pattern = re.compile(r'^    ([A-Za-z][A-Za-z0-9]*(?:_[A-Za-z][A-Za-z0-9]*)+):', re.MULTILINE)
-schemas_with_underscores = set(schema_pattern.findall(content))
-
-print(f'Found {len(schemas_with_underscores)} schemas with underscores', file=sys.stderr)
-
-# Sort by length descending to avoid partial replacements
-for schema in sorted(schemas_with_underscores, key=len, reverse=True):
-    new_name = schema.replace('_', '')
-    # Replace in \$ref paths
-    content = content.replace(f'schemas/{schema}', f'schemas/{new_name}')
-    # Replace in schema definitions (4-space indent)
-    content = content.replace(f'    {schema}:', f'    {new_name}:')
-
-with open('openapi.yaml', 'w') as f:
-    f.write(content)
-"
-
 # Auth: --security-scheme injects bearer auth (spec has no securitySchemes declaration).
 autosdk generate openapi.yaml \
   --namespace Opik \
