@@ -53,3 +53,13 @@ autosdk generate openapi.yaml \
   --targetFramework net10.0 \
   --output Generated \
   --exclude-deprecated-operations
+
+# Fix 4: Suppress CS0108 (member hiding) and CS8618 (non-nullable uninitialized) in derived types.
+# The OpenAPI spec uses allOf inheritance where derived types redeclare parent properties
+# (e.g., *FeedbackDefinition* extends Feedback, AutomationRuleEvaluator* extends AutomationRuleEvaluator).
+# AutoSDK generates both parent and child with the same properties, causing:
+#   CS0108: derived property hides inherited member (needs 'new' keyword)
+#   CS8618: 'required' parent property not set in derived constructor
+for f in Generated/Opik.Models.*FeedbackDefinition*.g.cs Generated/Opik.Models.AutomationRuleEvaluator?*.g.cs; do
+  [ -f "$f" ] && sed -i '' '1s/^/#pragma warning disable CS0108 \/\/ member hides inherited member\n#pragma warning disable CS8618 \/\/ non-nullable field uninitialized\n/' "$f"
+done

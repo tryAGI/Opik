@@ -1,3 +1,5 @@
+#pragma warning disable CS0108 // member hides inherited member
+#pragma warning disable CS8618 // non-nullable field uninitialized
 
 #nullable enable
 
