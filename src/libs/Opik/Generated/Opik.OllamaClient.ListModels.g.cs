@@ -226,7 +226,7 @@ namespace Opik
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Opik.OllamaModel>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::Opik.OllamaModel> ??
+                        (global::System.Collections.Generic.IList<global::Opik.OllamaModel>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Opik.OllamaModel>), JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -257,7 +257,7 @@ namespace Opik
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Opik.OllamaModel>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::Opik.OllamaModel> ??
+                        (global::System.Collections.Generic.IList<global::Opik.OllamaModel>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Opik.OllamaModel>), JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
