@@ -9,14 +9,14 @@ curl --fail --silent --show-error -L -o openapi.yaml https://raw.githubuserconte
 
 # Fix 1: Replace operator enum values that collide after sanitization
 # = != > >= < <= all sanitize to x_ or x__ causing CS0102 duplicate members
-sed -i '' \
+sed \
   -e "s/^          - =$/          - eq/" \
   -e "s/^          - '!='$/          - neq/" \
   -e "s/^          - '>'$/          - gt/" \
   -e "s/^          - '>='$/          - gte/" \
   -e "s/^          - <$/          - lt/" \
   -e "s/^          - <=$/          - lte/" \
-  openapi.yaml
+  openapi.yaml > openapi.yaml.tmp && mv openapi.yaml.tmp openapi.yaml
 
 # Fix 2: Remove underscores from schema names that cause AutoSDK JsonDerivedType reference mismatches.
 # AutoSDK strips underscores in type names but not in JsonDerivedType typeof() references.
@@ -63,5 +63,5 @@ autosdk generate openapi.yaml \
 #   CS0108: derived property hides inherited member (needs 'new' keyword)
 #   CS8618: 'required' parent property not set in derived constructor
 for f in Generated/Opik.Models.*FeedbackDefinition*.g.cs Generated/Opik.Models.AutomationRuleEvaluator?*.g.cs; do
-  [ -f "$f" ] && sed -i '' '1s/^/#pragma warning disable CS0108 \/\/ member hides inherited member\n#pragma warning disable CS8618 \/\/ non-nullable field uninitialized\n/' "$f"
+  [ -f "$f" ] && printf '%s\n' '#pragma warning disable CS0108 // member hides inherited member' '#pragma warning disable CS8618 // non-nullable field uninitialized' "$(cat "$f")" > "$f"
 done
