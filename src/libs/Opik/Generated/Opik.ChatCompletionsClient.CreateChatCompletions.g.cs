@@ -241,7 +241,7 @@ namespace Opik
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Opik.ChatCompletionResponse> CreateChatCompletionsAsync(
             string? model = default,
-            global::System.Collections.Generic.IList<object>? messages = default,
+            global::System.Collections.Generic.IList<global::Opik.Message>? messages = default,
             double? temperature = default,
             double? topP = default,
             int? n = default,

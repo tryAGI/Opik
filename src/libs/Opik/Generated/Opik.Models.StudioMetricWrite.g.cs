@@ -19,7 +19,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parameters")]
-        public object? Parameters { get; set; }
+        public global::Opik.JsonNodeWrite? Parameters { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,7 +37,7 @@ namespace Opik
 #endif
         public StudioMetricWrite(
             string type,
-            object? parameters)
+            global::Opik.JsonNodeWrite? parameters)
         {
             this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
             this.Parameters = parameters;

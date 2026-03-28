@@ -37,7 +37,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        public object? Metadata { get; set; }
+        public global::Opik.JsonNodePublic? Metadata { get; set; }
 
         /// <summary>
         /// 
@@ -117,7 +117,7 @@ namespace Opik
             global::System.Guid? id,
             global::System.Guid? promptId,
             string? commit,
-            object? metadata,
+            global::Opik.JsonNodePublic? metadata,
             global::Opik.PromptVersionPublicType? type,
             string? changeDescription,
             global::System.Collections.Generic.IList<string>? tags,

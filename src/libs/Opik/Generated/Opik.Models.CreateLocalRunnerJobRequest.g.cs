@@ -19,7 +19,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("inputs")]
-        public object? Inputs { get; set; }
+        public global::Opik.JsonNode? Inputs { get; set; }
 
         /// <summary>
         /// 
@@ -60,7 +60,7 @@ namespace Opik
         public CreateLocalRunnerJobRequest(
             string agentName,
             global::System.Guid projectId,
-            object? inputs,
+            global::Opik.JsonNode? inputs,
             global::System.Guid? maskId,
             global::Opik.LocalRunnerJobMetadata? metadata)
         {

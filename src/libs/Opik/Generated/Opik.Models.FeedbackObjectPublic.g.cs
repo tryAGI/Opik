@@ -10,9 +10,9 @@ namespace Opik
         TypeDiscriminatorPropertyName = "type",
         IgnoreUnrecognizedTypeDiscriminators = true,
         UnknownDerivedTypeHandling = global::System.Text.Json.Serialization.JsonUnknownDerivedTypeHandling.FallBackToBaseType)]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.BooleanFeedbackDefinitionPublic), typeDiscriminator: "boolean")]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.CategoricalFeedbackDefinitionPublic), typeDiscriminator: "categorical")]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.NumericalFeedbackDefinitionPublic), typeDiscriminator: "numerical")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.BooleanFeedbackDefinitionPublic), typeDiscriminator: "boolean")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.CategoricalFeedbackDefinitionPublic), typeDiscriminator: "categorical")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.NumericalFeedbackDefinitionPublic), typeDiscriminator: "numerical")]
     public partial class FeedbackObjectPublic
     {
         /// <summary>

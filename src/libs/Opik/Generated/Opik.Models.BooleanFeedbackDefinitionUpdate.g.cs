@@ -8,7 +8,7 @@ namespace Opik
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class BooleanFeedbackDefinitionUpdate : FeedbackUpdate
+    public sealed partial class BooleanFeedbackDefinitionUpdate : global::Opik.FeedbackUpdate
     {
         /// <summary>
         /// 

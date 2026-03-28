@@ -32,7 +32,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_parameters")]
-        public object? CustomParameters { get; set; }
+        public global::Opik.JsonNode? CustomParameters { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -54,7 +54,7 @@ namespace Opik
             string name,
             double temperature,
             int? seed,
-            object? customParameters)
+            global::Opik.JsonNode? customParameters)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Temperature = temperature;

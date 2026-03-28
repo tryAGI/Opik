@@ -255,7 +255,7 @@ namespace Opik
         public async global::System.Threading.Tasks.Task CreateJobAsync(
             string agentName,
             global::System.Guid projectId,
-            object? inputs = default,
+            global::Opik.JsonNode? inputs = default,
             global::System.Guid? maskId = default,
             global::Opik.LocalRunnerJobMetadata? metadata = default,
             global::System.Threading.CancellationToken cancellationToken = default)

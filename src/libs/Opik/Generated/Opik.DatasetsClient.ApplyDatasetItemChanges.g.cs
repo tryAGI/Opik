@@ -9,13 +9,13 @@ namespace Opik
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid id,
             ref bool? @override,
-            object request);
+            global::Opik.DatasetItemChangesPublic request);
         partial void PrepareApplyDatasetItemChangesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::System.Guid id,
             bool? @override,
-            object request);
+            global::Opik.DatasetItemChangesPublic request);
         partial void ProcessApplyDatasetItemChangesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -44,7 +44,7 @@ namespace Opik
         public async global::System.Threading.Tasks.Task<global::Opik.DatasetVersionPublic> ApplyDatasetItemChangesAsync(
             global::System.Guid id,
 
-            object request,
+            global::Opik.DatasetItemChangesPublic request,
             bool? @override = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -88,7 +88,7 @@ namespace Opik
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -336,7 +336,7 @@ namespace Opik
             bool? @override = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new object
+            var __request = new global::Opik.DatasetItemChangesPublic
             {
             };
 

@@ -20,7 +20,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("result")]
-        public object? Result { get; set; }
+        public global::Opik.JsonNode? Result { get; set; }
 
         /// <summary>
         /// 
@@ -52,7 +52,7 @@ namespace Opik
 #endif
         public LocalRunnerJobResultRequest(
             global::Opik.LocalRunnerJobResultRequestStatus status,
-            object? result,
+            global::Opik.JsonNode? result,
             string? error,
             global::System.Guid? traceId)
         {

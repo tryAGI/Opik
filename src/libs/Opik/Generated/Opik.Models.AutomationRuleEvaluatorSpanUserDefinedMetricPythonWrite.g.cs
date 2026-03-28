@@ -8,7 +8,7 @@ namespace Opik
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class AutomationRuleEvaluatorSpanUserDefinedMetricPythonWrite : AutomationRuleEvaluatorWrite
+    public sealed partial class AutomationRuleEvaluatorSpanUserDefinedMetricPythonWrite : global::Opik.AutomationRuleEvaluatorWrite
     {
         /// <summary>
         /// 

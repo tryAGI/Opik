@@ -261,7 +261,7 @@ namespace Opik
         public async global::System.Threading.Tasks.Task ReportJobResultAsync(
             global::System.Guid jobId,
             global::Opik.LocalRunnerJobResultRequestStatus status,
-            object? result = default,
+            global::Opik.JsonNode? result = default,
             string? error = default,
             global::System.Guid? traceId = default,
             global::System.Threading.CancellationToken cancellationToken = default)

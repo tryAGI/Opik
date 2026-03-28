@@ -41,7 +41,7 @@ namespace Opik
         global::System.Threading.Tasks.Task PatchDatasetItemAsync(
             global::System.Guid itemId,
             global::Opik.DatasetItemWriteSource source,
-            object data,
+            global::Opik.JsonNode data,
             global::System.Guid? id = default,
             global::System.Guid? traceId = default,
             global::System.Guid? spanId = default,

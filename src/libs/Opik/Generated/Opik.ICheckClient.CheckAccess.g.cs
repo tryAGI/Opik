@@ -13,7 +13,7 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task CheckAccessAsync(
 
-            object request,
+            global::Opik.AuthDetailsHolder request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Check user access to workspace<br/>

@@ -198,7 +198,7 @@ namespace Opik
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Opik.DashboardPublic> CreateInsightsViewAsync(
             string name,
-            object config,
+            global::Opik.JsonNodeWrite config,
             global::System.Guid? projectId = default,
             string? projectName = default,
             global::Opik.DashboardWriteType? type = default,

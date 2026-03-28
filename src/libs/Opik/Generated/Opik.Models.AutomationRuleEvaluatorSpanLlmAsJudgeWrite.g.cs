@@ -8,7 +8,7 @@ namespace Opik
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class AutomationRuleEvaluatorSpanLlmAsJudgeWrite : AutomationRuleEvaluatorWrite
+    public sealed partial class AutomationRuleEvaluatorSpanLlmAsJudgeWrite : global::Opik.AutomationRuleEvaluatorWrite
     {
         /// <summary>
         /// 

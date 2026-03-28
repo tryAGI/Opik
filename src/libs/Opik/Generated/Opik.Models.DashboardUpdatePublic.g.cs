@@ -31,7 +31,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("config")]
-        public object? Config { get; set; }
+        public global::Opik.JsonNodePublic? Config { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -53,7 +53,7 @@ namespace Opik
             string? name,
             global::Opik.DashboardUpdatePublicType? type,
             string? description,
-            object? config)
+            global::Opik.JsonNodePublic? config)
         {
             this.Name = name;
             this.Type = type;

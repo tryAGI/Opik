@@ -37,13 +37,13 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("inputs")]
-        public object? Inputs { get; set; }
+        public global::Opik.JsonNode? Inputs { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("result")]
-        public object? Result { get; set; }
+        public global::Opik.JsonNode? Result { get; set; }
 
         /// <summary>
         /// 
@@ -131,8 +131,8 @@ namespace Opik
             global::System.Guid? runnerId,
             string? agentName,
             global::Opik.LocalRunnerJobStatus? status,
-            object? inputs,
-            object? result,
+            global::Opik.JsonNode? inputs,
+            global::Opik.JsonNode? result,
             string? error,
             global::System.Guid? projectId,
             global::System.Guid? traceId,

@@ -6,7 +6,7 @@ namespace Opik
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class AvgValueStatPublic : ProjectStatItemObjectPublic
+    public sealed partial class AvgValueStatPublic : global::Opik.ProjectStatItemObjectPublic
     {
         /// <summary>
         /// 

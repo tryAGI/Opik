@@ -42,7 +42,7 @@ namespace Opik
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Data { get; set; }
+        public required global::Opik.JsonNode Data { get; set; }
 
         /// <summary>
         /// 
@@ -96,7 +96,7 @@ namespace Opik
 #endif
         public DatasetItemWrite(
             global::Opik.DatasetItemWriteSource source,
-            object data,
+            global::Opik.JsonNode data,
             global::System.Guid? id,
             global::System.Guid? traceId,
             global::System.Guid? spanId,

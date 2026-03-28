@@ -47,7 +47,7 @@ namespace Opik
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Collections.Generic.IAsyncEnumerable<global::System.Collections.Generic.IList<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>>> CreateChatCompletionsAsStreamAsync(
             string? model = default,
-            global::System.Collections.Generic.IList<object>? messages = default,
+            global::System.Collections.Generic.IList<global::Opik.Message>? messages = default,
             double? temperature = default,
             double? topP = default,
             int? n = default,

@@ -64,7 +64,7 @@ namespace Opik
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("config")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Config { get; set; }
+        public required global::Opik.JsonNodePublic Config { get; set; }
 
         /// <summary>
         /// Included only in responses
@@ -135,7 +135,7 @@ namespace Opik
 #endif
         public DashboardPublic(
             string name,
-            object config,
+            global::Opik.JsonNodePublic config,
             global::System.Guid? id,
             string? workspaceId,
             global::System.Guid? projectId,

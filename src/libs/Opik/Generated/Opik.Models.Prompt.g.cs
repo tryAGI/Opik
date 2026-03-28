@@ -49,7 +49,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        public object? Metadata { get; set; }
+        public global::Opik.JsonNode? Metadata { get; set; }
 
         /// <summary>
         /// 
@@ -178,7 +178,7 @@ namespace Opik
             string? projectName,
             string? description,
             string? template,
-            object? metadata,
+            global::Opik.JsonNode? metadata,
             string? changeDescription,
             global::Opik.PromptType? type,
             global::Opik.PromptTemplateStructure? templateStructure,

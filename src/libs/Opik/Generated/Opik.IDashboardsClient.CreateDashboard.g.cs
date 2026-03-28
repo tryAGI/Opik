@@ -33,7 +33,7 @@ namespace Opik
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.DashboardPublic> CreateDashboardAsync(
             string name,
-            object config,
+            global::Opik.JsonNodeWrite config,
             global::System.Guid? projectId = default,
             string? projectName = default,
             global::Opik.DashboardWriteType? type = default,

@@ -45,7 +45,7 @@ namespace Opik
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("config")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Config { get; set; }
+        public required global::Opik.JsonNodeWrite Config { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -71,7 +71,7 @@ namespace Opik
 #endif
         public DashboardWrite(
             string name,
-            object config,
+            global::Opik.JsonNodeWrite config,
             global::System.Guid? projectId,
             string? projectName,
             global::Opik.DashboardWriteType? type,

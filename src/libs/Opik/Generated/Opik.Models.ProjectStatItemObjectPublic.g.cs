@@ -10,9 +10,9 @@ namespace Opik
         TypeDiscriminatorPropertyName = "type",
         IgnoreUnrecognizedTypeDiscriminators = true,
         UnknownDerivedTypeHandling = global::System.Text.Json.Serialization.JsonUnknownDerivedTypeHandling.FallBackToBaseType)]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.AvgValueStatPublic), typeDiscriminator: "AVG")]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.CountValueStatPublic), typeDiscriminator: "COUNT")]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.PercentageValueStatPublic), typeDiscriminator: "PERCENTAGE")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.AvgValueStatPublic), typeDiscriminator: "AVG")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.CountValueStatPublic), typeDiscriminator: "COUNT")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.PercentageValueStatPublic), typeDiscriminator: "PERCENTAGE")]
     public partial class ProjectStatItemObjectPublic
     {
         /// <summary>

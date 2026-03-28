@@ -12,12 +12,12 @@ namespace Opik
         TypeDiscriminatorPropertyName = "type",
         IgnoreUnrecognizedTypeDiscriminators = true,
         UnknownDerivedTypeHandling = global::System.Text.Json.Serialization.JsonUnknownDerivedTypeHandling.FallBackToBaseType)]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.AutomationRuleEvaluatorLlmAsJudgePublic), typeDiscriminator: "llm_as_judge")]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.AutomationRuleEvaluatorSpanLlmAsJudgePublic), typeDiscriminator: "span_llm_as_judge")]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.AutomationRuleEvaluatorSpanUserDefinedMetricPythonPublic), typeDiscriminator: "span_user_defined_metric_python")]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.AutomationRuleEvaluatorTraceThreadLlmAsJudgePublic), typeDiscriminator: "trace_thread_llm_as_judge")]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.AutomationRuleEvaluatorTraceThreadUserDefinedMetricPythonPublic), typeDiscriminator: "trace_thread_user_defined_metric_python")]
-    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(Opik.AutomationRuleEvaluatorUserDefinedMetricPythonPublic), typeDiscriminator: "user_defined_metric_python")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.AutomationRuleEvaluatorLlmAsJudgePublic), typeDiscriminator: "llm_as_judge")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.AutomationRuleEvaluatorSpanLlmAsJudgePublic), typeDiscriminator: "span_llm_as_judge")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.AutomationRuleEvaluatorSpanUserDefinedMetricPythonPublic), typeDiscriminator: "span_user_defined_metric_python")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.AutomationRuleEvaluatorTraceThreadLlmAsJudgePublic), typeDiscriminator: "trace_thread_llm_as_judge")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.AutomationRuleEvaluatorTraceThreadUserDefinedMetricPythonPublic), typeDiscriminator: "trace_thread_user_defined_metric_python")]
+    [global::System.Text.Json.Serialization.JsonDerivedType(typeof(global::Opik.AutomationRuleEvaluatorUserDefinedMetricPythonPublic), typeDiscriminator: "user_defined_metric_python")]
     public partial class AutomationRuleEvaluatorObjectObjectPublic
     {
         /// <summary>

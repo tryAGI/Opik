@@ -46,7 +46,7 @@ namespace Opik
             string? projectName = default,
             string? description = default,
             string? template = default,
-            object? metadata = default,
+            global::Opik.JsonNodeWrite? metadata = default,
             string? changeDescription = default,
             global::Opik.PromptWriteType? type = default,
             global::Opik.PromptWriteTemplateStructure? templateStructure = default,

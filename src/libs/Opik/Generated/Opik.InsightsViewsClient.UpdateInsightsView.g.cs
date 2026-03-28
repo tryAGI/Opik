@@ -268,7 +268,7 @@ namespace Opik
             string? name = default,
             global::Opik.DashboardUpdatePublicType? type = default,
             string? description = default,
-            object? config = default,
+            global::Opik.JsonNodePublic? config = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::Opik.DashboardUpdatePublic
