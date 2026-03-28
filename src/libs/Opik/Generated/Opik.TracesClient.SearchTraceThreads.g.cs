@@ -105,13 +105,13 @@ namespace Opik
                     if (ReadResponseAsString)
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_400 = global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext) as byte[];
+                        __value_400 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
                     }
                     else
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_400 = global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext) as byte[];
+                        __value_400 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)

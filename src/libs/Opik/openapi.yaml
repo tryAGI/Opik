@@ -198,7 +198,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AgentConfigCreateWrite"
+              $ref: "#/components/schemas/AgentConfigCreate_Write"
       responses:
         "201":
           description: Created
@@ -214,19 +214,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageWrite"
+                $ref: "#/components/schemas/ErrorMessage_Write"
         "409":
           description: Conflict (config already exists)
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageWrite"
+                $ref: "#/components/schemas/ErrorMessage_Write"
         "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageWrite"
+                $ref: "#/components/schemas/ErrorMessage_Write"
     patch:
       tags:
       - Agent Configs
@@ -238,7 +238,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AgentConfigCreateWrite"
+              $ref: "#/components/schemas/AgentConfigCreate_Write"
       responses:
         "204":
           description: Blueprint added
@@ -254,13 +254,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageWrite"
+                $ref: "#/components/schemas/ErrorMessage_Write"
         "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageWrite"
+                $ref: "#/components/schemas/ErrorMessage_Write"
   /v1/private/agent-configs/blueprints/environments:
     post:
       tags:
@@ -318,19 +318,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AgentBlueprintPublic"
+                $ref: "#/components/schemas/AgentBlueprint_Public"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
     put:
       tags:
       - Agent Configs
@@ -421,19 +421,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AgentBlueprintPublic"
+                $ref: "#/components/schemas/AgentBlueprint_Public"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/agent-configs/blueprints/projects/{project_id}/names/{name}:
     get:
       tags:
@@ -464,19 +464,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AgentBlueprintPublic"
+                $ref: "#/components/schemas/AgentBlueprint_Public"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/agent-configs/blueprints/history/projects/{project_id}:
     get:
       tags:
@@ -511,19 +511,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/BlueprintPageHistory"
+                $ref: "#/components/schemas/BlueprintPage_History"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageHistory"
+                $ref: "#/components/schemas/ErrorMessage_History"
         "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageHistory"
+                $ref: "#/components/schemas/ErrorMessage_History"
   /v1/private/agent-configs/blueprints/{blueprint_id}/deltas:
     get:
       tags:
@@ -544,19 +544,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AgentBlueprintPublic"
+                $ref: "#/components/schemas/AgentBlueprint_Public"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/agent-configs/blueprints/latest/projects/{project_id}:
     get:
       tags:
@@ -582,19 +582,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AgentBlueprintPublic"
+                $ref: "#/components/schemas/AgentBlueprint_Public"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "401":
           description: Unauthorized
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/alerts:
     get:
       tags:
@@ -631,7 +631,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AlertPagePublic"
+                $ref: "#/components/schemas/AlertPage_Public"
     post:
       tags:
       - Alerts
@@ -642,7 +642,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AlertWrite"
+              $ref: "#/components/schemas/Alert_Write"
       responses:
         "201":
           description: Created
@@ -712,13 +712,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AlertPublic"
+                $ref: "#/components/schemas/Alert_Public"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
     put:
       tags:
       - Alerts
@@ -736,7 +736,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AlertWrite"
+              $ref: "#/components/schemas/Alert_Write"
       responses:
         "204":
           description: No Content
@@ -793,7 +793,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AlertWrite"
+              $ref: "#/components/schemas/Alert_Write"
       responses:
         "200":
           description: Webhook test
@@ -876,7 +876,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AnnotationQueuePagePublic"
+                $ref: "#/components/schemas/AnnotationQueuePage_Public"
     post:
       tags:
       - Annotation Queues
@@ -887,7 +887,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AnnotationQueueWrite"
+              $ref: "#/components/schemas/AnnotationQueue_Write"
       responses:
         "201":
           description: Created
@@ -921,7 +921,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AnnotationQueueBatchWrite"
+              $ref: "#/components/schemas/AnnotationQueueBatch_Write"
       responses:
         "204":
           description: No Content
@@ -984,13 +984,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AnnotationQueuePublic"
+                $ref: "#/components/schemas/AnnotationQueue_Public"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
     patch:
       tags:
       - Annotation Queues
@@ -1439,7 +1439,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AutomationRuleEvaluatorPagePublic"
+                $ref: "#/components/schemas/AutomationRuleEvaluatorPage_Public"
     post:
       tags:
       - Automation rule evaluators
@@ -1450,7 +1450,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AutomationRuleEvaluatorWrite"
+              $ref: "#/components/schemas/AutomationRuleEvaluator_Write"
       responses:
         "201":
           description: Created
@@ -1507,7 +1507,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AutomationRuleEvaluatorPublic"
+                $ref: "#/components/schemas/AutomationRuleEvaluator_Public"
     patch:
       tags:
       - Automation rule evaluators
@@ -1630,7 +1630,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DashboardPagePublic"
+                $ref: "#/components/schemas/DashboardPage_Public"
     post:
       tags:
       - Dashboards
@@ -1641,7 +1641,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DashboardWrite"
+              $ref: "#/components/schemas/Dashboard_Write"
       responses:
         "201":
           description: Created
@@ -1655,7 +1655,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DashboardPublic"
+                $ref: "#/components/schemas/Dashboard_Public"
   /v1/private/dashboards/{dashboardId}:
     get:
       tags:
@@ -1676,7 +1676,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DashboardPublic"
+                $ref: "#/components/schemas/Dashboard_Public"
         "404":
           description: Dashboard not found
     delete:
@@ -1713,14 +1713,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DashboardUpdatePublic"
+              $ref: "#/components/schemas/DashboardUpdate_Public"
       responses:
         "200":
           description: Updated dashboard
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DashboardPublic"
+                $ref: "#/components/schemas/Dashboard_Public"
         "404":
           description: Dashboard not found
         "409":
@@ -1771,32 +1771,32 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DatasetItemChangesPublic"
+              $ref: "#/components/schemas/DatasetItemChanges_Public"
       responses:
         "201":
           description: Version created successfully
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetVersionPublic"
+                $ref: "#/components/schemas/DatasetVersion_Public"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "404":
           description: Dataset or version not found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "409":
           description: Version conflict - baseVersion is not the latest
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/datasets/items/batch:
     patch:
       tags:
@@ -1877,7 +1877,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetPagePublic"
+                $ref: "#/components/schemas/DatasetPage_Public"
     post:
       tags:
       - Datasets
@@ -1888,7 +1888,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DatasetWrite"
+              $ref: "#/components/schemas/Dataset_Write"
       responses:
         "201":
           description: Created
@@ -1913,7 +1913,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DatasetItemBatchWrite"
+              $ref: "#/components/schemas/DatasetItemBatch_Write"
       responses:
         "204":
           description: No content
@@ -2018,7 +2018,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetPublic"
+                $ref: "#/components/schemas/Dataset_Public"
     put:
       tags:
       - Datasets
@@ -2154,7 +2154,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DatasetExpansionWrite"
+              $ref: "#/components/schemas/DatasetExpansion_Write"
       responses:
         "200":
           description: Generated synthetic samples
@@ -2218,7 +2218,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetItemPageCompare"
+                $ref: "#/components/schemas/DatasetItemPage_Compare"
   /v1/private/datasets/retrieve:
     post:
       tags:
@@ -2230,14 +2230,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DatasetIdentifierPublic"
+              $ref: "#/components/schemas/DatasetIdentifier_Public"
       responses:
         "200":
           description: Dataset resource
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetPublic"
+                $ref: "#/components/schemas/Dataset_Public"
   /v1/private/datasets/{id}/items/experiments/items/stats:
     get:
       tags:
@@ -2267,7 +2267,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProjectStatsPublic"
+                $ref: "#/components/schemas/ProjectStats_Public"
   /v1/private/datasets/export-jobs/{jobId}:
     get:
       tags:
@@ -2288,7 +2288,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetExportJobPublic"
+                $ref: "#/components/schemas/DatasetExportJob_Public"
         "404":
           description: Export job not found
   /v1/private/datasets/export-jobs:
@@ -2307,7 +2307,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/DatasetExportJobPublic"
+                  $ref: "#/components/schemas/DatasetExportJob_Public"
   /v1/private/datasets/items/{itemId}:
     get:
       tags:
@@ -2328,7 +2328,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetItemPublic"
+                $ref: "#/components/schemas/DatasetItem_Public"
     patch:
       tags:
       - Datasets
@@ -2347,7 +2347,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DatasetItemWrite"
+              $ref: "#/components/schemas/DatasetItem_Write"
       responses:
         "204":
           description: No content
@@ -2401,7 +2401,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetItemPagePublic"
+                $ref: "#/components/schemas/DatasetItemPage_Public"
   /v1/private/datasets/{id}/items/experiments/items/output/columns:
     get:
       tags:
@@ -2469,13 +2469,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetExportJobPublic"
+                $ref: "#/components/schemas/DatasetExportJob_Public"
         "200":
           description: Existing export job in progress
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetExportJobPublic"
+                $ref: "#/components/schemas/DatasetExportJob_Public"
   /v1/private/datasets/items/stream:
     post:
       tags:
@@ -2637,13 +2637,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetVersionPagePublic"
+                $ref: "#/components/schemas/DatasetVersionPage_Public"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/datasets/{id}/versions/restore:
     post:
       tags:
@@ -2664,20 +2664,20 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DatasetVersionRestorePublic"
+              $ref: "#/components/schemas/DatasetVersionRestore_Public"
       responses:
         "200":
           description: Version restored successfully
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetVersionPublic"
+                $ref: "#/components/schemas/DatasetVersion_Public"
         "404":
           description: Version not found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/datasets/{id}/versions/retrieve:
     post:
       tags:
@@ -2697,26 +2697,26 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DatasetVersionRetrieveRequestPublic"
+              $ref: "#/components/schemas/DatasetVersionRetrieveRequest_Public"
       responses:
         "200":
           description: Dataset version
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetVersionPublic"
+                $ref: "#/components/schemas/DatasetVersion_Public"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "404":
           description: Version not found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/datasets/{id}/versions/hash/{versionHash}:
     patch:
       tags:
@@ -2740,32 +2740,32 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DatasetVersionUpdatePublic"
+              $ref: "#/components/schemas/DatasetVersionUpdate_Public"
       responses:
         "200":
           description: Version updated successfully
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetVersionPublic"
+                $ref: "#/components/schemas/DatasetVersion_Public"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "404":
           description: Not Found - Version not found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "409":
           description: Conflict - Tag already exists
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/experiments/batch:
     patch:
       tags:
@@ -2872,13 +2872,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ExperimentPagePublic"
+                $ref: "#/components/schemas/ExperimentPage_Public"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
     post:
       tags:
       - Experiments
@@ -2889,7 +2889,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ExperimentWrite"
+              $ref: "#/components/schemas/Experiment_Write"
       responses:
         "201":
           description: Created
@@ -2957,7 +2957,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ExperimentItemBulkUploadExperimentItemBulkWriteView"
+              $ref: "#/components/schemas/ExperimentItemBulkUpload_ExperimentItemBulkWriteView"
       responses:
         "204":
           description: No content
@@ -3002,7 +3002,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/FeedbackScoreNamesPublic"
+                $ref: "#/components/schemas/FeedbackScoreNames_Public"
   /v1/private/experiments/groups:
     get:
       tags:
@@ -3139,13 +3139,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ExperimentPublic"
+                $ref: "#/components/schemas/Experiment_Public"
         "404":
           description: Not found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
     patch:
       tags:
       - Experiments
@@ -3199,13 +3199,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ExperimentItemPublic"
+                $ref: "#/components/schemas/ExperimentItem_Public"
         "404":
           description: Not found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/experiments/items/stream:
     post:
       tags:
@@ -3242,7 +3242,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ExperimentStreamRequestPublic"
+              $ref: "#/components/schemas/ExperimentStreamRequest_Public"
       responses:
         "200":
           description: Experiments stream or error during process
@@ -3254,8 +3254,8 @@ paths:
                 items:
                   type: string
                   anyOf:
-                  - $ref: "#/components/schemas/ExperimentPublic"
-                  - $ref: "#/components/schemas/ErrorMessagePublic"
+                  - $ref: "#/components/schemas/Experiment_Public"
+                  - $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/feedback-definitions:
     get:
       tags:
@@ -3297,7 +3297,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/FeedbackDefinitionPagePublic"
+                $ref: "#/components/schemas/FeedbackDefinitionPage_Public"
     post:
       tags:
       - Feedback-definitions
@@ -3308,7 +3308,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/FeedbackCreate"
+              $ref: "#/components/schemas/Feedback_Create"
       responses:
         "201":
           description: Created
@@ -3339,7 +3339,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/FeedbackPublic"
+                $ref: "#/components/schemas/Feedback_Public"
     put:
       tags:
       - Feedback-definitions
@@ -3357,7 +3357,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/FeedbackUpdate"
+              $ref: "#/components/schemas/Feedback_Update"
       responses:
         "204":
           description: No Content
@@ -3415,7 +3415,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/GuardrailBatchWrite"
+              $ref: "#/components/schemas/GuardrailBatch_Write"
       responses:
         "204":
           description: No Content
@@ -3465,7 +3465,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DashboardPagePublic"
+                $ref: "#/components/schemas/DashboardPage_Public"
     post:
       tags:
       - Insights Views
@@ -3476,7 +3476,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DashboardWrite"
+              $ref: "#/components/schemas/Dashboard_Write"
       responses:
         "201":
           description: Created
@@ -3490,7 +3490,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DashboardPublic"
+                $ref: "#/components/schemas/Dashboard_Public"
   /v1/private/insights-views/{insightsViewId}:
     get:
       tags:
@@ -3511,7 +3511,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DashboardPublic"
+                $ref: "#/components/schemas/Dashboard_Public"
         "404":
           description: Insights view not found
     delete:
@@ -3548,14 +3548,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/DashboardUpdatePublic"
+              $ref: "#/components/schemas/DashboardUpdate_Public"
       responses:
         "200":
           description: Updated insights view
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DashboardPublic"
+                $ref: "#/components/schemas/Dashboard_Public"
         "404":
           description: Insights view not found
         "409":
@@ -3617,7 +3617,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProviderApiKeyPagePublic"
+                $ref: "#/components/schemas/ProviderApiKeyPage_Public"
     post:
       tags:
       - LlmProviderKey
@@ -3628,7 +3628,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ProviderApiKeyWrite"
+              $ref: "#/components/schemas/ProviderApiKey_Write"
       responses:
         "201":
           description: Created
@@ -3671,13 +3671,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProviderApiKeyPublic"
+                $ref: "#/components/schemas/ProviderApiKey_Public"
         "404":
           description: Not found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
     patch:
       tags:
       - LlmProviderKey
@@ -4524,13 +4524,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/OptimizationPagePublic"
+                $ref: "#/components/schemas/OptimizationPage_Public"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
     put:
       tags:
       - Optimizations
@@ -4541,7 +4541,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/OptimizationWrite"
+              $ref: "#/components/schemas/Optimization_Write"
       responses:
         "201":
           description: Created
@@ -4562,7 +4562,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/OptimizationWrite"
+              $ref: "#/components/schemas/Optimization_Write"
       responses:
         "201":
           description: Created
@@ -4608,13 +4608,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/OptimizationPublic"
+                $ref: "#/components/schemas/Optimization_Public"
         "404":
           description: Not found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
     put:
       tags:
       - Optimizations
@@ -4705,13 +4705,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AlertPagePublic"
+                $ref: "#/components/schemas/AlertPage_Public"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/projects/{projectId}/dashboards:
     get:
       tags:
@@ -4759,7 +4759,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DashboardPagePublic"
+                $ref: "#/components/schemas/DashboardPage_Public"
   /v1/private/projects/{projectId}/datasets:
     get:
       tags:
@@ -4815,7 +4815,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/DatasetPagePublic"
+                $ref: "#/components/schemas/DatasetPage_Public"
   /v1/private/projects/{projectId}/experiments:
     get:
       tags:
@@ -4893,13 +4893,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ExperimentPagePublic"
+                $ref: "#/components/schemas/ExperimentPage_Public"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/projects/{projectId}/optimizations:
     get:
       tags:
@@ -4956,13 +4956,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/OptimizationPagePublic"
+                $ref: "#/components/schemas/OptimizationPage_Public"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/projects/{projectId}/prompts:
     get:
       tags:
@@ -5010,7 +5010,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptPagePublic"
+                $ref: "#/components/schemas/PromptPage_Public"
   /v1/private/projects:
     get:
       tags:
@@ -5048,7 +5048,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProjectPagePublic"
+                $ref: "#/components/schemas/ProjectPage_Public"
     post:
       tags:
       - Projects
@@ -5059,7 +5059,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ProjectWrite"
+              $ref: "#/components/schemas/Project_Write"
       responses:
         "201":
           description: Created
@@ -5102,7 +5102,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProjectPublic"
+                $ref: "#/components/schemas/Project_Public"
     delete:
       tags:
       - Projects
@@ -5263,26 +5263,26 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ProjectMetricRequestPublic"
+              $ref: "#/components/schemas/ProjectMetricRequest_Public"
       responses:
         "200":
           description: Project Metrics
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProjectMetricResponsePublic"
+                $ref: "#/components/schemas/ProjectMetricResponse_Public"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/projects/stats:
     get:
       tags:
@@ -5332,32 +5332,32 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/ProjectRetrieveDetailed"
+              $ref: "#/components/schemas/ProjectRetrieve_Detailed"
       responses:
         "200":
           description: Project resource
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProjectDetailed"
+                $ref: "#/components/schemas/Project_Detailed"
         "422":
           description: Unprocessable Content
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetailed"
+                $ref: "#/components/schemas/ErrorMessage_Detailed"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetailed"
+                $ref: "#/components/schemas/ErrorMessage_Detailed"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetailed"
+                $ref: "#/components/schemas/ErrorMessage_Detailed"
   /v1/private/prompts:
     get:
       tags:
@@ -5404,7 +5404,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptPagePublic"
+                $ref: "#/components/schemas/PromptPage_Public"
     post:
       tags:
       - Prompts
@@ -5415,7 +5415,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/PromptWrite"
+              $ref: "#/components/schemas/Prompt_Write"
       responses:
         "201":
           description: Created
@@ -5455,32 +5455,32 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/CreatePromptVersionDetail"
+              $ref: "#/components/schemas/CreatePromptVersion_Detail"
       responses:
         "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptVersionDetail"
+                $ref: "#/components/schemas/PromptVersion_Detail"
         "422":
           description: Unprocessable Content
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
         "409":
           description: Conflict
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
     patch:
       tags:
       - Prompts
@@ -5531,13 +5531,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptDetail"
+                $ref: "#/components/schemas/Prompt_Detail"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
     put:
       tags:
       - Prompts
@@ -5555,7 +5555,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/PromptUpdatable"
+              $ref: "#/components/schemas/Prompt_Updatable"
       responses:
         "204":
           description: No content
@@ -5634,25 +5634,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptDetail"
+                $ref: "#/components/schemas/Prompt_Detail"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
         "409":
           description: Conflict
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
   /v1/private/prompts/versions/{versionId}:
     get:
       tags:
@@ -5673,13 +5673,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptVersionDetail"
+                $ref: "#/components/schemas/PromptVersion_Detail"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
   /v1/private/prompts/{id}/versions:
     get:
       tags:
@@ -5727,7 +5727,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptVersionPagePublic"
+                $ref: "#/components/schemas/PromptVersionPage_Public"
   /v1/private/prompts/retrieve-by-commits:
     post:
       tags:
@@ -5739,7 +5739,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/PromptVersionCommitsRequestPublic"
+              $ref: "#/components/schemas/PromptVersionCommitsRequest_Public"
       responses:
         "200":
           description: OK
@@ -5748,7 +5748,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/PromptVersionLinkPublic"
+                  $ref: "#/components/schemas/PromptVersionLink_Public"
   /v1/private/prompts/{promptId}/versions/{versionId}/restore:
     post:
       tags:
@@ -5776,19 +5776,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptVersionDetail"
+                $ref: "#/components/schemas/PromptVersion_Detail"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
   /v1/private/prompts/versions/retrieve:
     post:
       tags:
@@ -5800,32 +5800,32 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/PromptVersionRetrieveDetail"
+              $ref: "#/components/schemas/PromptVersionRetrieve_Detail"
       responses:
         "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PromptVersionDetail"
+                $ref: "#/components/schemas/PromptVersion_Detail"
         "422":
           description: Unprocessable Content
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
         "400":
           description: Bad Request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
         "404":
           description: Not Found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ErrorMessageDetail"
+                $ref: "#/components/schemas/ErrorMessage_Detail"
   /v1/private/retention/rules:
     get:
       tags:
@@ -5860,7 +5860,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/RetentionRulePagePublic"
+                $ref: "#/components/schemas/RetentionRulePage_Public"
     post:
       tags:
       - Retention Rules
@@ -5872,7 +5872,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/RetentionRuleWrite"
+              $ref: "#/components/schemas/RetentionRule_Write"
       responses:
         "201":
           description: Created
@@ -5886,7 +5886,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/RetentionRulePublic"
+                $ref: "#/components/schemas/RetentionRule_Public"
   /v1/private/retention/rules/{ruleId}:
     get:
       tags:
@@ -5907,7 +5907,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/RetentionRulePublic"
+                $ref: "#/components/schemas/RetentionRule_Public"
         "404":
           description: Retention rule not found
     delete:
@@ -6005,7 +6005,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/SpanBatchWrite"
+              $ref: "#/components/schemas/SpanBatch_Write"
       responses:
         "204":
           description: No Content
@@ -6125,7 +6125,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/SpanPagePublic"
+                $ref: "#/components/schemas/SpanPage_Public"
     post:
       tags:
       - Spans
@@ -6136,7 +6136,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/SpanWrite"
+              $ref: "#/components/schemas/Span_Write"
       responses:
         "201":
           description: Created
@@ -6181,13 +6181,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/SpanPublic"
+                $ref: "#/components/schemas/Span_Public"
         "404":
           description: Not found
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/SpanPublic"
+                $ref: "#/components/schemas/Span_Public"
     delete:
       tags:
       - Spans
@@ -6293,7 +6293,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/FeedbackScoreNamesPublic"
+                $ref: "#/components/schemas/FeedbackScoreNames_Public"
   /v1/private/spans/{spanId}/comments/{commentId}:
     get:
       tags:
@@ -6386,7 +6386,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProjectStatsPublic"
+                $ref: "#/components/schemas/ProjectStats_Public"
   /v1/private/spans/feedback-scores:
     put:
       tags:
@@ -6413,7 +6413,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/SpanSearchStreamRequestPublic"
+              $ref: "#/components/schemas/SpanSearchStreamRequest_Public"
       responses:
         "200":
           description: Spans stream or error during process
@@ -6425,14 +6425,14 @@ paths:
                 items:
                   type: string
                   anyOf:
-                  - $ref: "#/components/schemas/SpanPublic"
-                  - $ref: "#/components/schemas/ErrorMessagePublic"
+                  - $ref: "#/components/schemas/Span_Public"
+                  - $ref: "#/components/schemas/ErrorMessage_Public"
         "400":
           description: Bad Request
           content:
             application/octet-stream:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/spans/comments/{commentId}:
     patch:
       tags:
@@ -6548,7 +6548,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/TraceBatchWrite"
+              $ref: "#/components/schemas/TraceBatch_Write"
       responses:
         "204":
           description: No Content
@@ -6695,7 +6695,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/TracePagePublic"
+                $ref: "#/components/schemas/TracePage_Public"
     post:
       tags:
       - Traces
@@ -6706,7 +6706,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/TraceWrite"
+              $ref: "#/components/schemas/Trace_Write"
       responses:
         "201":
           description: Created
@@ -6745,7 +6745,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/TracePublic"
+                $ref: "#/components/schemas/Trace_Public"
     delete:
       tags:
       - Traces
@@ -6899,7 +6899,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/FeedbackScoreNamesPublic"
+                $ref: "#/components/schemas/FeedbackScoreNames_Public"
   /v1/private/traces/threads/feedback-scores/names:
     get:
       tags:
@@ -6919,7 +6919,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/FeedbackScoreNamesPublic"
+                $ref: "#/components/schemas/FeedbackScoreNames_Public"
   /v1/private/traces/stats:
     get:
       tags:
@@ -6965,7 +6965,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProjectStatsPublic"
+                $ref: "#/components/schemas/ProjectStats_Public"
   /v1/private/traces/threads/{threadId}/comments/{commentId}:
     get:
       tags:
@@ -7044,7 +7044,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ProjectStatsPublic"
+                $ref: "#/components/schemas/ProjectStats_Public"
   /v1/private/traces/{traceId}/comments/{commentId}:
     get:
       tags:
@@ -7267,7 +7267,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/TraceSearchStreamRequestPublic"
+              $ref: "#/components/schemas/TraceSearchStreamRequest_Public"
       responses:
         "200":
           description: Traces stream or error during process
@@ -7279,20 +7279,20 @@ paths:
                 items:
                   type: string
                   anyOf:
-                  - $ref: "#/components/schemas/TracePublic"
-                  - $ref: "#/components/schemas/ErrorMessagePublic"
+                  - $ref: "#/components/schemas/Trace_Public"
+                  - $ref: "#/components/schemas/ErrorMessage_Public"
         "400":
           description: Bad Request
           content:
             application/octet-stream:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
         "401":
           description: Unauthorized
           content:
             application/octet-stream:
               schema:
-                $ref: "#/components/schemas/ErrorMessagePublic"
+                $ref: "#/components/schemas/ErrorMessage_Public"
   /v1/private/traces/threads/{threadModelId}:
     patch:
       tags:
@@ -7841,14 +7841,14 @@ components:
         trace_count:
           type: integer
           format: int32
-    ErrorMessageWrite:
+    ErrorMessage_Write:
       type: object
       properties:
         errors:
           type: array
           items:
             type: string
-    AgentBlueprintWrite:
+    AgentBlueprint_Write:
       required:
       - type
       - values
@@ -7871,8 +7871,8 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/AgentConfigValueWrite"
-    AgentConfigCreateWrite:
+            $ref: "#/components/schemas/AgentConfigValue_Write"
+    AgentConfigCreate_Write:
       required:
       - blueprint
       type: object
@@ -7890,8 +7890,8 @@ components:
           description: Agent config ID. Generated automatically if not provided
           format: uuid
         blueprint:
-          $ref: "#/components/schemas/AgentBlueprintWrite"
-    AgentConfigValueWrite:
+          $ref: "#/components/schemas/AgentBlueprint_Write"
+    AgentConfigValue_Write:
       required:
       - key
       - type
@@ -7971,7 +7971,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/AgentConfigEnv"
-    AgentBlueprintPublic:
+    AgentBlueprint_Public:
       required:
       - type
       - values
@@ -8017,8 +8017,8 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/AgentConfigValuePublic"
-    AgentConfigValuePublic:
+            $ref: "#/components/schemas/AgentConfigValue_Public"
+    AgentConfigValue_Public:
       required:
       - key
       - type
@@ -8057,7 +8057,7 @@ components:
           type: string
           format: uuid
           readOnly: true
-    ErrorMessagePublic:
+    ErrorMessage_Public:
       type: object
       properties:
         code:
@@ -8067,7 +8067,7 @@ components:
           type: string
         details:
           type: string
-    AgentBlueprintHistory:
+    AgentBlueprint_History:
       required:
       - type
       - values
@@ -8113,8 +8113,8 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/AgentConfigValueHistory"
-    AgentConfigValueHistory:
+            $ref: "#/components/schemas/AgentConfigValue_History"
+    AgentConfigValue_History:
       required:
       - key
       - type
@@ -8153,7 +8153,7 @@ components:
           type: string
           format: uuid
           readOnly: true
-    BlueprintPageHistory:
+    BlueprintPage_History:
       type: object
       properties:
         page:
@@ -8168,8 +8168,8 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/AgentBlueprintHistory"
-    ErrorMessageHistory:
+            $ref: "#/components/schemas/AgentBlueprint_History"
+    ErrorMessage_History:
       type: object
       properties:
         errors:
@@ -8344,7 +8344,7 @@ components:
         last_updated_by:
           type: string
           readOnly: true
-    AlertTriggerConfigWrite:
+    AlertTriggerConfig_Write:
       required:
       - type
       type: object
@@ -8364,7 +8364,7 @@ components:
           type: object
           additionalProperties:
             type: string
-    AlertTriggerWrite:
+    AlertTrigger_Write:
       required:
       - event_type
       type: object
@@ -8388,8 +8388,8 @@ components:
         trigger_configs:
           type: array
           items:
-            $ref: "#/components/schemas/AlertTriggerConfigWrite"
-    AlertWrite:
+            $ref: "#/components/schemas/AlertTriggerConfig_Write"
+    Alert_Write:
       required:
       - webhook
       type: object
@@ -8414,11 +8414,11 @@ components:
           additionalProperties:
             type: string
         webhook:
-          $ref: "#/components/schemas/WebhookWrite"
+          $ref: "#/components/schemas/Webhook_Write"
         triggers:
           type: array
           items:
-            $ref: "#/components/schemas/AlertTriggerWrite"
+            $ref: "#/components/schemas/AlertTrigger_Write"
         project_id:
           type: string
           description: "Optional project scope for this alert. When set, the alert\
@@ -8427,7 +8427,7 @@ components:
             \ Sending both project_id and a scope:project trigger config will result\
             \ in an error."
           format: uuid
-    WebhookWrite:
+    Webhook_Write:
       required:
       - url
       type: object
@@ -8461,7 +8461,7 @@ components:
           items:
             type: string
             format: uuid
-    AlertPagePublic:
+    AlertPage_Public:
       type: object
       properties:
         page:
@@ -8476,12 +8476,12 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/AlertPublic"
+            $ref: "#/components/schemas/Alert_Public"
         sortable_by:
           type: array
           items:
             type: string
-    AlertTriggerConfigPublic:
+    AlertTriggerConfig_Public:
       required:
       - type
       type: object
@@ -8519,7 +8519,7 @@ components:
         last_updated_by:
           type: string
           readOnly: true
-    AlertTriggerPublic:
+    AlertTrigger_Public:
       required:
       - event_type
       type: object
@@ -8547,7 +8547,7 @@ components:
         trigger_configs:
           type: array
           items:
-            $ref: "#/components/schemas/AlertTriggerConfigPublic"
+            $ref: "#/components/schemas/AlertTriggerConfig_Public"
         created_at:
           type: string
           format: date-time
@@ -8555,7 +8555,7 @@ components:
         created_by:
           type: string
           readOnly: true
-    AlertPublic:
+    Alert_Public:
       required:
       - webhook
       type: object
@@ -8580,11 +8580,11 @@ components:
           additionalProperties:
             type: string
         webhook:
-          $ref: "#/components/schemas/WebhookPublic"
+          $ref: "#/components/schemas/Webhook_Public"
         triggers:
           type: array
           items:
-            $ref: "#/components/schemas/AlertTriggerPublic"
+            $ref: "#/components/schemas/AlertTrigger_Public"
         created_at:
           type: string
           format: date-time
@@ -8607,7 +8607,7 @@ components:
             \ Sending both project_id and a scope:project trigger config will result\
             \ in an error."
           format: uuid
-    WebhookPublic:
+    Webhook_Public:
       required:
       - url
       type: object
@@ -8760,7 +8760,7 @@ components:
           type: string
         value:
           type: number
-    AnnotationQueueWrite:
+    AnnotationQueue_Write:
       required:
       - name
       - project_id
@@ -8806,7 +8806,7 @@ components:
           items:
             $ref: "#/components/schemas/AnnotationQueue"
       description: Batch of annotation queues to create
-    AnnotationQueueBatchWrite:
+    AnnotationQueueBatch_Write:
       required:
       - annotation_queues
       type: object
@@ -8818,9 +8818,9 @@ components:
           type: array
           description: List of annotation queues to create
           items:
-            $ref: "#/components/schemas/AnnotationQueueWrite"
+            $ref: "#/components/schemas/AnnotationQueue_Write"
       description: Batch of annotation queues to create
-    AnnotationQueuePagePublic:
+    AnnotationQueuePage_Public:
       type: object
       properties:
         page:
@@ -8835,12 +8835,12 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/AnnotationQueuePublic"
+            $ref: "#/components/schemas/AnnotationQueue_Public"
         sortableBy:
           type: array
           items:
             type: string
-    AnnotationQueueReviewerPublic:
+    AnnotationQueueReviewer_Public:
       type: object
       properties:
         username:
@@ -8849,7 +8849,7 @@ components:
           type: integer
           format: int64
       readOnly: true
-    AnnotationQueuePublic:
+    AnnotationQueue_Public:
       required:
       - name
       - project_id
@@ -8887,12 +8887,12 @@ components:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/AnnotationQueueReviewerPublic"
+            $ref: "#/components/schemas/AnnotationQueueReviewer_Public"
         feedback_scores:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScoreAveragePublic"
+            $ref: "#/components/schemas/FeedbackScoreAverage_Public"
         items_count:
           type: integer
           format: int64
@@ -8911,7 +8911,7 @@ components:
         last_updated_by:
           type: string
           readOnly: true
-    FeedbackScoreAveragePublic:
+    FeedbackScoreAverage_Public:
       required:
       - name
       - value
@@ -9576,14 +9576,14 @@ components:
       properties:
         url:
           type: string
-    AudioUrlWrite:
+    AudioUrl_Write:
       required:
       - url
       type: object
       properties:
         url:
           type: string
-    AutomationRuleEvaluatorLlmAsJudgeWrite:
+    AutomationRuleEvaluatorLlmAsJudge_Write:
       required:
       - action
       - code
@@ -9591,16 +9591,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorWrite"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Write"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/TraceFilterWrite"
+              $ref: "#/components/schemas/TraceFilter_Write"
           code:
-            $ref: "#/components/schemas/LlmAsJudgeCodeWrite"
-    AutomationRuleEvaluatorSpanLlmAsJudgeWrite:
+            $ref: "#/components/schemas/LlmAsJudgeCode_Write"
+    AutomationRuleEvaluatorSpanLlmAsJudge_Write:
       required:
       - action
       - code
@@ -9608,16 +9608,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorWrite"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Write"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/SpanFilterWrite"
+              $ref: "#/components/schemas/SpanFilter_Write"
           code:
-            $ref: "#/components/schemas/SpanLlmAsJudgeCodeWrite"
-    AutomationRuleEvaluatorSpanUserDefinedMetricPythonWrite:
+            $ref: "#/components/schemas/SpanLlmAsJudgeCode_Write"
+    AutomationRuleEvaluatorSpanUserDefinedMetricPython_Write:
       required:
       - action
       - code
@@ -9625,16 +9625,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorWrite"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Write"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/SpanFilterWrite"
+              $ref: "#/components/schemas/SpanFilter_Write"
           code:
-            $ref: "#/components/schemas/SpanUserDefinedMetricPythonCodeWrite"
-    AutomationRuleEvaluatorTraceThreadLlmAsJudgeWrite:
+            $ref: "#/components/schemas/SpanUserDefinedMetricPythonCode_Write"
+    AutomationRuleEvaluatorTraceThreadLlmAsJudge_Write:
       required:
       - action
       - code
@@ -9642,16 +9642,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorWrite"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Write"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/TraceThreadFilterWrite"
+              $ref: "#/components/schemas/TraceThreadFilter_Write"
           code:
-            $ref: "#/components/schemas/TraceThreadLlmAsJudgeCodeWrite"
-    AutomationRuleEvaluatorTraceThreadUserDefinedMetricPythonWrite:
+            $ref: "#/components/schemas/TraceThreadLlmAsJudgeCode_Write"
+    AutomationRuleEvaluatorTraceThreadUserDefinedMetricPython_Write:
       required:
       - action
       - code
@@ -9659,16 +9659,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorWrite"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Write"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/TraceThreadFilterWrite"
+              $ref: "#/components/schemas/TraceThreadFilter_Write"
           code:
-            $ref: "#/components/schemas/TraceThreadUserDefinedMetricPythonCodeWrite"
-    AutomationRuleEvaluatorUserDefinedMetricPythonWrite:
+            $ref: "#/components/schemas/TraceThreadUserDefinedMetricPythonCode_Write"
+    AutomationRuleEvaluatorUserDefinedMetricPython_Write:
       required:
       - action
       - code
@@ -9676,16 +9676,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorWrite"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Write"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/TraceFilterWrite"
+              $ref: "#/components/schemas/TraceFilter_Write"
           code:
-            $ref: "#/components/schemas/UserDefinedMetricPythonCodeWrite"
-    AutomationRuleEvaluatorWrite:
+            $ref: "#/components/schemas/UserDefinedMetricPythonCode_Write"
+    AutomationRuleEvaluator_Write:
       required:
       - action
       - name
@@ -9730,13 +9730,13 @@ components:
       discriminator:
         propertyName: type
         mapping:
-          llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorLlmAsJudgeWrite"
-          user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorUserDefinedMetricPythonWrite"
-          trace_thread_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorTraceThreadLlmAsJudgeWrite"
-          trace_thread_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorTraceThreadUserDefinedMetricPythonWrite"
-          span_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorSpanLlmAsJudgeWrite"
-          span_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorSpanUserDefinedMetricPythonWrite"
-    ImageUrlWrite:
+          llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorLlmAsJudge_Write"
+          user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorUserDefinedMetricPython_Write"
+          trace_thread_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorTraceThreadLlmAsJudge_Write"
+          trace_thread_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorTraceThreadUserDefinedMetricPython_Write"
+          span_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorSpanLlmAsJudge_Write"
+          span_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorSpanUserDefinedMetricPython_Write"
+    ImageUrl_Write:
       required:
       - url
       type: object
@@ -9745,9 +9745,9 @@ components:
           type: string
         detail:
           type: string
-    JsonNodeWrite:
+    JsonNode_Write:
       type: object
-    LlmAsJudgeCodeWrite:
+    LlmAsJudgeCode_Write:
       required:
       - messages
       - model
@@ -9756,11 +9756,11 @@ components:
       type: object
       properties:
         model:
-          $ref: "#/components/schemas/LlmAsJudgeModelParametersWrite"
+          $ref: "#/components/schemas/LlmAsJudgeModelParameters_Write"
         messages:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeMessageWrite"
+            $ref: "#/components/schemas/LlmAsJudgeMessage_Write"
         variables:
           type: object
           additionalProperties:
@@ -9768,8 +9768,8 @@ components:
         schema:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeOutputSchemaWrite"
-    LlmAsJudgeMessageContentWrite:
+            $ref: "#/components/schemas/LlmAsJudgeOutputSchema_Write"
+    LlmAsJudgeMessageContent_Write:
       required:
       - type
       type: object
@@ -9779,12 +9779,12 @@ components:
         text:
           type: string
         image_url:
-          $ref: "#/components/schemas/ImageUrlWrite"
+          $ref: "#/components/schemas/ImageUrl_Write"
         video_url:
-          $ref: "#/components/schemas/VideoUrlWrite"
+          $ref: "#/components/schemas/VideoUrl_Write"
         audio_url:
-          $ref: "#/components/schemas/AudioUrlWrite"
-    LlmAsJudgeMessageWrite:
+          $ref: "#/components/schemas/AudioUrl_Write"
+    LlmAsJudgeMessage_Write:
       required:
       - role
       type: object
@@ -9802,12 +9802,12 @@ components:
         content_array:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeMessageContentWrite"
+            $ref: "#/components/schemas/LlmAsJudgeMessageContent_Write"
         string_content:
           type: boolean
         structured_content:
           type: boolean
-    LlmAsJudgeModelParametersWrite:
+    LlmAsJudgeModelParameters_Write:
       required:
       - name
       - temperature
@@ -9822,8 +9822,8 @@ components:
           type: integer
           format: int32
         custom_parameters:
-          $ref: "#/components/schemas/JsonNodeWrite"
-    LlmAsJudgeOutputSchemaWrite:
+          $ref: "#/components/schemas/JsonNode_Write"
+    LlmAsJudgeOutputSchema_Write:
       required:
       - description
       - name
@@ -9840,7 +9840,7 @@ components:
           - DOUBLE
         description:
           type: string
-    SpanFilterWrite:
+    SpanFilter_Write:
       type: object
       properties:
         field:
@@ -9864,7 +9864,7 @@ components:
           type: string
         value:
           type: string
-    SpanLlmAsJudgeCodeWrite:
+    SpanLlmAsJudgeCode_Write:
       required:
       - messages
       - model
@@ -9873,11 +9873,11 @@ components:
       type: object
       properties:
         model:
-          $ref: "#/components/schemas/LlmAsJudgeModelParametersWrite"
+          $ref: "#/components/schemas/LlmAsJudgeModelParameters_Write"
         messages:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeMessageWrite"
+            $ref: "#/components/schemas/LlmAsJudgeMessage_Write"
         variables:
           type: object
           additionalProperties:
@@ -9885,8 +9885,8 @@ components:
         schema:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeOutputSchemaWrite"
-    SpanUserDefinedMetricPythonCodeWrite:
+            $ref: "#/components/schemas/LlmAsJudgeOutputSchema_Write"
+    SpanUserDefinedMetricPythonCode_Write:
       required:
       - arguments
       - metric
@@ -9899,7 +9899,7 @@ components:
           type: object
           additionalProperties:
             type: string
-    TraceFilterWrite:
+    TraceFilter_Write:
       type: object
       properties:
         field:
@@ -9923,7 +9923,7 @@ components:
           type: string
         value:
           type: string
-    TraceThreadFilterWrite:
+    TraceThreadFilter_Write:
       type: object
       properties:
         field:
@@ -9947,7 +9947,7 @@ components:
           type: string
         value:
           type: string
-    TraceThreadLlmAsJudgeCodeWrite:
+    TraceThreadLlmAsJudgeCode_Write:
       required:
       - messages
       - model
@@ -9955,23 +9955,23 @@ components:
       type: object
       properties:
         model:
-          $ref: "#/components/schemas/LlmAsJudgeModelParametersWrite"
+          $ref: "#/components/schemas/LlmAsJudgeModelParameters_Write"
         messages:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeMessageWrite"
+            $ref: "#/components/schemas/LlmAsJudgeMessage_Write"
         schema:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeOutputSchemaWrite"
-    TraceThreadUserDefinedMetricPythonCodeWrite:
+            $ref: "#/components/schemas/LlmAsJudgeOutputSchema_Write"
+    TraceThreadUserDefinedMetricPythonCode_Write:
       required:
       - metric
       type: object
       properties:
         metric:
           type: string
-    UserDefinedMetricPythonCodeWrite:
+    UserDefinedMetricPythonCode_Write:
       required:
       - arguments
       - metric
@@ -9984,21 +9984,21 @@ components:
           type: object
           additionalProperties:
             type: string
-    VideoUrlWrite:
+    VideoUrl_Write:
       required:
       - url
       type: object
       properties:
         url:
           type: string
-    AudioUrlPublic:
+    AudioUrl_Public:
       required:
       - url
       type: object
       properties:
         url:
           type: string
-    AutomationRuleEvaluatorLlmAsJudgePublic:
+    AutomationRuleEvaluatorLlmAsJudge_Public:
       required:
       - action
       - code
@@ -10006,16 +10006,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorPublic"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Public"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/TraceFilterPublic"
+              $ref: "#/components/schemas/TraceFilter_Public"
           code:
-            $ref: "#/components/schemas/LlmAsJudgeCodePublic"
-    AutomationRuleEvaluatorObjectObjectPublic:
+            $ref: "#/components/schemas/LlmAsJudgeCode_Public"
+    AutomationRuleEvaluatorObjectObject_Public:
       required:
       - action
       - name
@@ -10041,7 +10041,7 @@ components:
             \ by name)"
           readOnly: true
           items:
-            $ref: "#/components/schemas/ProjectReferencePublic"
+            $ref: "#/components/schemas/ProjectReference_Public"
         name:
           minLength: 1
           type: string
@@ -10080,13 +10080,13 @@ components:
       discriminator:
         propertyName: type
         mapping:
-          llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorLlmAsJudgePublic"
-          user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorUserDefinedMetricPythonPublic"
-          trace_thread_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorTraceThreadLlmAsJudgePublic"
-          trace_thread_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorTraceThreadUserDefinedMetricPythonPublic"
-          span_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorSpanLlmAsJudgePublic"
-          span_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorSpanUserDefinedMetricPythonPublic"
-    AutomationRuleEvaluatorPagePublic:
+          llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorLlmAsJudge_Public"
+          user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorUserDefinedMetricPython_Public"
+          trace_thread_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorTraceThreadLlmAsJudge_Public"
+          trace_thread_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorTraceThreadUserDefinedMetricPython_Public"
+          span_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorSpanLlmAsJudge_Public"
+          span_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorSpanUserDefinedMetricPython_Public"
+    AutomationRuleEvaluatorPage_Public:
       type: object
       properties:
         page:
@@ -10101,12 +10101,12 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/AutomationRuleEvaluatorObjectObjectPublic"
+            $ref: "#/components/schemas/AutomationRuleEvaluatorObjectObject_Public"
         sortable_by:
           type: array
           items:
             type: string
-    AutomationRuleEvaluatorSpanLlmAsJudgePublic:
+    AutomationRuleEvaluatorSpanLlmAsJudge_Public:
       required:
       - action
       - code
@@ -10114,16 +10114,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorPublic"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Public"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/SpanFilterPublic"
+              $ref: "#/components/schemas/SpanFilter_Public"
           code:
-            $ref: "#/components/schemas/SpanLlmAsJudgeCodePublic"
-    AutomationRuleEvaluatorSpanUserDefinedMetricPythonPublic:
+            $ref: "#/components/schemas/SpanLlmAsJudgeCode_Public"
+    AutomationRuleEvaluatorSpanUserDefinedMetricPython_Public:
       required:
       - action
       - code
@@ -10131,16 +10131,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorPublic"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Public"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/SpanFilterPublic"
+              $ref: "#/components/schemas/SpanFilter_Public"
           code:
-            $ref: "#/components/schemas/SpanUserDefinedMetricPythonCodePublic"
-    AutomationRuleEvaluatorTraceThreadLlmAsJudgePublic:
+            $ref: "#/components/schemas/SpanUserDefinedMetricPythonCode_Public"
+    AutomationRuleEvaluatorTraceThreadLlmAsJudge_Public:
       required:
       - action
       - code
@@ -10148,16 +10148,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorPublic"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Public"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/TraceThreadFilterPublic"
+              $ref: "#/components/schemas/TraceThreadFilter_Public"
           code:
-            $ref: "#/components/schemas/TraceThreadLlmAsJudgeCodePublic"
-    AutomationRuleEvaluatorTraceThreadUserDefinedMetricPythonPublic:
+            $ref: "#/components/schemas/TraceThreadLlmAsJudgeCode_Public"
+    AutomationRuleEvaluatorTraceThreadUserDefinedMetricPython_Public:
       required:
       - action
       - code
@@ -10165,16 +10165,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorPublic"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Public"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/TraceThreadFilterPublic"
+              $ref: "#/components/schemas/TraceThreadFilter_Public"
           code:
-            $ref: "#/components/schemas/TraceThreadUserDefinedMetricPythonCodePublic"
-    AutomationRuleEvaluatorUserDefinedMetricPythonPublic:
+            $ref: "#/components/schemas/TraceThreadUserDefinedMetricPythonCode_Public"
+    AutomationRuleEvaluatorUserDefinedMetricPython_Public:
       required:
       - action
       - code
@@ -10182,16 +10182,16 @@ components:
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/AutomationRuleEvaluatorPublic"
+      - $ref: "#/components/schemas/AutomationRuleEvaluator_Public"
       - type: object
         properties:
           filters:
             type: array
             items:
-              $ref: "#/components/schemas/TraceFilterPublic"
+              $ref: "#/components/schemas/TraceFilter_Public"
           code:
-            $ref: "#/components/schemas/UserDefinedMetricPythonCodePublic"
-    ImageUrlPublic:
+            $ref: "#/components/schemas/UserDefinedMetricPythonCode_Public"
+    ImageUrl_Public:
       required:
       - url
       type: object
@@ -10200,9 +10200,9 @@ components:
           type: string
         detail:
           type: string
-    JsonNodePublic:
+    JsonNode_Public:
       type: object
-    LlmAsJudgeCodePublic:
+    LlmAsJudgeCode_Public:
       required:
       - messages
       - model
@@ -10211,11 +10211,11 @@ components:
       type: object
       properties:
         model:
-          $ref: "#/components/schemas/LlmAsJudgeModelParametersPublic"
+          $ref: "#/components/schemas/LlmAsJudgeModelParameters_Public"
         messages:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeMessagePublic"
+            $ref: "#/components/schemas/LlmAsJudgeMessage_Public"
         variables:
           type: object
           additionalProperties:
@@ -10223,8 +10223,8 @@ components:
         schema:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeOutputSchemaPublic"
-    LlmAsJudgeMessageContentPublic:
+            $ref: "#/components/schemas/LlmAsJudgeOutputSchema_Public"
+    LlmAsJudgeMessageContent_Public:
       required:
       - type
       type: object
@@ -10234,12 +10234,12 @@ components:
         text:
           type: string
         image_url:
-          $ref: "#/components/schemas/ImageUrlPublic"
+          $ref: "#/components/schemas/ImageUrl_Public"
         video_url:
-          $ref: "#/components/schemas/VideoUrlPublic"
+          $ref: "#/components/schemas/VideoUrl_Public"
         audio_url:
-          $ref: "#/components/schemas/AudioUrlPublic"
-    LlmAsJudgeMessagePublic:
+          $ref: "#/components/schemas/AudioUrl_Public"
+    LlmAsJudgeMessage_Public:
       required:
       - role
       type: object
@@ -10257,12 +10257,12 @@ components:
         content_array:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeMessageContentPublic"
+            $ref: "#/components/schemas/LlmAsJudgeMessageContent_Public"
         string_content:
           type: boolean
         structured_content:
           type: boolean
-    LlmAsJudgeModelParametersPublic:
+    LlmAsJudgeModelParameters_Public:
       required:
       - name
       - temperature
@@ -10277,8 +10277,8 @@ components:
           type: integer
           format: int32
         custom_parameters:
-          $ref: "#/components/schemas/JsonNodePublic"
-    LlmAsJudgeOutputSchemaPublic:
+          $ref: "#/components/schemas/JsonNode_Public"
+    LlmAsJudgeOutputSchema_Public:
       required:
       - description
       - name
@@ -10295,7 +10295,7 @@ components:
           - DOUBLE
         description:
           type: string
-    ProjectReferencePublic:
+    ProjectReference_Public:
       required:
       - project_id
       - project_name
@@ -10310,7 +10310,7 @@ components:
           description: Project name
       description: Project reference with ID and name
       readOnly: true
-    SpanFilterPublic:
+    SpanFilter_Public:
       type: object
       properties:
         field:
@@ -10334,7 +10334,7 @@ components:
           type: string
         value:
           type: string
-    SpanLlmAsJudgeCodePublic:
+    SpanLlmAsJudgeCode_Public:
       required:
       - messages
       - model
@@ -10343,11 +10343,11 @@ components:
       type: object
       properties:
         model:
-          $ref: "#/components/schemas/LlmAsJudgeModelParametersPublic"
+          $ref: "#/components/schemas/LlmAsJudgeModelParameters_Public"
         messages:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeMessagePublic"
+            $ref: "#/components/schemas/LlmAsJudgeMessage_Public"
         variables:
           type: object
           additionalProperties:
@@ -10355,8 +10355,8 @@ components:
         schema:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeOutputSchemaPublic"
-    SpanUserDefinedMetricPythonCodePublic:
+            $ref: "#/components/schemas/LlmAsJudgeOutputSchema_Public"
+    SpanUserDefinedMetricPythonCode_Public:
       required:
       - arguments
       - metric
@@ -10369,7 +10369,7 @@ components:
           type: object
           additionalProperties:
             type: string
-    TraceFilterPublic:
+    TraceFilter_Public:
       type: object
       properties:
         field:
@@ -10393,7 +10393,7 @@ components:
           type: string
         value:
           type: string
-    TraceThreadFilterPublic:
+    TraceThreadFilter_Public:
       type: object
       properties:
         field:
@@ -10417,7 +10417,7 @@ components:
           type: string
         value:
           type: string
-    TraceThreadLlmAsJudgeCodePublic:
+    TraceThreadLlmAsJudgeCode_Public:
       required:
       - messages
       - model
@@ -10425,23 +10425,23 @@ components:
       type: object
       properties:
         model:
-          $ref: "#/components/schemas/LlmAsJudgeModelParametersPublic"
+          $ref: "#/components/schemas/LlmAsJudgeModelParameters_Public"
         messages:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeMessagePublic"
+            $ref: "#/components/schemas/LlmAsJudgeMessage_Public"
         schema:
           type: array
           items:
-            $ref: "#/components/schemas/LlmAsJudgeOutputSchemaPublic"
-    TraceThreadUserDefinedMetricPythonCodePublic:
+            $ref: "#/components/schemas/LlmAsJudgeOutputSchema_Public"
+    TraceThreadUserDefinedMetricPythonCode_Public:
       required:
       - metric
       type: object
       properties:
         metric:
           type: string
-    UserDefinedMetricPythonCodePublic:
+    UserDefinedMetricPythonCode_Public:
       required:
       - arguments
       - metric
@@ -10454,14 +10454,14 @@ components:
           type: object
           additionalProperties:
             type: string
-    VideoUrlPublic:
+    VideoUrl_Public:
       required:
       - url
       type: object
       properties:
         url:
           type: string
-    AutomationRuleEvaluatorPublic:
+    AutomationRuleEvaluator_Public:
       required:
       - action
       - name
@@ -10487,7 +10487,7 @@ components:
             \ by name)"
           readOnly: true
           items:
-            $ref: "#/components/schemas/ProjectReferencePublic"
+            $ref: "#/components/schemas/ProjectReference_Public"
         name:
           minLength: 1
           type: string
@@ -10526,12 +10526,12 @@ components:
       discriminator:
         propertyName: type
         mapping:
-          llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorLlmAsJudgePublic"
-          user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorUserDefinedMetricPythonPublic"
-          trace_thread_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorTraceThreadLlmAsJudgePublic"
-          trace_thread_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorTraceThreadUserDefinedMetricPythonPublic"
-          span_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorSpanLlmAsJudgePublic"
-          span_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorSpanUserDefinedMetricPythonPublic"
+          llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorLlmAsJudge_Public"
+          user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorUserDefinedMetricPython_Public"
+          trace_thread_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorTraceThreadLlmAsJudge_Public"
+          trace_thread_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorTraceThreadUserDefinedMetricPython_Public"
+          span_llm_as_judge: "#/components/schemas/AutomationRuleEvaluatorSpanLlmAsJudge_Public"
+          span_user_defined_metric_python: "#/components/schemas/AutomationRuleEvaluatorSpanUserDefinedMetricPython_Public"
     LogItem:
       type: object
       properties:
@@ -10968,7 +10968,7 @@ components:
           - function
         function:
           $ref: "#/components/schemas/Function"
-    DashboardPublic:
+    Dashboard_Public:
       required:
       - config
       - name
@@ -11009,7 +11009,7 @@ components:
           minLength: 0
           type: string
         config:
-          $ref: "#/components/schemas/JsonNodePublic"
+          $ref: "#/components/schemas/JsonNode_Public"
         created_by:
           type: string
           readOnly: true
@@ -11024,7 +11024,7 @@ components:
           type: string
           format: date-time
           readOnly: true
-    DashboardWrite:
+    Dashboard_Write:
       required:
       - config
       - name
@@ -11056,14 +11056,14 @@ components:
           minLength: 0
           type: string
         config:
-          $ref: "#/components/schemas/JsonNodeWrite"
-    DashboardPagePublic:
+          $ref: "#/components/schemas/JsonNode_Write"
+    DashboardPage_Public:
       type: object
       properties:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/DashboardPublic"
+            $ref: "#/components/schemas/Dashboard_Public"
         page:
           type: integer
           format: int32
@@ -11077,7 +11077,7 @@ components:
           type: array
           items:
             type: string
-    DashboardUpdatePublic:
+    DashboardUpdate_Public:
       type: object
       properties:
         name:
@@ -11095,8 +11095,8 @@ components:
           minLength: 0
           type: string
         config:
-          $ref: "#/components/schemas/JsonNodePublic"
-    DatasetVersionPublic:
+          $ref: "#/components/schemas/JsonNode_Public"
+    DatasetVersion_Public:
       type: object
       properties:
         id:
@@ -11159,9 +11159,9 @@ components:
           description: Default evaluators for items in this version
           readOnly: true
           items:
-            $ref: "#/components/schemas/EvaluatorItemPublic"
+            $ref: "#/components/schemas/EvaluatorItem_Public"
         execution_policy:
-          $ref: "#/components/schemas/ExecutionPolicyPublic"
+          $ref: "#/components/schemas/ExecutionPolicy_Public"
         created_at:
           type: string
           format: date-time
@@ -11176,7 +11176,7 @@ components:
         last_updated_by:
           type: string
           readOnly: true
-    EvaluatorItemPublic:
+    EvaluatorItem_Public:
       required:
       - config
       - name
@@ -11192,10 +11192,10 @@ components:
           - llm_judge
           - code_metric
         config:
-          $ref: "#/components/schemas/JsonNodePublic"
+          $ref: "#/components/schemas/JsonNode_Public"
       description: Default evaluators for items in this version
       readOnly: true
-    ExecutionPolicyPublic:
+    ExecutionPolicy_Public:
       type: object
       properties:
         runs_per_item:
@@ -11210,7 +11210,7 @@ components:
           format: int32
       description: Default execution policy for items in this version
       readOnly: true
-    DatasetItemChangesPublic:
+    DatasetItemChanges_Public:
       type: object
     DatasetItemBatchUpdate:
       required:
@@ -11486,7 +11486,7 @@ components:
             description: Tags associated with this version
       description: Summary of the latest dataset version
       readOnly: true
-    DatasetWrite:
+    Dataset_Write:
       required:
       - name
       type: object
@@ -11858,7 +11858,7 @@ components:
         span_id:
           type: string
       readOnly: true
-    DatasetItemBatchWrite:
+    DatasetItemBatch_Write:
       required:
       - items
       type: object
@@ -11886,14 +11886,14 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/DatasetItemWrite"
+            $ref: "#/components/schemas/DatasetItem_Write"
         batch_group_id:
           type: string
           description: "Optional batch group ID to group multiple batches into a single\
             \ dataset version. If null, mutates the latest version instead of creating\
             \ a new one."
           format: uuid
-    DatasetItemWrite:
+    DatasetItem_Write:
       required:
       - data
       - source
@@ -11933,10 +11933,10 @@ components:
         evaluators:
           type: array
           items:
-            $ref: "#/components/schemas/EvaluatorItemWrite"
+            $ref: "#/components/schemas/EvaluatorItem_Write"
         execution_policy:
-          $ref: "#/components/schemas/ExecutionPolicyWrite"
-    EvaluatorItemWrite:
+          $ref: "#/components/schemas/ExecutionPolicy_Write"
+    EvaluatorItem_Write:
       required:
       - config
       - name
@@ -11952,8 +11952,8 @@ components:
           - llm_judge
           - code_metric
         config:
-          $ref: "#/components/schemas/JsonNodeWrite"
-    ExecutionPolicyWrite:
+          $ref: "#/components/schemas/JsonNode_Write"
+    ExecutionPolicy_Write:
       type: object
       properties:
         runs_per_item:
@@ -12133,7 +12133,7 @@ components:
           type: string
           description: Custom prompt to use for generation instead of auto-generated
             one
-    DatasetExpansionWrite:
+    DatasetExpansion_Write:
       required:
       - model
       type: object
@@ -12168,7 +12168,7 @@ components:
           type: string
           description: Custom prompt to use for generation instead of auto-generated
             one
-    AssertionResultCompare:
+    AssertionResult_Compare:
       type: object
       properties:
         value:
@@ -12178,7 +12178,7 @@ components:
         reason:
           type: string
       readOnly: true
-    ColumnCompare:
+    Column_Compare:
       type: object
       properties:
         name:
@@ -12201,7 +12201,7 @@ components:
           type: string
           description: The field to use for filtering
           readOnly: true
-    CommentCompare:
+    Comment_Compare:
       required:
       - text
       type: object
@@ -12228,13 +12228,13 @@ components:
           type: string
           readOnly: true
       readOnly: true
-    DatasetItemPageCompare:
+    DatasetItemPage_Compare:
       type: object
       properties:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/DatasetItemCompare"
+            $ref: "#/components/schemas/DatasetItem_Compare"
         page:
           type: integer
           format: int32
@@ -12248,12 +12248,12 @@ components:
           uniqueItems: true
           type: array
           items:
-            $ref: "#/components/schemas/ColumnCompare"
+            $ref: "#/components/schemas/Column_Compare"
         sortableBy:
           type: array
           items:
             type: string
-    DatasetItemCompare:
+    DatasetItem_Compare:
       required:
       - data
       - source
@@ -12301,18 +12301,18 @@ components:
         evaluators:
           type: array
           items:
-            $ref: "#/components/schemas/EvaluatorItemCompare"
+            $ref: "#/components/schemas/EvaluatorItem_Compare"
         execution_policy:
-          $ref: "#/components/schemas/ExecutionPolicyCompare"
+          $ref: "#/components/schemas/ExecutionPolicy_Compare"
         experiment_items:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/ExperimentItemCompare"
+            $ref: "#/components/schemas/ExperimentItem_Compare"
         run_summaries_by_experiment:
           type: object
           additionalProperties:
-            $ref: "#/components/schemas/ExperimentRunSummaryCompare"
+            $ref: "#/components/schemas/ExperimentRunSummary_Compare"
           readOnly: true
         dataset_id:
           type: string
@@ -12332,7 +12332,7 @@ components:
         last_updated_by:
           type: string
           readOnly: true
-    EvaluatorItemCompare:
+    EvaluatorItem_Compare:
       required:
       - config
       - name
@@ -12348,8 +12348,8 @@ components:
           - llm_judge
           - code_metric
         config:
-          $ref: "#/components/schemas/JsonNodeCompare"
-    ExecutionPolicyCompare:
+          $ref: "#/components/schemas/JsonNode_Compare"
+    ExecutionPolicy_Compare:
       type: object
       properties:
         runs_per_item:
@@ -12362,7 +12362,7 @@ components:
           minimum: 1
           type: integer
           format: int32
-    ExperimentItemCompare:
+    ExperimentItem_Compare:
       required:
       - dataset_item_id
       - experiment_id
@@ -12386,19 +12386,19 @@ components:
           format: uuid
           readOnly: true
         input:
-          $ref: "#/components/schemas/JsonListStringCompare"
+          $ref: "#/components/schemas/JsonListString_Compare"
         output:
-          $ref: "#/components/schemas/JsonListStringCompare"
+          $ref: "#/components/schemas/JsonListString_Compare"
         feedback_scores:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScoreCompare"
+            $ref: "#/components/schemas/FeedbackScore_Compare"
         comments:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/CommentCompare"
+            $ref: "#/components/schemas/Comment_Compare"
         total_estimated_cost:
           type: number
           readOnly: true
@@ -12440,7 +12440,7 @@ components:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/AssertionResultCompare"
+            $ref: "#/components/schemas/AssertionResult_Compare"
         status:
           type: string
           readOnly: true
@@ -12448,7 +12448,7 @@ components:
           - passed
           - failed
       readOnly: true
-    ExperimentRunSummaryCompare:
+    ExperimentRunSummary_Compare:
       type: object
       properties:
         passed_runs:
@@ -12463,7 +12463,7 @@ components:
           - passed
           - failed
       readOnly: true
-    FeedbackScoreCompare:
+    FeedbackScore_Compare:
       required:
       - name
       - source
@@ -12506,10 +12506,10 @@ components:
         value_by_author:
           type: object
           additionalProperties:
-            $ref: "#/components/schemas/ValueEntryCompare"
+            $ref: "#/components/schemas/ValueEntry_Compare"
           readOnly: true
       readOnly: true
-    JsonListStringCompare:
+    JsonListString_Compare:
       type: object
       readOnly: true
       anyOf:
@@ -12518,9 +12518,9 @@ components:
         items:
           type: object
       - type: string
-    JsonNodeCompare:
+    JsonNode_Compare:
       type: object
-    ValueEntryCompare:
+    ValueEntry_Compare:
       type: object
       properties:
         value:
@@ -12543,13 +12543,13 @@ components:
         span_id:
           type: string
       readOnly: true
-    DatasetPagePublic:
+    DatasetPage_Public:
       type: object
       properties:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/DatasetPublic"
+            $ref: "#/components/schemas/Dataset_Public"
         page:
           type: integer
           format: int32
@@ -12563,7 +12563,7 @@ components:
           type: array
           items:
             type: string
-    DatasetVersionSummaryPublic:
+    DatasetVersionSummary_Public:
       type: object
       properties:
         id:
@@ -12588,7 +12588,7 @@ components:
             description: Tags associated with this version
       description: Summary of the latest dataset version
       readOnly: true
-    DatasetPublic:
+    Dataset_Public:
       required:
       - name
       type: object
@@ -12675,8 +12675,8 @@ components:
           - completed
           - failed
         latest_version:
-          $ref: "#/components/schemas/DatasetVersionSummaryPublic"
-    DatasetIdentifierPublic:
+          $ref: "#/components/schemas/DatasetVersionSummary_Public"
+    DatasetIdentifier_Public:
       required:
       - dataset_name
       type: object
@@ -12686,33 +12686,33 @@ components:
           type: string
         project_name:
           type: string
-    AvgValueStatPublic:
+    AvgValueStat_Public:
       type: object
       allOf:
-      - $ref: "#/components/schemas/ProjectStatItemObjectPublic"
+      - $ref: "#/components/schemas/ProjectStatItemObject_Public"
       - type: object
         properties:
           value:
             type: number
             format: double
-    CountValueStatPublic:
+    CountValueStat_Public:
       type: object
       allOf:
-      - $ref: "#/components/schemas/ProjectStatItemObjectPublic"
+      - $ref: "#/components/schemas/ProjectStatItemObject_Public"
       - type: object
         properties:
           value:
             type: integer
             format: int64
-    PercentageValueStatPublic:
+    PercentageValueStat_Public:
       type: object
       allOf:
-      - $ref: "#/components/schemas/ProjectStatItemObjectPublic"
+      - $ref: "#/components/schemas/ProjectStatItemObject_Public"
       - type: object
         properties:
           value:
-            $ref: "#/components/schemas/PercentageValuesPublic"
-    PercentageValuesPublic:
+            $ref: "#/components/schemas/PercentageValues_Public"
+    PercentageValues_Public:
       type: object
       properties:
         p50:
@@ -12721,7 +12721,7 @@ components:
           type: number
         p99:
           type: number
-    ProjectStatItemObjectPublic:
+    ProjectStatItemObject_Public:
       type: object
       properties:
         name:
@@ -12735,17 +12735,17 @@ components:
       discriminator:
         propertyName: type
         mapping:
-          PERCENTAGE: "#/components/schemas/PercentageValueStatPublic"
-          COUNT: "#/components/schemas/CountValueStatPublic"
-          AVG: "#/components/schemas/AvgValueStatPublic"
-    ProjectStatsPublic:
+          PERCENTAGE: "#/components/schemas/PercentageValueStat_Public"
+          COUNT: "#/components/schemas/CountValueStat_Public"
+          AVG: "#/components/schemas/AvgValueStat_Public"
+    ProjectStats_Public:
       type: object
       properties:
         stats:
           type: array
           items:
-            $ref: "#/components/schemas/ProjectStatItemObjectPublic"
-    DatasetExportJobPublic:
+            $ref: "#/components/schemas/ProjectStatItemObject_Public"
+    DatasetExportJob_Public:
       type: object
       properties:
         id:
@@ -12795,7 +12795,7 @@ components:
         last_updated_by:
           type: string
           readOnly: true
-    DatasetItemPublic:
+    DatasetItem_Public:
       required:
       - data
       - source
@@ -12843,18 +12843,18 @@ components:
         evaluators:
           type: array
           items:
-            $ref: "#/components/schemas/EvaluatorItemPublic"
+            $ref: "#/components/schemas/EvaluatorItem_Public"
         execution_policy:
-          $ref: "#/components/schemas/ExecutionPolicyPublic"
+          $ref: "#/components/schemas/ExecutionPolicy_Public"
         experiment_items:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/ExperimentItemPublic"
+            $ref: "#/components/schemas/ExperimentItem_Public"
         run_summaries_by_experiment:
           type: object
           additionalProperties:
-            $ref: "#/components/schemas/ExperimentRunSummaryPublic"
+            $ref: "#/components/schemas/ExperimentRunSummary_Public"
           readOnly: true
         dataset_id:
           type: string
@@ -12874,7 +12874,7 @@ components:
         last_updated_by:
           type: string
           readOnly: true
-    ExperimentItemPublic:
+    ExperimentItem_Public:
       required:
       - dataset_item_id
       - experiment_id
@@ -12917,7 +12917,7 @@ components:
           enum:
           - default
           - hidden
-    ExperimentRunSummaryPublic:
+    ExperimentRunSummary_Public:
       type: object
       properties:
         passed_runs:
@@ -12932,7 +12932,7 @@ components:
           - passed
           - failed
       readOnly: true
-    ColumnPublic:
+    Column_Public:
       type: object
       properties:
         name:
@@ -12955,13 +12955,13 @@ components:
           type: string
           description: The field to use for filtering
           readOnly: true
-    DatasetItemPagePublic:
+    DatasetItemPage_Public:
       type: object
       properties:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/DatasetItemPublic"
+            $ref: "#/components/schemas/DatasetItem_Public"
         page:
           type: integer
           format: int32
@@ -12975,7 +12975,7 @@ components:
           uniqueItems: true
           type: array
           items:
-            $ref: "#/components/schemas/ColumnPublic"
+            $ref: "#/components/schemas/Column_Public"
         sortableBy:
           type: array
           items:
@@ -13098,13 +13098,13 @@ components:
           maxLength: 100
           minLength: 0
           type: string
-    DatasetVersionPagePublic:
+    DatasetVersionPage_Public:
       type: object
       properties:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/DatasetVersionPublic"
+            $ref: "#/components/schemas/DatasetVersion_Public"
         page:
           type: integer
           format: int32
@@ -13114,7 +13114,7 @@ components:
         total:
           type: integer
           format: int64
-    DatasetVersionRestorePublic:
+    DatasetVersionRestore_Public:
       required:
       - version_ref
       type: object
@@ -13123,7 +13123,7 @@ components:
           minLength: 1
           type: string
           description: Version hash or tag to restore from
-    DatasetVersionRetrieveRequestPublic:
+    DatasetVersionRetrieveRequest_Public:
       required:
       - version_name
       type: object
@@ -13134,7 +13134,7 @@ components:
           type: string
           description: "Version name in format 'vN' (e.g., 'v1', 'v373')"
           example: v1
-    DatasetVersionUpdatePublic:
+    DatasetVersionUpdate_Public:
       type: object
       properties:
         change_description:
@@ -13438,7 +13438,7 @@ components:
         prompt_name:
           type: string
           readOnly: true
-    ExperimentScoreWrite:
+    ExperimentScore_Write:
       required:
       - name
       - value
@@ -13449,7 +13449,7 @@ components:
           type: string
         value:
           type: number
-    ExperimentWrite:
+    Experiment_Write:
       required:
       - dataset_name
       type: object
@@ -13474,7 +13474,7 @@ components:
         name:
           type: string
         metadata:
-          $ref: "#/components/schemas/JsonListStringWrite"
+          $ref: "#/components/schemas/JsonListString_Write"
         tags:
           maxItems: 50
           minItems: 0
@@ -13508,20 +13508,20 @@ components:
         experiment_scores:
           type: array
           items:
-            $ref: "#/components/schemas/ExperimentScoreWrite"
+            $ref: "#/components/schemas/ExperimentScore_Write"
         prompt_version:
-          $ref: "#/components/schemas/PromptVersionLinkWrite"
+          $ref: "#/components/schemas/PromptVersionLink_Write"
         prompt_versions:
           type: array
           items:
-            $ref: "#/components/schemas/PromptVersionLinkWrite"
+            $ref: "#/components/schemas/PromptVersionLink_Write"
         dataset_version_id:
           type: string
           description: "ID of the dataset version this experiment is linked to. If\
             \ not provided at creation, experiment will be automatically linked to\
             \ the latest version."
           format: uuid
-    JsonListStringWrite:
+    JsonListString_Write:
       type: object
       anyOf:
       - type: object
@@ -13529,7 +13529,7 @@ components:
         items:
           type: object
       - type: string
-    PromptVersionLinkWrite:
+    PromptVersionLink_Write:
       required:
       - id
       type: object
@@ -13924,7 +13924,7 @@ components:
           - experiment
           - playground
           - optimization
-    ErrorInfoExperimentItemBulkWriteView:
+    ErrorInfo_ExperimentItemBulkWriteView:
       required:
       - exception_type
       - traceback
@@ -13938,7 +13938,7 @@ components:
         traceback:
           minLength: 1
           type: string
-    ExperimentItemBulkRecordExperimentItemBulkWriteView:
+    ExperimentItemBulkRecord_ExperimentItemBulkWriteView:
       required:
       - dataset_item_id
       type: object
@@ -13947,22 +13947,22 @@ components:
           type: string
           format: uuid
         evaluate_task_result:
-          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
         trace:
-          $ref: "#/components/schemas/TraceExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/Trace_ExperimentItemBulkWriteView"
         spans:
           maxItems: 100
           minItems: 0
           type: array
           items:
-            $ref: "#/components/schemas/SpanExperimentItemBulkWriteView"
+            $ref: "#/components/schemas/Span_ExperimentItemBulkWriteView"
         feedback_scores:
           maxItems: 100
           minItems: 0
           type: array
           items:
-            $ref: "#/components/schemas/FeedbackScoreExperimentItemBulkWriteView"
-    ExperimentItemBulkUploadExperimentItemBulkWriteView:
+            $ref: "#/components/schemas/FeedbackScore_ExperimentItemBulkWriteView"
+    ExperimentItemBulkUpload_ExperimentItemBulkWriteView:
       required:
       - dataset_name
       - experiment_name
@@ -13987,8 +13987,8 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/ExperimentItemBulkRecordExperimentItemBulkWriteView"
-    FeedbackScoreExperimentItemBulkWriteView:
+            $ref: "#/components/schemas/ExperimentItemBulkRecord_ExperimentItemBulkWriteView"
+    FeedbackScore_ExperimentItemBulkWriteView:
       required:
       - name
       - source
@@ -14031,9 +14031,9 @@ components:
         value_by_author:
           type: object
           additionalProperties:
-            $ref: "#/components/schemas/ValueEntryExperimentItemBulkWriteView"
+            $ref: "#/components/schemas/ValueEntry_ExperimentItemBulkWriteView"
           readOnly: true
-    JsonListStringExperimentItemBulkWriteView:
+    JsonListString_ExperimentItemBulkWriteView:
       type: object
       anyOf:
       - type: object
@@ -14041,7 +14041,7 @@ components:
         items:
           type: object
       - type: string
-    SpanExperimentItemBulkWriteView:
+    Span_ExperimentItemBulkWriteView:
       required:
       - start_time
       type: object
@@ -14068,11 +14068,11 @@ components:
           type: string
           format: date-time
         input:
-          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
         output:
-          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
         metadata:
-          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
         model:
           type: string
         provider:
@@ -14088,7 +14088,7 @@ components:
             type: integer
             format: int32
         error_info:
-          $ref: "#/components/schemas/ErrorInfoExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/ErrorInfo_ExperimentItemBulkWriteView"
         last_updated_at:
           type: string
           format: date-time
@@ -14109,7 +14109,7 @@ components:
           - experiment
           - playground
           - optimization
-    TraceExperimentItemBulkWriteView:
+    Trace_ExperimentItemBulkWriteView:
       required:
       - start_time
       type: object
@@ -14130,18 +14130,18 @@ components:
           type: string
           format: date-time
         input:
-          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
         output:
-          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
         metadata:
-          $ref: "#/components/schemas/JsonListStringExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/JsonListString_ExperimentItemBulkWriteView"
         tags:
           uniqueItems: true
           type: array
           items:
             type: string
         error_info:
-          $ref: "#/components/schemas/ErrorInfoExperimentItemBulkWriteView"
+          $ref: "#/components/schemas/ErrorInfo_ExperimentItemBulkWriteView"
         last_updated_at:
           type: string
           format: date-time
@@ -14160,7 +14160,7 @@ components:
           - optimization
       description: "Please provide either none, only one of evaluate_task_result or\
         \ trace, but never both"
-    ValueEntryExperimentItemBulkWriteView:
+    ValueEntry_ExperimentItemBulkWriteView:
       type: object
       properties:
         value:
@@ -14183,7 +14183,7 @@ components:
         span_id:
           type: string
       readOnly: true
-    AssertionScoreAveragePublic:
+    AssertionScoreAverage_Public:
       required:
       - name
       - value
@@ -14197,7 +14197,7 @@ components:
       description: Per-assertion average pass rates for evaluation suite experiments.
         Null for regular experiments.
       readOnly: true
-    CommentPublic:
+    Comment_Public:
       required:
       - text
       type: object
@@ -14224,7 +14224,7 @@ components:
           type: string
           readOnly: true
       readOnly: true
-    ExperimentPagePublic:
+    ExperimentPage_Public:
       type: object
       properties:
         page:
@@ -14239,12 +14239,12 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/ExperimentPublic"
+            $ref: "#/components/schemas/Experiment_Public"
         sortableBy:
           type: array
           items:
             type: string
-    ExperimentScorePublic:
+    ExperimentScore_Public:
       required:
       - name
       - value
@@ -14255,7 +14255,7 @@ components:
           type: string
         value:
           type: number
-    ExperimentPublic:
+    Experiment_Public:
       required:
       - dataset_name
       type: object
@@ -14284,7 +14284,7 @@ components:
         name:
           type: string
         metadata:
-          $ref: "#/components/schemas/JsonListStringPublic"
+          $ref: "#/components/schemas/JsonListString_Public"
         tags:
           maxItems: 50
           minItems: 0
@@ -14313,12 +14313,12 @@ components:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScoreAveragePublic"
+            $ref: "#/components/schemas/FeedbackScoreAverage_Public"
         comments:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/CommentPublic"
+            $ref: "#/components/schemas/Comment_Public"
         trace_count:
           type: integer
           format: int64
@@ -14332,7 +14332,7 @@ components:
           format: date-time
           readOnly: true
         duration:
-          $ref: "#/components/schemas/PercentageValuesPublic"
+          $ref: "#/components/schemas/PercentageValues_Public"
         total_estimated_cost:
           type: number
           readOnly: true
@@ -14365,13 +14365,13 @@ components:
         experiment_scores:
           type: array
           items:
-            $ref: "#/components/schemas/ExperimentScorePublic"
+            $ref: "#/components/schemas/ExperimentScore_Public"
         prompt_version:
-          $ref: "#/components/schemas/PromptVersionLinkPublic"
+          $ref: "#/components/schemas/PromptVersionLink_Public"
         prompt_versions:
           type: array
           items:
-            $ref: "#/components/schemas/PromptVersionLinkPublic"
+            $ref: "#/components/schemas/PromptVersionLink_Public"
         dataset_version_id:
           type: string
           description: "ID of the dataset version this experiment is linked to. If\
@@ -14379,7 +14379,7 @@ components:
             \ the latest version."
           format: uuid
         dataset_version_summary:
-          $ref: "#/components/schemas/DatasetVersionSummaryPublic"
+          $ref: "#/components/schemas/DatasetVersionSummary_Public"
         pass_rate:
           type: number
           description: Pass rate for evaluation suite experiments (0.0-1.0). Null
@@ -14403,8 +14403,8 @@ components:
             Null for regular experiments.
           readOnly: true
           items:
-            $ref: "#/components/schemas/AssertionScoreAveragePublic"
-    JsonListStringPublic:
+            $ref: "#/components/schemas/AssertionScoreAverage_Public"
+    JsonListString_Public:
       type: object
       anyOf:
       - type: object
@@ -14412,7 +14412,7 @@ components:
         items:
           type: object
       - type: string
-    PromptVersionLinkPublic:
+    PromptVersionLink_Public:
       type: object
       properties:
         prompt_version_id:
@@ -14425,14 +14425,14 @@ components:
           format: uuid
         prompt_name:
           type: string
-    FeedbackScoreNamesPublic:
+    FeedbackScoreNames_Public:
       type: object
       properties:
         scores:
           type: array
           items:
-            $ref: "#/components/schemas/ScoreNamePublic"
-    ScoreNamePublic:
+            $ref: "#/components/schemas/ScoreName_Public"
+    ScoreName_Public:
       type: object
       properties:
         name:
@@ -14548,7 +14548,7 @@ components:
         project_name:
           pattern: (?s)^\s*(\S.*\S|\S)\s*$
           type: string
-    ChunkedOutputJsonNodePublic:
+    ChunkedOutputJsonNode_Public:
       type: object
       properties:
         type:
@@ -14558,7 +14558,7 @@ components:
               type: string
         closed:
           type: boolean
-    ExperimentStreamRequestPublic:
+    ExperimentStreamRequest_Public:
       required:
       - name
       type: object
@@ -14736,19 +14736,19 @@ components:
           type: number
         min:
           type: number
-    BooleanFeedbackDefinitionCreate:
+    BooleanFeedbackDefinition_Create:
       required:
       - details
       - name
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/FeedbackCreate"
+      - $ref: "#/components/schemas/Feedback_Create"
       - type: object
         properties:
           details:
-            $ref: "#/components/schemas/BooleanFeedbackDetailCreate"
-    BooleanFeedbackDetailCreate:
+            $ref: "#/components/schemas/BooleanFeedbackDetail_Create"
+    BooleanFeedbackDetail_Create:
       required:
       - falseLabel
       - trueLabel
@@ -14764,19 +14764,19 @@ components:
           type: string
           description: Label for false/0 value
           example: Fail
-    CategoricalFeedbackDefinitionCreate:
+    CategoricalFeedbackDefinition_Create:
       required:
       - details
       - name
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/FeedbackCreate"
+      - $ref: "#/components/schemas/Feedback_Create"
       - type: object
         properties:
           details:
-            $ref: "#/components/schemas/CategoricalFeedbackDetailCreate"
-    CategoricalFeedbackDetailCreate:
+            $ref: "#/components/schemas/CategoricalFeedbackDetail_Create"
+    CategoricalFeedbackDetail_Create:
       required:
       - categories
       type: object
@@ -14786,7 +14786,7 @@ components:
           additionalProperties:
             type: number
             format: double
-    FeedbackCreate:
+    Feedback_Create:
       required:
       - name
       - type
@@ -14814,22 +14814,22 @@ components:
       discriminator:
         propertyName: type
         mapping:
-          numerical: "#/components/schemas/NumericalFeedbackDefinitionCreate"
-          categorical: "#/components/schemas/CategoricalFeedbackDefinitionCreate"
-          boolean: "#/components/schemas/BooleanFeedbackDefinitionCreate"
-    NumericalFeedbackDefinitionCreate:
+          numerical: "#/components/schemas/NumericalFeedbackDefinition_Create"
+          categorical: "#/components/schemas/CategoricalFeedbackDefinition_Create"
+          boolean: "#/components/schemas/BooleanFeedbackDefinition_Create"
+    NumericalFeedbackDefinition_Create:
       required:
       - details
       - name
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/FeedbackCreate"
+      - $ref: "#/components/schemas/Feedback_Create"
       - type: object
         properties:
           details:
-            $ref: "#/components/schemas/NumericalFeedbackDetailCreate"
-    NumericalFeedbackDetailCreate:
+            $ref: "#/components/schemas/NumericalFeedbackDetail_Create"
+    NumericalFeedbackDetail_Create:
       required:
       - max
       - min
@@ -14839,18 +14839,18 @@ components:
           type: number
         min:
           type: number
-    BooleanFeedbackDefinitionPublic:
+    BooleanFeedbackDefinition_Public:
       required:
       - details
       - name
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/FeedbackPublic"
+      - $ref: "#/components/schemas/Feedback_Public"
       - type: object
         properties:
           details:
-            $ref: "#/components/schemas/BooleanFeedbackDetailPublic"
+            $ref: "#/components/schemas/BooleanFeedbackDetail_Public"
           created_at:
             type: string
             format: date-time
@@ -14865,7 +14865,7 @@ components:
           last_updated_by:
             type: string
             readOnly: true
-    BooleanFeedbackDetailPublic:
+    BooleanFeedbackDetail_Public:
       required:
       - falseLabel
       - trueLabel
@@ -14881,18 +14881,18 @@ components:
           type: string
           description: Label for false/0 value
           example: Fail
-    CategoricalFeedbackDefinitionPublic:
+    CategoricalFeedbackDefinition_Public:
       required:
       - details
       - name
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/FeedbackPublic"
+      - $ref: "#/components/schemas/Feedback_Public"
       - type: object
         properties:
           details:
-            $ref: "#/components/schemas/CategoricalFeedbackDetailPublic"
+            $ref: "#/components/schemas/CategoricalFeedbackDetail_Public"
           created_at:
             type: string
             format: date-time
@@ -14907,7 +14907,7 @@ components:
           last_updated_by:
             type: string
             readOnly: true
-    CategoricalFeedbackDetailPublic:
+    CategoricalFeedbackDetail_Public:
       required:
       - categories
       type: object
@@ -14917,7 +14917,7 @@ components:
           additionalProperties:
             type: number
             format: double
-    FeedbackDefinitionPagePublic:
+    FeedbackDefinitionPage_Public:
       type: object
       properties:
         page:
@@ -14932,8 +14932,8 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/FeedbackObjectPublic"
-    FeedbackObjectPublic:
+            $ref: "#/components/schemas/FeedbackObject_Public"
+    FeedbackObject_Public:
       required:
       - name
       - type
@@ -14975,21 +14975,21 @@ components:
       discriminator:
         propertyName: type
         mapping:
-          numerical: "#/components/schemas/NumericalFeedbackDefinitionPublic"
-          categorical: "#/components/schemas/CategoricalFeedbackDefinitionPublic"
-          boolean: "#/components/schemas/BooleanFeedbackDefinitionPublic"
-    NumericalFeedbackDefinitionPublic:
+          numerical: "#/components/schemas/NumericalFeedbackDefinition_Public"
+          categorical: "#/components/schemas/CategoricalFeedbackDefinition_Public"
+          boolean: "#/components/schemas/BooleanFeedbackDefinition_Public"
+    NumericalFeedbackDefinition_Public:
       required:
       - details
       - name
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/FeedbackPublic"
+      - $ref: "#/components/schemas/Feedback_Public"
       - type: object
         properties:
           details:
-            $ref: "#/components/schemas/NumericalFeedbackDetailPublic"
+            $ref: "#/components/schemas/NumericalFeedbackDetail_Public"
           created_at:
             type: string
             format: date-time
@@ -15004,7 +15004,7 @@ components:
           last_updated_by:
             type: string
             readOnly: true
-    NumericalFeedbackDetailPublic:
+    NumericalFeedbackDetail_Public:
       required:
       - max
       - min
@@ -15014,7 +15014,7 @@ components:
           type: number
         min:
           type: number
-    FeedbackPublic:
+    Feedback_Public:
       required:
       - name
       - type
@@ -15056,22 +15056,22 @@ components:
       discriminator:
         propertyName: type
         mapping:
-          numerical: "#/components/schemas/NumericalFeedbackDefinitionPublic"
-          categorical: "#/components/schemas/CategoricalFeedbackDefinitionPublic"
-          boolean: "#/components/schemas/BooleanFeedbackDefinitionPublic"
-    BooleanFeedbackDefinitionUpdate:
+          numerical: "#/components/schemas/NumericalFeedbackDefinition_Public"
+          categorical: "#/components/schemas/CategoricalFeedbackDefinition_Public"
+          boolean: "#/components/schemas/BooleanFeedbackDefinition_Public"
+    BooleanFeedbackDefinition_Update:
       required:
       - details
       - name
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/FeedbackUpdate"
+      - $ref: "#/components/schemas/Feedback_Update"
       - type: object
         properties:
           details:
-            $ref: "#/components/schemas/BooleanFeedbackDetailUpdate"
-    BooleanFeedbackDetailUpdate:
+            $ref: "#/components/schemas/BooleanFeedbackDetail_Update"
+    BooleanFeedbackDetail_Update:
       required:
       - falseLabel
       - trueLabel
@@ -15087,19 +15087,19 @@ components:
           type: string
           description: Label for false/0 value
           example: Fail
-    CategoricalFeedbackDefinitionUpdate:
+    CategoricalFeedbackDefinition_Update:
       required:
       - details
       - name
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/FeedbackUpdate"
+      - $ref: "#/components/schemas/Feedback_Update"
       - type: object
         properties:
           details:
-            $ref: "#/components/schemas/CategoricalFeedbackDetailUpdate"
-    CategoricalFeedbackDetailUpdate:
+            $ref: "#/components/schemas/CategoricalFeedbackDetail_Update"
+    CategoricalFeedbackDetail_Update:
       required:
       - categories
       type: object
@@ -15109,7 +15109,7 @@ components:
           additionalProperties:
             type: number
             format: double
-    FeedbackUpdate:
+    Feedback_Update:
       required:
       - name
       - type
@@ -15137,22 +15137,22 @@ components:
       discriminator:
         propertyName: type
         mapping:
-          numerical: "#/components/schemas/NumericalFeedbackDefinitionUpdate"
-          categorical: "#/components/schemas/CategoricalFeedbackDefinitionUpdate"
-          boolean: "#/components/schemas/BooleanFeedbackDefinitionUpdate"
-    NumericalFeedbackDefinitionUpdate:
+          numerical: "#/components/schemas/NumericalFeedbackDefinition_Update"
+          categorical: "#/components/schemas/CategoricalFeedbackDefinition_Update"
+          boolean: "#/components/schemas/BooleanFeedbackDefinition_Update"
+    NumericalFeedbackDefinition_Update:
       required:
       - details
       - name
       - type
       type: object
       allOf:
-      - $ref: "#/components/schemas/FeedbackUpdate"
+      - $ref: "#/components/schemas/Feedback_Update"
       - type: object
         properties:
           details:
-            $ref: "#/components/schemas/NumericalFeedbackDetailUpdate"
-    NumericalFeedbackDetailUpdate:
+            $ref: "#/components/schemas/NumericalFeedbackDetail_Update"
+    NumericalFeedbackDetail_Update:
       required:
       - max
       - min
@@ -15214,7 +15214,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Guardrail"
-    GuardrailBatchWrite:
+    GuardrailBatch_Write:
       required:
       - guardrails
       type: object
@@ -15224,8 +15224,8 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/GuardrailWrite"
-    GuardrailWrite:
+            $ref: "#/components/schemas/Guardrail_Write"
+    Guardrail_Write:
       required:
       - config
       - details
@@ -15262,7 +15262,7 @@ components:
           $ref: "#/components/schemas/JsonNode"
         details:
           $ref: "#/components/schemas/JsonNode"
-    ProviderApiKeyPagePublic:
+    ProviderApiKeyPage_Public:
       type: object
       properties:
         size:
@@ -15274,12 +15274,12 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/ProviderApiKeyPublic"
+            $ref: "#/components/schemas/ProviderApiKey_Public"
         sortableBy:
           type: array
           items:
             type: string
-    ProviderApiKeyPublic:
+    ProviderApiKey_Public:
       required:
       - provider
       type: object
@@ -15413,7 +15413,7 @@ components:
           description: "If true, this provider is system-managed and cannot be edited\
             \ or deleted"
           readOnly: true
-    ProviderApiKeyWrite:
+    ProviderApiKey_Write:
       required:
       - provider
       type: object
@@ -16023,7 +16023,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/StudioMessage"
-    OptimizationStudioConfigWrite:
+    OptimizationStudioConfig_Write:
       required:
       - dataset_name
       - evaluation
@@ -16036,14 +16036,14 @@ components:
           minLength: 1
           type: string
         prompt:
-          $ref: "#/components/schemas/StudioPromptWrite"
+          $ref: "#/components/schemas/StudioPrompt_Write"
         llm_model:
-          $ref: "#/components/schemas/StudioLlmModelWrite"
+          $ref: "#/components/schemas/StudioLlmModel_Write"
         evaluation:
-          $ref: "#/components/schemas/StudioEvaluationWrite"
+          $ref: "#/components/schemas/StudioEvaluation_Write"
         optimizer:
-          $ref: "#/components/schemas/StudioOptimizerWrite"
-    OptimizationWrite:
+          $ref: "#/components/schemas/StudioOptimizer_Write"
+    Optimization_Write:
       required:
       - dataset_name
       - objective_name
@@ -16080,13 +16080,13 @@ components:
           - initialized
           - error
         metadata:
-          $ref: "#/components/schemas/JsonListStringWrite"
+          $ref: "#/components/schemas/JsonListString_Write"
         studio_config:
-          $ref: "#/components/schemas/OptimizationStudioConfigWrite"
+          $ref: "#/components/schemas/OptimizationStudioConfig_Write"
         last_updated_at:
           type: string
           format: date-time
-    StudioEvaluationWrite:
+    StudioEvaluation_Write:
       required:
       - metrics
       type: object
@@ -16095,8 +16095,8 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/StudioMetricWrite"
-    StudioLlmModelWrite:
+            $ref: "#/components/schemas/StudioMetric_Write"
+    StudioLlmModel_Write:
       required:
       - model
       type: object
@@ -16105,8 +16105,8 @@ components:
           minLength: 1
           type: string
         parameters:
-          $ref: "#/components/schemas/JsonNodeWrite"
-    StudioMessageWrite:
+          $ref: "#/components/schemas/JsonNode_Write"
+    StudioMessage_Write:
       required:
       - content
       - role
@@ -16118,7 +16118,7 @@ components:
         content:
           minLength: 1
           type: string
-    StudioMetricWrite:
+    StudioMetric_Write:
       required:
       - type
       type: object
@@ -16127,8 +16127,8 @@ components:
           minLength: 1
           type: string
         parameters:
-          $ref: "#/components/schemas/JsonNodeWrite"
-    StudioOptimizerWrite:
+          $ref: "#/components/schemas/JsonNode_Write"
+    StudioOptimizer_Write:
       required:
       - type
       type: object
@@ -16137,8 +16137,8 @@ components:
           minLength: 1
           type: string
         parameters:
-          $ref: "#/components/schemas/JsonNodeWrite"
-    StudioPromptWrite:
+          $ref: "#/components/schemas/JsonNode_Write"
+    StudioPrompt_Write:
       required:
       - messages
       type: object
@@ -16147,8 +16147,8 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/StudioMessageWrite"
-    OptimizationPagePublic:
+            $ref: "#/components/schemas/StudioMessage_Write"
+    OptimizationPage_Public:
       type: object
       properties:
         page:
@@ -16163,12 +16163,12 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/OptimizationPublic"
+            $ref: "#/components/schemas/Optimization_Public"
         sortableBy:
           type: array
           items:
             type: string
-    OptimizationStudioConfigPublic:
+    OptimizationStudioConfig_Public:
       required:
       - dataset_name
       - evaluation
@@ -16181,14 +16181,14 @@ components:
           minLength: 1
           type: string
         prompt:
-          $ref: "#/components/schemas/StudioPromptPublic"
+          $ref: "#/components/schemas/StudioPrompt_Public"
         llm_model:
-          $ref: "#/components/schemas/StudioLlmModelPublic"
+          $ref: "#/components/schemas/StudioLlmModel_Public"
         evaluation:
-          $ref: "#/components/schemas/StudioEvaluationPublic"
+          $ref: "#/components/schemas/StudioEvaluation_Public"
         optimizer:
-          $ref: "#/components/schemas/StudioOptimizerPublic"
-    OptimizationPublic:
+          $ref: "#/components/schemas/StudioOptimizer_Public"
+    Optimization_Public:
       required:
       - dataset_name
       - objective_name
@@ -16220,9 +16220,9 @@ components:
           - initialized
           - error
         metadata:
-          $ref: "#/components/schemas/JsonListStringPublic"
+          $ref: "#/components/schemas/JsonListString_Public"
         studio_config:
-          $ref: "#/components/schemas/OptimizationStudioConfigPublic"
+          $ref: "#/components/schemas/OptimizationStudioConfig_Public"
         dataset_id:
           type: string
           format: uuid
@@ -16235,12 +16235,12 @@ components:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScoreAveragePublic"
+            $ref: "#/components/schemas/FeedbackScoreAverage_Public"
         experiment_scores:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScoreAveragePublic"
+            $ref: "#/components/schemas/FeedbackScoreAverage_Public"
         created_at:
           type: string
           format: date-time
@@ -16275,7 +16275,7 @@ components:
         total_optimization_cost:
           type: number
           readOnly: true
-    StudioEvaluationPublic:
+    StudioEvaluation_Public:
       required:
       - metrics
       type: object
@@ -16284,8 +16284,8 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/StudioMetricPublic"
-    StudioLlmModelPublic:
+            $ref: "#/components/schemas/StudioMetric_Public"
+    StudioLlmModel_Public:
       required:
       - model
       type: object
@@ -16294,8 +16294,8 @@ components:
           minLength: 1
           type: string
         parameters:
-          $ref: "#/components/schemas/JsonNodePublic"
-    StudioMessagePublic:
+          $ref: "#/components/schemas/JsonNode_Public"
+    StudioMessage_Public:
       required:
       - content
       - role
@@ -16307,7 +16307,7 @@ components:
         content:
           minLength: 1
           type: string
-    StudioMetricPublic:
+    StudioMetric_Public:
       required:
       - type
       type: object
@@ -16316,8 +16316,8 @@ components:
           minLength: 1
           type: string
         parameters:
-          $ref: "#/components/schemas/JsonNodePublic"
-    StudioOptimizerPublic:
+          $ref: "#/components/schemas/JsonNode_Public"
+    StudioOptimizer_Public:
       required:
       - type
       type: object
@@ -16326,8 +16326,8 @@ components:
           minLength: 1
           type: string
         parameters:
-          $ref: "#/components/schemas/JsonNodePublic"
-    StudioPromptPublic:
+          $ref: "#/components/schemas/JsonNode_Public"
+    StudioPrompt_Public:
       required:
       - messages
       type: object
@@ -16336,7 +16336,7 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/StudioMessagePublic"
+            $ref: "#/components/schemas/StudioMessage_Public"
     OptimizationStudioLog:
       type: object
       properties:
@@ -16361,7 +16361,7 @@ components:
           - cancelled
           - initialized
           - error
-    PromptPagePublic:
+    PromptPage_Public:
       type: object
       properties:
         page:
@@ -16376,12 +16376,12 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/PromptPublic"
+            $ref: "#/components/schemas/Prompt_Public"
         sortableBy:
           type: array
           items:
             type: string
-    PromptPublic:
+    Prompt_Public:
       required:
       - name
       type: object
@@ -16520,7 +16520,7 @@ components:
           readOnly: true
         error_count:
           $ref: "#/components/schemas/ErrorCountWithDeviation"
-    ProjectWrite:
+    Project_Write:
       required:
       - name
       type: object
@@ -16537,7 +16537,7 @@ components:
           maxLength: 255
           minLength: 0
           type: string
-    ProjectPagePublic:
+    ProjectPage_Public:
       type: object
       properties:
         page:
@@ -16552,12 +16552,12 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/ProjectPublic"
+            $ref: "#/components/schemas/Project_Public"
         sortableBy:
           type: array
           items:
             type: string
-    ProjectPublic:
+    Project_Public:
       required:
       - name
       type: object
@@ -16661,7 +16661,7 @@ components:
         interval_end:
           type: string
           format: date-time
-    DataPointNumberPublic:
+    DataPointNumber_Public:
       required:
       - time
       type: object
@@ -16671,7 +16671,7 @@ components:
           format: date-time
         value:
           type: number
-    ProjectMetricResponsePublic:
+    ProjectMetricResponse_Public:
       type: object
       properties:
         project_id:
@@ -16703,8 +16703,8 @@ components:
         results:
           type: array
           items:
-            $ref: "#/components/schemas/ResultsNumberPublic"
-    ResultsNumberPublic:
+            $ref: "#/components/schemas/ResultsNumber_Public"
+    ResultsNumber_Public:
       type: object
       properties:
         name:
@@ -16712,8 +16712,8 @@ components:
         data:
           type: array
           items:
-            $ref: "#/components/schemas/DataPointNumberPublic"
-    BreakdownConfigPublic:
+            $ref: "#/components/schemas/DataPointNumber_Public"
+    BreakdownConfig_Public:
       type: object
       properties:
         field:
@@ -16732,7 +16732,7 @@ components:
           type: string
         sub_metric:
           type: string
-    ProjectMetricRequestPublic:
+    ProjectMetricRequest_Public:
       type: object
       properties:
         metric_type:
@@ -16767,17 +16767,17 @@ components:
         span_filters:
           type: array
           items:
-            $ref: "#/components/schemas/SpanFilterPublic"
+            $ref: "#/components/schemas/SpanFilter_Public"
         trace_filters:
           type: array
           items:
-            $ref: "#/components/schemas/TraceFilterPublic"
+            $ref: "#/components/schemas/TraceFilter_Public"
         thread_filters:
           type: array
           items:
-            $ref: "#/components/schemas/TraceThreadFilterPublic"
+            $ref: "#/components/schemas/TraceThreadFilter_Public"
         breakdown:
-          $ref: "#/components/schemas/BreakdownConfigPublic"
+          $ref: "#/components/schemas/BreakdownConfig_Public"
     ProjectStatsSummary:
       type: object
       properties:
@@ -16819,7 +16819,7 @@ components:
           format: int64
         error_count:
           $ref: "#/components/schemas/ErrorCountWithDeviation"
-    ErrorCountWithDeviationDetailed:
+    ErrorCountWithDeviation_Detailed:
       type: object
       properties:
         count:
@@ -16832,7 +16832,7 @@ components:
           type: integer
           format: int64
       readOnly: true
-    FeedbackScoreAverageDetailed:
+    FeedbackScoreAverage_Detailed:
       required:
       - name
       - value
@@ -16844,7 +16844,7 @@ components:
         value:
           type: number
       readOnly: true
-    PercentageValuesDetailed:
+    PercentageValues_Detailed:
       type: object
       properties:
         p50:
@@ -16854,7 +16854,7 @@ components:
         p99:
           type: number
       readOnly: true
-    ProjectDetailed:
+    Project_Detailed:
       required:
       - name
       type: object
@@ -16897,9 +16897,9 @@ components:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScoreAverageDetailed"
+            $ref: "#/components/schemas/FeedbackScoreAverage_Detailed"
         duration:
-          $ref: "#/components/schemas/PercentageValuesDetailed"
+          $ref: "#/components/schemas/PercentageValues_Detailed"
         total_estimated_cost:
           type: number
           format: double
@@ -16928,15 +16928,15 @@ components:
           format: int64
           readOnly: true
         error_count:
-          $ref: "#/components/schemas/ErrorCountWithDeviationDetailed"
-    ErrorMessageDetailed:
+          $ref: "#/components/schemas/ErrorCountWithDeviation_Detailed"
+    ErrorMessage_Detailed:
       type: object
       properties:
         errors:
           type: array
           items:
             type: string
-    ProjectRetrieveDetailed:
+    ProjectRetrieve_Detailed:
       required:
       - name
       type: object
@@ -17091,7 +17091,7 @@ components:
           type: string
           readOnly: true
       readOnly: true
-    PromptWrite:
+    Prompt_Write:
       required:
       - name
       type: object
@@ -17123,7 +17123,7 @@ components:
           pattern: (?s)^\s*(\S.*\S|\S)\s*$
           type: string
         metadata:
-          $ref: "#/components/schemas/JsonNodeWrite"
+          $ref: "#/components/schemas/JsonNode_Write"
         change_description:
           type: string
         type:
@@ -17144,9 +17144,9 @@ components:
           type: array
           items:
             type: string
-    JsonNodeDetail:
+    JsonNode_Detail:
       type: object
-    PromptVersionDetail:
+    PromptVersion_Detail:
       required:
       - template
       type: object
@@ -17168,7 +17168,7 @@ components:
           minLength: 1
           type: string
         metadata:
-          $ref: "#/components/schemas/JsonNodeDetail"
+          $ref: "#/components/schemas/JsonNode_Detail"
         type:
           type: string
           enum:
@@ -17202,7 +17202,7 @@ components:
         created_by:
           type: string
           readOnly: true
-    ErrorMessageDetail:
+    ErrorMessage_Detail:
       type: object
       properties:
         code:
@@ -17212,7 +17212,7 @@ components:
           type: string
         details:
           type: string
-    CreatePromptVersionDetail:
+    CreatePromptVersion_Detail:
       required:
       - name
       - version
@@ -17222,7 +17222,7 @@ components:
           minLength: 1
           type: string
         version:
-          $ref: "#/components/schemas/PromptVersionDetail"
+          $ref: "#/components/schemas/PromptVersion_Detail"
         template_structure:
           type: string
           description: "Template structure for the prompt: 'text' or 'chat'. Note:\
@@ -17254,7 +17254,7 @@ components:
           type: string
           description: "If provided, scopes the prompt to the specified project. Ignored\
             \ when project_id is provided."
-    PromptDetail:
+    Prompt_Detail:
       required:
       - name
       type: object
@@ -17307,10 +17307,10 @@ components:
           format: int64
           readOnly: true
         latest_version:
-          $ref: "#/components/schemas/PromptVersionDetail"
+          $ref: "#/components/schemas/PromptVersion_Detail"
         requested_version:
-          $ref: "#/components/schemas/PromptVersionDetail"
-    PromptVersionPagePublic:
+          $ref: "#/components/schemas/PromptVersion_Detail"
+    PromptVersionPage_Public:
       type: object
       properties:
         page:
@@ -17325,12 +17325,12 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/PromptVersionPublic"
+            $ref: "#/components/schemas/PromptVersion_Public"
         sortableBy:
           type: array
           items:
             type: string
-    PromptVersionPublic:
+    PromptVersion_Public:
       required:
       - template
       type: object
@@ -17352,7 +17352,7 @@ components:
           minLength: 1
           type: string
         metadata:
-          $ref: "#/components/schemas/JsonNodePublic"
+          $ref: "#/components/schemas/JsonNode_Public"
         type:
           type: string
           enum:
@@ -17379,7 +17379,7 @@ components:
         created_by:
           type: string
           readOnly: true
-    PromptVersionCommitsRequestPublic:
+    PromptVersionCommitsRequest_Public:
       required:
       - commits
       type: object
@@ -17391,7 +17391,7 @@ components:
           items:
             minLength: 1
             type: string
-    PromptVersionRetrieveDetail:
+    PromptVersionRetrieve_Detail:
       required:
       - name
       type: object
@@ -17405,7 +17405,7 @@ components:
           pattern: (?s)^\s*(\S.*\S|\S)\s*$
           type: string
           description: "If provided, scopes the search to the specified project"
-    PromptUpdatable:
+    Prompt_Updatable:
       required:
       - name
       type: object
@@ -17480,7 +17480,7 @@ components:
         Note: Prompt versions are immutable by design.
         Only organizational properties (such as tags etc.) can be updated.
         Core properties like template, metadata etc. cannot be modified after creation.
-    RetentionRulePublic:
+    RetentionRule_Public:
       required:
       - retention
       type: object
@@ -17538,7 +17538,7 @@ components:
           type: boolean
           description: Whether historical catch-up is complete
           readOnly: true
-    RetentionRuleWrite:
+    RetentionRule_Write:
       required:
       - retention
       type: object
@@ -17559,13 +17559,13 @@ components:
           - unlimited
         apply_to_past:
           type: boolean
-    RetentionRulePagePublic:
+    RetentionRulePage_Public:
       type: object
       properties:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/RetentionRulePublic"
+            $ref: "#/components/schemas/RetentionRule_Public"
         page:
           type: integer
           format: int32
@@ -17771,7 +17771,7 @@ components:
           - experiment
           - playground
           - optimization
-    ErrorInfoWrite:
+    ErrorInfo_Write:
       required:
       - exception_type
       - traceback
@@ -17785,7 +17785,7 @@ components:
         traceback:
           minLength: 1
           type: string
-    SpanWrite:
+    Span_Write:
       required:
       - start_time
       type: object
@@ -17819,11 +17819,11 @@ components:
           type: string
           format: date-time
         input:
-          $ref: "#/components/schemas/JsonListStringWrite"
+          $ref: "#/components/schemas/JsonListString_Write"
         output:
-          $ref: "#/components/schemas/JsonListStringWrite"
+          $ref: "#/components/schemas/JsonListString_Write"
         metadata:
-          $ref: "#/components/schemas/JsonListStringWrite"
+          $ref: "#/components/schemas/JsonListString_Write"
         model:
           type: string
         provider:
@@ -17839,7 +17839,7 @@ components:
             type: integer
             format: int32
         error_info:
-          $ref: "#/components/schemas/ErrorInfoWrite"
+          $ref: "#/components/schemas/ErrorInfo_Write"
         last_updated_at:
           type: string
           format: date-time
@@ -17871,7 +17871,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Span"
-    SpanBatchWrite:
+    SpanBatch_Write:
       required:
       - spans
       type: object
@@ -17881,7 +17881,7 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/SpanWrite"
+            $ref: "#/components/schemas/Span_Write"
     DeleteFeedbackScore:
       required:
       - name
@@ -17892,7 +17892,7 @@ components:
           type: string
         author:
           type: string
-    ErrorInfoPublic:
+    ErrorInfo_Public:
       required:
       - exception_type
       - traceback
@@ -17906,7 +17906,7 @@ components:
         traceback:
           minLength: 1
           type: string
-    FeedbackScorePublic:
+    FeedbackScore_Public:
       required:
       - name
       - source
@@ -17949,12 +17949,12 @@ components:
         value_by_author:
           type: object
           additionalProperties:
-            $ref: "#/components/schemas/ValueEntryPublic"
+            $ref: "#/components/schemas/ValueEntry_Public"
           readOnly: true
       description: "Aggregated feedback scores from all spans in this trace, averaged\
         \ by score name"
       readOnly: true
-    SpanPublic:
+    Span_Public:
       required:
       - start_time
       type: object
@@ -17992,11 +17992,11 @@ components:
           type: string
           format: date-time
         input:
-          $ref: "#/components/schemas/JsonListStringPublic"
+          $ref: "#/components/schemas/JsonListString_Public"
         output:
-          $ref: "#/components/schemas/JsonListStringPublic"
+          $ref: "#/components/schemas/JsonListString_Public"
         metadata:
-          $ref: "#/components/schemas/JsonListStringPublic"
+          $ref: "#/components/schemas/JsonListString_Public"
         model:
           type: string
         provider:
@@ -18012,7 +18012,7 @@ components:
             type: integer
             format: int32
         error_info:
-          $ref: "#/components/schemas/ErrorInfoPublic"
+          $ref: "#/components/schemas/ErrorInfo_Public"
         created_at:
           type: string
           format: date-time
@@ -18030,12 +18030,12 @@ components:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScorePublic"
+            $ref: "#/components/schemas/FeedbackScore_Public"
         comments:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/CommentPublic"
+            $ref: "#/components/schemas/Comment_Public"
         total_estimated_cost:
           minimum: 0.0
           exclusiveMinimum: false
@@ -18059,7 +18059,7 @@ components:
           - experiment
           - playground
           - optimization
-    ValueEntryPublic:
+    ValueEntry_Public:
       type: object
       properties:
         value:
@@ -18082,7 +18082,7 @@ components:
         span_id:
           type: string
       readOnly: true
-    SpanPagePublic:
+    SpanPage_Public:
       type: object
       properties:
         page:
@@ -18097,7 +18097,7 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/SpanPublic"
+            $ref: "#/components/schemas/Span_Public"
         sortableBy:
           type: array
           items:
@@ -18152,7 +18152,7 @@ components:
         id:
           type: string
           format: uuid
-    SpanSearchStreamRequestPublic:
+    SpanSearchStreamRequest_Public:
       type: object
       properties:
         trace_id:
@@ -18173,7 +18173,7 @@ components:
         filters:
           type: array
           items:
-            $ref: "#/components/schemas/SpanFilterPublic"
+            $ref: "#/components/schemas/SpanFilter_Public"
         limit:
           maximum: 2000
           minimum: 1
@@ -18361,7 +18361,7 @@ components:
           items:
             minLength: 1
             type: string
-    TraceWrite:
+    Trace_Write:
       required:
       - start_time
       type: object
@@ -18382,18 +18382,18 @@ components:
           type: string
           format: date-time
         input:
-          $ref: "#/components/schemas/JsonListStringWrite"
+          $ref: "#/components/schemas/JsonListString_Write"
         output:
-          $ref: "#/components/schemas/JsonListStringWrite"
+          $ref: "#/components/schemas/JsonListString_Write"
         metadata:
-          $ref: "#/components/schemas/JsonListStringWrite"
+          $ref: "#/components/schemas/JsonListString_Write"
         tags:
           uniqueItems: true
           type: array
           items:
             type: string
         error_info:
-          $ref: "#/components/schemas/ErrorInfoWrite"
+          $ref: "#/components/schemas/ErrorInfo_Write"
         last_updated_at:
           type: string
           format: date-time
@@ -18421,7 +18421,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Trace"
-    TraceBatchWrite:
+    TraceBatch_Write:
       required:
       - traces
       type: object
@@ -18431,7 +18431,7 @@ components:
           minItems: 1
           type: array
           items:
-            $ref: "#/components/schemas/TraceWrite"
+            $ref: "#/components/schemas/Trace_Write"
     DeleteThreadFeedbackScores:
       required:
       - names
@@ -18491,7 +18491,7 @@ components:
         project_id:
           type: string
           format: uuid
-    CheckPublic:
+    Check_Public:
       type: object
       properties:
         name:
@@ -18504,7 +18504,7 @@ components:
           enum:
           - passed
           - failed
-    ExperimentItemReferencePublic:
+    ExperimentItemReference_Public:
       required:
       - dataset_id
       - dataset_item_id
@@ -18530,7 +18530,7 @@ components:
       description: "Experiment reference with ID, name, dataset ID, and dataset item\
         \ ID"
       readOnly: true
-    GuardrailsValidationPublic:
+    GuardrailsValidation_Public:
       type: object
       properties:
         span_id:
@@ -18539,9 +18539,9 @@ components:
         checks:
           type: array
           items:
-            $ref: "#/components/schemas/CheckPublic"
+            $ref: "#/components/schemas/Check_Public"
       readOnly: true
-    TracePublic:
+    Trace_Public:
       required:
       - start_time
       type: object
@@ -18562,18 +18562,18 @@ components:
           type: string
           format: date-time
         input:
-          $ref: "#/components/schemas/JsonListStringPublic"
+          $ref: "#/components/schemas/JsonListString_Public"
         output:
-          $ref: "#/components/schemas/JsonListStringPublic"
+          $ref: "#/components/schemas/JsonListString_Public"
         metadata:
-          $ref: "#/components/schemas/JsonListStringPublic"
+          $ref: "#/components/schemas/JsonListString_Public"
         tags:
           uniqueItems: true
           type: array
           items:
             type: string
         error_info:
-          $ref: "#/components/schemas/ErrorInfoPublic"
+          $ref: "#/components/schemas/ErrorInfo_Public"
         usage:
           type: object
           additionalProperties:
@@ -18598,24 +18598,24 @@ components:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScorePublic"
+            $ref: "#/components/schemas/FeedbackScore_Public"
         span_feedback_scores:
           type: array
           description: "Aggregated feedback scores from all spans in this trace, averaged\
             \ by score name"
           readOnly: true
           items:
-            $ref: "#/components/schemas/FeedbackScorePublic"
+            $ref: "#/components/schemas/FeedbackScore_Public"
         comments:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/CommentPublic"
+            $ref: "#/components/schemas/Comment_Public"
         guardrails_validations:
           type: array
           readOnly: true
           items:
-            $ref: "#/components/schemas/GuardrailsValidationPublic"
+            $ref: "#/components/schemas/GuardrailsValidation_Public"
         total_estimated_cost:
           type: number
           readOnly: true
@@ -18659,7 +18659,7 @@ components:
               \ sorted alphabetically"
             readOnly: true
         experiment:
-          $ref: "#/components/schemas/ExperimentItemReferencePublic"
+          $ref: "#/components/schemas/ExperimentItemReference_Public"
         source:
           type: string
           enum:
@@ -18764,7 +18764,7 @@ components:
           type: array
           items:
             type: string
-    TracePagePublic:
+    TracePage_Public:
       type: object
       properties:
         page:
@@ -18779,7 +18779,7 @@ components:
         content:
           type: array
           items:
-            $ref: "#/components/schemas/TracePublic"
+            $ref: "#/components/schemas/Trace_Public"
         sortableBy:
           type: array
           items:
@@ -18874,7 +18874,7 @@ components:
           description: "Filter trace threads created up to this time (ISO-8601 format).\
             \ If not provided, defaults to current time. Must be after 'from_time'."
           format: date-time
-    TraceSearchStreamRequestPublic:
+    TraceSearchStreamRequest_Public:
       type: object
       properties:
         project_name:
@@ -18885,7 +18885,7 @@ components:
         filters:
           type: array
           items:
-            $ref: "#/components/schemas/TraceFilterPublic"
+            $ref: "#/components/schemas/TraceFilter_Public"
         last_retrieved_id:
           type: string
           format: uuid
