@@ -24,13 +24,13 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        public object? Metadata { get; set; }
+        public global::Opik.JsonNode? Metadata { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
-        public object? Data { get; set; }
+        public global::Opik.JsonNode? Data { get; set; }
 
         /// <summary>
         /// Dataset item description
@@ -116,8 +116,8 @@ namespace Opik
         public DatasetItemUpdate(
             string? input,
             string? expectedOutput,
-            object? metadata,
-            object? data,
+            global::Opik.JsonNode? metadata,
+            global::Opik.JsonNode? data,
             string? description,
             global::System.Collections.Generic.IList<string>? tags,
             global::System.Collections.Generic.IList<string>? tagsToAdd,

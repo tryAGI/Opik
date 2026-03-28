@@ -43,7 +43,7 @@ namespace Opik
         global::System.Threading.Tasks.Task UpdateExperimentAsync(
             global::System.Guid id,
             string? name = default,
-            object? metadata = default,
+            global::Opik.JsonNode? metadata = default,
             global::System.Collections.Generic.IList<string>? tags = default,
             global::System.Collections.Generic.IList<string>? tagsToAdd = default,
             global::System.Collections.Generic.IList<string>? tagsToRemove = default,

@@ -8,7 +8,7 @@ namespace Opik
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class CategoricalFeedbackDefinitionPublic : FeedbackPublic
+    public sealed partial class CategoricalFeedbackDefinitionPublic : global::Opik.FeedbackPublic
     {
         /// <summary>
         /// 

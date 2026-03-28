@@ -23,7 +23,7 @@ namespace Opik
         global::System.Threading.Tasks.Task<global::Opik.DatasetVersionPublic> ApplyDatasetItemChangesAsync(
             global::System.Guid id,
 
-            object request,
+            global::Opik.DatasetItemChangesPublic request,
             bool? @override = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>

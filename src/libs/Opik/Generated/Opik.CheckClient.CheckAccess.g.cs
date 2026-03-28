@@ -7,11 +7,11 @@ namespace Opik
     {
         partial void PrepareCheckAccessArguments(
             global::System.Net.Http.HttpClient httpClient,
-            object request);
+            global::Opik.AuthDetailsHolder request);
         partial void PrepareCheckAccessRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            object request);
+            global::Opik.AuthDetailsHolder request);
         partial void ProcessCheckAccessResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -25,7 +25,7 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         public async global::System.Threading.Tasks.Task CheckAccessAsync(
 
-            object request,
+            global::Opik.AuthDetailsHolder request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -63,7 +63,7 @@ namespace Opik
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -250,7 +250,7 @@ namespace Opik
         public async global::System.Threading.Tasks.Task CheckAccessAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new object
+            var __request = new global::Opik.AuthDetailsHolder
             {
             };
 

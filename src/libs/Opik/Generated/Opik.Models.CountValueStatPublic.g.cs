@@ -6,7 +6,7 @@ namespace Opik
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class CountValueStatPublic : ProjectStatItemObjectPublic
+    public sealed partial class CountValueStatPublic : global::Opik.ProjectStatItemObjectPublic
     {
         /// <summary>
         /// 

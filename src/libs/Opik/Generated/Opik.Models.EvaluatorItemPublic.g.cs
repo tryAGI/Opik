@@ -29,7 +29,7 @@ namespace Opik
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("config")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Config { get; set; }
+        public required global::Opik.JsonNodePublic Config { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -49,7 +49,7 @@ namespace Opik
         public EvaluatorItemPublic(
             string name,
             global::Opik.EvaluatorItemPublicType type,
-            object config)
+            global::Opik.JsonNodePublic config)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Type = type;

@@ -18,7 +18,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
-        public global::System.Collections.Generic.IList<object>? Messages { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.Message>? Messages { get; set; }
 
         /// <summary>
         /// 
@@ -197,7 +197,7 @@ namespace Opik
 #endif
         public ChatCompletionRequest(
             string? model,
-            global::System.Collections.Generic.IList<object>? messages,
+            global::System.Collections.Generic.IList<global::Opik.Message>? messages,
             double? temperature,
             double? topP,
             int? n,

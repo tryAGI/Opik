@@ -28,7 +28,7 @@ namespace Opik
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("config")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Config { get; set; }
+        public required global::Opik.JsonNodeWrite Config { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -48,7 +48,7 @@ namespace Opik
         public EvaluatorItemWrite(
             string name,
             global::Opik.EvaluatorItemWriteType type,
-            object config)
+            global::Opik.JsonNodeWrite config)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Type = type;

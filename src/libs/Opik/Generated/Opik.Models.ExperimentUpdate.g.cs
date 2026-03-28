@@ -18,7 +18,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        public object? Metadata { get; set; }
+        public global::Opik.JsonNode? Metadata { get; set; }
 
         /// <summary>
         /// Tags
@@ -88,7 +88,7 @@ namespace Opik
 #endif
         public ExperimentUpdate(
             string? name,
-            object? metadata,
+            global::Opik.JsonNode? metadata,
             global::System.Collections.Generic.IList<string>? tags,
             global::System.Collections.Generic.IList<string>? tagsToAdd,
             global::System.Collections.Generic.IList<string>? tagsToRemove,

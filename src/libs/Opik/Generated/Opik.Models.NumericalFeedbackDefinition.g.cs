@@ -8,7 +8,7 @@ namespace Opik
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class NumericalFeedbackDefinition : Feedback
+    public sealed partial class NumericalFeedbackDefinition : global::Opik.Feedback
     {
         /// <summary>
         /// 

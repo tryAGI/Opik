@@ -12,7 +12,7 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task ReceiveProtobufTracesAsync(
 
-            object request,
+            global::Opik.JsonNode request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 

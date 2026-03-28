@@ -19,7 +19,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parameters")]
-        public object? Parameters { get; set; }
+        public global::Opik.JsonNodePublic? Parameters { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,7 +37,7 @@ namespace Opik
 #endif
         public StudioLlmModelPublic(
             string model,
-            object? parameters)
+            global::Opik.JsonNodePublic? parameters)
         {
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Parameters = parameters;

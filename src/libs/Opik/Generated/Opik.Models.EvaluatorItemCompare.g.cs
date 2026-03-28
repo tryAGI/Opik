@@ -28,7 +28,7 @@ namespace Opik
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("config")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Config { get; set; }
+        public required global::Opik.JsonNodeCompare Config { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -48,7 +48,7 @@ namespace Opik
         public EvaluatorItemCompare(
             string name,
             global::Opik.EvaluatorItemCompareType type,
-            object config)
+            global::Opik.JsonNodeCompare config)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Type = type;
