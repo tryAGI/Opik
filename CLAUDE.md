@@ -30,10 +30,17 @@ var client = new OpikClient(apiKey); // OPIK_API_KEY env var
 
 ## Spec Notes
 
-- **Operator enum fix:** Symbolic values (`=`, `!=`, `>`, `>=`, `<`, `<=`) replaced with C#-safe identifiers (`eq`, `neq`, `gt`, `gte`, `lt`, `lte`) via `sed`
-- **Underscore schema fix:** Python script renames schemas with underscores (e.g., `Foo_Public` to `FooPublic`) to prevent AutoSDK `JsonDerivedType` reference mismatches
-- **Auth injection:** Original spec has no `securitySchemes` — `yq` adds `ApiKeyAuth` (http/bearer) and top-level `security` array
-- Uses `--exclude-deprecated-operations` flag
+The `generate.sh` applies fixes via `sed`, Python, `yq` (pre-generation), and `sed` (post-generation):
+
+**Pre-generation:**
+1. **Operator enum fix:** Symbolic values (`=`, `!=`, `>`, `>=`, `<`, `<=`) replaced with C#-safe identifiers (`eq`, `neq`, `gt`, `gte`, `lt`, `lte`) via `sed`
+2. **Underscore schema fix:** Python script renames 239 schemas with underscores (e.g., `Foo_Public` to `FooPublic`) to prevent AutoSDK `JsonDerivedType` reference mismatches
+3. **Auth injection:** Original spec has no `securitySchemes` — `yq` adds `ApiKeyAuth` (http/bearer) and top-level `security` array
+
+**Post-generation:**
+4. **Pragma suppression:** `sed` injects `#pragma warning disable CS0108` (member hiding) and `CS8618` (non-nullable uninitialized) in FeedbackDefinition and AutomationRuleEvaluator types caused by allOf inheritance
+
+Uses `--exclude-deprecated-operations` flag.
 
 ## Sub-client Pattern
 
