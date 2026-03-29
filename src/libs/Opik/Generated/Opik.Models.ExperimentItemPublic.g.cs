@@ -81,10 +81,10 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="ExperimentItemPublic" /> class.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="experimentId"></param>
         /// <param name="datasetItemId"></param>
         /// <param name="traceId"></param>
+        /// <param name="id"></param>
         /// <param name="projectId">
         /// Included only in responses
         /// </param>
@@ -118,10 +118,10 @@ namespace Opik
             string? lastUpdatedBy,
             global::Opik.ExperimentItemPublicTraceVisibilityMode? traceVisibilityMode)
         {
+            this.Id = id;
             this.ExperimentId = experimentId;
             this.DatasetItemId = datasetItemId;
             this.TraceId = traceId;
-            this.Id = id;
             this.ProjectId = projectId;
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;

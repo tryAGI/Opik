@@ -117,15 +117,15 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AnnotationQueue" /> class.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="projectId"></param>
+        /// <param name="name"></param>
+        /// <param name="scope"></param>
+        /// <param name="id"></param>
         /// <param name="projectName">
         /// Included only in responses
         /// </param>
-        /// <param name="name"></param>
         /// <param name="description"></param>
         /// <param name="instructions"></param>
-        /// <param name="scope"></param>
         /// <param name="commentsEnabled"></param>
         /// <param name="feedbackDefinitionNames"></param>
         /// <param name="reviewers">
@@ -170,13 +170,13 @@ namespace Opik
             global::System.DateTime? lastUpdatedAt,
             string? lastUpdatedBy)
         {
-            this.ProjectId = projectId;
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Scope = scope;
             this.Id = id;
+            this.ProjectId = projectId;
             this.ProjectName = projectName;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
             this.Instructions = instructions;
+            this.Scope = scope;
             this.CommentsEnabled = commentsEnabled;
             this.FeedbackDefinitionNames = feedbackDefinitionNames;
             this.Reviewers = reviewers;

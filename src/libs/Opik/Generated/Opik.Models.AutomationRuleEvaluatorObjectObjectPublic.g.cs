@@ -1,5 +1,3 @@
-#pragma warning disable CS0108 // member hides inherited member
-#pragma warning disable CS8618 // non-nullable field uninitialized
 
 #nullable enable
 
@@ -105,6 +103,7 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AutomationRuleEvaluatorObjectObjectPublic" /> class.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
@@ -119,7 +118,6 @@ namespace Opik
         /// Projects assigned to this rule (unique, sorted alphabetically by name)<br/>
         /// Included only in responses
         /// </param>
-        /// <param name="name"></param>
         /// <param name="samplingRate"></param>
         /// <param name="enabled"></param>
         /// <param name="createdAt">
@@ -152,11 +150,11 @@ namespace Opik
             string? lastUpdatedBy,
             global::Opik.AutomationRuleEvaluatorObjectObjectPublicAction action)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Id = id;
             this.ProjectId = projectId;
             this.ProjectName = projectName;
             this.Projects = projects;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SamplingRate = samplingRate;
             this.Enabled = enabled;
             this.CreatedAt = createdAt;

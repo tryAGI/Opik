@@ -45,10 +45,10 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="FeedbackUpdate" /> class.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
-        /// <param name="name"></param>
         /// <param name="description">
         /// Optional description for the feedback definition<br/>
         /// Example: This feedback definition is used to rate response quality
@@ -61,8 +61,8 @@ namespace Opik
             global::System.Guid? id,
             string? description)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Id = id;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description;
         }
 

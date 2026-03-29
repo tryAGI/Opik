@@ -72,9 +72,9 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookPublic" /> class.
         /// </summary>
+        /// <param name="url"></param>
         /// <param name="id"></param>
         /// <param name="name"></param>
-        /// <param name="url"></param>
         /// <param name="secretToken"></param>
         /// <param name="headers"></param>
         /// <param name="createdAt">
@@ -103,9 +103,9 @@ namespace Opik
             global::System.DateTime? lastUpdatedAt,
             string? lastUpdatedBy)
         {
-            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Id = id;
             this.Name = name;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.SecretToken = secretToken;
             this.Headers = headers;
             this.CreatedAt = createdAt;

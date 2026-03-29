@@ -86,6 +86,7 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptVersionPublic" /> class.
         /// </summary>
+        /// <param name="template"></param>
         /// <param name="id">
         /// version unique identifier, generated if absent
         /// </param>
@@ -95,7 +96,6 @@ namespace Opik
         /// <param name="commit">
         /// version short unique identifier, generated if absent. it must be 8 characters long
         /// </param>
-        /// <param name="template"></param>
         /// <param name="metadata"></param>
         /// <param name="type"></param>
         /// <param name="changeDescription"></param>
@@ -125,10 +125,10 @@ namespace Opik
             global::System.DateTime? createdAt,
             string? createdBy)
         {
-            this.Template = template ?? throw new global::System.ArgumentNullException(nameof(template));
             this.Id = id;
             this.PromptId = promptId;
             this.Commit = commit;
+            this.Template = template ?? throw new global::System.ArgumentNullException(nameof(template));
             this.Metadata = metadata;
             this.Type = type;
             this.ChangeDescription = changeDescription;

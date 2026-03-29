@@ -99,6 +99,8 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="DashboardPublic" /> class.
         /// </summary>
+        /// <param name="name"></param>
+        /// <param name="config"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
@@ -108,7 +110,6 @@ namespace Opik
         /// <param name="projectId">
         /// Project ID. Takes precedence over project_name when both are provided.
         /// </param>
-        /// <param name="name"></param>
         /// <param name="slug">
         /// Included only in responses
         /// </param>
@@ -117,7 +118,6 @@ namespace Opik
         /// Included only in responses
         /// </param>
         /// <param name="description"></param>
-        /// <param name="config"></param>
         /// <param name="createdBy">
         /// Included only in responses
         /// </param>
@@ -148,15 +148,15 @@ namespace Opik
             global::System.DateTime? createdAt,
             global::System.DateTime? lastUpdatedAt)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Config = config ?? throw new global::System.ArgumentNullException(nameof(config));
             this.Id = id;
             this.WorkspaceId = workspaceId;
             this.ProjectId = projectId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Slug = slug;
             this.Type = type;
             this.Scope = scope;
             this.Description = description;
+            this.Config = config ?? throw new global::System.ArgumentNullException(nameof(config));
             this.CreatedBy = createdBy;
             this.LastUpdatedBy = lastUpdatedBy;
             this.CreatedAt = createdAt;

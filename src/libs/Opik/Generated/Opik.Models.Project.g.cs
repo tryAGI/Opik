@@ -127,10 +127,10 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="Project" /> class.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
-        /// <param name="name"></param>
         /// <param name="visibility"></param>
         /// <param name="description"></param>
         /// <param name="createdAt">
@@ -194,8 +194,8 @@ namespace Opik
             long? guardrailsFailedCount,
             global::Opik.ErrorCountWithDeviation? errorCount)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Id = id;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Visibility = visibility;
             this.Description = description;
             this.CreatedAt = createdAt;

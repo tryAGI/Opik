@@ -48,9 +48,9 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="WebhookWrite" /> class.
         /// </summary>
+        /// <param name="url"></param>
         /// <param name="id"></param>
         /// <param name="name"></param>
-        /// <param name="url"></param>
         /// <param name="secretToken"></param>
         /// <param name="headers"></param>
 #if NET7_0_OR_GREATER
@@ -63,9 +63,9 @@ namespace Opik
             string? secretToken,
             global::System.Collections.Generic.Dictionary<string, string>? headers)
         {
-            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Id = id;
             this.Name = name;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.SecretToken = secretToken;
             this.Headers = headers;
         }

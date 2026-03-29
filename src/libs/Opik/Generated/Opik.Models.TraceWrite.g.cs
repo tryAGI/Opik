@@ -106,12 +106,12 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="TraceWrite" /> class.
         /// </summary>
+        /// <param name="startTime"></param>
         /// <param name="id"></param>
         /// <param name="projectName">
         /// If null, the default project is used
         /// </param>
         /// <param name="name"></param>
-        /// <param name="startTime"></param>
         /// <param name="endTime"></param>
         /// <param name="input"></param>
         /// <param name="output"></param>
@@ -143,10 +143,10 @@ namespace Opik
             string? threadId,
             global::Opik.TraceWriteSource? source)
         {
-            this.StartTime = startTime;
             this.Id = id;
             this.ProjectName = projectName;
             this.Name = name;
+            this.StartTime = startTime;
             this.EndTime = endTime;
             this.Input = input;
             this.Output = output;

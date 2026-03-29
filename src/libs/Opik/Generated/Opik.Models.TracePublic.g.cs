@@ -207,12 +207,12 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="TracePublic" /> class.
         /// </summary>
+        /// <param name="startTime"></param>
         /// <param name="id"></param>
         /// <param name="projectId">
         /// Included only in responses
         /// </param>
         /// <param name="name"></param>
-        /// <param name="startTime"></param>
         /// <param name="endTime"></param>
         /// <param name="input"></param>
         /// <param name="output"></param>
@@ -312,10 +312,10 @@ namespace Opik
             global::Opik.ExperimentItemReferencePublic? experiment,
             global::Opik.TracePublicSource? source)
         {
-            this.StartTime = startTime;
             this.Id = id;
             this.ProjectId = projectId;
             this.Name = name;
+            this.StartTime = startTime;
             this.EndTime = endTime;
             this.Input = input;
             this.Output = output;

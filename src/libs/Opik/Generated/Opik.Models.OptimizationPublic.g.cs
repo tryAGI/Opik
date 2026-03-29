@@ -160,14 +160,14 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="OptimizationPublic" /> class.
         /// </summary>
+        /// <param name="datasetName"></param>
+        /// <param name="objectiveName"></param>
+        /// <param name="status"></param>
         /// <param name="id"></param>
         /// <param name="name"></param>
-        /// <param name="datasetName"></param>
         /// <param name="projectId">
         /// Project ID. Takes precedence over project_name when both are provided.
         /// </param>
-        /// <param name="objectiveName"></param>
-        /// <param name="status"></param>
         /// <param name="metadata"></param>
         /// <param name="studioConfig"></param>
         /// <param name="datasetId">
@@ -241,12 +241,12 @@ namespace Opik
             double? bestCost,
             double? totalOptimizationCost)
         {
-            this.DatasetName = datasetName ?? throw new global::System.ArgumentNullException(nameof(datasetName));
-            this.ObjectiveName = objectiveName ?? throw new global::System.ArgumentNullException(nameof(objectiveName));
-            this.Status = status;
             this.Id = id;
             this.Name = name;
+            this.DatasetName = datasetName ?? throw new global::System.ArgumentNullException(nameof(datasetName));
             this.ProjectId = projectId;
+            this.ObjectiveName = objectiveName ?? throw new global::System.ArgumentNullException(nameof(objectiveName));
+            this.Status = status;
             this.Metadata = metadata;
             this.StudioConfig = studioConfig;
             this.DatasetId = datasetId;

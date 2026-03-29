@@ -73,16 +73,16 @@ namespace Opik
         /// </summary>
         /// <param name="fileName"></param>
         /// <param name="numOfFileParts"></param>
+        /// <param name="entityType"></param>
+        /// <param name="entityId"></param>
+        /// <param name="path"></param>
         /// <param name="mimeType"></param>
         /// <param name="projectName">
         /// If null, the default project is used
         /// </param>
-        /// <param name="entityType"></param>
-        /// <param name="entityId"></param>
         /// <param name="containerId">
         /// Included only in responses
         /// </param>
-        /// <param name="path"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -98,12 +98,12 @@ namespace Opik
         {
             this.FileName = fileName ?? throw new global::System.ArgumentNullException(nameof(fileName));
             this.NumOfFileParts = numOfFileParts;
-            this.EntityType = entityType;
-            this.EntityId = entityId;
-            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
             this.MimeType = mimeType;
             this.ProjectName = projectName;
+            this.EntityType = entityType;
+            this.EntityId = entityId;
             this.ContainerId = containerId;
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
         }
 
         /// <summary>

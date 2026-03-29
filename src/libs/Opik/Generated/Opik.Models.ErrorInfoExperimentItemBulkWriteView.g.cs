@@ -38,8 +38,8 @@ namespace Opik
         /// Initializes a new instance of the <see cref="ErrorInfoExperimentItemBulkWriteView" /> class.
         /// </summary>
         /// <param name="exceptionType"></param>
-        /// <param name="message"></param>
         /// <param name="traceback"></param>
+        /// <param name="message"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -49,8 +49,8 @@ namespace Opik
             string? message)
         {
             this.ExceptionType = exceptionType ?? throw new global::System.ArgumentNullException(nameof(exceptionType));
-            this.Traceback = traceback ?? throw new global::System.ArgumentNullException(nameof(traceback));
             this.Message = message;
+            this.Traceback = traceback ?? throw new global::System.ArgumentNullException(nameof(traceback));
         }
 
         /// <summary>

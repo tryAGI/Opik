@@ -44,10 +44,10 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="Attachment" /> class.
         /// </summary>
-        /// <param name="link"></param>
         /// <param name="fileName"></param>
         /// <param name="fileSize"></param>
         /// <param name="mimeType"></param>
+        /// <param name="link"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -57,10 +57,10 @@ namespace Opik
             string mimeType,
             string? link)
         {
+            this.Link = link;
             this.FileName = fileName ?? throw new global::System.ArgumentNullException(nameof(fileName));
             this.FileSize = fileSize;
             this.MimeType = mimeType ?? throw new global::System.ArgumentNullException(nameof(mimeType));
-            this.Link = link;
         }
 
         /// <summary>

@@ -50,8 +50,8 @@ namespace Opik
         /// Initializes a new instance of the <see cref="CreateLocalRunnerJobRequest" /> class.
         /// </summary>
         /// <param name="agentName"></param>
-        /// <param name="inputs"></param>
         /// <param name="projectId"></param>
+        /// <param name="inputs"></param>
         /// <param name="maskId"></param>
         /// <param name="metadata"></param>
 #if NET7_0_OR_GREATER
@@ -65,8 +65,8 @@ namespace Opik
             global::Opik.LocalRunnerJobMetadata? metadata)
         {
             this.AgentName = agentName ?? throw new global::System.ArgumentNullException(nameof(agentName));
-            this.ProjectId = projectId;
             this.Inputs = inputs;
+            this.ProjectId = projectId;
             this.MaskId = maskId;
             this.Metadata = metadata;
         }

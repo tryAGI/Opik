@@ -83,10 +83,10 @@ namespace Opik
         /// Initializes a new instance of the <see cref="FeedbackScorePublic" /> class.
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="categoryName"></param>
         /// <param name="value"></param>
-        /// <param name="reason"></param>
         /// <param name="source"></param>
+        /// <param name="categoryName"></param>
+        /// <param name="reason"></param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -118,10 +118,10 @@ namespace Opik
             global::System.Collections.Generic.Dictionary<string, global::Opik.ValueEntryPublic>? valueByAuthor)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Value = value;
-            this.Source = source;
             this.CategoryName = categoryName;
+            this.Value = value;
             this.Reason = reason;
+            this.Source = source;
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;
             this.CreatedBy = createdBy;

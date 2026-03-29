@@ -76,17 +76,17 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="FeedbackScoreBatchItem" /> class.
         /// </summary>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
+        /// <param name="source"></param>
+        /// <param name="id"></param>
         /// <param name="projectName">
         /// If null, the default project is used
         /// </param>
         /// <param name="projectId"></param>
-        /// <param name="name"></param>
         /// <param name="categoryName"></param>
-        /// <param name="value"></param>
         /// <param name="reason"></param>
-        /// <param name="source"></param>
         /// <param name="author"></param>
-        /// <param name="id"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -101,15 +101,15 @@ namespace Opik
             string? reason,
             string? author)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Value = value;
-            this.Source = source;
-            this.Id = id;
             this.ProjectName = projectName;
             this.ProjectId = projectId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.CategoryName = categoryName;
+            this.Value = value;
             this.Reason = reason;
+            this.Source = source;
             this.Author = author;
+            this.Id = id;
         }
 
         /// <summary>

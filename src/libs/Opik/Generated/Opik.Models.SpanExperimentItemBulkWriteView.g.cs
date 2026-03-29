@@ -137,11 +137,11 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="SpanExperimentItemBulkWriteView" /> class.
         /// </summary>
+        /// <param name="startTime"></param>
         /// <param name="id"></param>
         /// <param name="parentSpanId"></param>
         /// <param name="name"></param>
         /// <param name="type"></param>
-        /// <param name="startTime"></param>
         /// <param name="endTime"></param>
         /// <param name="input"></param>
         /// <param name="output"></param>
@@ -182,11 +182,11 @@ namespace Opik
             double? ttft,
             global::Opik.SpanExperimentItemBulkWriteViewSource? source)
         {
-            this.StartTime = startTime;
             this.Id = id;
             this.ParentSpanId = parentSpanId;
             this.Name = name;
             this.Type = type;
+            this.StartTime = startTime;
             this.EndTime = endTime;
             this.Input = input;
             this.Output = output;

@@ -67,11 +67,11 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AlertTriggerConfig" /> class.
         /// </summary>
+        /// <param name="type"></param>
         /// <param name="id"></param>
         /// <param name="alertTriggerId">
         /// Included only in responses
         /// </param>
-        /// <param name="type"></param>
         /// <param name="configValue"></param>
         /// <param name="createdAt">
         /// Included only in responses
@@ -98,9 +98,9 @@ namespace Opik
             global::System.DateTime? lastUpdatedAt,
             string? lastUpdatedBy)
         {
-            this.Type = type;
             this.Id = id;
             this.AlertTriggerId = alertTriggerId;
+            this.Type = type;
             this.ConfigValue = configValue;
             this.CreatedAt = createdAt;
             this.CreatedBy = createdBy;

@@ -48,15 +48,15 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="DatasetItemBatchUpdate" /> class.
         /// </summary>
+        /// <param name="update">
+        /// Dataset item update request
+        /// </param>
         /// <param name="ids">
         /// List of dataset item IDs to update (max 1000). Mutually exclusive with 'filters'.
         /// </param>
         /// <param name="filters"></param>
         /// <param name="datasetId">
         /// Dataset ID. Required when using 'filters', optional when using 'ids'.
-        /// </param>
-        /// <param name="update">
-        /// Dataset item update request
         /// </param>
         /// <param name="mergeTags">
         /// If true, merge tags with existing tags instead of replacing them. Default: false. When using 'filters', this is automatically set to true.
@@ -71,10 +71,10 @@ namespace Opik
             global::System.Guid? datasetId,
             bool? mergeTags)
         {
-            this.Update = update ?? throw new global::System.ArgumentNullException(nameof(update));
             this.Ids = ids;
             this.Filters = filters;
             this.DatasetId = datasetId;
+            this.Update = update ?? throw new global::System.ArgumentNullException(nameof(update));
             this.MergeTags = mergeTags;
         }
 

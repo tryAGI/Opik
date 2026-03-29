@@ -128,6 +128,8 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="DatasetItem" /> class.
         /// </summary>
+        /// <param name="source"></param>
+        /// <param name="data"></param>
         /// <param name="id">
         /// Stable item identifier.<br/>
         /// On write, used as the upsert key.<br/>
@@ -142,8 +144,6 @@ namespace Opik
         /// </param>
         /// <param name="traceId"></param>
         /// <param name="spanId"></param>
-        /// <param name="source"></param>
-        /// <param name="data"></param>
         /// <param name="description"></param>
         /// <param name="tags"></param>
         /// <param name="evaluators"></param>
@@ -191,12 +191,12 @@ namespace Opik
             string? createdBy,
             string? lastUpdatedBy)
         {
-            this.Source = source;
-            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Id = id;
             this.DatasetItemId = datasetItemId;
             this.TraceId = traceId;
             this.SpanId = spanId;
+            this.Source = source;
+            this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Description = description;
             this.Tags = tags;
             this.Evaluators = evaluators;

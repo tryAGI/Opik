@@ -37,8 +37,8 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AlertTriggerWrite" /> class.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="eventType"></param>
+        /// <param name="id"></param>
         /// <param name="triggerConfigs"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -48,8 +48,8 @@ namespace Opik
             global::System.Guid? id,
             global::System.Collections.Generic.IList<global::Opik.AlertTriggerConfigWrite>? triggerConfigs)
         {
-            this.EventType = eventType;
             this.Id = id;
+            this.EventType = eventType;
             this.TriggerConfigs = triggerConfigs;
         }
 

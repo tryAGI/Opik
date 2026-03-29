@@ -43,9 +43,9 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceMetricsSummaryRequest" /> class.
         /// </summary>
-        /// <param name="projectIds"></param>
         /// <param name="intervalStart"></param>
         /// <param name="intervalEnd"></param>
+        /// <param name="projectIds"></param>
         /// <param name="startBeforeEnd"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -56,9 +56,9 @@ namespace Opik
             global::System.Collections.Generic.IList<global::System.Guid>? projectIds,
             bool? startBeforeEnd)
         {
+            this.ProjectIds = projectIds;
             this.IntervalStart = intervalStart;
             this.IntervalEnd = intervalEnd;
-            this.ProjectIds = projectIds;
             this.StartBeforeEnd = startBeforeEnd;
         }
 

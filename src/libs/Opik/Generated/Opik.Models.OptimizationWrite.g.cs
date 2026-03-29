@@ -82,17 +82,17 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="OptimizationWrite" /> class.
         /// </summary>
+        /// <param name="datasetName"></param>
+        /// <param name="objectiveName"></param>
+        /// <param name="status"></param>
         /// <param name="id"></param>
         /// <param name="name"></param>
-        /// <param name="datasetName"></param>
         /// <param name="projectName">
         /// Project name. Creates project if it doesn't exist. Ignored when project_id is provided.
         /// </param>
         /// <param name="projectId">
         /// Project ID. Takes precedence over project_name when both are provided.
         /// </param>
-        /// <param name="objectiveName"></param>
-        /// <param name="status"></param>
         /// <param name="metadata"></param>
         /// <param name="studioConfig"></param>
         /// <param name="lastUpdatedAt"></param>
@@ -111,13 +111,13 @@ namespace Opik
             global::Opik.OptimizationStudioConfigWrite? studioConfig,
             global::System.DateTime? lastUpdatedAt)
         {
-            this.DatasetName = datasetName ?? throw new global::System.ArgumentNullException(nameof(datasetName));
-            this.ObjectiveName = objectiveName ?? throw new global::System.ArgumentNullException(nameof(objectiveName));
-            this.Status = status;
             this.Id = id;
             this.Name = name;
+            this.DatasetName = datasetName ?? throw new global::System.ArgumentNullException(nameof(datasetName));
             this.ProjectName = projectName;
             this.ProjectId = projectId;
+            this.ObjectiveName = objectiveName ?? throw new global::System.ArgumentNullException(nameof(objectiveName));
+            this.Status = status;
             this.Metadata = metadata;
             this.StudioConfig = studioConfig;
             this.LastUpdatedAt = lastUpdatedAt;

@@ -46,10 +46,10 @@ namespace Opik
         /// </summary>
         /// <param name="experimentName"></param>
         /// <param name="datasetName"></param>
+        /// <param name="items"></param>
         /// <param name="experimentId">
         /// Optional experiment ID. If provided, items will be added to the existing experiment and experimentName will be ignored. If not provided or experiment with that ID doesn't exist, a new experiment will be created with the given experimentName
         /// </param>
-        /// <param name="items"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -61,8 +61,8 @@ namespace Opik
         {
             this.ExperimentName = experimentName ?? throw new global::System.ArgumentNullException(nameof(experimentName));
             this.DatasetName = datasetName ?? throw new global::System.ArgumentNullException(nameof(datasetName));
-            this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
             this.ExperimentId = experimentId;
+            this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
         }
 
         /// <summary>

@@ -42,9 +42,9 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="TraceThreadIdentifier" /> class.
         /// </summary>
+        /// <param name="threadId"></param>
         /// <param name="projectName"></param>
         /// <param name="projectId"></param>
-        /// <param name="threadId"></param>
         /// <param name="truncate"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,9 +55,9 @@ namespace Opik
             global::System.Guid? projectId,
             bool? truncate)
         {
-            this.ThreadId = threadId ?? throw new global::System.ArgumentNullException(nameof(threadId));
             this.ProjectName = projectName;
             this.ProjectId = projectId;
+            this.ThreadId = threadId ?? throw new global::System.ArgumentNullException(nameof(threadId));
             this.Truncate = truncate;
         }
 

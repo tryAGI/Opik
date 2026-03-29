@@ -56,16 +56,16 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="DashboardWrite" /> class.
         /// </summary>
+        /// <param name="name"></param>
+        /// <param name="config"></param>
         /// <param name="projectId">
         /// Project ID. Takes precedence over project_name when both are provided.
         /// </param>
         /// <param name="projectName">
         /// For project scope, specify either project_id or project_name. If project_name is provided and the project does not exist, it will be created. Ignored when project_id is provided. If neither is provided, the dashboard is created at workspace level.
         /// </param>
-        /// <param name="name"></param>
         /// <param name="type"></param>
         /// <param name="description"></param>
-        /// <param name="config"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -77,12 +77,12 @@ namespace Opik
             global::Opik.DashboardWriteType? type,
             string? description)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Config = config ?? throw new global::System.ArgumentNullException(nameof(config));
             this.ProjectId = projectId;
             this.ProjectName = projectName;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Type = type;
             this.Description = description;
+            this.Config = config ?? throw new global::System.ArgumentNullException(nameof(config));
         }
 
         /// <summary>

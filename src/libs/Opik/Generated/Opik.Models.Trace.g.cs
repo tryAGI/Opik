@@ -213,6 +213,7 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="Trace" /> class.
         /// </summary>
+        /// <param name="startTime"></param>
         /// <param name="id"></param>
         /// <param name="projectName">
         /// If null, the default project is used
@@ -221,7 +222,6 @@ namespace Opik
         /// Included only in responses
         /// </param>
         /// <param name="name"></param>
-        /// <param name="startTime"></param>
         /// <param name="endTime"></param>
         /// <param name="input"></param>
         /// <param name="output"></param>
@@ -322,11 +322,11 @@ namespace Opik
             global::Opik.ExperimentItemReference? experiment,
             global::Opik.TraceSource? source)
         {
-            this.StartTime = startTime;
             this.Id = id;
             this.ProjectName = projectName;
             this.ProjectId = projectId;
             this.Name = name;
+            this.StartTime = startTime;
             this.EndTime = endTime;
             this.Input = input;
             this.Output = output;

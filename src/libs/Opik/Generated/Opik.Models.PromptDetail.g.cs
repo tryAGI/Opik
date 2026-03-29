@@ -98,8 +98,8 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptDetail" /> class.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="name"></param>
+        /// <param name="id"></param>
         /// <param name="projectId">
         /// Project ID. Takes precedence over project_name when both are provided.
         /// </param>
@@ -144,8 +144,8 @@ namespace Opik
             global::Opik.PromptVersionDetail? latestVersion,
             global::Opik.PromptVersionDetail? requestedVersion)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Id = id;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.ProjectId = projectId;
             this.Description = description;
             this.TemplateStructure = templateStructure;

@@ -44,12 +44,12 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="RetentionRuleWrite" /> class.
         /// </summary>
+        /// <param name="retention"></param>
         /// <param name="projectId"></param>
         /// <param name="organizationLevel">
         /// Set to true to create an organization-level rule<br/>
         /// Included only in requests
         /// </param>
-        /// <param name="retention"></param>
         /// <param name="applyToPast"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -60,9 +60,9 @@ namespace Opik
             bool? organizationLevel,
             bool? applyToPast)
         {
-            this.Retention = retention;
             this.ProjectId = projectId;
             this.OrganizationLevel = organizationLevel;
+            this.Retention = retention;
             this.ApplyToPast = applyToPast;
         }
 

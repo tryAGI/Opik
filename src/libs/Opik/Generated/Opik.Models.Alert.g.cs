@@ -91,12 +91,12 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="Alert" /> class.
         /// </summary>
+        /// <param name="webhook"></param>
         /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="enabled"></param>
         /// <param name="alertType"></param>
         /// <param name="metadata"></param>
-        /// <param name="webhook"></param>
         /// <param name="triggers"></param>
         /// <param name="createdAt">
         /// Included only in responses
@@ -130,12 +130,12 @@ namespace Opik
             string? lastUpdatedBy,
             global::System.Guid? projectId)
         {
-            this.Webhook = webhook ?? throw new global::System.ArgumentNullException(nameof(webhook));
             this.Id = id;
             this.Name = name;
             this.Enabled = enabled;
             this.AlertType = alertType;
             this.Metadata = metadata;
+            this.Webhook = webhook ?? throw new global::System.ArgumentNullException(nameof(webhook));
             this.Triggers = triggers;
             this.CreatedAt = createdAt;
             this.CreatedBy = createdBy;

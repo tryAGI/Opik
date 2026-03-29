@@ -11,11 +11,15 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        Contains,
+        Neq,
         /// <summary>
         /// 
         /// </summary>
-        EndsWith,
+        Lt,
+        /// <summary>
+        /// 
+        /// </summary>
+        Lte,
         /// <summary>
         /// 
         /// </summary>
@@ -31,23 +35,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        Contains,
+        /// <summary>
+        /// 
+        /// </summary>
+        EndsWith,
+        /// <summary>
+        /// 
+        /// </summary>
         IsEmpty,
         /// <summary>
         /// 
         /// </summary>
         IsNotEmpty,
-        /// <summary>
-        /// 
-        /// </summary>
-        Lt,
-        /// <summary>
-        /// 
-        /// </summary>
-        Lte,
-        /// <summary>
-        /// 
-        /// </summary>
-        Neq,
         /// <summary>
         /// 
         /// </summary>
@@ -70,16 +70,16 @@ namespace Opik
         {
             return value switch
             {
+                SpanFilterPublicOperator.Neq => "!=",
+                SpanFilterPublicOperator.Lt => "<",
+                SpanFilterPublicOperator.Lte => "<=",
+                SpanFilterPublicOperator.Eq => "=",
+                SpanFilterPublicOperator.Gt => ">",
+                SpanFilterPublicOperator.Gte => ">=",
                 SpanFilterPublicOperator.Contains => "contains",
                 SpanFilterPublicOperator.EndsWith => "ends_with",
-                SpanFilterPublicOperator.Eq => "eq",
-                SpanFilterPublicOperator.Gt => "gt",
-                SpanFilterPublicOperator.Gte => "gte",
                 SpanFilterPublicOperator.IsEmpty => "is_empty",
                 SpanFilterPublicOperator.IsNotEmpty => "is_not_empty",
-                SpanFilterPublicOperator.Lt => "lt",
-                SpanFilterPublicOperator.Lte => "lte",
-                SpanFilterPublicOperator.Neq => "neq",
                 SpanFilterPublicOperator.NotContains => "not_contains",
                 SpanFilterPublicOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -92,16 +92,16 @@ namespace Opik
         {
             return value switch
             {
+                "!=" => SpanFilterPublicOperator.Neq,
+                "<" => SpanFilterPublicOperator.Lt,
+                "<=" => SpanFilterPublicOperator.Lte,
+                "=" => SpanFilterPublicOperator.Eq,
+                ">" => SpanFilterPublicOperator.Gt,
+                ">=" => SpanFilterPublicOperator.Gte,
                 "contains" => SpanFilterPublicOperator.Contains,
                 "ends_with" => SpanFilterPublicOperator.EndsWith,
-                "eq" => SpanFilterPublicOperator.Eq,
-                "gt" => SpanFilterPublicOperator.Gt,
-                "gte" => SpanFilterPublicOperator.Gte,
                 "is_empty" => SpanFilterPublicOperator.IsEmpty,
                 "is_not_empty" => SpanFilterPublicOperator.IsNotEmpty,
-                "lt" => SpanFilterPublicOperator.Lt,
-                "lte" => SpanFilterPublicOperator.Lte,
-                "neq" => SpanFilterPublicOperator.Neq,
                 "not_contains" => SpanFilterPublicOperator.NotContains,
                 "starts_with" => SpanFilterPublicOperator.StartsWith,
                 _ => null,

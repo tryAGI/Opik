@@ -54,10 +54,10 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="CommentPublic" /> class.
         /// </summary>
+        /// <param name="text"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
-        /// <param name="text"></param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -81,8 +81,8 @@ namespace Opik
             string? createdBy,
             string? lastUpdatedBy)
         {
-            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.Id = id;
+            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;
             this.CreatedBy = createdBy;

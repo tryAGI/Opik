@@ -143,13 +143,13 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="SpanUpdate" /> class.
         /// </summary>
+        /// <param name="traceId"></param>
         /// <param name="projectName">
         /// If null and project_id not specified, Default Project is assumed
         /// </param>
         /// <param name="projectId">
         /// If null and project_name not specified, Default Project is assumed
         /// </param>
-        /// <param name="traceId"></param>
         /// <param name="parentSpanId"></param>
         /// <param name="name"></param>
         /// <param name="type"></param>
@@ -198,9 +198,9 @@ namespace Opik
             double? ttft,
             global::Opik.SpanUpdateSource? source)
         {
-            this.TraceId = traceId;
             this.ProjectName = projectName;
             this.ProjectId = projectId;
+            this.TraceId = traceId;
             this.ParentSpanId = parentSpanId;
             this.Name = name;
             this.Type = type;

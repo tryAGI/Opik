@@ -80,11 +80,12 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentBlueprintPublic" /> class.
         /// </summary>
+        /// <param name="type"></param>
+        /// <param name="values"></param>
         /// <param name="id"></param>
         /// <param name="name">
         /// Included only in responses
         /// </param>
-        /// <param name="type"></param>
         /// <param name="description"></param>
         /// <param name="envs">
         /// Included only in responses
@@ -101,7 +102,6 @@ namespace Opik
         /// <param name="lastUpdatedAt">
         /// Included only in responses
         /// </param>
-        /// <param name="values"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -117,16 +117,16 @@ namespace Opik
             string? lastUpdatedBy,
             global::System.DateTime? lastUpdatedAt)
         {
-            this.Type = type;
-            this.Values = values ?? throw new global::System.ArgumentNullException(nameof(values));
             this.Id = id;
             this.Name = name;
+            this.Type = type;
             this.Description = description;
             this.Envs = envs;
             this.CreatedBy = createdBy;
             this.CreatedAt = createdAt;
             this.LastUpdatedBy = lastUpdatedBy;
             this.LastUpdatedAt = lastUpdatedAt;
+            this.Values = values ?? throw new global::System.ArgumentNullException(nameof(values));
         }
 
         /// <summary>

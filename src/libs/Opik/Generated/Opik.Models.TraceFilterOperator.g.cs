@@ -11,11 +11,15 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        Contains,
+        Neq,
         /// <summary>
         /// 
         /// </summary>
-        EndsWith,
+        Lt,
+        /// <summary>
+        /// 
+        /// </summary>
+        Lte,
         /// <summary>
         /// 
         /// </summary>
@@ -31,23 +35,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        Contains,
+        /// <summary>
+        /// 
+        /// </summary>
+        EndsWith,
+        /// <summary>
+        /// 
+        /// </summary>
         IsEmpty,
         /// <summary>
         /// 
         /// </summary>
         IsNotEmpty,
-        /// <summary>
-        /// 
-        /// </summary>
-        Lt,
-        /// <summary>
-        /// 
-        /// </summary>
-        Lte,
-        /// <summary>
-        /// 
-        /// </summary>
-        Neq,
         /// <summary>
         /// 
         /// </summary>
@@ -70,16 +70,16 @@ namespace Opik
         {
             return value switch
             {
+                TraceFilterOperator.Neq => "!=",
+                TraceFilterOperator.Lt => "<",
+                TraceFilterOperator.Lte => "<=",
+                TraceFilterOperator.Eq => "=",
+                TraceFilterOperator.Gt => ">",
+                TraceFilterOperator.Gte => ">=",
                 TraceFilterOperator.Contains => "contains",
                 TraceFilterOperator.EndsWith => "ends_with",
-                TraceFilterOperator.Eq => "eq",
-                TraceFilterOperator.Gt => "gt",
-                TraceFilterOperator.Gte => "gte",
                 TraceFilterOperator.IsEmpty => "is_empty",
                 TraceFilterOperator.IsNotEmpty => "is_not_empty",
-                TraceFilterOperator.Lt => "lt",
-                TraceFilterOperator.Lte => "lte",
-                TraceFilterOperator.Neq => "neq",
                 TraceFilterOperator.NotContains => "not_contains",
                 TraceFilterOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -92,16 +92,16 @@ namespace Opik
         {
             return value switch
             {
+                "!=" => TraceFilterOperator.Neq,
+                "<" => TraceFilterOperator.Lt,
+                "<=" => TraceFilterOperator.Lte,
+                "=" => TraceFilterOperator.Eq,
+                ">" => TraceFilterOperator.Gt,
+                ">=" => TraceFilterOperator.Gte,
                 "contains" => TraceFilterOperator.Contains,
                 "ends_with" => TraceFilterOperator.EndsWith,
-                "eq" => TraceFilterOperator.Eq,
-                "gt" => TraceFilterOperator.Gt,
-                "gte" => TraceFilterOperator.Gte,
                 "is_empty" => TraceFilterOperator.IsEmpty,
                 "is_not_empty" => TraceFilterOperator.IsNotEmpty,
-                "lt" => TraceFilterOperator.Lt,
-                "lte" => TraceFilterOperator.Lte,
-                "neq" => TraceFilterOperator.Neq,
                 "not_contains" => TraceFilterOperator.NotContains,
                 "starts_with" => TraceFilterOperator.StartsWith,
                 _ => null,

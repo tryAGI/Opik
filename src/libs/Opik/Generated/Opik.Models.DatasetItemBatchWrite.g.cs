@@ -54,6 +54,7 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="DatasetItemBatchWrite" /> class.
         /// </summary>
+        /// <param name="items"></param>
         /// <param name="datasetName">
         /// If null, dataset_id must be provided
         /// </param>
@@ -66,7 +67,6 @@ namespace Opik
         /// <param name="projectId">
         /// Optional. Associates the batch with a project by ID. Takes precedence over project_name.
         /// </param>
-        /// <param name="items"></param>
         /// <param name="batchGroupId">
         /// Optional batch group ID to group multiple batches into a single dataset version. If null, mutates the latest version instead of creating a new one.
         /// </param>
@@ -81,11 +81,11 @@ namespace Opik
             global::System.Guid? projectId,
             global::System.Guid? batchGroupId)
         {
-            this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
             this.DatasetName = datasetName;
             this.DatasetId = datasetId;
             this.ProjectName = projectName;
             this.ProjectId = projectId;
+            this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
             this.BatchGroupId = batchGroupId;
         }
 

@@ -100,10 +100,10 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="ProviderApiKey" /> class.
         /// </summary>
+        /// <param name="provider"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
-        /// <param name="provider"></param>
         /// <param name="apiKey"></param>
         /// <param name="name"></param>
         /// <param name="providerName">
@@ -147,8 +147,8 @@ namespace Opik
             string? lastUpdatedBy,
             bool? readOnly)
         {
-            this.Provider = provider;
             this.Id = id;
+            this.Provider = provider;
             this.ApiKey = apiKey;
             this.Name = name;
             this.ProviderName = providerName;

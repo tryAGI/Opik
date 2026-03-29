@@ -61,14 +61,14 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentConfigEnv" /> class.
         /// </summary>
+        /// <param name="envName"></param>
+        /// <param name="blueprintId"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
         /// <param name="projectId">
         /// Included only in responses
         /// </param>
-        /// <param name="envName"></param>
-        /// <param name="blueprintId"></param>
         /// <param name="createdBy">
         /// Included only in responses
         /// </param>
@@ -90,10 +90,10 @@ namespace Opik
             global::System.DateTime? createdAt,
             global::System.DateTime? endedAt)
         {
-            this.EnvName = envName ?? throw new global::System.ArgumentNullException(nameof(envName));
-            this.BlueprintId = blueprintId;
             this.Id = id;
             this.ProjectId = projectId;
+            this.EnvName = envName ?? throw new global::System.ArgumentNullException(nameof(envName));
+            this.BlueprintId = blueprintId;
             this.CreatedBy = createdBy;
             this.CreatedAt = createdAt;
             this.EndedAt = endedAt;

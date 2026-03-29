@@ -69,12 +69,12 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AnnotationQueueWrite" /> class.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="projectId"></param>
         /// <param name="name"></param>
+        /// <param name="scope"></param>
+        /// <param name="id"></param>
         /// <param name="description"></param>
         /// <param name="instructions"></param>
-        /// <param name="scope"></param>
         /// <param name="commentsEnabled"></param>
         /// <param name="feedbackDefinitionNames"></param>
 #if NET7_0_OR_GREATER
@@ -90,12 +90,12 @@ namespace Opik
             bool? commentsEnabled,
             global::System.Collections.Generic.IList<string>? feedbackDefinitionNames)
         {
+            this.Id = id;
             this.ProjectId = projectId;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Scope = scope;
-            this.Id = id;
             this.Description = description;
             this.Instructions = instructions;
+            this.Scope = scope;
             this.CommentsEnabled = commentsEnabled;
             this.FeedbackDefinitionNames = feedbackDefinitionNames;
         }

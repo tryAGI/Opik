@@ -79,18 +79,18 @@ namespace Opik
         /// Initializes a new instance of the <see cref="CompleteMultipartUploadRequest" /> class.
         /// </summary>
         /// <param name="fileName"></param>
+        /// <param name="entityType"></param>
+        /// <param name="entityId"></param>
+        /// <param name="fileSize"></param>
+        /// <param name="uploadId"></param>
+        /// <param name="uploadedFileParts"></param>
         /// <param name="projectName">
         /// If null, the default project is used
         /// </param>
-        /// <param name="entityType"></param>
-        /// <param name="entityId"></param>
         /// <param name="containerId">
         /// Included only in responses
         /// </param>
-        /// <param name="fileSize"></param>
         /// <param name="mimeType"></param>
-        /// <param name="uploadId"></param>
-        /// <param name="uploadedFileParts"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -106,14 +106,14 @@ namespace Opik
             string? mimeType)
         {
             this.FileName = fileName ?? throw new global::System.ArgumentNullException(nameof(fileName));
+            this.ProjectName = projectName;
             this.EntityType = entityType;
             this.EntityId = entityId;
+            this.ContainerId = containerId;
             this.FileSize = fileSize;
+            this.MimeType = mimeType;
             this.UploadId = uploadId ?? throw new global::System.ArgumentNullException(nameof(uploadId));
             this.UploadedFileParts = uploadedFileParts ?? throw new global::System.ArgumentNullException(nameof(uploadedFileParts));
-            this.ProjectName = projectName;
-            this.ContainerId = containerId;
-            this.MimeType = mimeType;
         }
 
         /// <summary>

@@ -23,24 +23,18 @@ var client = new OpikClient(apiKey); // OPIK_API_KEY env var
 ## Key Files
 
 - `src/libs/Opik/openapi.yaml` — OpenAPI spec (downloaded from comet-ml/opik)
-- `src/libs/Opik/generate.sh` — Downloads spec, fixes operator enums, runs autosdk with `--security-scheme`
+- `src/libs/Opik/generate.sh` — Downloads spec, runs autosdk with `--security-scheme`
 - `src/libs/Opik/Generated/` — **Never edit** — auto-generated code (~2400 files)
 - `src/tests/IntegrationTests/Tests.cs` — Test helper with bearer auth
 - `src/tests/IntegrationTests/Examples/` — Example tests (also generate docs)
 
 ## Spec Notes
 
-The `generate.sh` applies fixes via `sed` (pre-generation), `--security-scheme` for auth, and pragma injection (post-generation):
-
-**Pre-generation:**
-1. **Operator enum fix:** Symbolic values (`=`, `!=`, `>`, `>=`, `<`, `<=`) replaced with C#-safe identifiers (`eq`, `neq`, `gt`, `gte`, `lt`, `lte`) via `sed`
-
 **Auth:** `--security-scheme Http:Header:Bearer` injects bearer auth (spec has no `securitySchemes` declaration).
 
-**Post-generation:**
-2. **Pragma suppression:** Injects `#pragma warning disable CS0108` (member hiding) and `CS8618` (non-nullable uninitialized) in FeedbackDefinition and AutomationRuleEvaluator types caused by allOf inheritance
-
 Uses `--exclude-deprecated-operations` flag.
+
+No spec fixes needed — AutoSDK dev.154+ handles symbolic enum naming and allOf inheritance natively.
 
 ## Sub-client Pattern
 

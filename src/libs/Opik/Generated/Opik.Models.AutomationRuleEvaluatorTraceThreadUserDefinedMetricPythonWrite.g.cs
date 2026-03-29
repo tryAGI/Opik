@@ -1,5 +1,3 @@
-#pragma warning disable CS0108 // member hides inherited member
-#pragma warning disable CS8618 // non-nullable field uninitialized
 
 #nullable enable
 
@@ -26,17 +24,20 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AutomationRuleEvaluatorTraceThreadUserDefinedMetricPythonWrite" /> class.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="filters"></param>
         /// <param name="code"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AutomationRuleEvaluatorTraceThreadUserDefinedMetricPythonWrite(
+            string name,
             global::System.Collections.Generic.IList<global::Opik.TraceThreadFilterWrite>? filters,
             global::Opik.TraceThreadUserDefinedMetricPythonCodeWrite? code)
         {
             this.Filters = filters;
             this.Code = code;
+            base.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
         }
 
         /// <summary>

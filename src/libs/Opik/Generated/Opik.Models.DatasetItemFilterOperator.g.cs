@@ -11,11 +11,15 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        Contains,
+        Neq,
         /// <summary>
         /// 
         /// </summary>
-        EndsWith,
+        Lt,
+        /// <summary>
+        /// 
+        /// </summary>
+        Lte,
         /// <summary>
         /// 
         /// </summary>
@@ -31,23 +35,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        Contains,
+        /// <summary>
+        /// 
+        /// </summary>
+        EndsWith,
+        /// <summary>
+        /// 
+        /// </summary>
         IsEmpty,
         /// <summary>
         /// 
         /// </summary>
         IsNotEmpty,
-        /// <summary>
-        /// 
-        /// </summary>
-        Lt,
-        /// <summary>
-        /// 
-        /// </summary>
-        Lte,
-        /// <summary>
-        /// 
-        /// </summary>
-        Neq,
         /// <summary>
         /// 
         /// </summary>
@@ -70,16 +70,16 @@ namespace Opik
         {
             return value switch
             {
+                DatasetItemFilterOperator.Neq => "!=",
+                DatasetItemFilterOperator.Lt => "<",
+                DatasetItemFilterOperator.Lte => "<=",
+                DatasetItemFilterOperator.Eq => "=",
+                DatasetItemFilterOperator.Gt => ">",
+                DatasetItemFilterOperator.Gte => ">=",
                 DatasetItemFilterOperator.Contains => "contains",
                 DatasetItemFilterOperator.EndsWith => "ends_with",
-                DatasetItemFilterOperator.Eq => "eq",
-                DatasetItemFilterOperator.Gt => "gt",
-                DatasetItemFilterOperator.Gte => "gte",
                 DatasetItemFilterOperator.IsEmpty => "is_empty",
                 DatasetItemFilterOperator.IsNotEmpty => "is_not_empty",
-                DatasetItemFilterOperator.Lt => "lt",
-                DatasetItemFilterOperator.Lte => "lte",
-                DatasetItemFilterOperator.Neq => "neq",
                 DatasetItemFilterOperator.NotContains => "not_contains",
                 DatasetItemFilterOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -92,16 +92,16 @@ namespace Opik
         {
             return value switch
             {
+                "!=" => DatasetItemFilterOperator.Neq,
+                "<" => DatasetItemFilterOperator.Lt,
+                "<=" => DatasetItemFilterOperator.Lte,
+                "=" => DatasetItemFilterOperator.Eq,
+                ">" => DatasetItemFilterOperator.Gt,
+                ">=" => DatasetItemFilterOperator.Gte,
                 "contains" => DatasetItemFilterOperator.Contains,
                 "ends_with" => DatasetItemFilterOperator.EndsWith,
-                "eq" => DatasetItemFilterOperator.Eq,
-                "gt" => DatasetItemFilterOperator.Gt,
-                "gte" => DatasetItemFilterOperator.Gte,
                 "is_empty" => DatasetItemFilterOperator.IsEmpty,
                 "is_not_empty" => DatasetItemFilterOperator.IsNotEmpty,
-                "lt" => DatasetItemFilterOperator.Lt,
-                "lte" => DatasetItemFilterOperator.Lte,
-                "neq" => DatasetItemFilterOperator.Neq,
                 "not_contains" => DatasetItemFilterOperator.NotContains,
                 "starts_with" => DatasetItemFilterOperator.StartsWith,
                 _ => null,

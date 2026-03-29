@@ -144,10 +144,10 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="ExperimentItemCompare" /> class.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="experimentId"></param>
         /// <param name="datasetItemId"></param>
         /// <param name="traceId"></param>
+        /// <param name="id"></param>
         /// <param name="projectId">
         /// Included only in responses
         /// </param>
@@ -221,10 +221,10 @@ namespace Opik
             global::System.Collections.Generic.IList<global::Opik.AssertionResultCompare>? assertionResults,
             global::Opik.ExperimentItemCompareStatus? status)
         {
+            this.Id = id;
             this.ExperimentId = experimentId;
             this.DatasetItemId = datasetItemId;
             this.TraceId = traceId;
-            this.Id = id;
             this.ProjectId = projectId;
             this.Input = input;
             this.Output = output;

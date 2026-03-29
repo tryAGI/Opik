@@ -101,6 +101,7 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="RetentionRulePublic" /> class.
         /// </summary>
+        /// <param name="retention"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
@@ -112,7 +113,6 @@ namespace Opik
         /// Computed from projectId and organizationLevel<br/>
         /// Included only in responses
         /// </param>
-        /// <param name="retention"></param>
         /// <param name="applyToPast"></param>
         /// <param name="enabled">
         /// Included only in responses
@@ -155,11 +155,11 @@ namespace Opik
             global::System.Guid? catchUpCursor,
             bool? catchUpDone)
         {
-            this.Retention = retention;
             this.Id = id;
             this.WorkspaceId = workspaceId;
             this.ProjectId = projectId;
             this.Level = level;
+            this.Retention = retention;
             this.ApplyToPast = applyToPast;
             this.Enabled = enabled;
             this.CreatedBy = createdBy;

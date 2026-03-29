@@ -68,15 +68,15 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentConfigValuePublic" /> class.
         /// </summary>
+        /// <param name="key"></param>
+        /// <param name="type"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
         /// <param name="projectId">
         /// Included only in responses
         /// </param>
-        /// <param name="key"></param>
         /// <param name="value"></param>
-        /// <param name="type"></param>
         /// <param name="description"></param>
         /// <param name="validFromBlueprintId">
         /// Included only in responses
@@ -97,11 +97,11 @@ namespace Opik
             global::System.Guid? validFromBlueprintId,
             global::System.Guid? validToBlueprintId)
         {
-            this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
-            this.Type = type;
             this.Id = id;
             this.ProjectId = projectId;
+            this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
             this.Value = value;
+            this.Type = type;
             this.Description = description;
             this.ValidFromBlueprintId = validFromBlueprintId;
             this.ValidToBlueprintId = validToBlueprintId;

@@ -37,8 +37,8 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AlertTriggerConfigWrite" /> class.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="type"></param>
+        /// <param name="id"></param>
         /// <param name="configValue"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -48,8 +48,8 @@ namespace Opik
             global::System.Guid? id,
             global::System.Collections.Generic.Dictionary<string, string>? configValue)
         {
-            this.Type = type;
             this.Id = id;
+            this.Type = type;
             this.ConfigValue = configValue;
         }
 

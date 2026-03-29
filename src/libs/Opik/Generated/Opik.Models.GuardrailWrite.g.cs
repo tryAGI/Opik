@@ -75,14 +75,14 @@ namespace Opik
         /// </summary>
         /// <param name="entityId"></param>
         /// <param name="secondaryId"></param>
-        /// <param name="projectName">
-        /// If null, the default project is used
-        /// </param>
-        /// <param name="projectId"></param>
         /// <param name="name"></param>
         /// <param name="result"></param>
         /// <param name="config"></param>
         /// <param name="details"></param>
+        /// <param name="projectName">
+        /// If null, the default project is used
+        /// </param>
+        /// <param name="projectId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -98,12 +98,12 @@ namespace Opik
         {
             this.EntityId = entityId;
             this.SecondaryId = secondaryId;
+            this.ProjectName = projectName;
+            this.ProjectId = projectId;
             this.Name = name;
             this.Result = result;
             this.Config = config ?? throw new global::System.ArgumentNullException(nameof(config));
             this.Details = details ?? throw new global::System.ArgumentNullException(nameof(details));
-            this.ProjectName = projectName;
-            this.ProjectId = projectId;
         }
 
         /// <summary>

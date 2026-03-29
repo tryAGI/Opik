@@ -36,13 +36,13 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteTraceThreads" /> class.
         /// </summary>
+        /// <param name="threadIds"></param>
         /// <param name="projectName">
         /// If null, project_id must be provided
         /// </param>
         /// <param name="projectId">
         /// If null, project_name must be provided
         /// </param>
-        /// <param name="threadIds"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -51,9 +51,9 @@ namespace Opik
             string? projectName,
             global::System.Guid? projectId)
         {
-            this.ThreadIds = threadIds ?? throw new global::System.ArgumentNullException(nameof(threadIds));
             this.ProjectName = projectName;
             this.ProjectId = projectId;
+            this.ThreadIds = threadIds ?? throw new global::System.ArgumentNullException(nameof(threadIds));
         }
 
         /// <summary>

@@ -44,10 +44,10 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentBlueprintWrite" /> class.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="type"></param>
-        /// <param name="description"></param>
         /// <param name="values"></param>
+        /// <param name="id"></param>
+        /// <param name="description"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -57,10 +57,10 @@ namespace Opik
             global::System.Guid? id,
             string? description)
         {
-            this.Type = type;
-            this.Values = values ?? throw new global::System.ArgumentNullException(nameof(values));
             this.Id = id;
+            this.Type = type;
             this.Description = description;
+            this.Values = values ?? throw new global::System.ArgumentNullException(nameof(values));
         }
 
         /// <summary>

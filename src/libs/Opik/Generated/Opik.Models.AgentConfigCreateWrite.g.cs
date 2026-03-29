@@ -42,6 +42,7 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentConfigCreateWrite" /> class.
         /// </summary>
+        /// <param name="blueprint"></param>
         /// <param name="projectId">
         /// Project ID. Either project_id or project_name must be provided
         /// </param>
@@ -51,7 +52,6 @@ namespace Opik
         /// <param name="id">
         /// Agent config ID. Generated automatically if not provided
         /// </param>
-        /// <param name="blueprint"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -61,10 +61,10 @@ namespace Opik
             string? projectName,
             global::System.Guid? id)
         {
-            this.Blueprint = blueprint ?? throw new global::System.ArgumentNullException(nameof(blueprint));
             this.ProjectId = projectId;
             this.ProjectName = projectName;
             this.Id = id;
+            this.Blueprint = blueprint ?? throw new global::System.ArgumentNullException(nameof(blueprint));
         }
 
         /// <summary>

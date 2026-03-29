@@ -109,6 +109,7 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="AutomationRuleEvaluator" /> class.
         /// </summary>
+        /// <param name="name"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
@@ -126,7 +127,6 @@ namespace Opik
         /// <param name="projectIds">
         /// Project IDs for write operations (used when creating/updating rules)
         /// </param>
-        /// <param name="name"></param>
         /// <param name="samplingRate"></param>
         /// <param name="enabled"></param>
         /// <param name="createdAt">
@@ -160,12 +160,12 @@ namespace Opik
             string? lastUpdatedBy,
             global::Opik.AutomationRuleEvaluatorAction action)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Id = id;
             this.ProjectId = projectId;
             this.ProjectName = projectName;
             this.Projects = projects;
             this.ProjectIds = projectIds;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SamplingRate = samplingRate;
             this.Enabled = enabled;
             this.CreatedAt = createdAt;

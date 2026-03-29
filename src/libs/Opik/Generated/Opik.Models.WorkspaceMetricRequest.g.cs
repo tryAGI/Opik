@@ -49,10 +49,10 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceMetricRequest" /> class.
         /// </summary>
-        /// <param name="projectIds"></param>
-        /// <param name="name"></param>
         /// <param name="intervalStart"></param>
         /// <param name="intervalEnd"></param>
+        /// <param name="projectIds"></param>
+        /// <param name="name"></param>
         /// <param name="startBeforeEnd"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -64,10 +64,10 @@ namespace Opik
             string? name,
             bool? startBeforeEnd)
         {
-            this.IntervalStart = intervalStart;
-            this.IntervalEnd = intervalEnd;
             this.ProjectIds = projectIds;
             this.Name = name;
+            this.IntervalStart = intervalStart;
+            this.IntervalEnd = intervalEnd;
             this.StartBeforeEnd = startBeforeEnd;
         }
 

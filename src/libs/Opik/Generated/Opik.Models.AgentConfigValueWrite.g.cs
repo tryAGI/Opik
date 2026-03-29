@@ -45,8 +45,8 @@ namespace Opik
         /// Initializes a new instance of the <see cref="AgentConfigValueWrite" /> class.
         /// </summary>
         /// <param name="key"></param>
-        /// <param name="value"></param>
         /// <param name="type"></param>
+        /// <param name="value"></param>
         /// <param name="description"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -58,8 +58,8 @@ namespace Opik
             string? description)
         {
             this.Key = key ?? throw new global::System.ArgumentNullException(nameof(key));
-            this.Type = type;
             this.Value = value;
+            this.Type = type;
             this.Description = description;
         }
 

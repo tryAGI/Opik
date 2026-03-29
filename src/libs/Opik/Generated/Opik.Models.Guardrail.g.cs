@@ -79,19 +79,19 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="Guardrail" /> class.
         /// </summary>
-        /// <param name="id">
-        /// Included only in responses
-        /// </param>
         /// <param name="entityId"></param>
         /// <param name="secondaryId"></param>
-        /// <param name="projectName">
-        /// If null, the default project is used
-        /// </param>
-        /// <param name="projectId"></param>
         /// <param name="name"></param>
         /// <param name="result"></param>
         /// <param name="config"></param>
         /// <param name="details"></param>
+        /// <param name="id">
+        /// Included only in responses
+        /// </param>
+        /// <param name="projectName">
+        /// If null, the default project is used
+        /// </param>
+        /// <param name="projectId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -106,15 +106,15 @@ namespace Opik
             string? projectName,
             global::System.Guid? projectId)
         {
+            this.Id = id;
             this.EntityId = entityId;
             this.SecondaryId = secondaryId;
+            this.ProjectName = projectName;
+            this.ProjectId = projectId;
             this.Name = name;
             this.Result = result;
             this.Config = config ?? throw new global::System.ArgumentNullException(nameof(config));
             this.Details = details ?? throw new global::System.ArgumentNullException(nameof(details));
-            this.Id = id;
-            this.ProjectName = projectName;
-            this.ProjectId = projectId;
         }
 
         /// <summary>

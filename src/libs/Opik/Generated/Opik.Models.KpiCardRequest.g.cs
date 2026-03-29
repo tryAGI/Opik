@@ -46,9 +46,9 @@ namespace Opik
         /// Initializes a new instance of the <see cref="KpiCardRequest" /> class.
         /// </summary>
         /// <param name="entityType"></param>
-        /// <param name="filters"></param>
         /// <param name="intervalStart"></param>
         /// <param name="intervalEnd"></param>
+        /// <param name="filters"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -59,9 +59,9 @@ namespace Opik
             string? filters)
         {
             this.EntityType = entityType;
+            this.Filters = filters;
             this.IntervalStart = intervalStart;
             this.IntervalEnd = intervalEnd;
-            this.Filters = filters;
         }
 
         /// <summary>

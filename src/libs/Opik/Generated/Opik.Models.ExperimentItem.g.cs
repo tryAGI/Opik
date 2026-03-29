@@ -150,10 +150,10 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="ExperimentItem" /> class.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="experimentId"></param>
         /// <param name="datasetItemId"></param>
         /// <param name="traceId"></param>
+        /// <param name="id"></param>
         /// <param name="projectId">
         /// Included only in responses
         /// </param>
@@ -225,10 +225,10 @@ namespace Opik
             global::System.Collections.Generic.IList<global::Opik.AssertionResult>? assertionResults,
             global::Opik.ExperimentItemStatus? status)
         {
+            this.Id = id;
             this.ExperimentId = experimentId;
             this.DatasetItemId = datasetItemId;
             this.TraceId = traceId;
-            this.Id = id;
             this.ProjectId = projectId;
             this.ProjectName = projectName;
             this.Input = input;
