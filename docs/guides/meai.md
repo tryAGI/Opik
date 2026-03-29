@@ -1,8 +1,9 @@
 # Microsoft.Extensions.AI Integration
 
-Opik provides `AIFunction` tools compatible with
-[Microsoft.Extensions.AI](https://www.nuget.org/packages/Microsoft.Extensions.AI),
-allowing any `IChatClient` to interact with Opik's observability and prompt management features.
+!!! tip "Cross-SDK comparison"
+    See the [centralized MEAI documentation](https://tryagi.github.io/docs/meai/) for feature matrices and comparisons across all tryAGI SDKs.
+
+The Opik SDK provides `AIFunction` tool wrappers compatible with [Microsoft.Extensions.AI](https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai). These tools can be used with any `IChatClient` to give AI models access to Opik's LLM observability, trace management, and prompt versioning capabilities.
 
 ## Available Tools
 
