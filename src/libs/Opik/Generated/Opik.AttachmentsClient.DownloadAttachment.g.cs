@@ -68,9 +68,9 @@ namespace Opik
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("workspace_name", workspaceName)
-                .AddRequiredParameter("container_id", containerId.ToString())
+                .AddRequiredParameter("container_id", containerId.ToString()!)
                 .AddRequiredParameter("entity_type", entityType.ToValueString())
-                .AddRequiredParameter("entity_id", entityId.ToString())
+                .AddRequiredParameter("entity_id", entityId.ToString()!)
                 .AddRequiredParameter("file_name", fileName)
                 .AddRequiredParameter("mime_type", mimeType) 
                 ; 
