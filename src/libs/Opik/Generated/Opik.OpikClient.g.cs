@@ -87,15 +87,6 @@ namespace Opik
         };
 
         /// <summary>
-        /// Assistant Sidebar configuration
-        /// </summary>
-        public AssistantSidebarsClient AssistantSidebars => new AssistantSidebarsClient(HttpClient, authorizations: Authorizations)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
         /// Attachments related resources
         /// </summary>
         public AttachmentsClient Attachments => new AttachmentsClient(HttpClient, authorizations: Authorizations)

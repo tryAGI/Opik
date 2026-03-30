@@ -938,7 +938,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.FeedbackScoreAveragePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FeedbackScoreAveragePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueUpdate))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AssistantSidebarConfigResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Attachment))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentPage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Attachment>))]

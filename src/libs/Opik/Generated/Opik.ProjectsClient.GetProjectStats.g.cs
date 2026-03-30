@@ -10,6 +10,7 @@ namespace Opik
             ref int? page,
             ref int? size,
             ref string? name,
+            ref string? filters,
             ref string? sorting);
         partial void PrepareGetProjectStatsRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -17,6 +18,7 @@ namespace Opik
             int? page,
             int? size,
             string? name,
+            string? filters,
             string? sorting);
         partial void ProcessGetProjectStatsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -40,6 +42,7 @@ namespace Opik
         /// <param name="name">
         /// Filter projects by name (partial match, case insensitive)
         /// </param>
+        /// <param name="filters"></param>
         /// <param name="sorting"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
@@ -47,6 +50,7 @@ namespace Opik
             int? page = default,
             int? size = default,
             string? name = default,
+            string? filters = default,
             string? sorting = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -57,6 +61,7 @@ namespace Opik
                 page: ref page,
                 size: ref size,
                 name: ref name,
+                filters: ref filters,
                 sorting: ref sorting);
 
             var __pathBuilder = new global::Opik.PathBuilder(
@@ -66,6 +71,7 @@ namespace Opik
                 .AddOptionalParameter("page", page?.ToString())
                 .AddOptionalParameter("size", size?.ToString())
                 .AddOptionalParameter("name", name)
+                .AddOptionalParameter("filters", filters)
                 .AddOptionalParameter("sorting", sorting) 
                 ; 
             var __path = __pathBuilder.ToString();
@@ -102,6 +108,7 @@ namespace Opik
                 page: page,
                 size: size,
                 name: name,
+                filters: filters,
                 sorting: sorting);
 
             using var __response = await HttpClient.SendAsync(
