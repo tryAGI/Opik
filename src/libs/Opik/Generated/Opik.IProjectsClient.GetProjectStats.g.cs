@@ -17,6 +17,7 @@ namespace Opik
         /// <param name="name">
         /// Filter projects by name (partial match, case insensitive)
         /// </param>
+        /// <param name="filters"></param>
         /// <param name="sorting"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
@@ -24,6 +25,7 @@ namespace Opik
             int? page = default,
             int? size = default,
             string? name = default,
+            string? filters = default,
             string? sorting = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

@@ -78,11 +78,6 @@ namespace Opik
         public AnnotationQueuesClient AnnotationQueues { get; }
 
         /// <summary>
-        /// Assistant Sidebar configuration
-        /// </summary>
-        public AssistantSidebarsClient AssistantSidebars { get; }
-
-        /// <summary>
         /// Attachments related resources
         /// </summary>
         public AttachmentsClient Attachments { get; }

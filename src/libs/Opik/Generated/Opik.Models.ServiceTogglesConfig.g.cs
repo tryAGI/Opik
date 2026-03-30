@@ -165,13 +165,6 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("assistantSidebarEnabled")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool AssistantSidebarEnabled { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("forceWorkspaceVersion")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ForceWorkspaceVersion { get; set; }
@@ -207,7 +200,6 @@ namespace Opik
         /// <param name="customllmProviderEnabled"></param>
         /// <param name="ollamaProviderEnabled"></param>
         /// <param name="collaboratorsTabEnabled"></param>
-        /// <param name="assistantSidebarEnabled"></param>
         /// <param name="forceWorkspaceVersion"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -235,7 +227,6 @@ namespace Opik
             bool customllmProviderEnabled,
             bool ollamaProviderEnabled,
             bool collaboratorsTabEnabled,
-            bool assistantSidebarEnabled,
             string forceWorkspaceVersion)
         {
             this.PythonEvaluatorEnabled = pythonEvaluatorEnabled;
@@ -260,7 +251,6 @@ namespace Opik
             this.CustomllmProviderEnabled = customllmProviderEnabled;
             this.OllamaProviderEnabled = ollamaProviderEnabled;
             this.CollaboratorsTabEnabled = collaboratorsTabEnabled;
-            this.AssistantSidebarEnabled = assistantSidebarEnabled;
             this.ForceWorkspaceVersion = forceWorkspaceVersion ?? throw new global::System.ArgumentNullException(nameof(forceWorkspaceVersion));
         }
 
