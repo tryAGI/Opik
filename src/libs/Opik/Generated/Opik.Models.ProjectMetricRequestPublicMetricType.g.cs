@@ -27,6 +27,14 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        SpanAverageDuration,
+        /// <summary>
+        /// 
+        /// </summary>
+        SpanCost,
+        /// <summary>
+        /// 
+        /// </summary>
         SpanCount,
         /// <summary>
         /// 
@@ -35,11 +43,23 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        SpanErrorRate,
+        /// <summary>
+        /// 
+        /// </summary>
         SpanFeedbackScores,
         /// <summary>
         /// 
         /// </summary>
         SpanTokenUsage,
+        /// <summary>
+        /// 
+        /// </summary>
+        ThreadAverageDuration,
+        /// <summary>
+        /// 
+        /// </summary>
+        ThreadCost,
         /// <summary>
         /// 
         /// </summary>
@@ -59,7 +79,15 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        TraceAverageDuration,
+        /// <summary>
+        /// 
+        /// </summary>
         TraceCount,
+        /// <summary>
+        /// 
+        /// </summary>
+        TraceErrorRate,
     }
 
     /// <summary>
@@ -78,15 +106,22 @@ namespace Opik
                 ProjectMetricRequestPublicMetricType.Duration => "DURATION",
                 ProjectMetricRequestPublicMetricType.FeedbackScores => "FEEDBACK_SCORES",
                 ProjectMetricRequestPublicMetricType.GuardrailsFailedCount => "GUARDRAILS_FAILED_COUNT",
+                ProjectMetricRequestPublicMetricType.SpanAverageDuration => "SPAN_AVERAGE_DURATION",
+                ProjectMetricRequestPublicMetricType.SpanCost => "SPAN_COST",
                 ProjectMetricRequestPublicMetricType.SpanCount => "SPAN_COUNT",
                 ProjectMetricRequestPublicMetricType.SpanDuration => "SPAN_DURATION",
+                ProjectMetricRequestPublicMetricType.SpanErrorRate => "SPAN_ERROR_RATE",
                 ProjectMetricRequestPublicMetricType.SpanFeedbackScores => "SPAN_FEEDBACK_SCORES",
                 ProjectMetricRequestPublicMetricType.SpanTokenUsage => "SPAN_TOKEN_USAGE",
+                ProjectMetricRequestPublicMetricType.ThreadAverageDuration => "THREAD_AVERAGE_DURATION",
+                ProjectMetricRequestPublicMetricType.ThreadCost => "THREAD_COST",
                 ProjectMetricRequestPublicMetricType.ThreadCount => "THREAD_COUNT",
                 ProjectMetricRequestPublicMetricType.ThreadDuration => "THREAD_DURATION",
                 ProjectMetricRequestPublicMetricType.ThreadFeedbackScores => "THREAD_FEEDBACK_SCORES",
                 ProjectMetricRequestPublicMetricType.TokenUsage => "TOKEN_USAGE",
+                ProjectMetricRequestPublicMetricType.TraceAverageDuration => "TRACE_AVERAGE_DURATION",
                 ProjectMetricRequestPublicMetricType.TraceCount => "TRACE_COUNT",
+                ProjectMetricRequestPublicMetricType.TraceErrorRate => "TRACE_ERROR_RATE",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -101,15 +136,22 @@ namespace Opik
                 "DURATION" => ProjectMetricRequestPublicMetricType.Duration,
                 "FEEDBACK_SCORES" => ProjectMetricRequestPublicMetricType.FeedbackScores,
                 "GUARDRAILS_FAILED_COUNT" => ProjectMetricRequestPublicMetricType.GuardrailsFailedCount,
+                "SPAN_AVERAGE_DURATION" => ProjectMetricRequestPublicMetricType.SpanAverageDuration,
+                "SPAN_COST" => ProjectMetricRequestPublicMetricType.SpanCost,
                 "SPAN_COUNT" => ProjectMetricRequestPublicMetricType.SpanCount,
                 "SPAN_DURATION" => ProjectMetricRequestPublicMetricType.SpanDuration,
+                "SPAN_ERROR_RATE" => ProjectMetricRequestPublicMetricType.SpanErrorRate,
                 "SPAN_FEEDBACK_SCORES" => ProjectMetricRequestPublicMetricType.SpanFeedbackScores,
                 "SPAN_TOKEN_USAGE" => ProjectMetricRequestPublicMetricType.SpanTokenUsage,
+                "THREAD_AVERAGE_DURATION" => ProjectMetricRequestPublicMetricType.ThreadAverageDuration,
+                "THREAD_COST" => ProjectMetricRequestPublicMetricType.ThreadCost,
                 "THREAD_COUNT" => ProjectMetricRequestPublicMetricType.ThreadCount,
                 "THREAD_DURATION" => ProjectMetricRequestPublicMetricType.ThreadDuration,
                 "THREAD_FEEDBACK_SCORES" => ProjectMetricRequestPublicMetricType.ThreadFeedbackScores,
                 "TOKEN_USAGE" => ProjectMetricRequestPublicMetricType.TokenUsage,
+                "TRACE_AVERAGE_DURATION" => ProjectMetricRequestPublicMetricType.TraceAverageDuration,
                 "TRACE_COUNT" => ProjectMetricRequestPublicMetricType.TraceCount,
+                "TRACE_ERROR_RATE" => ProjectMetricRequestPublicMetricType.TraceErrorRate,
                 _ => null,
             };
         }

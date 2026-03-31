@@ -11,10 +11,6 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        AvgCost,
-        /// <summary>
-        /// 
-        /// </summary>
         AvgDuration,
         /// <summary>
         /// 
@@ -24,6 +20,10 @@ namespace Opik
         /// 
         /// </summary>
         Errors,
+        /// <summary>
+        /// 
+        /// </summary>
+        TotalCost,
     }
 
     /// <summary>
@@ -38,10 +38,10 @@ namespace Opik
         {
             return value switch
             {
-                KpiMetricType.AvgCost => "avg_cost",
                 KpiMetricType.AvgDuration => "avg_duration",
                 KpiMetricType.Count => "count",
                 KpiMetricType.Errors => "errors",
+                KpiMetricType.TotalCost => "total_cost",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -52,10 +52,10 @@ namespace Opik
         {
             return value switch
             {
-                "avg_cost" => KpiMetricType.AvgCost,
                 "avg_duration" => KpiMetricType.AvgDuration,
                 "count" => KpiMetricType.Count,
                 "errors" => KpiMetricType.Errors,
+                "total_cost" => KpiMetricType.TotalCost,
                 _ => null,
             };
         }

@@ -31,14 +31,14 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("structured_content")]
-        public bool? StructuredContent { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("string_content")]
+        public bool? StringContent { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("string_content")]
-        public bool? StringContent { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("structured_content")]
+        public bool? StructuredContent { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -52,8 +52,8 @@ namespace Opik
         /// <param name="role"></param>
         /// <param name="content"></param>
         /// <param name="contentArray"></param>
-        /// <param name="structuredContent"></param>
         /// <param name="stringContent"></param>
+        /// <param name="structuredContent"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -61,14 +61,14 @@ namespace Opik
             global::Opik.LlmAsJudgeMessageRole role,
             string? content,
             global::System.Collections.Generic.IList<global::Opik.LlmAsJudgeMessageContent>? contentArray,
-            bool? structuredContent,
-            bool? stringContent)
+            bool? stringContent,
+            bool? structuredContent)
         {
             this.Role = role;
             this.Content = content;
             this.ContentArray = contentArray;
-            this.StructuredContent = structuredContent;
             this.StringContent = stringContent;
+            this.StructuredContent = structuredContent;
         }
 
         /// <summary>
