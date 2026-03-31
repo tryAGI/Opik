@@ -11,7 +11,7 @@ namespace Opik
         /// determination, clients must never derive the version themselves.<br/>
         /// Determination logic (priority order):<br/>
         /// 1) Feature flag override (TOGGLE_FORCE_WORKSPACE_VERSION)<br/>
-        /// 2) Auth one-way V2 gate (authenticated mode only, not yet implemented)<br/>
+        /// 2) Auth one-way V2 gate (authenticated mode only)<br/>
         /// 3) Version 1 entity check (entities without project_id)<br/>
         /// 4) Fallback on failure<br/>
         /// In unauthenticated mode (authentication.enabled=false), auth steps are skipped.<br/>

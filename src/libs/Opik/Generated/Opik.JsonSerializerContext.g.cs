@@ -876,6 +876,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BlueprintPageHistory))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.AgentBlueprintHistory>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ErrorMessageHistory))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentConfigRemoveValues))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentConfigEnvSetByName))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Alert))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]

@@ -3,51 +3,45 @@
 
 namespace Opik
 {
-    public partial class WorkspacesClient
+    public partial class AgentConfigsClient
     {
-        partial void PrepareGetWorkspaceVersionArguments(
-            global::System.Net.Http.HttpClient httpClient);
-        partial void PrepareGetWorkspaceVersionRequest(
+        partial void PrepareRemoveConfigKeysArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpRequestMessage httpRequestMessage);
-        partial void ProcessGetWorkspaceVersionResponse(
+            global::Opik.AgentConfigRemoveValues request);
+        partial void PrepareRemoveConfigKeysRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            global::Opik.AgentConfigRemoveValues request);
+        partial void ProcessRemoveConfigKeysResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetWorkspaceVersionResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Get workspace version<br/>
-        /// Determines whether the workspace should use Opik V1 (legacy workspace-scoped)<br/>
-        /// or Opik V2 (project-first) navigation. The backend is the single authority for this<br/>
-        /// determination, clients must never derive the version themselves.<br/>
-        /// Determination logic (priority order):<br/>
-        /// 1) Feature flag override (TOGGLE_FORCE_WORKSPACE_VERSION)<br/>
-        /// 2) Auth one-way V2 gate (authenticated mode only)<br/>
-        /// 3) Version 1 entity check (entities without project_id)<br/>
-        /// 4) Fallback on failure<br/>
-        /// In unauthenticated mode (authentication.enabled=false), auth steps are skipped.<br/>
-        /// Called by the frontend on workspace load.
+        /// Remove configuration parameters<br/>
+        /// Removes configuration parameters by creating a new blueprint that closes the specified keys. Returns 204 if no changes were needed (idempotent).
         /// </summary>
+        /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.WorkspaceVersion> GetWorkspaceVersionAsync(
+        public async global::System.Threading.Tasks.Task RemoveConfigKeysAsync(
+
+            global::Opik.AgentConfigRemoveValues request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetWorkspaceVersionArguments(
-                httpClient: HttpClient);
+            PrepareRemoveConfigKeysArguments(
+                httpClient: HttpClient,
+                request: request);
 
             var __pathBuilder = new global::Opik.PathBuilder(
-                path: "/v1/private/workspaces/versions",
+                path: "/v1/private/agent-configs/blueprints/remove-keys",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Get,
+                method: global::System.Net.Http.HttpMethod.Post,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -69,13 +63,20 @@ namespace Opik
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                content: __httpRequestContentBody,
+                encoding: global::System.Text.Encoding.UTF8,
+                mediaType: "application/json");
+            __httpRequest.Content = __httpRequestContent;
 
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareGetWorkspaceVersionRequest(
+            PrepareRemoveConfigKeysRequest(
                 httpClient: HttpClient,
-                httpRequestMessage: __httpRequest);
+                httpRequestMessage: __httpRequest,
+                request: request);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
@@ -85,9 +86,47 @@ namespace Opik
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessGetWorkspaceVersionResponse(
+            ProcessRemoveConfigKeysResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
+            // Unauthorized
+            if ((int)__response.StatusCode == 401)
+            {
+                string? __content_401 = null;
+                global::System.Exception? __exception_401 = null;
+                global::Opik.ErrorMessage? __value_401 = null;
+                try
+                {
+                    if (ReadResponseAsString)
+                    {
+                        __content_401 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                        __value_401 = global::Opik.ErrorMessage.FromJson(__content_401, JsonSerializerContext);
+                    }
+                    else
+                    {
+                        __content_401 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+
+                        __value_401 = global::Opik.ErrorMessage.FromJson(__content_401, JsonSerializerContext);
+                    }
+                }
+                catch (global::System.Exception __ex)
+                {
+                    __exception_401 = __ex;
+                }
+
+                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
+                    innerException: __exception_401,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_401,
+                    ResponseObject = __value_401,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
 
             if (ReadResponseAsString)
             {
@@ -101,18 +140,11 @@ namespace Opik
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessGetWorkspaceVersionResponseContent(
-                    httpClient: HttpClient,
-                    httpResponseMessage: __response,
-                    content: ref __content);
 
                 try
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::Opik.WorkspaceVersion.FromJson(__content, JsonSerializerContext) ??
-                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -141,9 +173,6 @@ namespace Opik
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::Opik.WorkspaceVersion.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -173,6 +202,36 @@ namespace Opik
                     };
                 }
             }
+        }
+        /// <summary>
+        /// Remove configuration parameters<br/>
+        /// Removes configuration parameters by creating a new blueprint that closes the specified keys. Returns 204 if no changes were needed (idempotent).
+        /// </summary>
+        /// <param name="projectId">
+        /// Project ID. Either project_id or project_name must be provided
+        /// </param>
+        /// <param name="projectName">
+        /// Project name. Either project_id or project_name must be provided
+        /// </param>
+        /// <param name="keys"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task RemoveConfigKeysAsync(
+            global::System.Collections.Generic.IList<string> keys,
+            global::System.Guid? projectId = default,
+            string? projectName = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::Opik.AgentConfigRemoveValues
+            {
+                ProjectId = projectId,
+                ProjectName = projectName,
+                Keys = keys,
+            };
+
+            await RemoveConfigKeysAsync(
+                request: __request,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

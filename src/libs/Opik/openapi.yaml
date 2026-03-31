@@ -238,8 +238,8 @@ paths:
             schema:
               $ref: "#/components/schemas/AgentConfigCreate_Write"
       responses:
-        "204":
-          description: Blueprint added
+        "201":
+          description: Created
           headers:
             Location:
               required: true
@@ -593,6 +593,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorMessage_Public"
+  /v1/private/agent-configs/blueprints/remove-keys:
+    post:
+      tags:
+      - Agent Configs
+      summary: Remove configuration parameters
+      description: Removes configuration parameters by creating a new blueprint that
+        closes the specified keys. Returns 204 if no changes were needed (idempotent).
+      operationId: removeConfigKeys
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AgentConfigRemoveValues"
+      responses:
+        "201":
+          description: Created
+          headers:
+            Location:
+              required: true
+              style: simple
+              schema:
+                type: string
+              example: "${basePath}/v1/private/agent-configs/blueprints/{blueprint_id}"
+        "204":
+          description: No changes needed (no config or keys already removed)
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage"
   /v1/private/alerts:
     get:
       tags:
@@ -7560,7 +7591,7 @@ paths:
 
         Determination logic (priority order):
         1) Feature flag override (TOGGLE_FORCE_WORKSPACE_VERSION)
-        2) Auth one-way V2 gate (authenticated mode only, not yet implemented)
+        2) Auth one-way V2 gate (authenticated mode only)
         3) Version 1 entity check (entities without project_id)
         4) Fallback on failure
 
@@ -8163,6 +8194,27 @@ components:
         errors:
           type: array
           items:
+            type: string
+    AgentConfigRemoveValues:
+      required:
+      - keys
+      type: object
+      properties:
+        project_id:
+          type: string
+          description: Project ID. Either project_id or project_name must be provided
+          format: uuid
+        project_name:
+          pattern: (?s)^\s*(\S.*\S|\S)\s*$
+          type: string
+          description: Project name. Either project_id or project_name must be provided
+        keys:
+          maxItems: 250
+          minItems: 0
+          uniqueItems: true
+          type: array
+          items:
+            minLength: 1
             type: string
     AgentConfigEnvSetByName:
       required:
@@ -9339,9 +9391,9 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/LlmAsJudgeMessageContent"
-        structured_content:
-          type: boolean
         string_content:
+          type: boolean
+        structured_content:
           type: boolean
     LlmAsJudgeMessageContent:
       required:
@@ -9784,9 +9836,9 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/LlmAsJudgeMessageContent_Write"
-        structured_content:
-          type: boolean
         string_content:
+          type: boolean
+        structured_content:
           type: boolean
     LlmAsJudgeModelParameters_Write:
       required:
@@ -10239,9 +10291,9 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/LlmAsJudgeMessageContent_Public"
-        structured_content:
-          type: boolean
         string_content:
+          type: boolean
+        structured_content:
           type: boolean
     LlmAsJudgeModelParameters_Public:
       required:
@@ -16614,7 +16666,7 @@ components:
           - count
           - errors
           - avg_duration
-          - avg_cost
+          - total_cost
         current_value:
           type: number
           format: double
@@ -16674,6 +16726,13 @@ components:
           - SPAN_COUNT
           - SPAN_DURATION
           - SPAN_TOKEN_USAGE
+          - TRACE_AVERAGE_DURATION
+          - TRACE_ERROR_RATE
+          - SPAN_AVERAGE_DURATION
+          - SPAN_COST
+          - SPAN_ERROR_RATE
+          - THREAD_AVERAGE_DURATION
+          - THREAD_COST
         interval:
           type: string
           enum:
@@ -16732,6 +16791,13 @@ components:
           - SPAN_COUNT
           - SPAN_DURATION
           - SPAN_TOKEN_USAGE
+          - TRACE_AVERAGE_DURATION
+          - TRACE_ERROR_RATE
+          - SPAN_AVERAGE_DURATION
+          - SPAN_COST
+          - SPAN_ERROR_RATE
+          - THREAD_AVERAGE_DURATION
+          - THREAD_COST
         interval:
           type: string
           enum:
