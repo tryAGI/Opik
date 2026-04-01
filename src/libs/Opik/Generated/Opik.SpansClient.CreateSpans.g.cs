@@ -176,6 +176,7 @@ namespace Opik
             global::System.Collections.Generic.IList<global::Opik.SpanWrite> spans,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.SpanBatchWrite
             {
                 Spans = spans,

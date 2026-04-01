@@ -190,6 +190,7 @@ namespace Opik
             bool? joinBetaProgram = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.WelcomeWizardSubmission
             {
                 Role = role,

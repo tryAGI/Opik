@@ -265,6 +265,7 @@ namespace Opik
             global::Opik.SpanUpdateSource? source = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.SpanUpdate
             {
                 ProjectName = projectName,

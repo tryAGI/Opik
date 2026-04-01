@@ -190,6 +190,7 @@ namespace Opik
             global::Opik.TraceEnrichmentOptions enrichmentOptions,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.CreateDatasetItemsFromTracesRequest
             {
                 TraceIds = traceIds,

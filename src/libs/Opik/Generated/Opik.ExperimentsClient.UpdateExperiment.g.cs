@@ -282,6 +282,7 @@ namespace Opik
             global::System.Collections.Generic.IList<global::Opik.ExperimentScore>? experimentScores = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.ExperimentUpdate
             {
                 Name = name,

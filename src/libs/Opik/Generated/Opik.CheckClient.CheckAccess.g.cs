@@ -250,6 +250,7 @@ namespace Opik
         public async global::System.Threading.Tasks.Task CheckAccessAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.AuthDetailsHolder
             {
             };

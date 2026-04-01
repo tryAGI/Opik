@@ -311,6 +311,7 @@ namespace Opik
             string? baseUrl = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.ProviderApiKeyUpdate
             {
                 ApiKey = apiKey,

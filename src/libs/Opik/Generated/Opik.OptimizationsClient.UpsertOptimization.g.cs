@@ -198,6 +198,7 @@ namespace Opik
             global::System.DateTime? lastUpdatedAt = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.OptimizationWrite
             {
                 Id = id,
