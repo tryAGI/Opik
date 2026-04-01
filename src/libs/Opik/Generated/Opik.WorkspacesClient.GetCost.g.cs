@@ -235,6 +235,7 @@ namespace Opik
             bool? startBeforeEnd = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.WorkspaceMetricsSummaryRequest
             {
                 ProjectIds = projectIds,

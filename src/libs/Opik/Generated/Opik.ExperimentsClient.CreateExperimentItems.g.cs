@@ -176,6 +176,7 @@ namespace Opik
             global::System.Collections.Generic.IList<global::Opik.ExperimentItem> experimentItems,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.ExperimentItemsBatch
             {
                 ExperimentItems = experimentItems,

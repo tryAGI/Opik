@@ -239,6 +239,7 @@ namespace Opik
             string versionRef,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.DatasetVersionRestorePublic
             {
                 VersionRef = versionRef,

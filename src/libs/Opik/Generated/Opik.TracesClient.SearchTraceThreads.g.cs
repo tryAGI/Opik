@@ -249,6 +249,7 @@ namespace Opik
             global::System.DateTime? toTime = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.TraceThreadSearchStreamRequest
             {
                 ProjectName = projectName,

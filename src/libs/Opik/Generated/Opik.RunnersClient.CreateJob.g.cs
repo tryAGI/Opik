@@ -260,6 +260,7 @@ namespace Opik
             global::Opik.LocalRunnerJobMetadata? metadata = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.CreateLocalRunnerJobRequest
             {
                 AgentName = agentName,

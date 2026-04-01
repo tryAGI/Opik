@@ -271,6 +271,7 @@ namespace Opik
             global::Opik.JsonNodePublic? config = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.DashboardUpdatePublic
             {
                 Name = name,

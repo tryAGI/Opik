@@ -329,6 +329,7 @@ namespace Opik
             global::System.Collections.Generic.IList<string>? tagsToAdd = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.DatasetVersionUpdatePublic
             {
                 ChangeDescription = changeDescription,

@@ -205,6 +205,7 @@ namespace Opik
         public async global::System.Threading.Tasks.Task ReceiveProtobufTracesAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.JsonNode
             {
             };

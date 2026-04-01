@@ -266,6 +266,7 @@ namespace Opik
             global::Opik.FunctionCall? functionCall = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.ChatCompletionRequest
             {
                 Model = model,

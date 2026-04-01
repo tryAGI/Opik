@@ -220,6 +220,7 @@ namespace Opik
             global::Opik.TraceUpdateSource? source = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Opik.TraceUpdate
             {
                 ProjectName = projectName,
