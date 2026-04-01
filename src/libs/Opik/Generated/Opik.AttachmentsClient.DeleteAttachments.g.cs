@@ -268,7 +268,6 @@ namespace Opik
             string? mimeType = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Opik.CompleteMultipartUploadRequest
             {
                 FileName = fileName,

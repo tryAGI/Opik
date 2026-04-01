@@ -264,7 +264,6 @@ namespace Opik
             global::Opik.ProjectUpdateVisibility? visibility = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Opik.ProjectUpdate
             {
                 Name = name,

@@ -190,7 +190,6 @@ namespace Opik
             global::Opik.SpanEnrichmentOptions enrichmentOptions,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Opik.CreateDatasetItemsFromSpansRequest
             {
                 SpanIds = spanIds,

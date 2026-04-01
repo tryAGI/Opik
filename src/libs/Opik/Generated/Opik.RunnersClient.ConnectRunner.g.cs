@@ -269,7 +269,6 @@ namespace Opik
             string runnerName,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Opik.LocalRunnerConnectRequest
             {
                 PairingCode = pairingCode,
