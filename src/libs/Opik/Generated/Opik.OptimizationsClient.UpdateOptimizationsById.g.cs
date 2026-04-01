@@ -186,7 +186,6 @@ namespace Opik
             global::Opik.OptimizationUpdateStatus? status = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Opik.OptimizationUpdate
             {
                 Name = name,

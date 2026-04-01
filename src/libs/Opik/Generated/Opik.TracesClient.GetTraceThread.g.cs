@@ -235,7 +235,6 @@ namespace Opik
             bool? truncate = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Opik.TraceThreadIdentifier
             {
                 ProjectName = projectName,

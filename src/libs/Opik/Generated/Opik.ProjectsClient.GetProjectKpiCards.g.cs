@@ -243,7 +243,6 @@ namespace Opik
             string? filters = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Opik.KpiCardRequest
             {
                 EntityType = entityType,

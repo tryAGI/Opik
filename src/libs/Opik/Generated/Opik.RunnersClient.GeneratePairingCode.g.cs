@@ -229,7 +229,6 @@ namespace Opik
             global::System.Guid projectId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Opik.LocalRunnerPairRequest
             {
                 ProjectId = projectId,

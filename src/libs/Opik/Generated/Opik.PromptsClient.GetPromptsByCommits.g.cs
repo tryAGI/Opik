@@ -191,7 +191,6 @@ namespace Opik
             global::System.Collections.Generic.IList<string> commits,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Opik.PromptVersionCommitsRequestPublic
             {
                 Commits = commits,

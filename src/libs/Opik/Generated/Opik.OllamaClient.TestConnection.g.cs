@@ -312,7 +312,6 @@ namespace Opik
             string? apiKey = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Opik.OllamaInstanceBaseUrlRequest
             {
                 BaseUrl = baseUrl,
