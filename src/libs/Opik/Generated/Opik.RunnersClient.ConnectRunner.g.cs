@@ -33,6 +33,26 @@ namespace Opik
             global::Opik.LocalRunnerConnectRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await ConnectRunnerAsResponseAsync(
+
+                request: request,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Connect a local runner<br/>
+        /// Exchange a pairing code or API key for local runner credentials
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.LocalRunnerConnectResponse>> ConnectRunnerAsResponseAsync(
+
+            global::Opik.LocalRunnerConnectRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -192,9 +212,12 @@ namespace Opik
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::Opik.LocalRunnerConnectResponse.FromJson(__content, JsonSerializerContext) ??
+                    var __value = global::Opik.LocalRunnerConnectResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                    return new global::Opik.AutoSDKHttpResponse<global::Opik.LocalRunnerConnectResponse>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -223,9 +246,12 @@ namespace Opik
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::Opik.LocalRunnerConnectResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                    var __value = await global::Opik.LocalRunnerConnectResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                    return new global::Opik.AutoSDKHttpResponse<global::Opik.LocalRunnerConnectResponse>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {

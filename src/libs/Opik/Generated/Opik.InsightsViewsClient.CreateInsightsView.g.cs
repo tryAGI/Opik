@@ -33,6 +33,26 @@ namespace Opik
             global::Opik.DashboardWrite request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await CreateInsightsViewAsResponseAsync(
+
+                request: request,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Create insights view<br/>
+        /// Create a new insights view in a workspace
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.DashboardPublic>> CreateInsightsViewAsResponseAsync(
+
+            global::Opik.DashboardWrite request,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -116,9 +136,12 @@ namespace Opik
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::Opik.DashboardPublic.FromJson(__content, JsonSerializerContext) ??
+                    var __value = global::Opik.DashboardPublic.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                    return new global::Opik.AutoSDKHttpResponse<global::Opik.DashboardPublic>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -147,9 +170,12 @@ namespace Opik
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::Opik.DashboardPublic.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                    var __value = await global::Opik.DashboardPublic.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                    return new global::Opik.AutoSDKHttpResponse<global::Opik.DashboardPublic>(
+                        statusCode: __response.StatusCode,
+                        headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
+                        body: __value);
                 }
                 catch (global::System.Exception __ex)
                 {
