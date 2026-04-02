@@ -19,6 +19,17 @@ namespace Opik
         /// Create insights view<br/>
         /// Create a new insights view in a workspace
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.DashboardPublic>> CreateInsightsViewAsResponseAsync(
+
+            global::Opik.DashboardWrite request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create insights view<br/>
+        /// Create a new insights view in a workspace
+        /// </summary>
         /// <param name="projectId">
         /// Project ID. Takes precedence over project_name when both are provided.
         /// </param>

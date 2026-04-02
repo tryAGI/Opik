@@ -19,6 +19,17 @@ namespace Opik
         /// Create dashboard<br/>
         /// Create a new dashboard in a workspace
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.DashboardPublic>> CreateDashboardAsResponseAsync(
+
+            global::Opik.DashboardWrite request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create dashboard<br/>
+        /// Create a new dashboard in a workspace
+        /// </summary>
         /// <param name="projectId">
         /// Project ID. Takes precedence over project_name when both are provided.
         /// </param>
