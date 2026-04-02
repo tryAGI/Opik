@@ -797,6 +797,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.FindFeedbackDefinitionsTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.ListRunnersStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.ListRunnersStatusNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.GetSpansByProjectTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.GetSpansByProjectTypeNullableJsonConverter),
@@ -1719,6 +1723,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DownloadAttachmentEntityType), TypeInfoPropertyName = "DownloadAttachmentEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UploadAttachmentEntityType), TypeInfoPropertyName = "UploadAttachmentEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindFeedbackDefinitionsType), TypeInfoPropertyName = "FindFeedbackDefinitionsType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ListRunnersStatus), TypeInfoPropertyName = "ListRunnersStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetSpansByProjectType), TypeInfoPropertyName = "GetSpansByProjectType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindFeedbackScoreNames1Type), TypeInfoPropertyName = "FindFeedbackScoreNames1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetSpanStatsType), TypeInfoPropertyName = "GetSpanStatsType2")]

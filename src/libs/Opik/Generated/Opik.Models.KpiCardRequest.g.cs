@@ -33,8 +33,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("interval_end")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime IntervalEnd { get; set; }
+        public global::System.DateTime? IntervalEnd { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -47,16 +46,16 @@ namespace Opik
         /// </summary>
         /// <param name="entityType"></param>
         /// <param name="intervalStart"></param>
-        /// <param name="intervalEnd"></param>
         /// <param name="filters"></param>
+        /// <param name="intervalEnd"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public KpiCardRequest(
             global::Opik.KpiCardRequestEntityType entityType,
             global::System.DateTime intervalStart,
-            global::System.DateTime intervalEnd,
-            string? filters)
+            string? filters,
+            global::System.DateTime? intervalEnd)
         {
             this.EntityType = entityType;
             this.Filters = filters;

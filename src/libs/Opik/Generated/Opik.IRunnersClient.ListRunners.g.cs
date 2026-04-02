@@ -9,6 +9,7 @@ namespace Opik
         /// List local runners owned by the current user in the workspace
         /// </summary>
         /// <param name="projectId"></param>
+        /// <param name="status"></param>
         /// <param name="page">
         /// Default Value: 0
         /// </param>
@@ -19,6 +20,7 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.LocalRunnerPage> ListRunnersAsync(
             global::System.Guid projectId,
+            global::Opik.ListRunnersStatus? status = default,
             int? page = default,
             int? size = default,
             global::System.Threading.CancellationToken cancellationToken = default);

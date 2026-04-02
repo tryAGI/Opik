@@ -239,8 +239,8 @@ namespace Opik
             global::System.Guid id,
             global::Opik.KpiCardRequestEntityType entityType,
             global::System.DateTime intervalStart,
-            global::System.DateTime intervalEnd,
             string? filters = default,
+            global::System.DateTime? intervalEnd = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::Opik.KpiCardRequest
