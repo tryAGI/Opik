@@ -8,12 +8,14 @@ namespace Opik
         partial void PrepareListRunnersArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid projectId,
+            ref global::Opik.ListRunnersStatus? status,
             ref int? page,
             ref int? size);
         partial void PrepareListRunnersRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::System.Guid projectId,
+            global::Opik.ListRunnersStatus? status,
             int? page,
             int? size);
         partial void ProcessListRunnersResponse(
@@ -30,6 +32,7 @@ namespace Opik
         /// List local runners owned by the current user in the workspace
         /// </summary>
         /// <param name="projectId"></param>
+        /// <param name="status"></param>
         /// <param name="page">
         /// Default Value: 0
         /// </param>
@@ -40,6 +43,7 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Opik.LocalRunnerPage> ListRunnersAsync(
             global::System.Guid projectId,
+            global::Opik.ListRunnersStatus? status = default,
             int? page = default,
             int? size = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -49,6 +53,7 @@ namespace Opik
             PrepareListRunnersArguments(
                 httpClient: HttpClient,
                 projectId: ref projectId,
+                status: ref status,
                 page: ref page,
                 size: ref size);
 
@@ -57,6 +62,7 @@ namespace Opik
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddRequiredParameter("project_id", projectId.ToString()!)
+                .AddOptionalParameter("status", status?.ToValueString())
                 .AddOptionalParameter("page", page?.ToString())
                 .AddOptionalParameter("size", size?.ToString()) 
                 ; 
@@ -92,6 +98,7 @@ namespace Opik
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 projectId: projectId,
+                status: status,
                 page: page,
                 size: size);
 
