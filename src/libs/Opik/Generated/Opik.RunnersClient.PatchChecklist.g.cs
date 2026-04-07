@@ -5,53 +5,48 @@ namespace Opik
 {
     public partial class RunnersClient
     {
-        partial void PrepareHeartbeatArguments(
+        partial void PreparePatchChecklistArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid runnerId,
-            global::Opik.LocalRunnerHeartbeatRequest request);
-        partial void PrepareHeartbeatRequest(
+            object request);
+        partial void PreparePatchChecklistRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::System.Guid runnerId,
-            global::Opik.LocalRunnerHeartbeatRequest request);
-        partial void ProcessHeartbeatResponse(
+            object request);
+        partial void ProcessPatchChecklistResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessHeartbeatResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Local runner heartbeat<br/>
-        /// Refresh local runner heartbeat
+        /// Patch runner checklist<br/>
+        /// Partial update of the runner's checklist (deep merge)
         /// </summary>
         /// <param name="runnerId"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.LocalRunnerHeartbeatResponse> HeartbeatAsync(
+        public async global::System.Threading.Tasks.Task PatchChecklistAsync(
             global::System.Guid runnerId,
 
-            global::Opik.LocalRunnerHeartbeatRequest request,
+            object request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareHeartbeatArguments(
+            PreparePatchChecklistArguments(
                 httpClient: HttpClient,
                 runnerId: ref runnerId,
                 request: request);
 
             var __pathBuilder = new global::Opik.PathBuilder(
-                path: $"/v1/private/local-runners/{runnerId}/heartbeats",
+                path: $"/v1/private/local-runners/{runnerId}/checklist",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Post,
+                method: new global::System.Net.Http.HttpMethod("PATCH"),
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -73,7 +68,7 @@ namespace Opik
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -83,7 +78,7 @@ namespace Opik
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareHeartbeatRequest(
+            PreparePatchChecklistRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 runnerId: runnerId,
@@ -97,7 +92,7 @@ namespace Opik
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessHeartbeatResponse(
+            ProcessPatchChecklistResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
             // Not found
@@ -138,44 +133,6 @@ namespace Opik
                         h => h.Value),
                 };
             }
-            // Gone
-            if ((int)__response.StatusCode == 410)
-            {
-                string? __content_410 = null;
-                global::System.Exception? __exception_410 = null;
-                global::Opik.ErrorMessage? __value_410 = null;
-                try
-                {
-                    if (ReadResponseAsString)
-                    {
-                        __content_410 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_410 = global::Opik.ErrorMessage.FromJson(__content_410, JsonSerializerContext);
-                    }
-                    else
-                    {
-                        __content_410 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-
-                        __value_410 = global::Opik.ErrorMessage.FromJson(__content_410, JsonSerializerContext);
-                    }
-                }
-                catch (global::System.Exception __ex)
-                {
-                    __exception_410 = __ex;
-                }
-
-                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
-                    message: __content_410 ?? __response.ReasonPhrase ?? string.Empty,
-                    innerException: __exception_410,
-                    statusCode: __response.StatusCode)
-                {
-                    ResponseBody = __content_410,
-                    ResponseObject = __value_410,
-                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                        __response.Headers,
-                        h => h.Key,
-                        h => h.Value),
-                };
-            }
 
             if (ReadResponseAsString)
             {
@@ -189,18 +146,11 @@ namespace Opik
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessHeartbeatResponseContent(
-                    httpClient: HttpClient,
-                    httpResponseMessage: __response,
-                    content: ref __content);
 
                 try
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::Opik.LocalRunnerHeartbeatResponse.FromJson(__content, JsonSerializerContext) ??
-                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -222,15 +172,6 @@ namespace Opik
                 try
                 {
                     __response.EnsureSuccessStatusCode();
-                    using var __content = await __response.Content.ReadAsStreamAsync(
-#if NET5_0_OR_GREATER
-                        cancellationToken
-#endif
-                    ).ConfigureAwait(false);
-
-                    return
-                        await global::Opik.LocalRunnerHeartbeatResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -262,24 +203,21 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Local runner heartbeat<br/>
-        /// Refresh local runner heartbeat
+        /// Patch runner checklist<br/>
+        /// Partial update of the runner's checklist (deep merge)
         /// </summary>
         /// <param name="runnerId"></param>
-        /// <param name="capabilities"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.LocalRunnerHeartbeatResponse> HeartbeatAsync(
+        public async global::System.Threading.Tasks.Task PatchChecklistAsync(
             global::System.Guid runnerId,
-            global::System.Collections.Generic.IList<string>? capabilities = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.LocalRunnerHeartbeatRequest
+            var __request = new object
             {
-                Capabilities = capabilities,
             };
 
-            return await HeartbeatAsync(
+            await PatchChecklistAsync(
                 runnerId: runnerId,
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

@@ -5,29 +5,27 @@ namespace Opik
     public partial interface IRunnersClient
     {
         /// <summary>
-        /// Local runner heartbeat<br/>
-        /// Refresh local runner heartbeat
+        /// Patch runner checklist<br/>
+        /// Partial update of the runner's checklist (deep merge)
         /// </summary>
         /// <param name="runnerId"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Opik.LocalRunnerHeartbeatResponse> HeartbeatAsync(
+        global::System.Threading.Tasks.Task PatchChecklistAsync(
             global::System.Guid runnerId,
 
-            global::Opik.LocalRunnerHeartbeatRequest request,
+            object request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Local runner heartbeat<br/>
-        /// Refresh local runner heartbeat
+        /// Patch runner checklist<br/>
+        /// Partial update of the runner's checklist (deep merge)
         /// </summary>
         /// <param name="runnerId"></param>
-        /// <param name="capabilities"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Opik.LocalRunnerHeartbeatResponse> HeartbeatAsync(
+        global::System.Threading.Tasks.Task PatchChecklistAsync(
             global::System.Guid runnerId,
-            global::System.Collections.Generic.IList<string>? capabilities = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

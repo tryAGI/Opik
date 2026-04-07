@@ -46,6 +46,18 @@ namespace Opik
         public global::System.Collections.Generic.IList<global::Opik.Agent>? Agents { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("capabilities")]
+        public global::System.Collections.Generic.IList<string>? Capabilities { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("checklist")]
+        public global::Opik.JsonNode? Checklist { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -60,6 +72,8 @@ namespace Opik
         /// <param name="status"></param>
         /// <param name="connectedAt"></param>
         /// <param name="agents"></param>
+        /// <param name="capabilities"></param>
+        /// <param name="checklist"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -69,7 +83,9 @@ namespace Opik
             global::System.Guid? projectId,
             global::Opik.LocalRunnerStatus? status,
             global::System.DateTime? connectedAt,
-            global::System.Collections.Generic.IList<global::Opik.Agent>? agents)
+            global::System.Collections.Generic.IList<global::Opik.Agent>? agents,
+            global::System.Collections.Generic.IList<string>? capabilities,
+            global::Opik.JsonNode? checklist)
         {
             this.Id = id;
             this.Name = name;
@@ -77,6 +93,8 @@ namespace Opik
             this.Status = status;
             this.ConnectedAt = connectedAt;
             this.Agents = agents;
+            this.Capabilities = capabilities;
+            this.Checklist = checklist;
         }
 
         /// <summary>
