@@ -5,49 +5,49 @@ namespace Opik
 {
     public partial class RunnersClient
     {
-        partial void PrepareHeartbeatArguments(
+        partial void PrepareReportBridgeResultArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid runnerId,
-            global::Opik.LocalRunnerHeartbeatRequest request);
-        partial void PrepareHeartbeatRequest(
+            ref global::System.Guid commandId,
+            global::Opik.BridgeCommandResultRequest request);
+        partial void PrepareReportBridgeResultRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::System.Guid runnerId,
-            global::Opik.LocalRunnerHeartbeatRequest request);
-        partial void ProcessHeartbeatResponse(
+            global::System.Guid commandId,
+            global::Opik.BridgeCommandResultRequest request);
+        partial void ProcessReportBridgeResultResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessHeartbeatResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Local runner heartbeat<br/>
-        /// Refresh local runner heartbeat
+        /// Report bridge command result<br/>
+        /// Report bridge command completion or failure
         /// </summary>
         /// <param name="runnerId"></param>
+        /// <param name="commandId"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.LocalRunnerHeartbeatResponse> HeartbeatAsync(
+        public async global::System.Threading.Tasks.Task ReportBridgeResultAsync(
             global::System.Guid runnerId,
+            global::System.Guid commandId,
 
-            global::Opik.LocalRunnerHeartbeatRequest request,
+            global::Opik.BridgeCommandResultRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareHeartbeatArguments(
+            PrepareReportBridgeResultArguments(
                 httpClient: HttpClient,
                 runnerId: ref runnerId,
+                commandId: ref commandId,
                 request: request);
 
             var __pathBuilder = new global::Opik.PathBuilder(
-                path: $"/v1/private/local-runners/{runnerId}/heartbeats",
+                path: $"/v1/private/local-runners/{runnerId}/bridge/commands/{commandId}/results",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -83,10 +83,11 @@ namespace Opik
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareHeartbeatRequest(
+            PrepareReportBridgeResultRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 runnerId: runnerId,
+                commandId: commandId,
                 request: request);
 
             using var __response = await HttpClient.SendAsync(
@@ -97,10 +98,10 @@ namespace Opik
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessHeartbeatResponse(
+            ProcessReportBridgeResultResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
-            // Not found
+            // Command not found
             if ((int)__response.StatusCode == 404)
             {
                 string? __content_404 = null;
@@ -138,38 +139,38 @@ namespace Opik
                         h => h.Value),
                 };
             }
-            // Gone
-            if ((int)__response.StatusCode == 410)
+            // Already completed
+            if ((int)__response.StatusCode == 409)
             {
-                string? __content_410 = null;
-                global::System.Exception? __exception_410 = null;
-                global::Opik.ErrorMessage? __value_410 = null;
+                string? __content_409 = null;
+                global::System.Exception? __exception_409 = null;
+                global::Opik.ErrorMessage? __value_409 = null;
                 try
                 {
                     if (ReadResponseAsString)
                     {
-                        __content_410 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_410 = global::Opik.ErrorMessage.FromJson(__content_410, JsonSerializerContext);
+                        __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                        __value_409 = global::Opik.ErrorMessage.FromJson(__content_409, JsonSerializerContext);
                     }
                     else
                     {
-                        __content_410 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                        __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_410 = global::Opik.ErrorMessage.FromJson(__content_410, JsonSerializerContext);
+                        __value_409 = global::Opik.ErrorMessage.FromJson(__content_409, JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
                 {
-                    __exception_410 = __ex;
+                    __exception_409 = __ex;
                 }
 
                 throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
-                    message: __content_410 ?? __response.ReasonPhrase ?? string.Empty,
-                    innerException: __exception_410,
+                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
+                    innerException: __exception_409,
                     statusCode: __response.StatusCode)
                 {
-                    ResponseBody = __content_410,
-                    ResponseObject = __value_410,
+                    ResponseBody = __content_409,
+                    ResponseObject = __value_409,
                     ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
                         __response.Headers,
                         h => h.Key,
@@ -189,18 +190,11 @@ namespace Opik
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessHeartbeatResponseContent(
-                    httpClient: HttpClient,
-                    httpResponseMessage: __response,
-                    content: ref __content);
 
                 try
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::Opik.LocalRunnerHeartbeatResponse.FromJson(__content, JsonSerializerContext) ??
-                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -222,15 +216,6 @@ namespace Opik
                 try
                 {
                     __response.EnsureSuccessStatusCode();
-                    using var __content = await __response.Content.ReadAsStreamAsync(
-#if NET5_0_OR_GREATER
-                        cancellationToken
-#endif
-                    ).ConfigureAwait(false);
-
-                    return
-                        await global::Opik.LocalRunnerHeartbeatResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -262,25 +247,37 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Local runner heartbeat<br/>
-        /// Refresh local runner heartbeat
+        /// Report bridge command result<br/>
+        /// Report bridge command completion or failure
         /// </summary>
         /// <param name="runnerId"></param>
-        /// <param name="capabilities"></param>
+        /// <param name="commandId"></param>
+        /// <param name="status"></param>
+        /// <param name="result"></param>
+        /// <param name="error"></param>
+        /// <param name="durationMs"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.LocalRunnerHeartbeatResponse> HeartbeatAsync(
+        public async global::System.Threading.Tasks.Task ReportBridgeResultAsync(
             global::System.Guid runnerId,
-            global::System.Collections.Generic.IList<string>? capabilities = default,
+            global::System.Guid commandId,
+            global::Opik.BridgeCommandResultRequestStatus status,
+            global::Opik.JsonNode? result = default,
+            global::Opik.JsonNode? error = default,
+            long? durationMs = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.LocalRunnerHeartbeatRequest
+            var __request = new global::Opik.BridgeCommandResultRequest
             {
-                Capabilities = capabilities,
+                Status = status,
+                Result = result,
+                Error = error,
+                DurationMs = durationMs,
             };
 
-            return await HeartbeatAsync(
+            await ReportBridgeResultAsync(
                 runnerId: runnerId,
+                commandId: commandId,
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
         }

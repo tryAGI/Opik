@@ -5,49 +5,49 @@ namespace Opik
 {
     public partial class RunnersClient
     {
-        partial void PrepareHeartbeatArguments(
+        partial void PrepareNextBridgeCommandsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid runnerId,
-            global::Opik.LocalRunnerHeartbeatRequest request);
-        partial void PrepareHeartbeatRequest(
+            global::Opik.BridgeCommandNextRequest request);
+        partial void PrepareNextBridgeCommandsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::System.Guid runnerId,
-            global::Opik.LocalRunnerHeartbeatRequest request);
-        partial void ProcessHeartbeatResponse(
+            global::Opik.BridgeCommandNextRequest request);
+        partial void ProcessNextBridgeCommandsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessHeartbeatResponseContent(
+        partial void ProcessNextBridgeCommandsResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Local runner heartbeat<br/>
-        /// Refresh local runner heartbeat
+        /// Poll next bridge commands<br/>
+        /// Long-poll for pending bridge commands (batch)
         /// </summary>
         /// <param name="runnerId"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.LocalRunnerHeartbeatResponse> HeartbeatAsync(
+        public async global::System.Threading.Tasks.Task<global::Opik.BridgeCommandBatchResponse> NextBridgeCommandsAsync(
             global::System.Guid runnerId,
 
-            global::Opik.LocalRunnerHeartbeatRequest request,
+            global::Opik.BridgeCommandNextRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareHeartbeatArguments(
+            PrepareNextBridgeCommandsArguments(
                 httpClient: HttpClient,
                 runnerId: ref runnerId,
                 request: request);
 
             var __pathBuilder = new global::Opik.PathBuilder(
-                path: $"/v1/private/local-runners/{runnerId}/heartbeats",
+                path: $"/v1/private/local-runners/{runnerId}/bridge/commands/next",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -83,7 +83,7 @@ namespace Opik
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareHeartbeatRequest(
+            PrepareNextBridgeCommandsRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 runnerId: runnerId,
@@ -97,7 +97,7 @@ namespace Opik
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessHeartbeatResponse(
+            ProcessNextBridgeCommandsResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
             // Not found
@@ -138,44 +138,6 @@ namespace Opik
                         h => h.Value),
                 };
             }
-            // Gone
-            if ((int)__response.StatusCode == 410)
-            {
-                string? __content_410 = null;
-                global::System.Exception? __exception_410 = null;
-                global::Opik.ErrorMessage? __value_410 = null;
-                try
-                {
-                    if (ReadResponseAsString)
-                    {
-                        __content_410 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_410 = global::Opik.ErrorMessage.FromJson(__content_410, JsonSerializerContext);
-                    }
-                    else
-                    {
-                        __content_410 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-
-                        __value_410 = global::Opik.ErrorMessage.FromJson(__content_410, JsonSerializerContext);
-                    }
-                }
-                catch (global::System.Exception __ex)
-                {
-                    __exception_410 = __ex;
-                }
-
-                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
-                    message: __content_410 ?? __response.ReasonPhrase ?? string.Empty,
-                    innerException: __exception_410,
-                    statusCode: __response.StatusCode)
-                {
-                    ResponseBody = __content_410,
-                    ResponseObject = __value_410,
-                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                        __response.Headers,
-                        h => h.Key,
-                        h => h.Value),
-                };
-            }
 
             if (ReadResponseAsString)
             {
@@ -189,7 +151,7 @@ namespace Opik
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessHeartbeatResponseContent(
+                ProcessNextBridgeCommandsResponseContent(
                     httpClient: HttpClient,
                     httpResponseMessage: __response,
                     content: ref __content);
@@ -199,7 +161,7 @@ namespace Opik
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Opik.LocalRunnerHeartbeatResponse.FromJson(__content, JsonSerializerContext) ??
+                        global::Opik.BridgeCommandBatchResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -229,7 +191,7 @@ namespace Opik
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Opik.LocalRunnerHeartbeatResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::Opik.BridgeCommandBatchResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -262,24 +224,24 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Local runner heartbeat<br/>
-        /// Refresh local runner heartbeat
+        /// Poll next bridge commands<br/>
+        /// Long-poll for pending bridge commands (batch)
         /// </summary>
         /// <param name="runnerId"></param>
-        /// <param name="capabilities"></param>
+        /// <param name="maxCommands"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.LocalRunnerHeartbeatResponse> HeartbeatAsync(
+        public async global::System.Threading.Tasks.Task<global::Opik.BridgeCommandBatchResponse> NextBridgeCommandsAsync(
             global::System.Guid runnerId,
-            global::System.Collections.Generic.IList<string>? capabilities = default,
+            int? maxCommands = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.LocalRunnerHeartbeatRequest
+            var __request = new global::Opik.BridgeCommandNextRequest
             {
-                Capabilities = capabilities,
+                MaxCommands = maxCommands,
             };
 
-            return await HeartbeatAsync(
+            return await NextBridgeCommandsAsync(
                 runnerId: runnerId,
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
