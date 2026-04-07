@@ -54,6 +54,12 @@ namespace Opik
         public bool? StripAttachments { get; set; }
 
         /// <summary>
+        /// Fields to exclude from the response
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exclude")]
+        public global::System.Collections.Generic.IList<global::Opik.TraceSearchStreamRequestPublicExcludeItem>? Exclude { get; set; }
+
+        /// <summary>
         /// Filter traces created from this time (ISO-8601 format).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("from_time")]
@@ -90,6 +96,9 @@ namespace Opik
         /// If true, returns attachment references like [file.png]; if false, downloads and reinjects stripped attachments<br/>
         /// Default Value: false
         /// </param>
+        /// <param name="exclude">
+        /// Fields to exclude from the response
+        /// </param>
         /// <param name="fromTime">
         /// Filter traces created from this time (ISO-8601 format).
         /// </param>
@@ -107,6 +116,7 @@ namespace Opik
             int? limit,
             bool? truncate,
             bool? stripAttachments,
+            global::System.Collections.Generic.IList<global::Opik.TraceSearchStreamRequestPublicExcludeItem>? exclude,
             global::System.DateTime? fromTime,
             global::System.DateTime? toTime)
         {
@@ -117,6 +127,7 @@ namespace Opik
             this.Limit = limit;
             this.Truncate = truncate;
             this.StripAttachments = stripAttachments;
+            this.Exclude = exclude;
             this.FromTime = fromTime;
             this.ToTime = toTime;
         }

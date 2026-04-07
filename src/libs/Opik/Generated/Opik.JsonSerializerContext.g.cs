@@ -773,6 +773,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemJsonConverter),
+
+            typeof(global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionJsonConverter),
 
             typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionNullableJsonConverter),
@@ -1701,6 +1705,8 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.FeedbackScoreBatchItemThread>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadSearchStreamRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceSearchStreamRequestPublic))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.TraceSearchStreamRequestPublicExcludeItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceSearchStreamRequestPublicExcludeItem), TypeInfoPropertyName = "TraceSearchStreamRequestPublicExcludeItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WelcomeWizardTracking))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WelcomeWizardSubmission))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Permission))]
@@ -1881,6 +1887,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceThread>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TracePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScoreBatchItemThread>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceSearchStreamRequestPublicExcludeItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Permission>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Result>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LocalRunnerLogEntry>))]
