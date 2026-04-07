@@ -35,6 +35,9 @@ namespace Opik
         /// If true, returns attachment references like [file.png]; if false, downloads and reinjects stripped attachments<br/>
         /// Default Value: false
         /// </param>
+        /// <param name="exclude">
+        /// Fields to exclude from the response
+        /// </param>
         /// <param name="fromTime">
         /// Filter traces created from this time (ISO-8601 format).
         /// </param>
@@ -51,6 +54,7 @@ namespace Opik
             int? limit = default,
             bool? truncate = default,
             bool? stripAttachments = default,
+            global::System.Collections.Generic.IList<global::Opik.TraceSearchStreamRequestPublicExcludeItem>? exclude = default,
             global::System.DateTime? fromTime = default,
             global::System.DateTime? toTime = default,
             global::System.Threading.CancellationToken cancellationToken = default);
