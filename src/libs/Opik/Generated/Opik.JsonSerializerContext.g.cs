@@ -761,6 +761,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemJsonConverter),
+
+            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.TraceUpdateSourceJsonConverter),
 
             typeof(global::Opik.JsonConverters.TraceUpdateSourceNullableJsonConverter),
@@ -1701,6 +1705,8 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FeedbackScoreBatchItemSource), TypeInfoPropertyName = "FeedbackScoreBatchItemSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublicType), TypeInfoPropertyName = "SpanSearchStreamRequestPublicType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.SpanSearchStreamRequestPublicExcludeItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem), TypeInfoPropertyName = "SpanSearchStreamRequestPublicExcludeItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatchUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdateSource), TypeInfoPropertyName = "TraceUpdateSource2")]
@@ -1915,6 +1921,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScorePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScoreBatchItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanSearchStreamRequestPublicExcludeItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Trace>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.CheckPublic>))]
