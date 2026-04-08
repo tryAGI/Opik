@@ -60,6 +60,12 @@ namespace Opik
         public bool? Truncate { get; set; }
 
         /// <summary>
+        /// Fields to exclude from the response
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exclude")]
+        public global::System.Collections.Generic.IList<global::Opik.SpanSearchStreamRequestPublicExcludeItem>? Exclude { get; set; }
+
+        /// <summary>
         /// Filter spans created from this time (ISO-8601 format).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("from_time")]
@@ -94,6 +100,9 @@ namespace Opik
         /// Truncate image included in either input, output or metadata<br/>
         /// Default Value: true
         /// </param>
+        /// <param name="exclude">
+        /// Fields to exclude from the response
+        /// </param>
         /// <param name="fromTime">
         /// Filter spans created from this time (ISO-8601 format).
         /// </param>
@@ -112,6 +121,7 @@ namespace Opik
             int? limit,
             global::System.Guid? lastRetrievedId,
             bool? truncate,
+            global::System.Collections.Generic.IList<global::Opik.SpanSearchStreamRequestPublicExcludeItem>? exclude,
             global::System.DateTime? fromTime,
             global::System.DateTime? toTime)
         {
@@ -123,6 +133,7 @@ namespace Opik
             this.Limit = limit;
             this.LastRetrievedId = lastRetrievedId;
             this.Truncate = truncate;
+            this.Exclude = exclude;
             this.FromTime = fromTime;
             this.ToTime = toTime;
         }

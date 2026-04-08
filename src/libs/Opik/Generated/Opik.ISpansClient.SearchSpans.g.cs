@@ -33,6 +33,9 @@ namespace Opik
         /// Truncate image included in either input, output or metadata<br/>
         /// Default Value: true
         /// </param>
+        /// <param name="exclude">
+        /// Fields to exclude from the response
+        /// </param>
         /// <param name="fromTime">
         /// Filter spans created from this time (ISO-8601 format).
         /// </param>
@@ -50,6 +53,7 @@ namespace Opik
             int? limit = default,
             global::System.Guid? lastRetrievedId = default,
             bool? truncate = default,
+            global::System.Collections.Generic.IList<global::Opik.SpanSearchStreamRequestPublicExcludeItem>? exclude = default,
             global::System.DateTime? fromTime = default,
             global::System.DateTime? toTime = default,
             global::System.Threading.CancellationToken cancellationToken = default);
