@@ -16,6 +16,10 @@ namespace Opik
         /// 
         /// </summary>
         Mustache,
+        /// <summary>
+        /// 
+        /// </summary>
+        Python,
     }
 
     /// <summary>
@@ -32,6 +36,7 @@ namespace Opik
             {
                 PromptVersionType.Jinja2 => "jinja2",
                 PromptVersionType.Mustache => "mustache",
+                PromptVersionType.Python => "python",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +49,7 @@ namespace Opik
             {
                 "jinja2" => PromptVersionType.Jinja2,
                 "mustache" => PromptVersionType.Mustache,
+                "python" => PromptVersionType.Python,
                 _ => null,
             };
         }
