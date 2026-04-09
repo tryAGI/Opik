@@ -5,6 +5,25 @@ namespace Opik
 {
     public partial class AnnotationQueuesClient
     {
+
+
+        private static readonly global::Opik.EndPointSecurityRequirement s_FindAnnotationQueuesSecurityRequirement0 =
+            new global::Opik.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
+                {                    new global::Opik.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_FindAnnotationQueuesSecurityRequirements =
+            new global::Opik.EndPointSecurityRequirement[]
+            {                s_FindAnnotationQueuesSecurityRequirement0,
+            };
         partial void PrepareFindAnnotationQueuesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? page,
@@ -64,6 +83,12 @@ namespace Opik
                 filters: ref filters,
                 sorting: ref sorting);
 
+
+            var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_FindAnnotationQueuesSecurityRequirements,
+                operationName: "FindAnnotationQueuesAsync");
+
             var __pathBuilder = new global::Opik.PathBuilder(
                 path: "/v1/private/annotation-queues",
                 baseUri: HttpClient.BaseAddress); 
@@ -73,7 +98,7 @@ namespace Opik
                 .AddOptionalParameter("name", name)
                 .AddOptionalParameter("filters", filters)
                 .AddOptionalParameter("sorting", sorting) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -83,7 +108,7 @@ namespace Opik
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

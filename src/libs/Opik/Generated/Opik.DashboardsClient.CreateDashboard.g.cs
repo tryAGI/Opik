@@ -5,6 +5,25 @@ namespace Opik
 {
     public partial class DashboardsClient
     {
+
+
+        private static readonly global::Opik.EndPointSecurityRequirement s_CreateDashboardSecurityRequirement0 =
+            new global::Opik.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
+                {                    new global::Opik.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_CreateDashboardSecurityRequirements =
+            new global::Opik.EndPointSecurityRequirement[]
+            {                s_CreateDashboardSecurityRequirement0,
+            };
         partial void PrepareCreateDashboardArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Opik.DashboardWrite request);
@@ -61,9 +80,15 @@ namespace Opik
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateDashboardSecurityRequirements,
+                operationName: "CreateDashboardAsync");
+
             var __pathBuilder = new global::Opik.PathBuilder(
                 path: "/v1/private/dashboards",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -73,7 +98,7 @@ namespace Opik
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

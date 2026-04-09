@@ -5,6 +5,25 @@ namespace Opik
 {
     public partial class ChatCompletionsClient
     {
+
+
+        private static readonly global::Opik.EndPointSecurityRequirement s_CreateChatCompletionsAsStreamSecurityRequirement0 =
+            new global::Opik.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
+                {                    new global::Opik.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_CreateChatCompletionsAsStreamSecurityRequirements =
+            new global::Opik.EndPointSecurityRequirement[]
+            {                s_CreateChatCompletionsAsStreamSecurityRequirement0,
+            };
         partial void PrepareCreateChatCompletionsAsStreamArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Opik.ChatCompletionRequest request);
@@ -23,7 +42,7 @@ namespace Opik
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Collections.Generic.IAsyncEnumerable<global::System.Collections.Generic.IList<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>>> CreateChatCompletionsAsStreamAsync(
+        public async global::System.Collections.Generic.IAsyncEnumerable<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>> CreateChatCompletionsAsStreamAsync(
 
             global::Opik.ChatCompletionRequest request,
             [global::System.Runtime.CompilerServices.EnumeratorCancellation] global::System.Threading.CancellationToken cancellationToken = default)
@@ -64,9 +83,15 @@ namespace Opik
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateChatCompletionsAsStreamSecurityRequirements,
+                operationName: "CreateChatCompletionsAsStreamAsync");
+
             var __pathBuilder = new global::Opik.PathBuilder(
                 path: "/v1/private/chat/completions",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -76,7 +101,7 @@ namespace Opik
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
@@ -165,7 +190,7 @@ namespace Opik
                     yield break;
                 }
 
-                var __streamedResponse = (global::System.Collections.Generic.IList<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>>), JsonSerializerContext) ??
+                var __streamedResponse = global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>.FromJson(__content, JsonSerializerContext) ??
                                        throw new global::Opik.ApiException(
                                            message: $"Response deserialization failed for \"{__content}\" ",
                                            statusCode: __response.StatusCode)
@@ -210,7 +235,7 @@ namespace Opik
         /// <param name="functionCall"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Collections.Generic.IAsyncEnumerable<global::System.Collections.Generic.IList<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>>> CreateChatCompletionsAsStreamAsync(
+        public async global::System.Collections.Generic.IAsyncEnumerable<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>> CreateChatCompletionsAsStreamAsync(
             string? model = default,
             global::System.Collections.Generic.IList<global::Opik.Message>? messages = default,
             double? temperature = default,

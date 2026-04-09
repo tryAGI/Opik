@@ -5,6 +5,25 @@ namespace Opik
 {
     public partial class DatasetsClient
     {
+
+
+        private static readonly global::Opik.EndPointSecurityRequirement s_DeleteVersionTagSecurityRequirement0 =
+            new global::Opik.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
+                {                    new global::Opik.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_DeleteVersionTagSecurityRequirements =
+            new global::Opik.EndPointSecurityRequirement[]
+            {                s_DeleteVersionTagSecurityRequirement0,
+            };
         partial void PrepareDeleteVersionTagArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string versionHash,
@@ -43,9 +62,15 @@ namespace Opik
                 tag: ref tag,
                 id: ref id);
 
+
+            var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteVersionTagSecurityRequirements,
+                operationName: "DeleteVersionTagAsync");
+
             var __pathBuilder = new global::Opik.PathBuilder(
                 path: $"/v1/private/datasets/{id}/versions/{versionHash}/tags/{tag}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -55,7 +80,7 @@ namespace Opik
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

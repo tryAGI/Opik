@@ -5,6 +5,25 @@ namespace Opik
 {
     public partial class AutomationRuleEvaluatorsClient
     {
+
+
+        private static readonly global::Opik.EndPointSecurityRequirement s_FindEvaluatorsSecurityRequirement0 =
+            new global::Opik.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
+                {                    new global::Opik.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_FindEvaluatorsSecurityRequirements =
+            new global::Opik.EndPointSecurityRequirement[]
+            {                s_FindEvaluatorsSecurityRequirement0,
+            };
         partial void PrepareFindEvaluatorsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid? projectId,
@@ -76,6 +95,12 @@ namespace Opik
                 page: ref page,
                 size: ref size);
 
+
+            var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_FindEvaluatorsSecurityRequirements,
+                operationName: "FindEvaluatorsAsync");
+
             var __pathBuilder = new global::Opik.PathBuilder(
                 path: "/v1/private/automations/evaluators",
                 baseUri: HttpClient.BaseAddress); 
@@ -87,7 +112,7 @@ namespace Opik
                 .AddOptionalParameter("sorting", sorting)
                 .AddOptionalParameter("page", page?.ToString())
                 .AddOptionalParameter("size", size?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -97,7 +122,7 @@ namespace Opik
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

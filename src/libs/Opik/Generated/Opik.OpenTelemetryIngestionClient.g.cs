@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    /// Resource to ingest Traces and Spans via OpenTelemetry<br/>
+    /// Resource to ingest Traces and Spans via OpenTelemetry.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
