@@ -6,6 +6,7 @@ namespace Opik
     public sealed partial class OpikClient
     {
         /// <inheritdoc cref="OpikClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Opik.EndPointAuthorization}?, bool)"/>
+
         public OpikClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

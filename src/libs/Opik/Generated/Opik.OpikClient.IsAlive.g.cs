@@ -5,6 +5,25 @@ namespace Opik
 {
     public partial class OpikClient
     {
+
+
+        private static readonly global::Opik.EndPointSecurityRequirement s_IsAliveSecurityRequirement0 =
+            new global::Opik.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
+                {                    new global::Opik.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_IsAliveSecurityRequirements =
+            new global::Opik.EndPointSecurityRequirement[]
+            {                s_IsAliveSecurityRequirement0,
+            };
         partial void PrepareIsAliveArguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareIsAliveRequest(
@@ -27,9 +46,15 @@ namespace Opik
             PrepareIsAliveArguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_IsAliveSecurityRequirements,
+                operationName: "IsAliveAsync");
+
             var __pathBuilder = new global::Opik.PathBuilder(
                 path: "/is-alive/ping",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -39,7 +64,7 @@ namespace Opik
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

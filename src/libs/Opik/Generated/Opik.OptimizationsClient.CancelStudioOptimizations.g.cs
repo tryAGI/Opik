@@ -5,6 +5,25 @@ namespace Opik
 {
     public partial class OptimizationsClient
     {
+
+
+        private static readonly global::Opik.EndPointSecurityRequirement s_CancelStudioOptimizationsSecurityRequirement0 =
+            new global::Opik.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
+                {                    new global::Opik.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_CancelStudioOptimizationsSecurityRequirements =
+            new global::Opik.EndPointSecurityRequirement[]
+            {                s_CancelStudioOptimizationsSecurityRequirement0,
+            };
         partial void PrepareCancelStudioOptimizationsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid id);
@@ -33,9 +52,15 @@ namespace Opik
                 httpClient: HttpClient,
                 id: ref id);
 
+
+            var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CancelStudioOptimizationsSecurityRequirements,
+                operationName: "CancelStudioOptimizationsAsync");
+
             var __pathBuilder = new global::Opik.PathBuilder(
                 path: $"/v1/private/optimizations/studio/{id}/cancel",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -45,7 +70,7 @@ namespace Opik
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

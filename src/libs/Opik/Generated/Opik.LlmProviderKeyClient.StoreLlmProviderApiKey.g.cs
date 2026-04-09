@@ -5,6 +5,25 @@ namespace Opik
 {
     public partial class LlmProviderKeyClient
     {
+
+
+        private static readonly global::Opik.EndPointSecurityRequirement s_StoreLlmProviderApiKeySecurityRequirement0 =
+            new global::Opik.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
+                {                    new global::Opik.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_StoreLlmProviderApiKeySecurityRequirements =
+            new global::Opik.EndPointSecurityRequirement[]
+            {                s_StoreLlmProviderApiKeySecurityRequirement0,
+            };
         partial void PrepareStoreLlmProviderApiKeyArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Opik.ProviderApiKeyWrite request);
@@ -36,9 +55,15 @@ namespace Opik
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_StoreLlmProviderApiKeySecurityRequirements,
+                operationName: "StoreLlmProviderApiKeyAsync");
+
             var __pathBuilder = new global::Opik.PathBuilder(
                 path: "/v1/private/llm-provider-key",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -48,7 +73,7 @@ namespace Opik
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

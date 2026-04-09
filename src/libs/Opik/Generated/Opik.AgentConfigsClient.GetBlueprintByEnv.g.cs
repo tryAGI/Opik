@@ -5,6 +5,25 @@ namespace Opik
 {
     public partial class AgentConfigsClient
     {
+
+
+        private static readonly global::Opik.EndPointSecurityRequirement s_GetBlueprintByEnvSecurityRequirement0 =
+            new global::Opik.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
+                {                    new global::Opik.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_GetBlueprintByEnvSecurityRequirements =
+            new global::Opik.EndPointSecurityRequirement[]
+            {                s_GetBlueprintByEnvSecurityRequirement0,
+            };
         partial void PrepareGetBlueprintByEnvArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string envName,
@@ -48,12 +67,18 @@ namespace Opik
                 projectId: ref projectId,
                 maskId: ref maskId);
 
+
+            var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetBlueprintByEnvSecurityRequirements,
+                operationName: "GetBlueprintByEnvAsync");
+
             var __pathBuilder = new global::Opik.PathBuilder(
                 path: $"/v1/private/agent-configs/blueprints/environments/{envName}/projects/{projectId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("mask_id", maskId?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -63,7 +88,7 @@ namespace Opik
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

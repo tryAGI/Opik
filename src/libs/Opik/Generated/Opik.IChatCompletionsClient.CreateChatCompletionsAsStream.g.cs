@@ -11,7 +11,7 @@ namespace Opik
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        global::System.Collections.Generic.IAsyncEnumerable<global::System.Collections.Generic.IList<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>>> CreateChatCompletionsAsStreamAsync(
+        global::System.Collections.Generic.IAsyncEnumerable<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>> CreateChatCompletionsAsStreamAsync(
 
             global::Opik.ChatCompletionRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -45,7 +45,7 @@ namespace Opik
         /// <param name="functionCall"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Collections.Generic.IAsyncEnumerable<global::System.Collections.Generic.IList<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>>> CreateChatCompletionsAsStreamAsync(
+        global::System.Collections.Generic.IAsyncEnumerable<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>> CreateChatCompletionsAsStreamAsync(
             string? model = default,
             global::System.Collections.Generic.IList<global::Opik.Message>? messages = default,
             double? temperature = default,
