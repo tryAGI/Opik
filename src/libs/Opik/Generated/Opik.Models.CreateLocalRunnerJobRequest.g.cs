@@ -37,6 +37,12 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("blueprint_name")]
+        public string? BlueprintName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         public global::Opik.LocalRunnerJobMetadata? Metadata { get; set; }
 
@@ -53,6 +59,7 @@ namespace Opik
         /// <param name="projectId"></param>
         /// <param name="inputs"></param>
         /// <param name="maskId"></param>
+        /// <param name="blueprintName"></param>
         /// <param name="metadata"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -62,12 +69,14 @@ namespace Opik
             global::System.Guid projectId,
             global::Opik.JsonNode? inputs,
             global::System.Guid? maskId,
+            string? blueprintName,
             global::Opik.LocalRunnerJobMetadata? metadata)
         {
             this.AgentName = agentName ?? throw new global::System.ArgumentNullException(nameof(agentName));
             this.Inputs = inputs;
             this.ProjectId = projectId;
             this.MaskId = maskId;
+            this.BlueprintName = blueprintName;
             this.Metadata = metadata;
         }
 
