@@ -9,11 +9,13 @@ namespace Opik
         /// Upsert workspace configuration
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.WorkspaceConfiguration> UpsertWorkspaceConfigurationAsync(
 
             global::Opik.WorkspaceConfiguration request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upsert workspace configuration<br/>
@@ -29,12 +31,14 @@ namespace Opik
         /// <param name="colorMap">
         /// Workspace-level color map. Maps label names to hex color values (e.g. #FF0000). Max 10000 entries.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.WorkspaceConfiguration> UpsertWorkspaceConfigurationAsync(
             string? timeoutToMarkThreadAsInactive = default,
             bool? truncationOnTables = default,
             global::System.Collections.Generic.Dictionary<string, string>? colorMap = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

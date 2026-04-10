@@ -9,22 +9,26 @@ namespace Opik
         /// Create a new dashboard in a workspace
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.DashboardPublic> CreateDashboardAsync(
 
             global::Opik.DashboardWrite request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create dashboard<br/>
         /// Create a new dashboard in a workspace
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.DashboardPublic>> CreateDashboardAsResponseAsync(
 
             global::Opik.DashboardWrite request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create dashboard<br/>
@@ -40,6 +44,7 @@ namespace Opik
         /// <param name="type"></param>
         /// <param name="description"></param>
         /// <param name="config"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.DashboardPublic> CreateDashboardAsync(
@@ -49,6 +54,7 @@ namespace Opik
             string? projectName = default,
             global::Opik.DashboardWriteType? type = default,
             string? description = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

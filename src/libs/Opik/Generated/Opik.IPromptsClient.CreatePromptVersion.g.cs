@@ -9,11 +9,13 @@ namespace Opik
         /// Create prompt version
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.PromptVersionDetail> CreatePromptVersionAsync(
 
             global::Opik.CreatePromptVersionDetail request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create prompt version<br/>
@@ -34,6 +36,7 @@ namespace Opik
         /// <param name="projectName">
         /// If provided, scopes the prompt to the specified project. Ignored when project_id is provided.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.PromptVersionDetail> CreatePromptVersionAsync(
@@ -43,6 +46,7 @@ namespace Opik
             global::System.Collections.Generic.IList<global::System.Guid>? excludeBlueprintUpdateForProjects = default,
             global::System.Guid? projectId = default,
             string? projectName = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

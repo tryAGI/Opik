@@ -9,11 +9,13 @@ namespace Opik
         /// Record experiment items in bulk with traces, spans, and feedback scores. Maximum request size is 4MB.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task ExperimentItemsBulkAsync(
 
             global::Opik.ExperimentItemBulkUploadExperimentItemBulkWriteView request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Record experiment items in bulk<br/>
@@ -25,6 +27,7 @@ namespace Opik
         /// Optional experiment ID. If provided, items will be added to the existing experiment and experimentName will be ignored. If not provided or experiment with that ID doesn't exist, a new experiment will be created with the given experimentName
         /// </param>
         /// <param name="items"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task ExperimentItemsBulkAsync(
@@ -32,6 +35,7 @@ namespace Opik
             string datasetName,
             global::System.Collections.Generic.IList<global::Opik.ExperimentItemBulkRecordExperimentItemBulkWriteView> items,
             global::System.Guid? experimentId = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -9,11 +9,13 @@ namespace Opik
         /// Create chat completions
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Collections.Generic.IAsyncEnumerable<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>> CreateChatCompletionsAsStreamAsync(
 
             global::Opik.ChatCompletionRequest request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create chat completions<br/>
@@ -43,6 +45,7 @@ namespace Opik
         /// <param name="serviceTier"></param>
         /// <param name="functions"></param>
         /// <param name="functionCall"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Collections.Generic.IAsyncEnumerable<global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>> CreateChatCompletionsAsStreamAsync(
@@ -70,6 +73,7 @@ namespace Opik
             string? serviceTier = default,
             global::System.Collections.Generic.IList<global::Opik.Function>? functions = default,
             global::Opik.FunctionCall? functionCall = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

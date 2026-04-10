@@ -10,12 +10,14 @@ namespace Opik
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.DatasetExpansionResponse> ExpandDatasetAsync(
             global::System.Guid id,
 
             global::Opik.DatasetExpansionWrite request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Expand dataset with synthetic samples<br/>
@@ -41,6 +43,7 @@ namespace Opik
         /// <param name="customPrompt">
         /// Custom prompt to use for generation instead of auto-generated one
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.DatasetExpansionResponse> ExpandDatasetAsync(
@@ -50,6 +53,7 @@ namespace Opik
             global::System.Collections.Generic.IList<string>? preserveFields = default,
             string? variationInstructions = default,
             string? customPrompt = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

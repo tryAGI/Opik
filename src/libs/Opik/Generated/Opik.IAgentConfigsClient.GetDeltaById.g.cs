@@ -9,10 +9,12 @@ namespace Opik
         /// Retrieves only the changes (delta) introduced in a specific blueprint
         /// </summary>
         /// <param name="blueprintId"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.AgentBlueprintPublic> GetDeltaByIdAsync(
             global::System.Guid blueprintId,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -9,11 +9,13 @@ namespace Opik
         /// Update multiple dataset items
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task BatchUpdateDatasetItemsAsync(
 
             global::Opik.DatasetItemBatchUpdate request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Batch update dataset items<br/>
@@ -32,6 +34,7 @@ namespace Opik
         /// <param name="mergeTags">
         /// If true, merge tags with existing tags instead of replacing them. Default: false. When using 'filters', this is automatically set to true.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task BatchUpdateDatasetItemsAsync(
@@ -40,6 +43,7 @@ namespace Opik
             global::System.Collections.Generic.IList<global::Opik.DatasetItemFilter>? filters = default,
             global::System.Guid? datasetId = default,
             bool? mergeTags = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

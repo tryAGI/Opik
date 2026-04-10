@@ -10,12 +10,14 @@ namespace Opik
         /// </summary>
         /// <param name="dashboardId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.DashboardPublic> UpdateDashboardAsync(
             global::System.Guid dashboardId,
 
             global::Opik.DashboardUpdatePublic request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update dashboard<br/>
@@ -26,6 +28,7 @@ namespace Opik
         /// <param name="type"></param>
         /// <param name="description"></param>
         /// <param name="config"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.DashboardPublic> UpdateDashboardAsync(
@@ -34,6 +37,7 @@ namespace Opik
             global::Opik.DashboardUpdatePublicType? type = default,
             string? description = default,
             global::Opik.JsonNodePublic? config = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

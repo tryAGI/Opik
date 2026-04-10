@@ -11,12 +11,14 @@ namespace Opik
         /// <param name="datasetId"></param>
         /// <param name="workspaceName"></param>
         /// <param name="path"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task DatasetsRedirectAsync(
             global::System.Guid datasetId,
             string path,
             string? workspaceName = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

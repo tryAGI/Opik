@@ -9,11 +9,13 @@ namespace Opik
         /// Creates a new optimizer config with initial blueprint. Fails if the project already has a config.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateAgentConfigAsync(
 
             global::Opik.AgentConfigCreateWrite request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create optimizer config with initial blueprint<br/>
@@ -29,6 +31,7 @@ namespace Opik
         /// Agent config ID. Generated automatically if not provided
         /// </param>
         /// <param name="blueprint"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CreateAgentConfigAsync(
@@ -36,6 +39,7 @@ namespace Opik
             global::System.Guid? projectId = default,
             string? projectName = default,
             global::System.Guid? id = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

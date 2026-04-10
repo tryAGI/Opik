@@ -9,22 +9,26 @@ namespace Opik
         /// Create a new retention rule. Auto-deactivates any existing active rule for the same scope.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.RetentionRulePublic> CreateRetentionRuleAsync(
 
             global::Opik.RetentionRuleWrite request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create retention rule<br/>
         /// Create a new retention rule. Auto-deactivates any existing active rule for the same scope.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.RetentionRulePublic>> CreateRetentionRuleAsResponseAsync(
 
             global::Opik.RetentionRuleWrite request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create retention rule<br/>
@@ -37,6 +41,7 @@ namespace Opik
         /// </param>
         /// <param name="retention"></param>
         /// <param name="applyToPast"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.RetentionRulePublic> CreateRetentionRuleAsync(
@@ -44,6 +49,7 @@ namespace Opik
             global::Opik.RetentionRuleWriteRetention retention,
             global::System.Guid? projectId = default,
             bool? applyToPast = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

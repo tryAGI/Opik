@@ -9,11 +9,13 @@ namespace Opik
         /// Complete multipart attachment upload
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task CompleteMultiPartUploadAsync(
 
             global::Opik.CompleteMultipartUploadRequest request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Complete multipart attachment upload<br/>
@@ -29,6 +31,7 @@ namespace Opik
         /// <param name="mimeType"></param>
         /// <param name="uploadId"></param>
         /// <param name="uploadedFileParts"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CompleteMultiPartUploadAsync(
@@ -40,6 +43,7 @@ namespace Opik
             global::System.Collections.Generic.IList<global::Opik.MultipartUploadPart> uploadedFileParts,
             string? projectName = default,
             string? mimeType = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
