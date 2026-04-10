@@ -72,6 +72,12 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("blueprint_name")]
+        public string? BlueprintName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         public global::Opik.LocalRunnerJobMetadata? Metadata { get; set; }
 
@@ -118,6 +124,7 @@ namespace Opik
         /// <param name="projectId"></param>
         /// <param name="traceId"></param>
         /// <param name="maskId"></param>
+        /// <param name="blueprintName"></param>
         /// <param name="metadata"></param>
         /// <param name="timeout"></param>
         /// <param name="createdAt"></param>
@@ -137,6 +144,7 @@ namespace Opik
             global::System.Guid? projectId,
             global::System.Guid? traceId,
             global::System.Guid? maskId,
+            string? blueprintName,
             global::Opik.LocalRunnerJobMetadata? metadata,
             int? timeout,
             global::System.DateTime? createdAt,
@@ -153,6 +161,7 @@ namespace Opik
             this.ProjectId = projectId;
             this.TraceId = traceId;
             this.MaskId = maskId;
+            this.BlueprintName = blueprintName;
             this.Metadata = metadata;
             this.Timeout = timeout;
             this.CreatedAt = createdAt;

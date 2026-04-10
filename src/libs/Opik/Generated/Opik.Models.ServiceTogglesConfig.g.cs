@@ -165,9 +165,22 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("v2WorkspaceAllowlistIds")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> V2WorkspaceAllowlistIds { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("forceWorkspaceVersion")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ForceWorkspaceVersion { get; set; }
+
+        /// <summary>
+        /// Included only in requests
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("v2WorkspaceAllowlist")]
+        public string? V2WorkspaceAllowlist { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -200,7 +213,11 @@ namespace Opik
         /// <param name="customllmProviderEnabled"></param>
         /// <param name="ollamaProviderEnabled"></param>
         /// <param name="collaboratorsTabEnabled"></param>
+        /// <param name="v2WorkspaceAllowlistIds"></param>
         /// <param name="forceWorkspaceVersion"></param>
+        /// <param name="v2WorkspaceAllowlist">
+        /// Included only in requests
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -227,7 +244,9 @@ namespace Opik
             bool customllmProviderEnabled,
             bool ollamaProviderEnabled,
             bool collaboratorsTabEnabled,
-            string forceWorkspaceVersion)
+            global::System.Collections.Generic.IList<string> v2WorkspaceAllowlistIds,
+            string forceWorkspaceVersion,
+            string? v2WorkspaceAllowlist)
         {
             this.PythonEvaluatorEnabled = pythonEvaluatorEnabled;
             this.TraceThreadPythonEvaluatorEnabled = traceThreadPythonEvaluatorEnabled;
@@ -251,7 +270,9 @@ namespace Opik
             this.CustomllmProviderEnabled = customllmProviderEnabled;
             this.OllamaProviderEnabled = ollamaProviderEnabled;
             this.CollaboratorsTabEnabled = collaboratorsTabEnabled;
+            this.V2WorkspaceAllowlistIds = v2WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v2WorkspaceAllowlistIds));
             this.ForceWorkspaceVersion = forceWorkspaceVersion ?? throw new global::System.ArgumentNullException(nameof(forceWorkspaceVersion));
+            this.V2WorkspaceAllowlist = v2WorkspaceAllowlist;
         }
 
         /// <summary>
