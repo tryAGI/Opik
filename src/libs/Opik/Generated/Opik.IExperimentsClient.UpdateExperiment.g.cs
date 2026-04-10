@@ -10,12 +10,14 @@ namespace Opik
         /// </summary>
         /// <param name="id"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task UpdateExperimentAsync(
             global::System.Guid id,
 
             global::Opik.ExperimentUpdate request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update experiment by id<br/>
@@ -38,6 +40,7 @@ namespace Opik
         /// The status of the experiment
         /// </param>
         /// <param name="experimentScores"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task UpdateExperimentAsync(
@@ -50,6 +53,7 @@ namespace Opik
             global::Opik.ExperimentUpdateType? type = default,
             global::Opik.ExperimentUpdateStatus? status = default,
             global::System.Collections.Generic.IList<global::Opik.ExperimentScore>? experimentScores = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

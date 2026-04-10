@@ -9,11 +9,13 @@ namespace Opik
         /// Get trace
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateTraceAsync(
 
             global::Opik.TraceWrite request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create trace<br/>
@@ -37,6 +39,7 @@ namespace Opik
         /// </param>
         /// <param name="threadId"></param>
         /// <param name="source"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CreateTraceAsync(
@@ -54,6 +57,7 @@ namespace Opik
             double? ttft = default,
             string? threadId = default,
             global::Opik.TraceWriteSource? source = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

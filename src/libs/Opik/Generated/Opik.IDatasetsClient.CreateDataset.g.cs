@@ -9,11 +9,13 @@ namespace Opik
         /// Create dataset
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateDatasetAsync(
 
             global::Opik.DatasetWrite request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create dataset<br/>
@@ -31,6 +33,7 @@ namespace Opik
         /// <param name="visibility"></param>
         /// <param name="tags"></param>
         /// <param name="description"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CreateDatasetAsync(
@@ -42,6 +45,7 @@ namespace Opik
             global::Opik.DatasetWriteVisibility? visibility = default,
             global::System.Collections.Generic.IList<string>? tags = default,
             string? description = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

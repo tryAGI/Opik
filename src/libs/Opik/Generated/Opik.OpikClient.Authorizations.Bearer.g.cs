@@ -25,6 +25,7 @@ namespace Opik
             Authorizations.Add(new global::Opik.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HttpBearer",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,
