@@ -6,6 +6,19 @@ namespace Opik
     public partial class RunnersClient
     {
 
+        private static readonly global::Opik.AutoSDKServer[] s_ListRunnersServers = new global::Opik.AutoSDKServer[]
+        {            new global::Opik.AutoSDKServer(
+                id: "http-localhost-api",
+                name: "Local server",
+                url: "http://localhost:5173/api",
+                description: "Local server"),
+            new global::Opik.AutoSDKServer(
+                id: "https-www-comet-com-opik-api",
+                name: "Opik Cloud",
+                url: "https://www.comet.com/opik/api",
+                description: "Opik Cloud"),
+        };
+
 
         private static readonly global::Opik.EndPointSecurityRequirement s_ListRunnersSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
@@ -103,7 +116,9 @@ namespace Opik
             {
                             var __pathBuilder = new global::Opik.PathBuilder(
                                 path: "/v1/private/local-runners",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_ListRunnersServers,
+                                defaultBaseUrl: "http://localhost:5173/api")); 
                             __pathBuilder
                                 .AddRequiredParameter("project_id", projectId.ToString()!)
                                 .AddOptionalParameter("status", status?.ToValueString())
