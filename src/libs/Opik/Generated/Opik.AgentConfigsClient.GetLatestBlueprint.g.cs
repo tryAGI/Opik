@@ -6,6 +6,19 @@ namespace Opik
     public partial class AgentConfigsClient
     {
 
+        private static readonly global::Opik.AutoSDKServer[] s_GetLatestBlueprintServers = new global::Opik.AutoSDKServer[]
+        {            new global::Opik.AutoSDKServer(
+                id: "http-localhost-api",
+                name: "Local server",
+                url: "http://localhost:5173/api",
+                description: "Local server"),
+            new global::Opik.AutoSDKServer(
+                id: "https-www-comet-com-opik-api",
+                name: "Opik Cloud",
+                url: "https://www.comet.com/opik/api",
+                description: "Opik Cloud"),
+        };
+
 
         private static readonly global::Opik.EndPointSecurityRequirement s_GetLatestBlueprintSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
@@ -89,7 +102,9 @@ namespace Opik
             {
                             var __pathBuilder = new global::Opik.PathBuilder(
                                 path: $"/v1/private/agent-configs/blueprints/latest/projects/{projectId}",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_GetLatestBlueprintServers,
+                                defaultBaseUrl: "http://localhost:5173/api")); 
                             __pathBuilder
                                 .AddOptionalParameter("mask_id", maskId?.ToString()) 
                                 ;

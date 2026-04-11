@@ -6,6 +6,19 @@ namespace Opik
     public partial class TracesClient
     {
 
+        private static readonly global::Opik.AutoSDKServer[] s_AddTraceFeedbackScoreServers = new global::Opik.AutoSDKServer[]
+        {            new global::Opik.AutoSDKServer(
+                id: "http-localhost-api",
+                name: "Local server",
+                url: "http://localhost:5173/api",
+                description: "Local server"),
+            new global::Opik.AutoSDKServer(
+                id: "https-www-comet-com-opik-api",
+                name: "Opik Cloud",
+                url: "https://www.comet.com/opik/api",
+                description: "Opik Cloud"),
+        };
+
 
         private static readonly global::Opik.EndPointSecurityRequirement s_AddTraceFeedbackScoreSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
@@ -87,7 +100,9 @@ namespace Opik
             {
                             var __pathBuilder = new global::Opik.PathBuilder(
                                 path: $"/v1/private/traces/{id}/feedback-scores",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: ResolveBaseUri(
+                                servers: s_AddTraceFeedbackScoreServers,
+                                defaultBaseUrl: "http://localhost:5173/api"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
