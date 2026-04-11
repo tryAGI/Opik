@@ -133,10 +133,10 @@ namespace Opik
                 } 
             }
 
-                if (contentLength != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Content-Length", contentLength.ToString());
-                }
+            if (contentLength != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("Content-Length", contentLength.ToString());
+            }
 
                             var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
