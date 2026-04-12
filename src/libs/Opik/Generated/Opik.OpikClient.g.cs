@@ -256,6 +256,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Pairing sessions for the `opik connect` CLI command.
+        /// </summary>
+        public OpikConnectClient OpikConnect => new OpikConnectClient(HttpClient, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Optimization resources.
         /// </summary>
         public OptimizationsClient Optimizations => new OptimizationsClient(HttpClient, authorizations: Authorizations, options: Options)

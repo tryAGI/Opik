@@ -23,6 +23,18 @@ namespace Opik
         public required global::Opik.TraceEnrichmentOptions EnrichmentOptions { get; set; }
 
         /// <summary>
+        /// Optional evaluators to apply to the created items
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("evaluators")]
+        public global::System.Collections.Generic.IList<global::Opik.EvaluatorItem>? Evaluators { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("execution_policy")]
+        public global::Opik.ExecutionPolicy? ExecutionPolicy { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -37,15 +49,23 @@ namespace Opik
         /// <param name="enrichmentOptions">
         /// Options for enriching trace data
         /// </param>
+        /// <param name="evaluators">
+        /// Optional evaluators to apply to the created items
+        /// </param>
+        /// <param name="executionPolicy"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateDatasetItemsFromTracesRequest(
             global::System.Collections.Generic.IList<global::System.Guid> traceIds,
-            global::Opik.TraceEnrichmentOptions enrichmentOptions)
+            global::Opik.TraceEnrichmentOptions enrichmentOptions,
+            global::System.Collections.Generic.IList<global::Opik.EvaluatorItem>? evaluators,
+            global::Opik.ExecutionPolicy? executionPolicy)
         {
             this.TraceIds = traceIds ?? throw new global::System.ArgumentNullException(nameof(traceIds));
             this.EnrichmentOptions = enrichmentOptions ?? throw new global::System.ArgumentNullException(nameof(enrichmentOptions));
+            this.Evaluators = evaluators;
+            this.ExecutionPolicy = executionPolicy;
         }
 
         /// <summary>
