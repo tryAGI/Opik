@@ -3,10 +3,10 @@
 
 namespace Opik
 {
-    public partial class DatasetsClient
+    public partial class OpikConnectClient
     {
 
-        private static readonly global::Opik.AutoSDKServer[] s_CreateDatasetItemsFromTracesServers = new global::Opik.AutoSDKServer[]
+        private static readonly global::Opik.AutoSDKServer[] s_ActivateOpikConnectSessionServers = new global::Opik.AutoSDKServer[]
         {            new global::Opik.AutoSDKServer(
                 id: "http-localhost-api",
                 name: "Local server",
@@ -20,7 +20,7 @@ namespace Opik
         };
 
 
-        private static readonly global::Opik.EndPointSecurityRequirement s_CreateDatasetItemsFromTracesSecurityRequirement0 =
+        private static readonly global::Opik.EndPointSecurityRequirement s_ActivateOpikConnectSessionSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
             {
                 Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
@@ -34,36 +34,36 @@ namespace Opik
                     },
                 },
             };
-        private static readonly global::Opik.EndPointSecurityRequirement[] s_CreateDatasetItemsFromTracesSecurityRequirements =
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_ActivateOpikConnectSessionSecurityRequirements =
             new global::Opik.EndPointSecurityRequirement[]
-            {                s_CreateDatasetItemsFromTracesSecurityRequirement0,
+            {                s_ActivateOpikConnectSessionSecurityRequirement0,
             };
-        partial void PrepareCreateDatasetItemsFromTracesArguments(
+        partial void PrepareActivateOpikConnectSessionArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::System.Guid datasetId,
-            global::Opik.CreateDatasetItemsFromTracesRequest request);
-        partial void PrepareCreateDatasetItemsFromTracesRequest(
+            ref global::System.Guid sessionId,
+            global::Opik.ActivateRequest request);
+        partial void PrepareActivateOpikConnectSessionRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.Guid datasetId,
-            global::Opik.CreateDatasetItemsFromTracesRequest request);
-        partial void ProcessCreateDatasetItemsFromTracesResponse(
+            global::System.Guid sessionId,
+            global::Opik.ActivateRequest request);
+        partial void ProcessActivateOpikConnectSessionResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// Create dataset items from traces<br/>
-        /// Create dataset items from traces with enriched metadata
+        /// Activate an opik-connect pairing session<br/>
+        /// Verify the activation HMAC and flip the runner row to CONNECTED
         /// </summary>
-        /// <param name="datasetId"></param>
+        /// <param name="sessionId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task CreateDatasetItemsFromTracesAsync(
-            global::System.Guid datasetId,
+        public async global::System.Threading.Tasks.Task ActivateOpikConnectSessionAsync(
+            global::System.Guid sessionId,
 
-            global::Opik.CreateDatasetItemsFromTracesRequest request,
+            global::Opik.ActivateRequest request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -71,16 +71,16 @@ namespace Opik
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateDatasetItemsFromTracesArguments(
+            PrepareActivateOpikConnectSessionArguments(
                 httpClient: HttpClient,
-                datasetId: ref datasetId,
+                sessionId: ref sessionId,
                 request: request);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateDatasetItemsFromTracesSecurityRequirements,
-                operationName: "CreateDatasetItemsFromTracesAsync");
+                securityRequirements: s_ActivateOpikConnectSessionSecurityRequirements,
+                operationName: "ActivateOpikConnectSessionAsync");
 
             using var __timeoutCancellationTokenSource = global::Opik.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -99,9 +99,9 @@ namespace Opik
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
                             var __pathBuilder = new global::Opik.PathBuilder(
-                                path: $"/v1/private/datasets/{datasetId}/items/from-traces",
+                                path: $"/v1/private/opik-connect/sessions/{sessionId}/activate",
                                 baseUri: ResolveBaseUri(
-                                servers: s_CreateDatasetItemsFromTracesServers,
+                                servers: s_ActivateOpikConnectSessionServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -146,10 +146,10 @@ namespace Opik
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateDatasetItemsFromTracesRequest(
+                PrepareActivateOpikConnectSessionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
+                    sessionId: sessionId,
                     request: request);
 
                 return __httpRequest;
@@ -167,9 +167,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateDatasetItemsFromTraces",
-                                methodName: "CreateDatasetItemsFromTracesAsync",
-                                pathTemplate: "$\"/v1/private/datasets/{datasetId}/items/from-traces\"",
+                                operationId: "ActivateOpikConnectSession",
+                                methodName: "ActivateOpikConnectSessionAsync",
+                                pathTemplate: "$\"/v1/private/opik-connect/sessions/{sessionId}/activate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -194,9 +194,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateDatasetItemsFromTraces",
-                                methodName: "CreateDatasetItemsFromTracesAsync",
-                                pathTemplate: "$\"/v1/private/datasets/{datasetId}/items/from-traces\"",
+                                operationId: "ActivateOpikConnectSession",
+                                methodName: "ActivateOpikConnectSessionAsync",
+                                pathTemplate: "$\"/v1/private/opik-connect/sessions/{sessionId}/activate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -229,9 +229,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateDatasetItemsFromTraces",
-                                methodName: "CreateDatasetItemsFromTracesAsync",
-                                pathTemplate: "$\"/v1/private/datasets/{datasetId}/items/from-traces\"",
+                                operationId: "ActivateOpikConnectSession",
+                                methodName: "ActivateOpikConnectSessionAsync",
+                                pathTemplate: "$\"/v1/private/opik-connect/sessions/{sessionId}/activate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -268,7 +268,7 @@ namespace Opik
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateDatasetItemsFromTracesResponse(
+                ProcessActivateOpikConnectSessionResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -276,9 +276,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateDatasetItemsFromTraces",
-                                methodName: "CreateDatasetItemsFromTracesAsync",
-                                pathTemplate: "$\"/v1/private/datasets/{datasetId}/items/from-traces\"",
+                                operationId: "ActivateOpikConnectSession",
+                                methodName: "ActivateOpikConnectSessionAsync",
+                                pathTemplate: "$\"/v1/private/opik-connect/sessions/{sessionId}/activate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -296,9 +296,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateDatasetItemsFromTraces",
-                                methodName: "CreateDatasetItemsFromTracesAsync",
-                                pathTemplate: "$\"/v1/private/datasets/{datasetId}/items/from-traces\"",
+                                operationId: "ActivateOpikConnectSession",
+                                methodName: "ActivateOpikConnectSessionAsync",
+                                pathTemplate: "$\"/v1/private/opik-connect/sessions/{sessionId}/activate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -311,6 +311,234 @@ namespace Opik
                                 willRetry: false,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
+                            // Invalid HMAC
+                            if ((int)__response.StatusCode == 403)
+                            {
+                                string? __content_403 = null;
+                                global::System.Exception? __exception_403 = null;
+                                global::Opik.ErrorMessage? __value_403 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_403 = global::Opik.ErrorMessage.FromJson(__content_403, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_403 = global::Opik.ErrorMessage.FromJson(__content_403, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_403 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_403,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_403,
+                                    ResponseObject = __value_403,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
+                            // Session not found
+                            if ((int)__response.StatusCode == 404)
+                            {
+                                string? __content_404 = null;
+                                global::System.Exception? __exception_404 = null;
+                                global::Opik.ErrorMessage? __value_404 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_404 = global::Opik.ErrorMessage.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_404 = global::Opik.ErrorMessage.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_404 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_404,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_404,
+                                    ResponseObject = __value_404,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
+                            // Session already activated
+                            if ((int)__response.StatusCode == 409)
+                            {
+                                string? __content_409 = null;
+                                global::System.Exception? __exception_409 = null;
+                                global::Opik.ErrorMessage? __value_409 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_409 = global::Opik.ErrorMessage.FromJson(__content_409, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_409 = global::Opik.ErrorMessage.FromJson(__content_409, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_409 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_409,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_409,
+                                    ResponseObject = __value_409,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
+                            // Unprocessable entity
+                            if ((int)__response.StatusCode == 422)
+                            {
+                                string? __content_422 = null;
+                                global::System.Exception? __exception_422 = null;
+                                global::Opik.ErrorMessage? __value_422 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_422 = global::Opik.ErrorMessage.FromJson(__content_422, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_422 = global::Opik.ErrorMessage.FromJson(__content_422, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_422 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_422,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_422,
+                                    ResponseObject = __value_422,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
+                            // Too many requests
+                            if ((int)__response.StatusCode == 429)
+                            {
+                                string? __content_429 = null;
+                                global::System.Exception? __exception_429 = null;
+                                global::Opik.ErrorMessage? __value_429 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_429 = global::Opik.ErrorMessage.FromJson(__content_429, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_429 = global::Opik.ErrorMessage.FromJson(__content_429, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_429 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                                    message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_429,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_429,
+                                    ResponseObject = __value_429,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
+                            // Feature disabled
+                            if ((int)__response.StatusCode == 501)
+                            {
+                                string? __content_501 = null;
+                                global::System.Exception? __exception_501 = null;
+                                global::Opik.ErrorMessage? __value_501 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_501 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_501 = global::Opik.ErrorMessage.FromJson(__content_501, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_501 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_501 = global::Opik.ErrorMessage.FromJson(__content_501, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_501 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                                    message: __content_501 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_501,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_501,
+                                    ResponseObject = __value_501,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -388,42 +616,30 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Create dataset items from traces<br/>
-        /// Create dataset items from traces with enriched metadata
+        /// Activate an opik-connect pairing session<br/>
+        /// Verify the activation HMAC and flip the runner row to CONNECTED
         /// </summary>
-        /// <param name="datasetId"></param>
-        /// <param name="traceIds">
-        /// Set of trace IDs to add to the dataset
-        /// </param>
-        /// <param name="enrichmentOptions">
-        /// Options for enriching trace data
-        /// </param>
-        /// <param name="evaluators">
-        /// Optional evaluators to apply to the created items
-        /// </param>
-        /// <param name="executionPolicy"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="runnerName"></param>
+        /// <param name="hmac"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task CreateDatasetItemsFromTracesAsync(
-            global::System.Guid datasetId,
-            global::System.Collections.Generic.IList<global::System.Guid> traceIds,
-            global::Opik.TraceEnrichmentOptions enrichmentOptions,
-            global::System.Collections.Generic.IList<global::Opik.EvaluatorItem>? evaluators = default,
-            global::Opik.ExecutionPolicy? executionPolicy = default,
+        public async global::System.Threading.Tasks.Task ActivateOpikConnectSessionAsync(
+            global::System.Guid sessionId,
+            string runnerName,
+            string hmac,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.CreateDatasetItemsFromTracesRequest
+            var __request = new global::Opik.ActivateRequest
             {
-                TraceIds = traceIds,
-                EnrichmentOptions = enrichmentOptions,
-                Evaluators = evaluators,
-                ExecutionPolicy = executionPolicy,
+                RunnerName = runnerName,
+                Hmac = hmac,
             };
 
-            await CreateDatasetItemsFromTracesAsync(
-                datasetId: datasetId,
+            await ActivateOpikConnectSessionAsync(
+                sessionId: sessionId,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
