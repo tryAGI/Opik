@@ -4,11 +4,11 @@
 namespace Opik
 {
     /// <summary>
-    /// Pairing sessions for the `opik connect` CLI command<br/>
+    /// Pairing sessions for the `opik connect` and `opik endpoint` CLI commands<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public sealed partial class OpikConnectClient : global::Opik.IOpikConnectClient, global::System.IDisposable
+    public sealed partial class PairingClient : global::Opik.IPairingClient, global::System.IDisposable
     {
         /// <summary>
         /// Local server
@@ -72,7 +72,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// Creates a new instance of the OpikConnectClient.
+        /// Creates a new instance of the PairingClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -80,7 +80,7 @@ namespace Opik
         /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public OpikConnectClient(
+        public PairingClient(
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::Opik.EndPointAuthorization>? authorizations = null,
@@ -94,7 +94,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// Creates a new instance of the OpikConnectClient.
+        /// Creates a new instance of the PairingClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -103,7 +103,7 @@ namespace Opik
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public OpikConnectClient(
+        public PairingClient(
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::Opik.EndPointAuthorization>? authorizations = null,

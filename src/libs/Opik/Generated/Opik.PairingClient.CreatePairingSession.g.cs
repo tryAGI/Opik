@@ -3,10 +3,10 @@
 
 namespace Opik
 {
-    public partial class RunnersClient
+    public partial class PairingClient
     {
 
-        private static readonly global::Opik.AutoSDKServer[] s_ConnectRunnerServers = new global::Opik.AutoSDKServer[]
+        private static readonly global::Opik.AutoSDKServer[] s_CreatePairingSessionServers = new global::Opik.AutoSDKServer[]
         {            new global::Opik.AutoSDKServer(
                 id: "http-localhost-api",
                 name: "Local server",
@@ -20,7 +20,7 @@ namespace Opik
         };
 
 
-        private static readonly global::Opik.EndPointSecurityRequirement s_ConnectRunnerSecurityRequirement0 =
+        private static readonly global::Opik.EndPointSecurityRequirement s_CreatePairingSessionSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
             {
                 Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
@@ -34,60 +34,37 @@ namespace Opik
                     },
                 },
             };
-        private static readonly global::Opik.EndPointSecurityRequirement[] s_ConnectRunnerSecurityRequirements =
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_CreatePairingSessionSecurityRequirements =
             new global::Opik.EndPointSecurityRequirement[]
-            {                s_ConnectRunnerSecurityRequirement0,
+            {                s_CreatePairingSessionSecurityRequirement0,
             };
-        partial void PrepareConnectRunnerArguments(
+        partial void PrepareCreatePairingSessionArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Opik.LocalRunnerConnectRequest request);
-        partial void PrepareConnectRunnerRequest(
+            global::Opik.CreateSessionRequest request);
+        partial void PrepareCreatePairingSessionRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Opik.LocalRunnerConnectRequest request);
-        partial void ProcessConnectRunnerResponse(
+            global::Opik.CreateSessionRequest request);
+        partial void ProcessCreatePairingSessionResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessConnectRunnerResponseContent(
+        partial void ProcessCreatePairingSessionResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Connect a local runner<br/>
-        /// Exchange a pairing code or API key for local runner credentials
+        /// Create a pairing session<br/>
+        /// Register a short-lived pairing session that a local daemon will later activate via HMAC
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.LocalRunnerConnectResponse> ConnectRunnerAsync(
+        public async global::System.Threading.Tasks.Task<global::Opik.CreateSessionResponse> CreatePairingSessionAsync(
 
-            global::Opik.LocalRunnerConnectRequest request,
-            global::Opik.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __response = await ConnectRunnerAsResponseAsync(
-
-                request: request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken
-            ).ConfigureAwait(false);
-
-            return __response.Body;
-        }
-        /// <summary>
-        /// Connect a local runner<br/>
-        /// Exchange a pairing code or API key for local runner credentials
-        /// </summary>
-        /// <param name="request"></param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.LocalRunnerConnectResponse>> ConnectRunnerAsResponseAsync(
-
-            global::Opik.LocalRunnerConnectRequest request,
+            global::Opik.CreateSessionRequest request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -95,15 +72,15 @@ namespace Opik
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareConnectRunnerArguments(
+            PrepareCreatePairingSessionArguments(
                 httpClient: HttpClient,
                 request: request);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_ConnectRunnerSecurityRequirements,
-                operationName: "ConnectRunnerAsync");
+                securityRequirements: s_CreatePairingSessionSecurityRequirements,
+                operationName: "CreatePairingSessionAsync");
 
             using var __timeoutCancellationTokenSource = global::Opik.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -122,9 +99,9 @@ namespace Opik
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
                             var __pathBuilder = new global::Opik.PathBuilder(
-                                path: "/v1/private/local-runners/connections",
+                                path: "/v1/private/pairing/sessions",
                                 baseUri: ResolveBaseUri(
-                                servers: s_ConnectRunnerServers,
+                                servers: s_CreatePairingSessionServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -169,7 +146,7 @@ namespace Opik
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareConnectRunnerRequest(
+                PrepareCreatePairingSessionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     request: request);
@@ -189,9 +166,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ConnectRunner",
-                                methodName: "ConnectRunnerAsync",
-                                pathTemplate: "\"/v1/private/local-runners/connections\"",
+                                operationId: "CreatePairingSession",
+                                methodName: "CreatePairingSessionAsync",
+                                pathTemplate: "\"/v1/private/pairing/sessions\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -216,9 +193,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ConnectRunner",
-                                methodName: "ConnectRunnerAsync",
-                                pathTemplate: "\"/v1/private/local-runners/connections\"",
+                                operationId: "CreatePairingSession",
+                                methodName: "CreatePairingSessionAsync",
+                                pathTemplate: "\"/v1/private/pairing/sessions\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -251,9 +228,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ConnectRunner",
-                                methodName: "ConnectRunnerAsync",
-                                pathTemplate: "\"/v1/private/local-runners/connections\"",
+                                operationId: "CreatePairingSession",
+                                methodName: "CreatePairingSessionAsync",
+                                pathTemplate: "\"/v1/private/pairing/sessions\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -290,7 +267,7 @@ namespace Opik
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessConnectRunnerResponse(
+                ProcessCreatePairingSessionResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -298,9 +275,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ConnectRunner",
-                                methodName: "ConnectRunnerAsync",
-                                pathTemplate: "\"/v1/private/local-runners/connections\"",
+                                operationId: "CreatePairingSession",
+                                methodName: "CreatePairingSessionAsync",
+                                pathTemplate: "\"/v1/private/pairing/sessions\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -318,9 +295,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ConnectRunner",
-                                methodName: "ConnectRunnerAsync",
-                                pathTemplate: "\"/v1/private/local-runners/connections\"",
+                                operationId: "CreatePairingSession",
+                                methodName: "CreatePairingSessionAsync",
+                                pathTemplate: "\"/v1/private/pairing/sessions\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -371,7 +348,7 @@ namespace Opik
                                         h => h.Value),
                                 };
                             }
-                            // Not found
+                            // Project not found
                             if ((int)__response.StatusCode == 404)
                             {
                                 string? __content_404 = null;
@@ -409,6 +386,120 @@ namespace Opik
                                         h => h.Value),
                                 };
                             }
+                            // Unprocessable entity
+                            if ((int)__response.StatusCode == 422)
+                            {
+                                string? __content_422 = null;
+                                global::System.Exception? __exception_422 = null;
+                                global::Opik.ErrorMessage? __value_422 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_422 = global::Opik.ErrorMessage.FromJson(__content_422, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_422 = global::Opik.ErrorMessage.FromJson(__content_422, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_422 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_422,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_422,
+                                    ResponseObject = __value_422,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
+                            // Too many requests
+                            if ((int)__response.StatusCode == 429)
+                            {
+                                string? __content_429 = null;
+                                global::System.Exception? __exception_429 = null;
+                                global::Opik.ErrorMessage? __value_429 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_429 = global::Opik.ErrorMessage.FromJson(__content_429, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_429 = global::Opik.ErrorMessage.FromJson(__content_429, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_429 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                                    message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_429,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_429,
+                                    ResponseObject = __value_429,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
+                            // Feature disabled
+                            if ((int)__response.StatusCode == 501)
+                            {
+                                string? __content_501 = null;
+                                global::System.Exception? __exception_501 = null;
+                                global::Opik.ErrorMessage? __value_501 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_501 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_501 = global::Opik.ErrorMessage.FromJson(__content_501, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_501 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_501 = global::Opik.ErrorMessage.FromJson(__content_501, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_501 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                                    message: __content_501 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_501,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_501,
+                                    ResponseObject = __value_501,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -422,7 +513,7 @@ namespace Opik
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessConnectRunnerResponseContent(
+                                ProcessCreatePairingSessionResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -431,12 +522,9 @@ namespace Opik
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Opik.LocalRunnerConnectResponse.FromJson(__content, JsonSerializerContext) ??
+                                    return
+                                        global::Opik.CreateSessionResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.LocalRunnerConnectResponse>(
-                                        statusCode: __response.StatusCode,
-                                        headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -464,12 +552,9 @@ namespace Opik
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Opik.LocalRunnerConnectResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    return
+                                        await global::Opik.CreateSessionResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.LocalRunnerConnectResponse>(
-                                        statusCode: __response.StatusCode,
-                                        headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -508,27 +593,33 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Connect a local runner<br/>
-        /// Exchange a pairing code or API key for local runner credentials
+        /// Create a pairing session<br/>
+        /// Register a short-lived pairing session that a local daemon will later activate via HMAC
         /// </summary>
-        /// <param name="pairingCode"></param>
-        /// <param name="runnerName"></param>
+        /// <param name="projectId"></param>
+        /// <param name="activationKey"></param>
+        /// <param name="ttlSeconds"></param>
+        /// <param name="type"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.LocalRunnerConnectResponse> ConnectRunnerAsync(
-            string pairingCode,
-            string runnerName,
+        public async global::System.Threading.Tasks.Task<global::Opik.CreateSessionResponse> CreatePairingSessionAsync(
+            global::System.Guid projectId,
+            string activationKey,
+            global::Opik.CreateSessionRequestType type,
+            int? ttlSeconds = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.LocalRunnerConnectRequest
+            var __request = new global::Opik.CreateSessionRequest
             {
-                PairingCode = pairingCode,
-                RunnerName = runnerName,
+                ProjectId = projectId,
+                ActivationKey = activationKey,
+                TtlSeconds = ttlSeconds,
+                Type = type,
             };
 
-            return await ConnectRunnerAsync(
+            return await CreatePairingSessionAsync(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

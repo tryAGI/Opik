@@ -256,9 +256,9 @@ namespace Opik
         };
 
         /// <summary>
-        /// Pairing sessions for the `opik connect` CLI command.
+        /// Optimization resources.
         /// </summary>
-        public OpikConnectClient OpikConnect => new OpikConnectClient(HttpClient, authorizations: Authorizations, options: Options)
+        public OptimizationsClient Optimizations => new OptimizationsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -266,9 +266,9 @@ namespace Opik
         };
 
         /// <summary>
-        /// Optimization resources.
+        /// Pairing sessions for the `opik connect` and `opik endpoint` CLI commands.
         /// </summary>
-        public OptimizationsClient Optimizations => new OptimizationsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PairingClient Pairing => new PairingClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
