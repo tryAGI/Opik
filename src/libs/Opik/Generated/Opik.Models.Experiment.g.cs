@@ -188,28 +188,28 @@ namespace Opik
         public global::Opik.DatasetVersionSummary? DatasetVersionSummary { get; set; }
 
         /// <summary>
-        /// Pass rate for evaluation suite experiments (0.0-1.0). Null for regular experiments.<br/>
+        /// Pass rate for test suite experiments (0.0-1.0). Null for regular experiments.<br/>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pass_rate")]
         public double? PassRate { get; set; }
 
         /// <summary>
-        /// Number of items that passed for evaluation suite experiments. Null for regular experiments.<br/>
+        /// Number of items that passed for test suite experiments. Null for regular experiments.<br/>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("passed_count")]
         public long? PassedCount { get; set; }
 
         /// <summary>
-        /// Total number of items for evaluation suite experiments. Null for regular experiments.<br/>
+        /// Total number of items for test suite experiments. Null for regular experiments.<br/>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_count")]
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// Per-assertion average pass rates for evaluation suite experiments. Null for regular experiments.<br/>
+        /// Per-assertion average pass rates for test suite experiments. Null for regular experiments.<br/>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assertion_scores")]
@@ -287,19 +287,19 @@ namespace Opik
         /// Included only in responses
         /// </param>
         /// <param name="passRate">
-        /// Pass rate for evaluation suite experiments (0.0-1.0). Null for regular experiments.<br/>
+        /// Pass rate for test suite experiments (0.0-1.0). Null for regular experiments.<br/>
         /// Included only in responses
         /// </param>
         /// <param name="passedCount">
-        /// Number of items that passed for evaluation suite experiments. Null for regular experiments.<br/>
+        /// Number of items that passed for test suite experiments. Null for regular experiments.<br/>
         /// Included only in responses
         /// </param>
         /// <param name="totalCount">
-        /// Total number of items for evaluation suite experiments. Null for regular experiments.<br/>
+        /// Total number of items for test suite experiments. Null for regular experiments.<br/>
         /// Included only in responses
         /// </param>
         /// <param name="assertionScores">
-        /// Per-assertion average pass rates for evaluation suite experiments. Null for regular experiments.<br/>
+        /// Per-assertion average pass rates for test suite experiments. Null for regular experiments.<br/>
         /// Included only in responses
         /// </param>
 #if NET7_0_OR_GREATER
