@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    /// Per-assertion average pass rates for evaluation suite experiments. Null for regular experiments.<br/>
+    /// Per-assertion average pass rates for test suite experiments. Null for regular experiments.<br/>
     /// Included only in responses
     /// </summary>
     public sealed partial class AssertionScoreAveragePublic
