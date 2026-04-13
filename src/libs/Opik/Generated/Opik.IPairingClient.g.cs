@@ -4,11 +4,11 @@
 namespace Opik
 {
     /// <summary>
-    /// Pairing sessions for the `opik connect` CLI command<br/>
+    /// Pairing sessions for the `opik connect` and `opik endpoint` CLI commands<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public partial interface IOpikConnectClient : global::System.IDisposable
+    public partial interface IPairingClient : global::System.IDisposable
     {
         /// <summary>
         /// The HttpClient instance.

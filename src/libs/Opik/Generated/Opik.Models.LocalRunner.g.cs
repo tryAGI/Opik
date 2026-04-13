@@ -58,6 +58,13 @@ namespace Opik
         public global::Opik.JsonNode? Checklist { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.LocalRunnerTypeJsonConverter))]
+        public global::Opik.LocalRunnerType? Type { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -74,6 +81,7 @@ namespace Opik
         /// <param name="agents"></param>
         /// <param name="capabilities"></param>
         /// <param name="checklist"></param>
+        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -85,7 +93,8 @@ namespace Opik
             global::System.DateTime? connectedAt,
             global::System.Collections.Generic.IList<global::Opik.Agent>? agents,
             global::System.Collections.Generic.IList<string>? capabilities,
-            global::Opik.JsonNode? checklist)
+            global::Opik.JsonNode? checklist,
+            global::Opik.LocalRunnerType? type)
         {
             this.Id = id;
             this.Name = name;
@@ -95,6 +104,7 @@ namespace Opik
             this.Agents = agents;
             this.Capabilities = capabilities;
             this.Checklist = checklist;
+            this.Type = type;
         }
 
         /// <summary>

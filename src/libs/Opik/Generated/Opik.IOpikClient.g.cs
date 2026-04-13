@@ -184,14 +184,14 @@ namespace Opik
         public OpenTelemetryIngestionClient OpenTelemetryIngestion { get; }
 
         /// <summary>
-        /// Pairing sessions for the `opik connect` CLI command.
-        /// </summary>
-        public OpikConnectClient OpikConnect { get; }
-
-        /// <summary>
         /// Optimization resources.
         /// </summary>
         public OptimizationsClient Optimizations { get; }
+
+        /// <summary>
+        /// Pairing sessions for the `opik connect` and `opik endpoint` CLI commands.
+        /// </summary>
+        public PairingClient Pairing { get; }
 
         /// <summary>
         /// Project related resources.

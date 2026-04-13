@@ -29,6 +29,14 @@ namespace Opik
         public int? TtlSeconds { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.CreateSessionRequestTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Opik.CreateSessionRequestType Type { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -39,6 +47,7 @@ namespace Opik
         /// </summary>
         /// <param name="projectId"></param>
         /// <param name="activationKey"></param>
+        /// <param name="type"></param>
         /// <param name="ttlSeconds"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -46,11 +55,13 @@ namespace Opik
         public CreateSessionRequest(
             global::System.Guid projectId,
             string activationKey,
+            global::Opik.CreateSessionRequestType type,
             int? ttlSeconds)
         {
             this.ProjectId = projectId;
             this.ActivationKey = activationKey ?? throw new global::System.ArgumentNullException(nameof(activationKey));
             this.TtlSeconds = ttlSeconds;
+            this.Type = type;
         }
 
         /// <summary>

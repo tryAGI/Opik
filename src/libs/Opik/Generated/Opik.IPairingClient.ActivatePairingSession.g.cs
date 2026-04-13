@@ -2,35 +2,37 @@
 
 namespace Opik
 {
-    public partial interface IOpikConnectClient
+    public partial interface IPairingClient
     {
         /// <summary>
-        /// Create an opik-connect pairing session<br/>
-        /// Register a short-lived pairing session that a local daemon will later activate via HMAC
+        /// Activate a pairing session<br/>
+        /// Verify the activation HMAC and flip the runner row to CONNECTED
         /// </summary>
+        /// <param name="sessionId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Opik.CreateSessionResponse> CreateOpikConnectSessionAsync(
+        global::System.Threading.Tasks.Task ActivatePairingSessionAsync(
+            global::System.Guid sessionId,
 
-            global::Opik.CreateSessionRequest request,
+            global::Opik.ActivateRequest request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create an opik-connect pairing session<br/>
-        /// Register a short-lived pairing session that a local daemon will later activate via HMAC
+        /// Activate a pairing session<br/>
+        /// Verify the activation HMAC and flip the runner row to CONNECTED
         /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="activationKey"></param>
-        /// <param name="ttlSeconds"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="runnerName"></param>
+        /// <param name="hmac"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Opik.CreateSessionResponse> CreateOpikConnectSessionAsync(
-            global::System.Guid projectId,
-            string activationKey,
-            int? ttlSeconds = default,
+        global::System.Threading.Tasks.Task ActivatePairingSessionAsync(
+            global::System.Guid sessionId,
+            string runnerName,
+            string hmac,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

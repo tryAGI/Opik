@@ -3,10 +3,10 @@
 
 namespace Opik
 {
-    public partial class OpikConnectClient
+    public partial class PairingClient
     {
 
-        private static readonly global::Opik.AutoSDKServer[] s_CreateOpikConnectSessionServers = new global::Opik.AutoSDKServer[]
+        private static readonly global::Opik.AutoSDKServer[] s_ActivatePairingSessionServers = new global::Opik.AutoSDKServer[]
         {            new global::Opik.AutoSDKServer(
                 id: "http-localhost-api",
                 name: "Local server",
@@ -20,7 +20,7 @@ namespace Opik
         };
 
 
-        private static readonly global::Opik.EndPointSecurityRequirement s_CreateOpikConnectSessionSecurityRequirement0 =
+        private static readonly global::Opik.EndPointSecurityRequirement s_ActivatePairingSessionSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
             {
                 Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
@@ -34,37 +34,36 @@ namespace Opik
                     },
                 },
             };
-        private static readonly global::Opik.EndPointSecurityRequirement[] s_CreateOpikConnectSessionSecurityRequirements =
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_ActivatePairingSessionSecurityRequirements =
             new global::Opik.EndPointSecurityRequirement[]
-            {                s_CreateOpikConnectSessionSecurityRequirement0,
+            {                s_ActivatePairingSessionSecurityRequirement0,
             };
-        partial void PrepareCreateOpikConnectSessionArguments(
+        partial void PrepareActivatePairingSessionArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Opik.CreateSessionRequest request);
-        partial void PrepareCreateOpikConnectSessionRequest(
+            ref global::System.Guid sessionId,
+            global::Opik.ActivateRequest request);
+        partial void PrepareActivatePairingSessionRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Opik.CreateSessionRequest request);
-        partial void ProcessCreateOpikConnectSessionResponse(
+            global::System.Guid sessionId,
+            global::Opik.ActivateRequest request);
+        partial void ProcessActivatePairingSessionResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateOpikConnectSessionResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Create an opik-connect pairing session<br/>
-        /// Register a short-lived pairing session that a local daemon will later activate via HMAC
+        /// Activate a pairing session<br/>
+        /// Verify the activation HMAC and flip the runner row to CONNECTED
         /// </summary>
+        /// <param name="sessionId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.CreateSessionResponse> CreateOpikConnectSessionAsync(
+        public async global::System.Threading.Tasks.Task ActivatePairingSessionAsync(
+            global::System.Guid sessionId,
 
-            global::Opik.CreateSessionRequest request,
+            global::Opik.ActivateRequest request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -72,15 +71,16 @@ namespace Opik
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateOpikConnectSessionArguments(
+            PrepareActivatePairingSessionArguments(
                 httpClient: HttpClient,
+                sessionId: ref sessionId,
                 request: request);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateOpikConnectSessionSecurityRequirements,
-                operationName: "CreateOpikConnectSessionAsync");
+                securityRequirements: s_ActivatePairingSessionSecurityRequirements,
+                operationName: "ActivatePairingSessionAsync");
 
             using var __timeoutCancellationTokenSource = global::Opik.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -99,9 +99,9 @@ namespace Opik
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
                             var __pathBuilder = new global::Opik.PathBuilder(
-                                path: "/v1/private/opik-connect/sessions",
+                                path: $"/v1/private/pairing/sessions/{sessionId}/activate",
                                 baseUri: ResolveBaseUri(
-                                servers: s_CreateOpikConnectSessionServers,
+                                servers: s_ActivatePairingSessionServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -146,9 +146,10 @@ namespace Opik
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateOpikConnectSessionRequest(
+                PrepareActivatePairingSessionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    sessionId: sessionId,
                     request: request);
 
                 return __httpRequest;
@@ -166,9 +167,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateOpikConnectSession",
-                                methodName: "CreateOpikConnectSessionAsync",
-                                pathTemplate: "\"/v1/private/opik-connect/sessions\"",
+                                operationId: "ActivatePairingSession",
+                                methodName: "ActivatePairingSessionAsync",
+                                pathTemplate: "$\"/v1/private/pairing/sessions/{sessionId}/activate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -193,9 +194,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateOpikConnectSession",
-                                methodName: "CreateOpikConnectSessionAsync",
-                                pathTemplate: "\"/v1/private/opik-connect/sessions\"",
+                                operationId: "ActivatePairingSession",
+                                methodName: "ActivatePairingSessionAsync",
+                                pathTemplate: "$\"/v1/private/pairing/sessions/{sessionId}/activate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -228,9 +229,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateOpikConnectSession",
-                                methodName: "CreateOpikConnectSessionAsync",
-                                pathTemplate: "\"/v1/private/opik-connect/sessions\"",
+                                operationId: "ActivatePairingSession",
+                                methodName: "ActivatePairingSessionAsync",
+                                pathTemplate: "$\"/v1/private/pairing/sessions/{sessionId}/activate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -267,7 +268,7 @@ namespace Opik
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateOpikConnectSessionResponse(
+                ProcessActivatePairingSessionResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -275,9 +276,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateOpikConnectSession",
-                                methodName: "CreateOpikConnectSessionAsync",
-                                pathTemplate: "\"/v1/private/opik-connect/sessions\"",
+                                operationId: "ActivatePairingSession",
+                                methodName: "ActivatePairingSessionAsync",
+                                pathTemplate: "$\"/v1/private/pairing/sessions/{sessionId}/activate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -295,9 +296,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateOpikConnectSession",
-                                methodName: "CreateOpikConnectSessionAsync",
-                                pathTemplate: "\"/v1/private/opik-connect/sessions\"",
+                                operationId: "ActivatePairingSession",
+                                methodName: "ActivatePairingSessionAsync",
+                                pathTemplate: "$\"/v1/private/pairing/sessions/{sessionId}/activate\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -310,45 +311,45 @@ namespace Opik
                                 willRetry: false,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Bad request
-                            if ((int)__response.StatusCode == 400)
+                            // Invalid HMAC
+                            if ((int)__response.StatusCode == 403)
                             {
-                                string? __content_400 = null;
-                                global::System.Exception? __exception_400 = null;
-                                global::Opik.ErrorMessage? __value_400 = null;
+                                string? __content_403 = null;
+                                global::System.Exception? __exception_403 = null;
+                                global::Opik.ErrorMessage? __value_403 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
-                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_403 = global::Opik.ErrorMessage.FromJson(__content_403, JsonSerializerContext);
                                     }
                                     else
                                     {
-                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
+                                        __value_403 = global::Opik.ErrorMessage.FromJson(__content_403, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    __exception_400 = __ex;
+                                    __exception_403 = __ex;
                                 }
 
                                 throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
-                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_400,
+                                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_403,
                                     statusCode: __response.StatusCode)
                                 {
-                                    ResponseBody = __content_400,
-                                    ResponseObject = __value_400,
+                                    ResponseBody = __content_403,
+                                    ResponseObject = __value_403,
                                     ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
                                         h => h.Value),
                                 };
                             }
-                            // Project not found
+                            // Session not found
                             if ((int)__response.StatusCode == 404)
                             {
                                 string? __content_404 = null;
@@ -380,6 +381,44 @@ namespace Opik
                                 {
                                     ResponseBody = __content_404,
                                     ResponseObject = __value_404,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
+                            // Session already activated
+                            if ((int)__response.StatusCode == 409)
+                            {
+                                string? __content_409 = null;
+                                global::System.Exception? __exception_409 = null;
+                                global::Opik.ErrorMessage? __value_409 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_409 = global::Opik.ErrorMessage.FromJson(__content_409, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_409 = global::Opik.ErrorMessage.FromJson(__content_409, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_409 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+                                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_409,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_409,
+                                    ResponseObject = __value_409,
                                     ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -513,18 +552,11 @@ namespace Opik
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateOpikConnectSessionResponseContent(
-                                    httpClient: HttpClient,
-                                    httpResponseMessage: __response,
-                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Opik.CreateSessionResponse.FromJson(__content, JsonSerializerContext) ??
-                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -546,15 +578,6 @@ namespace Opik
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    using var __content = await __response.Content.ReadAsStreamAsync(
-                #if NET5_0_OR_GREATER
-                                        __effectiveCancellationToken
-                #endif
-                                    ).ConfigureAwait(false);
-
-                                    return
-                                        await global::Opik.CreateSessionResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -593,30 +616,30 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Create an opik-connect pairing session<br/>
-        /// Register a short-lived pairing session that a local daemon will later activate via HMAC
+        /// Activate a pairing session<br/>
+        /// Verify the activation HMAC and flip the runner row to CONNECTED
         /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="activationKey"></param>
-        /// <param name="ttlSeconds"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="runnerName"></param>
+        /// <param name="hmac"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.CreateSessionResponse> CreateOpikConnectSessionAsync(
-            global::System.Guid projectId,
-            string activationKey,
-            int? ttlSeconds = default,
+        public async global::System.Threading.Tasks.Task ActivatePairingSessionAsync(
+            global::System.Guid sessionId,
+            string runnerName,
+            string hmac,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.CreateSessionRequest
+            var __request = new global::Opik.ActivateRequest
             {
-                ProjectId = projectId,
-                ActivationKey = activationKey,
-                TtlSeconds = ttlSeconds,
+                RunnerName = runnerName,
+                Hmac = hmac,
             };
 
-            return await CreateOpikConnectSessionAsync(
+            await ActivatePairingSessionAsync(
+                sessionId: sessionId,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
