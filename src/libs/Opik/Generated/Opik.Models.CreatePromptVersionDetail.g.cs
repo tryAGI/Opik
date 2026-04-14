@@ -31,12 +31,6 @@ namespace Opik
         public global::Opik.CreatePromptVersionDetailTemplateStructure? TemplateStructure { get; set; }
 
         /// <summary>
-        /// Optional set of project IDs to exclude from automatic blueprint creation when this prompt version is committed.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("exclude_blueprint_update_for_projects")]
-        public global::System.Collections.Generic.IList<global::System.Guid>? ExcludeBlueprintUpdateForProjects { get; set; }
-
-        /// <summary>
         /// Project ID. Takes precedence over project_name when both are provided.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
@@ -63,9 +57,6 @@ namespace Opik
         /// Template structure for the prompt: 'text' or 'chat'. Note: This field is only used when creating a new prompt. If a prompt with the given name already exists, this field is ignored and the existing prompt's template structure is used. Template structure is immutable after prompt creation.<br/>
         /// Default Value: text
         /// </param>
-        /// <param name="excludeBlueprintUpdateForProjects">
-        /// Optional set of project IDs to exclude from automatic blueprint creation when this prompt version is committed.
-        /// </param>
         /// <param name="projectId">
         /// Project ID. Takes precedence over project_name when both are provided.
         /// </param>
@@ -79,14 +70,12 @@ namespace Opik
             string name,
             global::Opik.PromptVersionDetail version,
             global::Opik.CreatePromptVersionDetailTemplateStructure? templateStructure,
-            global::System.Collections.Generic.IList<global::System.Guid>? excludeBlueprintUpdateForProjects,
             global::System.Guid? projectId,
             string? projectName)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Version = version ?? throw new global::System.ArgumentNullException(nameof(version));
             this.TemplateStructure = templateStructure;
-            this.ExcludeBlueprintUpdateForProjects = excludeBlueprintUpdateForProjects;
             this.ProjectId = projectId;
             this.ProjectName = projectName;
         }
