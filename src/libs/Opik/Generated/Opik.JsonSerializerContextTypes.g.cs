@@ -516,11 +516,11 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.AutomationRuleEvaluatorType? Type122 { get; set; }
+        public global::Opik.AutomationRuleEvaluatorAction? Type122 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.AutomationRuleEvaluatorAction? Type123 { get; set; }
+        public global::Opik.AutomationRuleEvaluatorType? Type123 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -792,11 +792,11 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.AutomationRuleEvaluatorWriteType? Type191 { get; set; }
+        public global::Opik.AutomationRuleEvaluatorWriteAction? Type191 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.AutomationRuleEvaluatorWriteAction? Type192 { get; set; }
+        public global::Opik.AutomationRuleEvaluatorWriteType? Type192 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -908,11 +908,11 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.AutomationRuleEvaluatorObjectObjectPublicType? Type220 { get; set; }
+        public global::Opik.AutomationRuleEvaluatorObjectObjectPublicAction? Type220 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.AutomationRuleEvaluatorObjectObjectPublicAction? Type221 { get; set; }
+        public global::Opik.AutomationRuleEvaluatorObjectObjectPublicType? Type221 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -1068,11 +1068,11 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.AutomationRuleEvaluatorPublicType? Type260 { get; set; }
+        public global::Opik.AutomationRuleEvaluatorPublicAction? Type260 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.AutomationRuleEvaluatorPublicAction? Type261 { get; set; }
+        public global::Opik.AutomationRuleEvaluatorPublicType? Type261 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -1104,11 +1104,11 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.AutomationRuleEvaluatorUpdateType? Type269 { get; set; }
+        public global::Opik.AutomationRuleEvaluatorUpdateAction? Type269 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.AutomationRuleEvaluatorUpdateAction? Type270 { get; set; }
+        public global::Opik.AutomationRuleEvaluatorUpdateType? Type270 { get; set; }
         /// <summary>
         /// 
         /// </summary>
