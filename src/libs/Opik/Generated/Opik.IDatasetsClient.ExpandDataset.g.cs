@@ -43,6 +43,9 @@ namespace Opik
         /// <param name="customPrompt">
         /// Custom prompt to use for generation instead of auto-generated one
         /// </param>
+        /// <param name="maxCompletionTokens">
+        /// Maximum number of tokens for the LLM response. Required by Anthropic, used as maxOutputTokens for Gemini. If not provided, defaults to 4000 for Anthropic models only.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -53,6 +56,7 @@ namespace Opik
             global::System.Collections.Generic.IList<string>? preserveFields = default,
             string? variationInstructions = default,
             string? customPrompt = default,
+            int? maxCompletionTokens = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

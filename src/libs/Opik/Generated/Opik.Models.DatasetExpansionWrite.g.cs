@@ -48,6 +48,12 @@ namespace Opik
         public string? CustomPrompt { get; set; }
 
         /// <summary>
+        /// Maximum number of tokens for the LLM response. Required by Anthropic, used as maxOutputTokens for Gemini. If not provided, defaults to 4000 for Anthropic models only.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("max_completion_tokens")]
+        public int? MaxCompletionTokens { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -75,6 +81,9 @@ namespace Opik
         /// <param name="customPrompt">
         /// Custom prompt to use for generation instead of auto-generated one
         /// </param>
+        /// <param name="maxCompletionTokens">
+        /// Maximum number of tokens for the LLM response. Required by Anthropic, used as maxOutputTokens for Gemini. If not provided, defaults to 4000 for Anthropic models only.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -83,13 +92,15 @@ namespace Opik
             int? sampleCount,
             global::System.Collections.Generic.IList<string>? preserveFields,
             string? variationInstructions,
-            string? customPrompt)
+            string? customPrompt,
+            int? maxCompletionTokens)
         {
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.SampleCount = sampleCount;
             this.PreserveFields = preserveFields;
             this.VariationInstructions = variationInstructions;
             this.CustomPrompt = customPrompt;
+            this.MaxCompletionTokens = maxCompletionTokens;
         }
 
         /// <summary>
