@@ -125,6 +125,12 @@ namespace Opik
         /// <summary>
         /// Included only in responses
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("execution_policy")]
+        public global::Opik.ExecutionPolicyCompare? ExecutionPolicy { get; set; }
+
+        /// <summary>
+        /// Included only in responses
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assertion_results")]
         public global::System.Collections.Generic.IList<global::Opik.AssertionResultCompare>? AssertionResults { get; set; }
 
@@ -190,6 +196,9 @@ namespace Opik
         /// <param name="description">
         /// Included only in responses
         /// </param>
+        /// <param name="executionPolicy">
+        /// Included only in responses
+        /// </param>
         /// <param name="assertionResults">
         /// Included only in responses
         /// </param>
@@ -218,6 +227,7 @@ namespace Opik
             string? lastUpdatedBy,
             global::Opik.ExperimentItemCompareTraceVisibilityMode? traceVisibilityMode,
             string? description,
+            global::Opik.ExecutionPolicyCompare? executionPolicy,
             global::System.Collections.Generic.IList<global::Opik.AssertionResultCompare>? assertionResults,
             global::Opik.ExperimentItemCompareStatus? status)
         {
@@ -239,6 +249,7 @@ namespace Opik
             this.LastUpdatedBy = lastUpdatedBy;
             this.TraceVisibilityMode = traceVisibilityMode;
             this.Description = description;
+            this.ExecutionPolicy = executionPolicy;
             this.AssertionResults = assertionResults;
             this.Status = status;
         }

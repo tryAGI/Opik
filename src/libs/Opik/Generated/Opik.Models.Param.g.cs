@@ -23,6 +23,13 @@ namespace Opik
         public required string Type { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("presence")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.ParamPresenceJsonConverter))]
+        public global::Opik.ParamPresence? Presence { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -33,15 +40,18 @@ namespace Opik
         /// </summary>
         /// <param name="name"></param>
         /// <param name="type"></param>
+        /// <param name="presence"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Param(
             string name,
-            string type)
+            string type,
+            global::Opik.ParamPresence? presence)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
+            this.Presence = presence;
         }
 
         /// <summary>

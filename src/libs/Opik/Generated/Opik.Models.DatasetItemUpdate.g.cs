@@ -63,7 +63,7 @@ namespace Opik
         public global::System.Collections.Generic.IList<global::Opik.EvaluatorItem>? Evaluators { get; set; }
 
         /// <summary>
-        /// 
+        /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("execution_policy")]
         public global::Opik.ExecutionPolicy? ExecutionPolicy { get; set; }
@@ -106,7 +106,9 @@ namespace Opik
         /// <param name="evaluators">
         /// Evaluators
         /// </param>
-        /// <param name="executionPolicy"></param>
+        /// <param name="executionPolicy">
+        /// Included only in responses
+        /// </param>
         /// <param name="clearExecutionPolicy">
         /// When true, clears the item-level execution policy (falls back to dataset-level)
         /// </param>

@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    /// Included only in responses
     /// </summary>
     public sealed partial class ExecutionPolicyCompare
     {
