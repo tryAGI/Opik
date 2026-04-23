@@ -581,6 +581,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.LocalRunnerTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.ParamPresenceJsonConverter),
+
+            typeof(global::Opik.JsonConverters.ParamPresenceNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.BridgeCommandItemTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.BridgeCommandItemTypeNullableJsonConverter),
@@ -1544,6 +1548,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LocalRunnerStatus), TypeInfoPropertyName = "LocalRunnerStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Agent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LocalRunnerType), TypeInfoPropertyName = "LocalRunnerType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ParamPresence), TypeInfoPropertyName = "ParamPresence2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LocalRunnerHeartbeatResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LocalRunnerHeartbeatRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LocalRunnerJobPage))]

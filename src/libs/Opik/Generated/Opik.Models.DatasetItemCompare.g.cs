@@ -72,7 +72,7 @@ namespace Opik
         public global::System.Collections.Generic.IList<global::Opik.EvaluatorItemCompare>? Evaluators { get; set; }
 
         /// <summary>
-        /// 
+        /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("execution_policy")]
         public global::Opik.ExecutionPolicyCompare? ExecutionPolicy { get; set; }
@@ -147,7 +147,9 @@ namespace Opik
         /// <param name="description"></param>
         /// <param name="tags"></param>
         /// <param name="evaluators"></param>
-        /// <param name="executionPolicy"></param>
+        /// <param name="executionPolicy">
+        /// Included only in responses
+        /// </param>
         /// <param name="experimentItems">
         /// Included only in responses
         /// </param>

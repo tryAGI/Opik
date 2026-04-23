@@ -29,7 +29,7 @@ namespace Opik
         public global::System.Collections.Generic.IList<global::Opik.EvaluatorItem>? Evaluators { get; set; }
 
         /// <summary>
-        /// 
+        /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("execution_policy")]
         public global::Opik.ExecutionPolicy? ExecutionPolicy { get; set; }
@@ -52,7 +52,9 @@ namespace Opik
         /// <param name="evaluators">
         /// Optional evaluators to apply to the created items
         /// </param>
-        /// <param name="executionPolicy"></param>
+        /// <param name="executionPolicy">
+        /// Included only in responses
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
