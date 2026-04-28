@@ -177,6 +177,12 @@ namespace Opik
         public required string ForceWorkspaceVersion { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("defaultPageSize")]
+        public int? DefaultPageSize { get; set; }
+
+        /// <summary>
         /// Included only in requests
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("v2WorkspaceAllowlist")]
@@ -215,6 +221,7 @@ namespace Opik
         /// <param name="collaboratorsTabEnabled"></param>
         /// <param name="v2WorkspaceAllowlistIds"></param>
         /// <param name="forceWorkspaceVersion"></param>
+        /// <param name="defaultPageSize"></param>
         /// <param name="v2WorkspaceAllowlist">
         /// Included only in requests
         /// </param>
@@ -246,6 +253,7 @@ namespace Opik
             bool collaboratorsTabEnabled,
             global::System.Collections.Generic.IList<string> v2WorkspaceAllowlistIds,
             string forceWorkspaceVersion,
+            int? defaultPageSize,
             string? v2WorkspaceAllowlist)
         {
             this.PythonEvaluatorEnabled = pythonEvaluatorEnabled;
@@ -272,6 +280,7 @@ namespace Opik
             this.CollaboratorsTabEnabled = collaboratorsTabEnabled;
             this.V2WorkspaceAllowlistIds = v2WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v2WorkspaceAllowlistIds));
             this.ForceWorkspaceVersion = forceWorkspaceVersion ?? throw new global::System.ArgumentNullException(nameof(forceWorkspaceVersion));
+            this.DefaultPageSize = defaultPageSize;
             this.V2WorkspaceAllowlist = v2WorkspaceAllowlist;
         }
 

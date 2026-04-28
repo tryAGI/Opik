@@ -104,6 +104,11 @@ namespace Opik
         public AnnotationQueuesClient AnnotationQueues { get; }
 
         /// <summary>
+        /// Assertion result related resources.
+        /// </summary>
+        public AssertionResultsClient AssertionResults { get; }
+
+        /// <summary>
         /// Attachments related resources.
         /// </summary>
         public AttachmentsClient Attachments { get; }

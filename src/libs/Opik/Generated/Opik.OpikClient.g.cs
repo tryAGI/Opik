@@ -96,6 +96,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Assertion result related resources.
+        /// </summary>
+        public AssertionResultsClient AssertionResults => new AssertionResultsClient(HttpClient, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Attachments related resources.
         /// </summary>
         public AttachmentsClient Attachments => new AttachmentsClient(HttpClient, authorizations: Authorizations, options: Options)

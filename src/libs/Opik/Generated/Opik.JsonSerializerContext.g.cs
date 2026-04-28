@@ -89,6 +89,18 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.AnnotationQueuePublicScopeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AssertionResultBatchEntityTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AssertionResultBatchEntityTypeNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AssertionResultBatchItemStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AssertionResultBatchItemStatusNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AssertionResultBatchItemSourceJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AssertionResultBatchItemSourceNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeNullableJsonConverter),
@@ -983,6 +995,12 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.FeedbackScoreAveragePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FeedbackScoreAveragePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueUpdate))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AssertionResultBatch))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AssertionResultBatchEntityType), TypeInfoPropertyName = "AssertionResultBatchEntityType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.AssertionResultBatchItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AssertionResultBatchItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AssertionResultBatchItemStatus), TypeInfoPropertyName = "AssertionResultBatchItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AssertionResultBatchItemSource), TypeInfoPropertyName = "AssertionResultBatchItemSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Attachment))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentPage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Attachment>))]
@@ -1835,6 +1853,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AnnotationQueuePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AnnotationQueueReviewerPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScoreAveragePublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AssertionResultBatchItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Attachment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.MultipartUploadPart>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectReference>))]
