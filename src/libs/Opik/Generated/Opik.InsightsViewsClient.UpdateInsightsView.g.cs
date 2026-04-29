@@ -154,7 +154,7 @@ namespace Opik
                 PrepareUpdateInsightsViewRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    insightsViewId: insightsViewId,
+                    insightsViewId: insightsViewId!,
                     request: request);
 
                 return __httpRequest;

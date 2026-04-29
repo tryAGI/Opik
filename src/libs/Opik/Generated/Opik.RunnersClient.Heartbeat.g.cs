@@ -154,7 +154,7 @@ namespace Opik
                 PrepareHeartbeatRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    runnerId: runnerId,
+                    runnerId: runnerId!,
                     request: request);
 
                 return __httpRequest;

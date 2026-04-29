@@ -148,7 +148,7 @@ namespace Opik
                 PrepareGetBlueprintByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    blueprintId: blueprintId,
+                    blueprintId: blueprintId!,
                     maskId: maskId);
 
                 return __httpRequest;

@@ -190,7 +190,7 @@ namespace Opik
                 PrepareFindDatasetsByProjectRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
+                    projectId: projectId!,
                     page: page,
                     size: size,
                     withExperimentsOnly: withExperimentsOnly,

@@ -150,9 +150,9 @@ namespace Opik
                 PrepareProjectsRedirectRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    traceId: traceId,
+                    traceId: traceId!,
                     workspaceName: workspaceName,
-                    path: path);
+                    path: path!);
 
                 return __httpRequest;
             }

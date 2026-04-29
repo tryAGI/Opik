@@ -178,7 +178,7 @@ namespace Opik
                 PrepareFindDashboardsByProjectRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
+                    projectId: projectId!,
                     page: page,
                     size: size,
                     name: name,

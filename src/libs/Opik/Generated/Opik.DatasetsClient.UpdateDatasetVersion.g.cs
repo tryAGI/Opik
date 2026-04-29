@@ -159,8 +159,8 @@ namespace Opik
                 PrepareUpdateDatasetVersionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    versionHash: versionHash,
-                    id: id,
+                    versionHash: versionHash!,
+                    id: id!,
                     request: request);
 
                 return __httpRequest;

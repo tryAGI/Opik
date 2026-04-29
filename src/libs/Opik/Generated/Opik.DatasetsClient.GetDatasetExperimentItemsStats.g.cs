@@ -154,8 +154,8 @@ namespace Opik
                 PrepareGetDatasetExperimentItemsStatsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
-                    experimentIds: experimentIds,
+                    id: id!,
+                    experimentIds: experimentIds!,
                     filters: filters);
 
                 return __httpRequest;

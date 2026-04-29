@@ -145,8 +145,8 @@ namespace Opik
                 PrepareGetTraceCommentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    commentId: commentId,
-                    traceId: traceId);
+                    commentId: commentId!,
+                    traceId: traceId!);
 
                 return __httpRequest;
             }

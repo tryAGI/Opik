@@ -163,8 +163,8 @@ namespace Opik
                 PrepareGetBridgeCommandRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    runnerId: runnerId,
-                    commandId: commandId,
+                    runnerId: runnerId!,
+                    commandId: commandId!,
                     wait: wait,
                     timeout: timeout);
 

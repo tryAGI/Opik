@@ -149,7 +149,7 @@ namespace Opik
                 PrepareAppendJobLogsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    jobId: jobId,
+                    jobId: jobId!,
                     request: request);
 
                 return __httpRequest;

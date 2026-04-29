@@ -145,8 +145,8 @@ namespace Opik
                 PrepareGetSpanCommentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    commentId: commentId,
-                    spanId: spanId);
+                    commentId: commentId!,
+                    spanId: spanId!);
 
                 return __httpRequest;
             }

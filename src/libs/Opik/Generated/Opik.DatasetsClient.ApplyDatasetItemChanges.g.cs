@@ -169,7 +169,7 @@ namespace Opik
                 PrepareApplyDatasetItemChangesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     @override: @override,
                     request: request);
 

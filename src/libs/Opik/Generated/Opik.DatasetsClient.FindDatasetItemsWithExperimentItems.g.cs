@@ -190,10 +190,10 @@ namespace Opik
                 PrepareFindDatasetItemsWithExperimentItemsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     page: page,
                     size: size,
-                    experimentIds: experimentIds,
+                    experimentIds: experimentIds!,
                     filters: filters,
                     sorting: sorting,
                     search: search,

@@ -140,8 +140,8 @@ namespace Opik
                 PrepareDeleteEnvRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    envName: envName,
-                    projectId: projectId);
+                    envName: envName!,
+                    projectId: projectId!);
 
                 return __httpRequest;
             }

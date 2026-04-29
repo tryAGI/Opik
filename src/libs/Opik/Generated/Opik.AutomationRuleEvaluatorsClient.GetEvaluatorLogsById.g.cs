@@ -150,7 +150,7 @@ namespace Opik
                 PrepareGetEvaluatorLogsByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     size: size);
 
                 return __httpRequest;

@@ -179,10 +179,10 @@ namespace Opik
                     httpRequestMessage: __httpRequest,
                     page: page,
                     size: size,
-                    projectId: projectId,
-                    entityType: entityType,
-                    entityId: entityId,
-                    path: path);
+                    projectId: projectId!,
+                    entityType: entityType!,
+                    entityId: entityId!,
+                    path: path!);
 
                 return __httpRequest;
             }

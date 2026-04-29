@@ -164,7 +164,7 @@ namespace Opik
                 PrepareListJobsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    runnerId: runnerId,
+                    runnerId: runnerId!,
                     projectId: projectId,
                     page: page,
                     size: size);

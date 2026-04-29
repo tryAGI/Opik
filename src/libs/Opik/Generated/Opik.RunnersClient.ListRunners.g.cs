@@ -165,7 +165,7 @@ namespace Opik
                 PrepareListRunnersRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
+                    projectId: projectId!,
                     status: status,
                     page: page,
                     size: size);

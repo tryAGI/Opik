@@ -149,7 +149,7 @@ namespace Opik
                 PrepareUpdateTraceCommentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    commentId: commentId,
+                    commentId: commentId!,
                     request: request);
 
                 return __httpRequest;

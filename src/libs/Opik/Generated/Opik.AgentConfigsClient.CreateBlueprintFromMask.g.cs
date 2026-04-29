@@ -140,8 +140,8 @@ namespace Opik
                 PrepareCreateBlueprintFromMaskRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
-                    maskId: maskId);
+                    projectId: projectId!,
+                    maskId: maskId!);
 
                 return __httpRequest;
             }

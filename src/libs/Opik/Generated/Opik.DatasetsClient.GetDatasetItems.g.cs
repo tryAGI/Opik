@@ -180,7 +180,7 @@ namespace Opik
                 PrepareGetDatasetItemsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     page: page,
                     size: size,
                     version: version,

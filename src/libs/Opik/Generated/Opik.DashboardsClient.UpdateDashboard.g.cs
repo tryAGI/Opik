@@ -154,7 +154,7 @@ namespace Opik
                 PrepareUpdateDashboardRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    dashboardId: dashboardId,
+                    dashboardId: dashboardId!,
                     request: request);
 
                 return __httpRequest;
