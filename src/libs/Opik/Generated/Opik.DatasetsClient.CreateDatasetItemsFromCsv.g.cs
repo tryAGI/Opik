@@ -129,10 +129,10 @@ namespace Opik
             }
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
                             __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent($"{request.File}"),
+                                content: new global::System.Net.Http.StringContent(request.File.ToString() ?? string.Empty),
                                 name: "\"file\"");
                             __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent($"{request.DatasetId}"),
+                                content: new global::System.Net.Http.StringContent(request.DatasetId.ToString() ?? string.Empty),
                                 name: "\"dataset_id\"");
                             __httpRequest.Content = __httpRequestContent;
                 global::Opik.AutoSDKRequestOptionsSupport.ApplyHeaders(

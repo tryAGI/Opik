@@ -140,7 +140,7 @@ namespace Opik
                 PrepareGetDatasetItemByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    itemId: itemId);
+                    itemId: itemId!);
 
                 return __httpRequest;
             }

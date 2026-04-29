@@ -135,7 +135,7 @@ namespace Opik
                 PrepareDeleteInsightsViewRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    insightsViewId: insightsViewId);
+                    insightsViewId: insightsViewId!);
 
                 return __httpRequest;
             }

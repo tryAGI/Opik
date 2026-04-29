@@ -135,7 +135,7 @@ namespace Opik
                 PrepareDeactivateRetentionRuleRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    ruleId: ruleId);
+                    ruleId: ruleId!);
 
                 return __httpRequest;
             }

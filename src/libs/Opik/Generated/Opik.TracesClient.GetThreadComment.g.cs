@@ -145,8 +145,8 @@ namespace Opik
                 PrepareGetThreadCommentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    commentId: commentId,
-                    threadId: threadId);
+                    commentId: commentId!,
+                    threadId: threadId!);
 
                 return __httpRequest;
             }

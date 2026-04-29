@@ -178,11 +178,11 @@ namespace Opik
                 PrepareUploadAttachmentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    fileName: fileName,
+                    fileName: fileName!,
                     projectName: projectName,
                     mimeType: mimeType,
-                    entityType: entityType,
-                    entityId: entityId,
+                    entityType: entityType!,
+                    entityId: entityId!,
                     request: request);
 
                 return __httpRequest;

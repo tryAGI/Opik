@@ -160,7 +160,7 @@ namespace Opik
                     httpRequestMessage: __httpRequest,
                     page: page,
                     size: size,
-                    id: id);
+                    id: id!);
 
                 return __httpRequest;
             }

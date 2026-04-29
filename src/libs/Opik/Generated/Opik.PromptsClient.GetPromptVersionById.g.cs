@@ -140,7 +140,7 @@ namespace Opik
                 PrepareGetPromptVersionByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    versionId: versionId);
+                    versionId: versionId!);
 
                 return __httpRequest;
             }

@@ -135,7 +135,7 @@ namespace Opik
                 PrepareDeleteDashboardRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    dashboardId: dashboardId);
+                    dashboardId: dashboardId!);
 
                 return __httpRequest;
             }

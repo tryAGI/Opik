@@ -154,8 +154,8 @@ namespace Opik
                 PrepareReportBridgeResultRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    runnerId: runnerId,
-                    commandId: commandId,
+                    runnerId: runnerId!,
+                    commandId: commandId!,
                     request: request);
 
                 return __httpRequest;

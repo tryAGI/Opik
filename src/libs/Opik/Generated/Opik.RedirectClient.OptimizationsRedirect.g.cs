@@ -156,10 +156,10 @@ namespace Opik
                 PrepareOptimizationsRedirectRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
-                    optimizationId: optimizationId,
+                    datasetId: datasetId!,
+                    optimizationId: optimizationId!,
                     workspaceName: workspaceName,
-                    path: path);
+                    path: path!);
 
                 return __httpRequest;
             }

@@ -148,7 +148,7 @@ namespace Opik
                 PrepareGetLatestBlueprintRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
+                    projectId: projectId!,
                     maskId: maskId);
 
                 return __httpRequest;

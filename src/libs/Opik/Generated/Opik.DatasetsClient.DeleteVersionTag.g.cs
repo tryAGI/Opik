@@ -145,9 +145,9 @@ namespace Opik
                 PrepareDeleteVersionTagRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    versionHash: versionHash,
-                    tag: tag,
-                    id: id);
+                    versionHash: versionHash!,
+                    tag: tag!,
+                    id: id!);
 
                 return __httpRequest;
             }

@@ -150,9 +150,9 @@ namespace Opik
                 PrepareDatasetsRedirectRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
+                    datasetId: datasetId!,
                     workspaceName: workspaceName,
-                    path: path);
+                    path: path!);
 
                 return __httpRequest;
             }

@@ -219,7 +219,7 @@ namespace Opik
                 PrepareFindExperimentsByProjectRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
+                    projectId: projectId!,
                     page: page,
                     size: size,
                     datasetId: datasetId,

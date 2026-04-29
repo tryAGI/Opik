@@ -148,7 +148,7 @@ namespace Opik
                 PrepareGetDatasetItemsOutputColumnsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     experimentIds: experimentIds);
 
                 return __httpRequest;

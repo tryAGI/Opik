@@ -149,7 +149,7 @@ namespace Opik
                 PreparePatchDatasetItemRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    itemId: itemId,
+                    itemId: itemId!,
                     request: request);
 
                 return __httpRequest;

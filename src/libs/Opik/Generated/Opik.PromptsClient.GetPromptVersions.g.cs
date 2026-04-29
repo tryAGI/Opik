@@ -176,7 +176,7 @@ namespace Opik
                 PrepareGetPromptVersionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     page: page,
                     size: size,
                     search: search,

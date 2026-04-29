@@ -170,7 +170,7 @@ namespace Opik
                 PrepareFindAlertsByProjectRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
+                    projectId: projectId!,
                     page: page,
                     size: size,
                     sorting: sorting,

@@ -149,7 +149,7 @@ namespace Opik
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     projectId: projectId,
-                    id: id);
+                    id: id!);
 
                 return __httpRequest;
             }

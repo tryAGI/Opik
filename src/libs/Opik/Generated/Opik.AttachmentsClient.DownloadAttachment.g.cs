@@ -174,11 +174,11 @@ namespace Opik
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     workspaceName: workspaceName,
-                    containerId: containerId,
-                    entityType: entityType,
-                    entityId: entityId,
-                    fileName: fileName,
-                    mimeType: mimeType);
+                    containerId: containerId!,
+                    entityType: entityType!,
+                    entityId: entityId!,
+                    fileName: fileName!,
+                    mimeType: mimeType!);
 
                 return __httpRequest;
             }

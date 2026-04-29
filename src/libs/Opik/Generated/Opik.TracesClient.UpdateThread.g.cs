@@ -149,7 +149,7 @@ namespace Opik
                 PrepareUpdateThreadRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    threadModelId: threadModelId,
+                    threadModelId: threadModelId!,
                     request: request);
 
                 return __httpRequest;

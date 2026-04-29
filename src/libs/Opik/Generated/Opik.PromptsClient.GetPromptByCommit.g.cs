@@ -140,7 +140,7 @@ namespace Opik
                 PrepareGetPromptByCommitRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    commit: commit);
+                    commit: commit!);
 
                 return __httpRequest;
             }

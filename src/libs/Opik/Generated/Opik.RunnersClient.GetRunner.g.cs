@@ -140,7 +140,7 @@ namespace Opik
                 PrepareGetRunnerRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    runnerId: runnerId);
+                    runnerId: runnerId!);
 
                 return __httpRequest;
             }

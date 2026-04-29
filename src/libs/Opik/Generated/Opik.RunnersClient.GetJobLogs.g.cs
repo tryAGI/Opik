@@ -150,7 +150,7 @@ namespace Opik
                 PrepareGetJobLogsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    jobId: jobId,
+                    jobId: jobId!,
                     offset: offset);
 
                 return __httpRequest;

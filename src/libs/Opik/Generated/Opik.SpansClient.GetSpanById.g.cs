@@ -151,7 +151,7 @@ namespace Opik
                 PrepareGetSpanByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id,
+                    id: id!,
                     stripAttachments: stripAttachments);
 
                 return __httpRequest;

@@ -153,8 +153,8 @@ namespace Opik
                 PrepareGetBlueprintByNameRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
-                    projectId: projectId,
+                    name: name!,
+                    projectId: projectId!,
                     maskId: maskId);
 
                 return __httpRequest;

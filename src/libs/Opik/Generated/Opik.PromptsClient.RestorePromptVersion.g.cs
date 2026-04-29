@@ -145,8 +145,8 @@ namespace Opik
                 PrepareRestorePromptVersionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    promptId: promptId,
-                    versionId: versionId);
+                    promptId: promptId!,
+                    versionId: versionId!);
 
                 return __httpRequest;
             }

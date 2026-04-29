@@ -140,7 +140,7 @@ namespace Opik
                 PrepareGetDashboardByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    dashboardId: dashboardId);
+                    dashboardId: dashboardId!);
 
                 return __httpRequest;
             }

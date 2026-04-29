@@ -154,8 +154,8 @@ namespace Opik
                 PrepareSetEnvByBlueprintNameRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    envName: envName,
-                    projectId: projectId,
+                    envName: envName!,
+                    projectId: projectId!,
                     request: request);
 
                 return __httpRequest;

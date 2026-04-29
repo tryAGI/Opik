@@ -140,7 +140,7 @@ namespace Opik
                 PrepareGetDeltaByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    blueprintId: blueprintId);
+                    blueprintId: blueprintId!);
 
                 return __httpRequest;
             }
