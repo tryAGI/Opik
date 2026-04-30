@@ -139,6 +139,11 @@ namespace Opik
         public DatasetsClient Datasets { get; }
 
         /// <summary>
+        /// Environment related resources.
+        /// </summary>
+        public EnvironmentsClient Environments { get; }
+
+        /// <summary>
         /// Experiment resources.
         /// </summary>
         public ExperimentsClient Experiments { get; }
