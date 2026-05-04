@@ -33,6 +33,12 @@ namespace Opik
         public string? FinishReason { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("logprobs")]
+        public global::Opik.LogProbs? Logprobs { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -45,6 +51,7 @@ namespace Opik
         /// <param name="message"></param>
         /// <param name="delta"></param>
         /// <param name="finishReason"></param>
+        /// <param name="logprobs"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -52,12 +59,14 @@ namespace Opik
             int? index,
             global::Opik.AssistantMessage? message,
             global::Opik.Delta? delta,
-            string? finishReason)
+            string? finishReason,
+            global::Opik.LogProbs? logprobs)
         {
             this.Index = index;
             this.Message = message;
             this.Delta = delta;
             this.FinishReason = finishReason;
+            this.Logprobs = logprobs;
         }
 
         /// <summary>

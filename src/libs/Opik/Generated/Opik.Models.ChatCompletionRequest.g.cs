@@ -149,6 +149,18 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("logprobs")]
+        public bool? Logprobs { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("top_logprobs")]
+        public int? TopLogprobs { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("functions")]
         public global::System.Collections.Generic.IList<global::Opik.Function>? Functions { get; set; }
 
@@ -190,6 +202,8 @@ namespace Opik
         /// <param name="metadata"></param>
         /// <param name="reasoningEffort"></param>
         /// <param name="serviceTier"></param>
+        /// <param name="logprobs"></param>
+        /// <param name="topLogprobs"></param>
         /// <param name="functions"></param>
         /// <param name="functionCall"></param>
 #if NET7_0_OR_GREATER
@@ -219,6 +233,8 @@ namespace Opik
             global::System.Collections.Generic.Dictionary<string, string>? metadata,
             string? reasoningEffort,
             string? serviceTier,
+            bool? logprobs,
+            int? topLogprobs,
             global::System.Collections.Generic.IList<global::Opik.Function>? functions,
             global::Opik.FunctionCall? functionCall)
         {
@@ -245,6 +261,8 @@ namespace Opik
             this.Metadata = metadata;
             this.ReasoningEffort = reasoningEffort;
             this.ServiceTier = serviceTier;
+            this.Logprobs = logprobs;
+            this.TopLogprobs = topLogprobs;
             this.Functions = functions;
             this.FunctionCall = functionCall;
         }
