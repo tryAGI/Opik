@@ -95,6 +95,8 @@ namespace Opik
                 Metadata = request.Metadata,
                 ReasoningEffort = request.ReasoningEffort,
                 ServiceTier = request.ServiceTier,
+                Logprobs = request.Logprobs,
+                TopLogprobs = request.TopLogprobs,
                 Functions = request.Functions,
                 FunctionCall = request.FunctionCall,
             };
@@ -456,6 +458,8 @@ namespace Opik
         /// <param name="metadata"></param>
         /// <param name="reasoningEffort"></param>
         /// <param name="serviceTier"></param>
+        /// <param name="logprobs"></param>
+        /// <param name="topLogprobs"></param>
         /// <param name="functions"></param>
         /// <param name="functionCall"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -484,6 +488,8 @@ namespace Opik
             global::System.Collections.Generic.Dictionary<string, string>? metadata = default,
             string? reasoningEffort = default,
             string? serviceTier = default,
+            bool? logprobs = default,
+            int? topLogprobs = default,
             global::System.Collections.Generic.IList<global::Opik.Function>? functions = default,
             global::Opik.FunctionCall? functionCall = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
@@ -514,6 +520,8 @@ namespace Opik
                 Metadata = metadata,
                 ReasoningEffort = reasoningEffort,
                 ServiceTier = serviceTier,
+                Logprobs = logprobs,
+                TopLogprobs = topLogprobs,
                 Functions = functions,
                 FunctionCall = functionCall,
             };
