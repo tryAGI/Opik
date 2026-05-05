@@ -19,8 +19,7 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("temperature")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Temperature { get; set; }
+        public double? Temperature { get; set; }
 
         /// <summary>
         /// 
@@ -52,7 +51,7 @@ namespace Opik
 #endif
         public LlmAsJudgeModelParametersWrite(
             string name,
-            double temperature,
+            double? temperature,
             int? seed,
             global::Opik.JsonNodeWrite? customParameters)
         {
