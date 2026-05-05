@@ -21,6 +21,19 @@ namespace Opik
         /// Batch update traces<br/>
         /// Update multiple traces
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse> BatchUpdateTracesAsResponseAsync(
+
+            global::Opik.TraceBatchUpdate request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Batch update traces<br/>
+        /// Update multiple traces
+        /// </summary>
         /// <param name="ids">
         /// List of trace IDs to update (max 1000)
         /// </param>

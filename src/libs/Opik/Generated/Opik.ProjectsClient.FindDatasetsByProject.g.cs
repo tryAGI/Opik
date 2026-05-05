@@ -101,6 +101,54 @@ namespace Opik
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await FindDatasetsByProjectAsResponseAsync(
+                projectId: projectId,
+                page: page,
+                size: size,
+                withExperimentsOnly: withExperimentsOnly,
+                withOptimizationsOnly: withOptimizationsOnly,
+                name: name,
+                sorting: sorting,
+                filters: filters,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Find datasets by project<br/>
+        /// Find datasets scoped to a project
+        /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="page">
+        /// Default Value: 1
+        /// </param>
+        /// <param name="size">
+        /// Default Value: 10
+        /// </param>
+        /// <param name="withExperimentsOnly"></param>
+        /// <param name="withOptimizationsOnly"></param>
+        /// <param name="name">
+        /// Filter datasets by name (partial match, case insensitive)
+        /// </param>
+        /// <param name="sorting"></param>
+        /// <param name="filters"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.DatasetPagePublic>> FindDatasetsByProjectAsResponseAsync(
+            global::System.Guid projectId,
+            int? page = default,
+            int? size = default,
+            bool? withExperimentsOnly = default,
+            bool? withOptimizationsOnly = default,
+            string? name = default,
+            string? sorting = default,
+            string? filters = default,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareFindDatasetsByProjectArguments(
@@ -136,11 +184,12 @@ namespace Opik
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Opik.PathBuilder(
                                 path: $"/v1/private/projects/{projectId}/datasets",
                                 baseUri: ResolveBaseUri(
                                 servers: s_FindDatasetsByProjectServers,
-                                defaultBaseUrl: "http://localhost:5173/api")); 
+                                defaultBaseUrl: "http://localhost:5173/api"));
                             __pathBuilder
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("size", size?.ToString())
@@ -148,7 +197,7 @@ namespace Opik
                                 .AddOptionalParameter("with_optimizations_only", withOptimizationsOnly?.ToString().ToLowerInvariant())
                                 .AddOptionalParameter("name", name)
                                 .AddOptionalParameter("sorting", sorting)
-                                .AddOptionalParameter("filters", filters) 
+                                .AddOptionalParameter("filters", filters)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -227,6 +276,8 @@ namespace Opik
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -237,6 +288,11 @@ namespace Opik
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Opik.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -254,6 +310,8 @@ namespace Opik
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -263,8 +321,7 @@ namespace Opik
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Opik.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -273,6 +330,11 @@ namespace Opik
                         __attempt < __maxAttempts &&
                         global::Opik.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Opik.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -289,14 +351,15 @@ namespace Opik
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Opik.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -336,6 +399,8 @@ namespace Opik
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -356,6 +421,8 @@ namespace Opik
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 
@@ -380,9 +447,13 @@ namespace Opik
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Opik.DatasetPagePublic.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Opik.DatasetPagePublic.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.DatasetPagePublic>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -410,9 +481,13 @@ namespace Opik
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Opik.DatasetPagePublic.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Opik.DatasetPagePublic.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.DatasetPagePublic>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

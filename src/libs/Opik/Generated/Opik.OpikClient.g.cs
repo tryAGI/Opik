@@ -68,7 +68,7 @@ namespace Opik
         /// <summary>
         /// Agent configuration management.
         /// </summary>
-        public AgentConfigsClient AgentConfigs => new AgentConfigsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AgentConfigsClient AgentConfigs => new AgentConfigsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -78,7 +78,7 @@ namespace Opik
         /// <summary>
         /// Alert resources.
         /// </summary>
-        public AlertsClient Alerts => new AlertsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AlertsClient Alerts => new AlertsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -88,7 +88,7 @@ namespace Opik
         /// <summary>
         /// Private annotation queue operations.
         /// </summary>
-        public AnnotationQueuesClient AnnotationQueues => new AnnotationQueuesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AnnotationQueuesClient AnnotationQueues => new AnnotationQueuesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -98,7 +98,7 @@ namespace Opik
         /// <summary>
         /// Assertion result related resources.
         /// </summary>
-        public AssertionResultsClient AssertionResults => new AssertionResultsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AssertionResultsClient AssertionResults => new AssertionResultsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -108,7 +108,7 @@ namespace Opik
         /// <summary>
         /// Attachments related resources.
         /// </summary>
-        public AttachmentsClient Attachments => new AttachmentsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AttachmentsClient Attachments => new AttachmentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -118,7 +118,7 @@ namespace Opik
         /// <summary>
         /// Automation rule evaluators resource.
         /// </summary>
-        public AutomationRuleEvaluatorsClient AutomationRuleEvaluators => new AutomationRuleEvaluatorsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AutomationRuleEvaluatorsClient AutomationRuleEvaluators => new AutomationRuleEvaluatorsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -128,7 +128,7 @@ namespace Opik
         /// <summary>
         /// Chat Completions related resources.
         /// </summary>
-        public ChatCompletionsClient ChatCompletions => new ChatCompletionsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ChatCompletionsClient ChatCompletions => new ChatCompletionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -138,7 +138,7 @@ namespace Opik
         /// <summary>
         /// Access check resources.
         /// </summary>
-        public CheckClient Check => new CheckClient(HttpClient, authorizations: Authorizations, options: Options)
+        public CheckClient Check => new CheckClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -148,7 +148,7 @@ namespace Opik
         /// <summary>
         /// Workspace Dashboard resources.
         /// </summary>
-        public DashboardsClient Dashboards => new DashboardsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public DashboardsClient Dashboards => new DashboardsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -158,7 +158,7 @@ namespace Opik
         /// <summary>
         /// Dataset resources.
         /// </summary>
-        public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public DatasetsClient Datasets => new DatasetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -168,7 +168,7 @@ namespace Opik
         /// <summary>
         /// Environment related resources.
         /// </summary>
-        public EnvironmentsClient Environments => new EnvironmentsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public EnvironmentsClient Environments => new EnvironmentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -178,7 +178,7 @@ namespace Opik
         /// <summary>
         /// Experiment resources.
         /// </summary>
-        public ExperimentsClient Experiments => new ExperimentsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ExperimentsClient Experiments => new ExperimentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -188,7 +188,7 @@ namespace Opik
         /// <summary>
         /// Feedback definitions related resources.
         /// </summary>
-        public FeedbackDefinitionsClient FeedbackDefinitions => new FeedbackDefinitionsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public FeedbackDefinitionsClient FeedbackDefinitions => new FeedbackDefinitionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -198,7 +198,7 @@ namespace Opik
         /// <summary>
         /// Guardrails related resources.
         /// </summary>
-        public GuardrailsClient Guardrails => new GuardrailsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public GuardrailsClient Guardrails => new GuardrailsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -208,7 +208,7 @@ namespace Opik
         /// <summary>
         /// Insights View resources.
         /// </summary>
-        public InsightsViewsClient InsightsViews => new InsightsViewsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public InsightsViewsClient InsightsViews => new InsightsViewsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -218,7 +218,7 @@ namespace Opik
         /// <summary>
         /// LLM model registry resources.
         /// </summary>
-        public LlmModelsClient LlmModels => new LlmModelsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public LlmModelsClient LlmModels => new LlmModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -228,7 +228,7 @@ namespace Opik
         /// <summary>
         /// LLM Provider Key.
         /// </summary>
-        public LlmProviderKeyClient LlmProviderKey => new LlmProviderKeyClient(HttpClient, authorizations: Authorizations, options: Options)
+        public LlmProviderKeyClient LlmProviderKey => new LlmProviderKeyClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -238,7 +238,7 @@ namespace Opik
         /// <summary>
         /// Manual evaluation resources for traces, threads, and spans.
         /// </summary>
-        public ManualEvaluationClient ManualEvaluation => new ManualEvaluationClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ManualEvaluationClient ManualEvaluation => new ManualEvaluationClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -248,7 +248,7 @@ namespace Opik
         /// <summary>
         /// Ollama provider configuration endpoints with OpenAI-compatible API support.
         /// </summary>
-        public OllamaClient Ollama => new OllamaClient(HttpClient, authorizations: Authorizations, options: Options)
+        public OllamaClient Ollama => new OllamaClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -258,7 +258,7 @@ namespace Opik
         /// <summary>
         /// Ollie pod state persistence.
         /// </summary>
-        public OllieStateClient OllieState => new OllieStateClient(HttpClient, authorizations: Authorizations, options: Options)
+        public OllieStateClient OllieState => new OllieStateClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -268,7 +268,7 @@ namespace Opik
         /// <summary>
         /// Resource to ingest Traces and Spans via OpenTelemetry.
         /// </summary>
-        public OpenTelemetryIngestionClient OpenTelemetryIngestion => new OpenTelemetryIngestionClient(HttpClient, authorizations: Authorizations, options: Options)
+        public OpenTelemetryIngestionClient OpenTelemetryIngestion => new OpenTelemetryIngestionClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -278,7 +278,7 @@ namespace Opik
         /// <summary>
         /// Optimization resources.
         /// </summary>
-        public OptimizationsClient Optimizations => new OptimizationsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public OptimizationsClient Optimizations => new OptimizationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -288,7 +288,7 @@ namespace Opik
         /// <summary>
         /// Pairing sessions for the `opik connect` and `opik endpoint` CLI commands.
         /// </summary>
-        public PairingClient Pairing => new PairingClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PairingClient Pairing => new PairingClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -298,7 +298,7 @@ namespace Opik
         /// <summary>
         /// Project related resources.
         /// </summary>
-        public ProjectsClient Projects => new ProjectsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ProjectsClient Projects => new ProjectsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -308,7 +308,7 @@ namespace Opik
         /// <summary>
         /// Prompt resources.
         /// </summary>
-        public PromptsClient Prompts => new PromptsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PromptsClient Prompts => new PromptsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -318,7 +318,7 @@ namespace Opik
         /// <summary>
         /// Redirects for SDK generated links.
         /// </summary>
-        public RedirectClient Redirect => new RedirectClient(HttpClient, authorizations: Authorizations, options: Options)
+        public RedirectClient Redirect => new RedirectClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -328,7 +328,7 @@ namespace Opik
         /// <summary>
         /// Data retention rule management.
         /// </summary>
-        public RetentionRulesClient RetentionRules => new RetentionRulesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public RetentionRulesClient RetentionRules => new RetentionRulesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -338,7 +338,7 @@ namespace Opik
         /// <summary>
         /// Local runner management endpoints.
         /// </summary>
-        public RunnersClient Runners => new RunnersClient(HttpClient, authorizations: Authorizations, options: Options)
+        public RunnersClient Runners => new RunnersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -348,7 +348,7 @@ namespace Opik
         /// <summary>
         /// Service Toggles resources.
         /// </summary>
-        public ServiceTogglesClient ServiceToggles => new ServiceTogglesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ServiceTogglesClient ServiceToggles => new ServiceTogglesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -358,7 +358,7 @@ namespace Opik
         /// <summary>
         /// Span related resources.
         /// </summary>
-        public SpansClient Spans => new SpansClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SpansClient Spans => new SpansClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -368,7 +368,7 @@ namespace Opik
         /// <summary>
         /// System usage related resource.
         /// </summary>
-        public SystemUsageClient SystemUsage => new SystemUsageClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SystemUsageClient SystemUsage => new SystemUsageClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -378,7 +378,7 @@ namespace Opik
         /// <summary>
         /// Trace related resources.
         /// </summary>
-        public TracesClient Traces => new TracesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public TracesClient Traces => new TracesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -388,7 +388,7 @@ namespace Opik
         /// <summary>
         /// Welcome wizard tracking resources.
         /// </summary>
-        public WelcomeWizardClient WelcomeWizard => new WelcomeWizardClient(HttpClient, authorizations: Authorizations, options: Options)
+        public WelcomeWizardClient WelcomeWizard => new WelcomeWizardClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -398,7 +398,7 @@ namespace Opik
         /// <summary>
         /// Workspace permissions related resources.
         /// </summary>
-        public WorkspacePermissionsClient WorkspacePermissions => new WorkspacePermissionsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public WorkspacePermissionsClient WorkspacePermissions => new WorkspacePermissionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -408,7 +408,7 @@ namespace Opik
         /// <summary>
         /// Workspace related resources.
         /// </summary>
-        public WorkspacesClient Workspaces => new WorkspacesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public WorkspacesClient Workspaces => new WorkspacesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -476,10 +476,10 @@ namespace Opik
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
         public OpikClient(
-            global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null,
-            global::System.Collections.Generic.List<global::Opik.EndPointAuthorization>? authorizations = null,
-            global::Opik.AutoSDKClientOptions? options = null,
+            global::System.Net.Http.HttpClient? httpClient,
+            global::System.Uri? baseUri,
+            global::System.Collections.Generic.List<global::Opik.EndPointAuthorization>? authorizations,
+            global::Opik.AutoSDKClientOptions? options,
             bool disposeHttpClient = true)
         {
 

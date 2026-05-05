@@ -24,6 +24,21 @@ namespace Opik
         /// Restores the dataset to a previous version state by creating a new version with items copied from the specified version. If the version is already the latest, returns it as-is (no-op).
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.DatasetVersionPublic>> RestoreDatasetVersionAsResponseAsync(
+            global::System.Guid id,
+
+            global::Opik.DatasetVersionRestorePublic request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Restore dataset to a previous version<br/>
+        /// Restores the dataset to a previous version state by creating a new version with items copied from the specified version. If the version is already the latest, returns it as-is (no-op).
+        /// </summary>
+        /// <param name="id"></param>
         /// <param name="versionRef">
         /// Version hash or tag to restore from
         /// </param>

@@ -21,6 +21,19 @@ namespace Opik
         /// Record experiment items in bulk<br/>
         /// Record experiment items in bulk with traces, spans, and feedback scores. Maximum request size is 4MB.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse> ExperimentItemsBulkAsResponseAsync(
+
+            global::Opik.ExperimentItemBulkUploadExperimentItemBulkWriteView request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Record experiment items in bulk<br/>
+        /// Record experiment items in bulk with traces, spans, and feedback scores. Maximum request size is 4MB.
+        /// </summary>
         /// <param name="experimentName"></param>
         /// <param name="datasetName"></param>
         /// <param name="experimentId">
