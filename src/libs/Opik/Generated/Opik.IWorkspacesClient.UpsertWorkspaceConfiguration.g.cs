@@ -21,6 +21,19 @@ namespace Opik
         /// Upsert workspace configuration<br/>
         /// Upsert workspace configuration
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.WorkspaceConfiguration>> UpsertWorkspaceConfigurationAsResponseAsync(
+
+            global::Opik.WorkspaceConfiguration request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Upsert workspace configuration<br/>
+        /// Upsert workspace configuration
+        /// </summary>
         /// <param name="timeoutToMarkThreadAsInactive">
         /// Duration in ISO-8601 format (e.g., PT30M for 30 minutes, PT2H for 2 hours, P1D for 1 day). Minimum precision supported is seconds, please use a duration with seconds precision or higher. Also, the max duration allowed is 7 days.
         /// </param>

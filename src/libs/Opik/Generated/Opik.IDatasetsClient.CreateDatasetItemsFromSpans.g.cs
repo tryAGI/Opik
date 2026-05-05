@@ -24,6 +24,21 @@ namespace Opik
         /// Create dataset items from spans with enriched metadata
         /// </summary>
         /// <param name="datasetId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse> CreateDatasetItemsFromSpansAsResponseAsync(
+            global::System.Guid datasetId,
+
+            global::Opik.CreateDatasetItemsFromSpansRequest request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create dataset items from spans<br/>
+        /// Create dataset items from spans with enriched metadata
+        /// </summary>
+        /// <param name="datasetId"></param>
         /// <param name="spanIds">
         /// Set of span IDs to add to the dataset
         /// </param>

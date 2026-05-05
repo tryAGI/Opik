@@ -21,6 +21,19 @@ namespace Opik
         /// Get costs summary<br/>
         /// Get costs summary
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.Result>> CostsSummaryAsResponseAsync(
+
+            global::Opik.WorkspaceMetricsSummaryRequest request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Get costs summary<br/>
+        /// Get costs summary
+        /// </summary>
         /// <param name="projectIds"></param>
         /// <param name="intervalStart"></param>
         /// <param name="intervalEnd"></param>

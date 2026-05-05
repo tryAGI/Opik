@@ -24,6 +24,21 @@ namespace Opik
         /// Update span by id
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Opik.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse> UpdateSpanAsResponseAsync(
+            global::System.Guid id,
+
+            global::Opik.SpanUpdate request,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Update span by id<br/>
+        /// Update span by id
+        /// </summary>
+        /// <param name="id"></param>
         /// <param name="projectName">
         /// If null and project_id not specified, Default Project is assumed
         /// </param>
