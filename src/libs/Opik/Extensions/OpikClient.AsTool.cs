@@ -1,5 +1,4 @@
 #pragma warning disable CS3002 // Return type is not CLS-compliant
-using System.Text.Json;
 using Microsoft.Extensions.AI;
 
 namespace Opik;
@@ -29,13 +28,13 @@ public static class OpikToolExtensions
                     name: name,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(response.Content?.Select(p => new
+                return response.Content?.Select(p => new
                 {
                     id = p.Id,
                     name = p.Name,
                     description = p.Description,
                     created_at = p.CreatedAt,
-                }));
+                });
             },
             name: "ListProjects",
             description: "Lists projects in Opik. Optionally filter by name (partial match, case insensitive). Returns project IDs, names, descriptions, and creation dates.");
@@ -58,14 +57,14 @@ public static class OpikToolExtensions
                     stripAttachments: true,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(new
+                return new
                 {
                     id = trace.Id,
                     name = trace.Name,
                     start_time = trace.StartTime,
                     end_time = trace.EndTime,
                     tags = trace.Tags,
-                });
+                };
             },
             name: "GetTrace",
             description: "Retrieves an Opik trace by its ID. Returns the trace's name, start/end times, and tags.");
@@ -91,7 +90,7 @@ public static class OpikToolExtensions
                     name: name,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(response.Content?.Select(p => new
+                return response.Content?.Select(p => new
                 {
                     id = p.Id,
                     name = p.Name,
@@ -99,7 +98,7 @@ public static class OpikToolExtensions
                     template_structure = p.TemplateStructure?.ToString(),
                     tags = p.Tags,
                     created_at = p.CreatedAt,
-                }));
+                });
             },
             name: "ListPrompts",
             description: "Lists prompts in Opik. Optionally filter by name (partial match, case insensitive). Returns prompt IDs, names, descriptions, template types, tags, and creation dates.");
@@ -152,13 +151,13 @@ public static class OpikToolExtensions
                     tags: tagList,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(new
+                return new
                 {
                     id = traceId,
                     name,
                     project_name = projectName,
                     status = "created",
-                });
+                };
             },
             name: "CreateTrace",
             description: "Creates a new trace in Opik for logging an LLM operation. Requires a name. Optionally specify a project name and comma-separated tags. Returns the trace ID.");
@@ -188,13 +187,13 @@ public static class OpikToolExtensions
                     provider: provider,
                     cancellationToken: cancellationToken).ConfigureAwait(false);
 
-                return JsonSerializer.Serialize(new
+                return new
                 {
                     id = spanId,
                     trace_id = traceId,
                     name,
                     status = "created",
-                });
+                };
             },
             name: "CreateSpan",
             description: "Creates a new span within an Opik trace for logging a sub-operation (e.g., an LLM call). Requires a trace ID and name. Optionally specify project name, model, and provider. Returns the span ID.");
