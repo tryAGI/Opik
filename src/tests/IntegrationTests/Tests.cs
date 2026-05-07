@@ -6,7 +6,7 @@ public partial class Tests
     private static OpikClient GetAuthenticatedClient()
     {
         var apiKey =
-            Environment.GetEnvironmentVariable("OPIK_API_KEY") is { Length: > 0 } apiKeyValue
+            System.Environment.GetEnvironmentVariable("OPIK_API_KEY") is { Length: > 0 } apiKeyValue
                 ? apiKeyValue
                 : throw new AssertInconclusiveException("OPIK_API_KEY environment variable is not found.");
 
