@@ -29,6 +29,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickJsonListStringPublicVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out object? value)
+        {
+            value = JsonListStringPublicVariant1;
+            return IsJsonListStringPublicVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<object>? JsonListStringPublicVariant2 { get; init; }
 #else
@@ -46,6 +59,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickJsonListStringPublicVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<object>? value)
+        {
+            value = JsonListStringPublicVariant2;
+            return IsJsonListStringPublicVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public string? JsonListStringPublicVariant3 { get; init; }
 #else
@@ -59,6 +85,19 @@ namespace Opik
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringPublicVariant3))]
 #endif
         public bool IsJsonListStringPublicVariant3 => JsonListStringPublicVariant3 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickJsonListStringPublicVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = JsonListStringPublicVariant3;
+            return IsJsonListStringPublicVariant3;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -121,9 +160,9 @@ namespace Opik
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<object?, TResult>? jsonListStringPublicVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<object>?, TResult>? jsonListStringPublicVariant2 = null,
-            global::System.Func<string?, TResult>? jsonListStringPublicVariant3 = null,
+            global::System.Func<object, TResult>? jsonListStringPublicVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<object>, TResult>? jsonListStringPublicVariant2 = null,
+            global::System.Func<string, TResult>? jsonListStringPublicVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -151,9 +190,39 @@ namespace Opik
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<object?>? jsonListStringPublicVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<object>?>? jsonListStringPublicVariant2 = null,
-            global::System.Action<string?>? jsonListStringPublicVariant3 = null,
+            global::System.Action<object>? jsonListStringPublicVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<object>>? jsonListStringPublicVariant2 = null,
+
+            global::System.Action<string>? jsonListStringPublicVariant3 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsJsonListStringPublicVariant1)
+            {
+                jsonListStringPublicVariant1?.Invoke(JsonListStringPublicVariant1!);
+            }
+            else if (IsJsonListStringPublicVariant2)
+            {
+                jsonListStringPublicVariant2?.Invoke(JsonListStringPublicVariant2!);
+            }
+            else if (IsJsonListStringPublicVariant3)
+            {
+                jsonListStringPublicVariant3?.Invoke(JsonListStringPublicVariant3!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<object>? jsonListStringPublicVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<object>>? jsonListStringPublicVariant2 = null,
+            global::System.Action<string>? jsonListStringPublicVariant3 = null,
             bool validate = true)
         {
             if (validate)
