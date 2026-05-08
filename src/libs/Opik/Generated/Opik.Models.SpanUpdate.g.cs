@@ -135,6 +135,12 @@ namespace Opik
         public global::Opik.SpanUpdateSource? Source { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        public string? Environment { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -173,6 +179,7 @@ namespace Opik
         /// <param name="errorInfo"></param>
         /// <param name="ttft"></param>
         /// <param name="source"></param>
+        /// <param name="environment"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -196,7 +203,8 @@ namespace Opik
             double? totalEstimatedCost,
             global::Opik.ErrorInfo? errorInfo,
             double? ttft,
-            global::Opik.SpanUpdateSource? source)
+            global::Opik.SpanUpdateSource? source,
+            string? environment)
         {
             this.ProjectName = projectName;
             this.ProjectId = projectId;
@@ -218,6 +226,7 @@ namespace Opik
             this.ErrorInfo = errorInfo;
             this.Ttft = ttft;
             this.Source = source;
+            this.Environment = environment;
         }
 
         /// <summary>

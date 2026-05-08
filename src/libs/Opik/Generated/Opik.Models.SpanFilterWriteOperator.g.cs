@@ -43,6 +43,10 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        In,
+        /// <summary>
+        /// 
+        /// </summary>
         IsEmpty,
         /// <summary>
         /// 
@@ -52,6 +56,10 @@ namespace Opik
         /// 
         /// </summary>
         NotContains,
+        /// <summary>
+        /// 
+        /// </summary>
+        NotIn,
         /// <summary>
         /// 
         /// </summary>
@@ -78,9 +86,11 @@ namespace Opik
                 SpanFilterWriteOperator.Gte => ">=",
                 SpanFilterWriteOperator.Contains => "contains",
                 SpanFilterWriteOperator.EndsWith => "ends_with",
+                SpanFilterWriteOperator.In => "in",
                 SpanFilterWriteOperator.IsEmpty => "is_empty",
                 SpanFilterWriteOperator.IsNotEmpty => "is_not_empty",
                 SpanFilterWriteOperator.NotContains => "not_contains",
+                SpanFilterWriteOperator.NotIn => "not_in",
                 SpanFilterWriteOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -100,9 +110,11 @@ namespace Opik
                 ">=" => SpanFilterWriteOperator.Gte,
                 "contains" => SpanFilterWriteOperator.Contains,
                 "ends_with" => SpanFilterWriteOperator.EndsWith,
+                "in" => SpanFilterWriteOperator.In,
                 "is_empty" => SpanFilterWriteOperator.IsEmpty,
                 "is_not_empty" => SpanFilterWriteOperator.IsNotEmpty,
                 "not_contains" => SpanFilterWriteOperator.NotContains,
+                "not_in" => SpanFilterWriteOperator.NotIn,
                 "starts_with" => SpanFilterWriteOperator.StartsWith,
                 _ => null,
             };

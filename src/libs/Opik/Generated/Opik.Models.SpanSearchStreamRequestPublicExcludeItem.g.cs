@@ -31,6 +31,10 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        Environment,
+        /// <summary>
+        /// 
+        /// </summary>
         ErrorInfo,
         /// <summary>
         /// 
@@ -115,6 +119,7 @@ namespace Opik
                 SpanSearchStreamRequestPublicExcludeItem.CreatedBy => "created_by",
                 SpanSearchStreamRequestPublicExcludeItem.Duration => "duration",
                 SpanSearchStreamRequestPublicExcludeItem.EndTime => "end_time",
+                SpanSearchStreamRequestPublicExcludeItem.Environment => "environment",
                 SpanSearchStreamRequestPublicExcludeItem.ErrorInfo => "error_info",
                 SpanSearchStreamRequestPublicExcludeItem.FeedbackScores => "feedback_scores",
                 SpanSearchStreamRequestPublicExcludeItem.Input => "input",
@@ -147,6 +152,7 @@ namespace Opik
                 "created_by" => SpanSearchStreamRequestPublicExcludeItem.CreatedBy,
                 "duration" => SpanSearchStreamRequestPublicExcludeItem.Duration,
                 "end_time" => SpanSearchStreamRequestPublicExcludeItem.EndTime,
+                "environment" => SpanSearchStreamRequestPublicExcludeItem.Environment,
                 "error_info" => SpanSearchStreamRequestPublicExcludeItem.ErrorInfo,
                 "feedback_scores" => SpanSearchStreamRequestPublicExcludeItem.FeedbackScores,
                 "input" => SpanSearchStreamRequestPublicExcludeItem.Input,

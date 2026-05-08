@@ -184,6 +184,12 @@ namespace Opik
         public global::Opik.SpanPublicSource? Source { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        public string? Environment { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -239,6 +245,7 @@ namespace Opik
         /// Time to first token in milliseconds
         /// </param>
         /// <param name="source"></param>
+        /// <param name="environment"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -270,7 +277,8 @@ namespace Opik
             string? totalEstimatedCostVersion,
             double? duration,
             double? ttft,
-            global::Opik.SpanPublicSource? source)
+            global::Opik.SpanPublicSource? source,
+            string? environment)
         {
             this.Id = id;
             this.ProjectName = projectName;
@@ -300,6 +308,7 @@ namespace Opik
             this.Duration = duration;
             this.Ttft = ttft;
             this.Source = source;
+            this.Environment = environment;
         }
 
         /// <summary>
