@@ -199,6 +199,12 @@ namespace Opik
         public global::Opik.TracePublicSource? Source { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        public string? Environment { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -277,6 +283,7 @@ namespace Opik
         /// Included only in responses
         /// </param>
         /// <param name="source"></param>
+        /// <param name="environment"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -310,7 +317,8 @@ namespace Opik
             bool? hasToolSpans,
             global::System.Collections.Generic.IList<string>? providers,
             global::Opik.ExperimentItemReferencePublic? experiment,
-            global::Opik.TracePublicSource? source)
+            global::Opik.TracePublicSource? source,
+            string? environment)
         {
             this.Id = id;
             this.ProjectId = projectId;
@@ -342,6 +350,7 @@ namespace Opik
             this.Providers = providers;
             this.Experiment = experiment;
             this.Source = source;
+            this.Environment = environment;
         }
 
         /// <summary>

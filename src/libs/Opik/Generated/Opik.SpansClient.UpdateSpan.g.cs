@@ -506,6 +506,7 @@ namespace Opik
         /// <param name="errorInfo"></param>
         /// <param name="ttft"></param>
         /// <param name="source"></param>
+        /// <param name="environment"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -531,6 +532,7 @@ namespace Opik
             global::Opik.ErrorInfo? errorInfo = default,
             double? ttft = default,
             global::Opik.SpanUpdateSource? source = default,
+            string? environment = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -556,6 +558,7 @@ namespace Opik
                 ErrorInfo = errorInfo,
                 Ttft = ttft,
                 Source = source,
+                Environment = environment,
             };
 
             await UpdateSpanAsync(

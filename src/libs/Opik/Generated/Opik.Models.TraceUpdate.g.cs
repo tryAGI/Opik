@@ -97,6 +97,12 @@ namespace Opik
         public global::Opik.TraceUpdateSource? Source { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        public string? Environment { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -129,6 +135,7 @@ namespace Opik
         /// <param name="threadId"></param>
         /// <param name="ttft"></param>
         /// <param name="source"></param>
+        /// <param name="environment"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -146,7 +153,8 @@ namespace Opik
             global::Opik.ErrorInfo? errorInfo,
             string? threadId,
             double? ttft,
-            global::Opik.TraceUpdateSource? source)
+            global::Opik.TraceUpdateSource? source,
+            string? environment)
         {
             this.ProjectName = projectName;
             this.ProjectId = projectId;
@@ -162,6 +170,7 @@ namespace Opik
             this.ThreadId = threadId;
             this.Ttft = ttft;
             this.Source = source;
+            this.Environment = environment;
         }
 
         /// <summary>

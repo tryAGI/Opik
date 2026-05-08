@@ -126,6 +126,12 @@ namespace Opik
         public global::System.DateTime? CreatedAt { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        public string? Environment { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -153,6 +159,7 @@ namespace Opik
         /// <param name="lastUpdatedBy"></param>
         /// <param name="createdBy"></param>
         /// <param name="createdAt"></param>
+        /// <param name="environment"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -175,7 +182,8 @@ namespace Opik
             global::System.DateTime? lastUpdatedAt,
             string? lastUpdatedBy,
             string? createdBy,
-            global::System.DateTime? createdAt)
+            global::System.DateTime? createdAt,
+            string? environment)
         {
             this.Id = id;
             this.ProjectId = projectId;
@@ -196,6 +204,7 @@ namespace Opik
             this.LastUpdatedBy = lastUpdatedBy;
             this.CreatedBy = createdBy;
             this.CreatedAt = createdAt;
+            this.Environment = environment;
         }
 
         /// <summary>

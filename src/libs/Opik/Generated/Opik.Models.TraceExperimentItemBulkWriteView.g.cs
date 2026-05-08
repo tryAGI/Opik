@@ -98,6 +98,12 @@ namespace Opik
         public global::Opik.TraceExperimentItemBulkWriteViewSource? Source { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        public string? Environment { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -124,6 +130,7 @@ namespace Opik
         /// </param>
         /// <param name="threadId"></param>
         /// <param name="source"></param>
+        /// <param name="environment"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -141,7 +148,8 @@ namespace Opik
             global::System.DateTime? lastUpdatedAt,
             double? ttft,
             string? threadId,
-            global::Opik.TraceExperimentItemBulkWriteViewSource? source)
+            global::Opik.TraceExperimentItemBulkWriteViewSource? source,
+            string? environment)
         {
             this.Id = id;
             this.ProjectName = projectName;
@@ -157,6 +165,7 @@ namespace Opik
             this.Ttft = ttft;
             this.ThreadId = threadId;
             this.Source = source;
+            this.Environment = environment;
         }
 
         /// <summary>
