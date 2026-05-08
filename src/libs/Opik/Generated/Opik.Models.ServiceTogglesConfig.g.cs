@@ -172,6 +172,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("v1WorkspaceAllowlistIds")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> V1WorkspaceAllowlistIds { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("forceWorkspaceVersion")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ForceWorkspaceVersion { get; set; }
@@ -187,6 +194,12 @@ namespace Opik
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("v2WorkspaceAllowlist")]
         public string? V2WorkspaceAllowlist { get; set; }
+
+        /// <summary>
+        /// Included only in requests
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("v1WorkspaceAllowlist")]
+        public string? V1WorkspaceAllowlist { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -220,9 +233,13 @@ namespace Opik
         /// <param name="ollamaProviderEnabled"></param>
         /// <param name="collaboratorsTabEnabled"></param>
         /// <param name="v2WorkspaceAllowlistIds"></param>
+        /// <param name="v1WorkspaceAllowlistIds"></param>
         /// <param name="forceWorkspaceVersion"></param>
         /// <param name="defaultPageSize"></param>
         /// <param name="v2WorkspaceAllowlist">
+        /// Included only in requests
+        /// </param>
+        /// <param name="v1WorkspaceAllowlist">
         /// Included only in requests
         /// </param>
 #if NET7_0_OR_GREATER
@@ -252,9 +269,11 @@ namespace Opik
             bool ollamaProviderEnabled,
             bool collaboratorsTabEnabled,
             global::System.Collections.Generic.IList<string> v2WorkspaceAllowlistIds,
+            global::System.Collections.Generic.IList<string> v1WorkspaceAllowlistIds,
             string forceWorkspaceVersion,
             int? defaultPageSize,
-            string? v2WorkspaceAllowlist)
+            string? v2WorkspaceAllowlist,
+            string? v1WorkspaceAllowlist)
         {
             this.PythonEvaluatorEnabled = pythonEvaluatorEnabled;
             this.TraceThreadPythonEvaluatorEnabled = traceThreadPythonEvaluatorEnabled;
@@ -279,9 +298,11 @@ namespace Opik
             this.OllamaProviderEnabled = ollamaProviderEnabled;
             this.CollaboratorsTabEnabled = collaboratorsTabEnabled;
             this.V2WorkspaceAllowlistIds = v2WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v2WorkspaceAllowlistIds));
+            this.V1WorkspaceAllowlistIds = v1WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v1WorkspaceAllowlistIds));
             this.ForceWorkspaceVersion = forceWorkspaceVersion ?? throw new global::System.ArgumentNullException(nameof(forceWorkspaceVersion));
             this.DefaultPageSize = defaultPageSize;
             this.V2WorkspaceAllowlist = v2WorkspaceAllowlist;
+            this.V1WorkspaceAllowlist = v1WorkspaceAllowlist;
         }
 
         /// <summary>
