@@ -238,5 +238,6 @@ namespace Opik
         public SpanWrite()
         {
         }
+
     }
 }

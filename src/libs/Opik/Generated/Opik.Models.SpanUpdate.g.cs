@@ -235,5 +235,6 @@ namespace Opik
         public SpanUpdate()
         {
         }
+
     }
 }

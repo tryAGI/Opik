@@ -150,5 +150,6 @@ namespace Opik
         public AlertPublic()
         {
         }
+
     }
 }

@@ -113,5 +113,6 @@ namespace Opik
         public LocalRunner()
         {
         }
+
     }
 }

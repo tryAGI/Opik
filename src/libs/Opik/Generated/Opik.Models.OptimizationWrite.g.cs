@@ -129,5 +129,6 @@ namespace Opik
         public OptimizationWrite()
         {
         }
+
     }
 }

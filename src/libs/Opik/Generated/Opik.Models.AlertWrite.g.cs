@@ -106,5 +106,6 @@ namespace Opik
         public AlertWrite()
         {
         }
+
     }
 }

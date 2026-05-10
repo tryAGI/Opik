@@ -39,5 +39,6 @@ namespace Opik
         public WorkspaceMetricsSummaryResponse()
         {
         }
+
     }
 }

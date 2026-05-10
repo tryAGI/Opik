@@ -83,5 +83,6 @@ namespace Opik
         public NumericalFeedbackDefinitionVariant2()
         {
         }
+
     }
 }

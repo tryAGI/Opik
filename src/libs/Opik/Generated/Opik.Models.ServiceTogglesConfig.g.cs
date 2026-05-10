@@ -311,5 +311,6 @@ namespace Opik
         public ServiceTogglesConfig()
         {
         }
+
     }
 }

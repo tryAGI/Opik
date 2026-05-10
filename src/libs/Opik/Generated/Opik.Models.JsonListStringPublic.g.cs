@@ -42,6 +42,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public object PickJsonListStringPublicVariant1() => IsJsonListStringPublicVariant1
+            ? JsonListStringPublicVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringPublicVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<object>? JsonListStringPublicVariant2 { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public global::System.Collections.Generic.IList<object> PickJsonListStringPublicVariant2() => IsJsonListStringPublicVariant2
+            ? JsonListStringPublicVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringPublicVariant2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public string? JsonListStringPublicVariant3 { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace Opik
             value = JsonListStringPublicVariant3;
             return IsJsonListStringPublicVariant3;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickJsonListStringPublicVariant3() => IsJsonListStringPublicVariant3
+            ? JsonListStringPublicVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringPublicVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

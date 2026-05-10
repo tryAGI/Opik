@@ -194,5 +194,6 @@ namespace Opik
         public AnnotationQueuePublic()
         {
         }
+
     }
 }

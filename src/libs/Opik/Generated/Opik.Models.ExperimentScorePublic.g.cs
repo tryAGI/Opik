@@ -50,5 +50,6 @@ namespace Opik
         public ExperimentScorePublic()
         {
         }
+
     }
 }

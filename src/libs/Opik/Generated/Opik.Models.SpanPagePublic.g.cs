@@ -75,5 +75,6 @@ namespace Opik
         public SpanPagePublic()
         {
         }
+
     }
 }

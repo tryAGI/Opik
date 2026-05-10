@@ -55,5 +55,6 @@ namespace Opik
         public ProjectReference()
         {
         }
+
     }
 }

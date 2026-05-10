@@ -370,5 +370,6 @@ namespace Opik
         public Trace()
         {
         }
+
     }
 }

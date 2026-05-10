@@ -120,5 +120,6 @@ namespace Opik
         public EnvironmentPublic()
         {
         }
+
     }
 }

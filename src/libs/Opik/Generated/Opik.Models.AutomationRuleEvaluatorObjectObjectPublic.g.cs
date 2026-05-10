@@ -170,5 +170,6 @@ namespace Opik
         public AutomationRuleEvaluatorObjectObjectPublic()
         {
         }
+
     }
 }

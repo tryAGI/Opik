@@ -105,5 +105,6 @@ namespace Opik
         public AgentConfigEnv()
         {
         }
+
     }
 }

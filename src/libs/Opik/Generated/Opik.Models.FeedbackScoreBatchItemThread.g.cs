@@ -118,5 +118,6 @@ namespace Opik
         public FeedbackScoreBatchItemThread()
         {
         }
+
     }
 }

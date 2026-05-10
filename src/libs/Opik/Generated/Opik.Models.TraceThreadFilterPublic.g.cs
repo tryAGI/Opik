@@ -67,5 +67,6 @@ namespace Opik
         public TraceThreadFilterPublic()
         {
         }
+
     }
 }

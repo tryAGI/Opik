@@ -179,5 +179,6 @@ namespace Opik
         public TraceUpdate()
         {
         }
+
     }
 }

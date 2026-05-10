@@ -147,5 +147,6 @@ namespace Opik
         public PromptPublic()
         {
         }
+
     }
 }

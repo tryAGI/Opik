@@ -42,6 +42,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public object PickJsonListStringWriteVariant1() => IsJsonListStringWriteVariant1
+            ? JsonListStringWriteVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringWriteVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<object>? JsonListStringWriteVariant2 { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public global::System.Collections.Generic.IList<object> PickJsonListStringWriteVariant2() => IsJsonListStringWriteVariant2
+            ? JsonListStringWriteVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringWriteVariant2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public string? JsonListStringWriteVariant3 { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace Opik
             value = JsonListStringWriteVariant3;
             return IsJsonListStringWriteVariant3;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickJsonListStringWriteVariant3() => IsJsonListStringWriteVariant3
+            ? JsonListStringWriteVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringWriteVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

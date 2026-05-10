@@ -176,5 +176,6 @@ namespace Opik
         public RetentionRulePublic()
         {
         }
+
     }
 }

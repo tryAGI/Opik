@@ -42,6 +42,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public object PickJsonListStringCompareVariant1() => IsJsonListStringCompareVariant1
+            ? JsonListStringCompareVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringCompareVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<object>? JsonListStringCompareVariant2 { get; init; }
 #else
@@ -72,6 +79,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public global::System.Collections.Generic.IList<object> PickJsonListStringCompareVariant2() => IsJsonListStringCompareVariant2
+            ? JsonListStringCompareVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringCompareVariant2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public string? JsonListStringCompareVariant3 { get; init; }
 #else
@@ -98,6 +112,13 @@ namespace Opik
             value = JsonListStringCompareVariant3;
             return IsJsonListStringCompareVariant3;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickJsonListStringCompareVariant3() => IsJsonListStringCompareVariant3
+            ? JsonListStringCompareVariant3!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringCompareVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
