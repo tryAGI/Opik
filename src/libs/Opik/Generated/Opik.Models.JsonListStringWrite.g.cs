@@ -119,6 +119,11 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public static JsonListStringWrite FromJsonListStringWriteVariant3(string? value) => new JsonListStringWrite(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public JsonListStringWrite(
             object? jsonListStringWriteVariant1,
             global::System.Collections.Generic.IList<object>? jsonListStringWriteVariant2,
