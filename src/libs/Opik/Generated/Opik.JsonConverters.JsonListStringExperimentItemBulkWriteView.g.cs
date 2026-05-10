@@ -138,7 +138,10 @@ namespace Opik.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (jsonListStringExperimentItemBulkWriteViewVariant1 == null && jsonListStringExperimentItemBulkWriteViewVariant2 == null && jsonListStringExperimentItemBulkWriteViewVariant3 == null)
+            {
                 try
                 {
 
@@ -152,7 +155,10 @@ namespace Opik.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (jsonListStringExperimentItemBulkWriteViewVariant1 == null && jsonListStringExperimentItemBulkWriteViewVariant2 == null && jsonListStringExperimentItemBulkWriteViewVariant3 == null)
+            {
                 try
                 {
 
