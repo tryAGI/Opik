@@ -119,6 +119,11 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public static JsonListString FromJsonListStringVariant3(string? value) => new JsonListString(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public JsonListString(
             object? jsonListStringVariant1,
             global::System.Collections.Generic.IList<object>? jsonListStringVariant2,

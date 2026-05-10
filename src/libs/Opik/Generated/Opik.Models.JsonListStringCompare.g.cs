@@ -119,6 +119,11 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public static JsonListStringCompare FromJsonListStringCompareVariant3(string? value) => new JsonListStringCompare(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public JsonListStringCompare(
             object? jsonListStringCompareVariant1,
             global::System.Collections.Generic.IList<object>? jsonListStringCompareVariant2,
