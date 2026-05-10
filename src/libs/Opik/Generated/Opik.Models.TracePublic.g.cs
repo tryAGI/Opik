@@ -359,5 +359,6 @@ namespace Opik
         public TracePublic()
         {
         }
+
     }
 }

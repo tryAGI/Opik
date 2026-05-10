@@ -59,5 +59,6 @@ namespace Opik
         public ErrorInfoWrite()
         {
         }
+
     }
 }

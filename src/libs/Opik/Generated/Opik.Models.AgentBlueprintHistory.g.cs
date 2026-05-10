@@ -135,5 +135,6 @@ namespace Opik
         public AgentBlueprintHistory()
         {
         }
+
     }
 }

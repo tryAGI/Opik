@@ -94,5 +94,6 @@ namespace Opik
         public ValueEntryCompare()
         {
         }
+
     }
 }

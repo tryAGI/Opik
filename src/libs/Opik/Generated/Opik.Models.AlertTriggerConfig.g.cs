@@ -114,5 +114,6 @@ namespace Opik
         public AlertTriggerConfig()
         {
         }
+
     }
 }

@@ -155,5 +155,6 @@ namespace Opik
         public PromptVersion()
         {
         }
+
     }
 }

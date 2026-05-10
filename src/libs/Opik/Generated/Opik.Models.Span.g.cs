@@ -317,5 +317,6 @@ namespace Opik
         public Span()
         {
         }
+
     }
 }

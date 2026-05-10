@@ -85,5 +85,6 @@ namespace Opik
         public RecentActivityItemPublic()
         {
         }
+
     }
 }

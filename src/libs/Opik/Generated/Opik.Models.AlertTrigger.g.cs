@@ -92,5 +92,6 @@ namespace Opik
         public AlertTrigger()
         {
         }
+
     }
 }

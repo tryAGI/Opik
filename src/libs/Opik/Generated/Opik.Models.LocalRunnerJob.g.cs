@@ -175,5 +175,6 @@ namespace Opik
         public LocalRunnerJob()
         {
         }
+
     }
 }

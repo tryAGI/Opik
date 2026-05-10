@@ -69,5 +69,6 @@ namespace Opik
         public KpiCardRequest()
         {
         }
+
     }
 }

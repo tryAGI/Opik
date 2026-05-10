@@ -272,5 +272,6 @@ namespace Opik
         public OptimizationPublic()
         {
         }
+
     }
 }

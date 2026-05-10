@@ -181,5 +181,6 @@ namespace Opik
         public AutomationRuleEvaluator()
         {
         }
+
     }
 }

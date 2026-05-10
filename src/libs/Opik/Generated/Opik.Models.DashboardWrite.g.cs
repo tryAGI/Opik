@@ -91,5 +91,6 @@ namespace Opik
         public DashboardWrite()
         {
         }
+
     }
 }
