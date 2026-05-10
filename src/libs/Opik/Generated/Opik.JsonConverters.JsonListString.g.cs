@@ -138,7 +138,10 @@ namespace Opik.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (jsonListStringVariant1 == null && jsonListStringVariant2 == null && jsonListStringVariant3 == null)
+            {
                 try
                 {
 
@@ -152,7 +155,10 @@ namespace Opik.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (jsonListStringVariant1 == null && jsonListStringVariant2 == null && jsonListStringVariant3 == null)
+            {
                 try
                 {
 
