@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace Opik
@@ -158,7 +156,7 @@ namespace Opik
         public required bool OllamaProviderEnabled { get; set; }
 
         /// <summary>
-        /// Deprecated (OPIK-6434): the Collaborators tab is always enabled on the frontend. Field retained for response-shape compatibility with older SDK clients; will be removed in a future release.
+        /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("collaboratorsTabEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -233,9 +231,7 @@ namespace Opik
         /// <param name="bedrockProviderEnabled"></param>
         /// <param name="customllmProviderEnabled"></param>
         /// <param name="ollamaProviderEnabled"></param>
-        /// <param name="collaboratorsTabEnabled">
-        /// Deprecated (OPIK-6434): the Collaborators tab is always enabled on the frontend. Field retained for response-shape compatibility with older SDK clients; will be removed in a future release.
-        /// </param>
+        /// <param name="collaboratorsTabEnabled"></param>
         /// <param name="v2WorkspaceAllowlistIds"></param>
         /// <param name="v1WorkspaceAllowlistIds"></param>
         /// <param name="forceWorkspaceVersion"></param>
