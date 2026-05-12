@@ -504,44 +504,6 @@ namespace Opik
                                         h => h.Value),
                                 };
                             }
-                            // Feature disabled
-                            if ((int)__response.StatusCode == 501)
-                            {
-                                string? __content_501 = null;
-                                global::System.Exception? __exception_501 = null;
-                                global::Opik.ErrorMessage? __value_501 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_501 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_501 = global::Opik.ErrorMessage.FromJson(__content_501, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_501 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_501 = global::Opik.ErrorMessage.FromJson(__content_501, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_501 = __ex;
-                                }
-
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
-                                    message: __content_501 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_501,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_501,
-                                    ResponseObject = __value_501,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value),
-                                };
-                            }
 
                             if (__effectiveReadResponseAsString)
                             {
