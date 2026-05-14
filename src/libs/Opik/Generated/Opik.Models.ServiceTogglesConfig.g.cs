@@ -67,13 +67,6 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("csvUploadEnabled")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool CsvUploadEnabled { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exportEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool ExportEnabled { get; set; }
@@ -98,6 +91,13 @@ namespace Opik
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetExportEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool DatasetExportEnabled { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("demoDataEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool DemoDataEnabled { get; set; }
 
         /// <summary>
         /// 
@@ -158,13 +158,6 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("collaboratorsTabEnabled")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool CollaboratorsTabEnabled { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("v2WorkspaceAllowlistIds")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> V2WorkspaceAllowlistIds { get; set; }
@@ -218,11 +211,11 @@ namespace Opik
         /// <param name="opikAIEnabled"></param>
         /// <param name="alertsEnabled"></param>
         /// <param name="welcomeWizardEnabled"></param>
-        /// <param name="csvUploadEnabled"></param>
         /// <param name="exportEnabled"></param>
         /// <param name="optimizationStudioEnabled"></param>
         /// <param name="datasetVersioningEnabled"></param>
         /// <param name="datasetExportEnabled"></param>
+        /// <param name="demoDataEnabled"></param>
         /// <param name="openaiProviderEnabled"></param>
         /// <param name="anthropicProviderEnabled"></param>
         /// <param name="geminiProviderEnabled"></param>
@@ -231,7 +224,6 @@ namespace Opik
         /// <param name="bedrockProviderEnabled"></param>
         /// <param name="customllmProviderEnabled"></param>
         /// <param name="ollamaProviderEnabled"></param>
-        /// <param name="collaboratorsTabEnabled"></param>
         /// <param name="v2WorkspaceAllowlistIds"></param>
         /// <param name="v1WorkspaceAllowlistIds"></param>
         /// <param name="forceWorkspaceVersion"></param>
@@ -254,11 +246,11 @@ namespace Opik
             bool opikAIEnabled,
             bool alertsEnabled,
             bool welcomeWizardEnabled,
-            bool csvUploadEnabled,
             bool exportEnabled,
             bool optimizationStudioEnabled,
             bool datasetVersioningEnabled,
             bool datasetExportEnabled,
+            bool demoDataEnabled,
             bool openaiProviderEnabled,
             bool anthropicProviderEnabled,
             bool geminiProviderEnabled,
@@ -267,7 +259,6 @@ namespace Opik
             bool bedrockProviderEnabled,
             bool customllmProviderEnabled,
             bool ollamaProviderEnabled,
-            bool collaboratorsTabEnabled,
             global::System.Collections.Generic.IList<string> v2WorkspaceAllowlistIds,
             global::System.Collections.Generic.IList<string> v1WorkspaceAllowlistIds,
             string forceWorkspaceVersion,
@@ -283,11 +274,11 @@ namespace Opik
             this.OpikAIEnabled = opikAIEnabled;
             this.AlertsEnabled = alertsEnabled;
             this.WelcomeWizardEnabled = welcomeWizardEnabled;
-            this.CsvUploadEnabled = csvUploadEnabled;
             this.ExportEnabled = exportEnabled;
             this.OptimizationStudioEnabled = optimizationStudioEnabled;
             this.DatasetVersioningEnabled = datasetVersioningEnabled;
             this.DatasetExportEnabled = datasetExportEnabled;
+            this.DemoDataEnabled = demoDataEnabled;
             this.OpenaiProviderEnabled = openaiProviderEnabled;
             this.AnthropicProviderEnabled = anthropicProviderEnabled;
             this.GeminiProviderEnabled = geminiProviderEnabled;
@@ -296,7 +287,6 @@ namespace Opik
             this.BedrockProviderEnabled = bedrockProviderEnabled;
             this.CustomllmProviderEnabled = customllmProviderEnabled;
             this.OllamaProviderEnabled = ollamaProviderEnabled;
-            this.CollaboratorsTabEnabled = collaboratorsTabEnabled;
             this.V2WorkspaceAllowlistIds = v2WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v2WorkspaceAllowlistIds));
             this.V1WorkspaceAllowlistIds = v1WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v1WorkspaceAllowlistIds));
             this.ForceWorkspaceVersion = forceWorkspaceVersion ?? throw new global::System.ArgumentNullException(nameof(forceWorkspaceVersion));
