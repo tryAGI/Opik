@@ -56,6 +56,12 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        public string? Environment { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("change_description")]
         public string? ChangeDescription { get; set; }
 
@@ -108,6 +114,7 @@ namespace Opik
         /// <param name="versionType">
         /// version type discriminator; defaults to prompt_version
         /// </param>
+        /// <param name="environment"></param>
         /// <param name="changeDescription"></param>
         /// <param name="tags"></param>
         /// <param name="templateStructure">
@@ -130,6 +137,7 @@ namespace Opik
             global::Opik.JsonNodePublic? metadata,
             global::Opik.PromptVersionPublicType? type,
             global::Opik.PromptVersionPublicVersionType? versionType,
+            string? environment,
             string? changeDescription,
             global::System.Collections.Generic.IList<string>? tags,
             global::Opik.PromptVersionPublicTemplateStructure? templateStructure,
@@ -143,6 +151,7 @@ namespace Opik
             this.Metadata = metadata;
             this.Type = type;
             this.VersionType = versionType;
+            this.Environment = environment;
             this.ChangeDescription = changeDescription;
             this.Tags = tags;
             this.TemplateStructure = templateStructure;

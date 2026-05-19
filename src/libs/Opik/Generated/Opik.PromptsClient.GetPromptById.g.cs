@@ -41,12 +41,14 @@ namespace Opik
         partial void PrepareGetPromptByIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::System.Guid id,
-            ref global::System.Guid? maskId);
+            ref global::System.Guid? maskId,
+            ref string? environment);
         partial void PrepareGetPromptByIdRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::System.Guid id,
-            global::System.Guid? maskId);
+            global::System.Guid? maskId,
+            string? environment);
         partial void ProcessGetPromptByIdResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -58,22 +60,25 @@ namespace Opik
 
         /// <summary>
         /// Get prompt by id<br/>
-        /// Get prompt by id; when mask_id is provided, requestedVersion is populated with that mask overlay
+        /// Get prompt by id; when mask_id or environment is provided, requestedVersion is populated with the resolved version. mask_id and environment are mutually exclusive.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="maskId"></param>
+        /// <param name="environment"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Opik.PromptDetail> GetPromptByIdAsync(
             global::System.Guid id,
             global::System.Guid? maskId = default,
+            string? environment = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await GetPromptByIdAsResponseAsync(
                 id: id,
                 maskId: maskId,
+                environment: environment,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -82,16 +87,18 @@ namespace Opik
         }
         /// <summary>
         /// Get prompt by id<br/>
-        /// Get prompt by id; when mask_id is provided, requestedVersion is populated with that mask overlay
+        /// Get prompt by id; when mask_id or environment is provided, requestedVersion is populated with the resolved version. mask_id and environment are mutually exclusive.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="maskId"></param>
+        /// <param name="environment"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.PromptDetail>> GetPromptByIdAsResponseAsync(
             global::System.Guid id,
             global::System.Guid? maskId = default,
+            string? environment = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -100,7 +107,8 @@ namespace Opik
             PrepareGetPromptByIdArguments(
                 httpClient: HttpClient,
                 id: ref id,
-                maskId: ref maskId);
+                maskId: ref maskId,
+                environment: ref environment);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
@@ -132,6 +140,7 @@ namespace Opik
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             __pathBuilder
                                 .AddOptionalParameter("mask_id", maskId?.ToString())
+                                .AddOptionalParameter("environment", environment)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -174,7 +183,8 @@ namespace Opik
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     id: id!,
-                    maskId: maskId);
+                    maskId: maskId,
+                    environment: environment);
 
                 return __httpRequest;
             }
@@ -353,6 +363,44 @@ namespace Opik
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
+                            // Bad Request
+                            if ((int)__response.StatusCode == 400)
+                            {
+                                string? __content_400 = null;
+                                global::System.Exception? __exception_400 = null;
+                                global::Opik.ErrorMessageDetail? __value_400 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_400 = global::Opik.ErrorMessageDetail.FromJson(__content_400, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_400 = global::Opik.ErrorMessageDetail.FromJson(__content_400, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_400 = __ex;
+                                }
+
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessageDetail>(
+                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_400,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_400,
+                                    ResponseObject = __value_400,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
                             // Not Found
                             if ((int)__response.StatusCode == 404)
                             {

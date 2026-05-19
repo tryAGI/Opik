@@ -22,6 +22,12 @@ namespace Opik
         public string? Commit { get; set; }
 
         /// <summary>
+        /// If provided, resolves to the version mapped to this environment for the prompt; mutually exclusive with commit
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        public string? Environment { get; set; }
+
+        /// <summary>
         /// If provided, scopes the search to the specified project
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_name")]
@@ -38,6 +44,9 @@ namespace Opik
         /// </summary>
         /// <param name="name"></param>
         /// <param name="commit"></param>
+        /// <param name="environment">
+        /// If provided, resolves to the version mapped to this environment for the prompt; mutually exclusive with commit
+        /// </param>
         /// <param name="projectName">
         /// If provided, scopes the search to the specified project
         /// </param>
@@ -47,10 +56,12 @@ namespace Opik
         public PromptVersionRetrieveDetail(
             string name,
             string? commit,
+            string? environment,
             string? projectName)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Commit = commit;
+            this.Environment = environment;
             this.ProjectName = projectName;
         }
 

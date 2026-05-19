@@ -36,6 +36,9 @@ namespace Opik
         /// </summary>
         /// <param name="name"></param>
         /// <param name="commit"></param>
+        /// <param name="environment">
+        /// If provided, resolves to the version mapped to this environment for the prompt; mutually exclusive with commit
+        /// </param>
         /// <param name="projectName">
         /// If provided, scopes the search to the specified project
         /// </param>
@@ -45,6 +48,7 @@ namespace Opik
         global::System.Threading.Tasks.Task<global::Opik.PromptVersionDetail> RetrievePromptVersionAsync(
             string name,
             string? commit = default,
+            string? environment = default,
             string? projectName = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
