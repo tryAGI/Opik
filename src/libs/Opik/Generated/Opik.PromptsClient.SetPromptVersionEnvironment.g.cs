@@ -6,7 +6,7 @@ namespace Opik
     public partial class PromptsClient
     {
 
-        private static readonly global::Opik.AutoSDKServer[] s_RetrievePromptVersionServers = new global::Opik.AutoSDKServer[]
+        private static readonly global::Opik.AutoSDKServer[] s_SetPromptVersionEnvironmentServers = new global::Opik.AutoSDKServer[]
         {            new global::Opik.AutoSDKServer(
                 id: "http-localhost-api",
                 name: "Local server",
@@ -20,7 +20,7 @@ namespace Opik
         };
 
 
-        private static readonly global::Opik.EndPointSecurityRequirement s_RetrievePromptVersionSecurityRequirement0 =
+        private static readonly global::Opik.EndPointSecurityRequirement s_SetPromptVersionEnvironmentSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
             {
                 Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
@@ -34,60 +34,68 @@ namespace Opik
                     },
                 },
             };
-        private static readonly global::Opik.EndPointSecurityRequirement[] s_RetrievePromptVersionSecurityRequirements =
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_SetPromptVersionEnvironmentSecurityRequirements =
             new global::Opik.EndPointSecurityRequirement[]
-            {                s_RetrievePromptVersionSecurityRequirement0,
+            {                s_SetPromptVersionEnvironmentSecurityRequirement0,
             };
-        partial void PrepareRetrievePromptVersionArguments(
+        partial void PrepareSetPromptVersionEnvironmentArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Opik.PromptVersionRetrieveDetail request);
-        partial void PrepareRetrievePromptVersionRequest(
+            ref global::System.Guid versionId,
+            global::Opik.PromptVersionEnvironmentUpdate request);
+        partial void PrepareSetPromptVersionEnvironmentRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Opik.PromptVersionRetrieveDetail request);
-        partial void ProcessRetrievePromptVersionResponse(
+            global::System.Guid versionId,
+            global::Opik.PromptVersionEnvironmentUpdate request);
+        partial void ProcessSetPromptVersionEnvironmentResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessRetrievePromptVersionResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Retrieve prompt version<br/>
-        /// Retrieve prompt version
+        /// Set prompt version environment<br/>
+        /// Set or clear the environment owned by a prompt version.<br/>
+        /// Setting a non-null environment moves ownership atomically: any previous owner of that<br/>
+        /// environment for the same prompt has its environment cleared in the same transaction.<br/>
+        /// Setting null clears the environment from the version.<br/>
+        /// The environment must already exist in the workspace registry; unknown names return 404.
         /// </summary>
+        /// <param name="versionId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.PromptVersionDetail> RetrievePromptVersionAsync(
+        public async global::System.Threading.Tasks.Task SetPromptVersionEnvironmentAsync(
+            global::System.Guid versionId,
 
-            global::Opik.PromptVersionRetrieveDetail request,
+            global::Opik.PromptVersionEnvironmentUpdate request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await RetrievePromptVersionAsResponseAsync(
+            await SetPromptVersionEnvironmentAsResponseAsync(
+                versionId: versionId,
 
                 request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
-
-            return __response.Body;
         }
         /// <summary>
-        /// Retrieve prompt version<br/>
-        /// Retrieve prompt version
+        /// Set prompt version environment<br/>
+        /// Set or clear the environment owned by a prompt version.<br/>
+        /// Setting a non-null environment moves ownership atomically: any previous owner of that<br/>
+        /// environment for the same prompt has its environment cleared in the same transaction.<br/>
+        /// Setting null clears the environment from the version.<br/>
+        /// The environment must already exist in the workspace registry; unknown names return 404.
         /// </summary>
+        /// <param name="versionId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.PromptVersionDetail>> RetrievePromptVersionAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse> SetPromptVersionEnvironmentAsResponseAsync(
+            global::System.Guid versionId,
 
-            global::Opik.PromptVersionRetrieveDetail request,
+            global::Opik.PromptVersionEnvironmentUpdate request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -95,15 +103,16 @@ namespace Opik
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareRetrievePromptVersionArguments(
+            PrepareSetPromptVersionEnvironmentArguments(
                 httpClient: HttpClient,
+                versionId: ref versionId,
                 request: request);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_RetrievePromptVersionSecurityRequirements,
-                operationName: "RetrievePromptVersionAsync");
+                securityRequirements: s_SetPromptVersionEnvironmentSecurityRequirements,
+                operationName: "SetPromptVersionEnvironmentAsync");
 
             using var __timeoutCancellationTokenSource = global::Opik.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -123,9 +132,9 @@ namespace Opik
             {
 
                             var __pathBuilder = new global::Opik.PathBuilder(
-                                path: "/v1/private/prompts/versions/retrieve",
+                                path: $"/v1/private/prompts/versions/{versionId}/environments",
                                 baseUri: ResolveBaseUri(
-                                servers: s_RetrievePromptVersionServers,
+                                servers: s_SetPromptVersionEnvironmentServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -133,7 +142,7 @@ namespace Opik
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Post,
+                    method: new global::System.Net.Http.HttpMethod("PATCH"),
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -170,9 +179,10 @@ namespace Opik
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareRetrievePromptVersionRequest(
+                PrepareSetPromptVersionEnvironmentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    versionId: versionId!,
                     request: request);
 
                 return __httpRequest;
@@ -190,10 +200,10 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "RetrievePromptVersion",
-                                methodName: "RetrievePromptVersionAsync",
-                                pathTemplate: "\"/v1/private/prompts/versions/retrieve\"",
-                                httpMethod: "POST",
+                                operationId: "SetPromptVersionEnvironment",
+                                methodName: "SetPromptVersionEnvironmentAsync",
+                                pathTemplate: "$\"/v1/private/prompts/versions/{versionId}/environments\"",
+                                httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -224,10 +234,10 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "RetrievePromptVersion",
-                                methodName: "RetrievePromptVersionAsync",
-                                pathTemplate: "\"/v1/private/prompts/versions/retrieve\"",
-                                httpMethod: "POST",
+                                operationId: "SetPromptVersionEnvironment",
+                                methodName: "SetPromptVersionEnvironmentAsync",
+                                pathTemplate: "$\"/v1/private/prompts/versions/{versionId}/environments\"",
+                                httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -265,10 +275,10 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "RetrievePromptVersion",
-                                methodName: "RetrievePromptVersionAsync",
-                                pathTemplate: "\"/v1/private/prompts/versions/retrieve\"",
-                                httpMethod: "POST",
+                                operationId: "SetPromptVersionEnvironment",
+                                methodName: "SetPromptVersionEnvironmentAsync",
+                                pathTemplate: "$\"/v1/private/prompts/versions/{versionId}/environments\"",
+                                httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -305,7 +315,7 @@ namespace Opik
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessRetrievePromptVersionResponse(
+                ProcessSetPromptVersionEnvironmentResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -313,10 +323,10 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "RetrievePromptVersion",
-                                methodName: "RetrievePromptVersionAsync",
-                                pathTemplate: "\"/v1/private/prompts/versions/retrieve\"",
-                                httpMethod: "POST",
+                                operationId: "SetPromptVersionEnvironment",
+                                methodName: "SetPromptVersionEnvironmentAsync",
+                                pathTemplate: "$\"/v1/private/prompts/versions/{versionId}/environments\"",
+                                httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -335,10 +345,10 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "RetrievePromptVersion",
-                                methodName: "RetrievePromptVersionAsync",
-                                pathTemplate: "\"/v1/private/prompts/versions/retrieve\"",
-                                httpMethod: "POST",
+                                operationId: "SetPromptVersionEnvironment",
+                                methodName: "SetPromptVersionEnvironmentAsync",
+                                pathTemplate: "$\"/v1/private/prompts/versions/{versionId}/environments\"",
+                                httpMethod: "PATCH",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -352,62 +362,24 @@ namespace Opik
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Unprocessable Content
-                            if ((int)__response.StatusCode == 422)
-                            {
-                                string? __content_422 = null;
-                                global::System.Exception? __exception_422 = null;
-                                global::Opik.ErrorMessageDetail? __value_422 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_422 = global::Opik.ErrorMessageDetail.FromJson(__content_422, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_422 = global::Opik.ErrorMessageDetail.FromJson(__content_422, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_422 = __ex;
-                                }
-
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessageDetail>(
-                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_422,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_422,
-                                    ResponseObject = __value_422,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value),
-                                };
-                            }
                             // Bad Request
                             if ((int)__response.StatusCode == 400)
                             {
                                 string? __content_400 = null;
                                 global::System.Exception? __exception_400 = null;
-                                global::Opik.ErrorMessageDetail? __value_400 = null;
+                                global::Opik.ErrorMessage? __value_400 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::Opik.ErrorMessageDetail.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = global::Opik.ErrorMessageDetail.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -415,7 +387,7 @@ namespace Opik
                                     __exception_400 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessageDetail>(
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
                                     statusCode: __response.StatusCode)
@@ -433,19 +405,19 @@ namespace Opik
                             {
                                 string? __content_404 = null;
                                 global::System.Exception? __exception_404 = null;
-                                global::Opik.ErrorMessageDetail? __value_404 = null;
+                                global::Opik.ErrorMessage? __value_404 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Opik.ErrorMessageDetail.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = global::Opik.ErrorMessage.FromJson(__content_404, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_404 = global::Opik.ErrorMessageDetail.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = global::Opik.ErrorMessage.FromJson(__content_404, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -453,7 +425,7 @@ namespace Opik
                                     __exception_404 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessageDetail>(
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
                                     statusCode: __response.StatusCode)
@@ -479,22 +451,15 @@ namespace Opik
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessRetrievePromptVersionResponseContent(
-                                    httpClient: HttpClient,
-                                    httpResponseMessage: __response,
-                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Opik.PromptVersionDetail.FromJson(__content, JsonSerializerContext) ??
-                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.PromptVersionDetail>(
+                return new global::Opik.AutoSDKHttpResponse(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -516,19 +481,10 @@ namespace Opik
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    using var __content = await __response.Content.ReadAsStreamAsync(
-                #if NET5_0_OR_GREATER
-                                        __effectiveCancellationToken
-                #endif
-                                    ).ConfigureAwait(false);
-
-                                    var __value = await global::Opik.PromptVersionDetail.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.PromptVersionDetail>(
+                                    return new global::Opik.AutoSDKHttpResponse(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -567,37 +523,31 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Retrieve prompt version<br/>
-        /// Retrieve prompt version
+        /// Set prompt version environment<br/>
+        /// Set or clear the environment owned by a prompt version.<br/>
+        /// Setting a non-null environment moves ownership atomically: any previous owner of that<br/>
+        /// environment for the same prompt has its environment cleared in the same transaction.<br/>
+        /// Setting null clears the environment from the version.<br/>
+        /// The environment must already exist in the workspace registry; unknown names return 404.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="commit"></param>
-        /// <param name="environment">
-        /// If provided, resolves to the version mapped to this environment for the prompt; mutually exclusive with commit
-        /// </param>
-        /// <param name="projectName">
-        /// If provided, scopes the search to the specified project
-        /// </param>
+        /// <param name="versionId"></param>
+        /// <param name="environment"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.PromptVersionDetail> RetrievePromptVersionAsync(
-            string name,
-            string? commit = default,
+        public async global::System.Threading.Tasks.Task SetPromptVersionEnvironmentAsync(
+            global::System.Guid versionId,
             string? environment = default,
-            string? projectName = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.PromptVersionRetrieveDetail
+            var __request = new global::Opik.PromptVersionEnvironmentUpdate
             {
-                Name = name,
-                Commit = commit,
                 Environment = environment,
-                ProjectName = projectName,
             };
 
-            return await RetrievePromptVersionAsync(
+            await SetPromptVersionEnvironmentAsync(
+                versionId: versionId,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

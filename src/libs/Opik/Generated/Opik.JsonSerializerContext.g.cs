@@ -2639,6 +2639,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionCommitsRequestPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionRetrieveDetail))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionIdsRequestDetail))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionEnvironmentUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptUpdatable))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionBatchUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionUpdate))]
@@ -2811,7 +2812,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeOutputSchemaWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeMessageContentWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceFilterPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectReferencePublic>))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3717,6 +3717,7 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectReferencePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AutomationRuleEvaluatorObjectObjectPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanFilterPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceThreadFilterPublic>))]
