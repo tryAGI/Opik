@@ -1,14 +1,12 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 namespace Opik
 {
-    public partial class RunnersClient
+    public partial class PromptsClient
     {
 
-        private static readonly global::Opik.AutoSDKServer[] s_CreateJobServers = new global::Opik.AutoSDKServer[]
+        private static readonly global::Opik.AutoSDKServer[] s_RetrievePromptVersionsByIdsServers = new global::Opik.AutoSDKServer[]
         {            new global::Opik.AutoSDKServer(
                 id: "http-localhost-api",
                 name: "Local server",
@@ -22,7 +20,7 @@ namespace Opik
         };
 
 
-        private static readonly global::Opik.EndPointSecurityRequirement s_CreateJobSecurityRequirement0 =
+        private static readonly global::Opik.EndPointSecurityRequirement s_RetrievePromptVersionsByIdsSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
             {
                 Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
@@ -36,53 +34,60 @@ namespace Opik
                     },
                 },
             };
-        private static readonly global::Opik.EndPointSecurityRequirement[] s_CreateJobSecurityRequirements =
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_RetrievePromptVersionsByIdsSecurityRequirements =
             new global::Opik.EndPointSecurityRequirement[]
-            {                s_CreateJobSecurityRequirement0,
+            {                s_RetrievePromptVersionsByIdsSecurityRequirement0,
             };
-        partial void PrepareCreateJobArguments(
+        partial void PrepareRetrievePromptVersionsByIdsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Opik.CreateLocalRunnerJobRequest request);
-        partial void PrepareCreateJobRequest(
+            global::Opik.PromptVersionIdsRequestDetail request);
+        partial void PrepareRetrievePromptVersionsByIdsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Opik.CreateLocalRunnerJobRequest request);
-        partial void ProcessCreateJobResponse(
+            global::Opik.PromptVersionIdsRequestDetail request);
+        partial void ProcessRetrievePromptVersionsByIdsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
+        partial void ProcessRetrievePromptVersionsByIdsResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
         /// <summary>
-        /// Create local runner job<br/>
-        /// Create a local runner job and enqueue it for execution
+        /// Retrieve prompt versions by ids<br/>
+        /// Retrieve a batch of prompt versions by their ids. Typically used by the UI to resolve mask overlays.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task CreateJobAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>> RetrievePromptVersionsByIdsAsync(
 
-            global::Opik.CreateLocalRunnerJobRequest request,
+            global::Opik.PromptVersionIdsRequestDetail request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            await CreateJobAsResponseAsync(
+            var __response = await RetrievePromptVersionsByIdsAsResponseAsync(
 
                 request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
+
+            return __response.Body;
         }
         /// <summary>
-        /// Create local runner job<br/>
-        /// Create a local runner job and enqueue it for execution
+        /// Retrieve prompt versions by ids<br/>
+        /// Retrieve a batch of prompt versions by their ids. Typically used by the UI to resolve mask overlays.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse> CreateJobAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>>> RetrievePromptVersionsByIdsAsResponseAsync(
 
-            global::Opik.CreateLocalRunnerJobRequest request,
+            global::Opik.PromptVersionIdsRequestDetail request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -90,15 +95,15 @@ namespace Opik
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateJobArguments(
+            PrepareRetrievePromptVersionsByIdsArguments(
                 httpClient: HttpClient,
                 request: request);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateJobSecurityRequirements,
-                operationName: "CreateJobAsync");
+                securityRequirements: s_RetrievePromptVersionsByIdsSecurityRequirements,
+                operationName: "RetrievePromptVersionsByIdsAsync");
 
             using var __timeoutCancellationTokenSource = global::Opik.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -118,9 +123,9 @@ namespace Opik
             {
 
                             var __pathBuilder = new global::Opik.PathBuilder(
-                                path: "/v1/private/local-runners/jobs",
+                                path: "/v1/private/prompts/versions/retrieve-by-ids",
                                 baseUri: ResolveBaseUri(
-                                servers: s_CreateJobServers,
+                                servers: s_RetrievePromptVersionsByIdsServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -165,7 +170,7 @@ namespace Opik
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateJobRequest(
+                PrepareRetrievePromptVersionsByIdsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     request: request);
@@ -185,9 +190,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateJob",
-                                methodName: "CreateJobAsync",
-                                pathTemplate: "\"/v1/private/local-runners/jobs\"",
+                                operationId: "RetrievePromptVersionsByIds",
+                                methodName: "RetrievePromptVersionsByIdsAsync",
+                                pathTemplate: "\"/v1/private/prompts/versions/retrieve-by-ids\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -219,9 +224,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateJob",
-                                methodName: "CreateJobAsync",
-                                pathTemplate: "\"/v1/private/local-runners/jobs\"",
+                                operationId: "RetrievePromptVersionsByIds",
+                                methodName: "RetrievePromptVersionsByIdsAsync",
+                                pathTemplate: "\"/v1/private/prompts/versions/retrieve-by-ids\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -260,9 +265,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateJob",
-                                methodName: "CreateJobAsync",
-                                pathTemplate: "\"/v1/private/local-runners/jobs\"",
+                                operationId: "RetrievePromptVersionsByIds",
+                                methodName: "RetrievePromptVersionsByIdsAsync",
+                                pathTemplate: "\"/v1/private/prompts/versions/retrieve-by-ids\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -300,7 +305,7 @@ namespace Opik
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateJobResponse(
+                ProcessRetrievePromptVersionsByIdsResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -308,9 +313,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateJob",
-                                methodName: "CreateJobAsync",
-                                pathTemplate: "\"/v1/private/local-runners/jobs\"",
+                                operationId: "RetrievePromptVersionsByIds",
+                                methodName: "RetrievePromptVersionsByIdsAsync",
+                                pathTemplate: "\"/v1/private/prompts/versions/retrieve-by-ids\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -330,9 +335,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateJob",
-                                methodName: "CreateJobAsync",
-                                pathTemplate: "\"/v1/private/local-runners/jobs\"",
+                                operationId: "RetrievePromptVersionsByIds",
+                                methodName: "RetrievePromptVersionsByIdsAsync",
+                                pathTemplate: "\"/v1/private/prompts/versions/retrieve-by-ids\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -347,76 +352,38 @@ namespace Opik
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Not found
-                            if ((int)__response.StatusCode == 404)
+                            // Bad Request
+                            if ((int)__response.StatusCode == 400)
                             {
-                                string? __content_404 = null;
-                                global::System.Exception? __exception_404 = null;
-                                global::Opik.ErrorMessage? __value_404 = null;
+                                string? __content_400 = null;
+                                global::System.Exception? __exception_400 = null;
+                                global::Opik.ErrorMessageDetail? __value_400 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Opik.ErrorMessage.FromJson(__content_404, JsonSerializerContext);
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_400 = global::Opik.ErrorMessageDetail.FromJson(__content_400, JsonSerializerContext);
                                     }
                                     else
                                     {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_404 = global::Opik.ErrorMessage.FromJson(__content_404, JsonSerializerContext);
+                                        __value_400 = global::Opik.ErrorMessageDetail.FromJson(__content_400, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    __exception_404 = __ex;
+                                    __exception_400 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
-                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_404,
+                                throw new global::Opik.ApiException<global::Opik.ErrorMessageDetail>(
+                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_400,
                                     statusCode: __response.StatusCode)
                                 {
-                                    ResponseBody = __content_404,
-                                    ResponseObject = __value_404,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value),
-                                };
-                            }
-                            // Conflict
-                            if ((int)__response.StatusCode == 409)
-                            {
-                                string? __content_409 = null;
-                                global::System.Exception? __exception_409 = null;
-                                global::Opik.ErrorMessage? __value_409 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_409 = global::Opik.ErrorMessage.FromJson(__content_409, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_409 = global::Opik.ErrorMessage.FromJson(__content_409, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_409 = __ex;
-                                }
-
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
-                                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_409,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_409,
-                                    ResponseObject = __value_409,
+                                    ResponseBody = __content_400,
+                                    ResponseObject = __value_400,
                                     ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -436,15 +403,22 @@ namespace Opik
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
+                                ProcessRetrievePromptVersionsByIdsResponseContent(
+                                    httpClient: HttpClient,
+                                    httpResponseMessage: __response,
+                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                return new global::Opik.AutoSDKHttpResponse(
+                                    var __value = (global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>), JsonSerializerContext) ??
+                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Opik.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri);
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -466,10 +440,19 @@ namespace Opik
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    return new global::Opik.AutoSDKHttpResponse(
+                                    using var __content = await __response.Content.ReadAsStreamAsync(
+                #if NET5_0_OR_GREATER
+                                        __effectiveCancellationToken
+                #endif
+                                    ).ConfigureAwait(false);
+
+                                    var __value = (global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>), JsonSerializerContext).ConfigureAwait(false) ??
+                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Opik.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri);
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -508,41 +491,24 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Create local runner job<br/>
-        /// Create a local runner job and enqueue it for execution
+        /// Retrieve prompt versions by ids<br/>
+        /// Retrieve a batch of prompt versions by their ids. Typically used by the UI to resolve mask overlays.
         /// </summary>
-        /// <param name="agentName"></param>
-        /// <param name="inputs"></param>
-        /// <param name="projectId"></param>
-        /// <param name="promptMasks">
-        /// Mask overlays to apply during agent execution, keyed by prompt id.
-        /// </param>
-        /// <param name="blueprintName"></param>
-        /// <param name="metadata"></param>
+        /// <param name="ids"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task CreateJobAsync(
-            string agentName,
-            global::System.Guid projectId,
-            global::Opik.JsonNode? inputs = default,
-            global::System.Collections.Generic.Dictionary<string, global::System.Guid>? promptMasks = default,
-            string? blueprintName = default,
-            global::Opik.LocalRunnerJobMetadata? metadata = default,
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>> RetrievePromptVersionsByIdsAsync(
+            global::System.Collections.Generic.IList<global::System.Guid> ids,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.CreateLocalRunnerJobRequest
+            var __request = new global::Opik.PromptVersionIdsRequestDetail
             {
-                AgentName = agentName,
-                Inputs = inputs,
-                ProjectId = projectId,
-                PromptMasks = promptMasks,
-                BlueprintName = blueprintName,
-                Metadata = metadata,
+                Ids = ids,
             };
 
-            await CreateJobAsync(
+            return await RetrievePromptVersionsByIdsAsync(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

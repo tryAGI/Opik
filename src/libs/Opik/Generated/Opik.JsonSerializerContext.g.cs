@@ -697,6 +697,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.PromptVersionTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureNullableJsonConverter),
@@ -713,6 +717,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.PromptVersionDetailTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureNullableJsonConverter),
@@ -728,6 +736,10 @@ namespace Opik
             typeof(global::Opik.JsonConverters.PromptVersionPublicTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionPublicTypeNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionPublicTemplateStructureJsonConverter),
 
@@ -2090,6 +2102,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.PromptVersionTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureNullableJsonConverter),
@@ -2106,6 +2122,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.PromptVersionDetailTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureNullableJsonConverter),
@@ -2121,6 +2141,10 @@ namespace Opik
             typeof(global::Opik.JsonConverters.PromptVersionPublicTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionPublicTypeNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionPublicTemplateStructureJsonConverter),
 
@@ -2460,6 +2484,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BridgeCommandSubmitRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BridgeCommandSubmitRequestType), TypeInfoPropertyName = "BridgeCommandSubmitRequestType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateLocalRunnerJobRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::System.Guid>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LocalRunnerJobMetadata))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BridgeCommand))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BridgeCommandType), TypeInfoPropertyName = "BridgeCommandType2")]
@@ -2590,6 +2615,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptTemplateStructure), TypeInfoPropertyName = "PromptTemplateStructure2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersion))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionType), TypeInfoPropertyName = "PromptVersionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionVersionType), TypeInfoPropertyName = "PromptVersionVersionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionTemplateStructure), TypeInfoPropertyName = "PromptVersionTemplateStructure2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptWriteType), TypeInfoPropertyName = "PromptWriteType2")]
@@ -2597,6 +2623,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.JsonNodeDetail))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionDetail))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionDetailType), TypeInfoPropertyName = "PromptVersionDetailType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionDetailVersionType), TypeInfoPropertyName = "PromptVersionDetailVersionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionDetailTemplateStructure), TypeInfoPropertyName = "PromptVersionDetailTemplateStructure2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ErrorMessageDetail))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreatePromptVersionDetail))]
@@ -2607,9 +2634,11 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.PromptVersionPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionPublicType), TypeInfoPropertyName = "PromptVersionPublicType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionPublicVersionType), TypeInfoPropertyName = "PromptVersionPublicVersionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionPublicTemplateStructure), TypeInfoPropertyName = "PromptVersionPublicTemplateStructure2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionCommitsRequestPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionRetrieveDetail))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionIdsRequestDetail))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptUpdatable))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionBatchUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.PromptVersionUpdate))]
@@ -2734,6 +2763,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.AnyOf<global::Opik.ExperimentPublic, global::Opik.ErrorMessagePublic>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnyOf<global::Opik.ExperimentPublic, global::Opik.ErrorMessagePublic>), TypeInfoPropertyName = "AnyOfExperimentPublicErrorMessagePublic2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.OllamaModel>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.AnyOf<global::Opik.SpanPublic, global::Opik.ErrorMessagePublic>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnyOf<global::Opik.SpanPublic, global::Opik.ErrorMessagePublic>), TypeInfoPropertyName = "AnyOfSpanPublicErrorMessagePublic2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.AnyOf<global::Opik.TraceThread, global::Opik.ErrorMessage>>))]
@@ -2782,12 +2812,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeMessageContentWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceFilterPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectReferencePublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AutomationRuleEvaluatorObjectObjectPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanFilterPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceThreadFilterPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeMessagePublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeOutputSchemaPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeMessageContentPublic>))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3483,6 +3507,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.PromptVersionTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureNullableJsonConverter),
@@ -3499,6 +3527,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.PromptVersionDetailTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureNullableJsonConverter),
@@ -3514,6 +3546,10 @@ namespace Opik
             typeof(global::Opik.JsonConverters.PromptVersionPublicTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionPublicTypeNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.PromptVersionPublicTemplateStructureJsonConverter),
 
@@ -3681,6 +3717,12 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AutomationRuleEvaluatorObjectObjectPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanFilterPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceThreadFilterPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeMessagePublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeOutputSchemaPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeMessageContentPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LogItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ToolCall>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ChatCompletionChoice>))]
@@ -3789,6 +3831,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AnyOf<global::Opik.ExperimentItem, global::Opik.ErrorMessage>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AnyOf<global::Opik.ExperimentPublic, global::Opik.ErrorMessagePublic>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.OllamaModel>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.PromptVersionDetail>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AnyOf<global::Opik.SpanPublic, global::Opik.ErrorMessagePublic>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AnyOf<global::Opik.TraceThread, global::Opik.ErrorMessage>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AnyOf<global::Opik.TracePublic, global::Opik.ErrorMessagePublic>>))]
@@ -4178,6 +4221,8 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.PromptTemplateStructureNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionVersionTypeJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionVersionTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionTemplateStructureJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionTemplateStructureNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptWriteTypeJsonConverter());
@@ -4186,6 +4231,8 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.PromptWriteTemplateStructureNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailTypeNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailVersionTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailTemplateStructureJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailTemplateStructureNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureJsonConverter());
@@ -4194,6 +4241,8 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.PromptDetailTemplateStructureNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicTypeNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicVersionTypeJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicVersionTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicTemplateStructureJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicTemplateStructureNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.RecentActivityItemPublicTypeJsonConverter());

@@ -11,20 +11,8 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("code")]
-        public int? Code { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
-        public string? Message { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("details")]
-        public string? Details { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("errors")]
+        public global::System.Collections.Generic.IList<string>? Errors { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -35,20 +23,14 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="ErrorMessageDetail" /> class.
         /// </summary>
-        /// <param name="code"></param>
-        /// <param name="message"></param>
-        /// <param name="details"></param>
+        /// <param name="errors"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ErrorMessageDetail(
-            int? code,
-            string? message,
-            string? details)
+            global::System.Collections.Generic.IList<string>? errors)
         {
-            this.Code = code;
-            this.Message = message;
-            this.Details = details;
+            this.Errors = errors;
         }
 
         /// <summary>

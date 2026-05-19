@@ -47,6 +47,13 @@ namespace Opik
         public global::Opik.PromptVersionDetailType? Type { get; set; }
 
         /// <summary>
+        /// version type discriminator; defaults to prompt_version
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version_type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter))]
+        public global::Opik.PromptVersionDetailVersionType? VersionType { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("change_description")]
@@ -104,6 +111,9 @@ namespace Opik
         /// </param>
         /// <param name="metadata"></param>
         /// <param name="type"></param>
+        /// <param name="versionType">
+        /// version type discriminator; defaults to prompt_version
+        /// </param>
         /// <param name="changeDescription"></param>
         /// <param name="tags"></param>
         /// <param name="variables">
@@ -128,6 +138,7 @@ namespace Opik
             string? commit,
             global::Opik.JsonNodeDetail? metadata,
             global::Opik.PromptVersionDetailType? type,
+            global::Opik.PromptVersionDetailVersionType? versionType,
             string? changeDescription,
             global::System.Collections.Generic.IList<string>? tags,
             global::System.Collections.Generic.IList<string>? variables,
@@ -141,6 +152,7 @@ namespace Opik
             this.Template = template ?? throw new global::System.ArgumentNullException(nameof(template));
             this.Metadata = metadata;
             this.Type = type;
+            this.VersionType = versionType;
             this.ChangeDescription = changeDescription;
             this.Tags = tags;
             this.Variables = variables;

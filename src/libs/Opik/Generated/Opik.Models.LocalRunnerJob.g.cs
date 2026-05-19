@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Opik
@@ -64,10 +66,17 @@ namespace Opik
         public global::System.Guid? TraceId { get; set; }
 
         /// <summary>
-        /// 
+        /// Deprecated. Use prompt_masks to read one or more mask overlays keyed by prompt id.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mask_id")]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public global::System.Guid? MaskId { get; set; }
+
+        /// <summary>
+        /// Mask overlays to apply during agent execution, keyed by prompt id.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("prompt_masks")]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Guid>? PromptMasks { get; set; }
 
         /// <summary>
         /// 
@@ -123,7 +132,9 @@ namespace Opik
         /// <param name="error"></param>
         /// <param name="projectId"></param>
         /// <param name="traceId"></param>
-        /// <param name="maskId"></param>
+        /// <param name="promptMasks">
+        /// Mask overlays to apply during agent execution, keyed by prompt id.
+        /// </param>
         /// <param name="blueprintName"></param>
         /// <param name="metadata"></param>
         /// <param name="timeout"></param>
@@ -143,7 +154,7 @@ namespace Opik
             string? error,
             global::System.Guid? projectId,
             global::System.Guid? traceId,
-            global::System.Guid? maskId,
+            global::System.Collections.Generic.Dictionary<string, global::System.Guid>? promptMasks,
             string? blueprintName,
             global::Opik.LocalRunnerJobMetadata? metadata,
             int? timeout,
@@ -160,7 +171,7 @@ namespace Opik
             this.Error = error;
             this.ProjectId = projectId;
             this.TraceId = traceId;
-            this.MaskId = maskId;
+            this.PromptMasks = promptMasks;
             this.BlueprintName = blueprintName;
             this.Metadata = metadata;
             this.Timeout = timeout;

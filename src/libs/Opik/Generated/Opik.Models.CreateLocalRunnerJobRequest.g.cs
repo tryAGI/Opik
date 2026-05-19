@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Opik
@@ -29,10 +31,17 @@ namespace Opik
         public required global::System.Guid ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        /// Deprecated. Use prompt_masks to pass one or more mask overlays keyed by prompt id.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mask_id")]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public global::System.Guid? MaskId { get; set; }
+
+        /// <summary>
+        /// Mask overlays to apply during agent execution, keyed by prompt id.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("prompt_masks")]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Guid>? PromptMasks { get; set; }
 
         /// <summary>
         /// 
@@ -58,7 +67,9 @@ namespace Opik
         /// <param name="agentName"></param>
         /// <param name="projectId"></param>
         /// <param name="inputs"></param>
-        /// <param name="maskId"></param>
+        /// <param name="promptMasks">
+        /// Mask overlays to apply during agent execution, keyed by prompt id.
+        /// </param>
         /// <param name="blueprintName"></param>
         /// <param name="metadata"></param>
 #if NET7_0_OR_GREATER
@@ -68,14 +79,14 @@ namespace Opik
             string agentName,
             global::System.Guid projectId,
             global::Opik.JsonNode? inputs,
-            global::System.Guid? maskId,
+            global::System.Collections.Generic.Dictionary<string, global::System.Guid>? promptMasks,
             string? blueprintName,
             global::Opik.LocalRunnerJobMetadata? metadata)
         {
             this.AgentName = agentName ?? throw new global::System.ArgumentNullException(nameof(agentName));
             this.Inputs = inputs;
             this.ProjectId = projectId;
-            this.MaskId = maskId;
+            this.PromptMasks = promptMasks;
             this.BlueprintName = blueprintName;
             this.Metadata = metadata;
         }

@@ -1,59 +1,45 @@
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 namespace Opik
 {
-    public partial interface IRunnersClient
+    public partial interface IPromptsClient
     {
         /// <summary>
-        /// Create local runner job<br/>
-        /// Create a local runner job and enqueue it for execution
+        /// Retrieve prompt versions by ids<br/>
+        /// Retrieve a batch of prompt versions by their ids. Typically used by the UI to resolve mask overlays.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        global::System.Threading.Tasks.Task CreateJobAsync(
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>> RetrievePromptVersionsByIdsAsync(
 
-            global::Opik.CreateLocalRunnerJobRequest request,
+            global::Opik.PromptVersionIdsRequestDetail request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create local runner job<br/>
-        /// Create a local runner job and enqueue it for execution
+        /// Retrieve prompt versions by ids<br/>
+        /// Retrieve a batch of prompt versions by their ids. Typically used by the UI to resolve mask overlays.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse> CreateJobAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>>> RetrievePromptVersionsByIdsAsResponseAsync(
 
-            global::Opik.CreateLocalRunnerJobRequest request,
+            global::Opik.PromptVersionIdsRequestDetail request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create local runner job<br/>
-        /// Create a local runner job and enqueue it for execution
+        /// Retrieve prompt versions by ids<br/>
+        /// Retrieve a batch of prompt versions by their ids. Typically used by the UI to resolve mask overlays.
         /// </summary>
-        /// <param name="agentName"></param>
-        /// <param name="inputs"></param>
-        /// <param name="projectId"></param>
-        /// <param name="promptMasks">
-        /// Mask overlays to apply during agent execution, keyed by prompt id.
-        /// </param>
-        /// <param name="blueprintName"></param>
-        /// <param name="metadata"></param>
+        /// <param name="ids"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task CreateJobAsync(
-            string agentName,
-            global::System.Guid projectId,
-            global::Opik.JsonNode? inputs = default,
-            global::System.Collections.Generic.Dictionary<string, global::System.Guid>? promptMasks = default,
-            string? blueprintName = default,
-            global::Opik.LocalRunnerJobMetadata? metadata = default,
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Opik.PromptVersionDetail>> RetrievePromptVersionsByIdsAsync(
+            global::System.Collections.Generic.IList<global::System.Guid> ids,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
