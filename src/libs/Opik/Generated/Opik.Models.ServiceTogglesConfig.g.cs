@@ -166,7 +166,8 @@ namespace Opik
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agenticToolsEnabled")]
-        public bool? AgenticToolsEnabled { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool AgenticToolsEnabled { get; set; }
 
         /// <summary>
         /// 
@@ -238,10 +239,10 @@ namespace Opik
         /// <param name="customllmProviderEnabled"></param>
         /// <param name="ollamaProviderEnabled"></param>
         /// <param name="ollieEnabled"></param>
+        /// <param name="agenticToolsEnabled"></param>
         /// <param name="v2WorkspaceAllowlistIds"></param>
         /// <param name="v1WorkspaceAllowlistIds"></param>
         /// <param name="forceWorkspaceVersion"></param>
-        /// <param name="agenticToolsEnabled"></param>
         /// <param name="defaultPageSize"></param>
         /// <param name="v2WorkspaceAllowlist">
         /// Included only in requests
@@ -275,10 +276,10 @@ namespace Opik
             bool customllmProviderEnabled,
             bool ollamaProviderEnabled,
             bool ollieEnabled,
+            bool agenticToolsEnabled,
             global::System.Collections.Generic.IList<string> v2WorkspaceAllowlistIds,
             global::System.Collections.Generic.IList<string> v1WorkspaceAllowlistIds,
             string forceWorkspaceVersion,
-            bool? agenticToolsEnabled,
             int? defaultPageSize,
             string? v2WorkspaceAllowlist,
             string? v1WorkspaceAllowlist)

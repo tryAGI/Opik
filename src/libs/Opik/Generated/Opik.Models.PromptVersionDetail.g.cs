@@ -27,6 +27,13 @@ namespace Opik
         public string? Commit { get; set; }
 
         /// <summary>
+        /// sequential version number in the format v&lt;N&gt;; null for masks<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version_number")]
+        public string? VersionNumber { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("template")]
@@ -115,6 +122,10 @@ namespace Opik
         /// <param name="commit">
         /// version short unique identifier, generated if absent. it must be 8 characters long
         /// </param>
+        /// <param name="versionNumber">
+        /// sequential version number in the format v&lt;N&gt;; null for masks<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="metadata"></param>
         /// <param name="type"></param>
         /// <param name="versionType">
@@ -143,6 +154,7 @@ namespace Opik
             global::System.Guid? id,
             global::System.Guid? promptId,
             string? commit,
+            string? versionNumber,
             global::Opik.JsonNodeDetail? metadata,
             global::Opik.PromptVersionDetailType? type,
             global::Opik.PromptVersionDetailVersionType? versionType,
@@ -157,6 +169,7 @@ namespace Opik
             this.Id = id;
             this.PromptId = promptId;
             this.Commit = commit;
+            this.VersionNumber = versionNumber;
             this.Template = template ?? throw new global::System.ArgumentNullException(nameof(template));
             this.Metadata = metadata;
             this.Type = type;

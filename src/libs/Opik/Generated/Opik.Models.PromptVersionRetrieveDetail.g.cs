@@ -22,10 +22,16 @@ namespace Opik
         public string? Commit { get; set; }
 
         /// <summary>
-        /// If provided, resolves to the version mapped to this environment for the prompt; mutually exclusive with commit
+        /// If provided, resolves to the version mapped to this environment for the prompt; mutually exclusive with commit and version_number
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
         public string? Environment { get; set; }
+
+        /// <summary>
+        /// If provided, resolves to the version with this sequential number (e.g. v3); mutually exclusive with commit and environment
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version_number")]
+        public string? VersionNumber { get; set; }
 
         /// <summary>
         /// If provided, scopes the search to the specified project
@@ -45,7 +51,10 @@ namespace Opik
         /// <param name="name"></param>
         /// <param name="commit"></param>
         /// <param name="environment">
-        /// If provided, resolves to the version mapped to this environment for the prompt; mutually exclusive with commit
+        /// If provided, resolves to the version mapped to this environment for the prompt; mutually exclusive with commit and version_number
+        /// </param>
+        /// <param name="versionNumber">
+        /// If provided, resolves to the version with this sequential number (e.g. v3); mutually exclusive with commit and environment
         /// </param>
         /// <param name="projectName">
         /// If provided, scopes the search to the specified project
@@ -57,11 +66,13 @@ namespace Opik
             string name,
             string? commit,
             string? environment,
+            string? versionNumber,
             string? projectName)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Commit = commit;
             this.Environment = environment;
+            this.VersionNumber = versionNumber;
             this.ProjectName = projectName;
         }
 
