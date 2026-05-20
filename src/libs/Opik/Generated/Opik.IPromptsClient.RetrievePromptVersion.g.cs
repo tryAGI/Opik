@@ -37,7 +37,10 @@ namespace Opik
         /// <param name="name"></param>
         /// <param name="commit"></param>
         /// <param name="environment">
-        /// If provided, resolves to the version mapped to this environment for the prompt; mutually exclusive with commit
+        /// If provided, resolves to the version mapped to this environment for the prompt; mutually exclusive with commit and version_number
+        /// </param>
+        /// <param name="versionNumber">
+        /// If provided, resolves to the version with this sequential number (e.g. v3); mutually exclusive with commit and environment
         /// </param>
         /// <param name="projectName">
         /// If provided, scopes the search to the specified project
@@ -49,6 +52,7 @@ namespace Opik
             string name,
             string? commit = default,
             string? environment = default,
+            string? versionNumber = default,
             string? projectName = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
