@@ -35,6 +35,12 @@ namespace Opik
         public global::System.Collections.Generic.Dictionary<string, string>? ConfigValue { get; set; }
 
         /// <summary>
+        /// Groups configs within a trigger: same group_index means AND between configs, different group_index means OR between groups. Null means a legacy/singleton group of one config. Always null for scope:project configs.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("group_index")]
+        public int? GroupIndex { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -73,6 +79,9 @@ namespace Opik
         /// Included only in responses
         /// </param>
         /// <param name="configValue"></param>
+        /// <param name="groupIndex">
+        /// Groups configs within a trigger: same group_index means AND between configs, different group_index means OR between groups. Null means a legacy/singleton group of one config. Always null for scope:project configs.
+        /// </param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -93,6 +102,7 @@ namespace Opik
             global::System.Guid? id,
             global::System.Guid? alertTriggerId,
             global::System.Collections.Generic.Dictionary<string, string>? configValue,
+            int? groupIndex,
             global::System.DateTime? createdAt,
             string? createdBy,
             global::System.DateTime? lastUpdatedAt,
@@ -102,6 +112,7 @@ namespace Opik
             this.AlertTriggerId = alertTriggerId;
             this.Type = type;
             this.ConfigValue = configValue;
+            this.GroupIndex = groupIndex;
             this.CreatedAt = createdAt;
             this.CreatedBy = createdBy;
             this.LastUpdatedAt = lastUpdatedAt;
