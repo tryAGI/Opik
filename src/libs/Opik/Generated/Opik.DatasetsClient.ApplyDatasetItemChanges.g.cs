@@ -65,7 +65,11 @@ namespace Opik
         /// - Creates a new version with the applied changes<br/>
         /// - Validates that baseVersion matches the latest version (unless override=true)<br/>
         /// - Returns 409 Conflict if baseVersion is stale and override is not set<br/>
-        /// Use `override=true` query parameter to force version creation even with stale baseVersion.
+        /// Use `override=true` query parameter to force version creation even with stale baseVersion.<br/>
+        /// Set 'copy_from_dataset_id' and 'copy_from_version_id' together on the request body to read<br/>
+        /// carry-forward rows from the supplied (dataset, version) pair instead of the destination's<br/>
+        /// prior version. When the fields are null, carry-forward rows are read from the destination's<br/>
+        /// prior version.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="override">
@@ -101,7 +105,11 @@ namespace Opik
         /// - Creates a new version with the applied changes<br/>
         /// - Validates that baseVersion matches the latest version (unless override=true)<br/>
         /// - Returns 409 Conflict if baseVersion is stale and override is not set<br/>
-        /// Use `override=true` query parameter to force version creation even with stale baseVersion.
+        /// Use `override=true` query parameter to force version creation even with stale baseVersion.<br/>
+        /// Set 'copy_from_dataset_id' and 'copy_from_version_id' together on the request body to read<br/>
+        /// carry-forward rows from the supplied (dataset, version) pair instead of the destination's<br/>
+        /// prior version. When the fields are null, carry-forward rows are read from the destination's<br/>
+        /// prior version.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="override">
@@ -601,7 +609,11 @@ namespace Opik
         /// - Creates a new version with the applied changes<br/>
         /// - Validates that baseVersion matches the latest version (unless override=true)<br/>
         /// - Returns 409 Conflict if baseVersion is stale and override is not set<br/>
-        /// Use `override=true` query parameter to force version creation even with stale baseVersion.
+        /// Use `override=true` query parameter to force version creation even with stale baseVersion.<br/>
+        /// Set 'copy_from_dataset_id' and 'copy_from_version_id' together on the request body to read<br/>
+        /// carry-forward rows from the supplied (dataset, version) pair instead of the destination's<br/>
+        /// prior version. When the fields are null, carry-forward rows are read from the destination's<br/>
+        /// prior version.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="override">
