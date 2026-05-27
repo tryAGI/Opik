@@ -67,6 +67,12 @@ namespace Opik
         public global::System.Collections.Generic.IList<string>? FeedbackDefinitionNames { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("annotators_per_item")]
+        public int? AnnotatorsPerItem { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reviewers")]
@@ -128,6 +134,7 @@ namespace Opik
         /// <param name="instructions"></param>
         /// <param name="commentsEnabled"></param>
         /// <param name="feedbackDefinitionNames"></param>
+        /// <param name="annotatorsPerItem"></param>
         /// <param name="reviewers">
         /// Included only in responses
         /// </param>
@@ -162,6 +169,7 @@ namespace Opik
             string? instructions,
             bool? commentsEnabled,
             global::System.Collections.Generic.IList<string>? feedbackDefinitionNames,
+            int? annotatorsPerItem,
             global::System.Collections.Generic.IList<global::Opik.AnnotationQueueReviewerPublic>? reviewers,
             global::System.Collections.Generic.IList<global::Opik.FeedbackScoreAveragePublic>? feedbackScores,
             long? itemsCount,
@@ -179,6 +187,7 @@ namespace Opik
             this.Scope = scope;
             this.CommentsEnabled = commentsEnabled;
             this.FeedbackDefinitionNames = feedbackDefinitionNames;
+            this.AnnotatorsPerItem = annotatorsPerItem;
             this.Reviewers = reviewers;
             this.FeedbackScores = feedbackScores;
             this.ItemsCount = itemsCount;

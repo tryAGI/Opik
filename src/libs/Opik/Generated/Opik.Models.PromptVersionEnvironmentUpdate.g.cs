@@ -4,18 +4,20 @@
 namespace Opik
 {
     /// <summary>
-    /// Set or clear the environment owned by a prompt version.<br/>
-    /// - non-null name: maps the environment to this version; if another version of the same prompt currently owns the environment, ownership is moved atomically.<br/>
-    /// - null: clears the environment from this version.<br/>
-    /// The environment must already exist in the workspace registry; unknown names return 404.
+    /// Replace the full set of environments assigned to a prompt version.<br/>
+    /// The provided set becomes the new complete set of environments for this version.<br/>
+    /// - Non-empty set: assigns each environment to this version; if another version of the same prompt currently owns any of those environments, ownership is moved atomically.<br/>
+    /// - Empty set: clears all environments from this version.<br/>
+    /// All environments must already exist in the workspace registry; unknown names return 404.
     /// </summary>
     public sealed partial class PromptVersionEnvironmentUpdate
     {
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
-        public string? Environment { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("environments")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> Environments { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -26,14 +28,14 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptVersionEnvironmentUpdate" /> class.
         /// </summary>
-        /// <param name="environment"></param>
+        /// <param name="environments"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PromptVersionEnvironmentUpdate(
-            string? environment)
+            global::System.Collections.Generic.IList<string> environments)
         {
-            this.Environment = environment;
+            this.Environments = environments ?? throw new global::System.ArgumentNullException(nameof(environments));
         }
 
         /// <summary>
