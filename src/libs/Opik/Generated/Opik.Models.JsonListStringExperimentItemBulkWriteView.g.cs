@@ -29,6 +29,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickJsonListStringExperimentItemBulkWriteViewVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out object? value)
+        {
+            value = JsonListStringExperimentItemBulkWriteViewVariant1;
+            return IsJsonListStringExperimentItemBulkWriteViewVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<object>? JsonListStringExperimentItemBulkWriteViewVariant2 { get; init; }
 #else
@@ -46,6 +59,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickJsonListStringExperimentItemBulkWriteViewVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.IList<object>? value)
+        {
+            value = JsonListStringExperimentItemBulkWriteViewVariant2;
+            return IsJsonListStringExperimentItemBulkWriteViewVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public string? JsonListStringExperimentItemBulkWriteViewVariant3 { get; init; }
 #else
@@ -59,6 +85,19 @@ namespace Opik
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringExperimentItemBulkWriteViewVariant3))]
 #endif
         public bool IsJsonListStringExperimentItemBulkWriteViewVariant3 => JsonListStringExperimentItemBulkWriteViewVariant3 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickJsonListStringExperimentItemBulkWriteViewVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out string? value)
+        {
+            value = JsonListStringExperimentItemBulkWriteViewVariant3;
+            return IsJsonListStringExperimentItemBulkWriteViewVariant3;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -121,9 +160,9 @@ namespace Opik
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<object?, TResult>? jsonListStringExperimentItemBulkWriteViewVariant1 = null,
-            global::System.Func<global::System.Collections.Generic.IList<object>?, TResult>? jsonListStringExperimentItemBulkWriteViewVariant2 = null,
-            global::System.Func<string?, TResult>? jsonListStringExperimentItemBulkWriteViewVariant3 = null,
+            global::System.Func<object, TResult>? jsonListStringExperimentItemBulkWriteViewVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.IList<object>, TResult>? jsonListStringExperimentItemBulkWriteViewVariant2 = null,
+            global::System.Func<string, TResult>? jsonListStringExperimentItemBulkWriteViewVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -151,9 +190,39 @@ namespace Opik
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<object?>? jsonListStringExperimentItemBulkWriteViewVariant1 = null,
-            global::System.Action<global::System.Collections.Generic.IList<object>?>? jsonListStringExperimentItemBulkWriteViewVariant2 = null,
-            global::System.Action<string?>? jsonListStringExperimentItemBulkWriteViewVariant3 = null,
+            global::System.Action<object>? jsonListStringExperimentItemBulkWriteViewVariant1 = null,
+
+            global::System.Action<global::System.Collections.Generic.IList<object>>? jsonListStringExperimentItemBulkWriteViewVariant2 = null,
+
+            global::System.Action<string>? jsonListStringExperimentItemBulkWriteViewVariant3 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsJsonListStringExperimentItemBulkWriteViewVariant1)
+            {
+                jsonListStringExperimentItemBulkWriteViewVariant1?.Invoke(JsonListStringExperimentItemBulkWriteViewVariant1!);
+            }
+            else if (IsJsonListStringExperimentItemBulkWriteViewVariant2)
+            {
+                jsonListStringExperimentItemBulkWriteViewVariant2?.Invoke(JsonListStringExperimentItemBulkWriteViewVariant2!);
+            }
+            else if (IsJsonListStringExperimentItemBulkWriteViewVariant3)
+            {
+                jsonListStringExperimentItemBulkWriteViewVariant3?.Invoke(JsonListStringExperimentItemBulkWriteViewVariant3!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<object>? jsonListStringExperimentItemBulkWriteViewVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.IList<object>>? jsonListStringExperimentItemBulkWriteViewVariant2 = null,
+            global::System.Action<string>? jsonListStringExperimentItemBulkWriteViewVariant3 = null,
             bool validate = true)
         {
             if (validate)
