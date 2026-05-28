@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Opik
@@ -59,6 +61,13 @@ namespace Opik
         [global::System.Text.Json.Serialization.JsonPropertyName("version_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter))]
         public global::Opik.PromptVersionDetailVersionType? VersionType { get; set; }
+
+        /// <summary>
+        /// Deprecated: use 'environments' instead
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        [global::System.Obsolete("This property marked as deprecated.")]
+        public string? Environment { get; set; }
 
         /// <summary>
         /// 
