@@ -74,5 +74,6 @@ namespace Opik
         public WelcomeWizardSubmission()
         {
         }
+
     }
 }

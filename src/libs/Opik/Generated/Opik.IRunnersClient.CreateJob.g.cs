@@ -1,5 +1,7 @@
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace Opik
 {
     public partial interface IRunnersClient
@@ -37,7 +39,9 @@ namespace Opik
         /// <param name="agentName"></param>
         /// <param name="inputs"></param>
         /// <param name="projectId"></param>
-        /// <param name="maskId"></param>
+        /// <param name="promptMasks">
+        /// Mask overlays to apply during agent execution, keyed by prompt id.
+        /// </param>
         /// <param name="blueprintName"></param>
         /// <param name="metadata"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -47,7 +51,7 @@ namespace Opik
             string agentName,
             global::System.Guid projectId,
             global::Opik.JsonNode? inputs = default,
-            global::System.Guid? maskId = default,
+            global::System.Collections.Generic.Dictionary<string, global::System.Guid>? promptMasks = default,
             string? blueprintName = default,
             global::Opik.LocalRunnerJobMetadata? metadata = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,

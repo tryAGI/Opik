@@ -370,18 +370,17 @@ namespace Opik
                                     __exception_422 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_422,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_422,
-                                    ResponseObject = __value_422,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_422,
+                                    responseObject: __value_422,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Bad Request
                             if ((int)__response.StatusCode == 400)
@@ -408,18 +407,17 @@ namespace Opik
                                     __exception_400 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_400,
-                                    ResponseObject = __value_400,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             if (__effectiveReadResponseAsString)
@@ -446,17 +444,15 @@ namespace Opik
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    throw new global::Opik.ApiException(
+                                    throw global::Opik.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
                             else
@@ -484,17 +480,15 @@ namespace Opik
                                     {
                                     }
 
-                                    throw new global::Opik.ApiException(
+                                    throw global::Opik.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
 
@@ -517,6 +511,7 @@ namespace Opik
         /// <param name="scope"></param>
         /// <param name="commentsEnabled"></param>
         /// <param name="feedbackDefinitionNames"></param>
+        /// <param name="annotatorsPerItem"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -529,6 +524,7 @@ namespace Opik
             string? instructions = default,
             bool? commentsEnabled = default,
             global::System.Collections.Generic.IList<string>? feedbackDefinitionNames = default,
+            int? annotatorsPerItem = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -542,6 +538,7 @@ namespace Opik
                 Scope = scope,
                 CommentsEnabled = commentsEnabled,
                 FeedbackDefinitionNames = feedbackDefinitionNames,
+                AnnotatorsPerItem = annotatorsPerItem,
             };
 
             await CreateAnnotationQueueAsync(

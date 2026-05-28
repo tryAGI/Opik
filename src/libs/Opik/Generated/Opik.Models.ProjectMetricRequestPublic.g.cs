@@ -104,5 +104,6 @@ namespace Opik
         public ProjectMetricRequestPublic()
         {
         }
+
     }
 }

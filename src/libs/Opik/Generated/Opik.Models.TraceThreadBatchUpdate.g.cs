@@ -63,5 +63,6 @@ namespace Opik
         public TraceThreadBatchUpdate()
         {
         }
+
     }
 }

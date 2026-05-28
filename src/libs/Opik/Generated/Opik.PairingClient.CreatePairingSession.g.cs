@@ -377,18 +377,17 @@ namespace Opik
                                     __exception_400 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_400,
-                                    ResponseObject = __value_400,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Project not found
                             if ((int)__response.StatusCode == 404)
@@ -415,18 +414,17 @@ namespace Opik
                                     __exception_404 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_404,
-                                    ResponseObject = __value_404,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_404,
+                                    responseObject: __value_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Unprocessable entity
                             if ((int)__response.StatusCode == 422)
@@ -453,18 +451,17 @@ namespace Opik
                                     __exception_422 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_422,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_422,
-                                    ResponseObject = __value_422,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_422,
+                                    responseObject: __value_422,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Too many requests
                             if ((int)__response.StatusCode == 429)
@@ -491,56 +488,17 @@ namespace Opik
                                     __exception_429 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_429,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_429,
-                                    ResponseObject = __value_429,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_429,
+                                    responseObject: __value_429,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
-                            }
-                            // Feature disabled
-                            if ((int)__response.StatusCode == 501)
-                            {
-                                string? __content_501 = null;
-                                global::System.Exception? __exception_501 = null;
-                                global::Opik.ErrorMessage? __value_501 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_501 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_501 = global::Opik.ErrorMessage.FromJson(__content_501, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_501 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_501 = global::Opik.ErrorMessage.FromJson(__content_501, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_501 = __ex;
-                                }
-
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
-                                    message: __content_501 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_501,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_501,
-                                    ResponseObject = __value_501,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             if (__effectiveReadResponseAsString)
@@ -574,17 +532,15 @@ namespace Opik
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    throw new global::Opik.ApiException(
+                                    throw global::Opik.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
                             else
@@ -621,17 +577,15 @@ namespace Opik
                                     {
                                     }
 
-                                    throw new global::Opik.ApiException(
+                                    throw global::Opik.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
 

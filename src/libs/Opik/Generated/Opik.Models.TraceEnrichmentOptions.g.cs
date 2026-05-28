@@ -84,5 +84,6 @@ namespace Opik
         public TraceEnrichmentOptions()
         {
         }
+
     }
 }

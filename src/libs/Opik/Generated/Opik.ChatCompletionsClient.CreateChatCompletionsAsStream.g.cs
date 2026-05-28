@@ -374,17 +374,15 @@ namespace Opik
                                 {
                                 }
 
-                                throw new global::Opik.ApiException(
+                                throw global::Opik.ApiException.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __ex,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             using var __stream = await __response.Content.ReadAsStreamAsync(
@@ -403,16 +401,15 @@ namespace Opik
                                 }
 
                                 var __streamedResponse = global::Opik.AnyOf<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>.FromJson(__content, JsonSerializerContext) ??
-                                                       throw new global::Opik.ApiException(
+                                                       throw global::Opik.ApiException.Create(
+                                                           statusCode: __response.StatusCode,
                                                            message: $"Response deserialization failed for \"{__content}\" ",
-                                                           statusCode: __response.StatusCode)
-                                                       {
-                                                           ResponseBody = __content,
-                                                           ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                                           innerException: null,
+                                                           responseBody: __content,
+                                                           responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                                                __response.Headers,
                                                                h => h.Key,
-                                                               h => h.Value),
-                                                       };
+                                                               h => h.Value));
 
                                 yield return __streamedResponse;
                             }

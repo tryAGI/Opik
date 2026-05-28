@@ -42,5 +42,6 @@ namespace Opik
         public AnnotationQueueBatchWrite()
         {
         }
+
     }
 }

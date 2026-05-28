@@ -273,5 +273,6 @@ namespace Opik
         public ChatCompletionRequest()
         {
         }
+
     }
 }

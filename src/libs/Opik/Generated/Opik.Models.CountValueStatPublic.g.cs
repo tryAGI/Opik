@@ -34,5 +34,6 @@ namespace Opik
         public CountValueStatPublic()
         {
         }
+
     }
 }

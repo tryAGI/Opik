@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Opik
@@ -27,6 +29,13 @@ namespace Opik
         public string? Commit { get; set; }
 
         /// <summary>
+        /// sequential version number in the format v&lt;N&gt;; null for masks<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version_number")]
+        public string? VersionNumber { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("template")]
@@ -45,6 +54,26 @@ namespace Opik
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.PromptVersionDetailTypeJsonConverter))]
         public global::Opik.PromptVersionDetailType? Type { get; set; }
+
+        /// <summary>
+        /// version type discriminator; defaults to prompt_version
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version_type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter))]
+        public global::Opik.PromptVersionDetailVersionType? VersionType { get; set; }
+
+        /// <summary>
+        /// Deprecated: use 'environments' instead
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        [global::System.Obsolete("This property marked as deprecated.")]
+        public string? Environment { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environments")]
+        public global::System.Collections.Generic.IList<string>? Environments { get; set; }
 
         /// <summary>
         /// 
@@ -102,8 +131,16 @@ namespace Opik
         /// <param name="commit">
         /// version short unique identifier, generated if absent. it must be 8 characters long
         /// </param>
+        /// <param name="versionNumber">
+        /// sequential version number in the format v&lt;N&gt;; null for masks<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="metadata"></param>
         /// <param name="type"></param>
+        /// <param name="versionType">
+        /// version type discriminator; defaults to prompt_version
+        /// </param>
+        /// <param name="environments"></param>
         /// <param name="changeDescription"></param>
         /// <param name="tags"></param>
         /// <param name="variables">
@@ -126,8 +163,11 @@ namespace Opik
             global::System.Guid? id,
             global::System.Guid? promptId,
             string? commit,
+            string? versionNumber,
             global::Opik.JsonNodeDetail? metadata,
             global::Opik.PromptVersionDetailType? type,
+            global::Opik.PromptVersionDetailVersionType? versionType,
+            global::System.Collections.Generic.IList<string>? environments,
             string? changeDescription,
             global::System.Collections.Generic.IList<string>? tags,
             global::System.Collections.Generic.IList<string>? variables,
@@ -138,9 +178,12 @@ namespace Opik
             this.Id = id;
             this.PromptId = promptId;
             this.Commit = commit;
+            this.VersionNumber = versionNumber;
             this.Template = template ?? throw new global::System.ArgumentNullException(nameof(template));
             this.Metadata = metadata;
             this.Type = type;
+            this.VersionType = versionType;
+            this.Environments = environments;
             this.ChangeDescription = changeDescription;
             this.Tags = tags;
             this.Variables = variables;
@@ -155,5 +198,6 @@ namespace Opik
         public PromptVersionDetail()
         {
         }
+
     }
 }

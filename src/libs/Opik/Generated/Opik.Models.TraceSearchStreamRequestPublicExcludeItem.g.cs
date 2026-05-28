@@ -31,6 +31,10 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        Environment,
+        /// <summary>
+        /// 
+        /// </summary>
         ErrorInfo,
         /// <summary>
         /// 
@@ -135,6 +139,7 @@ namespace Opik
                 TraceSearchStreamRequestPublicExcludeItem.CreatedBy => "created_by",
                 TraceSearchStreamRequestPublicExcludeItem.Duration => "duration",
                 TraceSearchStreamRequestPublicExcludeItem.EndTime => "end_time",
+                TraceSearchStreamRequestPublicExcludeItem.Environment => "environment",
                 TraceSearchStreamRequestPublicExcludeItem.ErrorInfo => "error_info",
                 TraceSearchStreamRequestPublicExcludeItem.Experiment => "experiment",
                 TraceSearchStreamRequestPublicExcludeItem.FeedbackScores => "feedback_scores",
@@ -172,6 +177,7 @@ namespace Opik
                 "created_by" => TraceSearchStreamRequestPublicExcludeItem.CreatedBy,
                 "duration" => TraceSearchStreamRequestPublicExcludeItem.Duration,
                 "end_time" => TraceSearchStreamRequestPublicExcludeItem.EndTime,
+                "environment" => TraceSearchStreamRequestPublicExcludeItem.Environment,
                 "error_info" => TraceSearchStreamRequestPublicExcludeItem.ErrorInfo,
                 "experiment" => TraceSearchStreamRequestPublicExcludeItem.Experiment,
                 "feedback_scores" => TraceSearchStreamRequestPublicExcludeItem.FeedbackScores,

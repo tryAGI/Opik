@@ -49,5 +49,6 @@ namespace Opik
         public StudioMetricPublic()
         {
         }
+
     }
 }

@@ -165,5 +165,6 @@ namespace Opik
         public PromptDetail()
         {
         }
+
     }
 }

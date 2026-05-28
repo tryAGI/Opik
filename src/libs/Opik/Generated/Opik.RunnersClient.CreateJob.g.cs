@@ -1,6 +1,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace Opik
 {
     public partial class RunnersClient
@@ -370,18 +372,17 @@ namespace Opik
                                     __exception_404 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_404,
-                                    ResponseObject = __value_404,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_404,
+                                    responseObject: __value_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Conflict
                             if ((int)__response.StatusCode == 409)
@@ -408,18 +409,17 @@ namespace Opik
                                     __exception_409 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessage>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_409,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_409,
-                                    ResponseObject = __value_409,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_409,
+                                    responseObject: __value_409,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             if (__effectiveReadResponseAsString)
@@ -446,17 +446,15 @@ namespace Opik
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    throw new global::Opik.ApiException(
+                                    throw global::Opik.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
                             else
@@ -484,17 +482,15 @@ namespace Opik
                                     {
                                     }
 
-                                    throw new global::Opik.ApiException(
+                                    throw global::Opik.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
 
@@ -512,7 +508,9 @@ namespace Opik
         /// <param name="agentName"></param>
         /// <param name="inputs"></param>
         /// <param name="projectId"></param>
-        /// <param name="maskId"></param>
+        /// <param name="promptMasks">
+        /// Mask overlays to apply during agent execution, keyed by prompt id.
+        /// </param>
         /// <param name="blueprintName"></param>
         /// <param name="metadata"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -522,7 +520,7 @@ namespace Opik
             string agentName,
             global::System.Guid projectId,
             global::Opik.JsonNode? inputs = default,
-            global::System.Guid? maskId = default,
+            global::System.Collections.Generic.Dictionary<string, global::System.Guid>? promptMasks = default,
             string? blueprintName = default,
             global::Opik.LocalRunnerJobMetadata? metadata = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
@@ -533,7 +531,7 @@ namespace Opik
                 AgentName = agentName,
                 Inputs = inputs,
                 ProjectId = projectId,
-                MaskId = maskId,
+                PromptMasks = promptMasks,
                 BlueprintName = blueprintName,
                 Metadata = metadata,
             };

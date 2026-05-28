@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Opik
@@ -27,6 +29,13 @@ namespace Opik
         public string? Commit { get; set; }
 
         /// <summary>
+        /// sequential version number in the format v&lt;N&gt;; null for masks<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version_number")]
+        public string? VersionNumber { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("template")]
@@ -45,6 +54,26 @@ namespace Opik
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.PromptVersionPublicTypeJsonConverter))]
         public global::Opik.PromptVersionPublicType? Type { get; set; }
+
+        /// <summary>
+        /// version type discriminator; defaults to prompt_version
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version_type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeJsonConverter))]
+        public global::Opik.PromptVersionPublicVersionType? VersionType { get; set; }
+
+        /// <summary>
+        /// Deprecated: use 'environments' instead
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
+        [global::System.Obsolete("This property marked as deprecated.")]
+        public string? Environment { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("environments")]
+        public global::System.Collections.Generic.IList<string>? Environments { get; set; }
 
         /// <summary>
         /// 
@@ -96,8 +125,16 @@ namespace Opik
         /// <param name="commit">
         /// version short unique identifier, generated if absent. it must be 8 characters long
         /// </param>
+        /// <param name="versionNumber">
+        /// sequential version number in the format v&lt;N&gt;; null for masks<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="metadata"></param>
         /// <param name="type"></param>
+        /// <param name="versionType">
+        /// version type discriminator; defaults to prompt_version
+        /// </param>
+        /// <param name="environments"></param>
         /// <param name="changeDescription"></param>
         /// <param name="tags"></param>
         /// <param name="templateStructure">
@@ -117,8 +154,11 @@ namespace Opik
             global::System.Guid? id,
             global::System.Guid? promptId,
             string? commit,
+            string? versionNumber,
             global::Opik.JsonNodePublic? metadata,
             global::Opik.PromptVersionPublicType? type,
+            global::Opik.PromptVersionPublicVersionType? versionType,
+            global::System.Collections.Generic.IList<string>? environments,
             string? changeDescription,
             global::System.Collections.Generic.IList<string>? tags,
             global::Opik.PromptVersionPublicTemplateStructure? templateStructure,
@@ -128,9 +168,12 @@ namespace Opik
             this.Id = id;
             this.PromptId = promptId;
             this.Commit = commit;
+            this.VersionNumber = versionNumber;
             this.Template = template ?? throw new global::System.ArgumentNullException(nameof(template));
             this.Metadata = metadata;
             this.Type = type;
+            this.VersionType = versionType;
+            this.Environments = environments;
             this.ChangeDescription = changeDescription;
             this.Tags = tags;
             this.TemplateStructure = templateStructure;
@@ -144,5 +187,6 @@ namespace Opik
         public PromptVersionPublic()
         {
         }
+
     }
 }

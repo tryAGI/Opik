@@ -43,6 +43,10 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        In,
+        /// <summary>
+        /// 
+        /// </summary>
         IsEmpty,
         /// <summary>
         /// 
@@ -52,6 +56,10 @@ namespace Opik
         /// 
         /// </summary>
         NotContains,
+        /// <summary>
+        /// 
+        /// </summary>
+        NotIn,
         /// <summary>
         /// 
         /// </summary>
@@ -78,9 +86,11 @@ namespace Opik
                 TraceFilterOperator.Gte => ">=",
                 TraceFilterOperator.Contains => "contains",
                 TraceFilterOperator.EndsWith => "ends_with",
+                TraceFilterOperator.In => "in",
                 TraceFilterOperator.IsEmpty => "is_empty",
                 TraceFilterOperator.IsNotEmpty => "is_not_empty",
                 TraceFilterOperator.NotContains => "not_contains",
+                TraceFilterOperator.NotIn => "not_in",
                 TraceFilterOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -100,9 +110,11 @@ namespace Opik
                 ">=" => TraceFilterOperator.Gte,
                 "contains" => TraceFilterOperator.Contains,
                 "ends_with" => TraceFilterOperator.EndsWith,
+                "in" => TraceFilterOperator.In,
                 "is_empty" => TraceFilterOperator.IsEmpty,
                 "is_not_empty" => TraceFilterOperator.IsNotEmpty,
                 "not_contains" => TraceFilterOperator.NotContains,
+                "not_in" => TraceFilterOperator.NotIn,
                 "starts_with" => TraceFilterOperator.StartsWith,
                 _ => null,
             };

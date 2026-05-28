@@ -224,5 +224,6 @@ namespace Opik
         public ProjectDetailed()
         {
         }
+
     }
 }

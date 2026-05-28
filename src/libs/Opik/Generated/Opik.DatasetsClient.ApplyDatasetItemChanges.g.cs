@@ -65,7 +65,11 @@ namespace Opik
         /// - Creates a new version with the applied changes<br/>
         /// - Validates that baseVersion matches the latest version (unless override=true)<br/>
         /// - Returns 409 Conflict if baseVersion is stale and override is not set<br/>
-        /// Use `override=true` query parameter to force version creation even with stale baseVersion.
+        /// Use `override=true` query parameter to force version creation even with stale baseVersion.<br/>
+        /// Set 'copy_from_dataset_id' and 'copy_from_version_id' together on the request body to read<br/>
+        /// carry-forward rows from the supplied (dataset, version) pair instead of the destination's<br/>
+        /// prior version. When the fields are null, carry-forward rows are read from the destination's<br/>
+        /// prior version.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="override">
@@ -101,7 +105,11 @@ namespace Opik
         /// - Creates a new version with the applied changes<br/>
         /// - Validates that baseVersion matches the latest version (unless override=true)<br/>
         /// - Returns 409 Conflict if baseVersion is stale and override is not set<br/>
-        /// Use `override=true` query parameter to force version creation even with stale baseVersion.
+        /// Use `override=true` query parameter to force version creation even with stale baseVersion.<br/>
+        /// Set 'copy_from_dataset_id' and 'copy_from_version_id' together on the request body to read<br/>
+        /// carry-forward rows from the supplied (dataset, version) pair instead of the destination's<br/>
+        /// prior version. When the fields are null, carry-forward rows are read from the destination's<br/>
+        /// prior version.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="override">
@@ -412,18 +420,17 @@ namespace Opik
                                     __exception_400 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessagePublic>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessagePublic>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_400,
-                                    ResponseObject = __value_400,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Dataset or version not found
                             if ((int)__response.StatusCode == 404)
@@ -450,18 +457,17 @@ namespace Opik
                                     __exception_404 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessagePublic>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessagePublic>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_404,
-                                    ResponseObject = __value_404,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_404,
+                                    responseObject: __value_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Version conflict - baseVersion is not the latest
                             if ((int)__response.StatusCode == 409)
@@ -488,18 +494,17 @@ namespace Opik
                                     __exception_409 = __ex;
                                 }
 
-                                throw new global::Opik.ApiException<global::Opik.ErrorMessagePublic>(
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessagePublic>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_409,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_409,
-                                    ResponseObject = __value_409,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_409,
+                                    responseObject: __value_409,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             if (__effectiveReadResponseAsString)
@@ -533,17 +538,15 @@ namespace Opik
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    throw new global::Opik.ApiException(
+                                    throw global::Opik.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
                             else
@@ -580,17 +583,15 @@ namespace Opik
                                     {
                                     }
 
-                                    throw new global::Opik.ApiException(
+                                    throw global::Opik.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
 
@@ -608,7 +609,11 @@ namespace Opik
         /// - Creates a new version with the applied changes<br/>
         /// - Validates that baseVersion matches the latest version (unless override=true)<br/>
         /// - Returns 409 Conflict if baseVersion is stale and override is not set<br/>
-        /// Use `override=true` query parameter to force version creation even with stale baseVersion.
+        /// Use `override=true` query parameter to force version creation even with stale baseVersion.<br/>
+        /// Set 'copy_from_dataset_id' and 'copy_from_version_id' together on the request body to read<br/>
+        /// carry-forward rows from the supplied (dataset, version) pair instead of the destination's<br/>
+        /// prior version. When the fields are null, carry-forward rows are read from the destination's<br/>
+        /// prior version.
         /// </summary>
         /// <param name="id"></param>
         /// <param name="override">

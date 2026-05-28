@@ -48,5 +48,6 @@ namespace Opik
         public AutomationRuleEvaluatorSpanLlmAsJudgeVariant2()
         {
         }
+
     }
 }

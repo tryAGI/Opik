@@ -138,5 +138,6 @@ namespace Opik
         public TraceSearchStreamRequestPublic()
         {
         }
+
     }
 }

@@ -46,6 +46,18 @@ namespace Opik
         public global::System.Guid? BatchGroupId { get; set; }
 
         /// <summary>
+        /// Optional. Dataset to read carry-forward rows from when materializing the new version. Required together with copy_from_version_id. When null, carry-forward rows are read from the destination dataset's prior version.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("copy_from_dataset_id")]
+        public global::System.Guid? CopyFromDatasetId { get; set; }
+
+        /// <summary>
+        /// Optional. Version within copy_from_dataset_id to read carry-forward rows from. Required together with copy_from_dataset_id.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("copy_from_version_id")]
+        public global::System.Guid? CopyFromVersionId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -70,6 +82,12 @@ namespace Opik
         /// <param name="batchGroupId">
         /// Optional batch group ID to group multiple batches into a single dataset version. If null, mutates the latest version instead of creating a new one.
         /// </param>
+        /// <param name="copyFromDatasetId">
+        /// Optional. Dataset to read carry-forward rows from when materializing the new version. Required together with copy_from_version_id. When null, carry-forward rows are read from the destination dataset's prior version.
+        /// </param>
+        /// <param name="copyFromVersionId">
+        /// Optional. Version within copy_from_dataset_id to read carry-forward rows from. Required together with copy_from_dataset_id.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -79,7 +97,9 @@ namespace Opik
             global::System.Guid? datasetId,
             string? projectName,
             global::System.Guid? projectId,
-            global::System.Guid? batchGroupId)
+            global::System.Guid? batchGroupId,
+            global::System.Guid? copyFromDatasetId,
+            global::System.Guid? copyFromVersionId)
         {
             this.DatasetName = datasetName;
             this.DatasetId = datasetId;
@@ -87,6 +107,8 @@ namespace Opik
             this.ProjectId = projectId;
             this.Items = items ?? throw new global::System.ArgumentNullException(nameof(items));
             this.BatchGroupId = batchGroupId;
+            this.CopyFromDatasetId = copyFromDatasetId;
+            this.CopyFromVersionId = copyFromVersionId;
         }
 
         /// <summary>
@@ -95,5 +117,6 @@ namespace Opik
         public DatasetItemBatchWrite()
         {
         }
+
     }
 }

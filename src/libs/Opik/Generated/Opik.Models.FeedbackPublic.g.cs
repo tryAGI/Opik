@@ -116,5 +116,6 @@ namespace Opik
         public FeedbackPublic()
         {
         }
+
     }
 }

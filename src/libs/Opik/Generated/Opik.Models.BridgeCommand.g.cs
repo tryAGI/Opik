@@ -140,5 +140,6 @@ namespace Opik
         public BridgeCommand()
         {
         }
+
     }
 }

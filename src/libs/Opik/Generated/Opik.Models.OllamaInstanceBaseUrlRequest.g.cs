@@ -56,5 +56,6 @@ namespace Opik
         public OllamaInstanceBaseUrlRequest()
         {
         }
+
     }
 }

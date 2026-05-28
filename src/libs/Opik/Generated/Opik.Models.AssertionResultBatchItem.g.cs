@@ -101,5 +101,6 @@ namespace Opik
         public AssertionResultBatchItem()
         {
         }
+
     }
 }

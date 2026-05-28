@@ -43,6 +43,10 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        In,
+        /// <summary>
+        /// 
+        /// </summary>
         IsEmpty,
         /// <summary>
         /// 
@@ -52,6 +56,10 @@ namespace Opik
         /// 
         /// </summary>
         NotContains,
+        /// <summary>
+        /// 
+        /// </summary>
+        NotIn,
         /// <summary>
         /// 
         /// </summary>
@@ -78,9 +86,11 @@ namespace Opik
                 DatasetItemFilterOperator.Gte => ">=",
                 DatasetItemFilterOperator.Contains => "contains",
                 DatasetItemFilterOperator.EndsWith => "ends_with",
+                DatasetItemFilterOperator.In => "in",
                 DatasetItemFilterOperator.IsEmpty => "is_empty",
                 DatasetItemFilterOperator.IsNotEmpty => "is_not_empty",
                 DatasetItemFilterOperator.NotContains => "not_contains",
+                DatasetItemFilterOperator.NotIn => "not_in",
                 DatasetItemFilterOperator.StartsWith => "starts_with",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -100,9 +110,11 @@ namespace Opik
                 ">=" => DatasetItemFilterOperator.Gte,
                 "contains" => DatasetItemFilterOperator.Contains,
                 "ends_with" => DatasetItemFilterOperator.EndsWith,
+                "in" => DatasetItemFilterOperator.In,
                 "is_empty" => DatasetItemFilterOperator.IsEmpty,
                 "is_not_empty" => DatasetItemFilterOperator.IsNotEmpty,
                 "not_contains" => DatasetItemFilterOperator.NotContains,
+                "not_in" => DatasetItemFilterOperator.NotIn,
                 "starts_with" => DatasetItemFilterOperator.StartsWith,
                 _ => null,
             };

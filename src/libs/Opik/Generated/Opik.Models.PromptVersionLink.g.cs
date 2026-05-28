@@ -73,5 +73,6 @@ namespace Opik
         public PromptVersionLink()
         {
         }
+
     }
 }

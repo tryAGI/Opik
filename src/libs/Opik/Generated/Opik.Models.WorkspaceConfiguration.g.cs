@@ -66,5 +66,6 @@ namespace Opik
         public WorkspaceConfiguration()
         {
         }
+
     }
 }

@@ -41,5 +41,6 @@ namespace Opik
         public WelcomeWizardTracking()
         {
         }
+
     }
 }

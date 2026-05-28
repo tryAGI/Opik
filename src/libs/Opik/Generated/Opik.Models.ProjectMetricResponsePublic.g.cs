@@ -68,5 +68,6 @@ namespace Opik
         public ProjectMetricResponsePublic()
         {
         }
+
     }
 }

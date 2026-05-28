@@ -51,5 +51,6 @@ namespace Opik
         public AssertionScoreAveragePublic()
         {
         }
+
     }
 }

@@ -169,5 +169,6 @@ namespace Opik
         public DashboardPublic()
         {
         }
+
     }
 }

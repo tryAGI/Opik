@@ -40,5 +40,6 @@ namespace Opik
         public CategoricalFeedbackDetail()
         {
         }
+
     }
 }

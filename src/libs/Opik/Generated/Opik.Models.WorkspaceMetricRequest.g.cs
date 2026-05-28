@@ -77,5 +77,6 @@ namespace Opik
         public WorkspaceMetricRequest()
         {
         }
+
     }
 }

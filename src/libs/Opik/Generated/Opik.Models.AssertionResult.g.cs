@@ -57,5 +57,6 @@ namespace Opik
         public AssertionResult()
         {
         }
+
     }
 }

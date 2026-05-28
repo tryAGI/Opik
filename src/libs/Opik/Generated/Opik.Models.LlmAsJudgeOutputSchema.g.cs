@@ -61,5 +61,6 @@ namespace Opik
         public LlmAsJudgeOutputSchema()
         {
         }
+
     }
 }

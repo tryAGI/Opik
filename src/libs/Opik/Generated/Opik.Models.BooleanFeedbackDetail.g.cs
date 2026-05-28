@@ -60,5 +60,6 @@ namespace Opik
         public BooleanFeedbackDetail()
         {
         }
+
     }
 }

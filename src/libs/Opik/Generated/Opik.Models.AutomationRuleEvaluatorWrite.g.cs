@@ -100,5 +100,6 @@ namespace Opik
         public AutomationRuleEvaluatorWrite()
         {
         }
+
     }
 }

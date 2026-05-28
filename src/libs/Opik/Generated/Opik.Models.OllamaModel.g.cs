@@ -78,5 +78,6 @@ namespace Opik
         public OllamaModel()
         {
         }
+
     }
 }

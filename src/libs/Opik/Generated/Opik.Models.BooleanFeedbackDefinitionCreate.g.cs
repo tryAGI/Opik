@@ -37,5 +37,6 @@ namespace Opik
         public BooleanFeedbackDefinitionCreate()
         {
         }
+
     }
 }

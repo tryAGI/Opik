@@ -61,6 +61,12 @@ namespace Opik
         public global::System.Collections.Generic.IList<string>? FeedbackDefinitionNames { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("annotators_per_item")]
+        public int? AnnotatorsPerItem { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -77,6 +83,7 @@ namespace Opik
         /// <param name="instructions"></param>
         /// <param name="commentsEnabled"></param>
         /// <param name="feedbackDefinitionNames"></param>
+        /// <param name="annotatorsPerItem"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -88,7 +95,8 @@ namespace Opik
             string? description,
             string? instructions,
             bool? commentsEnabled,
-            global::System.Collections.Generic.IList<string>? feedbackDefinitionNames)
+            global::System.Collections.Generic.IList<string>? feedbackDefinitionNames,
+            int? annotatorsPerItem)
         {
             this.Id = id;
             this.ProjectId = projectId;
@@ -98,6 +106,7 @@ namespace Opik
             this.Scope = scope;
             this.CommentsEnabled = commentsEnabled;
             this.FeedbackDefinitionNames = feedbackDefinitionNames;
+            this.AnnotatorsPerItem = annotatorsPerItem;
         }
 
         /// <summary>
@@ -106,5 +115,6 @@ namespace Opik
         public AnnotationQueueWrite()
         {
         }
+
     }
 }

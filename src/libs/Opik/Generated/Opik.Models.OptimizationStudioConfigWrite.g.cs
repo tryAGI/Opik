@@ -80,5 +80,6 @@ namespace Opik
         public OptimizationStudioConfigWrite()
         {
         }
+
     }
 }

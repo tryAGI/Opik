@@ -217,5 +217,6 @@ namespace Opik
         public Prompt()
         {
         }
+
     }
 }

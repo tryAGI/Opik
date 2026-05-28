@@ -1833,6 +1833,11 @@ paths:
         - Returns 409 Conflict if baseVersion is stale and override is not set
 
         Use `override=true` query parameter to force version creation even with stale baseVersion.
+
+        Set 'copy_from_dataset_id' and 'copy_from_version_id' together on the request body to read
+        carry-forward rows from the supplied (dataset, version) pair instead of the destination's
+        prior version. When the fields are null, carry-forward rows are read from the destination's
+        prior version.
       operationId: applyDatasetItemChanges
       parameters:
       - name: id
@@ -1987,6 +1992,10 @@ paths:
         Create/update dataset items based on dataset item id.
         Each item's 'id' field is the stable identifier and upsert key.
         Provide it to update an existing item, or omit it to create a new one.
+
+        Set 'copy_from_dataset_id' and 'copy_from_version_id' together to read carry-forward rows
+        from the supplied (dataset, version) pair instead of the destination's prior version. When
+        the fields are null, carry-forward rows are read from the destination's prior version.
       operationId: createOrUpdateDatasetItems
       requestBody:
         content:
@@ -2023,12 +2032,6 @@ paths:
           description: Accepted - CSV processing started
         "400":
           description: Bad Request
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorMessage"
-        "404":
-          description: Not Found - CSV upload feature is disabled
           content:
             application/json:
               schema:
@@ -5095,12 +5098,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorMessage"
-        "501":
-          description: Feature disabled
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorMessage"
   /v1/private/pairing/sessions:
     post:
       tags:
@@ -5141,12 +5138,6 @@ paths:
                 $ref: "#/components/schemas/ErrorMessage"
         "429":
           description: Too many requests
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorMessage"
-        "501":
-          description: Feature disabled
           content:
             application/json:
               schema:
@@ -6008,7 +5999,9 @@ paths:
       tags:
       - Prompts
       summary: Get prompt by id
-      description: Get prompt by id
+      description: "Get prompt by id; when mask_id or environment is provided, requestedVersion\
+        \ is populated with the resolved version. mask_id and environment are mutually\
+        \ exclusive."
       operationId: getPromptById
       parameters:
       - name: id
@@ -6017,6 +6010,22 @@ paths:
         schema:
           type: string
           format: uuid
+      - name: mask_id
+        in: query
+        description: "Optional mask version id; when set, requestedVersion is the\
+          \ mask row for that id"
+        schema:
+          type: string
+          format: uuid
+      - name: environment
+        in: query
+        description: "Optional environment name; when set, requestedVersion is the\
+          \ version mapped to that environment for the prompt"
+        schema:
+          maxLength: 150
+          minLength: 0
+          pattern: "^[A-Za-z0-9_-]+$"
+          type: string
       responses:
         "200":
           description: Prompt resource
@@ -6024,6 +6033,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Prompt_Detail"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage_Detail"
         "404":
           description: Not Found
           content:
@@ -6166,6 +6181,48 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/PromptVersion_Detail"
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage_Detail"
+  /v1/private/prompts/{promptId}/versions/by-number/{versionNumber}:
+    get:
+      tags:
+      - Prompts
+      summary: Get prompt version by sequential number
+      description: Get a prompt version by its sequential v<N> number for the given
+        prompt.
+      operationId: getPromptVersionByNumber
+      parameters:
+      - name: promptId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      - name: versionNumber
+        in: path
+        required: true
+        schema:
+          maxLength: 10
+          minLength: 0
+          pattern: v\d+
+          type: string
+      responses:
+        "200":
+          description: Prompt version resource
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PromptVersion_Detail"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage_Detail"
         "404":
           description: Not Found
           content:
@@ -6318,6 +6375,73 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorMessage_Detail"
+  /v1/private/prompts/versions/retrieve-by-ids:
+    post:
+      tags:
+      - Prompts
+      summary: Retrieve prompt versions by ids
+      description: Retrieve a batch of prompt versions by their ids. Typically used
+        by the UI to resolve mask overlays.
+      operationId: retrievePromptVersionsByIds
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PromptVersionIdsRequest_Detail"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/PromptVersion_Detail"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage_Detail"
+  /v1/private/prompts/versions/{versionId}/environments:
+    patch:
+      tags:
+      - Prompts
+      summary: Set prompt version environment
+      description: |
+        Set or clear the environment owned by a prompt version.
+        Setting a non-null environment moves ownership atomically: any previous owner of that
+        environment for the same prompt has its environment cleared in the same transaction.
+        Setting null clears the environment from the version.
+        The environment must already exist in the workspace registry; unknown names return 404.
+      operationId: setPromptVersionEnvironment
+      parameters:
+      - name: versionId
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PromptVersionEnvironmentUpdate"
+      responses:
+        "204":
+          description: No Content
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage"
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorMessage"
   /v1/private/projects/{projectId}/activities:
     get:
       tags:
@@ -8826,6 +8950,13 @@ components:
           type: object
           additionalProperties:
             type: string
+        group_index:
+          type: integer
+          description: "Groups configs within a trigger: same group_index means AND\
+            \ between configs, different group_index means OR between groups. Null\
+            \ means a legacy/singleton group of one config. Always null for scope:project\
+            \ configs."
+          format: int32
         created_at:
           type: string
           format: date-time
@@ -8895,6 +9026,13 @@ components:
           type: object
           additionalProperties:
             type: string
+        group_index:
+          type: integer
+          description: "Groups configs within a trigger: same group_index means AND\
+            \ between configs, different group_index means OR between groups. Null\
+            \ means a legacy/singleton group of one config. Always null for scope:project\
+            \ configs."
+          format: int32
     AlertTrigger_Write:
       required:
       - event_type
@@ -9036,6 +9174,13 @@ components:
           type: object
           additionalProperties:
             type: string
+        group_index:
+          type: integer
+          description: "Groups configs within a trigger: same group_index means AND\
+            \ between configs, different group_index means OR between groups. Null\
+            \ means a legacy/singleton group of one config. Always null for scope:project\
+            \ configs."
+          format: int32
         created_at:
           type: string
           format: date-time
@@ -9242,6 +9387,11 @@ components:
           type: array
           items:
             type: string
+        annotators_per_item:
+          maximum: 1000
+          minimum: 1
+          type: integer
+          format: int32
         reviewers:
           type: array
           readOnly: true
@@ -9322,6 +9472,11 @@ components:
           type: array
           items:
             type: string
+        annotators_per_item:
+          maximum: 1000
+          minimum: 1
+          type: integer
+          format: int32
       description: List of annotation queues to create
     AnnotationQueueBatch:
       required:
@@ -9414,6 +9569,11 @@ components:
           type: array
           items:
             type: string
+        annotators_per_item:
+          maximum: 1000
+          minimum: 1
+          type: integer
+          format: int32
         reviewers:
           type: array
           readOnly: true
@@ -9471,6 +9631,11 @@ components:
           items:
             minLength: 1
             type: string
+        annotators_per_item:
+          maximum: 1000
+          minimum: 1
+          type: integer
+          format: int32
     AssertionResultBatch:
       required:
       - assertion_results
@@ -10020,6 +10185,8 @@ components:
           - <=
           - is_empty
           - is_not_empty
+          - in
+          - not_in
         key:
           type: string
         value:
@@ -10079,6 +10246,8 @@ components:
           - <=
           - is_empty
           - is_not_empty
+          - in
+          - not_in
         key:
           type: string
         value:
@@ -10103,6 +10272,8 @@ components:
           - <=
           - is_empty
           - is_not_empty
+          - in
+          - not_in
         key:
           type: string
         value:
@@ -10434,6 +10605,8 @@ components:
           - <=
           - is_empty
           - is_not_empty
+          - in
+          - not_in
         key:
           type: string
         value:
@@ -10493,6 +10666,8 @@ components:
           - <=
           - is_empty
           - is_not_empty
+          - in
+          - not_in
         key:
           type: string
         value:
@@ -10517,6 +10692,8 @@ components:
           - <=
           - is_empty
           - is_not_empty
+          - in
+          - not_in
         key:
           type: string
         value:
@@ -10903,6 +11080,8 @@ components:
           - <=
           - is_empty
           - is_not_empty
+          - in
+          - not_in
         key:
           type: string
         value:
@@ -10962,6 +11141,8 @@ components:
           - <=
           - is_empty
           - is_not_empty
+          - in
+          - not_in
         key:
           type: string
         value:
@@ -10986,6 +11167,8 @@ components:
           - <=
           - is_empty
           - is_not_empty
+          - in
+          - not_in
         key:
           type: string
         value:
@@ -11875,6 +12058,8 @@ components:
           - <=
           - is_empty
           - is_not_empty
+          - in
+          - not_in
         key:
           type: string
         value:
@@ -12289,6 +12474,17 @@ components:
             \ dataset version. If null, mutates the latest version instead of creating\
             \ a new one."
           format: uuid
+        copy_from_dataset_id:
+          type: string
+          description: "Optional. Dataset to read carry-forward rows from when materializing\
+            \ the new version. Required together with copy_from_version_id. When null,\
+            \ carry-forward rows are read from the destination dataset's prior version."
+          format: uuid
+        copy_from_version_id:
+          type: string
+          description: Optional. Version within copy_from_dataset_id to read carry-forward
+            rows from. Required together with copy_from_dataset_id.
+          format: uuid
     ExperimentItem:
       required:
       - dataset_item_id
@@ -12504,6 +12700,17 @@ components:
           description: "Optional batch group ID to group multiple batches into a single\
             \ dataset version. If null, mutates the latest version instead of creating\
             \ a new one."
+          format: uuid
+        copy_from_dataset_id:
+          type: string
+          description: "Optional. Dataset to read carry-forward rows from when materializing\
+            \ the new version. Required together with copy_from_version_id. When null,\
+            \ carry-forward rows are read from the destination dataset's prior version."
+          format: uuid
+        copy_from_version_id:
+          type: string
+          description: Optional. Version within copy_from_dataset_id to read carry-forward
+            rows from. Required together with copy_from_dataset_id.
           format: uuid
     DatasetItem_Write:
       required:
@@ -14646,6 +14853,10 @@ components:
           - experiment
           - playground
           - optimization
+        environment:
+          maxLength: 150
+          minLength: 0
+          type: string
     Trace:
       required:
       - start_time
@@ -14776,6 +14987,10 @@ components:
           - experiment
           - playground
           - optimization
+        environment:
+          maxLength: 150
+          minLength: 0
+          type: string
     ErrorInfo_ExperimentItemBulkWriteView:
       required:
       - exception_type
@@ -14961,6 +15176,10 @@ components:
           - experiment
           - playground
           - optimization
+        environment:
+          maxLength: 150
+          minLength: 0
+          type: string
     Trace_ExperimentItemBulkWriteView:
       required:
       - start_time
@@ -15010,6 +15229,10 @@ components:
           - experiment
           - playground
           - optimization
+        environment:
+          maxLength: 150
+          minLength: 0
+          type: string
       description: "Please provide either none, only one of evaluate_task_result or\
         \ trace, but never both"
     ValueEntry_ExperimentItemBulkWriteView:
@@ -16390,7 +16613,19 @@ components:
           format: uuid
         mask_id:
           type: string
+          description: Deprecated. Use prompt_masks to pass one or more mask overlays
+            keyed by prompt id.
           format: uuid
+          deprecated: true
+        prompt_masks:
+          type: object
+          additionalProperties:
+            type: string
+            description: "Mask overlays to apply during agent execution, keyed by\
+              \ prompt id."
+            format: uuid
+          description: "Mask overlays to apply during agent execution, keyed by prompt\
+            \ id."
         blueprint_name:
           pattern: (?s)^\s*(\S.*\S|\S)\s*$
           type: string
@@ -16491,7 +16726,19 @@ components:
           format: uuid
         mask_id:
           type: string
+          description: Deprecated. Use prompt_masks to read one or more mask overlays
+            keyed by prompt id.
           format: uuid
+          deprecated: true
+        prompt_masks:
+          type: object
+          additionalProperties:
+            type: string
+            description: "Mask overlays to apply during agent execution, keyed by\
+              \ prompt id."
+            format: uuid
+          description: "Mask overlays to apply during agent execution, keyed by prompt\
+            \ id."
         blueprint_name:
           pattern: (?s)^\s*(\S.*\S|\S)\s*$
           type: string
@@ -18079,6 +18326,10 @@ components:
           type: string
           description: "version short unique identifier, generated if absent. it must\
             \ be 8 characters long"
+        version_number:
+          type: string
+          description: sequential version number in the format v<N>; null for masks
+          readOnly: true
         template:
           minLength: 1
           type: string
@@ -18090,6 +18341,29 @@ components:
           - mustache
           - jinja2
           - python
+        version_type:
+          type: string
+          description: version type discriminator; defaults to prompt_version
+          enum:
+          - prompt_version
+          - mask
+        environment:
+          maxLength: 150
+          minLength: 0
+          pattern: "^[A-Za-z0-9_-]+$"
+          type: string
+          description: "Deprecated: use 'environments' instead"
+          deprecated: true
+        environments:
+          maxItems: 100
+          minItems: 0
+          uniqueItems: true
+          type: array
+          items:
+            maxLength: 150
+            minLength: 0
+            pattern: "^[A-Za-z0-9_-]+$"
+            type: string
         change_description:
           type: string
         tags:
@@ -18193,6 +18467,10 @@ components:
           type: string
           description: "version short unique identifier, generated if absent. it must\
             \ be 8 characters long"
+        version_number:
+          type: string
+          description: sequential version number in the format v<N>; null for masks
+          readOnly: true
         template:
           minLength: 1
           type: string
@@ -18204,6 +18482,29 @@ components:
           - mustache
           - jinja2
           - python
+        version_type:
+          type: string
+          description: version type discriminator; defaults to prompt_version
+          enum:
+          - prompt_version
+          - mask
+        environment:
+          maxLength: 150
+          minLength: 0
+          pattern: "^[A-Za-z0-9_-]+$"
+          type: string
+          description: "Deprecated: use 'environments' instead"
+          deprecated: true
+        environments:
+          maxItems: 100
+          minItems: 0
+          uniqueItems: true
+          type: array
+          items:
+            maxLength: 150
+            minLength: 0
+            pattern: "^[A-Za-z0-9_-]+$"
+            type: string
         change_description:
           type: string
         tags:
@@ -18235,13 +18536,10 @@ components:
     ErrorMessage_Detail:
       type: object
       properties:
-        code:
-          type: integer
-          format: int32
-        message:
-          type: string
-        details:
-          type: string
+        errors:
+          type: array
+          items:
+            type: string
     CreatePromptVersion_Detail:
       required:
       - name
@@ -18368,6 +18666,10 @@ components:
           type: string
           description: "version short unique identifier, generated if absent. it must\
             \ be 8 characters long"
+        version_number:
+          type: string
+          description: sequential version number in the format v<N>; null for masks
+          readOnly: true
         template:
           minLength: 1
           type: string
@@ -18379,6 +18681,29 @@ components:
           - mustache
           - jinja2
           - python
+        version_type:
+          type: string
+          description: version type discriminator; defaults to prompt_version
+          enum:
+          - prompt_version
+          - mask
+        environment:
+          maxLength: 150
+          minLength: 0
+          pattern: "^[A-Za-z0-9_-]+$"
+          type: string
+          description: "Deprecated: use 'environments' instead"
+          deprecated: true
+        environments:
+          maxItems: 100
+          minItems: 0
+          uniqueItems: true
+          type: array
+          items:
+            maxLength: 150
+            minLength: 0
+            pattern: "^[A-Za-z0-9_-]+$"
+            type: string
         change_description:
           type: string
         tags:
@@ -18422,10 +18747,57 @@ components:
           type: string
         commit:
           type: string
+        environment:
+          maxLength: 150
+          minLength: 0
+          pattern: "^[A-Za-z0-9_-]+$"
+          type: string
+          description: "If provided, resolves to the version mapped to this environment\
+            \ for the prompt; mutually exclusive with commit and version_number"
+        version_number:
+          maxLength: 10
+          minLength: 0
+          pattern: v\d+
+          type: string
+          description: "If provided, resolves to the version with this sequential\
+            \ number (e.g. v3); mutually exclusive with commit and environment"
         project_name:
           pattern: (?s)^\s*(\S.*\S|\S)\s*$
           type: string
           description: "If provided, scopes the search to the specified project"
+    PromptVersionIdsRequest_Detail:
+      required:
+      - ids
+      type: object
+      properties:
+        ids:
+          maxItems: 1000
+          minItems: 1
+          type: array
+          items:
+            type: string
+            format: uuid
+    PromptVersionEnvironmentUpdate:
+      required:
+      - environments
+      type: object
+      properties:
+        environments:
+          maxItems: 100
+          minItems: 0
+          uniqueItems: true
+          type: array
+          items:
+            maxLength: 150
+            minLength: 0
+            pattern: "^[A-Za-z0-9_-]+$"
+            type: string
+      description: |
+        Replace the full set of environments assigned to a prompt version.
+        The provided set becomes the new complete set of environments for this version.
+        - Non-empty set: assigns each environment to this version; if another version of the same prompt currently owns any of those environments, ownership is moved atomically.
+        - Empty set: clears all environments from this version.
+        All environments must already exist in the workspace registry; unknown names return 404.
     Prompt_Updatable:
       required:
       - name
@@ -18639,19 +19011,20 @@ components:
           format: int64
     ServiceTogglesConfig:
       required:
+      - agenticToolsEnabled
       - alertsEnabled
       - anthropicProviderEnabled
       - bedrockProviderEnabled
-      - collaboratorsTabEnabled
-      - csvUploadEnabled
       - customllmProviderEnabled
       - datasetExportEnabled
       - datasetVersioningEnabled
+      - demoDataEnabled
       - exportEnabled
       - forceWorkspaceVersion
       - geminiProviderEnabled
       - guardrailsEnabled
       - ollamaProviderEnabled
+      - ollieEnabled
       - openaiProviderEnabled
       - openrouterProviderEnabled
       - opikAIEnabled
@@ -18660,6 +19033,7 @@ components:
       - spanLlmAsJudgeEnabled
       - spanUserDefinedMetricPythonEnabled
       - traceThreadPythonEvaluatorEnabled
+      - v1WorkspaceAllowlistIds
       - v2WorkspaceAllowlistIds
       - vertexaiProviderEnabled
       - welcomeWizardEnabled
@@ -18681,8 +19055,6 @@ components:
           type: boolean
         welcomeWizardEnabled:
           type: boolean
-        csvUploadEnabled:
-          type: boolean
         exportEnabled:
           type: boolean
         optimizationStudioEnabled:
@@ -18690,6 +19062,8 @@ components:
         datasetVersioningEnabled:
           type: boolean
         datasetExportEnabled:
+          type: boolean
+        demoDataEnabled:
           type: boolean
         openaiProviderEnabled:
           type: boolean
@@ -18707,9 +19081,17 @@ components:
           type: boolean
         ollamaProviderEnabled:
           type: boolean
-        collaboratorsTabEnabled:
+        ollieEnabled:
+          type: boolean
+        agenticToolsEnabled:
           type: boolean
         v2WorkspaceAllowlistIds:
+          uniqueItems: true
+          type: array
+          items:
+            minLength: 1
+            type: string
+        v1WorkspaceAllowlistIds:
           uniqueItems: true
           type: array
           items:
@@ -18724,6 +19106,9 @@ components:
           type: integer
           format: int32
         v2WorkspaceAllowlist:
+          type: string
+          writeOnly: true
+        v1WorkspaceAllowlist:
           type: string
           writeOnly: true
     SpanBatchUpdate:
@@ -18845,6 +19230,10 @@ components:
           - experiment
           - playground
           - optimization
+        environment:
+          maxLength: 150
+          minLength: 0
+          type: string
     ErrorInfo_Write:
       required:
       - exception_type
@@ -18934,6 +19323,10 @@ components:
           - experiment
           - playground
           - optimization
+        environment:
+          maxLength: 150
+          minLength: 0
+          type: string
     SpanBatch:
       required:
       - spans
@@ -19133,6 +19526,10 @@ components:
           - experiment
           - playground
           - optimization
+        environment:
+          maxLength: 150
+          minLength: 0
+          type: string
     ValueEntry_Public:
       type: object
       properties:
@@ -19292,6 +19689,7 @@ components:
             - duration
             - ttft
             - source
+            - environment
         from_time:
           type: string
           description: Filter spans created from this time (ISO-8601 format).
@@ -19394,6 +19792,10 @@ components:
           - experiment
           - playground
           - optimization
+        environment:
+          maxLength: 150
+          minLength: 0
+          type: string
     TraceThreadBatchUpdate:
       required:
       - ids
@@ -19514,6 +19916,10 @@ components:
           - experiment
           - playground
           - optimization
+        environment:
+          maxLength: 150
+          minLength: 0
+          type: string
     TraceBatch:
       required:
       - traces
@@ -19771,6 +20177,10 @@ components:
           - experiment
           - playground
           - optimization
+        environment:
+          maxLength: 150
+          minLength: 0
+          type: string
     TraceThread:
       type: object
       properties:
@@ -19833,6 +20243,8 @@ components:
         created_at:
           type: string
           format: date-time
+        environment:
+          type: string
     TraceThreadIdentifier:
       required:
       - thread_id
@@ -20044,6 +20456,7 @@ components:
             - providers
             - experiment
             - source
+            - environment
         from_time:
           type: string
           description: Filter traces created from this time (ISO-8601 format).
