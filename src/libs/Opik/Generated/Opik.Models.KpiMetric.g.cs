@@ -16,13 +16,13 @@ namespace Opik
         public global::Opik.KpiMetricType? Type { get; set; }
 
         /// <summary>
-        /// 
+        /// Metric value for the current period. Unit depends on `type`: `count` is an integer count; `errors` is a percentage in [0, 100]; `avg_duration` is milliseconds; `total_cost` is in USD.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("current_value")]
         public double? CurrentValue { get; set; }
 
         /// <summary>
-        /// 
+        /// Metric value for the immediately preceding period of equal length. Same unit as `current_value`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("previous_value")]
         public double? PreviousValue { get; set; }
@@ -37,8 +37,12 @@ namespace Opik
         /// Initializes a new instance of the <see cref="KpiMetric" /> class.
         /// </summary>
         /// <param name="type"></param>
-        /// <param name="currentValue"></param>
-        /// <param name="previousValue"></param>
+        /// <param name="currentValue">
+        /// Metric value for the current period. Unit depends on `type`: `count` is an integer count; `errors` is a percentage in [0, 100]; `avg_duration` is milliseconds; `total_cost` is in USD.
+        /// </param>
+        /// <param name="previousValue">
+        /// Metric value for the immediately preceding period of equal length. Same unit as `current_value`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
