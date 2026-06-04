@@ -845,6 +845,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter),
+
+            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeNullableJsonConverter),
@@ -2250,6 +2254,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter),
+
+            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeNullableJsonConverter),
@@ -2743,6 +2751,8 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceVersionOpikVersion), TypeInfoPropertyName = "WorkspaceVersionOpikVersion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceMetricsSummaryResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromCsvRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromJsonRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromJsonRequestFormat), TypeInfoPropertyName = "CreateDatasetItemsFromJsonRequestFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.LocalRunnerLogEntry>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetWebhookExamplesAlertType), TypeInfoPropertyName = "GetWebhookExamplesAlertType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentListEntityType), TypeInfoPropertyName = "AttachmentListEntityType2")]
@@ -2810,8 +2820,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceThreadFilterWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeMessageWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeOutputSchemaWrite>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeMessageContentWrite>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceFilterPublic>))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3655,6 +3663,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter),
+
+            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeNullableJsonConverter),
@@ -3717,6 +3729,8 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LlmAsJudgeMessageContentWrite>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceFilterPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectReferencePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AutomationRuleEvaluatorObjectObjectPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanFilterPublic>))]
@@ -4296,6 +4310,8 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.WorkspaceVersionOpikVersionJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.WorkspaceVersionOpikVersionNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.GetWebhookExamplesAlertTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.GetWebhookExamplesAlertTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AttachmentListEntityTypeJsonConverter());
