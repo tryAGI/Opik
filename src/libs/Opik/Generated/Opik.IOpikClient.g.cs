@@ -179,6 +179,11 @@ namespace Opik
         public ManualEvaluationClient ManualEvaluation { get; }
 
         /// <summary>
+        /// MCP OAuth 2.1 Authorization Server resources.
+        /// </summary>
+        public McpOAuthClient McpOAuth { get; }
+
+        /// <summary>
         /// Ollama provider configuration endpoints with OpenAI-compatible API support.
         /// </summary>
         public OllamaClient Ollama { get; }
