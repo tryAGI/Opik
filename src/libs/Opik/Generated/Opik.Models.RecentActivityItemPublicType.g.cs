@@ -11,10 +11,6 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        AgentConfigVersion,
-        /// <summary>
-        /// 
-        /// </summary>
         AlertEvent,
         /// <summary>
         /// 
@@ -31,7 +27,15 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        PromptVersion,
+        /// <summary>
+        /// 
+        /// </summary>
         TestSuiteVersion,
+        /// <summary>
+        /// 
+        /// </summary>
+        TraceDaily,
     }
 
     /// <summary>
@@ -46,12 +50,13 @@ namespace Opik
         {
             return value switch
             {
-                RecentActivityItemPublicType.AgentConfigVersion => "agent_config_version",
                 RecentActivityItemPublicType.AlertEvent => "alert_event",
                 RecentActivityItemPublicType.DatasetVersion => "dataset_version",
                 RecentActivityItemPublicType.Experiment => "experiment",
                 RecentActivityItemPublicType.Optimization => "optimization",
+                RecentActivityItemPublicType.PromptVersion => "prompt_version",
                 RecentActivityItemPublicType.TestSuiteVersion => "test_suite_version",
+                RecentActivityItemPublicType.TraceDaily => "trace_daily",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -62,12 +67,13 @@ namespace Opik
         {
             return value switch
             {
-                "agent_config_version" => RecentActivityItemPublicType.AgentConfigVersion,
                 "alert_event" => RecentActivityItemPublicType.AlertEvent,
                 "dataset_version" => RecentActivityItemPublicType.DatasetVersion,
                 "experiment" => RecentActivityItemPublicType.Experiment,
                 "optimization" => RecentActivityItemPublicType.Optimization,
+                "prompt_version" => RecentActivityItemPublicType.PromptVersion,
                 "test_suite_version" => RecentActivityItemPublicType.TestSuiteVersion,
+                "trace_daily" => RecentActivityItemPublicType.TraceDaily,
                 _ => null,
             };
         }

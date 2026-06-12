@@ -229,6 +229,11 @@ namespace Opik
         public RedirectClient Redirect { get; }
 
         /// <summary>
+        /// Ollie daily report management.
+        /// </summary>
+        public ReportsClient Reports { get; }
+
+        /// <summary>
         /// Data retention rule management.
         /// </summary>
         public RetentionRulesClient RetentionRules { get; }

@@ -753,6 +753,14 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.RecentActivityItemPublicTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.OllieReportStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.OllieReportStatusNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.RetentionRulePublicLevelJsonConverter),
 
             typeof(global::Opik.JsonConverters.RetentionRulePublicLevelNullableJsonConverter),
@@ -2166,6 +2174,14 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.RecentActivityItemPublicTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.OllieReportStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.OllieReportStatusNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.RetentionRulePublicLevelJsonConverter),
 
             typeof(global::Opik.JsonConverters.RetentionRulePublicLevelNullableJsonConverter),
@@ -2693,6 +2709,14 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RecentActivityItemPublicType), TypeInfoPropertyName = "RecentActivityItemPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RecentActivityPagePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.RecentActivityItemPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ReportCompleteRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ReportCompleteRequestStatus), TypeInfoPropertyName = "ReportCompleteRequestStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GenerateReportResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ReportPreference))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.OllieReport))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.OllieReportStatus), TypeInfoPropertyName = "OllieReportStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.OllieReportPage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.OllieReport>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRulePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRulePublicLevel), TypeInfoPropertyName = "RetentionRulePublicLevel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRulePublicRetention), TypeInfoPropertyName = "RetentionRulePublicRetention2")]
@@ -2820,14 +2844,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnyOf<global::Opik.TracePublic, global::Opik.ErrorMessagePublic>), TypeInfoPropertyName = "AnyOfTracePublicErrorMessagePublic2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.WorkspaceInfo>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.BiInformation>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.WorkspaceSpansCount>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.WorkspaceTraceCount>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AgentConfigValueWrite>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AgentConfigEnv>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AgentConfigValuePublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AgentConfigValueHistory>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AgentBlueprintHistory>))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3579,6 +3595,14 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.RecentActivityItemPublicTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.OllieReportStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.OllieReportStatusNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.RetentionRulePublicLevelJsonConverter),
 
             typeof(global::Opik.JsonConverters.RetentionRulePublicLevelNullableJsonConverter),
@@ -3741,6 +3765,14 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.BiInformation>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.WorkspaceSpansCount>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.WorkspaceTraceCount>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AgentConfigValueWrite>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AgentConfigEnv>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AgentConfigValuePublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AgentConfigValueHistory>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AgentBlueprintHistory>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Lane>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.HarnessEntry>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Item>))]
@@ -3870,6 +3902,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScoreAverageDetailed>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.PromptVersionPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.RecentActivityItemPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.OllieReport>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.RetentionRulePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScorePublic>))]
@@ -4310,6 +4343,10 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicTemplateStructureNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.RecentActivityItemPublicTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.RecentActivityItemPublicTypeNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.ReportCompleteRequestStatusJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.ReportCompleteRequestStatusNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.OllieReportStatusJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.OllieReportStatusNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.RetentionRulePublicLevelJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.RetentionRulePublicLevelNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.RetentionRulePublicRetentionJsonConverter());

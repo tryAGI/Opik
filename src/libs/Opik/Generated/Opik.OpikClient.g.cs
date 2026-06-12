@@ -346,6 +346,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Ollie daily report management.
+        /// </summary>
+        public ReportsClient Reports => new ReportsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Data retention rule management.
         /// </summary>
         public RetentionRulesClient RetentionRules => new RetentionRulesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)

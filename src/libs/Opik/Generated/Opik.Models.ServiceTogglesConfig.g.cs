@@ -165,6 +165,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("projectHomepageEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool ProjectHomepageEnabled { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agenticToolsEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool AgenticToolsEnabled { get; set; }
@@ -246,6 +253,7 @@ namespace Opik
         /// <param name="customllmProviderEnabled"></param>
         /// <param name="ollamaProviderEnabled"></param>
         /// <param name="ollieEnabled"></param>
+        /// <param name="projectHomepageEnabled"></param>
         /// <param name="agenticToolsEnabled"></param>
         /// <param name="agentInsightsEnabled"></param>
         /// <param name="v2WorkspaceAllowlistIds"></param>
@@ -284,6 +292,7 @@ namespace Opik
             bool customllmProviderEnabled,
             bool ollamaProviderEnabled,
             bool ollieEnabled,
+            bool projectHomepageEnabled,
             bool agenticToolsEnabled,
             bool agentInsightsEnabled,
             global::System.Collections.Generic.IList<string> v2WorkspaceAllowlistIds,
@@ -315,6 +324,7 @@ namespace Opik
             this.CustomllmProviderEnabled = customllmProviderEnabled;
             this.OllamaProviderEnabled = ollamaProviderEnabled;
             this.OllieEnabled = ollieEnabled;
+            this.ProjectHomepageEnabled = projectHomepageEnabled;
             this.AgenticToolsEnabled = agenticToolsEnabled;
             this.AgentInsightsEnabled = agentInsightsEnabled;
             this.V2WorkspaceAllowlistIds = v2WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v2WorkspaceAllowlistIds));
