@@ -35,8 +35,32 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("total_estimated_cost")]
-        public double? TotalEstimatedCost { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("input_tokens")]
+        public long? InputTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_tokens")]
+        public long? CacheReadTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_tokens")]
+        public long? CacheCreationTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("output_tokens")]
+        public long? OutputTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_tokens")]
+        public long? TotalTokens { get; set; }
 
         /// <summary>
         /// 
@@ -87,7 +111,11 @@ namespace Opik
         /// <param name="userEmail"></param>
         /// <param name="userDisplayName"></param>
         /// <param name="model"></param>
-        /// <param name="totalEstimatedCost"></param>
+        /// <param name="inputTokens"></param>
+        /// <param name="cacheReadTokens"></param>
+        /// <param name="cacheCreationTokens"></param>
+        /// <param name="outputTokens"></param>
+        /// <param name="totalTokens"></param>
         /// <param name="requests"></param>
         /// <param name="skills"></param>
         /// <param name="mcps"></param>
@@ -102,7 +130,11 @@ namespace Opik
             string? userEmail,
             string? userDisplayName,
             string? model,
-            double? totalEstimatedCost,
+            long? inputTokens,
+            long? cacheReadTokens,
+            long? cacheCreationTokens,
+            long? outputTokens,
+            long? totalTokens,
             long? requests,
             long? skills,
             long? mcps,
@@ -114,7 +146,11 @@ namespace Opik
             this.UserEmail = userEmail;
             this.UserDisplayName = userDisplayName;
             this.Model = model;
-            this.TotalEstimatedCost = totalEstimatedCost;
+            this.InputTokens = inputTokens;
+            this.CacheReadTokens = cacheReadTokens;
+            this.CacheCreationTokens = cacheCreationTokens;
+            this.OutputTokens = outputTokens;
+            this.TotalTokens = totalTokens;
             this.Requests = requests;
             this.Skills = skills;
             this.Mcps = mcps;

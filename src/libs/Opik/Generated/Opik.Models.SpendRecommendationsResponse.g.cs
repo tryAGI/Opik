@@ -11,8 +11,8 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("total_savings")]
-        public double? TotalSavings { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_savings_tokens")]
+        public long? TotalSavingsTokens { get; set; }
 
         /// <summary>
         /// 
@@ -29,16 +29,16 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="SpendRecommendationsResponse" /> class.
         /// </summary>
-        /// <param name="totalSavings"></param>
+        /// <param name="totalSavingsTokens"></param>
         /// <param name="items"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public SpendRecommendationsResponse(
-            double? totalSavings,
+            long? totalSavingsTokens,
             global::System.Collections.Generic.IList<global::Opik.Item>? items)
         {
-            this.TotalSavings = totalSavings;
+            this.TotalSavingsTokens = totalSavingsTokens;
             this.Items = items;
         }
 

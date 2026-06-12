@@ -172,6 +172,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agentInsightsEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool AgentInsightsEnabled { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("v2WorkspaceAllowlistIds")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> V2WorkspaceAllowlistIds { get; set; }
@@ -240,6 +247,7 @@ namespace Opik
         /// <param name="ollamaProviderEnabled"></param>
         /// <param name="ollieEnabled"></param>
         /// <param name="agenticToolsEnabled"></param>
+        /// <param name="agentInsightsEnabled"></param>
         /// <param name="v2WorkspaceAllowlistIds"></param>
         /// <param name="v1WorkspaceAllowlistIds"></param>
         /// <param name="forceWorkspaceVersion"></param>
@@ -277,6 +285,7 @@ namespace Opik
             bool ollamaProviderEnabled,
             bool ollieEnabled,
             bool agenticToolsEnabled,
+            bool agentInsightsEnabled,
             global::System.Collections.Generic.IList<string> v2WorkspaceAllowlistIds,
             global::System.Collections.Generic.IList<string> v1WorkspaceAllowlistIds,
             string forceWorkspaceVersion,
@@ -307,6 +316,7 @@ namespace Opik
             this.OllamaProviderEnabled = ollamaProviderEnabled;
             this.OllieEnabled = ollieEnabled;
             this.AgenticToolsEnabled = agenticToolsEnabled;
+            this.AgentInsightsEnabled = agentInsightsEnabled;
             this.V2WorkspaceAllowlistIds = v2WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v2WorkspaceAllowlistIds));
             this.V1WorkspaceAllowlistIds = v1WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v1WorkspaceAllowlistIds));
             this.ForceWorkspaceVersion = forceWorkspaceVersion ?? throw new global::System.ArgumentNullException(nameof(forceWorkspaceVersion));

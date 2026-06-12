@@ -29,6 +29,30 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("input_tokens")]
+        public long? InputTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_tokens")]
+        public long? CacheReadTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_tokens")]
+        public long? CacheCreationTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("output_tokens")]
+        public long? OutputTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_breakdown")]
         public bool? HasBreakdown { get; set; }
 
@@ -44,6 +68,10 @@ namespace Opik
         /// <param name="key"></param>
         /// <param name="label"></param>
         /// <param name="totalTokens"></param>
+        /// <param name="inputTokens"></param>
+        /// <param name="cacheReadTokens"></param>
+        /// <param name="cacheCreationTokens"></param>
+        /// <param name="outputTokens"></param>
         /// <param name="hasBreakdown"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -52,11 +80,19 @@ namespace Opik
             string? key,
             string? label,
             long? totalTokens,
+            long? inputTokens,
+            long? cacheReadTokens,
+            long? cacheCreationTokens,
+            long? outputTokens,
             bool? hasBreakdown)
         {
             this.Key = key;
             this.Label = label;
             this.TotalTokens = totalTokens;
+            this.InputTokens = inputTokens;
+            this.CacheReadTokens = cacheReadTokens;
+            this.CacheCreationTokens = cacheCreationTokens;
+            this.OutputTokens = outputTokens;
             this.HasBreakdown = hasBreakdown;
         }
 
