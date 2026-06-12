@@ -36,8 +36,8 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("est_saving")]
-        public double? EstSaving { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("estimated_savings_tokens")]
+        public long? EstimatedSavingsTokens { get; set; }
 
         /// <summary>
         /// 
@@ -64,7 +64,7 @@ namespace Opik
         /// <param name="title"></param>
         /// <param name="body"></param>
         /// <param name="impact"></param>
-        /// <param name="estSaving"></param>
+        /// <param name="estimatedSavingsTokens"></param>
         /// <param name="docsUrl"></param>
         /// <param name="relatedLaneKey"></param>
 #if NET7_0_OR_GREATER
@@ -75,7 +75,7 @@ namespace Opik
             string? title,
             string? body,
             global::Opik.ItemImpact? impact,
-            double? estSaving,
+            long? estimatedSavingsTokens,
             string? docsUrl,
             string? relatedLaneKey)
         {
@@ -83,7 +83,7 @@ namespace Opik
             this.Title = title;
             this.Body = body;
             this.Impact = impact;
-            this.EstSaving = estSaving;
+            this.EstimatedSavingsTokens = estimatedSavingsTokens;
             this.DocsUrl = docsUrl;
             this.RelatedLaneKey = relatedLaneKey;
         }

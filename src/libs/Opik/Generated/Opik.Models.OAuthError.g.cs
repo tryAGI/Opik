@@ -6,19 +6,19 @@ namespace Opik
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class HarnessEntry
+    public sealed partial class OAuthError
     {
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
-        public string? Key { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
-        public string? Label { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("error_description")]
+        public string? ErrorDescription { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -27,25 +27,25 @@ namespace Opik
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="HarnessEntry" /> class.
+        /// Initializes a new instance of the <see cref="OAuthError" /> class.
         /// </summary>
-        /// <param name="key"></param>
-        /// <param name="label"></param>
+        /// <param name="error"></param>
+        /// <param name="errorDescription"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public HarnessEntry(
-            string? key,
-            string? label)
+        public OAuthError(
+            string? error,
+            string? errorDescription)
         {
-            this.Key = key;
-            this.Label = label;
+            this.Error = error;
+            this.ErrorDescription = errorDescription;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="HarnessEntry" /> class.
+        /// Initializes a new instance of the <see cref="OAuthError" /> class.
         /// </summary>
-        public HarnessEntry()
+        public OAuthError()
         {
         }
 

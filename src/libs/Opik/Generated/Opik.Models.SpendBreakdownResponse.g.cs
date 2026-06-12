@@ -35,8 +35,44 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("input_tokens")]
+        public long? InputTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_tokens")]
+        public long? CacheReadTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_tokens")]
+        public long? CacheCreationTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("output_tokens")]
+        public long? OutputTokens { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
+        public string? Model { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("item_count")]
         public int? ItemCount { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("item_unit")]
+        public string? ItemUnit { get; set; }
 
         /// <summary>
         /// 
@@ -57,7 +93,13 @@ namespace Opik
         /// <param name="title"></param>
         /// <param name="subtitle"></param>
         /// <param name="totalTokens"></param>
+        /// <param name="inputTokens"></param>
+        /// <param name="cacheReadTokens"></param>
+        /// <param name="cacheCreationTokens"></param>
+        /// <param name="outputTokens"></param>
+        /// <param name="model"></param>
         /// <param name="itemCount"></param>
+        /// <param name="itemUnit"></param>
         /// <param name="items"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -67,14 +109,26 @@ namespace Opik
             string? title,
             string? subtitle,
             long? totalTokens,
+            long? inputTokens,
+            long? cacheReadTokens,
+            long? cacheCreationTokens,
+            long? outputTokens,
+            string? model,
             int? itemCount,
+            string? itemUnit,
             global::System.Collections.Generic.IList<global::Opik.Item>? items)
         {
             this.LaneKey = laneKey;
             this.Title = title;
             this.Subtitle = subtitle;
             this.TotalTokens = totalTokens;
+            this.InputTokens = inputTokens;
+            this.CacheReadTokens = cacheReadTokens;
+            this.CacheCreationTokens = cacheCreationTokens;
+            this.OutputTokens = outputTokens;
+            this.Model = model;
             this.ItemCount = itemCount;
+            this.ItemUnit = itemUnit;
             this.Items = items;
         }
 
