@@ -45,6 +45,12 @@ namespace Opik
         public int? AnnotatorsPerItem { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lock_timeout_seconds")]
+        public int? LockTimeoutSeconds { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -59,6 +65,7 @@ namespace Opik
         /// <param name="commentsEnabled"></param>
         /// <param name="feedbackDefinitionNames"></param>
         /// <param name="annotatorsPerItem"></param>
+        /// <param name="lockTimeoutSeconds"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -68,7 +75,8 @@ namespace Opik
             string? instructions,
             bool? commentsEnabled,
             global::System.Collections.Generic.IList<string>? feedbackDefinitionNames,
-            int? annotatorsPerItem)
+            int? annotatorsPerItem,
+            int? lockTimeoutSeconds)
         {
             this.Name = name;
             this.Description = description;
@@ -76,6 +84,7 @@ namespace Opik
             this.CommentsEnabled = commentsEnabled;
             this.FeedbackDefinitionNames = feedbackDefinitionNames;
             this.AnnotatorsPerItem = annotatorsPerItem;
+            this.LockTimeoutSeconds = lockTimeoutSeconds;
         }
 
         /// <summary>
