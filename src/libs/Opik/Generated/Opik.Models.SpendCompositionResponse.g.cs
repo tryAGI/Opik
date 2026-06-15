@@ -27,12 +27,6 @@ namespace Opik
         public global::Opik.Side? Output { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("models")]
-        public global::System.Collections.Generic.IList<string>? Models { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -44,20 +38,17 @@ namespace Opik
         /// <param name="input"></param>
         /// <param name="harness"></param>
         /// <param name="output"></param>
-        /// <param name="models"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public SpendCompositionResponse(
             global::Opik.Side? input,
             global::System.Collections.Generic.IList<global::Opik.HarnessEntry>? harness,
-            global::Opik.Side? output,
-            global::System.Collections.Generic.IList<string>? models)
+            global::Opik.Side? output)
         {
             this.Input = input;
             this.Harness = harness;
             this.Output = output;
-            this.Models = models;
         }
 
         /// <summary>

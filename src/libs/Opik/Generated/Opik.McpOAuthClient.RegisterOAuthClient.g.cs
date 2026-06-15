@@ -3,10 +3,10 @@
 
 namespace Opik
 {
-    public partial class AiSpendClient
+    public partial class McpOAuthClient
     {
 
-        private static readonly global::Opik.AutoSDKServer[] s_GetSpendSummaryServers = new global::Opik.AutoSDKServer[]
+        private static readonly global::Opik.AutoSDKServer[] s_RegisterOAuthClientServers = new global::Opik.AutoSDKServer[]
         {            new global::Opik.AutoSDKServer(
                 id: "http-localhost-api",
                 name: "Local server",
@@ -20,7 +20,7 @@ namespace Opik
         };
 
 
-        private static readonly global::Opik.EndPointSecurityRequirement s_GetSpendSummarySecurityRequirement0 =
+        private static readonly global::Opik.EndPointSecurityRequirement s_RegisterOAuthClientSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
             {
                 Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
@@ -34,41 +34,41 @@ namespace Opik
                     },
                 },
             };
-        private static readonly global::Opik.EndPointSecurityRequirement[] s_GetSpendSummarySecurityRequirements =
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_RegisterOAuthClientSecurityRequirements =
             new global::Opik.EndPointSecurityRequirement[]
-            {                s_GetSpendSummarySecurityRequirement0,
+            {                s_RegisterOAuthClientSecurityRequirement0,
             };
-        partial void PrepareGetSpendSummaryArguments(
+        partial void PrepareRegisterOAuthClientArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Opik.SpendMetricRequest request);
-        partial void PrepareGetSpendSummaryRequest(
+            global::Opik.ClientRegistrationRequest request);
+        partial void PrepareRegisterOAuthClientRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Opik.SpendMetricRequest request);
-        partial void ProcessGetSpendSummaryResponse(
+            global::Opik.ClientRegistrationRequest request);
+        partial void ProcessRegisterOAuthClientResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetSpendSummaryResponseContent(
+        partial void ProcessRegisterOAuthClientResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get spend summary<br/>
-        /// Get coding-agent spend KPI summary
+        /// OAuth Dynamic Client Registration Endpoint<br/>
+        /// OAuth 2.0 Dynamic Client Registration (RFC 7591). Registers a public client for the MCP OAuth flow; throttled per source IP
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.SpendSummaryResponse> GetSpendSummaryAsync(
+        public async global::System.Threading.Tasks.Task<global::Opik.ClientRegistrationResponse> RegisterOAuthClientAsync(
 
-            global::Opik.SpendMetricRequest request,
+            global::Opik.ClientRegistrationRequest request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetSpendSummaryAsResponseAsync(
+            var __response = await RegisterOAuthClientAsResponseAsync(
 
                 request: request,
                 requestOptions: requestOptions,
@@ -78,16 +78,16 @@ namespace Opik
             return __response.Body;
         }
         /// <summary>
-        /// Get spend summary<br/>
-        /// Get coding-agent spend KPI summary
+        /// OAuth Dynamic Client Registration Endpoint<br/>
+        /// OAuth 2.0 Dynamic Client Registration (RFC 7591). Registers a public client for the MCP OAuth flow; throttled per source IP
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.SpendSummaryResponse>> GetSpendSummaryAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.ClientRegistrationResponse>> RegisterOAuthClientAsResponseAsync(
 
-            global::Opik.SpendMetricRequest request,
+            global::Opik.ClientRegistrationRequest request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -95,15 +95,15 @@ namespace Opik
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetSpendSummaryArguments(
+            PrepareRegisterOAuthClientArguments(
                 httpClient: HttpClient,
                 request: request);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetSpendSummarySecurityRequirements,
-                operationName: "GetSpendSummaryAsync");
+                securityRequirements: s_RegisterOAuthClientSecurityRequirements,
+                operationName: "RegisterOAuthClientAsync");
 
             using var __timeoutCancellationTokenSource = global::Opik.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -123,9 +123,9 @@ namespace Opik
             {
 
                             var __pathBuilder = new global::Opik.PathBuilder(
-                                path: "/v1/private/ai-spend/summary",
+                                path: "/oauth/register",
                                 baseUri: ResolveBaseUri(
-                                servers: s_GetSpendSummaryServers,
+                                servers: s_RegisterOAuthClientServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -170,7 +170,7 @@ namespace Opik
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetSpendSummaryRequest(
+                PrepareRegisterOAuthClientRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     request: request);
@@ -190,9 +190,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetSpendSummary",
-                                methodName: "GetSpendSummaryAsync",
-                                pathTemplate: "\"/v1/private/ai-spend/summary\"",
+                                operationId: "RegisterOAuthClient",
+                                methodName: "RegisterOAuthClientAsync",
+                                pathTemplate: "\"/oauth/register\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -224,9 +224,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetSpendSummary",
-                                methodName: "GetSpendSummaryAsync",
-                                pathTemplate: "\"/v1/private/ai-spend/summary\"",
+                                operationId: "RegisterOAuthClient",
+                                methodName: "RegisterOAuthClientAsync",
+                                pathTemplate: "\"/oauth/register\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -265,9 +265,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetSpendSummary",
-                                methodName: "GetSpendSummaryAsync",
-                                pathTemplate: "\"/v1/private/ai-spend/summary\"",
+                                operationId: "RegisterOAuthClient",
+                                methodName: "RegisterOAuthClientAsync",
+                                pathTemplate: "\"/oauth/register\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -305,7 +305,7 @@ namespace Opik
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetSpendSummaryResponse(
+                ProcessRegisterOAuthClientResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -313,9 +313,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetSpendSummary",
-                                methodName: "GetSpendSummaryAsync",
-                                pathTemplate: "\"/v1/private/ai-spend/summary\"",
+                                operationId: "RegisterOAuthClient",
+                                methodName: "RegisterOAuthClientAsync",
+                                pathTemplate: "\"/oauth/register\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -335,9 +335,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetSpendSummary",
-                                methodName: "GetSpendSummaryAsync",
-                                pathTemplate: "\"/v1/private/ai-spend/summary\"",
+                                operationId: "RegisterOAuthClient",
+                                methodName: "RegisterOAuthClientAsync",
+                                pathTemplate: "\"/oauth/register\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -352,38 +352,33 @@ namespace Opik
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Bad Request
-                            if ((int)__response.StatusCode == 400)
+                            // 
+                            if ((int)__response.StatusCode == 429)
                             {
-                                string? __content_400 = null;
-                                global::System.Exception? __exception_400 = null;
-                                global::Opik.ErrorMessage? __value_400 = null;
+                                string? __content_429 = null;
+                                global::System.Exception? __exception_429 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
-                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
                                     }
                                     else
                                     {
-                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    __exception_400 = __ex;
+                                    __exception_429 = __ex;
                                 }
 
 
-                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                throw global::Opik.ApiException.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_400,
-                                    responseBody: __content_400,
-                                    responseObject: __value_400,
+                                    message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_429,
+                                    responseBody: __content_429,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -402,7 +397,7 @@ namespace Opik
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetSpendSummaryResponseContent(
+                                ProcessRegisterOAuthClientResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -411,9 +406,9 @@ namespace Opik
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Opik.SpendSummaryResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Opik.ClientRegistrationResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.SpendSummaryResponse>(
+                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.ClientRegistrationResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -443,9 +438,9 @@ namespace Opik
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Opik.SpendSummaryResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Opik.ClientRegistrationResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.SpendSummaryResponse>(
+                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.ClientRegistrationResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -486,42 +481,30 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Get spend summary<br/>
-        /// Get coding-agent spend KPI summary
+        /// OAuth Dynamic Client Registration Endpoint<br/>
+        /// OAuth 2.0 Dynamic Client Registration (RFC 7591). Registers a public client for the MCP OAuth flow; throttled per source IP
         /// </summary>
-        /// <param name="projectId"></param>
-        /// <param name="projectName"></param>
-        /// <param name="intervalStart"></param>
-        /// <param name="intervalEnd"></param>
-        /// <param name="userId"></param>
-        /// <param name="startBeforeEnd"></param>
-        /// <param name="projectProvided"></param>
+        /// <param name="clientName"></param>
+        /// <param name="redirectUris"></param>
+        /// <param name="logoUri"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.SpendSummaryResponse> GetSpendSummaryAsync(
-            global::System.DateTime intervalStart,
-            global::System.DateTime intervalEnd,
-            global::System.Guid? projectId = default,
-            string? projectName = default,
-            string? userId = default,
-            bool? startBeforeEnd = default,
-            bool? projectProvided = default,
+        public async global::System.Threading.Tasks.Task<global::Opik.ClientRegistrationResponse> RegisterOAuthClientAsync(
+            string clientName,
+            global::System.Collections.Generic.IList<string> redirectUris,
+            string? logoUri = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.SpendMetricRequest
+            var __request = new global::Opik.ClientRegistrationRequest
             {
-                ProjectId = projectId,
-                ProjectName = projectName,
-                IntervalStart = intervalStart,
-                IntervalEnd = intervalEnd,
-                UserId = userId,
-                StartBeforeEnd = startBeforeEnd,
-                ProjectProvided = projectProvided,
+                ClientName = clientName,
+                RedirectUris = redirectUris,
+                LogoUri = logoUri,
             };
 
-            return await GetSpendSummaryAsync(
+            return await RegisterOAuthClientAsync(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
