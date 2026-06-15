@@ -29,32 +29,8 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
-        public string? Model { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("input_tokens")]
-        public long? InputTokens { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("cache_read_tokens")]
-        public long? CacheReadTokens { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation_tokens")]
-        public long? CacheCreationTokens { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("output_tokens")]
-        public long? OutputTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("by_model")]
+        public global::System.Collections.Generic.IList<global::Opik.ModelTiers>? ByModel { get; set; }
 
         /// <summary>
         /// 
@@ -110,11 +86,7 @@ namespace Opik
         /// <param name="userUuid"></param>
         /// <param name="userEmail"></param>
         /// <param name="userDisplayName"></param>
-        /// <param name="model"></param>
-        /// <param name="inputTokens"></param>
-        /// <param name="cacheReadTokens"></param>
-        /// <param name="cacheCreationTokens"></param>
-        /// <param name="outputTokens"></param>
+        /// <param name="byModel"></param>
         /// <param name="totalTokens"></param>
         /// <param name="requests"></param>
         /// <param name="skills"></param>
@@ -129,11 +101,7 @@ namespace Opik
             string? userUuid,
             string? userEmail,
             string? userDisplayName,
-            string? model,
-            long? inputTokens,
-            long? cacheReadTokens,
-            long? cacheCreationTokens,
-            long? outputTokens,
+            global::System.Collections.Generic.IList<global::Opik.ModelTiers>? byModel,
             long? totalTokens,
             long? requests,
             long? skills,
@@ -145,11 +113,7 @@ namespace Opik
             this.UserUuid = userUuid;
             this.UserEmail = userEmail;
             this.UserDisplayName = userDisplayName;
-            this.Model = model;
-            this.InputTokens = inputTokens;
-            this.CacheReadTokens = cacheReadTokens;
-            this.CacheCreationTokens = cacheCreationTokens;
-            this.OutputTokens = outputTokens;
+            this.ByModel = byModel;
             this.TotalTokens = totalTokens;
             this.Requests = requests;
             this.Skills = skills;
