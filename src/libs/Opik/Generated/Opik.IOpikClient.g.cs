@@ -94,6 +94,11 @@ namespace Opik
         public AgentConfigsClient AgentConfigs { get; }
 
         /// <summary>
+        /// Coding-agent spend analytics.
+        /// </summary>
+        public AiSpendClient AiSpend { get; }
+
+        /// <summary>
         /// Alert resources.
         /// </summary>
         public AlertsClient Alerts { get; }
@@ -179,6 +184,11 @@ namespace Opik
         public ManualEvaluationClient ManualEvaluation { get; }
 
         /// <summary>
+        /// MCP OAuth 2.1 Authorization Server resources.
+        /// </summary>
+        public McpOAuthClient McpOAuth { get; }
+
+        /// <summary>
         /// Ollama provider configuration endpoints with OpenAI-compatible API support.
         /// </summary>
         public OllamaClient Ollama { get; }
@@ -217,6 +227,11 @@ namespace Opik
         /// Redirects for SDK generated links.
         /// </summary>
         public RedirectClient Redirect { get; }
+
+        /// <summary>
+        /// Ollie daily report management.
+        /// </summary>
+        public ReportsClient Reports { get; }
 
         /// <summary>
         /// Data retention rule management.

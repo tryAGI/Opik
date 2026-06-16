@@ -382,7 +382,7 @@ namespace Opik
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // Experiment dataset mismatch
+                            // Conflict
                             if ((int)__response.StatusCode == 409)
                             {
                                 string? __content_409 = null;
@@ -545,6 +545,9 @@ namespace Opik
         /// <param name="experimentId">
         /// Optional experiment ID. If provided, items will be added to the existing experiment and experimentName will be ignored. If not provided or experiment with that ID doesn't exist, a new experiment will be created with the given experimentName
         /// </param>
+        /// <param name="projectName">
+        /// Project for traces auto-created from items that provide evaluate_task_result (i.e. without an explicit trace). If null, the default project is used; relying on this fallback is deprecated, please provide project_name explicitly.
+        /// </param>
         /// <param name="items"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -554,6 +557,7 @@ namespace Opik
             string datasetName,
             global::System.Collections.Generic.IList<global::Opik.ExperimentItemBulkRecordExperimentItemBulkWriteView> items,
             global::System.Guid? experimentId = default,
+            string? projectName = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -562,6 +566,7 @@ namespace Opik
                 ExperimentName = experimentName,
                 DatasetName = datasetName,
                 ExperimentId = experimentId,
+                ProjectName = projectName,
                 Items = items,
             };
 

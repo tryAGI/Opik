@@ -58,6 +58,13 @@ namespace Opik
         /// <summary>
         /// Included only in responses
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trace_metadata")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.JsonListStringCompareJsonConverter))]
+        public global::Opik.JsonListStringCompare? TraceMetadata { get; set; }
+
+        /// <summary>
+        /// Included only in responses
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedback_scores")]
         public global::System.Collections.Generic.IList<global::Opik.FeedbackScoreCompare>? FeedbackScores { get; set; }
 
@@ -163,6 +170,9 @@ namespace Opik
         /// <param name="output">
         /// Included only in responses
         /// </param>
+        /// <param name="traceMetadata">
+        /// Included only in responses
+        /// </param>
         /// <param name="feedbackScores">
         /// Included only in responses
         /// </param>
@@ -216,6 +226,7 @@ namespace Opik
             global::System.Guid? projectId,
             global::Opik.JsonListStringCompare? input,
             global::Opik.JsonListStringCompare? output,
+            global::Opik.JsonListStringCompare? traceMetadata,
             global::System.Collections.Generic.IList<global::Opik.FeedbackScoreCompare>? feedbackScores,
             global::System.Collections.Generic.IList<global::Opik.CommentCompare>? comments,
             double? totalEstimatedCost,
@@ -238,6 +249,7 @@ namespace Opik
             this.ProjectId = projectId;
             this.Input = input;
             this.Output = output;
+            this.TraceMetadata = traceMetadata;
             this.FeedbackScores = feedbackScores;
             this.Comments = comments;
             this.TotalEstimatedCost = totalEstimatedCost;

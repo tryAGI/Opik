@@ -22,6 +22,13 @@ namespace Opik
         public string? Commit { get; set; }
 
         /// <summary>
+        /// sequential version number in the format v&lt;N&gt;; null for masks<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version_number")]
+        public string? VersionNumber { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt_id")]
@@ -46,6 +53,10 @@ namespace Opik
         /// <param name="commit">
         /// Included only in responses
         /// </param>
+        /// <param name="versionNumber">
+        /// sequential version number in the format v&lt;N&gt;; null for masks<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="promptId">
         /// Included only in responses
         /// </param>
@@ -58,11 +69,13 @@ namespace Opik
         public PromptVersionLink(
             global::System.Guid id,
             string? commit,
+            string? versionNumber,
             global::System.Guid? promptId,
             string? promptName)
         {
             this.Id = id;
             this.Commit = commit;
+            this.VersionNumber = versionNumber;
             this.PromptId = promptId;
             this.PromptName = promptName;
         }

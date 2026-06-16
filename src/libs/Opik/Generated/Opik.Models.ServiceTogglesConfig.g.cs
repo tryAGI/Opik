@@ -81,6 +81,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("costIntelligenceEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool CostIntelligenceEnabled { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetVersioningEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool DatasetVersioningEnabled { get; set; }
@@ -165,9 +172,23 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("projectHomepageEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool ProjectHomepageEnabled { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agenticToolsEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool AgenticToolsEnabled { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agentInsightsEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool AgentInsightsEnabled { get; set; }
 
         /// <summary>
         /// 
@@ -227,6 +248,7 @@ namespace Opik
         /// <param name="welcomeWizardEnabled"></param>
         /// <param name="exportEnabled"></param>
         /// <param name="optimizationStudioEnabled"></param>
+        /// <param name="costIntelligenceEnabled"></param>
         /// <param name="datasetVersioningEnabled"></param>
         /// <param name="datasetExportEnabled"></param>
         /// <param name="demoDataEnabled"></param>
@@ -239,7 +261,9 @@ namespace Opik
         /// <param name="customllmProviderEnabled"></param>
         /// <param name="ollamaProviderEnabled"></param>
         /// <param name="ollieEnabled"></param>
+        /// <param name="projectHomepageEnabled"></param>
         /// <param name="agenticToolsEnabled"></param>
+        /// <param name="agentInsightsEnabled"></param>
         /// <param name="v2WorkspaceAllowlistIds"></param>
         /// <param name="v1WorkspaceAllowlistIds"></param>
         /// <param name="forceWorkspaceVersion"></param>
@@ -264,6 +288,7 @@ namespace Opik
             bool welcomeWizardEnabled,
             bool exportEnabled,
             bool optimizationStudioEnabled,
+            bool costIntelligenceEnabled,
             bool datasetVersioningEnabled,
             bool datasetExportEnabled,
             bool demoDataEnabled,
@@ -276,7 +301,9 @@ namespace Opik
             bool customllmProviderEnabled,
             bool ollamaProviderEnabled,
             bool ollieEnabled,
+            bool projectHomepageEnabled,
             bool agenticToolsEnabled,
+            bool agentInsightsEnabled,
             global::System.Collections.Generic.IList<string> v2WorkspaceAllowlistIds,
             global::System.Collections.Generic.IList<string> v1WorkspaceAllowlistIds,
             string forceWorkspaceVersion,
@@ -294,6 +321,7 @@ namespace Opik
             this.WelcomeWizardEnabled = welcomeWizardEnabled;
             this.ExportEnabled = exportEnabled;
             this.OptimizationStudioEnabled = optimizationStudioEnabled;
+            this.CostIntelligenceEnabled = costIntelligenceEnabled;
             this.DatasetVersioningEnabled = datasetVersioningEnabled;
             this.DatasetExportEnabled = datasetExportEnabled;
             this.DemoDataEnabled = demoDataEnabled;
@@ -306,7 +334,9 @@ namespace Opik
             this.CustomllmProviderEnabled = customllmProviderEnabled;
             this.OllamaProviderEnabled = ollamaProviderEnabled;
             this.OllieEnabled = ollieEnabled;
+            this.ProjectHomepageEnabled = projectHomepageEnabled;
             this.AgenticToolsEnabled = agenticToolsEnabled;
+            this.AgentInsightsEnabled = agentInsightsEnabled;
             this.V2WorkspaceAllowlistIds = v2WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v2WorkspaceAllowlistIds));
             this.V1WorkspaceAllowlistIds = v1WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v1WorkspaceAllowlistIds));
             this.ForceWorkspaceVersion = forceWorkspaceVersion ?? throw new global::System.ArgumentNullException(nameof(forceWorkspaceVersion));

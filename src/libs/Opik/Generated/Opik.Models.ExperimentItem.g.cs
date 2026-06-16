@@ -62,6 +62,13 @@ namespace Opik
         public global::Opik.JsonListString? Output { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trace_metadata")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.JsonListStringJsonConverter))]
+        public global::Opik.JsonListString? TraceMetadata { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedback_scores")]
@@ -166,6 +173,7 @@ namespace Opik
         /// <param name="projectName"></param>
         /// <param name="input"></param>
         /// <param name="output"></param>
+        /// <param name="traceMetadata"></param>
         /// <param name="feedbackScores">
         /// Included only in responses
         /// </param>
@@ -220,6 +228,7 @@ namespace Opik
             string? projectName,
             global::Opik.JsonListString? input,
             global::Opik.JsonListString? output,
+            global::Opik.JsonListString? traceMetadata,
             global::System.Collections.Generic.IList<global::Opik.FeedbackScore>? feedbackScores,
             global::System.Collections.Generic.IList<global::Opik.Comment>? comments,
             double? totalEstimatedCost,
@@ -243,6 +252,7 @@ namespace Opik
             this.ProjectName = projectName;
             this.Input = input;
             this.Output = output;
+            this.TraceMetadata = traceMetadata;
             this.FeedbackScores = feedbackScores;
             this.Comments = comments;
             this.TotalEstimatedCost = totalEstimatedCost;

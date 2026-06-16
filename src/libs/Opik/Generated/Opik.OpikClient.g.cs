@@ -76,6 +76,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Coding-agent spend analytics.
+        /// </summary>
+        public AiSpendClient AiSpend => new AiSpendClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Alert resources.
         /// </summary>
         public AlertsClient Alerts => new AlertsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
@@ -246,6 +256,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// MCP OAuth 2.1 Authorization Server resources.
+        /// </summary>
+        public McpOAuthClient McpOAuth => new McpOAuthClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Ollama provider configuration endpoints with OpenAI-compatible API support.
         /// </summary>
         public OllamaClient Ollama => new OllamaClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
@@ -319,6 +339,16 @@ namespace Opik
         /// Redirects for SDK generated links.
         /// </summary>
         public RedirectClient Redirect => new RedirectClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
+        /// Ollie daily report management.
+        /// </summary>
+        public ReportsClient Reports => new ReportsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
