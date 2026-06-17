@@ -94,6 +94,11 @@ namespace Opik
         public AgentConfigsClient AgentConfigs { get; }
 
         /// <summary>
+        /// Agent Insights report results.
+        /// </summary>
+        public AgentInsightsClient AgentInsights { get; }
+
+        /// <summary>
         /// Coding-agent spend analytics.
         /// </summary>
         public AiSpendClient AiSpend { get; }
@@ -252,6 +257,11 @@ namespace Opik
         /// Span related resources.
         /// </summary>
         public SpansClient Spans { get; }
+
+        /// <summary>
+        /// Internal endpoint to run Agent Insights free-form SQL.
+        /// </summary>
+        public SystemAnalyticsQueriesClient SystemAnalyticsQueries { get; }
 
         /// <summary>
         /// System usage related resource.
