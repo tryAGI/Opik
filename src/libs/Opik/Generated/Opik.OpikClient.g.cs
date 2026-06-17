@@ -76,6 +76,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Agent Insights report results.
+        /// </summary>
+        public AgentInsightsClient AgentInsights => new AgentInsightsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Coding-agent spend analytics.
         /// </summary>
         public AiSpendClient AiSpend => new AiSpendClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
@@ -389,6 +399,16 @@ namespace Opik
         /// Span related resources.
         /// </summary>
         public SpansClient Spans => new SpansClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
+        /// Internal endpoint to run Agent Insights free-form SQL.
+        /// </summary>
+        public SystemAnalyticsQueriesClient SystemAnalyticsQueries => new SystemAnalyticsQueriesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
