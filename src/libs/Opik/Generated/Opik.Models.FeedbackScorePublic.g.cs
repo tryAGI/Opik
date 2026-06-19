@@ -44,6 +44,12 @@ namespace Opik
         public required global::Opik.FeedbackScorePublicSource Source { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_queue_id")]
+        public global::System.Guid? SourceQueueId { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -87,6 +93,7 @@ namespace Opik
         /// <param name="source"></param>
         /// <param name="categoryName"></param>
         /// <param name="reason"></param>
+        /// <param name="sourceQueueId"></param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -111,6 +118,7 @@ namespace Opik
             global::Opik.FeedbackScorePublicSource source,
             string? categoryName,
             string? reason,
+            global::System.Guid? sourceQueueId,
             global::System.DateTime? createdAt,
             global::System.DateTime? lastUpdatedAt,
             string? createdBy,
@@ -122,6 +130,7 @@ namespace Opik
             this.Value = value;
             this.Reason = reason;
             this.Source = source;
+            this.SourceQueueId = sourceQueueId;
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;
             this.CreatedBy = createdBy;

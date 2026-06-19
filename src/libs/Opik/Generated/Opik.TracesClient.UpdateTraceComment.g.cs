@@ -472,18 +472,21 @@ namespace Opik
         /// </summary>
         /// <param name="commentId"></param>
         /// <param name="text"></param>
+        /// <param name="sourceQueueId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task UpdateTraceCommentAsync(
             global::System.Guid commentId,
             string text,
+            global::System.Guid? sourceQueueId = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::Opik.Comment
             {
                 Text = text,
+                SourceQueueId = sourceQueueId,
             };
 
             await UpdateTraceCommentAsync(

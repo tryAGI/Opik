@@ -22,6 +22,12 @@ namespace Opik
         public required string Text { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_queue_id")]
+        public global::System.Guid? SourceQueueId { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -58,6 +64,7 @@ namespace Opik
         /// <param name="id">
         /// Included only in responses
         /// </param>
+        /// <param name="sourceQueueId"></param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -76,6 +83,7 @@ namespace Opik
         public Comment(
             string text,
             global::System.Guid? id,
+            global::System.Guid? sourceQueueId,
             global::System.DateTime? createdAt,
             global::System.DateTime? lastUpdatedAt,
             string? createdBy,
@@ -83,6 +91,7 @@ namespace Opik
         {
             this.Id = id;
             this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
+            this.SourceQueueId = sourceQueueId;
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;
             this.CreatedBy = createdBy;

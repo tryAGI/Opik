@@ -444,6 +444,7 @@ namespace Opik
         /// <param name="value"></param>
         /// <param name="reason"></param>
         /// <param name="source"></param>
+        /// <param name="sourceQueueId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -454,6 +455,7 @@ namespace Opik
             global::Opik.FeedbackScoreSource source,
             string? categoryName = default,
             string? reason = default,
+            global::System.Guid? sourceQueueId = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -464,6 +466,7 @@ namespace Opik
                 Value = value,
                 Reason = reason,
                 Source = source,
+                SourceQueueId = sourceQueueId,
             };
 
             await AddTraceFeedbackScoreAsync(

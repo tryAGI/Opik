@@ -36,6 +36,12 @@ namespace Opik
         public string? Author { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_queue_id")]
+        public global::System.Guid? SourceQueueId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -48,6 +54,7 @@ namespace Opik
         /// <param name="threadId"></param>
         /// <param name="names"></param>
         /// <param name="author"></param>
+        /// <param name="sourceQueueId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -55,12 +62,14 @@ namespace Opik
             string projectName,
             string threadId,
             global::System.Collections.Generic.IList<string> names,
-            string? author)
+            string? author,
+            global::System.Guid? sourceQueueId)
         {
             this.ProjectName = projectName ?? throw new global::System.ArgumentNullException(nameof(projectName));
             this.ThreadId = threadId ?? throw new global::System.ArgumentNullException(nameof(threadId));
             this.Names = names ?? throw new global::System.ArgumentNullException(nameof(names));
             this.Author = author;
+            this.SourceQueueId = sourceQueueId;
         }
 
         /// <summary>

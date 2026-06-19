@@ -48,6 +48,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("severity")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AgentInsightsIssueSeverityJsonConverter))]
+        public global::Opik.AgentInsightsIssueSeverity? Severity { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("traces_query")]
         public string? TracesQuery { get; set; }
 
@@ -132,6 +139,7 @@ namespace Opik
         /// <param name="cause"></param>
         /// <param name="suggestedFix"></param>
         /// <param name="status"></param>
+        /// <param name="severity"></param>
         /// <param name="tracesQuery"></param>
         /// <param name="totalOccurrences">
         /// SUM(count) over the requested window
@@ -168,6 +176,7 @@ namespace Opik
             string? cause,
             string? suggestedFix,
             global::Opik.AgentInsightsIssueStatus? status,
+            global::Opik.AgentInsightsIssueSeverity? severity,
             string? tracesQuery,
             long? totalOccurrences,
             long? total,
@@ -187,6 +196,7 @@ namespace Opik
             this.Cause = cause;
             this.SuggestedFix = suggestedFix;
             this.Status = status;
+            this.Severity = severity;
             this.TracesQuery = tracesQuery;
             this.TotalOccurrences = totalOccurrences;
             this.Total = total;
