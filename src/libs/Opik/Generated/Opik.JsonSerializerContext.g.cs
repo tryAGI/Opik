@@ -37,6 +37,14 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.AgentInsightsIssueStatusJsonConverter),
 
             typeof(global::Opik.JsonConverters.AgentInsightsIssueStatusNullableJsonConverter),
@@ -997,6 +1005,10 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ErrorMessageHistory))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentConfigRemoveValues))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentConfigEnvSetByName))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentInsightsJob))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentInsightsJobStatus), TypeInfoPropertyName = "AgentInsightsJobStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentInsightsJobUpdate))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentInsightsJobUpdateStatus), TypeInfoPropertyName = "AgentInsightsJobUpdateStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentInsightsIssue))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentInsightsIssueStatus), TypeInfoPropertyName = "AgentInsightsIssueStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AgentInsightsIssuePage))]
@@ -1435,10 +1447,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectStatItemObjectPublicType), TypeInfoPropertyName = "ProjectStatItemObjectPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectStatItemObjectPublicDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectStatItemObjectPublicDiscriminatorType), TypeInfoPropertyName = "ProjectStatItemObjectPublicDiscriminatorType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectStatsPublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ProjectStatItemObjectPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DatasetExportJobPublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DatasetExportJobPublicStatus), TypeInfoPropertyName = "DatasetExportJobPublicStatus2")]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1473,6 +1481,14 @@ namespace Opik
             typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.AgentInsightsIssueStatusJsonConverter),
 
@@ -2376,6 +2392,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectStatsPublic))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ProjectStatItemObjectPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DatasetExportJobPublic))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DatasetExportJobPublicStatus), TypeInfoPropertyName = "DatasetExportJobPublicStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DatasetItemPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DatasetItemPublicSource), TypeInfoPropertyName = "DatasetItemPublicSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ExperimentItemPublic>))]
@@ -2872,10 +2892,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesStatus), TypeInfoPropertyName = "FindAgentInsightsIssuesStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetWebhookExamplesAlertType), TypeInfoPropertyName = "GetWebhookExamplesAlertType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentListEntityType), TypeInfoPropertyName = "AttachmentListEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DownloadAttachmentEntityType), TypeInfoPropertyName = "DownloadAttachmentEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UploadAttachmentEntityType), TypeInfoPropertyName = "UploadAttachmentEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindFeedbackDefinitionsType), TypeInfoPropertyName = "FindFeedbackDefinitionsType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ListRunnersStatus), TypeInfoPropertyName = "ListRunnersStatus2")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -2910,6 +2926,14 @@ namespace Opik
             typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.AgentInsightsIssueStatusJsonConverter),
 
@@ -3813,6 +3837,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DownloadAttachmentEntityType), TypeInfoPropertyName = "DownloadAttachmentEntityType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UploadAttachmentEntityType), TypeInfoPropertyName = "UploadAttachmentEntityType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindFeedbackDefinitionsType), TypeInfoPropertyName = "FindFeedbackDefinitionsType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ListRunnersStatus), TypeInfoPropertyName = "ListRunnersStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetSpansByProjectType), TypeInfoPropertyName = "GetSpansByProjectType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindFeedbackScoreNames1Type), TypeInfoPropertyName = "FindFeedbackScoreNames1Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetSpanStatsType), TypeInfoPropertyName = "GetSpanStatsType2")]
@@ -4061,6 +4089,10 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.AgentBlueprintHistoryTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AgentConfigValueHistoryTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AgentConfigValueHistoryTypeNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsJobStatusJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsJobStatusNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsJobUpdateStatusJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsJobUpdateStatusNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueStatusJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueStatusNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusJsonConverter());

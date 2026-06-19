@@ -86,6 +86,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Per-(workspace, project) Agent Insights report configuration.
+        /// </summary>
+        public AgentInsightsJobsClient AgentInsightsJobs => new AgentInsightsJobsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Coding-agent spend analytics.
         /// </summary>
         public AiSpendClient AiSpend => new AiSpendClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
