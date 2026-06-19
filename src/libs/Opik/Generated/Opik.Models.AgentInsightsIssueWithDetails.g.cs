@@ -48,6 +48,13 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("severity")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityJsonConverter))]
+        public global::Opik.AgentInsightsIssueWithDetailsSeverity? Severity { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("traces_query")]
         public string? TracesQuery { get; set; }
 
@@ -96,6 +103,7 @@ namespace Opik
         /// <param name="cause"></param>
         /// <param name="suggestedFix"></param>
         /// <param name="status"></param>
+        /// <param name="severity"></param>
         /// <param name="tracesQuery"></param>
         /// <param name="createdBy"></param>
         /// <param name="createdAt"></param>
@@ -114,6 +122,7 @@ namespace Opik
             string? cause,
             string? suggestedFix,
             global::Opik.AgentInsightsIssueWithDetailsStatus? status,
+            global::Opik.AgentInsightsIssueWithDetailsSeverity? severity,
             string? tracesQuery,
             string? createdBy,
             global::System.DateTime? createdAt,
@@ -127,6 +136,7 @@ namespace Opik
             this.Cause = cause;
             this.SuggestedFix = suggestedFix;
             this.Status = status;
+            this.Severity = severity;
             this.TracesQuery = tracesQuery;
             this.CreatedBy = createdBy;
             this.CreatedAt = createdAt;

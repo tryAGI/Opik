@@ -44,6 +44,7 @@ namespace Opik
             ref global::System.DateTime? fromDate,
             ref global::System.DateTime? toDate,
             ref global::Opik.FindAgentInsightsIssuesStatus? status,
+            ref global::Opik.FindAgentInsightsIssuesSeverity? severity,
             ref string? sorting,
             ref int? page,
             ref int? size);
@@ -54,6 +55,7 @@ namespace Opik
             global::System.DateTime? fromDate,
             global::System.DateTime? toDate,
             global::Opik.FindAgentInsightsIssuesStatus? status,
+            global::Opik.FindAgentInsightsIssuesSeverity? severity,
             string? sorting,
             int? page,
             int? size);
@@ -74,6 +76,7 @@ namespace Opik
         /// <param name="fromDate"></param>
         /// <param name="toDate"></param>
         /// <param name="status"></param>
+        /// <param name="severity"></param>
         /// <param name="sorting"></param>
         /// <param name="page">
         /// Default Value: 1
@@ -89,6 +92,7 @@ namespace Opik
             global::System.DateTime? fromDate = default,
             global::System.DateTime? toDate = default,
             global::Opik.FindAgentInsightsIssuesStatus? status = default,
+            global::Opik.FindAgentInsightsIssuesSeverity? severity = default,
             string? sorting = default,
             int? page = default,
             int? size = default,
@@ -100,6 +104,7 @@ namespace Opik
                 fromDate: fromDate,
                 toDate: toDate,
                 status: status,
+                severity: severity,
                 sorting: sorting,
                 page: page,
                 size: size,
@@ -117,6 +122,7 @@ namespace Opik
         /// <param name="fromDate"></param>
         /// <param name="toDate"></param>
         /// <param name="status"></param>
+        /// <param name="severity"></param>
         /// <param name="sorting"></param>
         /// <param name="page">
         /// Default Value: 1
@@ -132,6 +138,7 @@ namespace Opik
             global::System.DateTime? fromDate = default,
             global::System.DateTime? toDate = default,
             global::Opik.FindAgentInsightsIssuesStatus? status = default,
+            global::Opik.FindAgentInsightsIssuesSeverity? severity = default,
             string? sorting = default,
             int? page = default,
             int? size = default,
@@ -146,6 +153,7 @@ namespace Opik
                 fromDate: ref fromDate,
                 toDate: ref toDate,
                 status: ref status,
+                severity: ref severity,
                 sorting: ref sorting,
                 page: ref page,
                 size: ref size);
@@ -183,6 +191,7 @@ namespace Opik
                                 .AddOptionalParameter("from_date", fromDate?.ToString("yyyy-MM-dd"))
                                 .AddOptionalParameter("to_date", toDate?.ToString("yyyy-MM-dd"))
                                 .AddOptionalParameter("status", status?.ToValueString())
+                                .AddOptionalParameter("severity", severity?.ToValueString())
                                 .AddOptionalParameter("sorting", sorting)
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("size", size?.ToString())
@@ -231,6 +240,7 @@ namespace Opik
                     fromDate: fromDate,
                     toDate: toDate,
                     status: status,
+                    severity: severity,
                     sorting: sorting,
                     page: page,
                     size: size);

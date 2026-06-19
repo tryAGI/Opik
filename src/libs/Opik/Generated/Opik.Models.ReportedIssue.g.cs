@@ -48,6 +48,14 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("severity")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.ReportedIssueSeverityJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Opik.ReportedIssueSeverity Severity { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required long Count { get; set; }
@@ -89,6 +97,7 @@ namespace Opik
         /// Initializes a new instance of the <see cref="ReportedIssue" /> class.
         /// </summary>
         /// <param name="name"></param>
+        /// <param name="severity"></param>
         /// <param name="count"></param>
         /// <param name="totalCount"></param>
         /// <param name="usersImpacted"></param>
@@ -104,6 +113,7 @@ namespace Opik
 #endif
         public ReportedIssue(
             string name,
+            global::Opik.ReportedIssueSeverity severity,
             long count,
             long totalCount,
             long usersImpacted,
@@ -121,6 +131,7 @@ namespace Opik
             this.Cause = cause;
             this.SuggestedFix = suggestedFix;
             this.TracesQuery = tracesQuery;
+            this.Severity = severity;
             this.Count = count;
             this.TotalCount = totalCount;
             this.UsersImpacted = usersImpacted;

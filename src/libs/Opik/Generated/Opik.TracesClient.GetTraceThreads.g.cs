@@ -50,7 +50,8 @@ namespace Opik
             ref string? sorting,
             ref string? search,
             ref global::System.DateTime? fromTime,
-            ref global::System.DateTime? toTime);
+            ref global::System.DateTime? toTime,
+            ref global::System.Guid? annotationQueueId);
         partial void PrepareGetTraceThreadsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -64,7 +65,8 @@ namespace Opik
             string? sorting,
             string? search,
             global::System.DateTime? fromTime,
-            global::System.DateTime? toTime);
+            global::System.DateTime? toTime,
+            global::System.Guid? annotationQueueId);
         partial void ProcessGetTraceThreadsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -105,6 +107,9 @@ namespace Opik
         /// <param name="toTime">
         /// Filter trace threads created up to this time (ISO-8601 format). If not provided, defaults to current time. Must be after 'from_time'.
         /// </param>
+        /// <param name="annotationQueueId">
+        /// Filter threads belonging to this annotation queue and scope feedback scores/comments to it
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
@@ -120,6 +125,7 @@ namespace Opik
             string? search = default,
             global::System.DateTime? fromTime = default,
             global::System.DateTime? toTime = default,
+            global::System.Guid? annotationQueueId = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -135,6 +141,7 @@ namespace Opik
                 search: search,
                 fromTime: fromTime,
                 toTime: toTime,
+                annotationQueueId: annotationQueueId,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -172,6 +179,9 @@ namespace Opik
         /// <param name="toTime">
         /// Filter trace threads created up to this time (ISO-8601 format). If not provided, defaults to current time. Must be after 'from_time'.
         /// </param>
+        /// <param name="annotationQueueId">
+        /// Filter threads belonging to this annotation queue and scope feedback scores/comments to it
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
@@ -187,6 +197,7 @@ namespace Opik
             string? search = default,
             global::System.DateTime? fromTime = default,
             global::System.DateTime? toTime = default,
+            global::System.Guid? annotationQueueId = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -204,7 +215,8 @@ namespace Opik
                 sorting: ref sorting,
                 search: ref search,
                 fromTime: ref fromTime,
-                toTime: ref toTime);
+                toTime: ref toTime,
+                annotationQueueId: ref annotationQueueId);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
@@ -246,6 +258,7 @@ namespace Opik
                                 .AddOptionalParameter("search", search)
                                 .AddOptionalParameter("from_time", fromTime?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("to_time", toTime?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("annotation_queue_id", annotationQueueId?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -297,7 +310,8 @@ namespace Opik
                     sorting: sorting,
                     search: search,
                     fromTime: fromTime,
-                    toTime: toTime);
+                    toTime: toTime,
+                    annotationQueueId: annotationQueueId);
 
                 return __httpRequest;
             }

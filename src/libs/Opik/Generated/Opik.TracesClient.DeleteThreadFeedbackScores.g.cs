@@ -433,6 +433,7 @@ namespace Opik
         /// <param name="threadId"></param>
         /// <param name="names"></param>
         /// <param name="author"></param>
+        /// <param name="sourceQueueId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -441,6 +442,7 @@ namespace Opik
             string threadId,
             global::System.Collections.Generic.IList<string> names,
             string? author = default,
+            global::System.Guid? sourceQueueId = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -450,6 +452,7 @@ namespace Opik
                 ThreadId = threadId,
                 Names = names,
                 Author = author,
+                SourceQueueId = sourceQueueId,
             };
 
             await DeleteThreadFeedbackScoresAsync(

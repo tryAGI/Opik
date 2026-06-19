@@ -63,6 +63,12 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_queue_id")]
+        public global::System.Guid? SourceQueueId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("thread_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ThreadId { get; set; }
@@ -87,6 +93,7 @@ namespace Opik
         /// <param name="categoryName"></param>
         /// <param name="reason"></param>
         /// <param name="author"></param>
+        /// <param name="sourceQueueId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -99,7 +106,8 @@ namespace Opik
             global::System.Guid? projectId,
             string? categoryName,
             string? reason,
-            string? author)
+            string? author,
+            global::System.Guid? sourceQueueId)
         {
             this.ProjectName = projectName;
             this.ProjectId = projectId;
@@ -109,6 +117,7 @@ namespace Opik
             this.Reason = reason;
             this.Source = source;
             this.Author = author;
+            this.SourceQueueId = sourceQueueId;
             this.ThreadId = threadId ?? throw new global::System.ArgumentNullException(nameof(threadId));
         }
 
