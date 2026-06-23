@@ -31,6 +31,12 @@ namespace Opik
         /// <summary>
         /// Included only in responses
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("last_scan_at")]
+        public global::System.DateTime? LastScanAt { get; set; }
+
+        /// <summary>
+        /// Included only in responses
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
         public global::System.DateTime? CreatedAt { get; set; }
 
@@ -67,6 +73,9 @@ namespace Opik
         /// <param name="status">
         /// Included only in responses
         /// </param>
+        /// <param name="lastScanAt">
+        /// Included only in responses
+        /// </param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -88,6 +97,7 @@ namespace Opik
         public AgentInsightsJob(
             global::System.Guid? id,
             global::Opik.AgentInsightsJobStatus? status,
+            global::System.DateTime? lastScanAt,
             global::System.DateTime? createdAt,
             string? createdBy,
             global::System.DateTime? lastUpdatedAt,
@@ -97,6 +107,7 @@ namespace Opik
             this.Id = id;
             this.ProjectId = projectId;
             this.Status = status;
+            this.LastScanAt = lastScanAt;
             this.CreatedAt = createdAt;
             this.CreatedBy = createdBy;
             this.LastUpdatedAt = lastUpdatedAt;

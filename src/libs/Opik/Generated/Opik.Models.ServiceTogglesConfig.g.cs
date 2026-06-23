@@ -74,9 +74,9 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("optimizationStudioEnabled")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("costIntelligenceEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool OptimizationStudioEnabled { get; set; }
+        public required bool CostIntelligenceEnabled { get; set; }
 
         /// <summary>
         /// 
@@ -240,7 +240,7 @@ namespace Opik
         /// <param name="alertsEnabled"></param>
         /// <param name="welcomeWizardEnabled"></param>
         /// <param name="exportEnabled"></param>
-        /// <param name="optimizationStudioEnabled"></param>
+        /// <param name="costIntelligenceEnabled"></param>
         /// <param name="datasetVersioningEnabled"></param>
         /// <param name="datasetExportEnabled"></param>
         /// <param name="demoDataEnabled"></param>
@@ -279,7 +279,7 @@ namespace Opik
             bool alertsEnabled,
             bool welcomeWizardEnabled,
             bool exportEnabled,
-            bool optimizationStudioEnabled,
+            bool costIntelligenceEnabled,
             bool datasetVersioningEnabled,
             bool datasetExportEnabled,
             bool demoDataEnabled,
@@ -311,7 +311,7 @@ namespace Opik
             this.AlertsEnabled = alertsEnabled;
             this.WelcomeWizardEnabled = welcomeWizardEnabled;
             this.ExportEnabled = exportEnabled;
-            this.OptimizationStudioEnabled = optimizationStudioEnabled;
+            this.CostIntelligenceEnabled = costIntelligenceEnabled;
             this.DatasetVersioningEnabled = datasetVersioningEnabled;
             this.DatasetExportEnabled = datasetExportEnabled;
             this.DemoDataEnabled = demoDataEnabled;
