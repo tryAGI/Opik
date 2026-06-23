@@ -11,45 +11,38 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
-        public string? Id { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string? Label { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
-        public string? Title { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_tokens")]
+        public long? TotalTokens { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
-        public string? Body { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("definition_tokens")]
+        public long? DefinitionTokens { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("impact")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.ItemImpactJsonConverter))]
-        public global::Opik.ItemImpact? Impact { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("usage_tokens")]
+        public long? UsageTokens { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("estimated_savings_tokens")]
-        public long? EstimatedSavingsTokens { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("by_model")]
+        public global::System.Collections.Generic.IList<global::Opik.ModelTiers>? ByModel { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("docs_url")]
-        public string? DocsUrl { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("related_lane_key")]
-        public string? RelatedLaneKey { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        public long? Count { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -60,32 +53,29 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="Item" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="title"></param>
-        /// <param name="body"></param>
-        /// <param name="impact"></param>
-        /// <param name="estimatedSavingsTokens"></param>
-        /// <param name="docsUrl"></param>
-        /// <param name="relatedLaneKey"></param>
+        /// <param name="label"></param>
+        /// <param name="totalTokens"></param>
+        /// <param name="definitionTokens"></param>
+        /// <param name="usageTokens"></param>
+        /// <param name="byModel"></param>
+        /// <param name="count"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Item(
-            string? id,
-            string? title,
-            string? body,
-            global::Opik.ItemImpact? impact,
-            long? estimatedSavingsTokens,
-            string? docsUrl,
-            string? relatedLaneKey)
+            string? label,
+            long? totalTokens,
+            long? definitionTokens,
+            long? usageTokens,
+            global::System.Collections.Generic.IList<global::Opik.ModelTiers>? byModel,
+            long? count)
         {
-            this.Id = id;
-            this.Title = title;
-            this.Body = body;
-            this.Impact = impact;
-            this.EstimatedSavingsTokens = estimatedSavingsTokens;
-            this.DocsUrl = docsUrl;
-            this.RelatedLaneKey = relatedLaneKey;
+            this.Label = label;
+            this.TotalTokens = totalTokens;
+            this.DefinitionTokens = definitionTokens;
+            this.UsageTokens = usageTokens;
+            this.ByModel = byModel;
+            this.Count = count;
         }
 
         /// <summary>
