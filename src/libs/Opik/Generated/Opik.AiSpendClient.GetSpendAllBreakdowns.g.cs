@@ -3,10 +3,10 @@
 
 namespace Opik
 {
-    public partial class ProjectsClient
+    public partial class AiSpendClient
     {
 
-        private static readonly global::Opik.AutoSDKServer[] s_RetrieveProjectServers = new global::Opik.AutoSDKServer[]
+        private static readonly global::Opik.AutoSDKServer[] s_GetSpendAllBreakdownsServers = new global::Opik.AutoSDKServer[]
         {            new global::Opik.AutoSDKServer(
                 id: "http-localhost-api",
                 name: "Local server",
@@ -20,7 +20,7 @@ namespace Opik
         };
 
 
-        private static readonly global::Opik.EndPointSecurityRequirement s_RetrieveProjectSecurityRequirement0 =
+        private static readonly global::Opik.EndPointSecurityRequirement s_GetSpendAllBreakdownsSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
             {
                 Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
@@ -34,41 +34,41 @@ namespace Opik
                     },
                 },
             };
-        private static readonly global::Opik.EndPointSecurityRequirement[] s_RetrieveProjectSecurityRequirements =
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_GetSpendAllBreakdownsSecurityRequirements =
             new global::Opik.EndPointSecurityRequirement[]
-            {                s_RetrieveProjectSecurityRequirement0,
+            {                s_GetSpendAllBreakdownsSecurityRequirement0,
             };
-        partial void PrepareRetrieveProjectArguments(
+        partial void PrepareGetSpendAllBreakdownsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Opik.ProjectRetrieveDetailed request);
-        partial void PrepareRetrieveProjectRequest(
+            global::Opik.SpendMetricRequest request);
+        partial void PrepareGetSpendAllBreakdownsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Opik.ProjectRetrieveDetailed request);
-        partial void ProcessRetrieveProjectResponse(
+            global::Opik.SpendMetricRequest request);
+        partial void ProcessGetSpendAllBreakdownsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessRetrieveProjectResponseContent(
+        partial void ProcessGetSpendAllBreakdownsResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Retrieve project<br/>
-        /// Retrieve project
+        /// Get all spend lane breakdowns<br/>
+        /// Get the per-item breakdown for every composition lane in one request
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.ProjectDetailed> RetrieveProjectAsync(
+        public async global::System.Threading.Tasks.Task<global::Opik.SpendBreakdownsResponse> GetSpendAllBreakdownsAsync(
 
-            global::Opik.ProjectRetrieveDetailed request,
+            global::Opik.SpendMetricRequest request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await RetrieveProjectAsResponseAsync(
+            var __response = await GetSpendAllBreakdownsAsResponseAsync(
 
                 request: request,
                 requestOptions: requestOptions,
@@ -78,16 +78,16 @@ namespace Opik
             return __response.Body;
         }
         /// <summary>
-        /// Retrieve project<br/>
-        /// Retrieve project
+        /// Get all spend lane breakdowns<br/>
+        /// Get the per-item breakdown for every composition lane in one request
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.ProjectDetailed>> RetrieveProjectAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.SpendBreakdownsResponse>> GetSpendAllBreakdownsAsResponseAsync(
 
-            global::Opik.ProjectRetrieveDetailed request,
+            global::Opik.SpendMetricRequest request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -95,15 +95,15 @@ namespace Opik
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareRetrieveProjectArguments(
+            PrepareGetSpendAllBreakdownsArguments(
                 httpClient: HttpClient,
                 request: request);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_RetrieveProjectSecurityRequirements,
-                operationName: "RetrieveProjectAsync");
+                securityRequirements: s_GetSpendAllBreakdownsSecurityRequirements,
+                operationName: "GetSpendAllBreakdownsAsync");
 
             using var __timeoutCancellationTokenSource = global::Opik.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -123,9 +123,9 @@ namespace Opik
             {
 
                             var __pathBuilder = new global::Opik.PathBuilder(
-                                path: "/v1/private/projects/retrieve",
+                                path: "/v1/private/ai-spend/composition/breakdowns",
                                 baseUri: ResolveBaseUri(
-                                servers: s_RetrieveProjectServers,
+                                servers: s_GetSpendAllBreakdownsServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -170,7 +170,7 @@ namespace Opik
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareRetrieveProjectRequest(
+                PrepareGetSpendAllBreakdownsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     request: request);
@@ -190,9 +190,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "RetrieveProject",
-                                methodName: "RetrieveProjectAsync",
-                                pathTemplate: "\"/v1/private/projects/retrieve\"",
+                                operationId: "GetSpendAllBreakdowns",
+                                methodName: "GetSpendAllBreakdownsAsync",
+                                pathTemplate: "\"/v1/private/ai-spend/composition/breakdowns\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -224,9 +224,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "RetrieveProject",
-                                methodName: "RetrieveProjectAsync",
-                                pathTemplate: "\"/v1/private/projects/retrieve\"",
+                                operationId: "GetSpendAllBreakdowns",
+                                methodName: "GetSpendAllBreakdownsAsync",
+                                pathTemplate: "\"/v1/private/ai-spend/composition/breakdowns\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -265,9 +265,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "RetrieveProject",
-                                methodName: "RetrieveProjectAsync",
-                                pathTemplate: "\"/v1/private/projects/retrieve\"",
+                                operationId: "GetSpendAllBreakdowns",
+                                methodName: "GetSpendAllBreakdownsAsync",
+                                pathTemplate: "\"/v1/private/ai-spend/composition/breakdowns\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -305,7 +305,7 @@ namespace Opik
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessRetrieveProjectResponse(
+                ProcessGetSpendAllBreakdownsResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -313,9 +313,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "RetrieveProject",
-                                methodName: "RetrieveProjectAsync",
-                                pathTemplate: "\"/v1/private/projects/retrieve\"",
+                                operationId: "GetSpendAllBreakdowns",
+                                methodName: "GetSpendAllBreakdownsAsync",
+                                pathTemplate: "\"/v1/private/ai-spend/composition/breakdowns\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -335,9 +335,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "RetrieveProject",
-                                methodName: "RetrieveProjectAsync",
-                                pathTemplate: "\"/v1/private/projects/retrieve\"",
+                                operationId: "GetSpendAllBreakdowns",
+                                methodName: "GetSpendAllBreakdownsAsync",
+                                pathTemplate: "\"/v1/private/ai-spend/composition/breakdowns\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -352,61 +352,24 @@ namespace Opik
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Unprocessable Content
-                            if ((int)__response.StatusCode == 422)
-                            {
-                                string? __content_422 = null;
-                                global::System.Exception? __exception_422 = null;
-                                global::Opik.ErrorMessageDetailed? __value_422 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_422 = global::Opik.ErrorMessageDetailed.FromJson(__content_422, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_422 = global::Opik.ErrorMessageDetailed.FromJson(__content_422, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_422 = __ex;
-                                }
-
-
-                                throw global::Opik.ApiException<global::Opik.ErrorMessageDetailed>.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_422,
-                                    responseBody: __content_422,
-                                    responseObject: __value_422,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
                             // Bad Request
                             if ((int)__response.StatusCode == 400)
                             {
                                 string? __content_400 = null;
                                 global::System.Exception? __exception_400 = null;
-                                global::Opik.ErrorMessageDetailed? __value_400 = null;
+                                global::Opik.ErrorMessage? __value_400 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::Opik.ErrorMessageDetailed.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = global::Opik.ErrorMessageDetailed.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -415,49 +378,12 @@ namespace Opik
                                 }
 
 
-                                throw global::Opik.ApiException<global::Opik.ErrorMessageDetailed>.Create(
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
                                     responseBody: __content_400,
                                     responseObject: __value_400,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
-                            // Not Found
-                            if ((int)__response.StatusCode == 404)
-                            {
-                                string? __content_404 = null;
-                                global::System.Exception? __exception_404 = null;
-                                global::Opik.ErrorMessageDetailed? __value_404 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Opik.ErrorMessageDetailed.FromJson(__content_404, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_404 = global::Opik.ErrorMessageDetailed.FromJson(__content_404, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_404 = __ex;
-                                }
-
-
-                                throw global::Opik.ApiException<global::Opik.ErrorMessageDetailed>.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_404,
-                                    responseBody: __content_404,
-                                    responseObject: __value_404,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -476,7 +402,7 @@ namespace Opik
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessRetrieveProjectResponseContent(
+                                ProcessGetSpendAllBreakdownsResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -485,9 +411,9 @@ namespace Opik
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Opik.ProjectDetailed.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Opik.SpendBreakdownsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.ProjectDetailed>(
+                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.SpendBreakdownsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -517,9 +443,9 @@ namespace Opik
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Opik.ProjectDetailed.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Opik.SpendBreakdownsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.ProjectDetailed>(
+                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.SpendBreakdownsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -560,27 +486,42 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Retrieve project<br/>
-        /// Retrieve project
+        /// Get all spend lane breakdowns<br/>
+        /// Get the per-item breakdown for every composition lane in one request
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="includeStats"></param>
+        /// <param name="projectId"></param>
+        /// <param name="projectName"></param>
+        /// <param name="intervalStart"></param>
+        /// <param name="intervalEnd"></param>
+        /// <param name="userId"></param>
+        /// <param name="startBeforeEnd"></param>
+        /// <param name="projectProvided"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.ProjectDetailed> RetrieveProjectAsync(
-            string name,
-            bool? includeStats = default,
+        public async global::System.Threading.Tasks.Task<global::Opik.SpendBreakdownsResponse> GetSpendAllBreakdownsAsync(
+            global::System.DateTime intervalStart,
+            global::System.DateTime intervalEnd,
+            global::System.Guid? projectId = default,
+            string? projectName = default,
+            string? userId = default,
+            bool? startBeforeEnd = default,
+            bool? projectProvided = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.ProjectRetrieveDetailed
+            var __request = new global::Opik.SpendMetricRequest
             {
-                Name = name,
-                IncludeStats = includeStats,
+                ProjectId = projectId,
+                ProjectName = projectName,
+                IntervalStart = intervalStart,
+                IntervalEnd = intervalEnd,
+                UserId = userId,
+                StartBeforeEnd = startBeforeEnd,
+                ProjectProvided = projectProvided,
             };
 
-            return await RetrieveProjectAsync(
+            return await GetSpendAllBreakdownsAsync(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
