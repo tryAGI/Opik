@@ -16,6 +16,12 @@ namespace Opik
         public required string Name { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("includeStats")]
+        public bool? IncludeStats { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -25,13 +31,16 @@ namespace Opik
         /// Initializes a new instance of the <see cref="ProjectRetrieveDetailed" /> class.
         /// </summary>
         /// <param name="name"></param>
+        /// <param name="includeStats"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ProjectRetrieveDetailed(
-            string name)
+            string name,
+            bool? includeStats)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.IncludeStats = includeStats;
         }
 
         /// <summary>
