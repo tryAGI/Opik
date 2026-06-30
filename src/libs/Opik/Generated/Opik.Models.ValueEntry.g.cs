@@ -52,6 +52,18 @@ namespace Opik
         public string? SpanId { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_queue_id")]
+        public string? SourceQueueId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("author")]
+        public string? Author { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -67,6 +79,8 @@ namespace Opik
         /// <param name="lastUpdatedAt"></param>
         /// <param name="spanType"></param>
         /// <param name="spanId"></param>
+        /// <param name="sourceQueueId"></param>
+        /// <param name="author"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -77,7 +91,9 @@ namespace Opik
             global::Opik.ValueEntrySource? source,
             global::System.DateTime? lastUpdatedAt,
             string? spanType,
-            string? spanId)
+            string? spanId,
+            string? sourceQueueId,
+            string? author)
         {
             this.Value = value;
             this.Reason = reason;
@@ -86,6 +102,8 @@ namespace Opik
             this.LastUpdatedAt = lastUpdatedAt;
             this.SpanType = spanType;
             this.SpanId = spanId;
+            this.SourceQueueId = sourceQueueId;
+            this.Author = author;
         }
 
         /// <summary>
