@@ -11,6 +11,10 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        Evaluator,
+        /// <summary>
+        /// 
+        /// </summary>
         Experiment,
         /// <summary>
         /// 
@@ -38,6 +42,7 @@ namespace Opik
         {
             return value switch
             {
+                TraceSource.Evaluator => "evaluator",
                 TraceSource.Experiment => "experiment",
                 TraceSource.Optimization => "optimization",
                 TraceSource.Playground => "playground",
@@ -52,6 +57,7 @@ namespace Opik
         {
             return value switch
             {
+                "evaluator" => TraceSource.Evaluator,
                 "experiment" => TraceSource.Experiment,
                 "optimization" => TraceSource.Optimization,
                 "playground" => TraceSource.Playground,

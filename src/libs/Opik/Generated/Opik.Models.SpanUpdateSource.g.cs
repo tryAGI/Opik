@@ -11,6 +11,10 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        Evaluator,
+        /// <summary>
+        /// 
+        /// </summary>
         Experiment,
         /// <summary>
         /// 
@@ -38,6 +42,7 @@ namespace Opik
         {
             return value switch
             {
+                SpanUpdateSource.Evaluator => "evaluator",
                 SpanUpdateSource.Experiment => "experiment",
                 SpanUpdateSource.Optimization => "optimization",
                 SpanUpdateSource.Playground => "playground",
@@ -52,6 +57,7 @@ namespace Opik
         {
             return value switch
             {
+                "evaluator" => SpanUpdateSource.Evaluator,
                 "experiment" => SpanUpdateSource.Experiment,
                 "optimization" => SpanUpdateSource.Optimization,
                 "playground" => SpanUpdateSource.Playground,

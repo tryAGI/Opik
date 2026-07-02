@@ -65,6 +65,12 @@ namespace Opik
         public long? TotalOccurrences { get; set; }
 
         /// <summary>
+        /// Occurrences on the latest report day in the window only. The issue's description/cause narrate that most recent run, so this is the count consistent with them; totalOccurrences instead sums every day in the window.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latest_count")]
+        public long? LatestCount { get; set; }
+
+        /// <summary>
         /// SUM(total_count) over the requested window
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total")]
@@ -144,6 +150,9 @@ namespace Opik
         /// <param name="totalOccurrences">
         /// SUM(count) over the requested window
         /// </param>
+        /// <param name="latestCount">
+        /// Occurrences on the latest report day in the window only. The issue's description/cause narrate that most recent run, so this is the count consistent with them; totalOccurrences instead sums every day in the window.
+        /// </param>
         /// <param name="total">
         /// SUM(total_count) over the requested window
         /// </param>
@@ -179,6 +188,7 @@ namespace Opik
             global::Opik.AgentInsightsIssueSeverity? severity,
             string? tracesQuery,
             long? totalOccurrences,
+            long? latestCount,
             long? total,
             long? usersImpacted,
             long? totalUsers,
@@ -199,6 +209,7 @@ namespace Opik
             this.Severity = severity;
             this.TracesQuery = tracesQuery;
             this.TotalOccurrences = totalOccurrences;
+            this.LatestCount = latestCount;
             this.Total = total;
             this.UsersImpacted = usersImpacted;
             this.TotalUsers = totalUsers;

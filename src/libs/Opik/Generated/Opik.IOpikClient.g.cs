@@ -239,6 +239,11 @@ namespace Opik
         public RedirectClient Redirect { get; }
 
         /// <summary>
+        /// Generic failure log for reports/jobs.
+        /// </summary>
+        public ReportFailuresClient ReportFailures { get; }
+
+        /// <summary>
         /// Ollie daily report management.
         /// </summary>
         public ReportsClient Reports { get; }

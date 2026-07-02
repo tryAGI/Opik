@@ -366,6 +366,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Generic failure log for reports/jobs.
+        /// </summary>
+        public ReportFailuresClient ReportFailures => new ReportFailuresClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Ollie daily report management.
         /// </summary>
         public ReportsClient Reports => new ReportsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
