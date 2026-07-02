@@ -6,7 +6,7 @@ namespace Opik
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class AgentInsightsJob
+    public sealed partial class ReportFailure
     {
         /// <summary>
         /// Included only in responses
@@ -15,42 +15,31 @@ namespace Opik
         public global::System.Guid? Id { get; set; }
 
         /// <summary>
-        /// Included only in responses
+        /// 
         /// </summary>
-        /// <default>default!</default>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.ReportFailureTypeJsonConverter))]
+        public global::Opik.ReportFailureType Type { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
-        public global::System.Guid ProjectId { get; set; } = default!;
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Guid ProjectId { get; set; }
 
         /// <summary>
-        /// Included only in responses
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AgentInsightsJobStatusJsonConverter))]
-        public global::Opik.AgentInsightsJobStatus? Status { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("reason")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Reason { get; set; }
 
         /// <summary>
-        /// Included only in responses
+        /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("last_scan_at")]
-        public global::System.DateTime? LastScanAt { get; set; }
-
-        /// <summary>
-        /// Included only in responses
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("last_failure_reason")]
-        public string? LastFailureReason { get; set; }
-
-        /// <summary>
-        /// Included only in responses
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("last_failure_detail")]
-        public string? LastFailureDetail { get; set; }
-
-        /// <summary>
-        /// Included only in responses
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("last_failed_at")]
-        public global::System.DateTime? LastFailedAt { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("detail")]
+        public string? Detail { get; set; }
 
         /// <summary>
         /// Included only in responses
@@ -83,26 +72,15 @@ namespace Opik
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AgentInsightsJob" /> class.
+        /// Initializes a new instance of the <see cref="ReportFailure" /> class.
         /// </summary>
+        /// <param name="projectId"></param>
+        /// <param name="reason"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
-        /// <param name="status">
-        /// Included only in responses
-        /// </param>
-        /// <param name="lastScanAt">
-        /// Included only in responses
-        /// </param>
-        /// <param name="lastFailureReason">
-        /// Included only in responses
-        /// </param>
-        /// <param name="lastFailureDetail">
-        /// Included only in responses
-        /// </param>
-        /// <param name="lastFailedAt">
-        /// Included only in responses
-        /// </param>
+        /// <param name="type"></param>
+        /// <param name="detail"></param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -115,32 +93,25 @@ namespace Opik
         /// <param name="lastUpdatedBy">
         /// Included only in responses
         /// </param>
-        /// <param name="projectId">
-        /// Included only in responses
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public AgentInsightsJob(
+        public ReportFailure(
+            global::System.Guid projectId,
+            string reason,
             global::System.Guid? id,
-            global::Opik.AgentInsightsJobStatus? status,
-            global::System.DateTime? lastScanAt,
-            string? lastFailureReason,
-            string? lastFailureDetail,
-            global::System.DateTime? lastFailedAt,
+            global::Opik.ReportFailureType type,
+            string? detail,
             global::System.DateTime? createdAt,
             string? createdBy,
             global::System.DateTime? lastUpdatedAt,
-            string? lastUpdatedBy,
-            global::System.Guid projectId = default!)
+            string? lastUpdatedBy)
         {
             this.Id = id;
+            this.Type = type;
             this.ProjectId = projectId;
-            this.Status = status;
-            this.LastScanAt = lastScanAt;
-            this.LastFailureReason = lastFailureReason;
-            this.LastFailureDetail = lastFailureDetail;
-            this.LastFailedAt = lastFailedAt;
+            this.Reason = reason ?? throw new global::System.ArgumentNullException(nameof(reason));
+            this.Detail = detail;
             this.CreatedAt = createdAt;
             this.CreatedBy = createdBy;
             this.LastUpdatedAt = lastUpdatedAt;
@@ -148,9 +119,9 @@ namespace Opik
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AgentInsightsJob" /> class.
+        /// Initializes a new instance of the <see cref="ReportFailure" /> class.
         /// </summary>
-        public AgentInsightsJob()
+        public ReportFailure()
         {
         }
 

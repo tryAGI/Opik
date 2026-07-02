@@ -11,6 +11,10 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        Evaluator,
+        /// <summary>
+        /// 
+        /// </summary>
         Experiment,
         /// <summary>
         /// 
@@ -38,6 +42,7 @@ namespace Opik
         {
             return value switch
             {
+                TraceExperimentItemBulkWriteViewSource.Evaluator => "evaluator",
                 TraceExperimentItemBulkWriteViewSource.Experiment => "experiment",
                 TraceExperimentItemBulkWriteViewSource.Optimization => "optimization",
                 TraceExperimentItemBulkWriteViewSource.Playground => "playground",
@@ -52,6 +57,7 @@ namespace Opik
         {
             return value switch
             {
+                "evaluator" => TraceExperimentItemBulkWriteViewSource.Evaluator,
                 "experiment" => TraceExperimentItemBulkWriteViewSource.Experiment,
                 "optimization" => TraceExperimentItemBulkWriteViewSource.Optimization,
                 "playground" => TraceExperimentItemBulkWriteViewSource.Playground,
