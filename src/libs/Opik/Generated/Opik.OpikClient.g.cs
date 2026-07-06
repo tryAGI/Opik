@@ -96,16 +96,6 @@ namespace Opik
         };
 
         /// <summary>
-        /// Coding-agent spend analytics.
-        /// </summary>
-        public AiSpendClient AiSpend => new AiSpendClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
-        };
-
-        /// <summary>
         /// Alert resources.
         /// </summary>
         public AlertsClient Alerts => new AlertsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
