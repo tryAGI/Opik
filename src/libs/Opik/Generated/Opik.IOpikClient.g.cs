@@ -104,11 +104,6 @@ namespace Opik
         public AgentInsightsJobsClient AgentInsightsJobs { get; }
 
         /// <summary>
-        /// Coding-agent spend analytics.
-        /// </summary>
-        public AiSpendClient AiSpend { get; }
-
-        /// <summary>
         /// Alert resources.
         /// </summary>
         public AlertsClient Alerts { get; }
