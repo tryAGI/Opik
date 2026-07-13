@@ -30,6 +30,12 @@ namespace Opik
         public required global::System.Collections.Generic.IList<global::Opik.LlmAsJudgeOutputSchemaWrite> Schema { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("max_cost_usd")]
+        public double? MaxCostUsd { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -41,17 +47,20 @@ namespace Opik
         /// <param name="model"></param>
         /// <param name="messages"></param>
         /// <param name="schema"></param>
+        /// <param name="maxCostUsd"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public TraceThreadLlmAsJudgeCodeWrite(
             global::Opik.LlmAsJudgeModelParametersWrite model,
             global::System.Collections.Generic.IList<global::Opik.LlmAsJudgeMessageWrite> messages,
-            global::System.Collections.Generic.IList<global::Opik.LlmAsJudgeOutputSchemaWrite> schema)
+            global::System.Collections.Generic.IList<global::Opik.LlmAsJudgeOutputSchemaWrite> schema,
+            double? maxCostUsd)
         {
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
             this.Schema = schema ?? throw new global::System.ArgumentNullException(nameof(schema));
+            this.MaxCostUsd = maxCostUsd;
         }
 
         /// <summary>
