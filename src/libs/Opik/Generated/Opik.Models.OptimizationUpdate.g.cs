@@ -22,6 +22,13 @@ namespace Opik
         public global::Opik.OptimizationUpdateStatus? Status { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.JsonListStringJsonConverter))]
+        public global::Opik.JsonListString? Metadata { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -32,15 +39,18 @@ namespace Opik
         /// </summary>
         /// <param name="name"></param>
         /// <param name="status"></param>
+        /// <param name="metadata"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public OptimizationUpdate(
             string? name,
-            global::Opik.OptimizationUpdateStatus? status)
+            global::Opik.OptimizationUpdateStatus? status,
+            global::Opik.JsonListString? metadata)
         {
             this.Name = name;
             this.Status = status;
+            this.Metadata = metadata;
         }
 
         /// <summary>
