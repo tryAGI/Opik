@@ -47,6 +47,7 @@ namespace Opik
         /// <param name="status"></param>
         /// <param name="metadata"></param>
         /// <param name="studioConfig"></param>
+        /// <param name="errorInfo"></param>
         /// <param name="lastUpdatedAt"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -61,6 +62,7 @@ namespace Opik
             global::System.Guid? projectId = default,
             global::Opik.JsonListStringWrite? metadata = default,
             global::Opik.OptimizationStudioConfigWrite? studioConfig = default,
+            global::Opik.ErrorInfoWrite? errorInfo = default,
             global::System.DateTime? lastUpdatedAt = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

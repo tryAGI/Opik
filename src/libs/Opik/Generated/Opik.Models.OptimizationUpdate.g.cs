@@ -24,6 +24,12 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error_info")]
+        public global::Opik.ErrorInfo? ErrorInfo { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.JsonListStringJsonConverter))]
         public global::Opik.JsonListString? Metadata { get; set; }
@@ -39,6 +45,7 @@ namespace Opik
         /// </summary>
         /// <param name="name"></param>
         /// <param name="status"></param>
+        /// <param name="errorInfo"></param>
         /// <param name="metadata"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -46,10 +53,12 @@ namespace Opik
         public OptimizationUpdate(
             string? name,
             global::Opik.OptimizationUpdateStatus? status,
+            global::Opik.ErrorInfo? errorInfo,
             global::Opik.JsonListString? metadata)
         {
             this.Name = name;
             this.Status = status;
+            this.ErrorInfo = errorInfo;
             this.Metadata = metadata;
         }
 

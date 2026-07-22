@@ -3064,599 +3064,599 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OptimizationStudioConfigWrite? Type759 { get; set; }
+        public global::Opik.ErrorInfoWrite? Type759 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioPromptWrite? Type760 { get; set; }
+        public global::Opik.OptimizationStudioConfigWrite? Type760 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioLlmModelWrite? Type761 { get; set; }
+        public global::Opik.StudioPromptWrite? Type761 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioEvaluationWrite? Type762 { get; set; }
+        public global::Opik.StudioLlmModelWrite? Type762 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioOptimizerWrite? Type763 { get; set; }
+        public global::Opik.StudioEvaluationWrite? Type763 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OptimizationWrite? Type764 { get; set; }
+        public global::Opik.StudioOptimizerWrite? Type764 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OptimizationWriteStatus? Type765 { get; set; }
+        public global::Opik.OptimizationWrite? Type765 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.StudioMetricWrite>? Type766 { get; set; }
+        public global::Opik.OptimizationWriteStatus? Type766 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioMetricWrite? Type767 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.StudioMetricWrite>? Type767 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioMessageWrite? Type768 { get; set; }
+        public global::Opik.StudioMetricWrite? Type768 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.StudioMessageWrite>? Type769 { get; set; }
+        public global::Opik.StudioMessageWrite? Type769 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OptimizationPagePublic? Type770 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.StudioMessageWrite>? Type770 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.OptimizationPublic>? Type771 { get; set; }
+        public global::Opik.ErrorInfoPublic? Type771 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OptimizationPublic? Type772 { get; set; }
+        public global::Opik.OptimizationPagePublic? Type772 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OptimizationStudioConfigPublic? Type773 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.OptimizationPublic>? Type773 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioPromptPublic? Type774 { get; set; }
+        public global::Opik.OptimizationPublic? Type774 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioLlmModelPublic? Type775 { get; set; }
+        public global::Opik.OptimizationStudioConfigPublic? Type775 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioEvaluationPublic? Type776 { get; set; }
+        public global::Opik.StudioPromptPublic? Type776 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioOptimizerPublic? Type777 { get; set; }
+        public global::Opik.StudioLlmModelPublic? Type777 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OptimizationPublicStatus? Type778 { get; set; }
+        public global::Opik.StudioEvaluationPublic? Type778 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.StudioMetricPublic>? Type779 { get; set; }
+        public global::Opik.StudioOptimizerPublic? Type779 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioMetricPublic? Type780 { get; set; }
+        public global::Opik.OptimizationPublicStatus? Type780 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.StudioMessagePublic? Type781 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.StudioMetricPublic>? Type781 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.StudioMessagePublic>? Type782 { get; set; }
+        public global::Opik.StudioMetricPublic? Type782 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OptimizationStudioLog? Type783 { get; set; }
+        public global::Opik.StudioMessagePublic? Type783 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OptimizationUpdate? Type784 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.StudioMessagePublic>? Type784 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OptimizationUpdateStatus? Type785 { get; set; }
+        public global::Opik.OptimizationStudioLog? Type785 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ActivateRequest? Type786 { get; set; }
+        public global::Opik.OptimizationUpdate? Type786 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.CreateSessionResponse? Type787 { get; set; }
+        public global::Opik.OptimizationUpdateStatus? Type787 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.CreateSessionRequest? Type788 { get; set; }
+        public global::Opik.ActivateRequest? Type788 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.CreateSessionRequestType? Type789 { get; set; }
+        public global::Opik.CreateSessionResponse? Type789 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptPagePublic? Type790 { get; set; }
+        public global::Opik.CreateSessionRequest? Type790 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.PromptPublic>? Type791 { get; set; }
+        public global::Opik.CreateSessionRequestType? Type791 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptPublic? Type792 { get; set; }
+        public global::Opik.PromptPagePublic? Type792 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptPublicTemplateStructure? Type793 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.PromptPublic>? Type793 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ErrorCountWithDeviation? Type794 { get; set; }
+        public global::Opik.PromptPublic? Type794 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.Project? Type795 { get; set; }
+        public global::Opik.PromptPublicTemplateStructure? Type795 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectVisibility? Type796 { get; set; }
+        public global::Opik.ErrorCountWithDeviation? Type796 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectWrite? Type797 { get; set; }
+        public global::Opik.Project? Type797 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectWriteVisibility? Type798 { get; set; }
+        public global::Opik.ProjectVisibility? Type798 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectPagePublic? Type799 { get; set; }
+        public global::Opik.ProjectWrite? Type799 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.ProjectPublic>? Type800 { get; set; }
+        public global::Opik.ProjectWriteVisibility? Type800 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectPublic? Type801 { get; set; }
+        public global::Opik.ProjectPagePublic? Type801 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectPublicVisibility? Type802 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.ProjectPublic>? Type802 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.FeedbackScoreNames? Type803 { get; set; }
+        public global::Opik.ProjectPublic? Type803 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.ScoreName>? Type804 { get; set; }
+        public global::Opik.ProjectPublicVisibility? Type804 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ScoreName? Type805 { get; set; }
+        public global::Opik.FeedbackScoreNames? Type805 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.TokenUsageNames? Type806 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.ScoreName>? Type806 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.KpiCardResponse? Type807 { get; set; }
+        public global::Opik.ScoreName? Type807 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.KpiMetric>? Type808 { get; set; }
+        public global::Opik.TokenUsageNames? Type808 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.KpiMetric? Type809 { get; set; }
+        public global::Opik.KpiCardResponse? Type809 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.KpiMetricType? Type810 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.KpiMetric>? Type810 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.KpiCardRequest? Type811 { get; set; }
+        public global::Opik.KpiMetric? Type811 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.KpiCardRequestEntityType? Type812 { get; set; }
+        public global::Opik.KpiMetricType? Type812 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.DataPointNumberPublic? Type813 { get; set; }
+        public global::Opik.KpiCardRequest? Type813 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectMetricResponsePublic? Type814 { get; set; }
+        public global::Opik.KpiCardRequestEntityType? Type814 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectMetricResponsePublicMetricType? Type815 { get; set; }
+        public global::Opik.DataPointNumberPublic? Type815 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectMetricResponsePublicInterval? Type816 { get; set; }
+        public global::Opik.ProjectMetricResponsePublic? Type816 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.ResultsNumberPublic>? Type817 { get; set; }
+        public global::Opik.ProjectMetricResponsePublicMetricType? Type817 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ResultsNumberPublic? Type818 { get; set; }
+        public global::Opik.ProjectMetricResponsePublicInterval? Type818 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.DataPointNumberPublic>? Type819 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.ResultsNumberPublic>? Type819 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.BreakdownConfigPublic? Type820 { get; set; }
+        public global::Opik.ResultsNumberPublic? Type820 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.BreakdownConfigPublicField? Type821 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.DataPointNumberPublic>? Type821 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectMetricRequestPublic? Type822 { get; set; }
+        public global::Opik.BreakdownConfigPublic? Type822 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectMetricRequestPublicMetricType? Type823 { get; set; }
+        public global::Opik.BreakdownConfigPublicField? Type823 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectMetricRequestPublicInterval? Type824 { get; set; }
+        public global::Opik.ProjectMetricRequestPublic? Type824 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectStatsSummary? Type825 { get; set; }
+        public global::Opik.ProjectMetricRequestPublicMetricType? Type825 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.ProjectStatsSummaryItem>? Type826 { get; set; }
+        public global::Opik.ProjectMetricRequestPublicInterval? Type826 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectStatsSummaryItem? Type827 { get; set; }
+        public global::Opik.ProjectStatsSummary? Type827 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ErrorCountWithDeviationDetailed? Type828 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.ProjectStatsSummaryItem>? Type828 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.FeedbackScoreAverageDetailed? Type829 { get; set; }
+        public global::Opik.ProjectStatsSummaryItem? Type829 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PercentageValuesDetailed? Type830 { get; set; }
+        public global::Opik.ErrorCountWithDeviationDetailed? Type830 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectDetailed? Type831 { get; set; }
+        public global::Opik.FeedbackScoreAverageDetailed? Type831 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectDetailedVisibility? Type832 { get; set; }
+        public global::Opik.PercentageValuesDetailed? Type832 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.FeedbackScoreAverageDetailed>? Type833 { get; set; }
+        public global::Opik.ProjectDetailed? Type833 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ErrorMessageDetailed? Type834 { get; set; }
+        public global::Opik.ProjectDetailedVisibility? Type834 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectRetrieveDetailed? Type835 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.FeedbackScoreAverageDetailed>? Type835 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectUpdate? Type836 { get; set; }
+        public global::Opik.ErrorMessageDetailed? Type836 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ProjectUpdateVisibility? Type837 { get; set; }
+        public global::Opik.ProjectRetrieveDetailed? Type837 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.Prompt? Type838 { get; set; }
+        public global::Opik.ProjectUpdate? Type838 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptType? Type839 { get; set; }
+        public global::Opik.ProjectUpdateVisibility? Type839 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptTemplateStructure? Type840 { get; set; }
+        public global::Opik.Prompt? Type840 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersion? Type841 { get; set; }
+        public global::Opik.PromptType? Type841 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionType? Type842 { get; set; }
+        public global::Opik.PromptTemplateStructure? Type842 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionVersionType? Type843 { get; set; }
+        public global::Opik.PromptVersion? Type843 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionTemplateStructure? Type844 { get; set; }
+        public global::Opik.PromptVersionType? Type844 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptWrite? Type845 { get; set; }
+        public global::Opik.PromptVersionVersionType? Type845 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptWriteType? Type846 { get; set; }
+        public global::Opik.PromptVersionTemplateStructure? Type846 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptWriteTemplateStructure? Type847 { get; set; }
+        public global::Opik.PromptWrite? Type847 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.JsonNodeDetail? Type848 { get; set; }
+        public global::Opik.PromptWriteType? Type848 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionDetail? Type849 { get; set; }
+        public global::Opik.PromptWriteTemplateStructure? Type849 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionDetailType? Type850 { get; set; }
+        public global::Opik.JsonNodeDetail? Type850 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionDetailVersionType? Type851 { get; set; }
+        public global::Opik.PromptVersionDetail? Type851 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionDetailTemplateStructure? Type852 { get; set; }
+        public global::Opik.PromptVersionDetailType? Type852 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ErrorMessageDetail? Type853 { get; set; }
+        public global::Opik.PromptVersionDetailVersionType? Type853 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.CreatePromptVersionDetail? Type854 { get; set; }
+        public global::Opik.PromptVersionDetailTemplateStructure? Type854 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.CreatePromptVersionDetailTemplateStructure? Type855 { get; set; }
+        public global::Opik.ErrorMessageDetail? Type855 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptDetail? Type856 { get; set; }
+        public global::Opik.CreatePromptVersionDetail? Type856 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptDetailTemplateStructure? Type857 { get; set; }
+        public global::Opik.CreatePromptVersionDetailTemplateStructure? Type857 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionPagePublic? Type858 { get; set; }
+        public global::Opik.PromptDetail? Type858 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.PromptVersionPublic>? Type859 { get; set; }
+        public global::Opik.PromptDetailTemplateStructure? Type859 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionPublic? Type860 { get; set; }
+        public global::Opik.PromptVersionPagePublic? Type860 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionPublicType? Type861 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.PromptVersionPublic>? Type861 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionPublicVersionType? Type862 { get; set; }
+        public global::Opik.PromptVersionPublic? Type862 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionPublicTemplateStructure? Type863 { get; set; }
+        public global::Opik.PromptVersionPublicType? Type863 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionCommitsRequestPublic? Type864 { get; set; }
+        public global::Opik.PromptVersionPublicVersionType? Type864 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionRetrieveDetail? Type865 { get; set; }
+        public global::Opik.PromptVersionPublicTemplateStructure? Type865 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionIdsRequestDetail? Type866 { get; set; }
+        public global::Opik.PromptVersionCommitsRequestPublic? Type866 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionEnvironmentUpdate? Type867 { get; set; }
+        public global::Opik.PromptVersionRetrieveDetail? Type867 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptUpdatable? Type868 { get; set; }
+        public global::Opik.PromptVersionIdsRequestDetail? Type868 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionBatchUpdate? Type869 { get; set; }
+        public global::Opik.PromptVersionEnvironmentUpdate? Type869 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.PromptVersionUpdate? Type870 { get; set; }
+        public global::Opik.PromptUpdatable? Type870 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.RecentActivityItemPublic? Type871 { get; set; }
+        public global::Opik.PromptVersionBatchUpdate? Type871 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.RecentActivityItemPublicType? Type872 { get; set; }
+        public global::Opik.PromptVersionUpdate? Type872 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.RecentActivityPagePublic? Type873 { get; set; }
+        public global::Opik.RecentActivityItemPublic? Type873 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.RecentActivityItemPublic>? Type874 { get; set; }
+        public global::Opik.RecentActivityItemPublicType? Type874 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ReportFailure? Type875 { get; set; }
+        public global::Opik.RecentActivityPagePublic? Type875 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ReportFailureType? Type876 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.RecentActivityItemPublic>? Type876 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ReportFailurePage? Type877 { get; set; }
+        public global::Opik.ReportFailure? Type877 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.ReportFailure>? Type878 { get; set; }
+        public global::Opik.ReportFailureType? Type878 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ReportCompleteRequest? Type879 { get; set; }
+        public global::Opik.ReportFailurePage? Type879 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ReportCompleteRequestStatus? Type880 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.ReportFailure>? Type880 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.GenerateReportResponse? Type881 { get; set; }
+        public global::Opik.ReportCompleteRequest? Type881 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ReportPreference? Type882 { get; set; }
+        public global::Opik.ReportCompleteRequestStatus? Type882 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OllieReport? Type883 { get; set; }
+        public global::Opik.GenerateReportResponse? Type883 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OllieReportStatus? Type884 { get; set; }
+        public global::Opik.ReportPreference? Type884 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.OllieReportPage? Type885 { get; set; }
+        public global::Opik.OllieReport? Type885 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.OllieReport>? Type886 { get; set; }
+        public global::Opik.OllieReportStatus? Type886 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.RetentionRulePublic? Type887 { get; set; }
+        public global::Opik.OllieReportPage? Type887 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.RetentionRulePublicLevel? Type888 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.OllieReport>? Type888 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.RetentionRulePublicRetention? Type889 { get; set; }
+        public global::Opik.RetentionRulePublic? Type889 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.RetentionRuleWrite? Type890 { get; set; }
+        public global::Opik.RetentionRulePublicLevel? Type890 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.RetentionRuleWriteRetention? Type891 { get; set; }
+        public global::Opik.RetentionRulePublicRetention? Type891 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.RetentionRulePagePublic? Type892 { get; set; }
+        public global::Opik.RetentionRuleWrite? Type892 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.RetentionRulePublic>? Type893 { get; set; }
+        public global::Opik.RetentionRuleWriteRetention? Type893 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ServiceTogglesConfig? Type894 { get; set; }
+        public global::Opik.RetentionRulePagePublic? Type894 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.SpanBatchUpdate? Type895 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.RetentionRulePublic>? Type895 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.SpanUpdate? Type896 { get; set; }
+        public global::Opik.ServiceTogglesConfig? Type896 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.SpanUpdateType? Type897 { get; set; }
+        public global::Opik.SpanBatchUpdate? Type897 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.SpanUpdateSource? Type898 { get; set; }
+        public global::Opik.SpanUpdate? Type898 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ErrorInfoWrite? Type899 { get; set; }
+        public global::Opik.SpanUpdateType? Type899 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.SpanWrite? Type900 { get; set; }
+        public global::Opik.SpanUpdateSource? Type900 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.SpanWriteType? Type901 { get; set; }
+        public global::Opik.SpanWrite? Type901 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.SpanWriteSource? Type902 { get; set; }
+        public global::Opik.SpanWriteType? Type902 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.SpanBatch? Type903 { get; set; }
+        public global::Opik.SpanWriteSource? Type903 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.SpanBatchWrite? Type904 { get; set; }
+        public global::Opik.SpanBatch? Type904 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.SpanWrite>? Type905 { get; set; }
+        public global::Opik.SpanBatchWrite? Type905 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.DeleteFeedbackScore? Type906 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.SpanWrite>? Type906 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Opik.ErrorInfoPublic? Type907 { get; set; }
+        public global::Opik.DeleteFeedbackScore? Type907 { get; set; }
         /// <summary>
         /// 
         /// </summary>
