@@ -68,6 +68,12 @@ namespace Opik
         public global::Opik.OptimizationStudioConfig? StudioConfig { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error_info")]
+        public global::Opik.ErrorInfo? ErrorInfo { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dataset_id")]
@@ -179,6 +185,7 @@ namespace Opik
         /// </param>
         /// <param name="metadata"></param>
         /// <param name="studioConfig"></param>
+        /// <param name="errorInfo"></param>
         /// <param name="datasetId">
         /// Included only in responses
         /// </param>
@@ -235,6 +242,7 @@ namespace Opik
             global::System.Guid? projectId,
             global::Opik.JsonListString? metadata,
             global::Opik.OptimizationStudioConfig? studioConfig,
+            global::Opik.ErrorInfo? errorInfo,
             global::System.Guid? datasetId,
             long? numTrials,
             global::System.Collections.Generic.IList<global::Opik.FeedbackScoreAverage>? feedbackScores,
@@ -260,6 +268,7 @@ namespace Opik
             this.Status = status;
             this.Metadata = metadata;
             this.StudioConfig = studioConfig;
+            this.ErrorInfo = errorInfo;
             this.DatasetId = datasetId;
             this.NumTrials = numTrials;
             this.FeedbackScores = feedbackScores;

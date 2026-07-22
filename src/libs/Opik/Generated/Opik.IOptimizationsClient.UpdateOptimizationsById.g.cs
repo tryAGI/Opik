@@ -41,6 +41,7 @@ namespace Opik
         /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="status"></param>
+        /// <param name="errorInfo"></param>
         /// <param name="metadata"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -49,6 +50,7 @@ namespace Opik
             global::System.Guid id,
             string? name = default,
             global::Opik.OptimizationUpdateStatus? status = default,
+            global::Opik.ErrorInfo? errorInfo = default,
             global::Opik.JsonListString? metadata = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

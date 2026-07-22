@@ -70,6 +70,12 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error_info")]
+        public global::Opik.ErrorInfoWrite? ErrorInfo { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last_updated_at")]
         public global::System.DateTime? LastUpdatedAt { get; set; }
 
@@ -95,6 +101,7 @@ namespace Opik
         /// </param>
         /// <param name="metadata"></param>
         /// <param name="studioConfig"></param>
+        /// <param name="errorInfo"></param>
         /// <param name="lastUpdatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -109,6 +116,7 @@ namespace Opik
             global::System.Guid? projectId,
             global::Opik.JsonListStringWrite? metadata,
             global::Opik.OptimizationStudioConfigWrite? studioConfig,
+            global::Opik.ErrorInfoWrite? errorInfo,
             global::System.DateTime? lastUpdatedAt)
         {
             this.Id = id;
@@ -120,6 +128,7 @@ namespace Opik
             this.Status = status;
             this.Metadata = metadata;
             this.StudioConfig = studioConfig;
+            this.ErrorInfo = errorInfo;
             this.LastUpdatedAt = lastUpdatedAt;
         }
 
