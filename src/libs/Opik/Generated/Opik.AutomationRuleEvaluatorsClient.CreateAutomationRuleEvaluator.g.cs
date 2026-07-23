@@ -438,6 +438,9 @@ namespace Opik
         /// <param name="name"></param>
         /// <param name="samplingRate"></param>
         /// <param name="enabled"></param>
+        /// <param name="triggerScope">
+        /// Controls whether the rule fires on production traces, experiment traces, or both. Defaults to 'production' if omitted.
+        /// </param>
         /// <param name="action"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -448,6 +451,7 @@ namespace Opik
             global::System.Collections.Generic.IList<global::System.Guid>? projectIds = default,
             float? samplingRate = default,
             bool? enabled = default,
+            global::Opik.AutomationRuleEvaluatorWriteTriggerScope? triggerScope = default,
             global::Opik.AutomationRuleEvaluatorWriteAction action = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -459,6 +463,7 @@ namespace Opik
                 Name = name,
                 SamplingRate = samplingRate,
                 Enabled = enabled,
+                TriggerScope = triggerScope,
                 Action = action,
             };
 
