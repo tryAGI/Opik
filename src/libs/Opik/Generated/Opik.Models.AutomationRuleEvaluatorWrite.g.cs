@@ -50,6 +50,13 @@ namespace Opik
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// Controls whether the rule fires on production traces, experiment traces, or both. Defaults to 'production' if omitted.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trigger_scope")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeJsonConverter))]
+        public global::Opik.AutomationRuleEvaluatorWriteTriggerScope? TriggerScope { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
@@ -74,6 +81,9 @@ namespace Opik
         /// </param>
         /// <param name="samplingRate"></param>
         /// <param name="enabled"></param>
+        /// <param name="triggerScope">
+        /// Controls whether the rule fires on production traces, experiment traces, or both. Defaults to 'production' if omitted.
+        /// </param>
         /// <param name="action"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -84,6 +94,7 @@ namespace Opik
             global::System.Collections.Generic.IList<global::System.Guid>? projectIds,
             float? samplingRate,
             bool? enabled,
+            global::Opik.AutomationRuleEvaluatorWriteTriggerScope? triggerScope,
             global::Opik.AutomationRuleEvaluatorWriteAction action)
         {
             this.ProjectId = projectId;
@@ -91,6 +102,7 @@ namespace Opik
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SamplingRate = samplingRate;
             this.Enabled = enabled;
+            this.TriggerScope = triggerScope;
             this.Action = action;
         }
 

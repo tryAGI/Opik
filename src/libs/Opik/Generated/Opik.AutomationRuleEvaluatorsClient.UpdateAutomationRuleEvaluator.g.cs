@@ -442,6 +442,7 @@ namespace Opik
         /// <param name="name"></param>
         /// <param name="samplingRate"></param>
         /// <param name="enabled"></param>
+        /// <param name="triggerScope"></param>
         /// <param name="projectId">
         /// Primary project ID (legacy field, maintained for backwards compatibility)
         /// </param>
@@ -457,6 +458,7 @@ namespace Opik
             string name,
             float? samplingRate = default,
             bool? enabled = default,
+            global::Opik.AutomationRuleEvaluatorUpdateTriggerScope? triggerScope = default,
             global::System.Guid? projectId = default,
             global::System.Collections.Generic.IList<global::System.Guid>? projectIds = default,
             global::Opik.AutomationRuleEvaluatorUpdateAction action = default,
@@ -468,6 +470,7 @@ namespace Opik
                 Name = name,
                 SamplingRate = samplingRate,
                 Enabled = enabled,
+                TriggerScope = triggerScope,
                 ProjectId = projectId,
                 ProjectIds = projectIds,
                 Action = action,

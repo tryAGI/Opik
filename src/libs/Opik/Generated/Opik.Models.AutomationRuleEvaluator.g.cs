@@ -70,6 +70,13 @@ namespace Opik
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// Controls whether the rule fires on production traces, experiment traces, or both. Defaults to 'production' if omitted.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trigger_scope")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeJsonConverter))]
+        public global::Opik.AutomationRuleEvaluatorTriggerScope? TriggerScope { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -129,6 +136,9 @@ namespace Opik
         /// </param>
         /// <param name="samplingRate"></param>
         /// <param name="enabled"></param>
+        /// <param name="triggerScope">
+        /// Controls whether the rule fires on production traces, experiment traces, or both. Defaults to 'production' if omitted.
+        /// </param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -154,6 +164,7 @@ namespace Opik
             global::System.Collections.Generic.IList<global::System.Guid>? projectIds,
             float? samplingRate,
             bool? enabled,
+            global::Opik.AutomationRuleEvaluatorTriggerScope? triggerScope,
             global::System.DateTime? createdAt,
             string? createdBy,
             global::System.DateTime? lastUpdatedAt,
@@ -168,6 +179,7 @@ namespace Opik
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SamplingRate = samplingRate;
             this.Enabled = enabled;
+            this.TriggerScope = triggerScope;
             this.CreatedAt = createdAt;
             this.CreatedBy = createdBy;
             this.LastUpdatedAt = lastUpdatedAt;

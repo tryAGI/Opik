@@ -38,6 +38,13 @@ namespace Opik
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trigger_scope")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeJsonConverter))]
+        public global::Opik.AutomationRuleEvaluatorUpdateTriggerScope? TriggerScope { get; set; }
+
+        /// <summary>
         /// Primary project ID (legacy field, maintained for backwards compatibility)
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
@@ -68,6 +75,7 @@ namespace Opik
         /// <param name="name"></param>
         /// <param name="samplingRate"></param>
         /// <param name="enabled"></param>
+        /// <param name="triggerScope"></param>
         /// <param name="projectId">
         /// Primary project ID (legacy field, maintained for backwards compatibility)
         /// </param>
@@ -82,6 +90,7 @@ namespace Opik
             string name,
             float? samplingRate,
             bool? enabled,
+            global::Opik.AutomationRuleEvaluatorUpdateTriggerScope? triggerScope,
             global::System.Guid? projectId,
             global::System.Collections.Generic.IList<global::System.Guid>? projectIds,
             global::Opik.AutomationRuleEvaluatorUpdateAction action)
@@ -89,6 +98,7 @@ namespace Opik
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SamplingRate = samplingRate;
             this.Enabled = enabled;
+            this.TriggerScope = triggerScope;
             this.ProjectId = projectId;
             this.ProjectIds = projectIds;
             this.Action = action;

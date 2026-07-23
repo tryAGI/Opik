@@ -145,6 +145,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeNullableJsonConverter),
@@ -176,6 +180,10 @@ namespace Opik
             typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorJsonConverter),
 
             typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeJsonConverter),
 
@@ -209,6 +217,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.TraceThreadFilterWriteOperatorNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeNullableJsonConverter),
@@ -241,6 +253,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.TraceThreadFilterPublicOperatorNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeNullableJsonConverter),
@@ -256,6 +272,10 @@ namespace Opik
             typeof(global::Opik.JsonConverters.LogItemLevelJsonConverter),
 
             typeof(global::Opik.JsonConverters.LogItemLevelNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeJsonConverter),
 
@@ -1150,6 +1170,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ProjectReference>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectReference))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(float))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorTriggerScope), TypeInfoPropertyName = "AutomationRuleEvaluatorTriggerScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorType), TypeInfoPropertyName = "AutomationRuleEvaluatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorAction), TypeInfoPropertyName = "AutomationRuleEvaluatorAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorDiscriminator))]
@@ -1218,6 +1239,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUserDefinedMetricPythonWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUserDefinedMetricPythonWriteVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UserDefinedMetricPythonCodeWrite))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorWriteTriggerScope), TypeInfoPropertyName = "AutomationRuleEvaluatorWriteTriggerScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorWriteType), TypeInfoPropertyName = "AutomationRuleEvaluatorWriteType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorWriteAction), TypeInfoPropertyName = "AutomationRuleEvaluatorWriteAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorWriteDiscriminator))]
@@ -1247,6 +1269,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ProjectReferencePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectReferencePublic))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicTriggerScope), TypeInfoPropertyName = "AutomationRuleEvaluatorObjectObjectPublicTriggerScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicType), TypeInfoPropertyName = "AutomationRuleEvaluatorObjectObjectPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicAction), TypeInfoPropertyName = "AutomationRuleEvaluatorObjectObjectPublicAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicDiscriminator))]
@@ -1287,6 +1310,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterPublicOperator), TypeInfoPropertyName = "SpanFilterPublicOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceFilterPublicOperator), TypeInfoPropertyName = "TraceFilterPublicOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadFilterPublicOperator), TypeInfoPropertyName = "TraceThreadFilterPublicOperator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorPublicTriggerScope), TypeInfoPropertyName = "AutomationRuleEvaluatorPublicTriggerScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorPublicType), TypeInfoPropertyName = "AutomationRuleEvaluatorPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorPublicAction), TypeInfoPropertyName = "AutomationRuleEvaluatorPublicAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorPublicDiscriminator))]
@@ -1296,6 +1320,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LogPage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.LogItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUpdate))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUpdateTriggerScope), TypeInfoPropertyName = "AutomationRuleEvaluatorUpdateTriggerScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUpdateType), TypeInfoPropertyName = "AutomationRuleEvaluatorUpdateType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUpdateAction), TypeInfoPropertyName = "AutomationRuleEvaluatorUpdateAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUpdateDiscriminator))]
@@ -1474,11 +1499,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ExperimentItemPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Opik.ExperimentRunSummaryPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentRunSummaryPublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemPublicTraceVisibilityMode), TypeInfoPropertyName = "ExperimentItemPublicTraceVisibilityMode2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentRunSummaryPublicStatus), TypeInfoPropertyName = "ExperimentRunSummaryPublicStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ColumnPublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ColumnPublicType>))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1622,6 +1642,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeNullableJsonConverter),
@@ -1653,6 +1677,10 @@ namespace Opik
             typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorJsonConverter),
 
             typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeJsonConverter),
 
@@ -1686,6 +1714,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.TraceThreadFilterWriteOperatorNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeNullableJsonConverter),
@@ -1718,6 +1750,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.TraceThreadFilterPublicOperatorNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeNullableJsonConverter),
@@ -1733,6 +1769,10 @@ namespace Opik
             typeof(global::Opik.JsonConverters.LogItemLevelJsonConverter),
 
             typeof(global::Opik.JsonConverters.LogItemLevelNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeJsonConverter),
 
@@ -2456,6 +2496,11 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentRunSummaryPublic))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemPublicTraceVisibilityMode), TypeInfoPropertyName = "ExperimentItemPublicTraceVisibilityMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentRunSummaryPublicStatus), TypeInfoPropertyName = "ExperimentRunSummaryPublicStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ColumnPublic))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ColumnPublicType>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ColumnPublicType), TypeInfoPropertyName = "ColumnPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DatasetItemPagePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.DatasetItemPublic>))]
@@ -2951,11 +2996,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromJsonRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromJsonRequestFormat), TypeInfoPropertyName = "CreateDatasetItemsFromJsonRequestFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.LocalRunnerLogEntry>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesStatus), TypeInfoPropertyName = "FindAgentInsightsIssuesStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesSeverity), TypeInfoPropertyName = "FindAgentInsightsIssuesSeverity2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetWebhookExamplesAlertType), TypeInfoPropertyName = "GetWebhookExamplesAlertType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentListEntityType), TypeInfoPropertyName = "AttachmentListEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DownloadAttachmentEntityType), TypeInfoPropertyName = "DownloadAttachmentEntityType2")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3099,6 +3139,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeNullableJsonConverter),
@@ -3130,6 +3174,10 @@ namespace Opik
             typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorJsonConverter),
 
             typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeJsonConverter),
 
@@ -3163,6 +3211,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.TraceThreadFilterWriteOperatorNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeNullableJsonConverter),
@@ -3195,6 +3247,10 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.TraceThreadFilterPublicOperatorNullableJsonConverter),
 
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeNullableJsonConverter),
+
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeNullableJsonConverter),
@@ -3210,6 +3266,10 @@ namespace Opik
             typeof(global::Opik.JsonConverters.LogItemLevelJsonConverter),
 
             typeof(global::Opik.JsonConverters.LogItemLevelNullableJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeJsonConverter),
+
+            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeNullableJsonConverter),
 
             typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeJsonConverter),
 
@@ -3933,6 +3993,11 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesStatus), TypeInfoPropertyName = "FindAgentInsightsIssuesStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesSeverity), TypeInfoPropertyName = "FindAgentInsightsIssuesSeverity2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetWebhookExamplesAlertType), TypeInfoPropertyName = "GetWebhookExamplesAlertType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentListEntityType), TypeInfoPropertyName = "AttachmentListEntityType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DownloadAttachmentEntityType), TypeInfoPropertyName = "DownloadAttachmentEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UploadAttachmentEntityType), TypeInfoPropertyName = "UploadAttachmentEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindFeedbackDefinitionsType), TypeInfoPropertyName = "FindFeedbackDefinitionsType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ListRunnersStatus), TypeInfoPropertyName = "ListRunnersStatus2")]
@@ -3998,6 +4063,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DeleteAttachmentsRequestEntityType?), TypeInfoPropertyName = "NullableDeleteAttachmentsRequestEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.StartMultipartUploadRequestEntityType?), TypeInfoPropertyName = "NullableStartMultipartUploadRequestEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(float?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorTriggerScope?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorTriggerScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorAction?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorDiscriminatorType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorDiscriminatorType2")]
@@ -4006,6 +4072,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterOperator?), TypeInfoPropertyName = "NullableSpanFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceFilterOperator?), TypeInfoPropertyName = "NullableTraceFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadFilterOperator?), TypeInfoPropertyName = "NullableTraceThreadFilterOperator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorWriteTriggerScope?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorWriteTriggerScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorWriteType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorWriteType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorWriteAction?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorWriteAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorWriteDiscriminatorType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorWriteDiscriminatorType2")]
@@ -4014,6 +4081,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterWriteOperator?), TypeInfoPropertyName = "NullableSpanFilterWriteOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceFilterWriteOperator?), TypeInfoPropertyName = "NullableTraceFilterWriteOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadFilterWriteOperator?), TypeInfoPropertyName = "NullableTraceThreadFilterWriteOperator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicTriggerScope?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorObjectObjectPublicTriggerScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorObjectObjectPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicAction?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorObjectObjectPublicAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorObjectObjectPublicDiscriminatorType2")]
@@ -4022,10 +4090,12 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterPublicOperator?), TypeInfoPropertyName = "NullableSpanFilterPublicOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceFilterPublicOperator?), TypeInfoPropertyName = "NullableTraceFilterPublicOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadFilterPublicOperator?), TypeInfoPropertyName = "NullableTraceThreadFilterPublicOperator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorPublicTriggerScope?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorPublicTriggerScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorPublicType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorPublicAction?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorPublicAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorPublicDiscriminatorType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorPublicDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LogItemLevel?), TypeInfoPropertyName = "NullableLogItemLevel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUpdateTriggerScope?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorUpdateTriggerScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUpdateType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorUpdateType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUpdateAction?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorUpdateAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorUpdateDiscriminatorType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorUpdateDiscriminatorType2")]
@@ -4490,6 +4560,8 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorActionJsonConverter());
@@ -4506,6 +4578,8 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.TraceFilterOperatorNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterOperatorJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionJsonConverter());
@@ -4522,6 +4596,8 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.TraceFilterWriteOperatorNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterWriteOperatorJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterWriteOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionJsonConverter());
@@ -4538,6 +4614,8 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.TraceFilterPublicOperatorNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterPublicOperatorJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterPublicOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionJsonConverter());
@@ -4546,6 +4624,8 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.LogItemLevelJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.LogItemLevelNullableJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeJsonConverter());
+            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionJsonConverter());
