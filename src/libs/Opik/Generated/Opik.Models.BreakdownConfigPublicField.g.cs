@@ -19,6 +19,10 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        GuardrailName,
+        /// <summary>
+        /// 
+        /// </summary>
         Metadata,
         /// <summary>
         /// 
@@ -60,6 +64,7 @@ namespace Opik
             {
                 BreakdownConfigPublicField.ErrorInfo => "error_info",
                 BreakdownConfigPublicField.ErrorType => "error_type",
+                BreakdownConfigPublicField.GuardrailName => "guardrail_name",
                 BreakdownConfigPublicField.Metadata => "metadata",
                 BreakdownConfigPublicField.Model => "model",
                 BreakdownConfigPublicField.Name => "name",
@@ -79,6 +84,7 @@ namespace Opik
             {
                 "error_info" => BreakdownConfigPublicField.ErrorInfo,
                 "error_type" => BreakdownConfigPublicField.ErrorType,
+                "guardrail_name" => BreakdownConfigPublicField.GuardrailName,
                 "metadata" => BreakdownConfigPublicField.Metadata,
                 "model" => BreakdownConfigPublicField.Model,
                 "name" => BreakdownConfigPublicField.Name,
