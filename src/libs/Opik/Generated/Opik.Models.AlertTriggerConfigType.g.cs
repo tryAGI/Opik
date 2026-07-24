@@ -11,6 +11,10 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        Filter_guardrailType,
+        /// <summary>
+        /// 
+        /// </summary>
         Scope_project,
         /// <summary>
         /// 
@@ -42,6 +46,7 @@ namespace Opik
         {
             return value switch
             {
+                AlertTriggerConfigType.Filter_guardrailType => "filter:guardrail_type",
                 AlertTriggerConfigType.Scope_project => "scope:project",
                 AlertTriggerConfigType.Threshold_cost => "threshold:cost",
                 AlertTriggerConfigType.Threshold_errors => "threshold:errors",
@@ -57,6 +62,7 @@ namespace Opik
         {
             return value switch
             {
+                "filter:guardrail_type" => AlertTriggerConfigType.Filter_guardrailType,
                 "scope:project" => AlertTriggerConfigType.Scope_project,
                 "threshold:cost" => AlertTriggerConfigType.Threshold_cost,
                 "threshold:errors" => AlertTriggerConfigType.Threshold_errors,
