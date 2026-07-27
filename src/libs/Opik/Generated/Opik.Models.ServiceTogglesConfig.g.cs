@@ -179,13 +179,6 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("agentInsightsEnabled")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool AgentInsightsEnabled { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("onlineScoringTracingEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OnlineScoringTracingEnabled { get; set; }
@@ -262,7 +255,6 @@ namespace Opik
         /// <param name="ollieEnabled"></param>
         /// <param name="projectHomepageEnabled"></param>
         /// <param name="agenticToolsEnabled"></param>
-        /// <param name="agentInsightsEnabled"></param>
         /// <param name="onlineScoringTracingEnabled"></param>
         /// <param name="v2WorkspaceAllowlistIds"></param>
         /// <param name="v1WorkspaceAllowlistIds"></param>
@@ -302,7 +294,6 @@ namespace Opik
             bool ollieEnabled,
             bool projectHomepageEnabled,
             bool agenticToolsEnabled,
-            bool agentInsightsEnabled,
             bool onlineScoringTracingEnabled,
             global::System.Collections.Generic.IList<string> v2WorkspaceAllowlistIds,
             global::System.Collections.Generic.IList<string> v1WorkspaceAllowlistIds,
@@ -335,7 +326,6 @@ namespace Opik
             this.OllieEnabled = ollieEnabled;
             this.ProjectHomepageEnabled = projectHomepageEnabled;
             this.AgenticToolsEnabled = agenticToolsEnabled;
-            this.AgentInsightsEnabled = agentInsightsEnabled;
             this.OnlineScoringTracingEnabled = onlineScoringTracingEnabled;
             this.V2WorkspaceAllowlistIds = v2WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v2WorkspaceAllowlistIds));
             this.V1WorkspaceAllowlistIds = v1WorkspaceAllowlistIds ?? throw new global::System.ArgumentNullException(nameof(v1WorkspaceAllowlistIds));

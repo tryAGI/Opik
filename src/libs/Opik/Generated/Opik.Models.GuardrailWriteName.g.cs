@@ -11,7 +11,19 @@ namespace Opik
         /// <summary>
         /// 
         /// </summary>
+        CustomClassifier,
+        /// <summary>
+        /// 
+        /// </summary>
+        LlmJudge,
+        /// <summary>
+        /// 
+        /// </summary>
         Pii,
+        /// <summary>
+        /// 
+        /// </summary>
+        PromptInjection,
         /// <summary>
         /// 
         /// </summary>
@@ -30,7 +42,10 @@ namespace Opik
         {
             return value switch
             {
+                GuardrailWriteName.CustomClassifier => "CUSTOM_CLASSIFIER",
+                GuardrailWriteName.LlmJudge => "LLM_JUDGE",
                 GuardrailWriteName.Pii => "PII",
+                GuardrailWriteName.PromptInjection => "PROMPT_INJECTION",
                 GuardrailWriteName.Topic => "TOPIC",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -42,7 +57,10 @@ namespace Opik
         {
             return value switch
             {
+                "CUSTOM_CLASSIFIER" => GuardrailWriteName.CustomClassifier,
+                "LLM_JUDGE" => GuardrailWriteName.LlmJudge,
                 "PII" => GuardrailWriteName.Pii,
+                "PROMPT_INJECTION" => GuardrailWriteName.PromptInjection,
                 "TOPIC" => GuardrailWriteName.Topic,
                 _ => null,
             };
