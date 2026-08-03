@@ -40,11 +40,11 @@ namespace Opik
             };
         partial void PrepareDeleteTracesArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Opik.BatchDelete request);
+            global::Opik.BatchDeleteByProject request);
         partial void PrepareDeleteTracesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Opik.BatchDelete request);
+            global::Opik.BatchDeleteByProject request);
         partial void ProcessDeleteTracesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -59,7 +59,7 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         public async global::System.Threading.Tasks.Task DeleteTracesAsync(
 
-            global::Opik.BatchDelete request,
+            global::Opik.BatchDeleteByProject request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -80,7 +80,7 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse> DeleteTracesAsResponseAsync(
 
-            global::Opik.BatchDelete request,
+            global::Opik.BatchDeleteByProject request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -345,6 +345,43 @@ namespace Opik
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
+                            // Unprocessable Content
+                            if ((int)__response.StatusCode == 422)
+                            {
+                                string? __content_422 = null;
+                                global::System.Exception? __exception_422 = null;
+                                global::Opik.ErrorMessage? __value_422 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_422 = global::Opik.ErrorMessage.FromJson(__content_422, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_422 = global::Opik.ErrorMessage.FromJson(__content_422, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_422 = __ex;
+                                }
+
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_422,
+                                    responseBody: __content_422,
+                                    responseObject: __value_422,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -429,18 +466,25 @@ namespace Opik
         /// Delete traces<br/>
         /// Delete traces
         /// </summary>
-        /// <param name="ids"></param>
+        /// <param name="ids">
+        /// Ids of the traces to delete
+        /// </param>
+        /// <param name="projectId">
+        /// Optional. Scopes the deletion to this project. When omitted, each trace's owning project is resolved automatically and the trace is deleted under its full key, so a trace can be deleted without knowing its project.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task DeleteTracesAsync(
             global::System.Collections.Generic.IList<global::System.Guid> ids,
+            global::System.Guid? projectId = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.BatchDelete
+            var __request = new global::Opik.BatchDeleteByProject
             {
                 Ids = ids,
+                ProjectId = projectId,
             };
 
             await DeleteTracesAsync(
