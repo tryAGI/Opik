@@ -917,10 +917,6 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalNullableJsonConverter),
 
-            typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionNullableJsonConverter),
-
             typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter),
 
             typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter),
@@ -2414,10 +2410,6 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalNullableJsonConverter),
 
-            typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionNullableJsonConverter),
-
             typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter),
 
             typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter),
@@ -2988,14 +2980,14 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequestMetricType), TypeInfoPropertyName = "WorkspaceSpanMetricRequestMetricType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequestInterval), TypeInfoPropertyName = "WorkspaceSpanMetricRequestInterval2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceTokenUsageNamesRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceVersion))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceVersionOpikVersion), TypeInfoPropertyName = "WorkspaceVersionOpikVersion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceMetricsSummaryResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RevokeRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TokenRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromCsvRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromJsonRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromJsonRequestFormat), TypeInfoPropertyName = "CreateDatasetItemsFromJsonRequestFormat2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.LocalRunnerLogEntry>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesStatus), TypeInfoPropertyName = "FindAgentInsightsIssuesStatus2")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3911,10 +3903,6 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalNullableJsonConverter),
 
-            typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceVersionOpikVersionNullableJsonConverter),
-
             typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter),
 
             typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter),
@@ -3993,8 +3981,6 @@ namespace Opik
 
             typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.LocalRunnerLogEntry>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesStatus), TypeInfoPropertyName = "FindAgentInsightsIssuesStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesSeverity), TypeInfoPropertyName = "FindAgentInsightsIssuesSeverity2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetWebhookExamplesAlertType), TypeInfoPropertyName = "GetWebhookExamplesAlertType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentListEntityType), TypeInfoPropertyName = "AttachmentListEntityType2")]
@@ -4262,7 +4248,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BreakdownConfigField?), TypeInfoPropertyName = "NullableBreakdownConfigField2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequestMetricType?), TypeInfoPropertyName = "NullableWorkspaceSpanMetricRequestMetricType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequestInterval?), TypeInfoPropertyName = "NullableWorkspaceSpanMetricRequestInterval2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceVersionOpikVersion?), TypeInfoPropertyName = "NullableWorkspaceVersionOpikVersion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromJsonRequestFormat?), TypeInfoPropertyName = "NullableCreateDatasetItemsFromJsonRequestFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesStatus?), TypeInfoPropertyName = "NullableFindAgentInsightsIssuesStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesSeverity?), TypeInfoPropertyName = "NullableFindAgentInsightsIssuesSeverity2")]
@@ -4947,8 +4932,6 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.WorkspaceVersionOpikVersionJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.WorkspaceVersionOpikVersionNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.FindAgentInsightsIssuesStatusJsonConverter());

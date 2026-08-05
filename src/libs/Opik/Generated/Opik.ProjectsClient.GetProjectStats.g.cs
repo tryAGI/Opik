@@ -44,6 +44,8 @@ namespace Opik
             ref int? size,
             ref string? name,
             ref string? filters,
+            ref global::System.DateTime? fromTime,
+            ref global::System.DateTime? toTime,
             ref string? sorting);
         partial void PrepareGetProjectStatsRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -52,6 +54,8 @@ namespace Opik
             int? size,
             string? name,
             string? filters,
+            global::System.DateTime? fromTime,
+            global::System.DateTime? toTime,
             string? sorting);
         partial void ProcessGetProjectStatsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -76,6 +80,12 @@ namespace Opik
         /// Filter projects by name (partial match, case insensitive)
         /// </param>
         /// <param name="filters"></param>
+        /// <param name="fromTime">
+        /// When set, scope the project metrics from this time (ISO-8601 format); omitted keeps the all-time aggregates
+        /// </param>
+        /// <param name="toTime">
+        /// Scope the project metrics up to this time (ISO-8601 format). Must be after 'from_time'.
+        /// </param>
         /// <param name="sorting"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -85,6 +95,8 @@ namespace Opik
             int? size = default,
             string? name = default,
             string? filters = default,
+            global::System.DateTime? fromTime = default,
+            global::System.DateTime? toTime = default,
             string? sorting = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -94,6 +106,8 @@ namespace Opik
                 size: size,
                 name: name,
                 filters: filters,
+                fromTime: fromTime,
+                toTime: toTime,
                 sorting: sorting,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
@@ -115,6 +129,12 @@ namespace Opik
         /// Filter projects by name (partial match, case insensitive)
         /// </param>
         /// <param name="filters"></param>
+        /// <param name="fromTime">
+        /// When set, scope the project metrics from this time (ISO-8601 format); omitted keeps the all-time aggregates
+        /// </param>
+        /// <param name="toTime">
+        /// Scope the project metrics up to this time (ISO-8601 format). Must be after 'from_time'.
+        /// </param>
         /// <param name="sorting"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -124,6 +144,8 @@ namespace Opik
             int? size = default,
             string? name = default,
             string? filters = default,
+            global::System.DateTime? fromTime = default,
+            global::System.DateTime? toTime = default,
             string? sorting = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -136,6 +158,8 @@ namespace Opik
                 size: ref size,
                 name: ref name,
                 filters: ref filters,
+                fromTime: ref fromTime,
+                toTime: ref toTime,
                 sorting: ref sorting);
 
 
@@ -171,6 +195,8 @@ namespace Opik
                                 .AddOptionalParameter("size", size?.ToString())
                                 .AddOptionalParameter("name", name)
                                 .AddOptionalParameter("filters", filters)
+                                .AddOptionalParameter("from_time", fromTime?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("to_time", toTime?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("sorting", sorting)
                                 ;
                             var __path = __pathBuilder.ToString();
@@ -217,6 +243,8 @@ namespace Opik
                     size: size,
                     name: name,
                     filters: filters,
+                    fromTime: fromTime,
+                    toTime: toTime,
                     sorting: sorting);
 
                 return __httpRequest;
