@@ -13,987 +13,6 @@ namespace Opik
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
         Converters = new global::System.Type[]
         {
-            typeof(global::Opik.JsonConverters.AgentBlueprintWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValuePublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValuePublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintHistoryTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintHistoryTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportedIssueSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportedIssueSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerEventTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerEventTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerWriteEventTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerWriteEventTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertWriteAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertWriteAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerPublicEventTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerPublicEventTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertPublicAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertPublicAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WebhookTestResultStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WebhookTestResultStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueWriteScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueWriteScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueuePublicScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueuePublicScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterWriteOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterWriteOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterWriteOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterWriteOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterWriteOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterWriteOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterPublicOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterPublicOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterPublicOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterPublicOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterPublicOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterPublicOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LogItemLevelJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LogItemLevelNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssistantMessageRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssistantMessageRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolCallTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolCallTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ResponseFormatTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ResponseFormatTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardUpdatePublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardUpdatePublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemTraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemTraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntrySourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntrySourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemWriteSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemWriteSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnCompareTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnCompareTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemCompareSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemCompareSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemCompareTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemCompareTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareTraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareTraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryCompareStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryCompareStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreCompareSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreCompareSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryCompareSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryCompareSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetExportJobPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetExportJobPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemPublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemPublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemPublicTraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemPublicTraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetUpdateVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetUpdateVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentEvaluationMethodJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentEvaluationMethodNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteEvaluationMethodJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteEvaluationMethodNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicEvaluationMethodJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicEvaluationMethodNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyPublicProviderJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyPublicProviderNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyProviderJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyProviderNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyWriteProviderJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyWriteProviderNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandSubmitRequestTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandSubmitRequestTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ParamPresenceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ParamPresenceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandItemTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandItemTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandResultRequestStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandResultRequestStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobResultRequestStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobResultRequestStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ManualEvaluationRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ManualEvaluationRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationWriteStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationWriteStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateSessionRequestTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateSessionRequestTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptPublicTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptPublicTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectWriteVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectWriteVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectPublicVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectPublicVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiCardRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiCardRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicIntervalJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicIntervalNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigPublicFieldJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigPublicFieldNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectDetailedVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectDetailedVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectUpdateVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectUpdateVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptDetailTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptDetailTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RecentActivityItemPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RecentActivityItemPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportFailureTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportFailureTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OllieReportStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OllieReportStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicLevelJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicLevelNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicRetentionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicRetentionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRuleWriteRetentionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRuleWriteRetentionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScorePublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScorePublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryPublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryPublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceUpdateSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceUpdateSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceWriteSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceWriteSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigFieldJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigFieldNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AttachmentListEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AttachmentListEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DownloadAttachmentEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DownloadAttachmentEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.UploadAttachmentEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.UploadAttachmentEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackDefinitionsTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackDefinitionsTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ListRunnersStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ListRunnersStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindReportFailuresTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindReportFailuresTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpansByProjectTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpansByProjectTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackScoreNames1TypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackScoreNames1TypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpanStatsTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpanStatsTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringCompareJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringWriteJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringExperimentItemBulkWriteViewJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringPublicJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.DatasetItem, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.ExperimentItem, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.ExperimentPublic, global::Opik.ErrorMessagePublic>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.SpanPublic, global::Opik.ErrorMessagePublic>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.TraceThread, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.TracePublic, global::Opik.ErrorMessagePublic>),
-
-            typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
@@ -1506,987 +525,6 @@ namespace Opik
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
         Converters = new global::System.Type[]
         {
-            typeof(global::Opik.JsonConverters.AgentBlueprintWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValuePublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValuePublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintHistoryTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintHistoryTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportedIssueSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportedIssueSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerEventTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerEventTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerWriteEventTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerWriteEventTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertWriteAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertWriteAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerPublicEventTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerPublicEventTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertPublicAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertPublicAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WebhookTestResultStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WebhookTestResultStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueWriteScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueWriteScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueuePublicScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueuePublicScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterWriteOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterWriteOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterWriteOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterWriteOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterWriteOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterWriteOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterPublicOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterPublicOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterPublicOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterPublicOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterPublicOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterPublicOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LogItemLevelJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LogItemLevelNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssistantMessageRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssistantMessageRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolCallTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolCallTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ResponseFormatTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ResponseFormatTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardUpdatePublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardUpdatePublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemTraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemTraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntrySourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntrySourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemWriteSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemWriteSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnCompareTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnCompareTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemCompareSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemCompareSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemCompareTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemCompareTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareTraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareTraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryCompareStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryCompareStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreCompareSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreCompareSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryCompareSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryCompareSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetExportJobPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetExportJobPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemPublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemPublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemPublicTraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemPublicTraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetUpdateVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetUpdateVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentEvaluationMethodJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentEvaluationMethodNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteEvaluationMethodJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteEvaluationMethodNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicEvaluationMethodJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicEvaluationMethodNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyPublicProviderJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyPublicProviderNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyProviderJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyProviderNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyWriteProviderJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyWriteProviderNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandSubmitRequestTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandSubmitRequestTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ParamPresenceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ParamPresenceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandItemTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandItemTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandResultRequestStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandResultRequestStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobResultRequestStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobResultRequestStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ManualEvaluationRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ManualEvaluationRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationWriteStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationWriteStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateSessionRequestTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateSessionRequestTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptPublicTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptPublicTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectWriteVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectWriteVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectPublicVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectPublicVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiCardRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiCardRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicIntervalJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicIntervalNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigPublicFieldJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigPublicFieldNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectDetailedVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectDetailedVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectUpdateVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectUpdateVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptDetailTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptDetailTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RecentActivityItemPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RecentActivityItemPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportFailureTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportFailureTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OllieReportStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OllieReportStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicLevelJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicLevelNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicRetentionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicRetentionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRuleWriteRetentionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRuleWriteRetentionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScorePublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScorePublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryPublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryPublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceUpdateSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceUpdateSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceWriteSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceWriteSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigFieldJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigFieldNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AttachmentListEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AttachmentListEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DownloadAttachmentEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DownloadAttachmentEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.UploadAttachmentEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.UploadAttachmentEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackDefinitionsTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackDefinitionsTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ListRunnersStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ListRunnersStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindReportFailuresTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindReportFailuresTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpansByProjectTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpansByProjectTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackScoreNames1TypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackScoreNames1TypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpanStatsTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpanStatsTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringCompareJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringWriteJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringExperimentItemBulkWriteViewJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringPublicJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.DatasetItem, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.ExperimentItem, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.ExperimentPublic, global::Opik.ErrorMessagePublic>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.SpanPublic, global::Opik.ErrorMessagePublic>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.TraceThread, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.TracePublic, global::Opik.ErrorMessagePublic>),
-
-            typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentRunSummaryPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemPublicTraceVisibilityMode), TypeInfoPropertyName = "ExperimentItemPublicTraceVisibilityMode2")]
@@ -2999,987 +1037,6 @@ namespace Opik
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
         Converters = new global::System.Type[]
         {
-            typeof(global::Opik.JsonConverters.AgentBlueprintWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValuePublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValuePublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintHistoryTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentBlueprintHistoryTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentConfigValueHistoryTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsJobUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportedIssueSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportedIssueSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AgentInsightsIssueUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerEventTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerEventTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerWriteEventTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerWriteEventTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertWriteAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertWriteAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerConfigPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerPublicEventTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertTriggerPublicEventTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertPublicAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AlertPublicAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WebhookTestResultStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WebhookTestResultStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueWriteScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueueWriteScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueuePublicScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnnotationQueuePublicScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssertionResultBatchItemSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterWriteOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterWriteOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterWriteOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterWriteOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterWriteOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterWriteOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LlmAsJudgeOutputSchemaPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterPublicOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanFilterPublicOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterPublicOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceFilterPublicOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterPublicOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadFilterPublicOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LogItemLevelJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LogItemLevelNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssistantMessageRoleJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AssistantMessageRoleNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolCallTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolCallTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ResponseFormatTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ResponseFormatTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ToolTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicScopeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardPublicScopeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardUpdatePublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DashboardUpdatePublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemFilterOperatorJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemFilterOperatorNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetWriteVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemTraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemTraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntrySourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntrySourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemWriteSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemWriteSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnCompareTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnCompareTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemCompareSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemCompareSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemCompareTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.EvaluatorItemCompareTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareTraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareTraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemCompareStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryCompareStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryCompareStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreCompareSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreCompareSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryCompareSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryCompareSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectStatItemObjectPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetExportJobPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetExportJobPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemPublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetItemPublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemPublicTraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentItemPublicTraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentRunSummaryPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ColumnTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetUpdateVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DatasetUpdateVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentEvaluationMethodJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentEvaluationMethodNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteEvaluationMethodJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteEvaluationMethodNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentWriteStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryExperimentItemBulkWriteViewSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryExperimentItemBulkWriteViewSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicEvaluationMethodJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicEvaluationMethodNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ExperimentPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackCreateDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackObjectPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackPublicDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GuardrailWriteResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyPublicProviderJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyPublicProviderNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyProviderJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyProviderNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyWriteProviderJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProviderApiKeyWriteProviderNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandSubmitRequestTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandSubmitRequestTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ParamPresenceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ParamPresenceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandItemTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandItemTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandResultRequestStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BridgeCommandResultRequestStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobResultRequestStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.LocalRunnerJobResultRequestStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ManualEvaluationRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ManualEvaluationRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationWriteStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationWriteStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationPublicStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationPublicStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationUpdateStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OptimizationUpdateStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateSessionRequestTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateSessionRequestTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptPublicTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptPublicTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectWriteVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectWriteVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectPublicVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectPublicVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiCardRequestEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.KpiCardRequestEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicIntervalJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricResponsePublicIntervalNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigPublicFieldJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigPublicFieldNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectDetailedVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectDetailedVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectUpdateVisibilityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ProjectUpdateVisibilityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptWriteTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionDetailTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptDetailTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptDetailTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicVersionTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTemplateStructureJsonConverter),
-
-            typeof(global::Opik.JsonConverters.PromptVersionPublicTemplateStructureNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RecentActivityItemPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RecentActivityItemPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportFailureTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportFailureTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ReportCompleteRequestStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OllieReportStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.OllieReportStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicLevelJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicLevelNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicRetentionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRulePublicRetentionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRuleWriteRetentionJsonConverter),
-
-            typeof(global::Opik.JsonConverters.RetentionRuleWriteRetentionNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanUpdateSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanWriteSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScorePublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScorePublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanPublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryPublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ValueEntryPublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemJsonConverter),
-
-            typeof(global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceUpdateSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceUpdateSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceWriteSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceWriteSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicNameJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicNameNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicResultJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CheckPublicResultNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicVisibilityModeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicVisibilityModeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TracePublicSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceThreadStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemJsonConverter),
-
-            typeof(global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigFieldJsonConverter),
-
-            typeof(global::Opik.JsonConverters.BreakdownConfigFieldNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalJsonConverter),
-
-            typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter),
-
-            typeof(global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesSeverityJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindAgentInsightsIssuesSeverityNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetWebhookExamplesAlertTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AttachmentListEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AttachmentListEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DownloadAttachmentEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.DownloadAttachmentEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.UploadAttachmentEntityTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.UploadAttachmentEntityTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackDefinitionsTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackDefinitionsTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ListRunnersStatusJsonConverter),
-
-            typeof(global::Opik.JsonConverters.ListRunnersStatusNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindReportFailuresTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindReportFailuresTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpansByProjectTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpansByProjectTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackScoreNames1TypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.FindFeedbackScoreNames1TypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpanStatsTypeJsonConverter),
-
-            typeof(global::Opik.JsonConverters.GetSpanStatsTypeNullableJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringCompareJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringWriteJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringExperimentItemBulkWriteViewJsonConverter),
-
-            typeof(global::Opik.JsonConverters.JsonListStringPublicJsonConverter),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.ChatCompletionResponse, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.DatasetItem, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.ExperimentItem, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.ExperimentPublic, global::Opik.ErrorMessagePublic>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.SpanPublic, global::Opik.ErrorMessagePublic>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.TraceThread, global::Opik.ErrorMessage>),
-
-            typeof(global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.TracePublic, global::Opik.ErrorMessagePublic>),
-
-            typeof(global::Opik.JsonConverters.UnixTimestampJsonConverter),
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesSeverity), TypeInfoPropertyName = "FindAgentInsightsIssuesSeverity2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetWebhookExamplesAlertType), TypeInfoPropertyName = "GetWebhookExamplesAlertType2")]
@@ -4444,13 +1501,7 @@ namespace Opik
     /// </summary>
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
-        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = global::System.Text.Json.Serialization.Metadata.JsonTypeInfoResolver.Combine(
-            SourceGenerationContextChunk0.Default,
-
-            SourceGenerationContextChunk1.Default,
-
-            SourceGenerationContextChunk2.Default
-            );
+        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
 
@@ -4480,484 +1531,6 @@ namespace Opik
                 DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
                 TypeInfoResolver = Resolver,
             };
-            options.Converters.Add(new global::Opik.JsonConverters.AgentBlueprintWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentBlueprintWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentConfigValueWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentConfigValueWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentBlueprintPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentBlueprintPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentConfigValuePublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentConfigValuePublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentBlueprintHistoryTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentBlueprintHistoryTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentConfigValueHistoryTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentConfigValueHistoryTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsJobStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsJobStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsJobUpdateStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsJobUpdateStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueSeverityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueSeverityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ReportedIssueSeverityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ReportedIssueSeverityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueUpdateStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AgentInsightsIssueUpdateStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertAlertTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertAlertTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerEventTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerConfigTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerConfigTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerConfigWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerConfigWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerWriteEventTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerWriteEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertWriteAlertTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertWriteAlertTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerConfigPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerConfigPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerPublicEventTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertTriggerPublicEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertPublicAlertTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AlertPublicAlertTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.WebhookTestResultStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.WebhookTestResultStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AnnotationQueueScopeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AnnotationQueueScopeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AnnotationQueueWriteScopeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AnnotationQueueWriteScopeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AnnotationQueuePublicScopeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AnnotationQueuePublicScopeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AssertionResultBatchEntityTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AssertionResultBatchEntityTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AssertionResultBatchItemStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AssertionResultBatchItemStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AssertionResultBatchItemSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AssertionResultBatchItemSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorActionJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorActionNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeMessageRoleJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeMessageRoleNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanFilterOperatorJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanFilterOperatorNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceFilterOperatorJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceFilterOperatorNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterOperatorJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterOperatorNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanFilterWriteOperatorJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanFilterWriteOperatorNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceFilterWriteOperatorJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceFilterWriteOperatorNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterWriteOperatorJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterWriteOperatorNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanFilterPublicOperatorJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanFilterPublicOperatorNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceFilterPublicOperatorJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceFilterPublicOperatorNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterPublicOperatorJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceThreadFilterPublicOperatorNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LogItemLevelJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LogItemLevelNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AssistantMessageRoleJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AssistantMessageRoleNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ToolCallTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ToolCallTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ResponseFormatTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ResponseFormatTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ToolTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ToolTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DashboardPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DashboardPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DashboardPublicScopeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DashboardPublicScopeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DashboardWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DashboardWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DashboardUpdatePublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DashboardUpdatePublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.EvaluatorItemPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.EvaluatorItemPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetItemFilterOperatorJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetItemFilterOperatorNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.EvaluatorItemTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.EvaluatorItemTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetVisibilityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetWriteVisibilityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetWriteVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetItemSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetItemSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentItemTraceVisibilityModeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentItemTraceVisibilityModeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentItemStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentItemStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentRunSummaryStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentRunSummaryStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScoreSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScoreSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ValueEntrySourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ValueEntrySourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetItemWriteSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetItemWriteSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.EvaluatorItemWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.EvaluatorItemWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ColumnCompareTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ColumnCompareTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetItemCompareSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetItemCompareSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.EvaluatorItemCompareTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.EvaluatorItemCompareTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentItemCompareTraceVisibilityModeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentItemCompareTraceVisibilityModeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentItemCompareStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentItemCompareStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentRunSummaryCompareStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentRunSummaryCompareStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScoreCompareSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScoreCompareSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ValueEntryCompareSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ValueEntryCompareSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetPublicVisibilityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetPublicVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetPublicStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetPublicStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectStatItemObjectPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectStatItemObjectPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectStatItemObjectPublicDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectStatItemObjectPublicDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetExportJobPublicStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetExportJobPublicStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetItemPublicSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetItemPublicSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentItemPublicTraceVisibilityModeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentItemPublicTraceVisibilityModeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentRunSummaryPublicStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentRunSummaryPublicStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ColumnPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ColumnPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ColumnTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ColumnTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetUpdateVisibilityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DatasetUpdateVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentUpdateTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentUpdateTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentUpdateStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentUpdateStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentEvaluationMethodJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentEvaluationMethodNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentWriteEvaluationMethodJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentWriteEvaluationMethodNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentWriteStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentWriteStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CheckNameJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CheckNameNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CheckResultJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CheckResultNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceVisibilityModeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceVisibilityModeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScoreExperimentItemBulkWriteViewSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScoreExperimentItemBulkWriteViewSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceExperimentItemBulkWriteViewSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceExperimentItemBulkWriteViewSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ValueEntryExperimentItemBulkWriteViewSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ValueEntryExperimentItemBulkWriteViewSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentPublicEvaluationMethodJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentPublicEvaluationMethodNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentPublicStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ExperimentPublicStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackCreateTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackCreateTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackCreateDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackCreateDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackObjectPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackObjectPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackObjectPublicDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackObjectPublicDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackPublicDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackPublicDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackUpdateTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackUpdateTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GuardrailNameJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GuardrailNameNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GuardrailResultJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GuardrailResultNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GuardrailWriteNameJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GuardrailWriteNameNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GuardrailWriteResultJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GuardrailWriteResultNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProviderApiKeyPublicProviderJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProviderApiKeyPublicProviderNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProviderApiKeyProviderJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProviderApiKeyProviderNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProviderApiKeyWriteProviderJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProviderApiKeyWriteProviderNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BridgeCommandSubmitRequestTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BridgeCommandSubmitRequestTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BridgeCommandTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BridgeCommandTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BridgeCommandStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BridgeCommandStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LocalRunnerJobStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LocalRunnerJobStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LocalRunnerStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LocalRunnerStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LocalRunnerTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LocalRunnerTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ParamPresenceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ParamPresenceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BridgeCommandItemTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BridgeCommandItemTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BridgeCommandResultRequestStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BridgeCommandResultRequestStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LocalRunnerJobResultRequestStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.LocalRunnerJobResultRequestStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ManualEvaluationRequestEntityTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ManualEvaluationRequestEntityTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.OptimizationStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.OptimizationStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.OptimizationWriteStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.OptimizationWriteStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.OptimizationPublicStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.OptimizationPublicStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.OptimizationUpdateStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.OptimizationUpdateStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CreateSessionRequestTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CreateSessionRequestTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptPublicTemplateStructureJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptPublicTemplateStructureNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectVisibilityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectWriteVisibilityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectWriteVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectPublicVisibilityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectPublicVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.KpiMetricTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.KpiMetricTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.KpiCardRequestEntityTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.KpiCardRequestEntityTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectMetricResponsePublicIntervalJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectMetricResponsePublicIntervalNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BreakdownConfigPublicFieldJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BreakdownConfigPublicFieldNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectDetailedVisibilityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectDetailedVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectUpdateVisibilityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ProjectUpdateVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptTemplateStructureJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptTemplateStructureNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionVersionTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionVersionTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionTemplateStructureJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionTemplateStructureNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptWriteTemplateStructureJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptWriteTemplateStructureNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailVersionTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailTemplateStructureJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionDetailTemplateStructureNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptDetailTemplateStructureJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptDetailTemplateStructureNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicVersionTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicVersionTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicTemplateStructureJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.PromptVersionPublicTemplateStructureNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.RecentActivityItemPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.RecentActivityItemPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ReportFailureTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ReportFailureTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ReportCompleteRequestStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ReportCompleteRequestStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.OllieReportStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.OllieReportStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.RetentionRulePublicLevelJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.RetentionRulePublicLevelNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.RetentionRulePublicRetentionJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.RetentionRulePublicRetentionNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.RetentionRuleWriteRetentionJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.RetentionRuleWriteRetentionNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanUpdateTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanUpdateTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanUpdateSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanUpdateSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanWriteTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanWriteTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanWriteSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanWriteSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScorePublicSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScorePublicSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanPublicSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanPublicSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ValueEntryPublicSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ValueEntryPublicSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScoreBatchItemSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScoreBatchItemSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceUpdateSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceUpdateSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceWriteSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceWriteSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CheckPublicNameJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CheckPublicNameNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CheckPublicResultJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CheckPublicResultNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TracePublicVisibilityModeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TracePublicVisibilityModeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TracePublicSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TracePublicSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceThreadStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceThreadStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BreakdownConfigFieldJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.BreakdownConfigFieldNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FindAgentInsightsIssuesStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FindAgentInsightsIssuesStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FindAgentInsightsIssuesSeverityJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FindAgentInsightsIssuesSeverityNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GetWebhookExamplesAlertTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GetWebhookExamplesAlertTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AttachmentListEntityTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.AttachmentListEntityTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DownloadAttachmentEntityTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.DownloadAttachmentEntityTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.UploadAttachmentEntityTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.UploadAttachmentEntityTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FindFeedbackDefinitionsTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FindFeedbackDefinitionsTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ListRunnersStatusJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.ListRunnersStatusNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FindReportFailuresTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FindReportFailuresTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GetSpansByProjectTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GetSpansByProjectTypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FindFeedbackScoreNames1TypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.FindFeedbackScoreNames1TypeNullableJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GetSpanStatsTypeJsonConverter());
-            options.Converters.Add(new global::Opik.JsonConverters.GetSpanStatsTypeNullableJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.JsonListStringJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.JsonListStringCompareJsonConverter());
             options.Converters.Add(new global::Opik.JsonConverters.JsonListStringWriteJsonConverter());
@@ -4972,7 +1545,3418 @@ namespace Opik
             options.Converters.Add(new global::Opik.JsonConverters.AnyOfJsonConverter<global::Opik.TracePublic, global::Opik.ErrorMessagePublic>());
             options.Converters.Add(new global::Opik.JsonConverters.UnixTimestampJsonConverter());
 
+            options.Converters.Add(new LazyEnumJsonConverterFactory());
+
             return options;
+        }
+
+
+        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
+        {
+            public override bool CanConvert(global::System.Type typeToConvert)
+            {
+                return
+                    typeToConvert == typeof(global::Opik.AgentBlueprintWriteType)
+
+                    || typeToConvert == typeof(global::Opik.AgentBlueprintWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.AgentConfigValueWriteType)
+
+                    || typeToConvert == typeof(global::Opik.AgentConfigValueWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.AgentBlueprintPublicType)
+
+                    || typeToConvert == typeof(global::Opik.AgentBlueprintPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.AgentConfigValuePublicType)
+
+                    || typeToConvert == typeof(global::Opik.AgentConfigValuePublicType?)
+
+                    || typeToConvert == typeof(global::Opik.AgentBlueprintHistoryType)
+
+                    || typeToConvert == typeof(global::Opik.AgentBlueprintHistoryType?)
+
+                    || typeToConvert == typeof(global::Opik.AgentConfigValueHistoryType)
+
+                    || typeToConvert == typeof(global::Opik.AgentConfigValueHistoryType?)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsJobStatus)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsJobStatus?)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsJobUpdateStatus)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsJobUpdateStatus?)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsIssueStatus)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsIssueStatus?)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsIssueSeverity)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsIssueSeverity?)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsIssueWithDetailsStatus)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsIssueWithDetailsStatus?)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsIssueWithDetailsSeverity)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsIssueWithDetailsSeverity?)
+
+                    || typeToConvert == typeof(global::Opik.ReportedIssueSeverity)
+
+                    || typeToConvert == typeof(global::Opik.ReportedIssueSeverity?)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsIssueUpdateStatus)
+
+                    || typeToConvert == typeof(global::Opik.AgentInsightsIssueUpdateStatus?)
+
+                    || typeToConvert == typeof(global::Opik.AlertAlertType)
+
+                    || typeToConvert == typeof(global::Opik.AlertAlertType?)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerEventType)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerEventType?)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerConfigType)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerConfigType?)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerConfigWriteType)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerConfigWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerWriteEventType)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerWriteEventType?)
+
+                    || typeToConvert == typeof(global::Opik.AlertWriteAlertType)
+
+                    || typeToConvert == typeof(global::Opik.AlertWriteAlertType?)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerConfigPublicType)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerConfigPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerPublicEventType)
+
+                    || typeToConvert == typeof(global::Opik.AlertTriggerPublicEventType?)
+
+                    || typeToConvert == typeof(global::Opik.AlertPublicAlertType)
+
+                    || typeToConvert == typeof(global::Opik.AlertPublicAlertType?)
+
+                    || typeToConvert == typeof(global::Opik.WebhookTestResultStatus)
+
+                    || typeToConvert == typeof(global::Opik.WebhookTestResultStatus?)
+
+                    || typeToConvert == typeof(global::Opik.AnnotationQueueScope)
+
+                    || typeToConvert == typeof(global::Opik.AnnotationQueueScope?)
+
+                    || typeToConvert == typeof(global::Opik.AnnotationQueueWriteScope)
+
+                    || typeToConvert == typeof(global::Opik.AnnotationQueueWriteScope?)
+
+                    || typeToConvert == typeof(global::Opik.AnnotationQueuePublicScope)
+
+                    || typeToConvert == typeof(global::Opik.AnnotationQueuePublicScope?)
+
+                    || typeToConvert == typeof(global::Opik.AssertionResultBatchEntityType)
+
+                    || typeToConvert == typeof(global::Opik.AssertionResultBatchEntityType?)
+
+                    || typeToConvert == typeof(global::Opik.AssertionResultBatchItemStatus)
+
+                    || typeToConvert == typeof(global::Opik.AssertionResultBatchItemStatus?)
+
+                    || typeToConvert == typeof(global::Opik.AssertionResultBatchItemSource)
+
+                    || typeToConvert == typeof(global::Opik.AssertionResultBatchItemSource?)
+
+                    || typeToConvert == typeof(global::Opik.CompleteMultipartUploadRequestEntityType)
+
+                    || typeToConvert == typeof(global::Opik.CompleteMultipartUploadRequestEntityType?)
+
+                    || typeToConvert == typeof(global::Opik.DeleteAttachmentsRequestEntityType)
+
+                    || typeToConvert == typeof(global::Opik.DeleteAttachmentsRequestEntityType?)
+
+                    || typeToConvert == typeof(global::Opik.StartMultipartUploadRequestEntityType)
+
+                    || typeToConvert == typeof(global::Opik.StartMultipartUploadRequestEntityType?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorTriggerScope)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorTriggerScope?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorType)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorType?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorAction)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorAction?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeMessageRole)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeMessageRole?)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaType)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaType?)
+
+                    || typeToConvert == typeof(global::Opik.SpanFilterOperator)
+
+                    || typeToConvert == typeof(global::Opik.SpanFilterOperator?)
+
+                    || typeToConvert == typeof(global::Opik.TraceFilterOperator)
+
+                    || typeToConvert == typeof(global::Opik.TraceFilterOperator?)
+
+                    || typeToConvert == typeof(global::Opik.TraceThreadFilterOperator)
+
+                    || typeToConvert == typeof(global::Opik.TraceThreadFilterOperator?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteTriggerScope)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteTriggerScope?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteType)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteAction)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteAction?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeMessageWriteRole)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeMessageWriteRole?)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaWriteType)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.SpanFilterWriteOperator)
+
+                    || typeToConvert == typeof(global::Opik.SpanFilterWriteOperator?)
+
+                    || typeToConvert == typeof(global::Opik.TraceFilterWriteOperator)
+
+                    || typeToConvert == typeof(global::Opik.TraceFilterWriteOperator?)
+
+                    || typeToConvert == typeof(global::Opik.TraceThreadFilterWriteOperator)
+
+                    || typeToConvert == typeof(global::Opik.TraceThreadFilterWriteOperator?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicTriggerScope)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicTriggerScope?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicType)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicAction)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicAction?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeMessagePublicRole)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeMessagePublicRole?)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaPublicType)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.SpanFilterPublicOperator)
+
+                    || typeToConvert == typeof(global::Opik.SpanFilterPublicOperator?)
+
+                    || typeToConvert == typeof(global::Opik.TraceFilterPublicOperator)
+
+                    || typeToConvert == typeof(global::Opik.TraceFilterPublicOperator?)
+
+                    || typeToConvert == typeof(global::Opik.TraceThreadFilterPublicOperator)
+
+                    || typeToConvert == typeof(global::Opik.TraceThreadFilterPublicOperator?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicTriggerScope)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicTriggerScope?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicType)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicAction)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicAction?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.LogItemLevel)
+
+                    || typeToConvert == typeof(global::Opik.LogItemLevel?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateTriggerScope)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateTriggerScope?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateType)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateType?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateAction)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateAction?)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.AssistantMessageRole)
+
+                    || typeToConvert == typeof(global::Opik.AssistantMessageRole?)
+
+                    || typeToConvert == typeof(global::Opik.ToolCallType)
+
+                    || typeToConvert == typeof(global::Opik.ToolCallType?)
+
+                    || typeToConvert == typeof(global::Opik.ResponseFormatType)
+
+                    || typeToConvert == typeof(global::Opik.ResponseFormatType?)
+
+                    || typeToConvert == typeof(global::Opik.ToolType)
+
+                    || typeToConvert == typeof(global::Opik.ToolType?)
+
+                    || typeToConvert == typeof(global::Opik.DashboardPublicType)
+
+                    || typeToConvert == typeof(global::Opik.DashboardPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.DashboardPublicScope)
+
+                    || typeToConvert == typeof(global::Opik.DashboardPublicScope?)
+
+                    || typeToConvert == typeof(global::Opik.DashboardWriteType)
+
+                    || typeToConvert == typeof(global::Opik.DashboardWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.DashboardUpdatePublicType)
+
+                    || typeToConvert == typeof(global::Opik.DashboardUpdatePublicType?)
+
+                    || typeToConvert == typeof(global::Opik.EvaluatorItemPublicType)
+
+                    || typeToConvert == typeof(global::Opik.EvaluatorItemPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetItemFilterOperator)
+
+                    || typeToConvert == typeof(global::Opik.DatasetItemFilterOperator?)
+
+                    || typeToConvert == typeof(global::Opik.EvaluatorItemType)
+
+                    || typeToConvert == typeof(global::Opik.EvaluatorItemType?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetType)
+
+                    || typeToConvert == typeof(global::Opik.DatasetType?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetVisibility)
+
+                    || typeToConvert == typeof(global::Opik.DatasetVisibility?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetStatus)
+
+                    || typeToConvert == typeof(global::Opik.DatasetStatus?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetWriteType)
+
+                    || typeToConvert == typeof(global::Opik.DatasetWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetWriteVisibility)
+
+                    || typeToConvert == typeof(global::Opik.DatasetWriteVisibility?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetItemSource)
+
+                    || typeToConvert == typeof(global::Opik.DatasetItemSource?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentItemTraceVisibilityMode)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentItemTraceVisibilityMode?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentItemStatus)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentItemStatus?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentRunSummaryStatus)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentRunSummaryStatus?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScoreSource)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScoreSource?)
+
+                    || typeToConvert == typeof(global::Opik.ValueEntrySource)
+
+                    || typeToConvert == typeof(global::Opik.ValueEntrySource?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetItemWriteSource)
+
+                    || typeToConvert == typeof(global::Opik.DatasetItemWriteSource?)
+
+                    || typeToConvert == typeof(global::Opik.EvaluatorItemWriteType)
+
+                    || typeToConvert == typeof(global::Opik.EvaluatorItemWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.ColumnCompareType)
+
+                    || typeToConvert == typeof(global::Opik.ColumnCompareType?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetItemCompareSource)
+
+                    || typeToConvert == typeof(global::Opik.DatasetItemCompareSource?)
+
+                    || typeToConvert == typeof(global::Opik.EvaluatorItemCompareType)
+
+                    || typeToConvert == typeof(global::Opik.EvaluatorItemCompareType?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentItemCompareTraceVisibilityMode)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentItemCompareTraceVisibilityMode?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentItemCompareStatus)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentItemCompareStatus?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentRunSummaryCompareStatus)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentRunSummaryCompareStatus?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScoreCompareSource)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScoreCompareSource?)
+
+                    || typeToConvert == typeof(global::Opik.ValueEntryCompareSource)
+
+                    || typeToConvert == typeof(global::Opik.ValueEntryCompareSource?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetPublicType)
+
+                    || typeToConvert == typeof(global::Opik.DatasetPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetPublicVisibility)
+
+                    || typeToConvert == typeof(global::Opik.DatasetPublicVisibility?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetPublicStatus)
+
+                    || typeToConvert == typeof(global::Opik.DatasetPublicStatus?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectStatItemObjectPublicType)
+
+                    || typeToConvert == typeof(global::Opik.ProjectStatItemObjectPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectStatItemObjectPublicDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.ProjectStatItemObjectPublicDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetExportJobPublicStatus)
+
+                    || typeToConvert == typeof(global::Opik.DatasetExportJobPublicStatus?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetItemPublicSource)
+
+                    || typeToConvert == typeof(global::Opik.DatasetItemPublicSource?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentItemPublicTraceVisibilityMode)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentItemPublicTraceVisibilityMode?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentRunSummaryPublicStatus)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentRunSummaryPublicStatus?)
+
+                    || typeToConvert == typeof(global::Opik.ColumnPublicType)
+
+                    || typeToConvert == typeof(global::Opik.ColumnPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.ColumnType)
+
+                    || typeToConvert == typeof(global::Opik.ColumnType?)
+
+                    || typeToConvert == typeof(global::Opik.DatasetUpdateVisibility)
+
+                    || typeToConvert == typeof(global::Opik.DatasetUpdateVisibility?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentUpdateType)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentUpdateType?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentUpdateStatus)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentUpdateStatus?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentType)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentType?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentEvaluationMethod)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentEvaluationMethod?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentStatus)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentStatus?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentWriteType)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentWriteEvaluationMethod)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentWriteEvaluationMethod?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentWriteStatus)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentWriteStatus?)
+
+                    || typeToConvert == typeof(global::Opik.CheckName)
+
+                    || typeToConvert == typeof(global::Opik.CheckName?)
+
+                    || typeToConvert == typeof(global::Opik.CheckResult)
+
+                    || typeToConvert == typeof(global::Opik.CheckResult?)
+
+                    || typeToConvert == typeof(global::Opik.SpanType)
+
+                    || typeToConvert == typeof(global::Opik.SpanType?)
+
+                    || typeToConvert == typeof(global::Opik.SpanSource)
+
+                    || typeToConvert == typeof(global::Opik.SpanSource?)
+
+                    || typeToConvert == typeof(global::Opik.TraceVisibilityMode)
+
+                    || typeToConvert == typeof(global::Opik.TraceVisibilityMode?)
+
+                    || typeToConvert == typeof(global::Opik.TraceSource)
+
+                    || typeToConvert == typeof(global::Opik.TraceSource?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScoreExperimentItemBulkWriteViewSource)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScoreExperimentItemBulkWriteViewSource?)
+
+                    || typeToConvert == typeof(global::Opik.SpanExperimentItemBulkWriteViewType)
+
+                    || typeToConvert == typeof(global::Opik.SpanExperimentItemBulkWriteViewType?)
+
+                    || typeToConvert == typeof(global::Opik.SpanExperimentItemBulkWriteViewSource)
+
+                    || typeToConvert == typeof(global::Opik.SpanExperimentItemBulkWriteViewSource?)
+
+                    || typeToConvert == typeof(global::Opik.TraceExperimentItemBulkWriteViewSource)
+
+                    || typeToConvert == typeof(global::Opik.TraceExperimentItemBulkWriteViewSource?)
+
+                    || typeToConvert == typeof(global::Opik.ValueEntryExperimentItemBulkWriteViewSource)
+
+                    || typeToConvert == typeof(global::Opik.ValueEntryExperimentItemBulkWriteViewSource?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentPublicType)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentPublicEvaluationMethod)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentPublicEvaluationMethod?)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentPublicStatus)
+
+                    || typeToConvert == typeof(global::Opik.ExperimentPublicStatus?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackType)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackType?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackCreateType)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackCreateType?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackCreateDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackCreateDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackObjectPublicType)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackObjectPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackObjectPublicDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackObjectPublicDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackPublicType)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackPublicDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackPublicDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackUpdateType)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackUpdateType?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackUpdateDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackUpdateDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Opik.GuardrailName)
+
+                    || typeToConvert == typeof(global::Opik.GuardrailName?)
+
+                    || typeToConvert == typeof(global::Opik.GuardrailResult)
+
+                    || typeToConvert == typeof(global::Opik.GuardrailResult?)
+
+                    || typeToConvert == typeof(global::Opik.GuardrailWriteName)
+
+                    || typeToConvert == typeof(global::Opik.GuardrailWriteName?)
+
+                    || typeToConvert == typeof(global::Opik.GuardrailWriteResult)
+
+                    || typeToConvert == typeof(global::Opik.GuardrailWriteResult?)
+
+                    || typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider)
+
+                    || typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider?)
+
+                    || typeToConvert == typeof(global::Opik.ProviderApiKeyProvider)
+
+                    || typeToConvert == typeof(global::Opik.ProviderApiKeyProvider?)
+
+                    || typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider)
+
+                    || typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider?)
+
+                    || typeToConvert == typeof(global::Opik.BridgeCommandSubmitRequestType)
+
+                    || typeToConvert == typeof(global::Opik.BridgeCommandSubmitRequestType?)
+
+                    || typeToConvert == typeof(global::Opik.BridgeCommandType)
+
+                    || typeToConvert == typeof(global::Opik.BridgeCommandType?)
+
+                    || typeToConvert == typeof(global::Opik.BridgeCommandStatus)
+
+                    || typeToConvert == typeof(global::Opik.BridgeCommandStatus?)
+
+                    || typeToConvert == typeof(global::Opik.LocalRunnerJobStatus)
+
+                    || typeToConvert == typeof(global::Opik.LocalRunnerJobStatus?)
+
+                    || typeToConvert == typeof(global::Opik.LocalRunnerStatus)
+
+                    || typeToConvert == typeof(global::Opik.LocalRunnerStatus?)
+
+                    || typeToConvert == typeof(global::Opik.LocalRunnerType)
+
+                    || typeToConvert == typeof(global::Opik.LocalRunnerType?)
+
+                    || typeToConvert == typeof(global::Opik.ParamPresence)
+
+                    || typeToConvert == typeof(global::Opik.ParamPresence?)
+
+                    || typeToConvert == typeof(global::Opik.BridgeCommandItemType)
+
+                    || typeToConvert == typeof(global::Opik.BridgeCommandItemType?)
+
+                    || typeToConvert == typeof(global::Opik.BridgeCommandResultRequestStatus)
+
+                    || typeToConvert == typeof(global::Opik.BridgeCommandResultRequestStatus?)
+
+                    || typeToConvert == typeof(global::Opik.LocalRunnerJobResultRequestStatus)
+
+                    || typeToConvert == typeof(global::Opik.LocalRunnerJobResultRequestStatus?)
+
+                    || typeToConvert == typeof(global::Opik.ManualEvaluationRequestEntityType)
+
+                    || typeToConvert == typeof(global::Opik.ManualEvaluationRequestEntityType?)
+
+                    || typeToConvert == typeof(global::Opik.OptimizationStatus)
+
+                    || typeToConvert == typeof(global::Opik.OptimizationStatus?)
+
+                    || typeToConvert == typeof(global::Opik.OptimizationWriteStatus)
+
+                    || typeToConvert == typeof(global::Opik.OptimizationWriteStatus?)
+
+                    || typeToConvert == typeof(global::Opik.OptimizationPublicStatus)
+
+                    || typeToConvert == typeof(global::Opik.OptimizationPublicStatus?)
+
+                    || typeToConvert == typeof(global::Opik.OptimizationUpdateStatus)
+
+                    || typeToConvert == typeof(global::Opik.OptimizationUpdateStatus?)
+
+                    || typeToConvert == typeof(global::Opik.CreateSessionRequestType)
+
+                    || typeToConvert == typeof(global::Opik.CreateSessionRequestType?)
+
+                    || typeToConvert == typeof(global::Opik.PromptPublicTemplateStructure)
+
+                    || typeToConvert == typeof(global::Opik.PromptPublicTemplateStructure?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectVisibility)
+
+                    || typeToConvert == typeof(global::Opik.ProjectVisibility?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectWriteVisibility)
+
+                    || typeToConvert == typeof(global::Opik.ProjectWriteVisibility?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectPublicVisibility)
+
+                    || typeToConvert == typeof(global::Opik.ProjectPublicVisibility?)
+
+                    || typeToConvert == typeof(global::Opik.KpiMetricType)
+
+                    || typeToConvert == typeof(global::Opik.KpiMetricType?)
+
+                    || typeToConvert == typeof(global::Opik.KpiCardRequestEntityType)
+
+                    || typeToConvert == typeof(global::Opik.KpiCardRequestEntityType?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectMetricResponsePublicMetricType)
+
+                    || typeToConvert == typeof(global::Opik.ProjectMetricResponsePublicMetricType?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectMetricResponsePublicInterval)
+
+                    || typeToConvert == typeof(global::Opik.ProjectMetricResponsePublicInterval?)
+
+                    || typeToConvert == typeof(global::Opik.BreakdownConfigPublicField)
+
+                    || typeToConvert == typeof(global::Opik.BreakdownConfigPublicField?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectMetricRequestPublicMetricType)
+
+                    || typeToConvert == typeof(global::Opik.ProjectMetricRequestPublicMetricType?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectMetricRequestPublicInterval)
+
+                    || typeToConvert == typeof(global::Opik.ProjectMetricRequestPublicInterval?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectDetailedVisibility)
+
+                    || typeToConvert == typeof(global::Opik.ProjectDetailedVisibility?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectUpdateVisibility)
+
+                    || typeToConvert == typeof(global::Opik.ProjectUpdateVisibility?)
+
+                    || typeToConvert == typeof(global::Opik.PromptType)
+
+                    || typeToConvert == typeof(global::Opik.PromptType?)
+
+                    || typeToConvert == typeof(global::Opik.PromptTemplateStructure)
+
+                    || typeToConvert == typeof(global::Opik.PromptTemplateStructure?)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionType)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionType?)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionVersionType)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionVersionType?)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionTemplateStructure)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionTemplateStructure?)
+
+                    || typeToConvert == typeof(global::Opik.PromptWriteType)
+
+                    || typeToConvert == typeof(global::Opik.PromptWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.PromptWriteTemplateStructure)
+
+                    || typeToConvert == typeof(global::Opik.PromptWriteTemplateStructure?)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionDetailType)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionDetailType?)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionDetailVersionType)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionDetailVersionType?)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionDetailTemplateStructure)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionDetailTemplateStructure?)
+
+                    || typeToConvert == typeof(global::Opik.CreatePromptVersionDetailTemplateStructure)
+
+                    || typeToConvert == typeof(global::Opik.CreatePromptVersionDetailTemplateStructure?)
+
+                    || typeToConvert == typeof(global::Opik.PromptDetailTemplateStructure)
+
+                    || typeToConvert == typeof(global::Opik.PromptDetailTemplateStructure?)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionPublicType)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionPublicVersionType)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionPublicVersionType?)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionPublicTemplateStructure)
+
+                    || typeToConvert == typeof(global::Opik.PromptVersionPublicTemplateStructure?)
+
+                    || typeToConvert == typeof(global::Opik.RecentActivityItemPublicType)
+
+                    || typeToConvert == typeof(global::Opik.RecentActivityItemPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.ReportFailureType)
+
+                    || typeToConvert == typeof(global::Opik.ReportFailureType?)
+
+                    || typeToConvert == typeof(global::Opik.ReportCompleteRequestStatus)
+
+                    || typeToConvert == typeof(global::Opik.ReportCompleteRequestStatus?)
+
+                    || typeToConvert == typeof(global::Opik.OllieReportStatus)
+
+                    || typeToConvert == typeof(global::Opik.OllieReportStatus?)
+
+                    || typeToConvert == typeof(global::Opik.RetentionRulePublicLevel)
+
+                    || typeToConvert == typeof(global::Opik.RetentionRulePublicLevel?)
+
+                    || typeToConvert == typeof(global::Opik.RetentionRulePublicRetention)
+
+                    || typeToConvert == typeof(global::Opik.RetentionRulePublicRetention?)
+
+                    || typeToConvert == typeof(global::Opik.RetentionRuleWriteRetention)
+
+                    || typeToConvert == typeof(global::Opik.RetentionRuleWriteRetention?)
+
+                    || typeToConvert == typeof(global::Opik.SpanUpdateType)
+
+                    || typeToConvert == typeof(global::Opik.SpanUpdateType?)
+
+                    || typeToConvert == typeof(global::Opik.SpanUpdateSource)
+
+                    || typeToConvert == typeof(global::Opik.SpanUpdateSource?)
+
+                    || typeToConvert == typeof(global::Opik.SpanWriteType)
+
+                    || typeToConvert == typeof(global::Opik.SpanWriteType?)
+
+                    || typeToConvert == typeof(global::Opik.SpanWriteSource)
+
+                    || typeToConvert == typeof(global::Opik.SpanWriteSource?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScorePublicSource)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScorePublicSource?)
+
+                    || typeToConvert == typeof(global::Opik.SpanPublicType)
+
+                    || typeToConvert == typeof(global::Opik.SpanPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.SpanPublicSource)
+
+                    || typeToConvert == typeof(global::Opik.SpanPublicSource?)
+
+                    || typeToConvert == typeof(global::Opik.ValueEntryPublicSource)
+
+                    || typeToConvert == typeof(global::Opik.ValueEntryPublicSource?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScoreBatchItemSource)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScoreBatchItemSource?)
+
+                    || typeToConvert == typeof(global::Opik.SpanSearchStreamRequestPublicType)
+
+                    || typeToConvert == typeof(global::Opik.SpanSearchStreamRequestPublicType?)
+
+                    || typeToConvert == typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem)
+
+                    || typeToConvert == typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem?)
+
+                    || typeToConvert == typeof(global::Opik.TraceUpdateSource)
+
+                    || typeToConvert == typeof(global::Opik.TraceUpdateSource?)
+
+                    || typeToConvert == typeof(global::Opik.TraceWriteSource)
+
+                    || typeToConvert == typeof(global::Opik.TraceWriteSource?)
+
+                    || typeToConvert == typeof(global::Opik.CheckPublicName)
+
+                    || typeToConvert == typeof(global::Opik.CheckPublicName?)
+
+                    || typeToConvert == typeof(global::Opik.CheckPublicResult)
+
+                    || typeToConvert == typeof(global::Opik.CheckPublicResult?)
+
+                    || typeToConvert == typeof(global::Opik.TracePublicVisibilityMode)
+
+                    || typeToConvert == typeof(global::Opik.TracePublicVisibilityMode?)
+
+                    || typeToConvert == typeof(global::Opik.TracePublicSource)
+
+                    || typeToConvert == typeof(global::Opik.TracePublicSource?)
+
+                    || typeToConvert == typeof(global::Opik.TraceThreadStatus)
+
+                    || typeToConvert == typeof(global::Opik.TraceThreadStatus?)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScoreBatchItemThreadSource)
+
+                    || typeToConvert == typeof(global::Opik.FeedbackScoreBatchItemThreadSource?)
+
+                    || typeToConvert == typeof(global::Opik.TraceSearchStreamRequestPublicExcludeItem)
+
+                    || typeToConvert == typeof(global::Opik.TraceSearchStreamRequestPublicExcludeItem?)
+
+                    || typeToConvert == typeof(global::Opik.BreakdownConfigField)
+
+                    || typeToConvert == typeof(global::Opik.BreakdownConfigField?)
+
+                    || typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestMetricType)
+
+                    || typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestMetricType?)
+
+                    || typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestInterval)
+
+                    || typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestInterval?)
+
+                    || typeToConvert == typeof(global::Opik.CreateDatasetItemsFromJsonRequestFormat)
+
+                    || typeToConvert == typeof(global::Opik.CreateDatasetItemsFromJsonRequestFormat?)
+
+                    || typeToConvert == typeof(global::Opik.FindAgentInsightsIssuesStatus)
+
+                    || typeToConvert == typeof(global::Opik.FindAgentInsightsIssuesStatus?)
+
+                    || typeToConvert == typeof(global::Opik.FindAgentInsightsIssuesSeverity)
+
+                    || typeToConvert == typeof(global::Opik.FindAgentInsightsIssuesSeverity?)
+
+                    || typeToConvert == typeof(global::Opik.GetWebhookExamplesAlertType)
+
+                    || typeToConvert == typeof(global::Opik.GetWebhookExamplesAlertType?)
+
+                    || typeToConvert == typeof(global::Opik.AttachmentListEntityType)
+
+                    || typeToConvert == typeof(global::Opik.AttachmentListEntityType?)
+
+                    || typeToConvert == typeof(global::Opik.DownloadAttachmentEntityType)
+
+                    || typeToConvert == typeof(global::Opik.DownloadAttachmentEntityType?)
+
+                    || typeToConvert == typeof(global::Opik.UploadAttachmentEntityType)
+
+                    || typeToConvert == typeof(global::Opik.UploadAttachmentEntityType?)
+
+                    || typeToConvert == typeof(global::Opik.FindFeedbackDefinitionsType)
+
+                    || typeToConvert == typeof(global::Opik.FindFeedbackDefinitionsType?)
+
+                    || typeToConvert == typeof(global::Opik.ListRunnersStatus)
+
+                    || typeToConvert == typeof(global::Opik.ListRunnersStatus?)
+
+                    || typeToConvert == typeof(global::Opik.FindReportFailuresType)
+
+                    || typeToConvert == typeof(global::Opik.FindReportFailuresType?)
+
+                    || typeToConvert == typeof(global::Opik.GetSpansByProjectType)
+
+                    || typeToConvert == typeof(global::Opik.GetSpansByProjectType?)
+
+                    || typeToConvert == typeof(global::Opik.FindFeedbackScoreNames1Type)
+
+                    || typeToConvert == typeof(global::Opik.FindFeedbackScoreNames1Type?)
+
+                    || typeToConvert == typeof(global::Opik.GetSpanStatsType)
+
+                    || typeToConvert == typeof(global::Opik.GetSpanStatsType?);
+            }
+
+            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
+                global::System.Type typeToConvert,
+                global::System.Text.Json.JsonSerializerOptions options)
+            {
+                if (typeToConvert == typeof(global::Opik.AgentBlueprintWriteType))
+                {
+                    return new global::Opik.JsonConverters.AgentBlueprintWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentBlueprintWriteType?))
+                {
+                    return new global::Opik.JsonConverters.AgentBlueprintWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentConfigValueWriteType))
+                {
+                    return new global::Opik.JsonConverters.AgentConfigValueWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentConfigValueWriteType?))
+                {
+                    return new global::Opik.JsonConverters.AgentConfigValueWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentBlueprintPublicType))
+                {
+                    return new global::Opik.JsonConverters.AgentBlueprintPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentBlueprintPublicType?))
+                {
+                    return new global::Opik.JsonConverters.AgentBlueprintPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentConfigValuePublicType))
+                {
+                    return new global::Opik.JsonConverters.AgentConfigValuePublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentConfigValuePublicType?))
+                {
+                    return new global::Opik.JsonConverters.AgentConfigValuePublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentBlueprintHistoryType))
+                {
+                    return new global::Opik.JsonConverters.AgentBlueprintHistoryTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentBlueprintHistoryType?))
+                {
+                    return new global::Opik.JsonConverters.AgentBlueprintHistoryTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentConfigValueHistoryType))
+                {
+                    return new global::Opik.JsonConverters.AgentConfigValueHistoryTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentConfigValueHistoryType?))
+                {
+                    return new global::Opik.JsonConverters.AgentConfigValueHistoryTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsJobStatus))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsJobStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsJobStatus?))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsJobStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsJobUpdateStatus))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsJobUpdateStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsJobUpdateStatus?))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsJobUpdateStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsIssueStatus))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsIssueStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsIssueStatus?))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsIssueStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsIssueSeverity))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsIssueSeverityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsIssueSeverity?))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsIssueSeverityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsIssueWithDetailsStatus))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsIssueWithDetailsStatus?))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsIssueWithDetailsStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsIssueWithDetailsSeverity))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsIssueWithDetailsSeverity?))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsIssueWithDetailsSeverityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ReportedIssueSeverity))
+                {
+                    return new global::Opik.JsonConverters.ReportedIssueSeverityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ReportedIssueSeverity?))
+                {
+                    return new global::Opik.JsonConverters.ReportedIssueSeverityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsIssueUpdateStatus))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsIssueUpdateStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AgentInsightsIssueUpdateStatus?))
+                {
+                    return new global::Opik.JsonConverters.AgentInsightsIssueUpdateStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertAlertType))
+                {
+                    return new global::Opik.JsonConverters.AlertAlertTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertAlertType?))
+                {
+                    return new global::Opik.JsonConverters.AlertAlertTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerEventType))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerEventType?))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerConfigType))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerConfigTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerConfigType?))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerConfigTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerConfigWriteType))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerConfigWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerConfigWriteType?))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerConfigWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerWriteEventType))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerWriteEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerWriteEventType?))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerWriteEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertWriteAlertType))
+                {
+                    return new global::Opik.JsonConverters.AlertWriteAlertTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertWriteAlertType?))
+                {
+                    return new global::Opik.JsonConverters.AlertWriteAlertTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerConfigPublicType))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerConfigPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerConfigPublicType?))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerConfigPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerPublicEventType))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerPublicEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertTriggerPublicEventType?))
+                {
+                    return new global::Opik.JsonConverters.AlertTriggerPublicEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertPublicAlertType))
+                {
+                    return new global::Opik.JsonConverters.AlertPublicAlertTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AlertPublicAlertType?))
+                {
+                    return new global::Opik.JsonConverters.AlertPublicAlertTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.WebhookTestResultStatus))
+                {
+                    return new global::Opik.JsonConverters.WebhookTestResultStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.WebhookTestResultStatus?))
+                {
+                    return new global::Opik.JsonConverters.WebhookTestResultStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AnnotationQueueScope))
+                {
+                    return new global::Opik.JsonConverters.AnnotationQueueScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AnnotationQueueScope?))
+                {
+                    return new global::Opik.JsonConverters.AnnotationQueueScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AnnotationQueueWriteScope))
+                {
+                    return new global::Opik.JsonConverters.AnnotationQueueWriteScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AnnotationQueueWriteScope?))
+                {
+                    return new global::Opik.JsonConverters.AnnotationQueueWriteScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AnnotationQueuePublicScope))
+                {
+                    return new global::Opik.JsonConverters.AnnotationQueuePublicScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AnnotationQueuePublicScope?))
+                {
+                    return new global::Opik.JsonConverters.AnnotationQueuePublicScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AssertionResultBatchEntityType))
+                {
+                    return new global::Opik.JsonConverters.AssertionResultBatchEntityTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AssertionResultBatchEntityType?))
+                {
+                    return new global::Opik.JsonConverters.AssertionResultBatchEntityTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AssertionResultBatchItemStatus))
+                {
+                    return new global::Opik.JsonConverters.AssertionResultBatchItemStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AssertionResultBatchItemStatus?))
+                {
+                    return new global::Opik.JsonConverters.AssertionResultBatchItemStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AssertionResultBatchItemSource))
+                {
+                    return new global::Opik.JsonConverters.AssertionResultBatchItemSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AssertionResultBatchItemSource?))
+                {
+                    return new global::Opik.JsonConverters.AssertionResultBatchItemSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CompleteMultipartUploadRequestEntityType))
+                {
+                    return new global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CompleteMultipartUploadRequestEntityType?))
+                {
+                    return new global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DeleteAttachmentsRequestEntityType))
+                {
+                    return new global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DeleteAttachmentsRequestEntityType?))
+                {
+                    return new global::Opik.JsonConverters.DeleteAttachmentsRequestEntityTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.StartMultipartUploadRequestEntityType))
+                {
+                    return new global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.StartMultipartUploadRequestEntityType?))
+                {
+                    return new global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorTriggerScope))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorTriggerScope?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorTriggerScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorType))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorType?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorAction))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorActionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorAction?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorActionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeMessageRole))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeMessageRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeMessageRole?))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeMessageRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaType))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaType?))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanFilterOperator))
+                {
+                    return new global::Opik.JsonConverters.SpanFilterOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanFilterOperator?))
+                {
+                    return new global::Opik.JsonConverters.SpanFilterOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceFilterOperator))
+                {
+                    return new global::Opik.JsonConverters.TraceFilterOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceFilterOperator?))
+                {
+                    return new global::Opik.JsonConverters.TraceFilterOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceThreadFilterOperator))
+                {
+                    return new global::Opik.JsonConverters.TraceThreadFilterOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceThreadFilterOperator?))
+                {
+                    return new global::Opik.JsonConverters.TraceThreadFilterOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteTriggerScope))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteTriggerScope?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTriggerScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteType))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteType?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteAction))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteAction?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorWriteDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorWriteDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeMessageWriteRole))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeMessageWriteRole?))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaWriteType))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaWriteType?))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanFilterWriteOperator))
+                {
+                    return new global::Opik.JsonConverters.SpanFilterWriteOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanFilterWriteOperator?))
+                {
+                    return new global::Opik.JsonConverters.SpanFilterWriteOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceFilterWriteOperator))
+                {
+                    return new global::Opik.JsonConverters.TraceFilterWriteOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceFilterWriteOperator?))
+                {
+                    return new global::Opik.JsonConverters.TraceFilterWriteOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceThreadFilterWriteOperator))
+                {
+                    return new global::Opik.JsonConverters.TraceThreadFilterWriteOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceThreadFilterWriteOperator?))
+                {
+                    return new global::Opik.JsonConverters.TraceThreadFilterWriteOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicTriggerScope))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicTriggerScope?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTriggerScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicType))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicType?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicAction))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicAction?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicActionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeMessagePublicRole))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeMessagePublicRole?))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaPublicType))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaPublicType?))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanFilterPublicOperator))
+                {
+                    return new global::Opik.JsonConverters.SpanFilterPublicOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanFilterPublicOperator?))
+                {
+                    return new global::Opik.JsonConverters.SpanFilterPublicOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceFilterPublicOperator))
+                {
+                    return new global::Opik.JsonConverters.TraceFilterPublicOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceFilterPublicOperator?))
+                {
+                    return new global::Opik.JsonConverters.TraceFilterPublicOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceThreadFilterPublicOperator))
+                {
+                    return new global::Opik.JsonConverters.TraceThreadFilterPublicOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceThreadFilterPublicOperator?))
+                {
+                    return new global::Opik.JsonConverters.TraceThreadFilterPublicOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicTriggerScope))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicTriggerScope?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTriggerScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicType))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicType?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicAction))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicAction?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicActionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorPublicDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorPublicDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LogItemLevel))
+                {
+                    return new global::Opik.JsonConverters.LogItemLevelJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LogItemLevel?))
+                {
+                    return new global::Opik.JsonConverters.LogItemLevelNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateTriggerScope))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateTriggerScope?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTriggerScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateType))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateType?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateAction))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateAction?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AutomationRuleEvaluatorUpdateDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AssistantMessageRole))
+                {
+                    return new global::Opik.JsonConverters.AssistantMessageRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AssistantMessageRole?))
+                {
+                    return new global::Opik.JsonConverters.AssistantMessageRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ToolCallType))
+                {
+                    return new global::Opik.JsonConverters.ToolCallTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ToolCallType?))
+                {
+                    return new global::Opik.JsonConverters.ToolCallTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ResponseFormatType))
+                {
+                    return new global::Opik.JsonConverters.ResponseFormatTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ResponseFormatType?))
+                {
+                    return new global::Opik.JsonConverters.ResponseFormatTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ToolType))
+                {
+                    return new global::Opik.JsonConverters.ToolTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ToolType?))
+                {
+                    return new global::Opik.JsonConverters.ToolTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DashboardPublicType))
+                {
+                    return new global::Opik.JsonConverters.DashboardPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DashboardPublicType?))
+                {
+                    return new global::Opik.JsonConverters.DashboardPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DashboardPublicScope))
+                {
+                    return new global::Opik.JsonConverters.DashboardPublicScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DashboardPublicScope?))
+                {
+                    return new global::Opik.JsonConverters.DashboardPublicScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DashboardWriteType))
+                {
+                    return new global::Opik.JsonConverters.DashboardWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DashboardWriteType?))
+                {
+                    return new global::Opik.JsonConverters.DashboardWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DashboardUpdatePublicType))
+                {
+                    return new global::Opik.JsonConverters.DashboardUpdatePublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DashboardUpdatePublicType?))
+                {
+                    return new global::Opik.JsonConverters.DashboardUpdatePublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.EvaluatorItemPublicType))
+                {
+                    return new global::Opik.JsonConverters.EvaluatorItemPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.EvaluatorItemPublicType?))
+                {
+                    return new global::Opik.JsonConverters.EvaluatorItemPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetItemFilterOperator))
+                {
+                    return new global::Opik.JsonConverters.DatasetItemFilterOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetItemFilterOperator?))
+                {
+                    return new global::Opik.JsonConverters.DatasetItemFilterOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.EvaluatorItemType))
+                {
+                    return new global::Opik.JsonConverters.EvaluatorItemTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.EvaluatorItemType?))
+                {
+                    return new global::Opik.JsonConverters.EvaluatorItemTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetType))
+                {
+                    return new global::Opik.JsonConverters.DatasetTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetType?))
+                {
+                    return new global::Opik.JsonConverters.DatasetTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetVisibility))
+                {
+                    return new global::Opik.JsonConverters.DatasetVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetVisibility?))
+                {
+                    return new global::Opik.JsonConverters.DatasetVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetStatus))
+                {
+                    return new global::Opik.JsonConverters.DatasetStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetStatus?))
+                {
+                    return new global::Opik.JsonConverters.DatasetStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetWriteType))
+                {
+                    return new global::Opik.JsonConverters.DatasetWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetWriteType?))
+                {
+                    return new global::Opik.JsonConverters.DatasetWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetWriteVisibility))
+                {
+                    return new global::Opik.JsonConverters.DatasetWriteVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetWriteVisibility?))
+                {
+                    return new global::Opik.JsonConverters.DatasetWriteVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetItemSource))
+                {
+                    return new global::Opik.JsonConverters.DatasetItemSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetItemSource?))
+                {
+                    return new global::Opik.JsonConverters.DatasetItemSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentItemTraceVisibilityMode))
+                {
+                    return new global::Opik.JsonConverters.ExperimentItemTraceVisibilityModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentItemTraceVisibilityMode?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentItemTraceVisibilityModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentItemStatus))
+                {
+                    return new global::Opik.JsonConverters.ExperimentItemStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentItemStatus?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentItemStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentRunSummaryStatus))
+                {
+                    return new global::Opik.JsonConverters.ExperimentRunSummaryStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentRunSummaryStatus?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentRunSummaryStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScoreSource))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScoreSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScoreSource?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScoreSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ValueEntrySource))
+                {
+                    return new global::Opik.JsonConverters.ValueEntrySourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ValueEntrySource?))
+                {
+                    return new global::Opik.JsonConverters.ValueEntrySourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetItemWriteSource))
+                {
+                    return new global::Opik.JsonConverters.DatasetItemWriteSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetItemWriteSource?))
+                {
+                    return new global::Opik.JsonConverters.DatasetItemWriteSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.EvaluatorItemWriteType))
+                {
+                    return new global::Opik.JsonConverters.EvaluatorItemWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.EvaluatorItemWriteType?))
+                {
+                    return new global::Opik.JsonConverters.EvaluatorItemWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ColumnCompareType))
+                {
+                    return new global::Opik.JsonConverters.ColumnCompareTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ColumnCompareType?))
+                {
+                    return new global::Opik.JsonConverters.ColumnCompareTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetItemCompareSource))
+                {
+                    return new global::Opik.JsonConverters.DatasetItemCompareSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetItemCompareSource?))
+                {
+                    return new global::Opik.JsonConverters.DatasetItemCompareSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.EvaluatorItemCompareType))
+                {
+                    return new global::Opik.JsonConverters.EvaluatorItemCompareTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.EvaluatorItemCompareType?))
+                {
+                    return new global::Opik.JsonConverters.EvaluatorItemCompareTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentItemCompareTraceVisibilityMode))
+                {
+                    return new global::Opik.JsonConverters.ExperimentItemCompareTraceVisibilityModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentItemCompareTraceVisibilityMode?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentItemCompareTraceVisibilityModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentItemCompareStatus))
+                {
+                    return new global::Opik.JsonConverters.ExperimentItemCompareStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentItemCompareStatus?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentItemCompareStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentRunSummaryCompareStatus))
+                {
+                    return new global::Opik.JsonConverters.ExperimentRunSummaryCompareStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentRunSummaryCompareStatus?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentRunSummaryCompareStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScoreCompareSource))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScoreCompareSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScoreCompareSource?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScoreCompareSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ValueEntryCompareSource))
+                {
+                    return new global::Opik.JsonConverters.ValueEntryCompareSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ValueEntryCompareSource?))
+                {
+                    return new global::Opik.JsonConverters.ValueEntryCompareSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetPublicType))
+                {
+                    return new global::Opik.JsonConverters.DatasetPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetPublicType?))
+                {
+                    return new global::Opik.JsonConverters.DatasetPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetPublicVisibility))
+                {
+                    return new global::Opik.JsonConverters.DatasetPublicVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetPublicVisibility?))
+                {
+                    return new global::Opik.JsonConverters.DatasetPublicVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetPublicStatus))
+                {
+                    return new global::Opik.JsonConverters.DatasetPublicStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetPublicStatus?))
+                {
+                    return new global::Opik.JsonConverters.DatasetPublicStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectStatItemObjectPublicType))
+                {
+                    return new global::Opik.JsonConverters.ProjectStatItemObjectPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectStatItemObjectPublicType?))
+                {
+                    return new global::Opik.JsonConverters.ProjectStatItemObjectPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectStatItemObjectPublicDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.ProjectStatItemObjectPublicDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectStatItemObjectPublicDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.ProjectStatItemObjectPublicDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetExportJobPublicStatus))
+                {
+                    return new global::Opik.JsonConverters.DatasetExportJobPublicStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetExportJobPublicStatus?))
+                {
+                    return new global::Opik.JsonConverters.DatasetExportJobPublicStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetItemPublicSource))
+                {
+                    return new global::Opik.JsonConverters.DatasetItemPublicSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetItemPublicSource?))
+                {
+                    return new global::Opik.JsonConverters.DatasetItemPublicSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentItemPublicTraceVisibilityMode))
+                {
+                    return new global::Opik.JsonConverters.ExperimentItemPublicTraceVisibilityModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentItemPublicTraceVisibilityMode?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentItemPublicTraceVisibilityModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentRunSummaryPublicStatus))
+                {
+                    return new global::Opik.JsonConverters.ExperimentRunSummaryPublicStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentRunSummaryPublicStatus?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentRunSummaryPublicStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ColumnPublicType))
+                {
+                    return new global::Opik.JsonConverters.ColumnPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ColumnPublicType?))
+                {
+                    return new global::Opik.JsonConverters.ColumnPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ColumnType))
+                {
+                    return new global::Opik.JsonConverters.ColumnTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ColumnType?))
+                {
+                    return new global::Opik.JsonConverters.ColumnTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetUpdateVisibility))
+                {
+                    return new global::Opik.JsonConverters.DatasetUpdateVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DatasetUpdateVisibility?))
+                {
+                    return new global::Opik.JsonConverters.DatasetUpdateVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentUpdateType))
+                {
+                    return new global::Opik.JsonConverters.ExperimentUpdateTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentUpdateType?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentUpdateTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentUpdateStatus))
+                {
+                    return new global::Opik.JsonConverters.ExperimentUpdateStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentUpdateStatus?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentUpdateStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentType))
+                {
+                    return new global::Opik.JsonConverters.ExperimentTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentType?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentEvaluationMethod))
+                {
+                    return new global::Opik.JsonConverters.ExperimentEvaluationMethodJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentEvaluationMethod?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentEvaluationMethodNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentStatus))
+                {
+                    return new global::Opik.JsonConverters.ExperimentStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentStatus?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentWriteType))
+                {
+                    return new global::Opik.JsonConverters.ExperimentWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentWriteType?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentWriteEvaluationMethod))
+                {
+                    return new global::Opik.JsonConverters.ExperimentWriteEvaluationMethodJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentWriteEvaluationMethod?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentWriteEvaluationMethodNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentWriteStatus))
+                {
+                    return new global::Opik.JsonConverters.ExperimentWriteStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentWriteStatus?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentWriteStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CheckName))
+                {
+                    return new global::Opik.JsonConverters.CheckNameJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CheckName?))
+                {
+                    return new global::Opik.JsonConverters.CheckNameNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CheckResult))
+                {
+                    return new global::Opik.JsonConverters.CheckResultJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CheckResult?))
+                {
+                    return new global::Opik.JsonConverters.CheckResultNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanType))
+                {
+                    return new global::Opik.JsonConverters.SpanTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanType?))
+                {
+                    return new global::Opik.JsonConverters.SpanTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanSource))
+                {
+                    return new global::Opik.JsonConverters.SpanSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanSource?))
+                {
+                    return new global::Opik.JsonConverters.SpanSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceVisibilityMode))
+                {
+                    return new global::Opik.JsonConverters.TraceVisibilityModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceVisibilityMode?))
+                {
+                    return new global::Opik.JsonConverters.TraceVisibilityModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceSource))
+                {
+                    return new global::Opik.JsonConverters.TraceSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceSource?))
+                {
+                    return new global::Opik.JsonConverters.TraceSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScoreExperimentItemBulkWriteViewSource))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScoreExperimentItemBulkWriteViewSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScoreExperimentItemBulkWriteViewSource?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScoreExperimentItemBulkWriteViewSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanExperimentItemBulkWriteViewType))
+                {
+                    return new global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanExperimentItemBulkWriteViewType?))
+                {
+                    return new global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanExperimentItemBulkWriteViewSource))
+                {
+                    return new global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanExperimentItemBulkWriteViewSource?))
+                {
+                    return new global::Opik.JsonConverters.SpanExperimentItemBulkWriteViewSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceExperimentItemBulkWriteViewSource))
+                {
+                    return new global::Opik.JsonConverters.TraceExperimentItemBulkWriteViewSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceExperimentItemBulkWriteViewSource?))
+                {
+                    return new global::Opik.JsonConverters.TraceExperimentItemBulkWriteViewSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ValueEntryExperimentItemBulkWriteViewSource))
+                {
+                    return new global::Opik.JsonConverters.ValueEntryExperimentItemBulkWriteViewSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ValueEntryExperimentItemBulkWriteViewSource?))
+                {
+                    return new global::Opik.JsonConverters.ValueEntryExperimentItemBulkWriteViewSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentPublicType))
+                {
+                    return new global::Opik.JsonConverters.ExperimentPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentPublicType?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentPublicEvaluationMethod))
+                {
+                    return new global::Opik.JsonConverters.ExperimentPublicEvaluationMethodJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentPublicEvaluationMethod?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentPublicEvaluationMethodNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentPublicStatus))
+                {
+                    return new global::Opik.JsonConverters.ExperimentPublicStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ExperimentPublicStatus?))
+                {
+                    return new global::Opik.JsonConverters.ExperimentPublicStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackType))
+                {
+                    return new global::Opik.JsonConverters.FeedbackTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackType?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.FeedbackDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackCreateType))
+                {
+                    return new global::Opik.JsonConverters.FeedbackCreateTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackCreateType?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackCreateTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackCreateDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.FeedbackCreateDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackCreateDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackCreateDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackObjectPublicType))
+                {
+                    return new global::Opik.JsonConverters.FeedbackObjectPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackObjectPublicType?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackObjectPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackObjectPublicDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.FeedbackObjectPublicDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackObjectPublicDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackObjectPublicDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackPublicType))
+                {
+                    return new global::Opik.JsonConverters.FeedbackPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackPublicType?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackPublicDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.FeedbackPublicDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackPublicDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackPublicDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackUpdateType))
+                {
+                    return new global::Opik.JsonConverters.FeedbackUpdateTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackUpdateType?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackUpdateTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackUpdateDiscriminatorType))
+                {
+                    return new global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackUpdateDiscriminatorType?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GuardrailName))
+                {
+                    return new global::Opik.JsonConverters.GuardrailNameJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GuardrailName?))
+                {
+                    return new global::Opik.JsonConverters.GuardrailNameNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GuardrailResult))
+                {
+                    return new global::Opik.JsonConverters.GuardrailResultJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GuardrailResult?))
+                {
+                    return new global::Opik.JsonConverters.GuardrailResultNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GuardrailWriteName))
+                {
+                    return new global::Opik.JsonConverters.GuardrailWriteNameJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GuardrailWriteName?))
+                {
+                    return new global::Opik.JsonConverters.GuardrailWriteNameNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GuardrailWriteResult))
+                {
+                    return new global::Opik.JsonConverters.GuardrailWriteResultJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GuardrailWriteResult?))
+                {
+                    return new global::Opik.JsonConverters.GuardrailWriteResultNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider))
+                {
+                    return new global::Opik.JsonConverters.ProviderApiKeyPublicProviderJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider?))
+                {
+                    return new global::Opik.JsonConverters.ProviderApiKeyPublicProviderNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProviderApiKeyProvider))
+                {
+                    return new global::Opik.JsonConverters.ProviderApiKeyProviderJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProviderApiKeyProvider?))
+                {
+                    return new global::Opik.JsonConverters.ProviderApiKeyProviderNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider))
+                {
+                    return new global::Opik.JsonConverters.ProviderApiKeyWriteProviderJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider?))
+                {
+                    return new global::Opik.JsonConverters.ProviderApiKeyWriteProviderNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BridgeCommandSubmitRequestType))
+                {
+                    return new global::Opik.JsonConverters.BridgeCommandSubmitRequestTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BridgeCommandSubmitRequestType?))
+                {
+                    return new global::Opik.JsonConverters.BridgeCommandSubmitRequestTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BridgeCommandType))
+                {
+                    return new global::Opik.JsonConverters.BridgeCommandTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BridgeCommandType?))
+                {
+                    return new global::Opik.JsonConverters.BridgeCommandTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BridgeCommandStatus))
+                {
+                    return new global::Opik.JsonConverters.BridgeCommandStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BridgeCommandStatus?))
+                {
+                    return new global::Opik.JsonConverters.BridgeCommandStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LocalRunnerJobStatus))
+                {
+                    return new global::Opik.JsonConverters.LocalRunnerJobStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LocalRunnerJobStatus?))
+                {
+                    return new global::Opik.JsonConverters.LocalRunnerJobStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LocalRunnerStatus))
+                {
+                    return new global::Opik.JsonConverters.LocalRunnerStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LocalRunnerStatus?))
+                {
+                    return new global::Opik.JsonConverters.LocalRunnerStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LocalRunnerType))
+                {
+                    return new global::Opik.JsonConverters.LocalRunnerTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LocalRunnerType?))
+                {
+                    return new global::Opik.JsonConverters.LocalRunnerTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ParamPresence))
+                {
+                    return new global::Opik.JsonConverters.ParamPresenceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ParamPresence?))
+                {
+                    return new global::Opik.JsonConverters.ParamPresenceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BridgeCommandItemType))
+                {
+                    return new global::Opik.JsonConverters.BridgeCommandItemTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BridgeCommandItemType?))
+                {
+                    return new global::Opik.JsonConverters.BridgeCommandItemTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BridgeCommandResultRequestStatus))
+                {
+                    return new global::Opik.JsonConverters.BridgeCommandResultRequestStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BridgeCommandResultRequestStatus?))
+                {
+                    return new global::Opik.JsonConverters.BridgeCommandResultRequestStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LocalRunnerJobResultRequestStatus))
+                {
+                    return new global::Opik.JsonConverters.LocalRunnerJobResultRequestStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LocalRunnerJobResultRequestStatus?))
+                {
+                    return new global::Opik.JsonConverters.LocalRunnerJobResultRequestStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ManualEvaluationRequestEntityType))
+                {
+                    return new global::Opik.JsonConverters.ManualEvaluationRequestEntityTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ManualEvaluationRequestEntityType?))
+                {
+                    return new global::Opik.JsonConverters.ManualEvaluationRequestEntityTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.OptimizationStatus))
+                {
+                    return new global::Opik.JsonConverters.OptimizationStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.OptimizationStatus?))
+                {
+                    return new global::Opik.JsonConverters.OptimizationStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.OptimizationWriteStatus))
+                {
+                    return new global::Opik.JsonConverters.OptimizationWriteStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.OptimizationWriteStatus?))
+                {
+                    return new global::Opik.JsonConverters.OptimizationWriteStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.OptimizationPublicStatus))
+                {
+                    return new global::Opik.JsonConverters.OptimizationPublicStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.OptimizationPublicStatus?))
+                {
+                    return new global::Opik.JsonConverters.OptimizationPublicStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.OptimizationUpdateStatus))
+                {
+                    return new global::Opik.JsonConverters.OptimizationUpdateStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.OptimizationUpdateStatus?))
+                {
+                    return new global::Opik.JsonConverters.OptimizationUpdateStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CreateSessionRequestType))
+                {
+                    return new global::Opik.JsonConverters.CreateSessionRequestTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CreateSessionRequestType?))
+                {
+                    return new global::Opik.JsonConverters.CreateSessionRequestTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptPublicTemplateStructure))
+                {
+                    return new global::Opik.JsonConverters.PromptPublicTemplateStructureJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptPublicTemplateStructure?))
+                {
+                    return new global::Opik.JsonConverters.PromptPublicTemplateStructureNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectVisibility))
+                {
+                    return new global::Opik.JsonConverters.ProjectVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectVisibility?))
+                {
+                    return new global::Opik.JsonConverters.ProjectVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectWriteVisibility))
+                {
+                    return new global::Opik.JsonConverters.ProjectWriteVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectWriteVisibility?))
+                {
+                    return new global::Opik.JsonConverters.ProjectWriteVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectPublicVisibility))
+                {
+                    return new global::Opik.JsonConverters.ProjectPublicVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectPublicVisibility?))
+                {
+                    return new global::Opik.JsonConverters.ProjectPublicVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.KpiMetricType))
+                {
+                    return new global::Opik.JsonConverters.KpiMetricTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.KpiMetricType?))
+                {
+                    return new global::Opik.JsonConverters.KpiMetricTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.KpiCardRequestEntityType))
+                {
+                    return new global::Opik.JsonConverters.KpiCardRequestEntityTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.KpiCardRequestEntityType?))
+                {
+                    return new global::Opik.JsonConverters.KpiCardRequestEntityTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectMetricResponsePublicMetricType))
+                {
+                    return new global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectMetricResponsePublicMetricType?))
+                {
+                    return new global::Opik.JsonConverters.ProjectMetricResponsePublicMetricTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectMetricResponsePublicInterval))
+                {
+                    return new global::Opik.JsonConverters.ProjectMetricResponsePublicIntervalJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectMetricResponsePublicInterval?))
+                {
+                    return new global::Opik.JsonConverters.ProjectMetricResponsePublicIntervalNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BreakdownConfigPublicField))
+                {
+                    return new global::Opik.JsonConverters.BreakdownConfigPublicFieldJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BreakdownConfigPublicField?))
+                {
+                    return new global::Opik.JsonConverters.BreakdownConfigPublicFieldNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectMetricRequestPublicMetricType))
+                {
+                    return new global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectMetricRequestPublicMetricType?))
+                {
+                    return new global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectMetricRequestPublicInterval))
+                {
+                    return new global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectMetricRequestPublicInterval?))
+                {
+                    return new global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectDetailedVisibility))
+                {
+                    return new global::Opik.JsonConverters.ProjectDetailedVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectDetailedVisibility?))
+                {
+                    return new global::Opik.JsonConverters.ProjectDetailedVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectUpdateVisibility))
+                {
+                    return new global::Opik.JsonConverters.ProjectUpdateVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectUpdateVisibility?))
+                {
+                    return new global::Opik.JsonConverters.ProjectUpdateVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptType))
+                {
+                    return new global::Opik.JsonConverters.PromptTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptType?))
+                {
+                    return new global::Opik.JsonConverters.PromptTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptTemplateStructure))
+                {
+                    return new global::Opik.JsonConverters.PromptTemplateStructureJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptTemplateStructure?))
+                {
+                    return new global::Opik.JsonConverters.PromptTemplateStructureNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionType))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionType?))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionVersionType))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionVersionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionVersionType?))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionVersionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionTemplateStructure))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionTemplateStructureJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionTemplateStructure?))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionTemplateStructureNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptWriteType))
+                {
+                    return new global::Opik.JsonConverters.PromptWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptWriteType?))
+                {
+                    return new global::Opik.JsonConverters.PromptWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptWriteTemplateStructure))
+                {
+                    return new global::Opik.JsonConverters.PromptWriteTemplateStructureJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptWriteTemplateStructure?))
+                {
+                    return new global::Opik.JsonConverters.PromptWriteTemplateStructureNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionDetailType))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionDetailTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionDetailType?))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionDetailTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionDetailVersionType))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionDetailVersionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionDetailVersionType?))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionDetailVersionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionDetailTemplateStructure))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionDetailTemplateStructureJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionDetailTemplateStructure?))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionDetailTemplateStructureNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CreatePromptVersionDetailTemplateStructure))
+                {
+                    return new global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CreatePromptVersionDetailTemplateStructure?))
+                {
+                    return new global::Opik.JsonConverters.CreatePromptVersionDetailTemplateStructureNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptDetailTemplateStructure))
+                {
+                    return new global::Opik.JsonConverters.PromptDetailTemplateStructureJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptDetailTemplateStructure?))
+                {
+                    return new global::Opik.JsonConverters.PromptDetailTemplateStructureNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionPublicType))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionPublicType?))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionPublicVersionType))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionPublicVersionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionPublicVersionType?))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionPublicVersionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionPublicTemplateStructure))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionPublicTemplateStructureJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.PromptVersionPublicTemplateStructure?))
+                {
+                    return new global::Opik.JsonConverters.PromptVersionPublicTemplateStructureNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.RecentActivityItemPublicType))
+                {
+                    return new global::Opik.JsonConverters.RecentActivityItemPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.RecentActivityItemPublicType?))
+                {
+                    return new global::Opik.JsonConverters.RecentActivityItemPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ReportFailureType))
+                {
+                    return new global::Opik.JsonConverters.ReportFailureTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ReportFailureType?))
+                {
+                    return new global::Opik.JsonConverters.ReportFailureTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ReportCompleteRequestStatus))
+                {
+                    return new global::Opik.JsonConverters.ReportCompleteRequestStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ReportCompleteRequestStatus?))
+                {
+                    return new global::Opik.JsonConverters.ReportCompleteRequestStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.OllieReportStatus))
+                {
+                    return new global::Opik.JsonConverters.OllieReportStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.OllieReportStatus?))
+                {
+                    return new global::Opik.JsonConverters.OllieReportStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.RetentionRulePublicLevel))
+                {
+                    return new global::Opik.JsonConverters.RetentionRulePublicLevelJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.RetentionRulePublicLevel?))
+                {
+                    return new global::Opik.JsonConverters.RetentionRulePublicLevelNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.RetentionRulePublicRetention))
+                {
+                    return new global::Opik.JsonConverters.RetentionRulePublicRetentionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.RetentionRulePublicRetention?))
+                {
+                    return new global::Opik.JsonConverters.RetentionRulePublicRetentionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.RetentionRuleWriteRetention))
+                {
+                    return new global::Opik.JsonConverters.RetentionRuleWriteRetentionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.RetentionRuleWriteRetention?))
+                {
+                    return new global::Opik.JsonConverters.RetentionRuleWriteRetentionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanUpdateType))
+                {
+                    return new global::Opik.JsonConverters.SpanUpdateTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanUpdateType?))
+                {
+                    return new global::Opik.JsonConverters.SpanUpdateTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanUpdateSource))
+                {
+                    return new global::Opik.JsonConverters.SpanUpdateSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanUpdateSource?))
+                {
+                    return new global::Opik.JsonConverters.SpanUpdateSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanWriteType))
+                {
+                    return new global::Opik.JsonConverters.SpanWriteTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanWriteType?))
+                {
+                    return new global::Opik.JsonConverters.SpanWriteTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanWriteSource))
+                {
+                    return new global::Opik.JsonConverters.SpanWriteSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanWriteSource?))
+                {
+                    return new global::Opik.JsonConverters.SpanWriteSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScorePublicSource))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScorePublicSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScorePublicSource?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScorePublicSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanPublicType))
+                {
+                    return new global::Opik.JsonConverters.SpanPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanPublicType?))
+                {
+                    return new global::Opik.JsonConverters.SpanPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanPublicSource))
+                {
+                    return new global::Opik.JsonConverters.SpanPublicSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanPublicSource?))
+                {
+                    return new global::Opik.JsonConverters.SpanPublicSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ValueEntryPublicSource))
+                {
+                    return new global::Opik.JsonConverters.ValueEntryPublicSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ValueEntryPublicSource?))
+                {
+                    return new global::Opik.JsonConverters.ValueEntryPublicSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScoreBatchItemSource))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScoreBatchItemSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScoreBatchItemSource?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScoreBatchItemSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanSearchStreamRequestPublicType))
+                {
+                    return new global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanSearchStreamRequestPublicType?))
+                {
+                    return new global::Opik.JsonConverters.SpanSearchStreamRequestPublicTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem))
+                {
+                    return new global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem?))
+                {
+                    return new global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceUpdateSource))
+                {
+                    return new global::Opik.JsonConverters.TraceUpdateSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceUpdateSource?))
+                {
+                    return new global::Opik.JsonConverters.TraceUpdateSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceWriteSource))
+                {
+                    return new global::Opik.JsonConverters.TraceWriteSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceWriteSource?))
+                {
+                    return new global::Opik.JsonConverters.TraceWriteSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CheckPublicName))
+                {
+                    return new global::Opik.JsonConverters.CheckPublicNameJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CheckPublicName?))
+                {
+                    return new global::Opik.JsonConverters.CheckPublicNameNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CheckPublicResult))
+                {
+                    return new global::Opik.JsonConverters.CheckPublicResultJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CheckPublicResult?))
+                {
+                    return new global::Opik.JsonConverters.CheckPublicResultNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TracePublicVisibilityMode))
+                {
+                    return new global::Opik.JsonConverters.TracePublicVisibilityModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TracePublicVisibilityMode?))
+                {
+                    return new global::Opik.JsonConverters.TracePublicVisibilityModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TracePublicSource))
+                {
+                    return new global::Opik.JsonConverters.TracePublicSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TracePublicSource?))
+                {
+                    return new global::Opik.JsonConverters.TracePublicSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceThreadStatus))
+                {
+                    return new global::Opik.JsonConverters.TraceThreadStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceThreadStatus?))
+                {
+                    return new global::Opik.JsonConverters.TraceThreadStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScoreBatchItemThreadSource))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FeedbackScoreBatchItemThreadSource?))
+                {
+                    return new global::Opik.JsonConverters.FeedbackScoreBatchItemThreadSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceSearchStreamRequestPublicExcludeItem))
+                {
+                    return new global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.TraceSearchStreamRequestPublicExcludeItem?))
+                {
+                    return new global::Opik.JsonConverters.TraceSearchStreamRequestPublicExcludeItemNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BreakdownConfigField))
+                {
+                    return new global::Opik.JsonConverters.BreakdownConfigFieldJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.BreakdownConfigField?))
+                {
+                    return new global::Opik.JsonConverters.BreakdownConfigFieldNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestMetricType))
+                {
+                    return new global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestMetricType?))
+                {
+                    return new global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestInterval))
+                {
+                    return new global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestInterval?))
+                {
+                    return new global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CreateDatasetItemsFromJsonRequestFormat))
+                {
+                    return new global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.CreateDatasetItemsFromJsonRequestFormat?))
+                {
+                    return new global::Opik.JsonConverters.CreateDatasetItemsFromJsonRequestFormatNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindAgentInsightsIssuesStatus))
+                {
+                    return new global::Opik.JsonConverters.FindAgentInsightsIssuesStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindAgentInsightsIssuesStatus?))
+                {
+                    return new global::Opik.JsonConverters.FindAgentInsightsIssuesStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindAgentInsightsIssuesSeverity))
+                {
+                    return new global::Opik.JsonConverters.FindAgentInsightsIssuesSeverityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindAgentInsightsIssuesSeverity?))
+                {
+                    return new global::Opik.JsonConverters.FindAgentInsightsIssuesSeverityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GetWebhookExamplesAlertType))
+                {
+                    return new global::Opik.JsonConverters.GetWebhookExamplesAlertTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GetWebhookExamplesAlertType?))
+                {
+                    return new global::Opik.JsonConverters.GetWebhookExamplesAlertTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AttachmentListEntityType))
+                {
+                    return new global::Opik.JsonConverters.AttachmentListEntityTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AttachmentListEntityType?))
+                {
+                    return new global::Opik.JsonConverters.AttachmentListEntityTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DownloadAttachmentEntityType))
+                {
+                    return new global::Opik.JsonConverters.DownloadAttachmentEntityTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.DownloadAttachmentEntityType?))
+                {
+                    return new global::Opik.JsonConverters.DownloadAttachmentEntityTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.UploadAttachmentEntityType))
+                {
+                    return new global::Opik.JsonConverters.UploadAttachmentEntityTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.UploadAttachmentEntityType?))
+                {
+                    return new global::Opik.JsonConverters.UploadAttachmentEntityTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindFeedbackDefinitionsType))
+                {
+                    return new global::Opik.JsonConverters.FindFeedbackDefinitionsTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindFeedbackDefinitionsType?))
+                {
+                    return new global::Opik.JsonConverters.FindFeedbackDefinitionsTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ListRunnersStatus))
+                {
+                    return new global::Opik.JsonConverters.ListRunnersStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ListRunnersStatus?))
+                {
+                    return new global::Opik.JsonConverters.ListRunnersStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindReportFailuresType))
+                {
+                    return new global::Opik.JsonConverters.FindReportFailuresTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindReportFailuresType?))
+                {
+                    return new global::Opik.JsonConverters.FindReportFailuresTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GetSpansByProjectType))
+                {
+                    return new global::Opik.JsonConverters.GetSpansByProjectTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GetSpansByProjectType?))
+                {
+                    return new global::Opik.JsonConverters.GetSpansByProjectTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindFeedbackScoreNames1Type))
+                {
+                    return new global::Opik.JsonConverters.FindFeedbackScoreNames1TypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindFeedbackScoreNames1Type?))
+                {
+                    return new global::Opik.JsonConverters.FindFeedbackScoreNames1TypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GetSpanStatsType))
+                {
+                    return new global::Opik.JsonConverters.GetSpanStatsTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GetSpanStatsType?))
+                {
+                    return new global::Opik.JsonConverters.GetSpanStatsTypeNullableJsonConverter();
+                }
+                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
+            }
+        }
+
+        private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
+        {
+            private readonly object _gate = new();
+            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[3];
+
+            public global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(
+                global::System.Type type,
+                global::System.Text.Json.JsonSerializerOptions options)
+            {
+                for (var index = 0; index < _resolvers.Length; index++)
+                {
+                    var typeInfo = GetResolver(index).GetTypeInfo(type, options);
+                    if (typeInfo is not null)
+                    {
+                        return typeInfo;
+                    }
+                }
+
+                return null;
+            }
+
+            private global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver GetResolver(int index)
+            {
+                var resolver = global::System.Threading.Volatile.Read(ref _resolvers[index]);
+                if (resolver is not null)
+                {
+                    return resolver;
+                }
+
+                lock (_gate)
+                {
+                    return _resolvers[index] ??= CreateResolver(index);
+                }
+            }
+
+            private static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver CreateResolver(int index)
+            {
+                return index switch
+                {
+                    0 => new SourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+
+                    1 => new SourceGenerationContextChunk1(new global::System.Text.Json.JsonSerializerOptions()),
+
+                    2 => new SourceGenerationContextChunk2(new global::System.Text.Json.JsonSerializerOptions()),
+                    _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
+                };
+            }
         }
     }
 }
