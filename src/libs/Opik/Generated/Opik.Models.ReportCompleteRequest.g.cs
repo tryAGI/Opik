@@ -35,6 +35,12 @@ namespace Opik
         public global::Opik.JsonNode? RecommendedActions { get; set; }
 
         /// <summary>
+        /// Why the report failed. Only 'out_of_credits' is acted on; any other value is recorded but renders as a generic failure.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("failure_reason")]
+        public string? FailureReason { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -47,6 +53,9 @@ namespace Opik
         /// <param name="content"></param>
         /// <param name="sessionId"></param>
         /// <param name="recommendedActions"></param>
+        /// <param name="failureReason">
+        /// Why the report failed. Only 'out_of_credits' is acted on; any other value is recorded but renders as a generic failure.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -54,12 +63,14 @@ namespace Opik
             global::Opik.ReportCompleteRequestStatus status,
             string? content,
             string? sessionId,
-            global::Opik.JsonNode? recommendedActions)
+            global::Opik.JsonNode? recommendedActions,
+            string? failureReason)
         {
             this.Content = content;
             this.Status = status;
             this.SessionId = sessionId;
             this.RecommendedActions = recommendedActions;
+            this.FailureReason = failureReason;
         }
 
         /// <summary>

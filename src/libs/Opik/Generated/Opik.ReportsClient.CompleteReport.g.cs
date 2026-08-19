@@ -364,6 +364,38 @@ namespace Opik
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // 
+                            if ((int)__response.StatusCode == 400)
+                            {
+                                string? __content_400 = null;
+                                global::System.Exception? __exception_400 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                    else
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_400 = __ex;
+                                }
+
+
+                                throw global::Opik.ApiException.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_400,
+                                    responseBody: __content_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // 
                             if ((int)__response.StatusCode == 404)
                             {
                                 string? __content_404 = null;
@@ -485,6 +517,9 @@ namespace Opik
         /// <param name="status"></param>
         /// <param name="sessionId"></param>
         /// <param name="recommendedActions"></param>
+        /// <param name="failureReason">
+        /// Why the report failed. Only 'out_of_credits' is acted on; any other value is recorded but renders as a generic failure.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -495,6 +530,7 @@ namespace Opik
             string? content = default,
             string? sessionId = default,
             global::Opik.JsonNode? recommendedActions = default,
+            string? failureReason = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -504,6 +540,7 @@ namespace Opik
                 Status = status,
                 SessionId = sessionId,
                 RecommendedActions = recommendedActions,
+                FailureReason = failureReason,
             };
 
             await CompleteReportAsync(

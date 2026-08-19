@@ -46,6 +46,12 @@ namespace Opik
         public global::Opik.OllieReportStatus? Status { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("failure_reason")]
+        public string? FailureReason { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -72,6 +78,7 @@ namespace Opik
         /// <param name="content"></param>
         /// <param name="recommendedActions"></param>
         /// <param name="status"></param>
+        /// <param name="failureReason"></param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -88,6 +95,7 @@ namespace Opik
             string? content,
             global::Opik.JsonNode? recommendedActions,
             global::Opik.OllieReportStatus? status,
+            string? failureReason,
             global::System.DateTime? createdAt,
             global::System.DateTime? lastUpdatedAt)
         {
@@ -97,6 +105,7 @@ namespace Opik
             this.Content = content;
             this.RecommendedActions = recommendedActions;
             this.Status = status;
+            this.FailureReason = failureReason;
             this.CreatedAt = createdAt;
             this.LastUpdatedAt = lastUpdatedAt;
         }

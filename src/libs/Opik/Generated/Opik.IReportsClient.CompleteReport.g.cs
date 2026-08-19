@@ -48,6 +48,9 @@ namespace Opik
         /// <param name="status"></param>
         /// <param name="sessionId"></param>
         /// <param name="recommendedActions"></param>
+        /// <param name="failureReason">
+        /// Why the report failed. Only 'out_of_credits' is acted on; any other value is recorded but renders as a generic failure.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -58,6 +61,7 @@ namespace Opik
             string? content = default,
             string? sessionId = default,
             global::Opik.JsonNode? recommendedActions = default,
+            string? failureReason = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
