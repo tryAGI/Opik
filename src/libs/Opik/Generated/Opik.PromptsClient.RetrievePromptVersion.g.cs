@@ -56,7 +56,7 @@ namespace Opik
 
         /// <summary>
         /// Retrieve prompt version<br/>
-        /// Retrieve prompt version
+        /// Retrieve prompt version. When project_name is supplied the lookup is scoped to that project: a prompt belonging to a different project is never matched, and an unknown project name returns 404. Legacy prompts with no project are still resolved as a deprecated fallback, signalled by the X-Opik-Deprecation response header.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -79,7 +79,7 @@ namespace Opik
         }
         /// <summary>
         /// Retrieve prompt version<br/>
-        /// Retrieve prompt version
+        /// Retrieve prompt version. When project_name is supplied the lookup is scoped to that project: a prompt belonging to a different project is never matched, and an unknown project name returns 404. Legacy prompts with no project are still resolved as a deprecated fallback, signalled by the X-Opik-Deprecation response header.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -561,7 +561,7 @@ namespace Opik
         }
         /// <summary>
         /// Retrieve prompt version<br/>
-        /// Retrieve prompt version
+        /// Retrieve prompt version. When project_name is supplied the lookup is scoped to that project: a prompt belonging to a different project is never matched, and an unknown project name returns 404. Legacy prompts with no project are still resolved as a deprecated fallback, signalled by the X-Opik-Deprecation response header.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="commit"></param>
@@ -572,7 +572,7 @@ namespace Opik
         /// If provided, resolves to the version with this sequential number (e.g. v3); mutually exclusive with commit and environment
         /// </param>
         /// <param name="projectName">
-        /// If provided, scopes the search to the specified project
+        /// If provided, scopes the search to the specified project; prompts belonging to other projects are never matched, and an unknown project name returns 404. Legacy prompts that are not scoped to any project are still matched as a deprecated fallback, signalled by the X-Opik-Deprecation response header.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

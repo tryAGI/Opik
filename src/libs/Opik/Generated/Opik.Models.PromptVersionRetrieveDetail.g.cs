@@ -34,7 +34,7 @@ namespace Opik
         public string? VersionNumber { get; set; }
 
         /// <summary>
-        /// If provided, scopes the search to the specified project
+        /// If provided, scopes the search to the specified project; prompts belonging to other projects are never matched, and an unknown project name returns 404. Legacy prompts that are not scoped to any project are still matched as a deprecated fallback, signalled by the X-Opik-Deprecation response header.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_name")]
         public string? ProjectName { get; set; }
@@ -57,7 +57,7 @@ namespace Opik
         /// If provided, resolves to the version with this sequential number (e.g. v3); mutually exclusive with commit and environment
         /// </param>
         /// <param name="projectName">
-        /// If provided, scopes the search to the specified project
+        /// If provided, scopes the search to the specified project; prompts belonging to other projects are never matched, and an unknown project name returns 404. Legacy prompts that are not scoped to any project are still matched as a deprecated fallback, signalled by the X-Opik-Deprecation response header.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
