@@ -337,19 +337,19 @@ namespace Opik
                             {
                                 string? __content_401 = null;
                                 global::System.Exception? __exception_401 = null;
-                                global::Opik.ErrorMessage? __value_401 = null;
+                                byte[]? __value_401 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = global::Opik.ErrorMessage.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = global::Opik.ErrorMessage.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -358,7 +358,7 @@ namespace Opik
                                 }
 
 
-                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                throw global::Opik.ApiException<byte[]>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
@@ -374,19 +374,19 @@ namespace Opik
                             {
                                 string? __content_404 = null;
                                 global::System.Exception? __exception_404 = null;
-                                global::Opik.ErrorMessage? __value_404 = null;
+                                byte[]? __value_404 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Opik.ErrorMessage.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_404, typeof(byte[]), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_404 = global::Opik.ErrorMessage.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_404, typeof(byte[]), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -395,7 +395,7 @@ namespace Opik
                                 }
 
 
-                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                throw global::Opik.ApiException<byte[]>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
@@ -724,19 +724,19 @@ namespace Opik
                             {
                                 string? __content_401 = null;
                                 global::System.Exception? __exception_401 = null;
-                                global::Opik.ErrorMessage? __value_401 = null;
+                                byte[]? __value_401 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = global::Opik.ErrorMessage.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = global::Opik.ErrorMessage.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -745,7 +745,7 @@ namespace Opik
                                 }
 
 
-                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                throw global::Opik.ApiException<byte[]>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
@@ -761,19 +761,19 @@ namespace Opik
                             {
                                 string? __content_404 = null;
                                 global::System.Exception? __exception_404 = null;
-                                global::Opik.ErrorMessage? __value_404 = null;
+                                byte[]? __value_404 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Opik.ErrorMessage.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_404, typeof(byte[]), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_404 = global::Opik.ErrorMessage.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_404, typeof(byte[]), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -782,7 +782,7 @@ namespace Opik
                                 }
 
 
-                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                throw global::Opik.ApiException<byte[]>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,

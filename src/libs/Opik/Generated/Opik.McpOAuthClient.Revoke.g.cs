@@ -149,12 +149,22 @@ namespace Opik
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/x-www-form-urlencoded");
+                            var __formValues = new global::System.Collections.Generic.List<global::System.Collections.Generic.KeyValuePair<string, string>>();
+                            if (request.Token != default)
+                            {
+                                __formValues.Add(new global::System.Collections.Generic.KeyValuePair<string, string>(
+                                    "token",
+                                    request.Token ?? string.Empty));
+                            }
+                            if (request.ClientId != default)
+                            {
+                                __formValues.Add(new global::System.Collections.Generic.KeyValuePair<string, string>(
+                                    "client_id",
+                                    request.ClientId ?? string.Empty));
+                            }
+                            var __httpRequestContent = new global::System.Net.Http.FormUrlEncodedContent(__formValues);
                             __httpRequest.Content = __httpRequestContent;
+
                 global::Opik.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
