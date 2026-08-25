@@ -45,9 +45,9 @@ namespace Opik
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.RetentionRulePublic> CreateRetentionRuleAsync(
-            bool organizationLevel,
             global::Opik.RetentionRuleWriteRetention retention,
             global::System.Guid? projectId = default,
+            bool? organizationLevel = default,
             bool? applyToPast = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
