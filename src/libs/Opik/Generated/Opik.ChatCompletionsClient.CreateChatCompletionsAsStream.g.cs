@@ -142,6 +142,10 @@ namespace Opik
                 __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
+                __httpRequest.Headers.TryAddWithoutValidation(
+                    "Accept",
+                    "text/event-stream");
+
             foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
