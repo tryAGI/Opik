@@ -41,7 +41,9 @@ namespace Opik
         /// Project IDs for write operations (used when creating/updating rules)
         /// </param>
         /// <param name="name"></param>
-        /// <param name="samplingRate"></param>
+        /// <param name="samplingRate">
+        /// Fraction of production (SDK-logged) items this rule scores, from 0 to 1. Trace rules ignore this value for experiment, playground and optimization traces and score them in full; span and thread rules only ever evaluate SDK-logged data.
+        /// </param>
         /// <param name="enabled"></param>
         /// <param name="triggerScope">
         /// Controls whether the rule fires on production traces, experiment traces, or both. Defaults to 'production' if omitted.

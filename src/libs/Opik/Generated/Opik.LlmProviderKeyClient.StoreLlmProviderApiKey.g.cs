@@ -513,6 +513,9 @@ namespace Opik
         /// <param name="headers"></param>
         /// <param name="configuration"></param>
         /// <param name="baseUrl"></param>
+        /// <param name="authConfig">
+        /// Dynamic token auth recipe. When set, Opik fetches a short-lived bearer from the configured auth service instead of using a static api_key. Only supported for custom providers. Secret credential values read back masked.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -524,6 +527,7 @@ namespace Opik
             global::System.Collections.Generic.Dictionary<string, string>? headers = default,
             global::System.Collections.Generic.Dictionary<string, string>? configuration = default,
             string? baseUrl = default,
+            global::Opik.ProviderAuthConfigWrite? authConfig = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -536,6 +540,7 @@ namespace Opik
                 Headers = headers,
                 Configuration = configuration,
                 BaseUrl = baseUrl,
+                AuthConfig = authConfig,
             };
 
             await StoreLlmProviderApiKeyAsync(

@@ -55,6 +55,12 @@ namespace Opik
         public string? BaseUrl { get; set; }
 
         /// <summary>
+        /// Dynamic token auth recipe. When set, Opik fetches a short-lived bearer from the configured auth service instead of using a static api_key. Only supported for custom providers. Secret credential values read back masked.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auth_config")]
+        public global::Opik.ProviderAuthConfigWrite? AuthConfig { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -73,6 +79,9 @@ namespace Opik
         /// <param name="headers"></param>
         /// <param name="configuration"></param>
         /// <param name="baseUrl"></param>
+        /// <param name="authConfig">
+        /// Dynamic token auth recipe. When set, Opik fetches a short-lived bearer from the configured auth service instead of using a static api_key. Only supported for custom providers. Secret credential values read back masked.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -83,7 +92,8 @@ namespace Opik
             string? providerName,
             global::System.Collections.Generic.Dictionary<string, string>? headers,
             global::System.Collections.Generic.Dictionary<string, string>? configuration,
-            string? baseUrl)
+            string? baseUrl,
+            global::Opik.ProviderAuthConfigWrite? authConfig)
         {
             this.Provider = provider;
             this.ApiKey = apiKey;
@@ -92,6 +102,7 @@ namespace Opik
             this.Headers = headers;
             this.Configuration = configuration;
             this.BaseUrl = baseUrl;
+            this.AuthConfig = authConfig;
         }
 
         /// <summary>

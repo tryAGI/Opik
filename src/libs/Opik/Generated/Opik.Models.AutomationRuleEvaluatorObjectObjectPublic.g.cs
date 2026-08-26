@@ -52,7 +52,7 @@ namespace Opik
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        /// Fraction of production (SDK-logged) items this rule scores, from 0 to 1. Trace rules ignore this value for experiment, playground and optimization traces and score them in full; span and thread rules only ever evaluate SDK-logged data.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sampling_rate")]
         public float? SamplingRate { get; set; }
@@ -125,7 +125,9 @@ namespace Opik
         /// Projects assigned to this rule (unique, sorted alphabetically by name)<br/>
         /// Included only in responses
         /// </param>
-        /// <param name="samplingRate"></param>
+        /// <param name="samplingRate">
+        /// Fraction of production (SDK-logged) items this rule scores, from 0 to 1. Trace rules ignore this value for experiment, playground and optimization traces and score them in full; span and thread rules only ever evaluate SDK-logged data.
+        /// </param>
         /// <param name="enabled"></param>
         /// <param name="triggerScope">
         /// Controls whether the rule fires on production traces, experiment traces, or both. Defaults to 'production' if omitted.

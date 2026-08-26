@@ -6,7 +6,7 @@ namespace Opik
     public partial class LlmProviderKeyClient
     {
 
-        private static readonly global::Opik.AutoSDKServer[] s_UpdateLlmProviderApiKeyServers = new global::Opik.AutoSDKServer[]
+        private static readonly global::Opik.AutoSDKServer[] s_TestLlmProviderAuthConfigServers = new global::Opik.AutoSDKServer[]
         {            new global::Opik.AutoSDKServer(
                 id: "http-localhost-api",
                 name: "Local server",
@@ -20,7 +20,7 @@ namespace Opik
         };
 
 
-        private static readonly global::Opik.EndPointSecurityRequirement s_UpdateLlmProviderApiKeySecurityRequirement0 =
+        private static readonly global::Opik.EndPointSecurityRequirement s_TestLlmProviderAuthConfigSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
             {
                 Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
@@ -34,60 +34,60 @@ namespace Opik
                     },
                 },
             };
-        private static readonly global::Opik.EndPointSecurityRequirement[] s_UpdateLlmProviderApiKeySecurityRequirements =
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_TestLlmProviderAuthConfigSecurityRequirements =
             new global::Opik.EndPointSecurityRequirement[]
-            {                s_UpdateLlmProviderApiKeySecurityRequirement0,
+            {                s_TestLlmProviderAuthConfigSecurityRequirement0,
             };
-        partial void PrepareUpdateLlmProviderApiKeyArguments(
+        partial void PrepareTestLlmProviderAuthConfigArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::System.Guid id,
-            global::Opik.ProviderApiKeyUpdate request);
-        partial void PrepareUpdateLlmProviderApiKeyRequest(
+            global::Opik.ProviderAuthCheck request);
+        partial void PrepareTestLlmProviderAuthConfigRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.Guid id,
-            global::Opik.ProviderApiKeyUpdate request);
-        partial void ProcessUpdateLlmProviderApiKeyResponse(
+            global::Opik.ProviderAuthCheck request);
+        partial void ProcessTestLlmProviderAuthConfigResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
+        partial void ProcessTestLlmProviderAuthConfigResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
         /// <summary>
-        /// Update LLM Provider's ApiKey<br/>
-        /// Update LLM Provider's ApiKey. api_key and auth_config are mutually exclusive: setting a valid auth_config on a provider that holds a static api_key clears the stored key; send auth_config as an empty object to clear the recipe and switch back to a static key
+        /// Test a provider's dynamic token auth<br/>
+        /// Runs the token fetch once, backend-side, and reports the token lifetime. The token itself is never returned. Send provider_id to test the stored config, auth_config to test submitted values, or both to resolve secret sentinels against the stored config.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task UpdateLlmProviderApiKeyAsync(
-            global::System.Guid id,
+        public async global::System.Threading.Tasks.Task<global::Opik.Result> TestLlmProviderAuthConfigAsync(
 
-            global::Opik.ProviderApiKeyUpdate request,
+            global::Opik.ProviderAuthCheck request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            await UpdateLlmProviderApiKeyAsResponseAsync(
-                id: id,
+            var __response = await TestLlmProviderAuthConfigAsResponseAsync(
 
                 request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
+
+            return __response.Body;
         }
         /// <summary>
-        /// Update LLM Provider's ApiKey<br/>
-        /// Update LLM Provider's ApiKey. api_key and auth_config are mutually exclusive: setting a valid auth_config on a provider that holds a static api_key clears the stored key; send auth_config as an empty object to clear the recipe and switch back to a static key
+        /// Test a provider's dynamic token auth<br/>
+        /// Runs the token fetch once, backend-side, and reports the token lifetime. The token itself is never returned. Send provider_id to test the stored config, auth_config to test submitted values, or both to resolve secret sentinels against the stored config.
         /// </summary>
-        /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse> UpdateLlmProviderApiKeyAsResponseAsync(
-            global::System.Guid id,
+        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.Result>> TestLlmProviderAuthConfigAsResponseAsync(
 
-            global::Opik.ProviderApiKeyUpdate request,
+            global::Opik.ProviderAuthCheck request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -95,16 +95,15 @@ namespace Opik
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareUpdateLlmProviderApiKeyArguments(
+            PrepareTestLlmProviderAuthConfigArguments(
                 httpClient: HttpClient,
-                id: ref id,
                 request: request);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_UpdateLlmProviderApiKeySecurityRequirements,
-                operationName: "UpdateLlmProviderApiKeyAsync");
+                securityRequirements: s_TestLlmProviderAuthConfigSecurityRequirements,
+                operationName: "TestLlmProviderAuthConfigAsync");
 
             using var __timeoutCancellationTokenSource = global::Opik.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -124,9 +123,9 @@ namespace Opik
             {
 
                             var __pathBuilder = new global::Opik.PathBuilder(
-                                path: $"/v1/private/llm-provider-key/{id}",
+                                path: "/v1/private/llm-provider-key/auth-config/test",
                                 baseUri: ResolveBaseUri(
-                                servers: s_UpdateLlmProviderApiKeyServers,
+                                servers: s_TestLlmProviderAuthConfigServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -134,7 +133,7 @@ namespace Opik
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: new global::System.Net.Http.HttpMethod("PATCH"),
+                    method: global::System.Net.Http.HttpMethod.Post,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -171,10 +170,9 @@ namespace Opik
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareUpdateLlmProviderApiKeyRequest(
+                PrepareTestLlmProviderAuthConfigRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id!,
                     request: request);
 
                 return __httpRequest;
@@ -192,10 +190,10 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "UpdateLlmProviderApiKey",
-                                methodName: "UpdateLlmProviderApiKeyAsync",
-                                pathTemplate: "$\"/v1/private/llm-provider-key/{id}\"",
-                                httpMethod: "PATCH",
+                                operationId: "TestLlmProviderAuthConfig",
+                                methodName: "TestLlmProviderAuthConfigAsync",
+                                pathTemplate: "\"/v1/private/llm-provider-key/auth-config/test\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -226,10 +224,10 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "UpdateLlmProviderApiKey",
-                                methodName: "UpdateLlmProviderApiKeyAsync",
-                                pathTemplate: "$\"/v1/private/llm-provider-key/{id}\"",
-                                httpMethod: "PATCH",
+                                operationId: "TestLlmProviderAuthConfig",
+                                methodName: "TestLlmProviderAuthConfigAsync",
+                                pathTemplate: "\"/v1/private/llm-provider-key/auth-config/test\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -267,10 +265,10 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "UpdateLlmProviderApiKey",
-                                methodName: "UpdateLlmProviderApiKeyAsync",
-                                pathTemplate: "$\"/v1/private/llm-provider-key/{id}\"",
-                                httpMethod: "PATCH",
+                                operationId: "TestLlmProviderAuthConfig",
+                                methodName: "TestLlmProviderAuthConfigAsync",
+                                pathTemplate: "\"/v1/private/llm-provider-key/auth-config/test\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -307,7 +305,7 @@ namespace Opik
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessUpdateLlmProviderApiKeyResponse(
+                ProcessTestLlmProviderAuthConfigResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -315,10 +313,10 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "UpdateLlmProviderApiKey",
-                                methodName: "UpdateLlmProviderApiKeyAsync",
-                                pathTemplate: "$\"/v1/private/llm-provider-key/{id}\"",
-                                httpMethod: "PATCH",
+                                operationId: "TestLlmProviderAuthConfig",
+                                methodName: "TestLlmProviderAuthConfigAsync",
+                                pathTemplate: "\"/v1/private/llm-provider-key/auth-config/test\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -337,10 +335,10 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "UpdateLlmProviderApiKey",
-                                methodName: "UpdateLlmProviderApiKeyAsync",
-                                pathTemplate: "$\"/v1/private/llm-provider-key/{id}\"",
-                                httpMethod: "PATCH",
+                                operationId: "TestLlmProviderAuthConfig",
+                                methodName: "TestLlmProviderAuthConfigAsync",
+                                pathTemplate: "\"/v1/private/llm-provider-key/auth-config/test\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -354,38 +352,75 @@ namespace Opik
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Bad Request
-                            if ((int)__response.StatusCode == 401)
+                            // Bad Request — the token fetch itself failed (unreachable URL, rejected credentials, malformed reply)
+                            if ((int)__response.StatusCode == 400)
                             {
-                                string? __content_401 = null;
-                                global::System.Exception? __exception_401 = null;
-                                global::Opik.ErrorMessage? __value_401 = null;
+                                string? __content_400 = null;
+                                global::System.Exception? __exception_400 = null;
+                                global::Opik.ErrorMessage? __value_400 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
-                                        __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = global::Opik.ErrorMessage.FromJson(__content_401, JsonSerializerContext);
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
                                     }
                                     else
                                     {
-                                        __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = global::Opik.ErrorMessage.FromJson(__content_401, JsonSerializerContext);
+                                        __value_400 = global::Opik.ErrorMessage.FromJson(__content_400, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    __exception_401 = __ex;
+                                    __exception_400 = __ex;
                                 }
 
 
                                 throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_401,
-                                    responseBody: __content_401,
-                                    responseObject: __value_401,
+                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_400,
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // Unprocessable Content — the request is invalid (neither provider_id nor auth_config, or an invalid auth_config)
+                            if ((int)__response.StatusCode == 422)
+                            {
+                                string? __content_422 = null;
+                                global::System.Exception? __exception_422 = null;
+                                global::Opik.ErrorMessage? __value_422 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_422 = global::Opik.ErrorMessage.FromJson(__content_422, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_422 = global::Opik.ErrorMessage.FromJson(__content_422, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_422 = __ex;
+                                }
+
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_422,
+                                    responseBody: __content_422,
+                                    responseObject: __value_422,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -478,15 +513,22 @@ namespace Opik
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
+                                ProcessTestLlmProviderAuthConfigResponseContent(
+                                    httpClient: HttpClient,
+                                    httpResponseMessage: __response,
+                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                return new global::Opik.AutoSDKHttpResponse(
+                                    var __value = global::Opik.Result.FromJson(__content, JsonSerializerContext) ??
+                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.Result>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri);
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -506,10 +548,19 @@ namespace Opik
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    return new global::Opik.AutoSDKHttpResponse(
+                                    using var __content = await __response.Content.ReadAsStreamAsync(
+                #if NET5_0_OR_GREATER
+                                        __effectiveCancellationToken
+                #endif
+                                    ).ConfigureAwait(false);
+
+                                    var __value = await global::Opik.Result.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.Result>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri);
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -546,50 +597,31 @@ namespace Opik
             }
         }
         /// <summary>
-        /// Update LLM Provider's ApiKey<br/>
-        /// Update LLM Provider's ApiKey. api_key and auth_config are mutually exclusive: setting a valid auth_config on a provider that holds a static api_key clears the stored key; send auth_config as an empty object to clear the recipe and switch back to a static key
+        /// Test a provider's dynamic token auth<br/>
+        /// Runs the token fetch once, backend-side, and reports the token lifetime. The token itself is never returned. Send provider_id to test the stored config, auth_config to test submitted values, or both to resolve secret sentinels against the stored config.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="name"></param>
-        /// <param name="providerName">
-        /// Provider name - can be set to migrate legacy custom LLM or Bedrock providers to the new multi-provider format. Once set, it cannot be changed. Should only be set for custom LLM and Bedrock providers.<br/>
-        /// Example: ollama
+        /// <param name="providerId">
+        /// Test the stored auth config of this provider; also the sentinel-resolution target when auth_config is sent
         /// </param>
-        /// <param name="headers"></param>
-        /// <param name="configuration"></param>
-        /// <param name="baseUrl"></param>
         /// <param name="authConfig">
         /// Dynamic token auth recipe. Send the '__SECRET__' sentinel as a credential value to keep the stored secret; send an empty object to clear the auth config.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task UpdateLlmProviderApiKeyAsync(
-            global::System.Guid id,
-            string? apiKey = default,
-            string? name = default,
-            string? providerName = default,
-            global::System.Collections.Generic.Dictionary<string, string>? headers = default,
-            global::System.Collections.Generic.Dictionary<string, string>? configuration = default,
-            string? baseUrl = default,
+        public async global::System.Threading.Tasks.Task<global::Opik.Result> TestLlmProviderAuthConfigAsync(
+            global::System.Guid? providerId = default,
             global::Opik.ProviderAuthConfig? authConfig = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Opik.ProviderApiKeyUpdate
+            var __request = new global::Opik.ProviderAuthCheck
             {
-                ApiKey = apiKey,
-                Name = name,
-                ProviderName = providerName,
-                Headers = headers,
-                Configuration = configuration,
-                BaseUrl = baseUrl,
+                ProviderId = providerId,
                 AuthConfig = authConfig,
             };
 
-            await UpdateLlmProviderApiKeyAsync(
-                id: id,
+            return await TestLlmProviderAuthConfigAsync(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
