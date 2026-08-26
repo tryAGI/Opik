@@ -730,14 +730,28 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteName), TypeInfoPropertyName = "GuardrailWriteName2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteResult), TypeInfoPropertyName = "GuardrailWriteResult2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CredentialPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyPagePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ProviderApiKeyPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyPublicProvider), TypeInfoPropertyName = "ProviderApiKeyPublicProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigPublic))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigPublicSendAs), TypeInfoPropertyName = "ProviderAuthConfigPublicSendAs2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.CredentialPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Credential))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKey))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyProvider), TypeInfoPropertyName = "ProviderApiKeyProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfig))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigSendAs), TypeInfoPropertyName = "ProviderAuthConfigSendAs2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Credential>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CredentialWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyWriteProvider), TypeInfoPropertyName = "ProviderApiKeyWriteProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigWrite))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigWriteSendAs), TypeInfoPropertyName = "ProviderAuthConfigWriteSendAs2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.CredentialWrite>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Result))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthCheck))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LocalRunnerLogEntry))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BridgeCommandSubmitResponse))]
@@ -1005,7 +1019,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Permission))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceUserPermissions))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Permission>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Result))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceMetricsSummaryRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DataPointDouble))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceMetricResponse))]
@@ -1013,6 +1026,18 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceMetricRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceConfiguration))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BreakdownConfig))]
+    internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+        })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BreakdownConfigField), TypeInfoPropertyName = "BreakdownConfigField2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequestMetricType), TypeInfoPropertyName = "WorkspaceSpanMetricRequestMetricType2")]
@@ -1026,18 +1051,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromJsonRequestFormat), TypeInfoPropertyName = "CreateDatasetItemsFromJsonRequestFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.LocalRunnerLogEntry>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesStatus), TypeInfoPropertyName = "FindAgentInsightsIssuesStatus2")]
-    internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesSeverity), TypeInfoPropertyName = "FindAgentInsightsIssuesSeverity2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GetWebhookExamplesAlertType), TypeInfoPropertyName = "GetWebhookExamplesAlertType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentListEntityType), TypeInfoPropertyName = "AttachmentListEntityType2")]
@@ -1229,8 +1242,11 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteName?), TypeInfoPropertyName = "NullableGuardrailWriteName2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteResult?), TypeInfoPropertyName = "NullableGuardrailWriteResult2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyPublicProvider?), TypeInfoPropertyName = "NullableProviderApiKeyPublicProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigPublicSendAs?), TypeInfoPropertyName = "NullableProviderAuthConfigPublicSendAs2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyProvider?), TypeInfoPropertyName = "NullableProviderApiKeyProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigSendAs?), TypeInfoPropertyName = "NullableProviderAuthConfigSendAs2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyWriteProvider?), TypeInfoPropertyName = "NullableProviderApiKeyWriteProvider2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigWriteSendAs?), TypeInfoPropertyName = "NullableProviderAuthConfigWriteSendAs2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BridgeCommandSubmitRequestType?), TypeInfoPropertyName = "NullableBridgeCommandSubmitRequestType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BridgeCommandType?), TypeInfoPropertyName = "NullableBridgeCommandType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BridgeCommandStatus?), TypeInfoPropertyName = "NullableBridgeCommandStatus2")]
@@ -1442,6 +1458,9 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Guardrail>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.GuardrailWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProviderApiKeyPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.CredentialPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Credential>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.CredentialWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Param>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Agent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LocalRunnerJob>))]
@@ -2156,13 +2175,25 @@ namespace Opik
 
                     || typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider?)
 
+                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigPublicSendAs)
+
+                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigPublicSendAs?)
+
                     || typeToConvert == typeof(global::Opik.ProviderApiKeyProvider)
 
                     || typeToConvert == typeof(global::Opik.ProviderApiKeyProvider?)
 
+                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigSendAs)
+
+                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigSendAs?)
+
                     || typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider)
 
                     || typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider?)
+
+                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigWriteSendAs)
+
+                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigWriteSendAs?)
 
                     || typeToConvert == typeof(global::Opik.BridgeCommandSubmitRequestType)
 
@@ -4017,6 +4048,16 @@ namespace Opik
                     return new global::Opik.JsonConverters.ProviderApiKeyPublicProviderNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigPublicSendAs))
+                {
+                    return new global::Opik.JsonConverters.ProviderAuthConfigPublicSendAsJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigPublicSendAs?))
+                {
+                    return new global::Opik.JsonConverters.ProviderAuthConfigPublicSendAsNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Opik.ProviderApiKeyProvider))
                 {
                     return new global::Opik.JsonConverters.ProviderApiKeyProviderJsonConverter();
@@ -4027,6 +4068,16 @@ namespace Opik
                     return new global::Opik.JsonConverters.ProviderApiKeyProviderNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigSendAs))
+                {
+                    return new global::Opik.JsonConverters.ProviderAuthConfigSendAsJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigSendAs?))
+                {
+                    return new global::Opik.JsonConverters.ProviderAuthConfigSendAsNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider))
                 {
                     return new global::Opik.JsonConverters.ProviderApiKeyWriteProviderJsonConverter();
@@ -4035,6 +4086,16 @@ namespace Opik
                 if (typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider?))
                 {
                     return new global::Opik.JsonConverters.ProviderApiKeyWriteProviderNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigWriteSendAs))
+                {
+                    return new global::Opik.JsonConverters.ProviderAuthConfigWriteSendAsJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigWriteSendAs?))
+                {
+                    return new global::Opik.JsonConverters.ProviderAuthConfigWriteSendAsNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Opik.BridgeCommandSubmitRequestType))

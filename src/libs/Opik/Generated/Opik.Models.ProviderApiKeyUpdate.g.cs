@@ -47,6 +47,12 @@ namespace Opik
         public string? BaseUrl { get; set; }
 
         /// <summary>
+        /// Dynamic token auth recipe. Send the '__SECRET__' sentinel as a credential value to keep the stored secret; send an empty object to clear the auth config.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auth_config")]
+        public global::Opik.ProviderAuthConfig? AuthConfig { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -64,6 +70,9 @@ namespace Opik
         /// <param name="headers"></param>
         /// <param name="configuration"></param>
         /// <param name="baseUrl"></param>
+        /// <param name="authConfig">
+        /// Dynamic token auth recipe. Send the '__SECRET__' sentinel as a credential value to keep the stored secret; send an empty object to clear the auth config.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -73,7 +82,8 @@ namespace Opik
             string? providerName,
             global::System.Collections.Generic.Dictionary<string, string>? headers,
             global::System.Collections.Generic.Dictionary<string, string>? configuration,
-            string? baseUrl)
+            string? baseUrl,
+            global::Opik.ProviderAuthConfig? authConfig)
         {
             this.ApiKey = apiKey;
             this.Name = name;
@@ -81,6 +91,7 @@ namespace Opik
             this.Headers = headers;
             this.Configuration = configuration;
             this.BaseUrl = baseUrl;
+            this.AuthConfig = authConfig;
         }
 
         /// <summary>

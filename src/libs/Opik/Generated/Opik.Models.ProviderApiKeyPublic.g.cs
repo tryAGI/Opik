@@ -61,6 +61,12 @@ namespace Opik
         public string? BaseUrl { get; set; }
 
         /// <summary>
+        /// Dynamic token auth recipe. When set, Opik fetches a short-lived bearer from the configured auth service instead of using a static api_key. Only supported for custom providers. Secret credential values read back masked.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auth_config")]
+        public global::Opik.ProviderAuthConfigPublic? AuthConfig { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -113,6 +119,9 @@ namespace Opik
         /// <param name="headers"></param>
         /// <param name="configuration"></param>
         /// <param name="baseUrl"></param>
+        /// <param name="authConfig">
+        /// Dynamic token auth recipe. When set, Opik fetches a short-lived bearer from the configured auth service instead of using a static api_key. Only supported for custom providers. Secret credential values read back masked.
+        /// </param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -141,6 +150,7 @@ namespace Opik
             global::System.Collections.Generic.Dictionary<string, string>? headers,
             global::System.Collections.Generic.Dictionary<string, string>? configuration,
             string? baseUrl,
+            global::Opik.ProviderAuthConfigPublic? authConfig,
             global::System.DateTime? createdAt,
             string? createdBy,
             global::System.DateTime? lastUpdatedAt,
@@ -155,6 +165,7 @@ namespace Opik
             this.Headers = headers;
             this.Configuration = configuration;
             this.BaseUrl = baseUrl;
+            this.AuthConfig = authConfig;
             this.CreatedAt = createdAt;
             this.CreatedBy = createdBy;
             this.LastUpdatedAt = lastUpdatedAt;
