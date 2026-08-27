@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AgentConfigRemoveValues
     {
@@ -21,7 +21,7 @@ namespace Opik
         public string? ProjectName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("keys")]
         [global::System.Text.Json.Serialization.JsonRequired]

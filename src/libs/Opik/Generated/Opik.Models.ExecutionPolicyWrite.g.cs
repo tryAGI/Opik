@@ -4,18 +4,18 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ExecutionPolicyWrite
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("runs_per_item")]
         public int? RunsPerItem { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pass_threshold")]
         public int? PassThreshold { get; set; }

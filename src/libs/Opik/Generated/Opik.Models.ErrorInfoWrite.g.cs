@@ -4,25 +4,25 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ErrorInfoWrite
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exception_type")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ExceptionType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         public string? Message { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("traceback")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,30 +4,30 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AuthorizeContext
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_name")]
         public string? ClientName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_logo_uri")]
         public string? ClientLogoUri { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workspaces")]
         public global::System.Collections.Generic.IList<global::Opik.WorkspaceInfo>? Workspaces { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("csrf_token")]
         public string? CsrfToken { get; set; }

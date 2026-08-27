@@ -4,16 +4,16 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DeleteAttachmentsRequestEntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Span,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace,
     }

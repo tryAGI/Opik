@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class LocksResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("locks")]
         public global::System.Collections.Generic.Dictionary<string, global::Opik.ItemLockInfo>? Locks { get; set; }

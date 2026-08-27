@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ExperimentItemsBatch
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("experiment_items")]
         [global::System.Text.Json.Serialization.JsonRequired]

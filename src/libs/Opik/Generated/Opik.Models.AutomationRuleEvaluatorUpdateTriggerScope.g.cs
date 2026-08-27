@@ -4,20 +4,20 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AutomationRuleEvaluatorUpdateTriggerScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Both,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Experiment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Production,
     }

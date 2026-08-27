@@ -5,12 +5,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct JsonListStringExperimentItemBulkWriteView : global::System.IEquatable<JsonListStringExperimentItemBulkWriteView>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public object? JsonListStringExperimentItemBulkWriteViewVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace Opik
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringExperimentItemBulkWriteViewVariant1))]
@@ -27,7 +27,7 @@ namespace Opik
         public bool IsJsonListStringExperimentItemBulkWriteViewVariant1 => JsonListStringExperimentItemBulkWriteViewVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickJsonListStringExperimentItemBulkWriteViewVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object PickJsonListStringExperimentItemBulkWriteViewVariant1() => IsJsonListStringExperimentItemBulkWriteViewVariant1
             ? JsonListStringExperimentItemBulkWriteViewVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringExperimentItemBulkWriteViewVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<object>? JsonListStringExperimentItemBulkWriteViewVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Opik
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringExperimentItemBulkWriteViewVariant2))]
@@ -64,7 +64,7 @@ namespace Opik
         public bool IsJsonListStringExperimentItemBulkWriteViewVariant2 => JsonListStringExperimentItemBulkWriteViewVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickJsonListStringExperimentItemBulkWriteViewVariant2(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<object> PickJsonListStringExperimentItemBulkWriteViewVariant2() => IsJsonListStringExperimentItemBulkWriteViewVariant2
             ? JsonListStringExperimentItemBulkWriteViewVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringExperimentItemBulkWriteViewVariant2' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public string? JsonListStringExperimentItemBulkWriteViewVariant3 { get; init; }
@@ -93,7 +93,7 @@ namespace Opik
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringExperimentItemBulkWriteViewVariant3))]
@@ -101,7 +101,7 @@ namespace Opik
         public bool IsJsonListStringExperimentItemBulkWriteViewVariant3 => JsonListStringExperimentItemBulkWriteViewVariant3 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickJsonListStringExperimentItemBulkWriteViewVariant3(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickJsonListStringExperimentItemBulkWriteViewVariant3() => IsJsonListStringExperimentItemBulkWriteViewVariant3
             ? JsonListStringExperimentItemBulkWriteViewVariant3!
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringExperimentItemBulkWriteViewVariant3' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator JsonListStringExperimentItemBulkWriteView(string value) => new JsonListStringExperimentItemBulkWriteView((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(JsonListStringExperimentItemBulkWriteView @this) => @this.JsonListStringExperimentItemBulkWriteViewVariant3;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public JsonListStringExperimentItemBulkWriteView(string? value)
         {
@@ -138,12 +138,12 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static JsonListStringExperimentItemBulkWriteView FromJsonListStringExperimentItemBulkWriteViewVariant3(string? value) => new JsonListStringExperimentItemBulkWriteView(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public JsonListStringExperimentItemBulkWriteView(
             object? jsonListStringExperimentItemBulkWriteViewVariant1,
@@ -157,25 +157,25 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             JsonListStringExperimentItemBulkWriteViewVariant3 as object ??
             JsonListStringExperimentItemBulkWriteViewVariant2 as object ??
-            JsonListStringExperimentItemBulkWriteViewVariant1 as object 
+            JsonListStringExperimentItemBulkWriteViewVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             JsonListStringExperimentItemBulkWriteViewVariant1?.ToString() ??
             JsonListStringExperimentItemBulkWriteViewVariant2?.ToString() ??
-            JsonListStringExperimentItemBulkWriteViewVariant3?.ToString() 
+            JsonListStringExperimentItemBulkWriteViewVariant3?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -183,7 +183,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<object, TResult>? jsonListStringExperimentItemBulkWriteViewVariant1 = null,
@@ -213,7 +213,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<object>? jsonListStringExperimentItemBulkWriteViewVariant1 = null,
@@ -243,7 +243,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<object>? jsonListStringExperimentItemBulkWriteViewVariant1 = null,
@@ -271,7 +271,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -294,19 +294,19 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(JsonListStringExperimentItemBulkWriteView other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<object?>.Default.Equals(JsonListStringExperimentItemBulkWriteViewVariant1, other.JsonListStringExperimentItemBulkWriteViewVariant1) &&
                 global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<object>?>.Default.Equals(JsonListStringExperimentItemBulkWriteViewVariant2, other.JsonListStringExperimentItemBulkWriteViewVariant2) &&
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(JsonListStringExperimentItemBulkWriteViewVariant3, other.JsonListStringExperimentItemBulkWriteViewVariant3) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(JsonListStringExperimentItemBulkWriteViewVariant3, other.JsonListStringExperimentItemBulkWriteViewVariant3)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(JsonListStringExperimentItemBulkWriteView obj1, JsonListStringExperimentItemBulkWriteView obj2)
         {
@@ -314,7 +314,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(JsonListStringExperimentItemBulkWriteView obj1, JsonListStringExperimentItemBulkWriteView obj2)
         {
@@ -322,7 +322,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

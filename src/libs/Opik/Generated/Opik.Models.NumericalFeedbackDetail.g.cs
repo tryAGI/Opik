@@ -4,19 +4,19 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class NumericalFeedbackDetail
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("max")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Max { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("min")]
         [global::System.Text.Json.Serialization.JsonRequired]

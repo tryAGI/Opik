@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BooleanFeedbackDefinitionUpdate : global::Opik.FeedbackUpdate
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("details")]
         public global::Opik.BooleanFeedbackDetailUpdate? Details { get; set; }

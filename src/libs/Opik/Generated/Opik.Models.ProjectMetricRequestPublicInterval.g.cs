@@ -4,24 +4,24 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ProjectMetricRequestPublicInterval
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Daily,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hourly,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Total,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Weekly,
     }

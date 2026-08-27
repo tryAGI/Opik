@@ -9,11 +9,11 @@ namespace Opik
     public enum DashboardPublicScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Insights,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workspace,
     }

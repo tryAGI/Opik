@@ -4,40 +4,40 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class OptimizationStudioConfigWrite
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dataset_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DatasetName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Opik.StudioPromptWrite Prompt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("llm_model")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Opik.StudioLlmModelWrite LlmModel { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluation")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Opik.StudioEvaluationWrite Evaluation { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("optimizer")]
         [global::System.Text.Json.Serialization.JsonRequired]

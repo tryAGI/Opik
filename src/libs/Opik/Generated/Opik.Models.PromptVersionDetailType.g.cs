@@ -4,20 +4,20 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PromptVersionDetailType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jinja2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mustache,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Python,
     }

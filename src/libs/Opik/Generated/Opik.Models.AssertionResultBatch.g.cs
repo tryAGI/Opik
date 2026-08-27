@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AssertionResultBatch
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entity_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AssertionResultBatchEntityTypeJsonConverter))]
@@ -17,7 +17,7 @@ namespace Opik
         public required global::Opik.AssertionResultBatchEntityType EntityType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assertion_results")]
         [global::System.Text.Json.Serialization.JsonRequired]

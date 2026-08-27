@@ -4,48 +4,48 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum BreakdownConfigPublicField
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ErrorInfo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ErrorType,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GuardrailName,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Metadata,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Name,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Provider,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tags,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Type,
     }

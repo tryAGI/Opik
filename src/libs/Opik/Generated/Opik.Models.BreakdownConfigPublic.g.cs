@@ -4,25 +4,25 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BreakdownConfigPublic
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("field")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.BreakdownConfigPublicFieldJsonConverter))]
         public global::Opik.BreakdownConfigPublicField? Field { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata_key")]
         public string? MetadataKey { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_metric")]
         public string? SubMetric { get; set; }

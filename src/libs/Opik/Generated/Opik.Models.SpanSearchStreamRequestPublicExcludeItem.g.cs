@@ -9,95 +9,95 @@ namespace Opik
     public enum SpanSearchStreamRequestPublicExcludeItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Comments,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreatedAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreatedBy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndTime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Environment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ErrorInfo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FeedbackScores,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Input,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LastUpdatedBy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Metadata,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Model,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Name,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Output,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Provider,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Source,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartTime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tags,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TotalEstimatedCost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TotalEstimatedCostVersion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ttft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Type,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Usage,
     }

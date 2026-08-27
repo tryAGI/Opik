@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TraceThreadUserDefinedMetricPythonCodeWrite
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metric")]
         [global::System.Text.Json.Serialization.JsonRequired]

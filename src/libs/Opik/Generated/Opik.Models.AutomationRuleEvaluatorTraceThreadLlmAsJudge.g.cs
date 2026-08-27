@@ -4,18 +4,18 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AutomationRuleEvaluatorTraceThreadLlmAsJudge : global::Opik.AutomationRuleEvaluator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filters")]
         public global::System.Collections.Generic.IList<global::Opik.TraceThreadFilter>? Filters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code")]
         public global::Opik.TraceThreadLlmAsJudgeCode? Code { get; set; }

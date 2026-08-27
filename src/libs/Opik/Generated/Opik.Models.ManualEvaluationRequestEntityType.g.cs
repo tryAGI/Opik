@@ -10,15 +10,15 @@ namespace Opik
     public enum ManualEvaluationRequestEntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Span,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Thread,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace,
     }

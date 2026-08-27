@@ -4,16 +4,16 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DashboardPublicType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Experiments,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MultiProject,
     }

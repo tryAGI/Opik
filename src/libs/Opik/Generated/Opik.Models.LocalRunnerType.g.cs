@@ -4,16 +4,16 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum LocalRunnerType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Connect,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Endpoint,
     }

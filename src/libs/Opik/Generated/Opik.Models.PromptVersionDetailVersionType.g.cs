@@ -9,11 +9,11 @@ namespace Opik
     public enum PromptVersionDetailVersionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mask,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PromptVersion,
     }

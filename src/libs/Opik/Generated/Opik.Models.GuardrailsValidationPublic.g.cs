@@ -9,13 +9,13 @@ namespace Opik
     public sealed partial class GuardrailsValidationPublic
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("span_id")]
         public global::System.Guid? SpanId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("checks")]
         public global::System.Collections.Generic.IList<global::Opik.CheckPublic>? Checks { get; set; }

@@ -15,7 +15,7 @@ namespace Opik
         public global::System.Collections.Generic.IList<global::System.Guid>? Ids { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filters")]
         public global::System.Collections.Generic.IList<global::Opik.DatasetItemFilter>? Filters { get; set; }

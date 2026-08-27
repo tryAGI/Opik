@@ -4,16 +4,16 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum WebhookTestResultStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failure,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Success,
     }

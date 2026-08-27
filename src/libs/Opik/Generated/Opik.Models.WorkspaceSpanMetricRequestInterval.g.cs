@@ -4,24 +4,24 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum WorkspaceSpanMetricRequestInterval
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Daily,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hourly,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Total,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Weekly,
     }

@@ -4,19 +4,19 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MultipartUploadPart
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("e_tag")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ETag { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("part_number")]
         [global::System.Text.Json.Serialization.JsonRequired]

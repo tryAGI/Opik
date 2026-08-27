@@ -4,19 +4,19 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ExperimentItemBulkRecordExperimentItemBulkWriteView
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dataset_item_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Guid DatasetItemId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluate_task_result")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.JsonListStringExperimentItemBulkWriteViewJsonConverter))]
@@ -29,13 +29,13 @@ namespace Opik
         public global::Opik.TraceExperimentItemBulkWriteView? Trace { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spans")]
         public global::System.Collections.Generic.IList<global::Opik.SpanExperimentItemBulkWriteView>? Spans { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedback_scores")]
         public global::System.Collections.Generic.IList<global::Opik.FeedbackScoreExperimentItemBulkWriteView>? FeedbackScores { get; set; }

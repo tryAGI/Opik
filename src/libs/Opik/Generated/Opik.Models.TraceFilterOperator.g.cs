@@ -4,64 +4,64 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TraceFilterOperator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Neq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Lte,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gte,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Contains,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndsWith,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         In,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IsEmpty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IsNotEmpty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotContains,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotIn,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartsWith,
     }

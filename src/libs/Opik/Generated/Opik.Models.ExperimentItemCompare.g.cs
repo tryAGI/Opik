@@ -9,27 +9,27 @@ namespace Opik
     public sealed partial class ExperimentItemCompare
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         public global::System.Guid? Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("experiment_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Guid ExperimentId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dataset_item_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Guid DatasetItemId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trace_id")]
         [global::System.Text.Json.Serialization.JsonRequired]

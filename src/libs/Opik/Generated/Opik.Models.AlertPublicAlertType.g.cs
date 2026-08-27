@@ -4,20 +4,20 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AlertPublicAlertType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         General,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pagerduty,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slack,
     }

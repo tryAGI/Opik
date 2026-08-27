@@ -4,24 +4,24 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DatasetItemSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sdk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Span,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace,
     }

@@ -4,88 +4,88 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum WorkspaceSpanMetricRequestMetricType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FeedbackScores,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GuardrailsFailedCount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanAverageDuration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanCost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanCount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanDuration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanErrorRate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanFeedbackScores,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanTokenUsage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadAverageDuration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadCost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadCount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadDuration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadFeedbackScores,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TokenUsage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TraceAverageDuration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TraceCount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TraceErrorRate,
     }

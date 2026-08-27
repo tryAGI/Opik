@@ -4,20 +4,20 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FeedbackScoreSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OnlineScoring,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sdk,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ui,
     }

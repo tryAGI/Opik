@@ -4,16 +4,16 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AgentBlueprintPublicType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Blueprint,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mask,
     }

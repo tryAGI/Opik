@@ -9,15 +9,15 @@ namespace Opik
     public enum AutomationRuleEvaluatorObjectObjectPublicTriggerScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Both,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Experiment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Production,
     }

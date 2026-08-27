@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AlertTriggerPublic
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         public global::System.Guid? Id { get; set; }
@@ -21,7 +21,7 @@ namespace Opik
         public global::System.Guid? AlertId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("event_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AlertTriggerPublicEventTypeJsonConverter))]
@@ -29,7 +29,7 @@ namespace Opik
         public required global::Opik.AlertTriggerPublicEventType EventType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trigger_configs")]
         public global::System.Collections.Generic.IList<global::Opik.AlertTriggerConfigPublic>? TriggerConfigs { get; set; }

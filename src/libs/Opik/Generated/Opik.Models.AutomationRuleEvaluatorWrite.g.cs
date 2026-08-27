@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonPolymorphic(
         TypeDiscriminatorPropertyName = "type",
@@ -31,7 +31,7 @@ namespace Opik
         public global::System.Collections.Generic.IList<global::System.Guid>? ProjectIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -44,7 +44,7 @@ namespace Opik
         public float? SamplingRate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enabled")]
         public bool? Enabled { get; set; }
@@ -57,7 +57,7 @@ namespace Opik
         public global::Opik.AutomationRuleEvaluatorWriteTriggerScope? TriggerScope { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionJsonConverter))]

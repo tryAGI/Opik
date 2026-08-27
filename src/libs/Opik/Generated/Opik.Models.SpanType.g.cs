@@ -4,24 +4,24 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum SpanType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         General,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Guardrail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Llm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tool,
     }

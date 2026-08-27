@@ -4,57 +4,57 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class WorkspaceSpanMetricRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_ids")]
         public global::System.Collections.Generic.IList<global::System.Guid>? ProjectIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metric_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeJsonConverter))]
         public global::Opik.WorkspaceSpanMetricRequestMetricType? MetricType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("interval")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalJsonConverter))]
         public global::Opik.WorkspaceSpanMetricRequestInterval? Interval { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("breakdown")]
         public global::Opik.BreakdownConfig? Breakdown { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filters")]
         public global::System.Collections.Generic.IList<global::Opik.SpanFilter>? Filters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("interval_start")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime IntervalStart { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("interval_end")]
         public global::System.DateTime? IntervalEnd { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("start_before_end")]
         public bool? StartBeforeEnd { get; set; }

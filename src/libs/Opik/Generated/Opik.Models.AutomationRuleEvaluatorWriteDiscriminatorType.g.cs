@@ -4,32 +4,32 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AutomationRuleEvaluatorWriteDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LlmAsJudge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanLlmAsJudge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanUserDefinedMetricPython,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TraceThreadLlmAsJudge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TraceThreadUserDefinedMetricPython,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserDefinedMetricPython,
     }

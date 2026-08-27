@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class RetentionRulePublic
     {
@@ -21,7 +21,7 @@ namespace Opik
         public string? WorkspaceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         public global::System.Guid? ProjectId { get; set; }
@@ -35,7 +35,7 @@ namespace Opik
         public global::Opik.RetentionRulePublicLevel? Level { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("retention")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.RetentionRulePublicRetentionJsonConverter))]
@@ -43,7 +43,7 @@ namespace Opik
         public required global::Opik.RetentionRulePublicRetention Retention { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apply_to_past")]
         public bool? ApplyToPast { get; set; }

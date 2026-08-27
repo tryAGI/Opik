@@ -142,7 +142,7 @@ namespace Opik
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Opik.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
@@ -334,7 +334,7 @@ namespace Opik
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // 
+                            //
                             if ((int)__response.StatusCode == 501)
                             {
                                 string? __content_501 = null;

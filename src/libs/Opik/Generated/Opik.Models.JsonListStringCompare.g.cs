@@ -10,7 +10,7 @@ namespace Opik
     public readonly partial struct JsonListStringCompare : global::System.IEquatable<JsonListStringCompare>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public object? JsonListStringCompareVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace Opik
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringCompareVariant1))]
@@ -27,7 +27,7 @@ namespace Opik
         public bool IsJsonListStringCompareVariant1 => JsonListStringCompareVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickJsonListStringCompareVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object PickJsonListStringCompareVariant1() => IsJsonListStringCompareVariant1
             ? JsonListStringCompareVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringCompareVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<object>? JsonListStringCompareVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Opik
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringCompareVariant2))]
@@ -64,7 +64,7 @@ namespace Opik
         public bool IsJsonListStringCompareVariant2 => JsonListStringCompareVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickJsonListStringCompareVariant2(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<object> PickJsonListStringCompareVariant2() => IsJsonListStringCompareVariant2
             ? JsonListStringCompareVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringCompareVariant2' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public string? JsonListStringCompareVariant3 { get; init; }
@@ -93,7 +93,7 @@ namespace Opik
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringCompareVariant3))]
@@ -101,7 +101,7 @@ namespace Opik
         public bool IsJsonListStringCompareVariant3 => JsonListStringCompareVariant3 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickJsonListStringCompareVariant3(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickJsonListStringCompareVariant3() => IsJsonListStringCompareVariant3
             ? JsonListStringCompareVariant3!
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringCompareVariant3' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator JsonListStringCompare(string value) => new JsonListStringCompare((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(JsonListStringCompare @this) => @this.JsonListStringCompareVariant3;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public JsonListStringCompare(string? value)
         {
@@ -138,12 +138,12 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static JsonListStringCompare FromJsonListStringCompareVariant3(string? value) => new JsonListStringCompare(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public JsonListStringCompare(
             object? jsonListStringCompareVariant1,
@@ -157,25 +157,25 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             JsonListStringCompareVariant3 as object ??
             JsonListStringCompareVariant2 as object ??
-            JsonListStringCompareVariant1 as object 
+            JsonListStringCompareVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             JsonListStringCompareVariant1?.ToString() ??
             JsonListStringCompareVariant2?.ToString() ??
-            JsonListStringCompareVariant3?.ToString() 
+            JsonListStringCompareVariant3?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -183,7 +183,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<object, TResult>? jsonListStringCompareVariant1 = null,
@@ -213,7 +213,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<object>? jsonListStringCompareVariant1 = null,
@@ -243,7 +243,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<object>? jsonListStringCompareVariant1 = null,
@@ -271,7 +271,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -294,19 +294,19 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(JsonListStringCompare other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<object?>.Default.Equals(JsonListStringCompareVariant1, other.JsonListStringCompareVariant1) &&
                 global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<object>?>.Default.Equals(JsonListStringCompareVariant2, other.JsonListStringCompareVariant2) &&
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(JsonListStringCompareVariant3, other.JsonListStringCompareVariant3) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(JsonListStringCompareVariant3, other.JsonListStringCompareVariant3)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(JsonListStringCompare obj1, JsonListStringCompare obj2)
         {
@@ -314,7 +314,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(JsonListStringCompare obj1, JsonListStringCompare obj2)
         {
@@ -322,7 +322,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

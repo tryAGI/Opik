@@ -10,15 +10,15 @@ namespace Opik
     public enum RetentionRulePublicLevel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Organization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Project,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workspace,
     }

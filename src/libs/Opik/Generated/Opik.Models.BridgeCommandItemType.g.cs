@@ -4,32 +4,32 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum BridgeCommandItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EditFile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Exec,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ListFiles,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ReadFile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SearchFiles,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WriteFile,
     }

@@ -4,18 +4,18 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AutomationRuleEvaluatorSpanUserDefinedMetricPythonWrite : global::Opik.AutomationRuleEvaluatorWrite
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filters")]
         public global::System.Collections.Generic.IList<global::Opik.SpanFilterWrite>? Filters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code")]
         public global::Opik.SpanUserDefinedMetricPythonCodeWrite? Code { get; set; }

@@ -9,19 +9,19 @@ namespace Opik
     public sealed partial class ErrorCountWithDeviationDetailed
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("count")]
         public long? Count { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deviation")]
         public long? Deviation { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deviation_percentage")]
         public long? DeviationPercentage { get; set; }

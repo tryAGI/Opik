@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonPolymorphic(
         TypeDiscriminatorPropertyName = "type",
@@ -16,7 +16,7 @@ namespace Opik
     public partial class ProjectStatItemObjectPublic
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }

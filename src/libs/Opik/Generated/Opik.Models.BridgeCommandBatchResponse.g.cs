@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BridgeCommandBatchResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("commands")]
         public global::System.Collections.Generic.IList<global::Opik.BridgeCommandItem>? Commands { get; set; }

@@ -9,115 +9,115 @@ namespace Opik
     public enum TraceSearchStreamRequestPublicExcludeItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Comments,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreatedAt,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CreatedBy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndTime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Environment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ErrorInfo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Experiment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FeedbackScores,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GuardrailsValidations,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HasToolSpans,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Input,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LastUpdatedBy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LlmSpanCount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Metadata,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Name,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Output,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Providers,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Source,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanCount,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanFeedbackScores,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartTime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tags,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ThreadId,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TotalEstimatedCost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ttft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Usage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VisibilityMode,
     }

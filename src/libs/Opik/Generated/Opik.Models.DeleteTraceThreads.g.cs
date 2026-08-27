@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DeleteTraceThreads
     {
@@ -21,7 +21,7 @@ namespace Opik
         public global::System.Guid? ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("thread_ids")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,28 +4,28 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum TraceExperimentItemBulkWriteViewSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Evaluator,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Experiment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Optimization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Playground,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sdk,
     }

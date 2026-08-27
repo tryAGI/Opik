@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AgentConfigEnv
     {
@@ -21,14 +21,14 @@ namespace Opik
         public global::System.Guid? ProjectId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("env_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string EnvName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("blueprint_id")]
         [global::System.Text.Json.Serialization.JsonRequired]

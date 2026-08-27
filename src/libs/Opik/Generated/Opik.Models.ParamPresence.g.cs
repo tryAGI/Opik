@@ -4,16 +4,16 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ParamPresence
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Optional,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Required,
     }

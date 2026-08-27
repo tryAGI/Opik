@@ -5,12 +5,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct JsonListStringPublic : global::System.IEquatable<JsonListStringPublic>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public object? JsonListStringPublicVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace Opik
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringPublicVariant1))]
@@ -27,7 +27,7 @@ namespace Opik
         public bool IsJsonListStringPublicVariant1 => JsonListStringPublicVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickJsonListStringPublicVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object PickJsonListStringPublicVariant1() => IsJsonListStringPublicVariant1
             ? JsonListStringPublicVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringPublicVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<object>? JsonListStringPublicVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Opik
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringPublicVariant2))]
@@ -64,7 +64,7 @@ namespace Opik
         public bool IsJsonListStringPublicVariant2 => JsonListStringPublicVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickJsonListStringPublicVariant2(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<object> PickJsonListStringPublicVariant2() => IsJsonListStringPublicVariant2
             ? JsonListStringPublicVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringPublicVariant2' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public string? JsonListStringPublicVariant3 { get; init; }
@@ -93,7 +93,7 @@ namespace Opik
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(JsonListStringPublicVariant3))]
@@ -101,7 +101,7 @@ namespace Opik
         public bool IsJsonListStringPublicVariant3 => JsonListStringPublicVariant3 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickJsonListStringPublicVariant3(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickJsonListStringPublicVariant3() => IsJsonListStringPublicVariant3
             ? JsonListStringPublicVariant3!
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringPublicVariant3' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator JsonListStringPublic(string value) => new JsonListStringPublic((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(JsonListStringPublic @this) => @this.JsonListStringPublicVariant3;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public JsonListStringPublic(string? value)
         {
@@ -138,12 +138,12 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static JsonListStringPublic FromJsonListStringPublicVariant3(string? value) => new JsonListStringPublic(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public JsonListStringPublic(
             object? jsonListStringPublicVariant1,
@@ -157,25 +157,25 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             JsonListStringPublicVariant3 as object ??
             JsonListStringPublicVariant2 as object ??
-            JsonListStringPublicVariant1 as object 
+            JsonListStringPublicVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             JsonListStringPublicVariant1?.ToString() ??
             JsonListStringPublicVariant2?.ToString() ??
-            JsonListStringPublicVariant3?.ToString() 
+            JsonListStringPublicVariant3?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -183,7 +183,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<object, TResult>? jsonListStringPublicVariant1 = null,
@@ -213,7 +213,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<object>? jsonListStringPublicVariant1 = null,
@@ -243,7 +243,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<object>? jsonListStringPublicVariant1 = null,
@@ -271,7 +271,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -294,19 +294,19 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(JsonListStringPublic other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<object?>.Default.Equals(JsonListStringPublicVariant1, other.JsonListStringPublicVariant1) &&
                 global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<object>?>.Default.Equals(JsonListStringPublicVariant2, other.JsonListStringPublicVariant2) &&
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(JsonListStringPublicVariant3, other.JsonListStringPublicVariant3) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(JsonListStringPublicVariant3, other.JsonListStringPublicVariant3)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(JsonListStringPublic obj1, JsonListStringPublic obj2)
         {
@@ -314,7 +314,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(JsonListStringPublic obj1, JsonListStringPublic obj2)
         {
@@ -322,7 +322,7 @@ namespace Opik
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {
