@@ -13,7 +13,7 @@ namespace Opik
     public sealed partial class PromptVersionEnvironmentUpdate
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("environments")]
         [global::System.Text.Json.Serialization.JsonRequired]

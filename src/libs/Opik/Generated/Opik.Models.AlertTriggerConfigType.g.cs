@@ -4,32 +4,32 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AlertTriggerConfigType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Filter_guardrailType,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Scope_project,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Threshold_cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Threshold_errors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Threshold_feedbackScore,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Threshold_latency,
     }

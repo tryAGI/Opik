@@ -9,13 +9,13 @@ namespace Opik
     public sealed partial class ExecutionPolicyCompare
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("runs_per_item")]
         public int? RunsPerItem { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pass_threshold")]
         public int? PassThreshold { get; set; }

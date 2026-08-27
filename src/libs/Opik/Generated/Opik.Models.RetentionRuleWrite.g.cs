@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class RetentionRuleWrite
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_id")]
         public global::System.Guid? ProjectId { get; set; }
@@ -22,7 +22,7 @@ namespace Opik
         public bool? OrganizationLevel { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("retention")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.RetentionRuleWriteRetentionJsonConverter))]
@@ -30,7 +30,7 @@ namespace Opik
         public required global::Opik.RetentionRuleWriteRetention Retention { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apply_to_past")]
         public bool? ApplyToPast { get; set; }

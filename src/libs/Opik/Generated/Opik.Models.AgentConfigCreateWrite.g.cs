@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AgentConfigCreateWrite
     {
@@ -27,7 +27,7 @@ namespace Opik
         public global::System.Guid? Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("blueprint")]
         [global::System.Text.Json.Serialization.JsonRequired]

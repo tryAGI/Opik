@@ -9,31 +9,31 @@ namespace Opik
     public sealed partial class SpanEnrichmentOptions
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("includeTags")]
         public bool? IncludeTags { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("includeFeedbackScores")]
         public bool? IncludeFeedbackScores { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("includeComments")]
         public bool? IncludeComments { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("includeUsage")]
         public bool? IncludeUsage { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("includeMetadata")]
         public bool? IncludeMetadata { get; set; }

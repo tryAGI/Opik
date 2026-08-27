@@ -197,7 +197,7 @@ namespace Opik
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Opik.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
@@ -616,7 +616,7 @@ namespace Opik
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Opik.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

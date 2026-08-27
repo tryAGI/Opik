@@ -4,28 +4,28 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CheckName
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomClassifier,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LlmJudge,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pii,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PromptInjection,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Topic,
     }

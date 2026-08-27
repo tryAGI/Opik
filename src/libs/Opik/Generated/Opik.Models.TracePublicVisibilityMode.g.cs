@@ -9,11 +9,11 @@ namespace Opik
     public enum TracePublicVisibilityMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hidden,
     }

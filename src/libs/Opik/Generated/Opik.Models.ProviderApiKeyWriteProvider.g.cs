@@ -4,44 +4,44 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ProviderApiKeyWriteProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anthropic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bedrock,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CustomLlm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gemini,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ollama,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openai,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openrouter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OpikFree,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VertexAi,
     }

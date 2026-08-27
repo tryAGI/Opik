@@ -4,20 +4,20 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum LocalRunnerStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Connected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Disconnected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pairing,
     }

@@ -4,20 +4,20 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum KpiCardRequestEntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Spans,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Threads,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Traces,
     }

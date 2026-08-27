@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CategoricalFeedbackDefinitionCreate : global::Opik.FeedbackCreate
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("details")]
         public global::Opik.CategoricalFeedbackDetailCreate? Details { get; set; }

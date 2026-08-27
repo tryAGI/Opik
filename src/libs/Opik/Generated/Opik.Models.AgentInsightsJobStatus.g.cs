@@ -9,11 +9,11 @@ namespace Opik
     public enum AgentInsightsJobStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Disabled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enabled,
     }

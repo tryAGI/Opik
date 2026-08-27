@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class SpansCountResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workspaces_spans_count")]
         public global::System.Collections.Generic.IList<global::Opik.WorkspaceSpansCount>? WorkspacesSpansCount { get; set; }

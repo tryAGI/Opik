@@ -4,187 +4,187 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ServiceTogglesConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pythonEvaluatorEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool PythonEvaluatorEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("traceThreadPythonEvaluatorEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool TraceThreadPythonEvaluatorEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spanLlmAsJudgeEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool SpanLlmAsJudgeEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spanUserDefinedMetricPythonEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool SpanUserDefinedMetricPythonEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("guardrailsEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool GuardrailsEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("opikAIEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OpikAIEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("alertsEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool AlertsEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("welcomeWizardEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool WelcomeWizardEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exportEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool ExportEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("costIntelligenceEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool CostIntelligenceEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetVersioningEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool DatasetVersioningEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetExportEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool DatasetExportEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("demoDataEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool DemoDataEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("openaiProviderEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OpenaiProviderEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("anthropicProviderEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool AnthropicProviderEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("geminiProviderEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool GeminiProviderEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("openrouterProviderEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OpenrouterProviderEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("vertexaiProviderEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool VertexaiProviderEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bedrockProviderEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool BedrockProviderEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("customllmProviderEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool CustomllmProviderEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ollamaProviderEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OllamaProviderEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ollieEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OllieEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("projectHomepageEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool ProjectHomepageEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agenticToolsEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool AgenticToolsEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("onlineScoringTracingEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OnlineScoringTracingEnabled { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaultPageSize")]
         public int? DefaultPageSize { get; set; }

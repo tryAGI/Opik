@@ -9,11 +9,11 @@ namespace Opik
     public enum ExperimentItemPublicTraceVisibilityMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hidden,
     }

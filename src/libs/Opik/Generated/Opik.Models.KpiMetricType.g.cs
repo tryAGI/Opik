@@ -4,24 +4,24 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum KpiMetricType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AvgDuration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Count,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Errors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TotalCost,
     }

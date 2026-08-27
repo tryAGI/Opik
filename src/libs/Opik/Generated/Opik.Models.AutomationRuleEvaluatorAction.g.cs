@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AutomationRuleEvaluatorAction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Evaluator,
     }

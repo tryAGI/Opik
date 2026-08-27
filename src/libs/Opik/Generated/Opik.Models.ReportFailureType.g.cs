@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ReportFailureType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentInsights,
     }

@@ -4,18 +4,18 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ExperimentUpdate
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         public global::Opik.JsonNode? Metadata { get; set; }
@@ -39,7 +39,7 @@ namespace Opik
         public global::System.Collections.Generic.IList<string>? TagsToRemove { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.ExperimentUpdateTypeJsonConverter))]
@@ -53,7 +53,7 @@ namespace Opik
         public global::Opik.ExperimentUpdateStatus? Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("experiment_scores")]
         public global::System.Collections.Generic.IList<global::Opik.ExperimentScore>? ExperimentScores { get; set; }

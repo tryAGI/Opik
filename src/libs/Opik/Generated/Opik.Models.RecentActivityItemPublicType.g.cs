@@ -4,36 +4,36 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RecentActivityItemPublicType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AlertEvent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DatasetVersion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Experiment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Optimization,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PromptVersion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TestSuiteVersion,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TraceDaily,
     }

@@ -4,24 +4,24 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ExperimentUpdateType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MiniBatch,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mutation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Regular,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trial,
     }

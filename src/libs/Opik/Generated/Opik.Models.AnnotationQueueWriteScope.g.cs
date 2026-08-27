@@ -4,16 +4,16 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AnnotationQueueWriteScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Thread,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace,
     }

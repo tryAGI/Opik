@@ -9,23 +9,23 @@ namespace Opik
     public enum LogItemLevel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Debug,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Info,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Warn,
     }

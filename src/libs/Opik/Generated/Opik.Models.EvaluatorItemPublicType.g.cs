@@ -4,16 +4,16 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EvaluatorItemPublicType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CodeMetric,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LlmJudge,
     }

@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class TraceCountResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workspaces_traces_count")]
         public global::System.Collections.Generic.IList<global::Opik.WorkspaceTraceCount>? WorkspacesTracesCount { get; set; }

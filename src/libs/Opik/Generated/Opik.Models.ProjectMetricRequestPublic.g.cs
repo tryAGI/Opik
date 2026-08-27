@@ -4,56 +4,56 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ProjectMetricRequestPublic
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metric_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicMetricTypeJsonConverter))]
         public global::Opik.ProjectMetricRequestPublicMetricType? MetricType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("interval")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.ProjectMetricRequestPublicIntervalJsonConverter))]
         public global::Opik.ProjectMetricRequestPublicInterval? Interval { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("interval_start")]
         public global::System.DateTime? IntervalStart { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("interval_end")]
         public global::System.DateTime? IntervalEnd { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("span_filters")]
         public global::System.Collections.Generic.IList<global::Opik.SpanFilterPublic>? SpanFilters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("trace_filters")]
         public global::System.Collections.Generic.IList<global::Opik.TraceFilterPublic>? TraceFilters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("thread_filters")]
         public global::System.Collections.Generic.IList<global::Opik.TraceThreadFilterPublic>? ThreadFilters { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("breakdown")]
         public global::Opik.BreakdownConfigPublic? Breakdown { get; set; }

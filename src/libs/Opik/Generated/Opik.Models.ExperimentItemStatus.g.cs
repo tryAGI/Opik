@@ -9,11 +9,11 @@ namespace Opik
     public enum ExperimentItemStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Passed,
     }

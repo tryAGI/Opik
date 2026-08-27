@@ -4,16 +4,16 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateSessionRequestType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Connect,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Endpoint,
     }

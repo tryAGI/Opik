@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class LocalRunnerHeartbeatResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cancelled_job_ids")]
         public global::System.Collections.Generic.IList<global::System.Guid>? CancelledJobIds { get; set; }

@@ -4,48 +4,48 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AlertTriggerPublicEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Experiment_finished,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prompt_committed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prompt_created,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Prompt_deleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace_cost,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace_errors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace_feedbackScore,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace_guardrailsTriggered,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace_latency,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TraceThread_feedbackScore,
     }

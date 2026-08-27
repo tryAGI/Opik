@@ -16,7 +16,7 @@ namespace Opik
         public required global::System.Collections.Generic.IList<global::System.Guid> Ids { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("update")]
         [global::System.Text.Json.Serialization.JsonRequired]

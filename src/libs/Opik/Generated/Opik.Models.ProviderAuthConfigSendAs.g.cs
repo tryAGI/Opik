@@ -17,7 +17,7 @@ namespace Opik
         /// </summary>
         Form,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Json,
     }

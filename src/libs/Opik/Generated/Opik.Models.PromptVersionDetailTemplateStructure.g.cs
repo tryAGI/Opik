@@ -9,11 +9,11 @@ namespace Opik
     public enum PromptVersionDetailTemplateStructure
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chat,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

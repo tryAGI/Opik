@@ -20,7 +20,7 @@ namespace Opik.JsonConverters
                     {
                         return global::Opik.FeedbackUpdateTypeExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

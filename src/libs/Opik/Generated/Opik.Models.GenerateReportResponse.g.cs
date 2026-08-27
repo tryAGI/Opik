@@ -9,7 +9,7 @@ namespace Opik
     public sealed partial class GenerateReportResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reportId")]
         public global::System.Guid? ReportId { get; set; }

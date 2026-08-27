@@ -4,24 +4,24 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum RetentionRuleWriteRetention
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Base60d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Extended400d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Short14d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unlimited,
     }

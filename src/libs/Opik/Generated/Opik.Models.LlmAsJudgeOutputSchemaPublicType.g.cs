@@ -4,20 +4,20 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum LlmAsJudgeOutputSchemaPublicType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boolean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Double,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Integer,
     }

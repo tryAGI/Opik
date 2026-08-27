@@ -4,12 +4,12 @@
 namespace Opik
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UsageByWorkspaceProjectUserResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("breakdown")]
         public global::System.Collections.Generic.IList<global::Opik.WorkspaceProjectUserCount>? Breakdown { get; set; }
