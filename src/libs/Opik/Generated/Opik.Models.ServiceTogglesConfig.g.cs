@@ -172,13 +172,6 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("agenticToolsEnabled")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool AgenticToolsEnabled { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("onlineScoringTracingEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OnlineScoringTracingEnabled { get; set; }
@@ -221,7 +214,6 @@ namespace Opik
         /// <param name="ollamaProviderEnabled"></param>
         /// <param name="ollieEnabled"></param>
         /// <param name="projectHomepageEnabled"></param>
-        /// <param name="agenticToolsEnabled"></param>
         /// <param name="onlineScoringTracingEnabled"></param>
         /// <param name="defaultPageSize"></param>
 #if NET7_0_OR_GREATER
@@ -251,7 +243,6 @@ namespace Opik
             bool ollamaProviderEnabled,
             bool ollieEnabled,
             bool projectHomepageEnabled,
-            bool agenticToolsEnabled,
             bool onlineScoringTracingEnabled,
             int? defaultPageSize)
         {
@@ -278,7 +269,6 @@ namespace Opik
             this.OllamaProviderEnabled = ollamaProviderEnabled;
             this.OllieEnabled = ollieEnabled;
             this.ProjectHomepageEnabled = projectHomepageEnabled;
-            this.AgenticToolsEnabled = agenticToolsEnabled;
             this.OnlineScoringTracingEnabled = onlineScoringTracingEnabled;
             this.DefaultPageSize = defaultPageSize;
         }
