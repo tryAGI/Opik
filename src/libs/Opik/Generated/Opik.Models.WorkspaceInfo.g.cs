@@ -21,6 +21,12 @@ namespace Opik
         public string? Name { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_default")]
+        public bool? IsDefault { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -31,15 +37,18 @@ namespace Opik
         /// </summary>
         /// <param name="id"></param>
         /// <param name="name"></param>
+        /// <param name="isDefault"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public WorkspaceInfo(
             string? id,
-            string? name)
+            string? name,
+            bool? isDefault)
         {
             this.Id = id;
             this.Name = name;
+            this.IsDefault = isDefault;
         }
 
         /// <summary>
