@@ -57,307 +57,307 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AuthorizationServerMetadata? Type6 { get; set; }
+        public bool? Type6 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<string>? Type7 { get; set; }
+        public global::Opik.AuthorizationServerMetadata? Type7 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ClientRegistrationResponse? Type8 { get; set; }
+        public global::System.Collections.Generic.IList<string>? Type8 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public long? Type9 { get; set; }
+        public global::Opik.ClientRegistrationResponse? Type9 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ClientRegistrationRequest? Type10 { get; set; }
+        public long? Type10 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.TokenResponse? Type11 { get; set; }
+        public global::Opik.ClientRegistrationRequest? Type11 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.OAuthError? Type12 { get; set; }
+        public global::Opik.TokenResponse? Type12 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ValidatedToken? Type13 { get; set; }
+        public global::Opik.OAuthError? Type13 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AnalyticsQueryResponse? Type14 { get; set; }
+        public global::Opik.ValidatedToken? Type14 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.JsonNode>? Type15 { get; set; }
+        public global::Opik.AnalyticsQueryResponse? Type15 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.JsonNode? Type16 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.JsonNode>? Type16 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ErrorMessage? Type17 { get; set; }
+        public global::Opik.JsonNode? Type17 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public int? Type18 { get; set; }
+        public global::Opik.ErrorMessage? Type18 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AnalyticsQueryRequest? Type19 { get; set; }
+        public int? Type19 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.BiInformation? Type20 { get; set; }
+        public global::Opik.AnalyticsQueryRequest? Type20 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.BiInformationResponse? Type21 { get; set; }
+        public global::Opik.BiInformation? Type21 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.BiInformation>? Type22 { get; set; }
+        public global::Opik.BiInformationResponse? Type22 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.UsageByWorkspaceProjectUserResponse? Type23 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.BiInformation>? Type23 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.WorkspaceProjectUserCount>? Type24 { get; set; }
+        public global::Opik.UsageByWorkspaceProjectUserResponse? Type24 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.WorkspaceProjectUserCount? Type25 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.WorkspaceProjectUserCount>? Type25 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Guid? Type26 { get; set; }
+        public global::Opik.WorkspaceProjectUserCount? Type26 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.SpansCountResponse? Type27 { get; set; }
+        public global::System.Guid? Type27 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.WorkspaceSpansCount>? Type28 { get; set; }
+        public global::Opik.SpansCountResponse? Type28 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.WorkspaceSpansCount? Type29 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.WorkspaceSpansCount>? Type29 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.TraceCountResponse? Type30 { get; set; }
+        public global::Opik.WorkspaceSpansCount? Type30 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.WorkspaceTraceCount>? Type31 { get; set; }
+        public global::Opik.TraceCountResponse? Type31 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.WorkspaceTraceCount? Type32 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.WorkspaceTraceCount>? Type32 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ErrorMessageWrite? Type33 { get; set; }
+        public global::Opik.WorkspaceTraceCount? Type33 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentBlueprintWrite? Type34 { get; set; }
+        public global::Opik.ErrorMessageWrite? Type34 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentBlueprintWriteType? Type35 { get; set; }
+        public global::Opik.AgentBlueprintWrite? Type35 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.AgentConfigValueWrite>? Type36 { get; set; }
+        public global::Opik.AgentBlueprintWriteType? Type36 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigValueWrite? Type37 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.AgentConfigValueWrite>? Type37 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigCreateWrite? Type38 { get; set; }
+        public global::Opik.AgentConfigValueWrite? Type38 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigValueWriteType? Type39 { get; set; }
+        public global::Opik.AgentConfigCreateWrite? Type39 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigEnv? Type40 { get; set; }
+        public global::Opik.AgentConfigValueWriteType? Type40 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.DateTime? Type41 { get; set; }
+        public global::Opik.AgentConfigEnv? Type41 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigEnvUpdate? Type42 { get; set; }
+        public global::System.DateTime? Type42 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.AgentConfigEnv>? Type43 { get; set; }
+        public global::Opik.AgentConfigEnvUpdate? Type43 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentBlueprintPublic? Type44 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.AgentConfigEnv>? Type44 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentBlueprintPublicType? Type45 { get; set; }
+        public global::Opik.AgentBlueprintPublic? Type45 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.AgentConfigValuePublic>? Type46 { get; set; }
+        public global::Opik.AgentBlueprintPublicType? Type46 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigValuePublic? Type47 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.AgentConfigValuePublic>? Type47 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigValuePublicType? Type48 { get; set; }
+        public global::Opik.AgentConfigValuePublic? Type48 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ErrorMessagePublic? Type49 { get; set; }
+        public global::Opik.AgentConfigValuePublicType? Type49 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentBlueprintHistory? Type50 { get; set; }
+        public global::Opik.ErrorMessagePublic? Type50 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentBlueprintHistoryType? Type51 { get; set; }
+        public global::Opik.AgentBlueprintHistory? Type51 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.AgentConfigValueHistory>? Type52 { get; set; }
+        public global::Opik.AgentBlueprintHistoryType? Type52 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigValueHistory? Type53 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.AgentConfigValueHistory>? Type53 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigValueHistoryType? Type54 { get; set; }
+        public global::Opik.AgentConfigValueHistory? Type54 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.BlueprintPageHistory? Type55 { get; set; }
+        public global::Opik.AgentConfigValueHistoryType? Type55 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.AgentBlueprintHistory>? Type56 { get; set; }
+        public global::Opik.BlueprintPageHistory? Type56 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ErrorMessageHistory? Type57 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.AgentBlueprintHistory>? Type57 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigRemoveValues? Type58 { get; set; }
+        public global::Opik.ErrorMessageHistory? Type58 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigEnvSetByName? Type59 { get; set; }
+        public global::Opik.AgentConfigRemoveValues? Type59 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsJob? Type60 { get; set; }
+        public global::Opik.AgentConfigEnvSetByName? Type60 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsJobStatus? Type61 { get; set; }
+        public global::Opik.AgentInsightsJob? Type61 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsJobUpdate? Type62 { get; set; }
+        public global::Opik.AgentInsightsJobStatus? Type62 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsJobUpdateStatus? Type63 { get; set; }
+        public global::Opik.AgentInsightsJobUpdate? Type63 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsIssue? Type64 { get; set; }
+        public global::Opik.AgentInsightsJobUpdateStatus? Type64 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsIssueStatus? Type65 { get; set; }
+        public global::Opik.AgentInsightsIssue? Type65 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsIssueSeverity? Type66 { get; set; }
+        public global::Opik.AgentInsightsIssueStatus? Type66 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsIssuePage? Type67 { get; set; }
+        public global::Opik.AgentInsightsIssueSeverity? Type67 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.AgentInsightsIssue>? Type68 { get; set; }
+        public global::Opik.AgentInsightsIssuePage? Type68 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsIssueDetail? Type69 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.AgentInsightsIssue>? Type69 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsIssueWithDetails? Type70 { get; set; }
+        public global::Opik.AgentInsightsIssueDetail? Type70 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsIssueWithDetailsStatus? Type71 { get; set; }
+        public global::Opik.AgentInsightsIssueWithDetails? Type71 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsIssueWithDetailsSeverity? Type72 { get; set; }
+        public global::Opik.AgentInsightsIssueWithDetailsStatus? Type72 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.AgentInsightsIssueDetail>? Type73 { get; set; }
+        public global::Opik.AgentInsightsIssueWithDetailsSeverity? Type73 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsReport? Type74 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.AgentInsightsIssueDetail>? Type74 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.ReportedIssue>? Type75 { get; set; }
+        public global::Opik.AgentInsightsReport? Type75 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ReportedIssue? Type76 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.ReportedIssue>? Type76 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ReportedIssueSeverity? Type77 { get; set; }
+        public global::Opik.ReportedIssue? Type77 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsIssueUpdate? Type78 { get; set; }
+        public global::Opik.ReportedIssueSeverity? Type78 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentInsightsIssueUpdateStatus? Type79 { get; set; }
+        public global::Opik.AgentInsightsIssueUpdate? Type79 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.Alert? Type80 { get; set; }
+        public global::Opik.AgentInsightsIssueUpdateStatus? Type80 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public bool? Type81 { get; set; }
+        public global::Opik.Alert? Type81 { get; set; }
         /// <summary>
         ///
         /// </summary>
