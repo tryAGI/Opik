@@ -93,115 +93,115 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AnalyticsQueryResponse? Type15 { get; set; }
+        public global::System.DateTime? Type15 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.JsonNode>? Type16 { get; set; }
+        public global::Opik.AnalyticsQueryResponse? Type16 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.JsonNode? Type17 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.JsonNode>? Type17 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ErrorMessage? Type18 { get; set; }
+        public global::Opik.JsonNode? Type18 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public int? Type19 { get; set; }
+        public global::Opik.ErrorMessage? Type19 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AnalyticsQueryRequest? Type20 { get; set; }
+        public int? Type20 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.BiInformation? Type21 { get; set; }
+        public global::Opik.AnalyticsQueryRequest? Type21 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.BiInformationResponse? Type22 { get; set; }
+        public global::Opik.BiInformation? Type22 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.BiInformation>? Type23 { get; set; }
+        public global::Opik.BiInformationResponse? Type23 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.UsageByWorkspaceProjectUserResponse? Type24 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.BiInformation>? Type24 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.WorkspaceProjectUserCount>? Type25 { get; set; }
+        public global::Opik.UsageByWorkspaceProjectUserResponse? Type25 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.WorkspaceProjectUserCount? Type26 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.WorkspaceProjectUserCount>? Type26 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Guid? Type27 { get; set; }
+        public global::Opik.WorkspaceProjectUserCount? Type27 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.SpansCountResponse? Type28 { get; set; }
+        public global::System.Guid? Type28 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.WorkspaceSpansCount>? Type29 { get; set; }
+        public global::Opik.SpansCountResponse? Type29 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.WorkspaceSpansCount? Type30 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.WorkspaceSpansCount>? Type30 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.TraceCountResponse? Type31 { get; set; }
+        public global::Opik.WorkspaceSpansCount? Type31 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.WorkspaceTraceCount>? Type32 { get; set; }
+        public global::Opik.TraceCountResponse? Type32 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.WorkspaceTraceCount? Type33 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.WorkspaceTraceCount>? Type33 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.ErrorMessageWrite? Type34 { get; set; }
+        public global::Opik.WorkspaceTraceCount? Type34 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentBlueprintWrite? Type35 { get; set; }
+        public global::Opik.ErrorMessageWrite? Type35 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentBlueprintWriteType? Type36 { get; set; }
+        public global::Opik.AgentBlueprintWrite? Type36 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Opik.AgentConfigValueWrite>? Type37 { get; set; }
+        public global::Opik.AgentBlueprintWriteType? Type37 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigValueWrite? Type38 { get; set; }
+        public global::System.Collections.Generic.IList<global::Opik.AgentConfigValueWrite>? Type38 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigCreateWrite? Type39 { get; set; }
+        public global::Opik.AgentConfigValueWrite? Type39 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigValueWriteType? Type40 { get; set; }
+        public global::Opik.AgentConfigCreateWrite? Type40 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Opik.AgentConfigEnv? Type41 { get; set; }
+        public global::Opik.AgentConfigValueWriteType? Type41 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.DateTime? Type42 { get; set; }
+        public global::Opik.AgentConfigEnv? Type42 { get; set; }
         /// <summary>
         ///
         /// </summary>
