@@ -33,6 +33,12 @@ namespace Opik
         public string? Resource { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expires_at")]
+        public global::System.DateTime? ExpiresAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -45,6 +51,7 @@ namespace Opik
         /// <param name="workspaceId"></param>
         /// <param name="workspaceName"></param>
         /// <param name="resource"></param>
+        /// <param name="expiresAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -52,12 +59,14 @@ namespace Opik
             string? userName,
             string? workspaceId,
             string? workspaceName,
-            string? resource)
+            string? resource,
+            global::System.DateTime? expiresAt)
         {
             this.UserName = userName;
             this.WorkspaceId = workspaceId;
             this.WorkspaceName = workspaceName;
             this.Resource = resource;
+            this.ExpiresAt = expiresAt;
         }
 
         /// <summary>
