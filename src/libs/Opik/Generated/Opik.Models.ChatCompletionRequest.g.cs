@@ -29,7 +29,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("top_p")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("topP")]
         public double? TopP { get; set; }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("stream_options")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("streamOptions")]
         public global::Opik.StreamOptions? StreamOptions { get; set; }
 
         /// <summary>
@@ -59,31 +59,31 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("max_tokens")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("maxTokens")]
         public int? MaxTokens { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("max_completion_tokens")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("maxCompletionTokens")]
         public int? MaxCompletionTokens { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("presence_penalty")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("presencePenalty")]
         public double? PresencePenalty { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("frequency_penalty")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("frequencyPenalty")]
         public double? FrequencyPenalty { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("logit_bias")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("logitBias")]
         public global::System.Collections.Generic.Dictionary<string, int>? LogitBias { get; set; }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("response_format")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("responseFormat")]
         public global::Opik.ResponseFormat? ResponseFormat { get; set; }
 
         /// <summary>
@@ -113,13 +113,13 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("tool_choice")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("toolChoice")]
         public object? ToolChoice { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("parallel_tool_calls")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("parallelToolCalls")]
         public bool? ParallelToolCalls { get; set; }
 
         /// <summary>
@@ -137,13 +137,13 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("reasoning_effort")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningEffort")]
         public string? ReasoningEffort { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("service_tier")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("serviceTier")]
         public string? ServiceTier { get; set; }
 
         /// <summary>
@@ -155,7 +155,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("top_logprobs")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("topLogprobs")]
         public int? TopLogprobs { get; set; }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("function_call")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("functionCall")]
         public global::Opik.FunctionCall? FunctionCall { get; set; }
 
         /// <summary>

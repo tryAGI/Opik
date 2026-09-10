@@ -41,13 +41,13 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("system_fingerprint")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("systemFingerprint")]
         public string? SystemFingerprint { get; set; }
 
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("service_tier")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("serviceTier")]
         public string? ServiceTier { get; set; }
 
         /// <summary>
