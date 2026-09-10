@@ -24,7 +24,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("reasoning_content")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningContent")]
         public string? ReasoningContent { get; set; }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("tool_calls")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("toolCalls")]
         public global::System.Collections.Generic.IList<global::Opik.ToolCall>? ToolCalls { get; set; }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("function_call")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("functionCall")]
         public global::Opik.FunctionCall? FunctionCall { get; set; }
 
         /// <summary>

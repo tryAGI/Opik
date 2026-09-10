@@ -11,7 +11,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("include_usage")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("includeUsage")]
         public bool? IncludeUsage { get; set; }
 
         /// <summary>

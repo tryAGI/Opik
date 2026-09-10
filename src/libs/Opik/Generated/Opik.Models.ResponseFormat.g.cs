@@ -18,7 +18,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("json_schema")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("jsonSchema")]
         public global::Opik.JsonSchema? JsonSchema { get; set; }
 
         /// <summary>

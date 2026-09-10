@@ -29,7 +29,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("finish_reason")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("finishReason")]
         public string? FinishReason { get; set; }
 
         /// <summary>

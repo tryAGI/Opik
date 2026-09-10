@@ -11,7 +11,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("reasoning_tokens")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoningTokens")]
         public int? ReasoningTokens { get; set; }
 
         /// <summary>

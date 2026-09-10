@@ -11,7 +11,7 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("cached_tokens")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("cachedTokens")]
         public int? CachedTokens { get; set; }
 
         /// <summary>
