@@ -51,6 +51,12 @@ namespace Opik
         public int? LockTimeoutSeconds { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("automation")]
+        public global::Opik.AnnotationQueueAutomation? Automation { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -66,6 +72,7 @@ namespace Opik
         /// <param name="feedbackDefinitionNames"></param>
         /// <param name="annotatorsPerItem"></param>
         /// <param name="lockTimeoutSeconds"></param>
+        /// <param name="automation"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -76,7 +83,8 @@ namespace Opik
             bool? commentsEnabled,
             global::System.Collections.Generic.IList<string>? feedbackDefinitionNames,
             int? annotatorsPerItem,
-            int? lockTimeoutSeconds)
+            int? lockTimeoutSeconds,
+            global::Opik.AnnotationQueueAutomation? automation)
         {
             this.Name = name;
             this.Description = description;
@@ -85,6 +93,7 @@ namespace Opik
             this.FeedbackDefinitionNames = feedbackDefinitionNames;
             this.AnnotatorsPerItem = annotatorsPerItem;
             this.LockTimeoutSeconds = lockTimeoutSeconds;
+            this.Automation = automation;
         }
 
         /// <summary>

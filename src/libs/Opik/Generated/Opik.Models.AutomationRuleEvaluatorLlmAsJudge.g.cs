@@ -25,6 +25,7 @@ namespace Opik
         /// Initializes a new instance of the <see cref="AutomationRuleEvaluatorLlmAsJudge" /> class.
         /// </summary>
         /// <param name="name"></param>
+        /// <param name="action"></param>
         /// <param name="filters"></param>
         /// <param name="code"></param>
 #if NET7_0_OR_GREATER
@@ -32,12 +33,14 @@ namespace Opik
 #endif
         public AutomationRuleEvaluatorLlmAsJudge(
             string name,
+            global::Opik.AutomationRuleEvaluatorAction action,
             global::System.Collections.Generic.IList<global::Opik.TraceFilter>? filters,
             global::Opik.LlmAsJudgeCode? code)
         {
             this.Filters = filters;
             this.Code = code;
             base.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            base.Action = action;
         }
 
         /// <summary>

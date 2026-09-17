@@ -487,6 +487,9 @@ namespace Opik
         /// <param name="clientName"></param>
         /// <param name="redirectUris"></param>
         /// <param name="logoUri"></param>
+        /// <param name="softwareId"></param>
+        /// <param name="softwareVersion"></param>
+        /// <param name="clientUri"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -494,6 +497,9 @@ namespace Opik
             string clientName,
             global::System.Collections.Generic.IList<string> redirectUris,
             string? logoUri = default,
+            string? softwareId = default,
+            string? softwareVersion = default,
+            string? clientUri = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -502,6 +508,9 @@ namespace Opik
                 ClientName = clientName,
                 RedirectUris = redirectUris,
                 LogoUri = logoUri,
+                SoftwareId = softwareId,
+                SoftwareVersion = softwareVersion,
+                ClientUri = clientUri,
             };
 
             return await RegisterOAuthClientAsync(

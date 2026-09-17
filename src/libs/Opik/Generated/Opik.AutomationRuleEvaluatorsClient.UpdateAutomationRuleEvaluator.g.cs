@@ -458,12 +458,12 @@ namespace Opik
         public async global::System.Threading.Tasks.Task UpdateAutomationRuleEvaluatorAsync(
             global::System.Guid id,
             string name,
+            global::Opik.AutomationRuleEvaluatorUpdateAction action,
             float? samplingRate = default,
             bool? enabled = default,
             global::Opik.AutomationRuleEvaluatorUpdateTriggerScope? triggerScope = default,
             global::System.Guid? projectId = default,
             global::System.Collections.Generic.IList<global::System.Guid>? projectIds = default,
-            global::Opik.AutomationRuleEvaluatorUpdateAction action = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

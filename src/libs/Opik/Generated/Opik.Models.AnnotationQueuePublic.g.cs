@@ -79,6 +79,12 @@ namespace Opik
         public int? LockTimeoutSeconds { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("automation")]
+        public global::Opik.AnnotationQueueAutomationPublic? Automation { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reviewers")]
@@ -142,6 +148,7 @@ namespace Opik
         /// <param name="feedbackDefinitionNames"></param>
         /// <param name="annotatorsPerItem"></param>
         /// <param name="lockTimeoutSeconds"></param>
+        /// <param name="automation"></param>
         /// <param name="reviewers">
         /// Included only in responses
         /// </param>
@@ -178,6 +185,7 @@ namespace Opik
             global::System.Collections.Generic.IList<string>? feedbackDefinitionNames,
             int? annotatorsPerItem,
             int? lockTimeoutSeconds,
+            global::Opik.AnnotationQueueAutomationPublic? automation,
             global::System.Collections.Generic.IList<global::Opik.AnnotationQueueReviewerPublic>? reviewers,
             global::System.Collections.Generic.IList<global::Opik.FeedbackScoreAveragePublic>? feedbackScores,
             long? itemsCount,
@@ -197,6 +205,7 @@ namespace Opik
             this.FeedbackDefinitionNames = feedbackDefinitionNames;
             this.AnnotatorsPerItem = annotatorsPerItem;
             this.LockTimeoutSeconds = lockTimeoutSeconds;
+            this.Automation = automation;
             this.Reviewers = reviewers;
             this.FeedbackScores = feedbackScores;
             this.ItemsCount = itemsCount;

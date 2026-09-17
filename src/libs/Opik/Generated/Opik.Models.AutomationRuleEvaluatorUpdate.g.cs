@@ -61,7 +61,8 @@ namespace Opik
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorUpdateActionJsonConverter))]
-        public global::Opik.AutomationRuleEvaluatorUpdateAction Action { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Opik.AutomationRuleEvaluatorUpdateAction Action { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -73,6 +74,7 @@ namespace Opik
         /// Initializes a new instance of the <see cref="AutomationRuleEvaluatorUpdate" /> class.
         /// </summary>
         /// <param name="name"></param>
+        /// <param name="action"></param>
         /// <param name="samplingRate">
         /// Fraction of production (SDK-logged) items this rule scores, from 0 to 1. Trace rules ignore this value for experiment, playground and optimization traces and score them in full; span and thread rules only ever evaluate SDK-logged data.
         /// </param>
@@ -84,18 +86,17 @@ namespace Opik
         /// <param name="projectIds">
         /// Multiple project IDs (new field for multi-project support)
         /// </param>
-        /// <param name="action"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AutomationRuleEvaluatorUpdate(
             string name,
+            global::Opik.AutomationRuleEvaluatorUpdateAction action,
             float? samplingRate,
             bool? enabled,
             global::Opik.AutomationRuleEvaluatorUpdateTriggerScope? triggerScope,
             global::System.Guid? projectId,
-            global::System.Collections.Generic.IList<global::System.Guid>? projectIds,
-            global::Opik.AutomationRuleEvaluatorUpdateAction action)
+            global::System.Collections.Generic.IList<global::System.Guid>? projectIds)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SamplingRate = samplingRate;
