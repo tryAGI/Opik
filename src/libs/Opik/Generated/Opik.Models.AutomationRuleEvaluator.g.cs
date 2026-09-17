@@ -105,7 +105,8 @@ namespace Opik
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorActionJsonConverter))]
-        public global::Opik.AutomationRuleEvaluatorAction Action { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Opik.AutomationRuleEvaluatorAction Action { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -117,6 +118,7 @@ namespace Opik
         /// Initializes a new instance of the <see cref="AutomationRuleEvaluator" /> class.
         /// </summary>
         /// <param name="name"></param>
+        /// <param name="action"></param>
         /// <param name="id">
         /// Included only in responses
         /// </param>
@@ -153,12 +155,12 @@ namespace Opik
         /// <param name="lastUpdatedBy">
         /// Included only in responses
         /// </param>
-        /// <param name="action"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AutomationRuleEvaluator(
             string name,
+            global::Opik.AutomationRuleEvaluatorAction action,
             global::System.Guid? id,
             global::System.Guid? projectId,
             string? projectName,
@@ -170,8 +172,7 @@ namespace Opik
             global::System.DateTime? createdAt,
             string? createdBy,
             global::System.DateTime? lastUpdatedAt,
-            string? lastUpdatedBy,
-            global::Opik.AutomationRuleEvaluatorAction action)
+            string? lastUpdatedBy)
         {
             this.Id = id;
             this.ProjectId = projectId;

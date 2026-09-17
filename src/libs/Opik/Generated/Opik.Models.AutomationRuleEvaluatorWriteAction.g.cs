@@ -11,6 +11,10 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        AnnotationQueueRouter,
+        /// <summary>
+        ///
+        /// </summary>
         Evaluator,
     }
 
@@ -26,6 +30,7 @@ namespace Opik
         {
             return value switch
             {
+                AutomationRuleEvaluatorWriteAction.AnnotationQueueRouter => "annotation_queue_router",
                 AutomationRuleEvaluatorWriteAction.Evaluator => "evaluator",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -37,6 +42,7 @@ namespace Opik
         {
             return value switch
             {
+                "annotation_queue_router" => AutomationRuleEvaluatorWriteAction.AnnotationQueueRouter,
                 "evaluator" => AutomationRuleEvaluatorWriteAction.Evaluator,
                 _ => null,
             };

@@ -61,7 +61,8 @@ namespace Opik
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.AutomationRuleEvaluatorWriteActionJsonConverter))]
-        public global::Opik.AutomationRuleEvaluatorWriteAction Action { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Opik.AutomationRuleEvaluatorWriteAction Action { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -73,6 +74,7 @@ namespace Opik
         /// Initializes a new instance of the <see cref="AutomationRuleEvaluatorWrite" /> class.
         /// </summary>
         /// <param name="name"></param>
+        /// <param name="action"></param>
         /// <param name="projectId">
         /// Primary project ID (legacy field for backwards compatibility)
         /// </param>
@@ -86,18 +88,17 @@ namespace Opik
         /// <param name="triggerScope">
         /// Controls whether the rule fires on production traces, experiment traces, or both. Defaults to 'production' if omitted.
         /// </param>
-        /// <param name="action"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AutomationRuleEvaluatorWrite(
             string name,
+            global::Opik.AutomationRuleEvaluatorWriteAction action,
             global::System.Guid? projectId,
             global::System.Collections.Generic.IList<global::System.Guid>? projectIds,
             float? samplingRate,
             bool? enabled,
-            global::Opik.AutomationRuleEvaluatorWriteTriggerScope? triggerScope,
-            global::Opik.AutomationRuleEvaluatorWriteAction action)
+            global::Opik.AutomationRuleEvaluatorWriteTriggerScope? triggerScope)
         {
             this.ProjectId = projectId;
             this.ProjectIds = projectIds;

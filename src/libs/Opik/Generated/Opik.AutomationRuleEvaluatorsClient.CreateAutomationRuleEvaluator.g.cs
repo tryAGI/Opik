@@ -449,12 +449,12 @@ namespace Opik
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task CreateAutomationRuleEvaluatorAsync(
             string name,
+            global::Opik.AutomationRuleEvaluatorWriteAction action,
             global::System.Guid? projectId = default,
             global::System.Collections.Generic.IList<global::System.Guid>? projectIds = default,
             float? samplingRate = default,
             bool? enabled = default,
             global::Opik.AutomationRuleEvaluatorWriteTriggerScope? triggerScope = default,
-            global::Opik.AutomationRuleEvaluatorWriteAction action = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

@@ -35,6 +35,24 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("software_id")]
+        public string? SoftwareId { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("software_version")]
+        public string? SoftwareVersion { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("client_uri")]
+        public string? ClientUri { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("redirect_uris")]
         public global::System.Collections.Generic.IList<string>? RedirectUris { get; set; }
 
@@ -69,6 +87,9 @@ namespace Opik
         /// <param name="clientIdIssuedAt"></param>
         /// <param name="clientName"></param>
         /// <param name="logoUri"></param>
+        /// <param name="softwareId"></param>
+        /// <param name="softwareVersion"></param>
+        /// <param name="clientUri"></param>
         /// <param name="redirectUris"></param>
         /// <param name="tokenEndpointAuthMethod"></param>
         /// <param name="grantTypes"></param>
@@ -81,6 +102,9 @@ namespace Opik
             long? clientIdIssuedAt,
             string? clientName,
             string? logoUri,
+            string? softwareId,
+            string? softwareVersion,
+            string? clientUri,
             global::System.Collections.Generic.IList<string>? redirectUris,
             string? tokenEndpointAuthMethod,
             global::System.Collections.Generic.IList<string>? grantTypes,
@@ -90,6 +114,9 @@ namespace Opik
             this.ClientIdIssuedAt = clientIdIssuedAt;
             this.ClientName = clientName;
             this.LogoUri = logoUri;
+            this.SoftwareId = softwareId;
+            this.SoftwareVersion = softwareVersion;
+            this.ClientUri = clientUri;
             this.RedirectUris = redirectUris;
             this.TokenEndpointAuthMethod = tokenEndpointAuthMethod;
             this.GrantTypes = grantTypes;
