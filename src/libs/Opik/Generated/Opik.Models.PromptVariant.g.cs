@@ -35,6 +35,12 @@ namespace Opik
         public global::System.Collections.Generic.IList<global::Opik.PromptVersionLink>? PromptVersions { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("experiment_name")]
+        public string? ExperimentName { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -47,6 +53,7 @@ namespace Opik
         /// <param name="messages"></param>
         /// <param name="configs"></param>
         /// <param name="promptVersions"></param>
+        /// <param name="experimentName"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -54,12 +61,14 @@ namespace Opik
             string model,
             global::System.Collections.Generic.IList<global::Opik.Message> messages,
             global::System.Collections.Generic.Dictionary<string, global::Opik.JsonNode>? configs,
-            global::System.Collections.Generic.IList<global::Opik.PromptVersionLink>? promptVersions)
+            global::System.Collections.Generic.IList<global::Opik.PromptVersionLink>? promptVersions,
+            string? experimentName)
         {
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
             this.Configs = configs;
             this.PromptVersions = promptVersions;
+            this.ExperimentName = experimentName;
         }
 
         /// <summary>

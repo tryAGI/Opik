@@ -48,6 +48,9 @@ namespace Opik
         /// <param name="evaluators">
         /// Optional evaluators to apply to the created items
         /// </param>
+        /// <param name="fieldMappings">
+        /// Optional mapping of dataset item field name to a path into the span, e.g. 'input.input_text'. Takes precedence over the fields produced by enrichment_options. Ignored for test suite datasets.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -56,6 +59,7 @@ namespace Opik
             global::System.Collections.Generic.IList<global::System.Guid> spanIds,
             global::Opik.SpanEnrichmentOptions enrichmentOptions,
             global::System.Collections.Generic.IList<global::Opik.EvaluatorItem>? evaluators = default,
+            global::System.Collections.Generic.Dictionary<string, string>? fieldMappings = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

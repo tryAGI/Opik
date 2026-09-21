@@ -35,6 +35,12 @@ namespace Opik
         public global::Opik.ExecutionPolicy? ExecutionPolicy { get; set; }
 
         /// <summary>
+        /// Optional mapping of dataset item field name to a path into the trace, e.g. 'input.input_text'. Takes precedence over the fields produced by enrichment_options. Ignored for test suite datasets.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("field_mappings")]
+        public global::System.Collections.Generic.Dictionary<string, string>? FieldMappings { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -55,6 +61,9 @@ namespace Opik
         /// <param name="executionPolicy">
         /// Included only in responses
         /// </param>
+        /// <param name="fieldMappings">
+        /// Optional mapping of dataset item field name to a path into the trace, e.g. 'input.input_text'. Takes precedence over the fields produced by enrichment_options. Ignored for test suite datasets.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -62,12 +71,14 @@ namespace Opik
             global::System.Collections.Generic.IList<global::System.Guid> traceIds,
             global::Opik.TraceEnrichmentOptions enrichmentOptions,
             global::System.Collections.Generic.IList<global::Opik.EvaluatorItem>? evaluators,
-            global::Opik.ExecutionPolicy? executionPolicy)
+            global::Opik.ExecutionPolicy? executionPolicy,
+            global::System.Collections.Generic.Dictionary<string, string>? fieldMappings)
         {
             this.TraceIds = traceIds ?? throw new global::System.ArgumentNullException(nameof(traceIds));
             this.EnrichmentOptions = enrichmentOptions ?? throw new global::System.ArgumentNullException(nameof(enrichmentOptions));
             this.Evaluators = evaluators;
             this.ExecutionPolicy = executionPolicy;
+            this.FieldMappings = fieldMappings;
         }
 
         /// <summary>
