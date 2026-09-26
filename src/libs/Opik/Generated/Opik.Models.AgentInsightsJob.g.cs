@@ -31,6 +31,18 @@ namespace Opik
         /// <summary>
         /// Included only in responses
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auto_first_run_enrolled")]
+        public bool? AutoFirstRunEnrolled { get; set; }
+
+        /// <summary>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auto_first_run_at")]
+        public global::System.DateTime? AutoFirstRunAt { get; set; }
+
+        /// <summary>
+        /// Included only in responses
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last_scan_at")]
         public global::System.DateTime? LastScanAt { get; set; }
 
@@ -91,6 +103,12 @@ namespace Opik
         /// <param name="status">
         /// Included only in responses
         /// </param>
+        /// <param name="autoFirstRunEnrolled">
+        /// Included only in responses
+        /// </param>
+        /// <param name="autoFirstRunAt">
+        /// Included only in responses
+        /// </param>
         /// <param name="lastScanAt">
         /// Included only in responses
         /// </param>
@@ -124,6 +142,8 @@ namespace Opik
         public AgentInsightsJob(
             global::System.Guid? id,
             global::Opik.AgentInsightsJobStatus? status,
+            bool? autoFirstRunEnrolled,
+            global::System.DateTime? autoFirstRunAt,
             global::System.DateTime? lastScanAt,
             string? lastFailureReason,
             string? lastFailureDetail,
@@ -137,6 +157,8 @@ namespace Opik
             this.Id = id;
             this.ProjectId = projectId;
             this.Status = status;
+            this.AutoFirstRunEnrolled = autoFirstRunEnrolled;
+            this.AutoFirstRunAt = autoFirstRunAt;
             this.LastScanAt = lastScanAt;
             this.LastFailureReason = lastFailureReason;
             this.LastFailureDetail = lastFailureDetail;

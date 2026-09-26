@@ -99,6 +99,11 @@ namespace Opik
         public AgentInsightsClient AgentInsights { get; }
 
         /// <summary>
+        /// Internal auto-first-run rollout enrollment.
+        /// </summary>
+        public AgentInsightsEnrollmentClient AgentInsightsEnrollment { get; }
+
+        /// <summary>
         /// Per-(workspace, project) Agent Insights report configuration.
         /// </summary>
         public AgentInsightsJobsClient AgentInsightsJobs { get; }

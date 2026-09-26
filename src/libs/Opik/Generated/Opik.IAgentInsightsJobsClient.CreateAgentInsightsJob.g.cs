@@ -6,7 +6,7 @@ namespace Opik
     {
         /// <summary>
         /// Create Agent Insights job<br/>
-        /// Creates the Agent Insights job for a project. 409 if one already exists.
+        /// Creates the Agent Insights job for a project, disabled: the daily schedule stays off until the job is enabled with PATCH. 409 if one already exists.
         /// </summary>
         /// <param name="projectId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -18,7 +18,7 @@ namespace Opik
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Agent Insights job<br/>
-        /// Creates the Agent Insights job for a project. 409 if one already exists.
+        /// Creates the Agent Insights job for a project, disabled: the daily schedule stays off until the job is enabled with PATCH. 409 if one already exists.
         /// </summary>
         /// <param name="projectId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
