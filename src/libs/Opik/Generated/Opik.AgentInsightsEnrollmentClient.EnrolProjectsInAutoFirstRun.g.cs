@@ -3,10 +3,10 @@
 
 namespace Opik
 {
-    public partial class AgentInsightsJobsClient
+    public partial class AgentInsightsEnrollmentClient
     {
 
-        private static readonly global::Opik.AutoSDKServer[] s_CreateAgentInsightsJobServers = new global::Opik.AutoSDKServer[]
+        private static readonly global::Opik.AutoSDKServer[] s_EnrolProjectsInAutoFirstRunServers = new global::Opik.AutoSDKServer[]
         {            new global::Opik.AutoSDKServer(
                 id: "http-localhost-api",
                 name: "Local server",
@@ -20,7 +20,7 @@ namespace Opik
         };
 
 
-        private static readonly global::Opik.EndPointSecurityRequirement s_CreateAgentInsightsJobSecurityRequirement0 =
+        private static readonly global::Opik.EndPointSecurityRequirement s_EnrolProjectsInAutoFirstRunSecurityRequirement0 =
             new global::Opik.EndPointSecurityRequirement
             {
                 Authorizations = new global::Opik.EndPointAuthorizationRequirement[]
@@ -34,41 +34,43 @@ namespace Opik
                     },
                 },
             };
-        private static readonly global::Opik.EndPointSecurityRequirement[] s_CreateAgentInsightsJobSecurityRequirements =
+        private static readonly global::Opik.EndPointSecurityRequirement[] s_EnrolProjectsInAutoFirstRunSecurityRequirements =
             new global::Opik.EndPointSecurityRequirement[]
-            {                s_CreateAgentInsightsJobSecurityRequirement0,
+            {                s_EnrolProjectsInAutoFirstRunSecurityRequirement0,
             };
-        partial void PrepareCreateAgentInsightsJobArguments(
+        partial void PrepareEnrolProjectsInAutoFirstRunArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::System.Guid projectId);
-        partial void PrepareCreateAgentInsightsJobRequest(
+            global::Opik.Request request);
+        partial void PrepareEnrolProjectsInAutoFirstRunRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.Guid projectId);
-        partial void ProcessCreateAgentInsightsJobResponse(
+            global::Opik.Request request);
+        partial void ProcessEnrolProjectsInAutoFirstRunResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateAgentInsightsJobResponseContent(
+        partial void ProcessEnrolProjectsInAutoFirstRunResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create Agent Insights job<br/>
-        /// Creates the Agent Insights job for a project, disabled: the daily schedule stays off until the job is enabled with PATCH. 409 if one already exists.
+        /// Enrol projects in the auto-first-run rollout<br/>
+        /// Enrols the given projects, creating their job row if needed, or clears their enrolment. Idempotent.
         /// </summary>
-        /// <param name="projectId"></param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.AgentInsightsJob> CreateAgentInsightsJobAsync(
-            global::System.Guid projectId,
+        public async global::System.Threading.Tasks.Task<global::Opik.Response> EnrolProjectsInAutoFirstRunAsync(
+
+            global::Opik.Request request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CreateAgentInsightsJobAsResponseAsync(
-                projectId: projectId,
+            var __response = await EnrolProjectsInAutoFirstRunAsResponseAsync(
+
+                request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -76,29 +78,32 @@ namespace Opik
             return __response.Body;
         }
         /// <summary>
-        /// Create Agent Insights job<br/>
-        /// Creates the Agent Insights job for a project, disabled: the daily schedule stays off until the job is enabled with PATCH. 409 if one already exists.
+        /// Enrol projects in the auto-first-run rollout<br/>
+        /// Enrols the given projects, creating their job row if needed, or clears their enrolment. Idempotent.
         /// </summary>
-        /// <param name="projectId"></param>
+        /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Opik.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.AgentInsightsJob>> CreateAgentInsightsJobAsResponseAsync(
-            global::System.Guid projectId,
+        public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.Response>> EnrolProjectsInAutoFirstRunAsResponseAsync(
+
+            global::Opik.Request request,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateAgentInsightsJobArguments(
+            PrepareEnrolProjectsInAutoFirstRunArguments(
                 httpClient: HttpClient,
-                projectId: ref projectId);
+                request: request);
 
 
             var __authorizations = global::Opik.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateAgentInsightsJobSecurityRequirements,
-                operationName: "CreateAgentInsightsJobAsync");
+                securityRequirements: s_EnrolProjectsInAutoFirstRunSecurityRequirements,
+                operationName: "EnrolProjectsInAutoFirstRunAsync");
 
             using var __timeoutCancellationTokenSource = global::Opik.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -118,9 +123,9 @@ namespace Opik
             {
 
                             var __pathBuilder = new global::Opik.PathBuilder(
-                                path: $"/v1/private/agent-insights/jobs/{projectId}",
+                                path: "/v1/internal/agent-insights/enrollment",
                                 baseUri: ResolveBaseUri(
-                                servers: s_CreateAgentInsightsJobServers,
+                                servers: s_EnrolProjectsInAutoFirstRunServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -151,6 +156,12 @@ namespace Opik
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
+                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+                            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                                content: __httpRequestContentBody,
+                                encoding: global::System.Text.Encoding.UTF8,
+                                mediaType: "application/json");
+                            __httpRequest.Content = __httpRequestContent;
                 global::Opik.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -159,10 +170,10 @@ namespace Opik
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateAgentInsightsJobRequest(
+                PrepareEnrolProjectsInAutoFirstRunRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId!);
+                    request: request);
 
                 return __httpRequest;
             }
@@ -179,9 +190,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateAgentInsightsJob",
-                                methodName: "CreateAgentInsightsJobAsync",
-                                pathTemplate: "$\"/v1/private/agent-insights/jobs/{projectId}\"",
+                                operationId: "EnrolProjectsInAutoFirstRun",
+                                methodName: "EnrolProjectsInAutoFirstRunAsync",
+                                pathTemplate: "\"/v1/internal/agent-insights/enrollment\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -213,9 +224,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateAgentInsightsJob",
-                                methodName: "CreateAgentInsightsJobAsync",
-                                pathTemplate: "$\"/v1/private/agent-insights/jobs/{projectId}\"",
+                                operationId: "EnrolProjectsInAutoFirstRun",
+                                methodName: "EnrolProjectsInAutoFirstRunAsync",
+                                pathTemplate: "\"/v1/internal/agent-insights/enrollment\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -254,9 +265,9 @@ namespace Opik
                         await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateAgentInsightsJob",
-                                methodName: "CreateAgentInsightsJobAsync",
-                                pathTemplate: "$\"/v1/private/agent-insights/jobs/{projectId}\"",
+                                operationId: "EnrolProjectsInAutoFirstRun",
+                                methodName: "EnrolProjectsInAutoFirstRunAsync",
+                                pathTemplate: "\"/v1/internal/agent-insights/enrollment\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -294,7 +305,7 @@ namespace Opik
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateAgentInsightsJobResponse(
+                ProcessEnrolProjectsInAutoFirstRunResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -302,9 +313,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateAgentInsightsJob",
-                                methodName: "CreateAgentInsightsJobAsync",
-                                pathTemplate: "$\"/v1/private/agent-insights/jobs/{projectId}\"",
+                                operationId: "EnrolProjectsInAutoFirstRun",
+                                methodName: "EnrolProjectsInAutoFirstRunAsync",
+                                pathTemplate: "\"/v1/internal/agent-insights/enrollment\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -324,9 +335,9 @@ namespace Opik
                     await global::Opik.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Opik.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "CreateAgentInsightsJob",
-                                methodName: "CreateAgentInsightsJobAsync",
-                                pathTemplate: "$\"/v1/private/agent-insights/jobs/{projectId}\"",
+                                operationId: "EnrolProjectsInAutoFirstRun",
+                                methodName: "EnrolProjectsInAutoFirstRunAsync",
+                                pathTemplate: "\"/v1/internal/agent-insights/enrollment\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -341,70 +352,6 @@ namespace Opik
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            //
-                            if ((int)__response.StatusCode == 404)
-                            {
-                                string? __content_404 = null;
-                                global::System.Exception? __exception_404 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                    }
-                                    else
-                                    {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_404 = __ex;
-                                }
-
-
-                                throw global::Opik.ApiException.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_404,
-                                    responseBody: __content_404,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
-                            //
-                            if ((int)__response.StatusCode == 409)
-                            {
-                                string? __content_409 = null;
-                                global::System.Exception? __exception_409 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                    }
-                                    else
-                                    {
-                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_409 = __ex;
-                                }
-
-
-                                throw global::Opik.ApiException.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_409,
-                                    responseBody: __content_409,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -418,7 +365,7 @@ namespace Opik
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateAgentInsightsJobResponseContent(
+                                ProcessEnrolProjectsInAutoFirstRunResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -427,9 +374,9 @@ namespace Opik
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Opik.AgentInsightsJob.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Opik.Response.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.AgentInsightsJob>(
+                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.Response>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -459,9 +406,9 @@ namespace Opik
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Opik.AgentInsightsJob.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Opik.Response.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.AgentInsightsJob>(
+                                    return new global::Opik.AutoSDKHttpResponse<global::Opik.Response>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Opik.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -500,6 +447,34 @@ namespace Opik
             {
                 __httpRequest?.Dispose();
             }
+        }
+        /// <summary>
+        /// Enrol projects in the auto-first-run rollout<br/>
+        /// Enrols the given projects, creating their job row if needed, or clears their enrolment. Idempotent.
+        /// </summary>
+        /// <param name="enrolled">
+        /// True enrols the given projects, false clears their enrolment
+        /// </param>
+        /// <param name="projectIds"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Opik.Response> EnrolProjectsInAutoFirstRunAsync(
+            bool enrolled,
+            global::System.Collections.Generic.IList<global::System.Guid> projectIds,
+            global::Opik.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::Opik.Request
+            {
+                Enrolled = enrolled,
+                ProjectIds = projectIds,
+            };
+
+            return await EnrolProjectsInAutoFirstRunAsync(
+                request: __request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
