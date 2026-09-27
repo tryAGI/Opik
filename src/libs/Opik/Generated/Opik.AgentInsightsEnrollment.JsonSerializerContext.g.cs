@@ -18,25 +18,23 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Response))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Guid>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.JsonNode))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailBatchWrite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.GuardrailWrite>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWrite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteName), TypeInfoPropertyName = "GuardrailWriteName2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteResult), TypeInfoPropertyName = "GuardrailWriteResult2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Request))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteName?), TypeInfoPropertyName = "NullableGuardrailWriteName2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteResult?), TypeInfoPropertyName = "NullableGuardrailWriteResult2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.GuardrailWrite>))]
-    internal sealed partial class GuardrailsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Guid>))]
+    internal sealed partial class AgentInsightsEnrollmentSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
     /// <summary>
     ///
     /// </summary>
-    public sealed partial class GuardrailsSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
+    public sealed partial class AgentInsightsEnrollmentSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
 
@@ -46,9 +44,9 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        public static GuardrailsSourceGenerationContext Default { get; } = new(DefaultOptions);
+        public static AgentInsightsEnrollmentSourceGenerationContext Default { get; } = new(DefaultOptions);
 
-        private GuardrailsSourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+        private AgentInsightsEnrollmentSourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
             : base(options)
         {
         }
@@ -75,7 +73,6 @@ namespace Opik
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
             options.Converters.Add(new global::Opik.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -88,48 +85,6 @@ namespace Opik
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Opik.GuardrailWriteName)
-
-                    || typeToConvert == typeof(global::Opik.GuardrailWriteName?)
-
-                    || typeToConvert == typeof(global::Opik.GuardrailWriteResult)
-
-                    || typeToConvert == typeof(global::Opik.GuardrailWriteResult?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Opik.GuardrailWriteName))
-                {
-                    return new global::Opik.JsonConverters.GuardrailWriteNameJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.GuardrailWriteName?))
-                {
-                    return new global::Opik.JsonConverters.GuardrailWriteNameNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.GuardrailWriteResult))
-                {
-                    return new global::Opik.JsonConverters.GuardrailWriteResultJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.GuardrailWriteResult?))
-                {
-                    return new global::Opik.JsonConverters.GuardrailWriteResultNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -171,7 +126,7 @@ namespace Opik
             {
                 return index switch
                 {
-                    0 => new GuardrailsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => new AgentInsightsEnrollmentSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }
