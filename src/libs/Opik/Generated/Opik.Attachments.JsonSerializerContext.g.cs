@@ -5,60 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Opik
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ErrorMessage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Attachment))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentPage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Attachment>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CompleteMultipartUploadRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CompleteMultipartUploadRequestEntityType), TypeInfoPropertyName = "CompleteMultipartUploadRequestEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.MultipartUploadPart>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.MultipartUploadPart))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.StartMultipartUploadResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.StartMultipartUploadRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.StartMultipartUploadRequestEntityType), TypeInfoPropertyName = "StartMultipartUploadRequestEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentListEntityType), TypeInfoPropertyName = "AttachmentListEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DownloadAttachmentEntityType), TypeInfoPropertyName = "DownloadAttachmentEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UploadAttachmentEntityType), TypeInfoPropertyName = "UploadAttachmentEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(byte[]))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CompleteMultipartUploadRequestEntityType?), TypeInfoPropertyName = "NullableCompleteMultipartUploadRequestEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.StartMultipartUploadRequestEntityType?), TypeInfoPropertyName = "NullableStartMultipartUploadRequestEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttachmentListEntityType?), TypeInfoPropertyName = "NullableAttachmentListEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DownloadAttachmentEntityType?), TypeInfoPropertyName = "NullableDownloadAttachmentEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UploadAttachmentEntityType?), TypeInfoPropertyName = "NullableUploadAttachmentEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Attachment>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.MultipartUploadPart>))]
-    internal sealed partial class AttachmentsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class AttachmentsSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -94,8 +49,7 @@ namespace Opik
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Opik.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
+            global::Opik.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -108,90 +62,6 @@ namespace Opik
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Opik.CompleteMultipartUploadRequestEntityType)
-
-                    || typeToConvert == typeof(global::Opik.CompleteMultipartUploadRequestEntityType?)
-
-                    || typeToConvert == typeof(global::Opik.StartMultipartUploadRequestEntityType)
-
-                    || typeToConvert == typeof(global::Opik.StartMultipartUploadRequestEntityType?)
-
-                    || typeToConvert == typeof(global::Opik.AttachmentListEntityType)
-
-                    || typeToConvert == typeof(global::Opik.AttachmentListEntityType?)
-
-                    || typeToConvert == typeof(global::Opik.DownloadAttachmentEntityType)
-
-                    || typeToConvert == typeof(global::Opik.DownloadAttachmentEntityType?)
-
-                    || typeToConvert == typeof(global::Opik.UploadAttachmentEntityType)
-
-                    || typeToConvert == typeof(global::Opik.UploadAttachmentEntityType?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Opik.CompleteMultipartUploadRequestEntityType))
-                {
-                    return new global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.CompleteMultipartUploadRequestEntityType?))
-                {
-                    return new global::Opik.JsonConverters.CompleteMultipartUploadRequestEntityTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.StartMultipartUploadRequestEntityType))
-                {
-                    return new global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.StartMultipartUploadRequestEntityType?))
-                {
-                    return new global::Opik.JsonConverters.StartMultipartUploadRequestEntityTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.AttachmentListEntityType))
-                {
-                    return new global::Opik.JsonConverters.AttachmentListEntityTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.AttachmentListEntityType?))
-                {
-                    return new global::Opik.JsonConverters.AttachmentListEntityTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.DownloadAttachmentEntityType))
-                {
-                    return new global::Opik.JsonConverters.DownloadAttachmentEntityTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.DownloadAttachmentEntityType?))
-                {
-                    return new global::Opik.JsonConverters.DownloadAttachmentEntityTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.UploadAttachmentEntityType))
-                {
-                    return new global::Opik.JsonConverters.UploadAttachmentEntityTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.UploadAttachmentEntityType?))
-                {
-                    return new global::Opik.JsonConverters.UploadAttachmentEntityTypeNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -233,7 +103,7 @@ namespace Opik
             {
                 return index switch
                 {
-                    0 => new AttachmentsSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Opik.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }

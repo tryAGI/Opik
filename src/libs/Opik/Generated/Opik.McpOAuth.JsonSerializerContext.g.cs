@@ -5,51 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Opik
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ConsentResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ConsentRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AuthorizeContext))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.WorkspaceInfo>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceInfo))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AuthorizationServerMetadata))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ClientRegistrationResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ClientRegistrationRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TokenResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.OAuthError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ValidatedToken))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RevokeRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TokenRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.WorkspaceInfo>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    internal sealed partial class McpOAuthSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class McpOAuthSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -85,7 +49,7 @@ namespace Opik
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Opik.JsonConverters.UnixTimestampJsonConverter());
+            global::Opik.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -139,7 +103,7 @@ namespace Opik
             {
                 return index switch
                 {
-                    0 => new McpOAuthSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Opik.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }
