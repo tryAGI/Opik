@@ -93,6 +93,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Internal auto-first-run rollout enrollment.
+        /// </summary>
+        public AgentInsightsEnrollmentClient AgentInsightsEnrollment => new AgentInsightsEnrollmentClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Per-(workspace, project) Agent Insights report configuration.
         /// </summary>
         public AgentInsightsJobsClient AgentInsightsJobs => new AgentInsightsJobsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
