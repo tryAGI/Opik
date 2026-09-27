@@ -5,78 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Opik
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Guid>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ErrorMessage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ErrorMessagePublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BatchDelete))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CredentialPublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyPagePublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ProviderApiKeyPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyPublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyPublicProvider), TypeInfoPropertyName = "ProviderApiKeyPublicProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigPublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigPublicSendAs), TypeInfoPropertyName = "ProviderAuthConfigPublicSendAs2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.CredentialPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Credential))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfig))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigSendAs), TypeInfoPropertyName = "ProviderAuthConfigSendAs2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Credential>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CredentialWrite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyWrite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyWriteProvider), TypeInfoPropertyName = "ProviderApiKeyWriteProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigWrite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigWriteSendAs), TypeInfoPropertyName = "ProviderAuthConfigWriteSendAs2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.CredentialWrite>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Result))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthCheck))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyUpdate))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyPublicProvider?), TypeInfoPropertyName = "NullableProviderApiKeyPublicProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigPublicSendAs?), TypeInfoPropertyName = "NullableProviderAuthConfigPublicSendAs2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigSendAs?), TypeInfoPropertyName = "NullableProviderAuthConfigSendAs2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyWriteProvider?), TypeInfoPropertyName = "NullableProviderApiKeyWriteProvider2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigWriteSendAs?), TypeInfoPropertyName = "NullableProviderAuthConfigWriteSendAs2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Guid>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProviderApiKeyPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.CredentialPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Credential>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.CredentialWrite>))]
-    internal sealed partial class LlmProviderKeySourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class LlmProviderKeySourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -112,8 +49,7 @@ namespace Opik
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Opik.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
+            global::Opik.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -126,90 +62,6 @@ namespace Opik
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider)
-
-                    || typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider?)
-
-                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigPublicSendAs)
-
-                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigPublicSendAs?)
-
-                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigSendAs)
-
-                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigSendAs?)
-
-                    || typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider)
-
-                    || typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider?)
-
-                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigWriteSendAs)
-
-                    || typeToConvert == typeof(global::Opik.ProviderAuthConfigWriteSendAs?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider))
-                {
-                    return new global::Opik.JsonConverters.ProviderApiKeyPublicProviderJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider?))
-                {
-                    return new global::Opik.JsonConverters.ProviderApiKeyPublicProviderNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigPublicSendAs))
-                {
-                    return new global::Opik.JsonConverters.ProviderAuthConfigPublicSendAsJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigPublicSendAs?))
-                {
-                    return new global::Opik.JsonConverters.ProviderAuthConfigPublicSendAsNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigSendAs))
-                {
-                    return new global::Opik.JsonConverters.ProviderAuthConfigSendAsJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigSendAs?))
-                {
-                    return new global::Opik.JsonConverters.ProviderAuthConfigSendAsNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider))
-                {
-                    return new global::Opik.JsonConverters.ProviderApiKeyWriteProviderJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.ProviderApiKeyWriteProvider?))
-                {
-                    return new global::Opik.JsonConverters.ProviderApiKeyWriteProviderNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigWriteSendAs))
-                {
-                    return new global::Opik.JsonConverters.ProviderAuthConfigWriteSendAsJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.ProviderAuthConfigWriteSendAs?))
-                {
-                    return new global::Opik.JsonConverters.ProviderAuthConfigWriteSendAsNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -251,7 +103,7 @@ namespace Opik
             {
                 return index switch
                 {
-                    0 => new LlmProviderKeySourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Opik.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }

@@ -5,66 +5,15 @@
 #pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
 
 namespace Opik
-{
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Guid>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ErrorMessage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.SpanFilter>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilter))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterOperator), TypeInfoPropertyName = "SpanFilterOperator2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Result))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TokenUsageNames))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceMetricsSummaryRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceMetricResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Result>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceConfiguration))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BreakdownConfig))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BreakdownConfigField), TypeInfoPropertyName = "BreakdownConfigField2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequestMetricType), TypeInfoPropertyName = "WorkspaceSpanMetricRequestMetricType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequestInterval), TypeInfoPropertyName = "WorkspaceSpanMetricRequestInterval2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceTokenUsageNamesRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceMetricsSummaryResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterOperator?), TypeInfoPropertyName = "NullableSpanFilterOperator2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BreakdownConfigField?), TypeInfoPropertyName = "NullableBreakdownConfigField2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequestMetricType?), TypeInfoPropertyName = "NullableWorkspaceSpanMetricRequestMetricType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceSpanMetricRequestInterval?), TypeInfoPropertyName = "NullableWorkspaceSpanMetricRequestInterval2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Guid>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanFilter>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Result>))]
-    internal sealed partial class WorkspacesSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-    /// <summary>
+{    /// <summary>
     ///
     /// </summary>
     public sealed partial class WorkspacesSourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        internal static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver TypeInfoResolver => Resolver;
 
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
@@ -100,8 +49,7 @@ namespace Opik
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Opik.JsonConverters.UnixTimestampJsonConverter());
-            options.Converters.Add(new LazyEnumJsonConverterFactory());
+            global::Opik.SourceGenerationContext.AddConverters(options);
         }
 
         private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
@@ -114,76 +62,6 @@ namespace Opik
             AddConverters(options);
 
             return options;
-        }
-
-
-        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
-        {
-            public override bool CanConvert(global::System.Type typeToConvert)
-            {
-                return
-                    typeToConvert == typeof(global::Opik.SpanFilterOperator)
-
-                    || typeToConvert == typeof(global::Opik.SpanFilterOperator?)
-
-                    || typeToConvert == typeof(global::Opik.BreakdownConfigField)
-
-                    || typeToConvert == typeof(global::Opik.BreakdownConfigField?)
-
-                    || typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestMetricType)
-
-                    || typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestMetricType?)
-
-                    || typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestInterval)
-
-                    || typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestInterval?);
-            }
-
-            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
-                global::System.Type typeToConvert,
-                global::System.Text.Json.JsonSerializerOptions options)
-            {
-                if (typeToConvert == typeof(global::Opik.SpanFilterOperator))
-                {
-                    return new global::Opik.JsonConverters.SpanFilterOperatorJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.SpanFilterOperator?))
-                {
-                    return new global::Opik.JsonConverters.SpanFilterOperatorNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.BreakdownConfigField))
-                {
-                    return new global::Opik.JsonConverters.BreakdownConfigFieldJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.BreakdownConfigField?))
-                {
-                    return new global::Opik.JsonConverters.BreakdownConfigFieldNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestMetricType))
-                {
-                    return new global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestMetricType?))
-                {
-                    return new global::Opik.JsonConverters.WorkspaceSpanMetricRequestMetricTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestInterval))
-                {
-                    return new global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Opik.WorkspaceSpanMetricRequestInterval?))
-                {
-                    return new global::Opik.JsonConverters.WorkspaceSpanMetricRequestIntervalNullableJsonConverter();
-                }
-                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
-            }
         }
 
         private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
@@ -225,7 +103,7 @@ namespace Opik
             {
                 return index switch
                 {
-                    0 => new WorkspacesSourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+                    0 => global::Opik.SourceGenerationContext.TypeInfoResolver,
                     _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
                 };
             }
