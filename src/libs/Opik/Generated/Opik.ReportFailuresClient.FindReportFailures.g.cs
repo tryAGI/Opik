@@ -156,7 +156,7 @@ namespace Opik
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             __pathBuilder
                                 .AddRequiredParameter("type", type.ToValueString())
-                                .AddRequiredParameter("project_id", projectId.ToString()!)
+                                .AddRequiredParameter("project_id", projectId.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("size", size?.ToString())
                                 ;
@@ -200,8 +200,8 @@ namespace Opik
                 PrepareFindReportFailuresRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    type: type!,
-                    projectId: projectId!,
+                    type: type,
+                    projectId: projectId,
                     page: page,
                     size: size);
 
@@ -225,7 +225,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/report-failures\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -259,7 +259,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/report-failures\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -300,7 +300,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/report-failures\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -348,7 +348,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/report-failures\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -370,7 +370,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/report-failures\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

@@ -164,9 +164,9 @@ namespace Opik
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             __pathBuilder
                                 .AddOptionalParameter("workspace_name", workspaceName)
-                                .AddRequiredParameter("container_id", containerId.ToString()!)
+                                .AddRequiredParameter("container_id", containerId.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 .AddRequiredParameter("entity_type", entityType.ToValueString())
-                                .AddRequiredParameter("entity_id", entityId.ToString()!)
+                                .AddRequiredParameter("entity_id", entityId.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 .AddRequiredParameter("file_name", fileName)
                                 .AddRequiredParameter("mime_type", mimeType)
                                 ;
@@ -211,11 +211,11 @@ namespace Opik
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     workspaceName: workspaceName,
-                    containerId: containerId!,
-                    entityType: entityType!,
-                    entityId: entityId!,
-                    fileName: fileName!,
-                    mimeType: mimeType!);
+                    containerId: containerId,
+                    entityType: entityType,
+                    entityId: entityId,
+                    fileName: fileName,
+                    mimeType: mimeType);
 
                 return __httpRequest;
             }
@@ -237,7 +237,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/download\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -271,7 +271,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/download\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -312,7 +312,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/download\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -360,7 +360,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/download\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -382,7 +382,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/download\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -583,9 +583,9 @@ namespace Opik
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             __pathBuilder
                                 .AddOptionalParameter("workspace_name", workspaceName)
-                                .AddRequiredParameter("container_id", containerId.ToString()!)
+                                .AddRequiredParameter("container_id", containerId.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 .AddRequiredParameter("entity_type", entityType.ToValueString())
-                                .AddRequiredParameter("entity_id", entityId.ToString()!)
+                                .AddRequiredParameter("entity_id", entityId.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 .AddRequiredParameter("file_name", fileName)
                                 .AddRequiredParameter("mime_type", mimeType)
                                 ;
@@ -630,11 +630,11 @@ namespace Opik
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     workspaceName: workspaceName,
-                    containerId: containerId!,
-                    entityType: entityType!,
-                    entityId: entityId!,
-                    fileName: fileName!,
-                    mimeType: mimeType!);
+                    containerId: containerId,
+                    entityType: entityType,
+                    entityId: entityId,
+                    fileName: fileName,
+                    mimeType: mimeType);
 
                 return __httpRequest;
             }
@@ -656,7 +656,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/download\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -690,7 +690,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/download\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -731,7 +731,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/download\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -779,7 +779,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/download\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -801,7 +801,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/download\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

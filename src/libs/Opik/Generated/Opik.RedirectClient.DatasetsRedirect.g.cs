@@ -132,7 +132,7 @@ namespace Opik
                                 servers: s_DatasetsRedirectServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             __pathBuilder
-                                .AddRequiredParameter("dataset_id", datasetId.ToString()!)
+                                .AddRequiredParameter("dataset_id", datasetId.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 .AddOptionalParameter("workspace_name", workspaceName)
                                 .AddRequiredParameter("path", path)
                                 ;
@@ -176,9 +176,9 @@ namespace Opik
                 PrepareDatasetsRedirectRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId!,
+                    datasetId: datasetId,
                     workspaceName: workspaceName,
-                    path: path!);
+                    path: path);
 
                 return __httpRequest;
             }
@@ -200,7 +200,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/session/redirect/datasets\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -234,7 +234,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/session/redirect/datasets\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -275,7 +275,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/session/redirect/datasets\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -323,7 +323,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/session/redirect/datasets\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -345,7 +345,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/session/redirect/datasets\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

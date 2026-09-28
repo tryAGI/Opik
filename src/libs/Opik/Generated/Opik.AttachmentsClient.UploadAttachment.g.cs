@@ -169,7 +169,7 @@ namespace Opik
                                 .AddOptionalParameter("project_name", projectName)
                                 .AddOptionalParameter("mime_type", mimeType)
                                 .AddRequiredParameter("entity_type", entityType.ToValueString())
-                                .AddRequiredParameter("entity_id", entityId.ToString()!)
+                                .AddRequiredParameter("entity_id", entityId.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Opik.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -215,11 +215,11 @@ namespace Opik
                 PrepareUploadAttachmentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    fileName: fileName!,
+                    fileName: fileName,
                     projectName: projectName,
                     mimeType: mimeType,
-                    entityType: entityType!,
-                    entityId: entityId!,
+                    entityType: entityType,
+                    entityId: entityId,
                     request: request);
 
                 return __httpRequest;
@@ -242,7 +242,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/upload\"",
                                 httpMethod: "PUT",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -276,7 +276,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/upload\"",
                                 httpMethod: "PUT",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -317,7 +317,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/upload\"",
                                 httpMethod: "PUT",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -365,7 +365,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/upload\"",
                                 httpMethod: "PUT",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -387,7 +387,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/attachment/upload\"",
                                 httpMethod: "PUT",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
