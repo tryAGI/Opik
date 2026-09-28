@@ -42,8 +42,8 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        public object PickJsonListStringVariant1() => IsJsonListStringVariant1
-            ? JsonListStringVariant1!
+        public object PickJsonListStringVariant1() => JsonListStringVariant1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringVariant1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<object> PickJsonListStringVariant2() => IsJsonListStringVariant2
-            ? JsonListStringVariant2!
+        public global::System.Collections.Generic.IList<object> PickJsonListStringVariant2() => JsonListStringVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringVariant2' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        public string PickJsonListStringVariant3() => IsJsonListStringVariant3
-            ? JsonListStringVariant3!
+        public string PickJsonListStringVariant3() => JsonListStringVariant3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'JsonListStringVariant3' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -196,17 +196,17 @@ namespace Opik
                 Validate();
             }
 
-            if (IsJsonListStringVariant1 && jsonListStringVariant1 != null)
+            if (JsonListStringVariant1 is { } __value0 && jsonListStringVariant1 != null)
             {
-                return jsonListStringVariant1(JsonListStringVariant1!);
+                return jsonListStringVariant1(__value0);
             }
-            else if (IsJsonListStringVariant2 && jsonListStringVariant2 != null)
+            else if (JsonListStringVariant2 is { } __value1 && jsonListStringVariant2 != null)
             {
-                return jsonListStringVariant2(JsonListStringVariant2!);
+                return jsonListStringVariant2(__value1);
             }
-            else if (IsJsonListStringVariant3 && jsonListStringVariant3 != null)
+            else if (JsonListStringVariant3 is { } __value2 && jsonListStringVariant3 != null)
             {
-                return jsonListStringVariant3(JsonListStringVariant3!);
+                return jsonListStringVariant3(__value2);
             }
 
             return default(TResult);
@@ -228,17 +228,17 @@ namespace Opik
                 Validate();
             }
 
-            if (IsJsonListStringVariant1)
+            if (JsonListStringVariant1 is { } __value0)
             {
-                jsonListStringVariant1?.Invoke(JsonListStringVariant1!);
+                jsonListStringVariant1?.Invoke(__value0);
             }
-            else if (IsJsonListStringVariant2)
+            else if (JsonListStringVariant2 is { } __value1)
             {
-                jsonListStringVariant2?.Invoke(JsonListStringVariant2!);
+                jsonListStringVariant2?.Invoke(__value1);
             }
-            else if (IsJsonListStringVariant3)
+            else if (JsonListStringVariant3 is { } __value2)
             {
-                jsonListStringVariant3?.Invoke(JsonListStringVariant3!);
+                jsonListStringVariant3?.Invoke(__value2);
             }
         }
 
@@ -256,17 +256,17 @@ namespace Opik
                 Validate();
             }
 
-            if (IsJsonListStringVariant1)
+            if (JsonListStringVariant1 is { } __value0)
             {
-                jsonListStringVariant1?.Invoke(JsonListStringVariant1!);
+                jsonListStringVariant1?.Invoke(__value0);
             }
-            else if (IsJsonListStringVariant2)
+            else if (JsonListStringVariant2 is { } __value1)
             {
-                jsonListStringVariant2?.Invoke(JsonListStringVariant2!);
+                jsonListStringVariant2?.Invoke(__value1);
             }
-            else if (IsJsonListStringVariant3)
+            else if (JsonListStringVariant3 is { } __value2)
             {
-                jsonListStringVariant3?.Invoke(JsonListStringVariant3!);
+                jsonListStringVariant3?.Invoke(__value2);
             }
         }
 

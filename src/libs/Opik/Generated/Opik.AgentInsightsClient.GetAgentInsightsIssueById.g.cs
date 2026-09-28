@@ -147,7 +147,7 @@ namespace Opik
                                 servers: s_GetAgentInsightsIssueByIdServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             __pathBuilder
-                                .AddRequiredParameter("project_id", projectId.ToString()!)
+                                .AddRequiredParameter("project_id", projectId.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 .AddOptionalParameter("from_date", fromDate?.ToString("yyyy-MM-dd"))
                                 .AddOptionalParameter("to_date", toDate?.ToString("yyyy-MM-dd"))
                                 ;
@@ -191,8 +191,8 @@ namespace Opik
                 PrepareGetAgentInsightsIssueByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    issueId: issueId!,
-                    projectId: projectId!,
+                    issueId: issueId,
+                    projectId: projectId,
                     fromDate: fromDate,
                     toDate: toDate);
 
@@ -216,7 +216,7 @@ namespace Opik
                                 pathTemplate: "$\"/v1/private/agent-insights/issues/{issueId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -250,7 +250,7 @@ namespace Opik
                                 pathTemplate: "$\"/v1/private/agent-insights/issues/{issueId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -291,7 +291,7 @@ namespace Opik
                                 pathTemplate: "$\"/v1/private/agent-insights/issues/{issueId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -339,7 +339,7 @@ namespace Opik
                                 pathTemplate: "$\"/v1/private/agent-insights/issues/{issueId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -361,7 +361,7 @@ namespace Opik
                                 pathTemplate: "$\"/v1/private/agent-insights/issues/{issueId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

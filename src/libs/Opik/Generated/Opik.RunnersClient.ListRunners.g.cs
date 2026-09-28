@@ -155,7 +155,7 @@ namespace Opik
                                 servers: s_ListRunnersServers,
                                 defaultBaseUrl: "http://localhost:5173/api"));
                             __pathBuilder
-                                .AddRequiredParameter("project_id", projectId.ToString()!)
+                                .AddRequiredParameter("project_id", projectId.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 .AddOptionalParameter("status", status?.ToValueString())
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("size", size?.ToString())
@@ -200,7 +200,7 @@ namespace Opik
                 PrepareListRunnersRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId!,
+                    projectId: projectId,
                     status: status,
                     page: page,
                     size: size);
@@ -225,7 +225,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/local-runners\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -259,7 +259,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/local-runners\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -300,7 +300,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/local-runners\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -348,7 +348,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/local-runners\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -370,7 +370,7 @@ namespace Opik
                                 pathTemplate: "\"/v1/private/local-runners\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

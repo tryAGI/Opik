@@ -171,9 +171,9 @@ namespace Opik
                 PrepareDeleteVersionTagRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    versionHash: versionHash!,
-                    tag: tag!,
-                    id: id!);
+                    versionHash: versionHash,
+                    tag: tag,
+                    id: id);
 
                 return __httpRequest;
             }
@@ -195,7 +195,7 @@ namespace Opik
                                 pathTemplate: "$\"/v1/private/datasets/{id}/versions/{versionHash}/tags/{tag}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -229,7 +229,7 @@ namespace Opik
                                 pathTemplate: "$\"/v1/private/datasets/{id}/versions/{versionHash}/tags/{tag}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -270,7 +270,7 @@ namespace Opik
                                 pathTemplate: "$\"/v1/private/datasets/{id}/versions/{versionHash}/tags/{tag}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -318,7 +318,7 @@ namespace Opik
                                 pathTemplate: "$\"/v1/private/datasets/{id}/versions/{versionHash}/tags/{tag}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -340,7 +340,7 @@ namespace Opik
                                 pathTemplate: "$\"/v1/private/datasets/{id}/versions/{versionHash}/tags/{tag}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
