@@ -269,7 +269,7 @@ namespace Opik
         public SpansClient Spans { get; }
 
         /// <summary>
-        /// Internal endpoint to run Agent Insights free-form SQL.
+        /// Internal endpoints to run free-form analytics SQL.
         /// </summary>
         public SystemAnalyticsQueriesClient SystemAnalyticsQueries { get; }
 
