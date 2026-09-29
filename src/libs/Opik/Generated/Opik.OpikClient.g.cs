@@ -433,7 +433,7 @@ namespace Opik
         };
 
         /// <summary>
-        /// Internal endpoint to run Agent Insights free-form SQL.
+        /// Internal endpoints to run free-form analytics SQL.
         /// </summary>
         public SystemAnalyticsQueriesClient SystemAnalyticsQueries => new SystemAnalyticsQueriesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

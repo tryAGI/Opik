@@ -179,6 +179,13 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("annotationQueueAutomationEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool AnnotationQueueAutomationEnabled { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaultPageSize")]
         public int? DefaultPageSize { get; set; }
 
@@ -215,6 +222,7 @@ namespace Opik
         /// <param name="ollieEnabled"></param>
         /// <param name="projectHomepageEnabled"></param>
         /// <param name="onlineScoringTracingEnabled"></param>
+        /// <param name="annotationQueueAutomationEnabled"></param>
         /// <param name="defaultPageSize"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -244,6 +252,7 @@ namespace Opik
             bool ollieEnabled,
             bool projectHomepageEnabled,
             bool onlineScoringTracingEnabled,
+            bool annotationQueueAutomationEnabled,
             int? defaultPageSize)
         {
             this.PythonEvaluatorEnabled = pythonEvaluatorEnabled;
@@ -270,6 +279,7 @@ namespace Opik
             this.OllieEnabled = ollieEnabled;
             this.ProjectHomepageEnabled = projectHomepageEnabled;
             this.OnlineScoringTracingEnabled = onlineScoringTracingEnabled;
+            this.AnnotationQueueAutomationEnabled = annotationQueueAutomationEnabled;
             this.DefaultPageSize = defaultPageSize;
         }
 
