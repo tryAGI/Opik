@@ -27,6 +27,12 @@ namespace Opik
         public int? MaxItemsInQueue { get; set; }
 
         /// <summary>
+        /// When true, removes the item ceiling so automation adds without bound
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("clear_max_items_in_queue")]
+        public bool? ClearMaxItemsInQueue { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -38,17 +44,22 @@ namespace Opik
         /// <param name="enabled"></param>
         /// <param name="conditions"></param>
         /// <param name="maxItemsInQueue"></param>
+        /// <param name="clearMaxItemsInQueue">
+        /// When true, removes the item ceiling so automation adds without bound
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AnnotationQueueAutomationWrite(
             bool? enabled,
             global::Opik.ConditionsWrite? conditions,
-            int? maxItemsInQueue)
+            int? maxItemsInQueue,
+            bool? clearMaxItemsInQueue)
         {
             this.Enabled = enabled;
             this.Conditions = conditions;
             this.MaxItemsInQueue = maxItemsInQueue;
+            this.ClearMaxItemsInQueue = clearMaxItemsInQueue;
         }
 
         /// <summary>
