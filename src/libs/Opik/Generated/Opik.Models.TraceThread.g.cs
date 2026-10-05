@@ -102,6 +102,13 @@ namespace Opik
         public global::System.Collections.Generic.IList<string>? Tags { get; set; }
 
         /// <summary>
+        /// Annotation queues this thread is currently an item of<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("annotation_queues")]
+        public global::System.Collections.Generic.IList<global::Opik.AnnotationQueueReference>? AnnotationQueues { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last_updated_at")]
@@ -155,6 +162,10 @@ namespace Opik
         /// <param name="usage"></param>
         /// <param name="comments"></param>
         /// <param name="tags"></param>
+        /// <param name="annotationQueues">
+        /// Annotation queues this thread is currently an item of<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="lastUpdatedAt"></param>
         /// <param name="lastUpdatedBy"></param>
         /// <param name="createdBy"></param>
@@ -179,6 +190,7 @@ namespace Opik
             global::System.Collections.Generic.Dictionary<string, long>? usage,
             global::System.Collections.Generic.IList<global::Opik.Comment>? comments,
             global::System.Collections.Generic.IList<string>? tags,
+            global::System.Collections.Generic.IList<global::Opik.AnnotationQueueReference>? annotationQueues,
             global::System.DateTime? lastUpdatedAt,
             string? lastUpdatedBy,
             string? createdBy,
@@ -200,6 +212,7 @@ namespace Opik
             this.Usage = usage;
             this.Comments = comments;
             this.Tags = tags;
+            this.AnnotationQueues = annotationQueues;
             this.LastUpdatedAt = lastUpdatedAt;
             this.LastUpdatedBy = lastUpdatedBy;
             this.CreatedBy = createdBy;

@@ -198,6 +198,13 @@ namespace Opik
         public global::Opik.ExperimentItemReference? Experiment { get; set; }
 
         /// <summary>
+        /// Annotation queues this trace is currently an item of<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("annotation_queues")]
+        public global::System.Collections.Generic.IList<global::Opik.AnnotationQueueReference>? AnnotationQueues { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
@@ -291,6 +298,10 @@ namespace Opik
         /// Experiment reference with ID, name, dataset ID, and dataset item ID<br/>
         /// Included only in responses
         /// </param>
+        /// <param name="annotationQueues">
+        /// Annotation queues this trace is currently an item of<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="source"></param>
         /// <param name="environment"></param>
 #if NET7_0_OR_GREATER
@@ -327,6 +338,7 @@ namespace Opik
             bool? hasToolSpans,
             global::System.Collections.Generic.IList<string>? providers,
             global::Opik.ExperimentItemReference? experiment,
+            global::System.Collections.Generic.IList<global::Opik.AnnotationQueueReference>? annotationQueues,
             global::Opik.TraceSource? source,
             string? environment)
         {
@@ -360,6 +372,7 @@ namespace Opik
             this.HasToolSpans = hasToolSpans;
             this.Providers = providers;
             this.Experiment = experiment;
+            this.AnnotationQueues = annotationQueues;
             this.Source = source;
             this.Environment = environment;
         }

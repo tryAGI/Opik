@@ -26,6 +26,9 @@ namespace Opik
         /// </param>
         /// <param name="filters"></param>
         /// <param name="sorting"></param>
+        /// <param name="exclude">
+        /// Enrichment fields to leave out of each thread, e.g. ["annotation_queues"]
+        /// </param>
         /// <param name="search">
         /// Full-text search across thread fields
         /// </param>
@@ -50,6 +53,7 @@ namespace Opik
             bool? stripAttachments = default,
             string? filters = default,
             string? sorting = default,
+            string? exclude = default,
             string? search = default,
             global::System.DateTime? fromTime = default,
             global::System.DateTime? toTime = default,
@@ -78,6 +82,9 @@ namespace Opik
         /// </param>
         /// <param name="filters"></param>
         /// <param name="sorting"></param>
+        /// <param name="exclude">
+        /// Enrichment fields to leave out of each thread, e.g. ["annotation_queues"]
+        /// </param>
         /// <param name="search">
         /// Full-text search across thread fields
         /// </param>
@@ -102,6 +109,7 @@ namespace Opik
             bool? stripAttachments = default,
             string? filters = default,
             string? sorting = default,
+            string? exclude = default,
             string? search = default,
             global::System.DateTime? fromTime = default,
             global::System.DateTime? toTime = default,
