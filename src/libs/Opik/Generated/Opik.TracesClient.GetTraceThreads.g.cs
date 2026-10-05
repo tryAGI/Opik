@@ -48,6 +48,7 @@ namespace Opik
             ref bool? stripAttachments,
             ref string? filters,
             ref string? sorting,
+            ref string? exclude,
             ref string? search,
             ref global::System.DateTime? fromTime,
             ref global::System.DateTime? toTime,
@@ -63,6 +64,7 @@ namespace Opik
             bool? stripAttachments,
             string? filters,
             string? sorting,
+            string? exclude,
             string? search,
             global::System.DateTime? fromTime,
             global::System.DateTime? toTime,
@@ -98,6 +100,9 @@ namespace Opik
         /// </param>
         /// <param name="filters"></param>
         /// <param name="sorting"></param>
+        /// <param name="exclude">
+        /// Enrichment fields to leave out of each thread, e.g. ["annotation_queues"]
+        /// </param>
         /// <param name="search">
         /// Full-text search across thread fields
         /// </param>
@@ -122,6 +127,7 @@ namespace Opik
             bool? stripAttachments = default,
             string? filters = default,
             string? sorting = default,
+            string? exclude = default,
             string? search = default,
             global::System.DateTime? fromTime = default,
             global::System.DateTime? toTime = default,
@@ -138,6 +144,7 @@ namespace Opik
                 stripAttachments: stripAttachments,
                 filters: filters,
                 sorting: sorting,
+                exclude: exclude,
                 search: search,
                 fromTime: fromTime,
                 toTime: toTime,
@@ -170,6 +177,9 @@ namespace Opik
         /// </param>
         /// <param name="filters"></param>
         /// <param name="sorting"></param>
+        /// <param name="exclude">
+        /// Enrichment fields to leave out of each thread, e.g. ["annotation_queues"]
+        /// </param>
         /// <param name="search">
         /// Full-text search across thread fields
         /// </param>
@@ -194,6 +204,7 @@ namespace Opik
             bool? stripAttachments = default,
             string? filters = default,
             string? sorting = default,
+            string? exclude = default,
             string? search = default,
             global::System.DateTime? fromTime = default,
             global::System.DateTime? toTime = default,
@@ -213,6 +224,7 @@ namespace Opik
                 stripAttachments: ref stripAttachments,
                 filters: ref filters,
                 sorting: ref sorting,
+                exclude: ref exclude,
                 search: ref search,
                 fromTime: ref fromTime,
                 toTime: ref toTime,
@@ -255,6 +267,7 @@ namespace Opik
                                 .AddOptionalParameter("strip_attachments", stripAttachments?.ToString().ToLowerInvariant())
                                 .AddOptionalParameter("filters", filters)
                                 .AddOptionalParameter("sorting", sorting)
+                                .AddOptionalParameter("exclude", exclude)
                                 .AddOptionalParameter("search", search)
                                 .AddOptionalParameter("from_time", fromTime?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("to_time", toTime?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
@@ -308,6 +321,7 @@ namespace Opik
                     stripAttachments: stripAttachments,
                     filters: filters,
                     sorting: sorting,
+                    exclude: exclude,
                     search: search,
                     fromTime: fromTime,
                     toTime: toTime,

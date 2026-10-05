@@ -11,6 +11,10 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        AnnotationQueues,
+        /// <summary>
+        ///
+        /// </summary>
         Comments,
         /// <summary>
         ///
@@ -134,6 +138,7 @@ namespace Opik
         {
             return value switch
             {
+                TraceSearchStreamRequestPublicExcludeItem.AnnotationQueues => "annotation_queues",
                 TraceSearchStreamRequestPublicExcludeItem.Comments => "comments",
                 TraceSearchStreamRequestPublicExcludeItem.CreatedAt => "created_at",
                 TraceSearchStreamRequestPublicExcludeItem.CreatedBy => "created_by",
@@ -172,6 +177,7 @@ namespace Opik
         {
             return value switch
             {
+                "annotation_queues" => TraceSearchStreamRequestPublicExcludeItem.AnnotationQueues,
                 "comments" => TraceSearchStreamRequestPublicExcludeItem.Comments,
                 "created_at" => TraceSearchStreamRequestPublicExcludeItem.CreatedAt,
                 "created_by" => TraceSearchStreamRequestPublicExcludeItem.CreatedBy,
