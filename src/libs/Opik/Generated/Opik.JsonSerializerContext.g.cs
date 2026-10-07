@@ -40,6 +40,10 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ErrorMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnalyticsQueryRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ScopedAnalyticsQueryRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UsageProjectsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.WorkspaceProjectName>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.WorkspaceProjectName))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UsageProjectsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BiInformation))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BiInformationResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.BiInformation>))]
@@ -505,10 +509,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.CommentCompare>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemCompareTraceVisibilityMode), TypeInfoPropertyName = "ExperimentItemCompareTraceVisibilityMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.AssertionResultCompare>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemCompareStatus), TypeInfoPropertyName = "ExperimentItemCompareStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentRunSummaryCompareStatus), TypeInfoPropertyName = "ExperimentRunSummaryCompareStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FeedbackScoreCompareSource), TypeInfoPropertyName = "FeedbackScoreCompareSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Opik.ValueEntryCompare>))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -519,6 +519,10 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemCompareStatus), TypeInfoPropertyName = "ExperimentItemCompareStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentRunSummaryCompareStatus), TypeInfoPropertyName = "ExperimentRunSummaryCompareStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FeedbackScoreCompareSource), TypeInfoPropertyName = "FeedbackScoreCompareSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Opik.ValueEntryCompare>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ValueEntryCompare))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ValueEntryCompareSource), TypeInfoPropertyName = "ValueEntryCompareSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DatasetPagePublic))]
@@ -1015,10 +1019,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DeleteTraceThreads))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.BatchDeleteByProject))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueReferencePublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CheckPublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CheckPublicName), TypeInfoPropertyName = "CheckPublicName2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CheckPublicResult), TypeInfoPropertyName = "CheckPublicResult2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemReferencePublic))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1029,6 +1029,10 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CheckPublic))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CheckPublicName), TypeInfoPropertyName = "CheckPublicName2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CheckPublicResult), TypeInfoPropertyName = "CheckPublicResult2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemReferencePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailsValidationPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.CheckPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TracePublic))]
@@ -1374,6 +1378,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Guid>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.JsonNode>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.WorkspaceProjectName>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.BiInformation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.WorkspaceProjectUserCount>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.WorkspaceSpansCount>))]
@@ -1524,11 +1529,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.RetentionRulePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScorePublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScoreBatchItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanSearchStreamRequestPublicExcludeItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Trace>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceWrite>))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1539,6 +1539,11 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScoreBatchItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanSearchStreamRequestPublicExcludeItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Trace>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.CheckPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.GuardrailsValidationPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.AnnotationQueueReferencePublic>))]

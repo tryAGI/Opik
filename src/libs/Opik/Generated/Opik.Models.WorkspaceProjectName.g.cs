@@ -6,7 +6,7 @@ namespace Opik
     /// <summary>
     ///
     /// </summary>
-    public sealed partial class WorkspaceProjectUserCount
+    public sealed partial class WorkspaceProjectName
     {
         /// <summary>
         ///
@@ -23,20 +23,8 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("project_name")]
-        public string? ProjectName { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("user")]
-        public string? User { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
-        public long? Count { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -45,34 +33,28 @@ namespace Opik
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkspaceProjectUserCount" /> class.
+        /// Initializes a new instance of the <see cref="WorkspaceProjectName" /> class.
         /// </summary>
         /// <param name="workspaceId"></param>
         /// <param name="projectId"></param>
-        /// <param name="projectName"></param>
-        /// <param name="user"></param>
-        /// <param name="count"></param>
+        /// <param name="name"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public WorkspaceProjectUserCount(
+        public WorkspaceProjectName(
             string? workspaceId,
             global::System.Guid? projectId,
-            string? projectName,
-            string? user,
-            long? count)
+            string? name)
         {
             this.WorkspaceId = workspaceId;
             this.ProjectId = projectId;
-            this.ProjectName = projectName;
-            this.User = user;
-            this.Count = count;
+            this.Name = name;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkspaceProjectUserCount" /> class.
+        /// Initializes a new instance of the <see cref="WorkspaceProjectName" /> class.
         /// </summary>
-        public WorkspaceProjectUserCount()
+        public WorkspaceProjectName()
         {
         }
 
