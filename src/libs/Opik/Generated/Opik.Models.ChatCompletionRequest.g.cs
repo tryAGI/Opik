@@ -149,6 +149,18 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("promptCacheKey")]
+        public string? PromptCacheKey { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("promptCacheOptions")]
+        public global::Opik.PromptCacheOptions? PromptCacheOptions { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("logprobs")]
         public bool? Logprobs { get; set; }
 
@@ -202,6 +214,8 @@ namespace Opik
         /// <param name="metadata"></param>
         /// <param name="reasoningEffort"></param>
         /// <param name="serviceTier"></param>
+        /// <param name="promptCacheKey"></param>
+        /// <param name="promptCacheOptions"></param>
         /// <param name="logprobs"></param>
         /// <param name="topLogprobs"></param>
         /// <param name="functions"></param>
@@ -233,6 +247,8 @@ namespace Opik
             global::System.Collections.Generic.Dictionary<string, string>? metadata,
             string? reasoningEffort,
             string? serviceTier,
+            string? promptCacheKey,
+            global::Opik.PromptCacheOptions? promptCacheOptions,
             bool? logprobs,
             int? topLogprobs,
             global::System.Collections.Generic.IList<global::Opik.Function>? functions,
@@ -261,6 +277,8 @@ namespace Opik
             this.Metadata = metadata;
             this.ReasoningEffort = reasoningEffort;
             this.ServiceTier = serviceTier;
+            this.PromptCacheKey = promptCacheKey;
+            this.PromptCacheOptions = promptCacheOptions;
             this.Logprobs = logprobs;
             this.TopLogprobs = topLogprobs;
             this.Functions = functions;
