@@ -118,6 +118,8 @@ namespace Opik
                 Metadata = request.Metadata,
                 ReasoningEffort = request.ReasoningEffort,
                 ServiceTier = request.ServiceTier,
+                PromptCacheKey = request.PromptCacheKey,
+                PromptCacheOptions = request.PromptCacheOptions,
                 Logprobs = request.Logprobs,
                 TopLogprobs = request.TopLogprobs,
                 Functions = request.Functions,
@@ -508,6 +510,8 @@ namespace Opik
         /// <param name="metadata"></param>
         /// <param name="reasoningEffort"></param>
         /// <param name="serviceTier"></param>
+        /// <param name="promptCacheKey"></param>
+        /// <param name="promptCacheOptions"></param>
         /// <param name="logprobs"></param>
         /// <param name="topLogprobs"></param>
         /// <param name="functions"></param>
@@ -538,6 +542,8 @@ namespace Opik
             global::System.Collections.Generic.Dictionary<string, string>? metadata = default,
             string? reasoningEffort = default,
             string? serviceTier = default,
+            string? promptCacheKey = default,
+            global::Opik.PromptCacheOptions? promptCacheOptions = default,
             bool? logprobs = default,
             int? topLogprobs = default,
             global::System.Collections.Generic.IList<global::Opik.Function>? functions = default,
@@ -570,6 +576,8 @@ namespace Opik
                 Metadata = metadata,
                 ReasoningEffort = reasoningEffort,
                 ServiceTier = serviceTier,
+                PromptCacheKey = promptCacheKey,
+                PromptCacheOptions = promptCacheOptions,
                 Logprobs = logprobs,
                 TopLogprobs = topLogprobs,
                 Functions = functions,

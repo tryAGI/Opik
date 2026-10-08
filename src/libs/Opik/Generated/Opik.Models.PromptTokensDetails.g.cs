@@ -15,6 +15,12 @@ namespace Opik
         public int? CachedTokens { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cacheWriteTokens")]
+        public int? CacheWriteTokens { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -24,13 +30,16 @@ namespace Opik
         /// Initializes a new instance of the <see cref="PromptTokensDetails" /> class.
         /// </summary>
         /// <param name="cachedTokens"></param>
+        /// <param name="cacheWriteTokens"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PromptTokensDetails(
-            int? cachedTokens)
+            int? cachedTokens,
+            int? cacheWriteTokens)
         {
             this.CachedTokens = cachedTokens;
+            this.CacheWriteTokens = cacheWriteTokens;
         }
 
         /// <summary>
