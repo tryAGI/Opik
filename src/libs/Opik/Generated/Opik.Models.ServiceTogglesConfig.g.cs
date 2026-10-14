@@ -193,6 +193,13 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("eventBridgeAlertsEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool EventBridgeAlertsEnabled { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaultPageSize")]
         public int? DefaultPageSize { get; set; }
 
@@ -231,6 +238,7 @@ namespace Opik
         /// <param name="projectHomepageEnabled"></param>
         /// <param name="onlineScoringTracingEnabled"></param>
         /// <param name="annotationQueueAutomationEnabled"></param>
+        /// <param name="eventBridgeAlertsEnabled"></param>
         /// <param name="defaultPageSize"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -262,6 +270,7 @@ namespace Opik
             bool projectHomepageEnabled,
             bool onlineScoringTracingEnabled,
             bool annotationQueueAutomationEnabled,
+            bool eventBridgeAlertsEnabled,
             int? defaultPageSize)
         {
             this.PythonEvaluatorEnabled = pythonEvaluatorEnabled;
@@ -290,6 +299,7 @@ namespace Opik
             this.ProjectHomepageEnabled = projectHomepageEnabled;
             this.OnlineScoringTracingEnabled = onlineScoringTracingEnabled;
             this.AnnotationQueueAutomationEnabled = annotationQueueAutomationEnabled;
+            this.EventBridgeAlertsEnabled = eventBridgeAlertsEnabled;
             this.DefaultPageSize = defaultPageSize;
         }
 

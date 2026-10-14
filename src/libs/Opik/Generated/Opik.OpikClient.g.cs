@@ -183,6 +183,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Internal endpoints for the queries Ollie chart widgets run.
+        /// </summary>
+        public DashboardSavedQueriesClient DashboardSavedQueries => new DashboardSavedQueriesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Workspace Dashboard resources.
         /// </summary>
         public DashboardsClient Dashboards => new DashboardsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)

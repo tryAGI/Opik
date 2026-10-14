@@ -144,6 +144,11 @@ namespace Opik
         public CheckClient Check { get; }
 
         /// <summary>
+        /// Internal endpoints for the queries Ollie chart widgets run.
+        /// </summary>
+        public DashboardSavedQueriesClient DashboardSavedQueries { get; }
+
+        /// <summary>
         /// Workspace Dashboard resources.
         /// </summary>
         public DashboardsClient Dashboards { get; }
