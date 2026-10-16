@@ -172,6 +172,13 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agentInsightsGuidanceEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool AgentInsightsGuidanceEnabled { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("projectHomepageEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool ProjectHomepageEnabled { get; set; }
@@ -241,6 +248,7 @@ namespace Opik
         /// <param name="ollamaProviderEnabled"></param>
         /// <param name="ollieEnabled"></param>
         /// <param name="agentInsightsEnabled"></param>
+        /// <param name="agentInsightsGuidanceEnabled"></param>
         /// <param name="projectHomepageEnabled"></param>
         /// <param name="onlineScoringTracingEnabled"></param>
         /// <param name="annotationQueueAutomationEnabled"></param>
@@ -276,6 +284,7 @@ namespace Opik
             bool ollamaProviderEnabled,
             bool ollieEnabled,
             bool agentInsightsEnabled,
+            bool agentInsightsGuidanceEnabled,
             bool projectHomepageEnabled,
             bool onlineScoringTracingEnabled,
             bool annotationQueueAutomationEnabled,
@@ -306,6 +315,7 @@ namespace Opik
             this.OllamaProviderEnabled = ollamaProviderEnabled;
             this.OllieEnabled = ollieEnabled;
             this.AgentInsightsEnabled = agentInsightsEnabled;
+            this.AgentInsightsGuidanceEnabled = agentInsightsGuidanceEnabled;
             this.ProjectHomepageEnabled = projectHomepageEnabled;
             this.OnlineScoringTracingEnabled = onlineScoringTracingEnabled;
             this.AnnotationQueueAutomationEnabled = annotationQueueAutomationEnabled;
