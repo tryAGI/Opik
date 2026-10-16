@@ -65,6 +65,41 @@ namespace Opik
         public global::System.DateTime? LastFailedAt { get; set; }
 
         /// <summary>
+        /// Project guidance sent to every run; null when none<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("guidance")]
+        public string? Guidance { get; set; }
+
+        /// <summary>
+        /// Who last saved the guidance<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("guidance_updated_by")]
+        public string? GuidanceUpdatedBy { get; set; }
+
+        /// <summary>
+        /// When the guidance was last saved<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("guidance_updated_at")]
+        public global::System.DateTime? GuidanceUpdatedAt { get; set; }
+
+        /// <summary>
+        /// Bumped each time the guidance text changes; 0 = never saved<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("guidance_version")]
+        public int? GuidanceVersion { get; set; }
+
+        /// <summary>
+        /// Guidance version the current results were produced with; null = no run since guidance existed<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("results_guidance_version")]
+        public int? ResultsGuidanceVersion { get; set; }
+
+        /// <summary>
         /// Included only in responses
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -121,6 +156,26 @@ namespace Opik
         /// <param name="lastFailedAt">
         /// Included only in responses
         /// </param>
+        /// <param name="guidance">
+        /// Project guidance sent to every run; null when none<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="guidanceUpdatedBy">
+        /// Who last saved the guidance<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="guidanceUpdatedAt">
+        /// When the guidance was last saved<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="guidanceVersion">
+        /// Bumped each time the guidance text changes; 0 = never saved<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="resultsGuidanceVersion">
+        /// Guidance version the current results were produced with; null = no run since guidance existed<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="createdAt">
         /// Included only in responses
         /// </param>
@@ -148,6 +203,11 @@ namespace Opik
             string? lastFailureReason,
             string? lastFailureDetail,
             global::System.DateTime? lastFailedAt,
+            string? guidance,
+            string? guidanceUpdatedBy,
+            global::System.DateTime? guidanceUpdatedAt,
+            int? guidanceVersion,
+            int? resultsGuidanceVersion,
             global::System.DateTime? createdAt,
             string? createdBy,
             global::System.DateTime? lastUpdatedAt,
@@ -163,6 +223,11 @@ namespace Opik
             this.LastFailureReason = lastFailureReason;
             this.LastFailureDetail = lastFailureDetail;
             this.LastFailedAt = lastFailedAt;
+            this.Guidance = guidance;
+            this.GuidanceUpdatedBy = guidanceUpdatedBy;
+            this.GuidanceUpdatedAt = guidanceUpdatedAt;
+            this.GuidanceVersion = guidanceVersion;
+            this.ResultsGuidanceVersion = resultsGuidanceVersion;
             this.CreatedAt = createdAt;
             this.CreatedBy = createdBy;
             this.LastUpdatedAt = lastUpdatedAt;

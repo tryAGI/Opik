@@ -53,7 +53,7 @@ namespace Opik
 
         /// <summary>
         /// Update agent insights issue status<br/>
-        /// Moves an issue through its lifecycle: open, resolved or closed
+        /// Moves an issue through its lifecycle: open, resolved or closed. close_note is kept only with closed; any other status clears it
         /// </summary>
         /// <param name="issueId"></param>
         /// <param name="request"></param>
@@ -77,7 +77,7 @@ namespace Opik
         }
         /// <summary>
         /// Update agent insights issue status<br/>
-        /// Moves an issue through its lifecycle: open, resolved or closed
+        /// Moves an issue through its lifecycle: open, resolved or closed. close_note is kept only with closed; any other status clears it
         /// </summary>
         /// <param name="issueId"></param>
         /// <param name="request"></param>
@@ -391,6 +391,43 @@ namespace Opik
                                         h => h.Key,
                                         h => h.Value));
                             }
+                            // Forbidden
+                            if ((int)__response.StatusCode == 403)
+                            {
+                                string? __content_403 = null;
+                                global::System.Exception? __exception_403 = null;
+                                global::Opik.ErrorMessage? __value_403 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_403 = global::Opik.ErrorMessage.FromJson(__content_403, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_403 = global::Opik.ErrorMessage.FromJson(__content_403, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_403 = __ex;
+                                }
+
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_403,
+                                    responseBody: __content_403,
+                                    responseObject: __value_403,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
                             // Not Found
                             if ((int)__response.StatusCode == 404)
                             {
@@ -423,6 +460,43 @@ namespace Opik
                                     innerException: __exception_404,
                                     responseBody: __content_404,
                                     responseObject: __value_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // Missing project_id or status, or close_note over the length limit
+                            if ((int)__response.StatusCode == 422)
+                            {
+                                string? __content_422 = null;
+                                global::System.Exception? __exception_422 = null;
+                                global::Opik.ErrorMessage? __value_422 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_422 = global::Opik.ErrorMessage.FromJson(__content_422, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_422 = global::Opik.ErrorMessage.FromJson(__content_422, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_422 = __ex;
+                                }
+
+
+                                throw global::Opik.ApiException<global::Opik.ErrorMessage>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_422,
+                                    responseBody: __content_422,
+                                    responseObject: __value_422,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -547,11 +621,14 @@ namespace Opik
         }
         /// <summary>
         /// Update agent insights issue status<br/>
-        /// Moves an issue through its lifecycle: open, resolved or closed
+        /// Moves an issue through its lifecycle: open, resolved or closed. close_note is kept only with closed; any other status clears it
         /// </summary>
         /// <param name="issueId"></param>
         /// <param name="projectId"></param>
         /// <param name="status"></param>
+        /// <param name="closeNote">
+        /// Why the issue is closed as not useful. Stored only with status closed; any other status clears it
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -559,6 +636,7 @@ namespace Opik
             global::System.Guid issueId,
             global::System.Guid projectId,
             global::Opik.AgentInsightsIssueUpdateStatus status,
+            string? closeNote = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -566,6 +644,7 @@ namespace Opik
             {
                 ProjectId = projectId,
                 Status = status,
+                CloseNote = closeNote,
             };
 
             await UpdateAgentInsightsIssueAsync(

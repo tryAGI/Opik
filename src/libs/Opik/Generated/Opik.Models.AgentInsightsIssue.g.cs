@@ -107,6 +107,24 @@ namespace Opik
         public long? DaysReported { get; set; }
 
         /// <summary>
+        /// The team's reason for closing the issue as not useful; set only while status is closed
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("close_note")]
+        public string? CloseNote { get; set; }
+
+        /// <summary>
+        /// Who last changed the status
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status_changed_by")]
+        public string? StatusChangedBy { get; set; }
+
+        /// <summary>
+        /// When the status was last changed
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status_changed_at")]
+        public global::System.DateTime? StatusChangedAt { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_by")]
@@ -171,6 +189,15 @@ namespace Opik
         /// <param name="daysReported">
         /// COUNT(DISTINCT report_day) in the requested window
         /// </param>
+        /// <param name="closeNote">
+        /// The team's reason for closing the issue as not useful; set only while status is closed
+        /// </param>
+        /// <param name="statusChangedBy">
+        /// Who last changed the status
+        /// </param>
+        /// <param name="statusChangedAt">
+        /// When the status was last changed
+        /// </param>
         /// <param name="createdBy"></param>
         /// <param name="createdAt"></param>
         /// <param name="lastUpdatedBy"></param>
@@ -195,6 +222,9 @@ namespace Opik
             global::System.DateTime? firstSeen,
             global::System.DateTime? lastSeen,
             long? daysReported,
+            string? closeNote,
+            string? statusChangedBy,
+            global::System.DateTime? statusChangedAt,
             string? createdBy,
             global::System.DateTime? createdAt,
             string? lastUpdatedBy,
@@ -216,6 +246,9 @@ namespace Opik
             this.FirstSeen = firstSeen;
             this.LastSeen = lastSeen;
             this.DaysReported = daysReported;
+            this.CloseNote = closeNote;
+            this.StatusChangedBy = statusChangedBy;
+            this.StatusChangedAt = statusChangedAt;
             this.CreatedBy = createdBy;
             this.CreatedAt = createdAt;
             this.LastUpdatedBy = lastUpdatedBy;
