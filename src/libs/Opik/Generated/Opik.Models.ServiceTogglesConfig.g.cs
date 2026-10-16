@@ -204,6 +204,12 @@ namespace Opik
         public int? DefaultPageSize { get; set; }
 
         /// <summary>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("customChartsEnabledForWorkspace")]
+        public bool? CustomChartsEnabledForWorkspace { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -240,6 +246,9 @@ namespace Opik
         /// <param name="annotationQueueAutomationEnabled"></param>
         /// <param name="eventBridgeAlertsEnabled"></param>
         /// <param name="defaultPageSize"></param>
+        /// <param name="customChartsEnabledForWorkspace">
+        /// Included only in responses
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -271,7 +280,8 @@ namespace Opik
             bool onlineScoringTracingEnabled,
             bool annotationQueueAutomationEnabled,
             bool eventBridgeAlertsEnabled,
-            int? defaultPageSize)
+            int? defaultPageSize,
+            bool? customChartsEnabledForWorkspace)
         {
             this.PythonEvaluatorEnabled = pythonEvaluatorEnabled;
             this.TraceThreadPythonEvaluatorEnabled = traceThreadPythonEvaluatorEnabled;
@@ -301,6 +311,7 @@ namespace Opik
             this.AnnotationQueueAutomationEnabled = annotationQueueAutomationEnabled;
             this.EventBridgeAlertsEnabled = eventBridgeAlertsEnabled;
             this.DefaultPageSize = defaultPageSize;
+            this.CustomChartsEnabledForWorkspace = customChartsEnabledForWorkspace;
         }
 
         /// <summary>
