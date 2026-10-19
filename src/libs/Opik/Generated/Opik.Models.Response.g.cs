@@ -33,6 +33,12 @@ namespace Opik
         public global::System.Collections.Generic.IList<global::System.Guid>? AlreadyRunProjectIds { get; set; }
 
         /// <summary>
+        /// Ids whose automatic run never finished, so clearing forgot it and enrolling them again gives it one more free run
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reset_project_ids")]
+        public global::System.Collections.Generic.IList<global::System.Guid>? ResetProjectIds { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -49,6 +55,9 @@ namespace Opik
         /// <param name="alreadyRunProjectIds">
         /// Ids whose automatic run already happened, so enrolling has no effect
         /// </param>
+        /// <param name="resetProjectIds">
+        /// Ids whose automatic run never finished, so clearing forgot it and enrolling them again gives it one more free run
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -56,12 +65,14 @@ namespace Opik
             int? enrolled,
             int? cleared,
             global::System.Collections.Generic.IList<global::System.Guid>? unknownProjectIds,
-            global::System.Collections.Generic.IList<global::System.Guid>? alreadyRunProjectIds)
+            global::System.Collections.Generic.IList<global::System.Guid>? alreadyRunProjectIds,
+            global::System.Collections.Generic.IList<global::System.Guid>? resetProjectIds)
         {
             this.Enrolled = enrolled;
             this.Cleared = cleared;
             this.UnknownProjectIds = unknownProjectIds;
             this.AlreadyRunProjectIds = alreadyRunProjectIds;
+            this.ResetProjectIds = resetProjectIds;
         }
 
         /// <summary>
