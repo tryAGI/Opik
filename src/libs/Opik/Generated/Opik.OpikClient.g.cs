@@ -60,14 +60,14 @@ namespace Opik
 
         internal global::Opik.AutoSDKServerConfiguration AutoSDKServerConfiguration { get; set; } = new global::Opik.AutoSDKServerConfiguration();
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Opik.SourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext>? JsonSerializerContextProvider { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
-            get => JsonSerializerContextProvider.Value;
+            get => JsonSerializerContextProvider?.Value ?? global::Opik.SourceGenerationContext.Default;
             set => JsonSerializerContextProvider = new(() => value);
         }
 
