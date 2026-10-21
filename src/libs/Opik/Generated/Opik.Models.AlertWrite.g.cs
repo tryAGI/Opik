@@ -40,6 +40,12 @@ namespace Opik
         public global::System.Collections.Generic.Dictionary<string, string>? Metadata { get; set; }
 
         /// <summary>
+        /// Optional user-defined key/value pairs, added as top-level keys of the alert's EventBridge event detail. Keys must not collide with the event's own keys.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("custom_fields")]
+        public global::System.Collections.Generic.Dictionary<string, string>? CustomFields { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("webhook")]
@@ -73,6 +79,9 @@ namespace Opik
         /// <param name="enabled"></param>
         /// <param name="alertType"></param>
         /// <param name="metadata"></param>
+        /// <param name="customFields">
+        /// Optional user-defined key/value pairs, added as top-level keys of the alert's EventBridge event detail. Keys must not collide with the event's own keys.
+        /// </param>
         /// <param name="triggers"></param>
         /// <param name="projectId">
         /// Optional project scope for this alert. When set, the alert is scoped to the specified project. Do NOT also provide a 'scope:project' trigger config — the system will create it automatically from this field. Sending both project_id and a scope:project trigger config will result in an error.
@@ -87,6 +96,7 @@ namespace Opik
             bool? enabled,
             global::Opik.AlertWriteAlertType? alertType,
             global::System.Collections.Generic.Dictionary<string, string>? metadata,
+            global::System.Collections.Generic.Dictionary<string, string>? customFields,
             global::System.Collections.Generic.IList<global::Opik.AlertTriggerWrite>? triggers,
             global::System.Guid? projectId)
         {
@@ -95,6 +105,7 @@ namespace Opik
             this.Enabled = enabled;
             this.AlertType = alertType;
             this.Metadata = metadata;
+            this.CustomFields = customFields;
             this.Webhook = webhook ?? throw new global::System.ArgumentNullException(nameof(webhook));
             this.Triggers = triggers;
             this.ProjectId = projectId;

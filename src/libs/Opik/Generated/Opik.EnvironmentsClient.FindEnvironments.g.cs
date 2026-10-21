@@ -54,7 +54,7 @@ namespace Opik
 
         /// <summary>
         /// Find environments<br/>
-        /// Find environments for the workspace. Capped at the workspace limit (default 20).
+        /// Find environments for the workspace. Capped at the workspace limit (default 100).
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -72,7 +72,7 @@ namespace Opik
         }
         /// <summary>
         /// Find environments<br/>
-        /// Find environments for the workspace. Capped at the workspace limit (default 20).
+        /// Find environments for the workspace. Capped at the workspace limit (default 100).
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

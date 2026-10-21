@@ -40,6 +40,12 @@ namespace Opik
         public global::System.Collections.Generic.Dictionary<string, string>? Metadata { get; set; }
 
         /// <summary>
+        /// Optional user-defined key/value pairs, added as top-level keys of the alert's EventBridge event detail. Keys must not collide with the event's own keys.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("custom_fields")]
+        public global::System.Collections.Generic.Dictionary<string, string>? CustomFields { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("webhook")]
@@ -97,6 +103,9 @@ namespace Opik
         /// <param name="enabled"></param>
         /// <param name="alertType"></param>
         /// <param name="metadata"></param>
+        /// <param name="customFields">
+        /// Optional user-defined key/value pairs, added as top-level keys of the alert's EventBridge event detail. Keys must not collide with the event's own keys.
+        /// </param>
         /// <param name="triggers"></param>
         /// <param name="createdAt">
         /// Included only in responses
@@ -123,6 +132,7 @@ namespace Opik
             bool? enabled,
             global::Opik.AlertAlertType? alertType,
             global::System.Collections.Generic.Dictionary<string, string>? metadata,
+            global::System.Collections.Generic.Dictionary<string, string>? customFields,
             global::System.Collections.Generic.IList<global::Opik.AlertTrigger>? triggers,
             global::System.DateTime? createdAt,
             string? createdBy,
@@ -135,6 +145,7 @@ namespace Opik
             this.Enabled = enabled;
             this.AlertType = alertType;
             this.Metadata = metadata;
+            this.CustomFields = customFields;
             this.Webhook = webhook ?? throw new global::System.ArgumentNullException(nameof(webhook));
             this.Triggers = triggers;
             this.CreatedAt = createdAt;

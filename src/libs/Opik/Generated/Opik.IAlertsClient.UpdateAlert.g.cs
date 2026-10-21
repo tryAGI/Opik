@@ -44,6 +44,9 @@ namespace Opik
         /// <param name="enabled"></param>
         /// <param name="alertType"></param>
         /// <param name="metadata"></param>
+        /// <param name="customFields">
+        /// Optional user-defined key/value pairs, added as top-level keys of the alert's EventBridge event detail. Keys must not collide with the event's own keys.
+        /// </param>
         /// <param name="webhook"></param>
         /// <param name="triggers"></param>
         /// <param name="projectId">
@@ -60,6 +63,7 @@ namespace Opik
             bool? enabled = default,
             global::Opik.AlertWriteAlertType? alertType = default,
             global::System.Collections.Generic.Dictionary<string, string>? metadata = default,
+            global::System.Collections.Generic.Dictionary<string, string>? customFields = default,
             global::System.Collections.Generic.IList<global::Opik.AlertTriggerWrite>? triggers = default,
             global::System.Guid? projectId = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
