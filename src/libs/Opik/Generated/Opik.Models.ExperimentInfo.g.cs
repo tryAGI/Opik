@@ -21,6 +21,12 @@ namespace Opik
         public int? PromptIndex { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_items")]
+        public int? TotalItems { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -31,15 +37,18 @@ namespace Opik
         /// </summary>
         /// <param name="experimentId"></param>
         /// <param name="promptIndex"></param>
+        /// <param name="totalItems"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ExperimentInfo(
             global::System.Guid? experimentId,
-            int? promptIndex)
+            int? promptIndex,
+            int? totalItems)
         {
             this.ExperimentId = experimentId;
             this.PromptIndex = promptIndex;
+            this.TotalItems = totalItems;
         }
 
         /// <summary>

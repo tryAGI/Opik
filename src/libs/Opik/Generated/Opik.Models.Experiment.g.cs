@@ -157,6 +157,13 @@ namespace Opik
         public global::Opik.ExperimentStatus? Status { get; set; }
 
         /// <summary>
+        /// When the run stopped producing items. Unset while it may still produce more, whatever its status<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("finished_at")]
+        public global::System.DateTime? FinishedAt { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("experiment_scores")]
@@ -276,6 +283,10 @@ namespace Opik
         /// Included only in responses
         /// </param>
         /// <param name="status"></param>
+        /// <param name="finishedAt">
+        /// When the run stopped producing items. Unset while it may still produce more, whatever its status<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="experimentScores"></param>
         /// <param name="promptVersion"></param>
         /// <param name="promptVersions"></param>
@@ -330,6 +341,7 @@ namespace Opik
             string? createdBy,
             string? lastUpdatedBy,
             global::Opik.ExperimentStatus? status,
+            global::System.DateTime? finishedAt,
             global::System.Collections.Generic.IList<global::Opik.ExperimentScore>? experimentScores,
             global::Opik.PromptVersionLink? promptVersion,
             global::System.Collections.Generic.IList<global::Opik.PromptVersionLink>? promptVersions,
@@ -364,6 +376,7 @@ namespace Opik
             this.CreatedBy = createdBy;
             this.LastUpdatedBy = lastUpdatedBy;
             this.Status = status;
+            this.FinishedAt = finishedAt;
             this.ExperimentScores = experimentScores;
             this.PromptVersion = promptVersion;
             this.PromptVersions = promptVersions;

@@ -19,6 +19,10 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        Failed,
+        /// <summary>
+        ///
+        /// </summary>
         Running,
     }
 
@@ -36,6 +40,7 @@ namespace Opik
             {
                 ExperimentWriteStatus.Cancelled => "cancelled",
                 ExperimentWriteStatus.Completed => "completed",
+                ExperimentWriteStatus.Failed => "failed",
                 ExperimentWriteStatus.Running => "running",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -49,6 +54,7 @@ namespace Opik
             {
                 "cancelled" => ExperimentWriteStatus.Cancelled,
                 "completed" => ExperimentWriteStatus.Completed,
+                "failed" => ExperimentWriteStatus.Failed,
                 "running" => ExperimentWriteStatus.Running,
                 _ => null,
             };

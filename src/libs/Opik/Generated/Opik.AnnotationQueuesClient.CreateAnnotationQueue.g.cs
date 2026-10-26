@@ -514,6 +514,7 @@ namespace Opik
         /// <param name="annotatorsPerItem"></param>
         /// <param name="lockTimeoutSeconds"></param>
         /// <param name="automation"></param>
+        /// <param name="annotatorView"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -529,6 +530,7 @@ namespace Opik
             int? annotatorsPerItem = default,
             int? lockTimeoutSeconds = default,
             global::Opik.AnnotationQueueAutomationWrite? automation = default,
+            global::Opik.AnnotationQueueAnnotatorViewWrite? annotatorView = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -545,6 +547,7 @@ namespace Opik
                 AnnotatorsPerItem = annotatorsPerItem,
                 LockTimeoutSeconds = lockTimeoutSeconds,
                 Automation = automation,
+                AnnotatorView = annotatorView,
             };
 
             await CreateAnnotationQueueAsync(

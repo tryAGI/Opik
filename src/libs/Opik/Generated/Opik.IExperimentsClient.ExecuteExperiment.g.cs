@@ -38,9 +38,12 @@ namespace Opik
         /// <param name="datasetVersionId"></param>
         /// <param name="prompts"></param>
         /// <param name="projectName"></param>
+        /// <param name="projectId"></param>
         /// <param name="datasetId"></param>
         /// <param name="versionHash"></param>
         /// <param name="promptVersions"></param>
+        /// <param name="selectedRuleIds"></param>
+        /// <param name="filters"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -50,8 +53,11 @@ namespace Opik
             global::System.Guid datasetId,
             global::System.Guid? datasetVersionId = default,
             string? projectName = default,
+            global::System.Guid? projectId = default,
             string? versionHash = default,
             global::System.Collections.Generic.IList<global::Opik.PromptVersionLink>? promptVersions = default,
+            global::System.Collections.Generic.IList<global::System.Guid>? selectedRuleIds = default,
+            string? filters = default,
             global::Opik.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
