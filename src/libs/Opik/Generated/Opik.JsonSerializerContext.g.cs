@@ -143,6 +143,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueue))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueScope), TypeInfoPropertyName = "AnnotationQueueScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueAutomation))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueAnnotatorView))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.AnnotationQueueReviewer>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueReviewer))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.FeedbackScoreAverage>))]
@@ -154,6 +155,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ConditionGroup>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ScoreConditionOperator), TypeInfoPropertyName = "ScoreConditionOperator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueAnnotatorViewWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueAutomationWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ConditionsWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueWrite))]
@@ -167,6 +169,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.AnnotationQueue>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueBatchWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.AnnotationQueueWrite>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueAnnotatorViewPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueueAutomationPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ConditionsPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AnnotationQueuePagePublic))]
@@ -506,9 +509,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemCompare))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Opik.ExperimentRunSummaryCompare>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentRunSummaryCompare))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.EvaluatorItemCompareType), TypeInfoPropertyName = "EvaluatorItemCompareType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.JsonNodeCompare))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.JsonListStringCompare), TypeInfoPropertyName = "JsonListStringCompare2")]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -519,6 +519,9 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.EvaluatorItemCompareType), TypeInfoPropertyName = "EvaluatorItemCompareType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.JsonNodeCompare))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.JsonListStringCompare), TypeInfoPropertyName = "JsonListStringCompare2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.FeedbackScoreCompare>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FeedbackScoreCompare))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.CommentCompare>))]
@@ -597,6 +600,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentUpdateType), TypeInfoPropertyName = "ExperimentUpdateType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentUpdateStatus), TypeInfoPropertyName = "ExperimentUpdateStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ExperimentScore>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.IdsHolder))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AssertionScoreAverage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Experiment))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentType), TypeInfoPropertyName = "ExperimentType2")]
@@ -691,7 +695,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentGroupAggregationsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Opik.GroupContentWithAggregations>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GroupContentWithAggregations))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.IdsHolder))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemStreamRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ChunkedOutputJsonNodePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ChunkedOutputJsonNodePublicType))]
@@ -1016,9 +1019,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadBatchIdentifier))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceWriteSource), TypeInfoPropertyName = "TraceWriteSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatch))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Trace>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatchWrite))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1029,6 +1029,9 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatch))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Trace>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatchWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.TraceWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DeleteThreadFeedbackScores))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DeleteTraceThreads))]
@@ -1526,9 +1529,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ResultsNumberPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.DataPointNumberPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectStatsSummaryItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScoreAverageDetailed>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.PromptVersionPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.RecentActivityItemPublic>))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1539,6 +1539,9 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScoreAverageDetailed>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.PromptVersionPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.RecentActivityItemPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ReportFailure>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.OllieReport>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.RetentionRulePublic>))]
