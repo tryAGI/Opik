@@ -767,6 +767,13 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteName), TypeInfoPropertyName = "GuardrailWriteName2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteResult), TypeInfoPropertyName = "GuardrailWriteResult2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.EffortParam))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FlagParam))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ModelParams))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.NumberParam))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ToolsParam))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Opik.ModelParams>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ToolsParamChatCompletions), TypeInfoPropertyName = "ToolsParamChatCompletions2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CredentialPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyPagePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ProviderApiKeyPublic>))]
@@ -1012,13 +1019,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem), TypeInfoPropertyName = "SpanSearchStreamRequestPublicExcludeItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExistenceResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatchUpdate))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdate))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdateSource), TypeInfoPropertyName = "TraceUpdateSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadBatchUpdate))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadUpdate))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadBatchIdentifier))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceWrite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceWriteSource), TypeInfoPropertyName = "TraceWriteSource2")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1029,6 +1029,13 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdate))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdateSource), TypeInfoPropertyName = "TraceUpdateSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadBatchUpdate))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadUpdate))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadBatchIdentifier))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceWrite))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceWriteSource), TypeInfoPropertyName = "TraceWriteSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatch))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.Trace>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatchWrite))]
@@ -1282,6 +1289,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailResult?), TypeInfoPropertyName = "NullableGuardrailResult2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteName?), TypeInfoPropertyName = "NullableGuardrailWriteName2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailWriteResult?), TypeInfoPropertyName = "NullableGuardrailWriteResult2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ToolsParamChatCompletions?), TypeInfoPropertyName = "NullableToolsParamChatCompletions2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyPublicProvider?), TypeInfoPropertyName = "NullableProviderApiKeyPublicProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderAuthConfigPublicSendAs?), TypeInfoPropertyName = "NullableProviderAuthConfigPublicSendAs2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProviderApiKeyProvider?), TypeInfoPropertyName = "NullableProviderApiKeyProvider2")]
@@ -1521,14 +1529,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMessageWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.OptimizationPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMetricPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMessagePublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.PromptPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ScoreName>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.KpiMetric>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ResultsNumberPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.DataPointNumberPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectStatsSummaryItem>))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1539,6 +1539,14 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMessagePublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.PromptPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ScoreName>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.KpiMetric>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ResultsNumberPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.DataPointNumberPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectStatsSummaryItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScoreAverageDetailed>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.PromptVersionPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.RecentActivityItemPublic>))]
@@ -2254,6 +2262,10 @@ namespace Opik
                     || typeToConvert == typeof(global::Opik.GuardrailWriteResult)
 
                     || typeToConvert == typeof(global::Opik.GuardrailWriteResult?)
+
+                    || typeToConvert == typeof(global::Opik.ToolsParamChatCompletions)
+
+                    || typeToConvert == typeof(global::Opik.ToolsParamChatCompletions?)
 
                     || typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider)
 
@@ -4160,6 +4172,16 @@ namespace Opik
                 if (typeToConvert == typeof(global::Opik.GuardrailWriteResult?))
                 {
                     return new global::Opik.JsonConverters.GuardrailWriteResultNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ToolsParamChatCompletions))
+                {
+                    return new global::Opik.JsonConverters.ToolsParamChatCompletionsJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ToolsParamChatCompletions?))
+                {
+                    return new global::Opik.JsonConverters.ToolsParamChatCompletionsNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Opik.ProviderApiKeyPublicProvider))
