@@ -4,7 +4,7 @@
 namespace Opik
 {
     /// <summary>
-    ///
+    /// Field to group by. Tags are overlapping groups: each tag receives the full metric value. For cost, adding tag groups can exceed actual spend; use provider or model for additive span cost totals.
     /// </summary>
     public enum BreakdownConfigPublicField
     {
@@ -25,7 +25,7 @@ namespace Opik
         /// </summary>
         Metadata,
         /// <summary>
-        ///
+        /// each tag receives the full metric value. For cost, adding tag groups can exceed actual spend; use provider or model for additive span cost totals.
         /// </summary>
         Model,
         /// <summary>
@@ -37,7 +37,7 @@ namespace Opik
         /// </summary>
         None,
         /// <summary>
-        ///
+        /// each tag receives the full metric value. For cost, adding tag groups can exceed actual spend; use provider or model for additive span cost totals.
         /// </summary>
         Provider,
         /// <summary>

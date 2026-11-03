@@ -83,6 +83,12 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("onlyRoute")]
+        public string? OnlyRoute { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("routes")]
         public global::System.Collections.Generic.Dictionary<string, global::Opik.ModelParams>? Routes { get; set; }
 
@@ -107,6 +113,7 @@ namespace Opik
         /// <param name="tools"></param>
         /// <param name="samplingExclusive"></param>
         /// <param name="thinksByDefault"></param>
+        /// <param name="onlyRoute"></param>
         /// <param name="routes"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -124,6 +131,7 @@ namespace Opik
             global::Opik.ToolsParam? tools,
             bool? samplingExclusive,
             bool? thinksByDefault,
+            string? onlyRoute,
             global::System.Collections.Generic.Dictionary<string, global::Opik.ModelParams>? routes)
         {
             this.Temperature = temperature;
@@ -138,6 +146,7 @@ namespace Opik
             this.Tools = tools;
             this.SamplingExclusive = samplingExclusive;
             this.ThinksByDefault = thinksByDefault;
+            this.OnlyRoute = onlyRoute;
             this.Routes = routes;
         }
 

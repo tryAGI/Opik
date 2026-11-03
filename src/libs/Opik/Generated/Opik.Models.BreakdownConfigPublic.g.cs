@@ -9,7 +9,7 @@ namespace Opik
     public sealed partial class BreakdownConfigPublic
     {
         /// <summary>
-        ///
+        /// Field to group by. Tags are overlapping groups: each tag receives the full metric value. For cost, adding tag groups can exceed actual spend; use provider or model for additive span cost totals.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("field")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.BreakdownConfigPublicFieldJsonConverter))]
@@ -36,7 +36,9 @@ namespace Opik
         /// <summary>
         /// Initializes a new instance of the <see cref="BreakdownConfigPublic" /> class.
         /// </summary>
-        /// <param name="field"></param>
+        /// <param name="field">
+        /// Field to group by. Tags are overlapping groups: each tag receives the full metric value. For cost, adding tag groups can exceed actual spend; use provider or model for additive span cost totals.
+        /// </param>
         /// <param name="metadataKey"></param>
         /// <param name="subMetric"></param>
 #if NET7_0_OR_GREATER
