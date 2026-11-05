@@ -13,9 +13,15 @@ namespace Opik
         /// Default Value: 1
         /// </param>
         /// <param name="size">
+        /// Page size. At most 100 when experiment_ids is omitted, since each item then carries a result per experiment<br/>
         /// Default Value: 10
         /// </param>
-        /// <param name="experimentIds"></param>
+        /// <param name="experimentIds">
+        /// JSON array of experiment IDs. Omit to include every regular experiment on the dataset (optimizer trial, mini-batch and mutation experiments are excluded); item filters are then evaluated against the newest version of each item that those experiments reference
+        /// </param>
+        /// <param name="datasetVersion">
+        /// Dataset version hash or tag. Only experiments run against this version are included. Requires experiment_ids to be omitted. Returns 404 if the version does not exist
+        /// </param>
         /// <param name="filters"></param>
         /// <param name="sorting"></param>
         /// <param name="search"></param>
@@ -27,9 +33,10 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.DatasetItemPageCompare> FindDatasetItemsWithExperimentItemsAsync(
             global::System.Guid id,
-            string experimentIds,
             int? page = default,
             int? size = default,
+            string? experimentIds = default,
+            string? datasetVersion = default,
             string? filters = default,
             string? sorting = default,
             string? search = default,
@@ -45,9 +52,15 @@ namespace Opik
         /// Default Value: 1
         /// </param>
         /// <param name="size">
+        /// Page size. At most 100 when experiment_ids is omitted, since each item then carries a result per experiment<br/>
         /// Default Value: 10
         /// </param>
-        /// <param name="experimentIds"></param>
+        /// <param name="experimentIds">
+        /// JSON array of experiment IDs. Omit to include every regular experiment on the dataset (optimizer trial, mini-batch and mutation experiments are excluded); item filters are then evaluated against the newest version of each item that those experiments reference
+        /// </param>
+        /// <param name="datasetVersion">
+        /// Dataset version hash or tag. Only experiments run against this version are included. Requires experiment_ids to be omitted. Returns 404 if the version does not exist
+        /// </param>
         /// <param name="filters"></param>
         /// <param name="sorting"></param>
         /// <param name="search"></param>
@@ -59,9 +72,10 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.DatasetItemPageCompare>> FindDatasetItemsWithExperimentItemsAsResponseAsync(
             global::System.Guid id,
-            string experimentIds,
             int? page = default,
             int? size = default,
+            string? experimentIds = default,
+            string? datasetVersion = default,
             string? filters = default,
             string? sorting = default,
             string? search = default,

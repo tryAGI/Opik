@@ -43,7 +43,8 @@ namespace Opik
             ref global::System.Guid id,
             ref int? page,
             ref int? size,
-            ref string experimentIds,
+            ref string? experimentIds,
+            ref string? datasetVersion,
             ref string? filters,
             ref string? sorting,
             ref string? search,
@@ -54,7 +55,8 @@ namespace Opik
             global::System.Guid id,
             int? page,
             int? size,
-            string experimentIds,
+            string? experimentIds,
+            string? datasetVersion,
             string? filters,
             string? sorting,
             string? search,
@@ -77,9 +79,15 @@ namespace Opik
         /// Default Value: 1
         /// </param>
         /// <param name="size">
+        /// Page size. At most 100 when experiment_ids is omitted, since each item then carries a result per experiment<br/>
         /// Default Value: 10
         /// </param>
-        /// <param name="experimentIds"></param>
+        /// <param name="experimentIds">
+        /// JSON array of experiment IDs. Omit to include every regular experiment on the dataset (optimizer trial, mini-batch and mutation experiments are excluded); item filters are then evaluated against the newest version of each item that those experiments reference
+        /// </param>
+        /// <param name="datasetVersion">
+        /// Dataset version hash or tag. Only experiments run against this version are included. Requires experiment_ids to be omitted. Returns 404 if the version does not exist
+        /// </param>
         /// <param name="filters"></param>
         /// <param name="sorting"></param>
         /// <param name="search"></param>
@@ -91,9 +99,10 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Opik.DatasetItemPageCompare> FindDatasetItemsWithExperimentItemsAsync(
             global::System.Guid id,
-            string experimentIds,
             int? page = default,
             int? size = default,
+            string? experimentIds = default,
+            string? datasetVersion = default,
             string? filters = default,
             string? sorting = default,
             string? search = default,
@@ -103,9 +112,10 @@ namespace Opik
         {
             var __response = await FindDatasetItemsWithExperimentItemsAsResponseAsync(
                 id: id,
-                experimentIds: experimentIds,
                 page: page,
                 size: size,
+                experimentIds: experimentIds,
+                datasetVersion: datasetVersion,
                 filters: filters,
                 sorting: sorting,
                 search: search,
@@ -125,9 +135,15 @@ namespace Opik
         /// Default Value: 1
         /// </param>
         /// <param name="size">
+        /// Page size. At most 100 when experiment_ids is omitted, since each item then carries a result per experiment<br/>
         /// Default Value: 10
         /// </param>
-        /// <param name="experimentIds"></param>
+        /// <param name="experimentIds">
+        /// JSON array of experiment IDs. Omit to include every regular experiment on the dataset (optimizer trial, mini-batch and mutation experiments are excluded); item filters are then evaluated against the newest version of each item that those experiments reference
+        /// </param>
+        /// <param name="datasetVersion">
+        /// Dataset version hash or tag. Only experiments run against this version are included. Requires experiment_ids to be omitted. Returns 404 if the version does not exist
+        /// </param>
         /// <param name="filters"></param>
         /// <param name="sorting"></param>
         /// <param name="search"></param>
@@ -139,9 +155,10 @@ namespace Opik
         /// <exception cref="global::Opik.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Opik.AutoSDKHttpResponse<global::Opik.DatasetItemPageCompare>> FindDatasetItemsWithExperimentItemsAsResponseAsync(
             global::System.Guid id,
-            string experimentIds,
             int? page = default,
             int? size = default,
+            string? experimentIds = default,
+            string? datasetVersion = default,
             string? filters = default,
             string? sorting = default,
             string? search = default,
@@ -157,6 +174,7 @@ namespace Opik
                 page: ref page,
                 size: ref size,
                 experimentIds: ref experimentIds,
+                datasetVersion: ref datasetVersion,
                 filters: ref filters,
                 sorting: ref sorting,
                 search: ref search,
@@ -193,7 +211,8 @@ namespace Opik
                             __pathBuilder
                                 .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("size", size?.ToString())
-                                .AddRequiredParameter("experiment_ids", experimentIds)
+                                .AddOptionalParameter("experiment_ids", experimentIds)
+                                .AddOptionalParameter("dataset_version", datasetVersion)
                                 .AddOptionalParameter("filters", filters)
                                 .AddOptionalParameter("sorting", sorting)
                                 .AddOptionalParameter("search", search)
@@ -243,6 +262,7 @@ namespace Opik
                     page: page,
                     size: size,
                     experimentIds: experimentIds,
+                    datasetVersion: datasetVersion,
                     filters: filters,
                     sorting: sorting,
                     search: search,
