@@ -4,16 +4,16 @@
 namespace Opik
 {
     /// <summary>
-    /// How credentials are sent: form body (default), JSON body, or basic auth (id/secret in an HTTP Basic header, remaining fields in the form body)
+    /// How credentials are sent: form body (default), JSON body, or basic auth (client_id/client_secret, or username/password, in an HTTP Basic header; remaining fields in the form body)
     /// </summary>
     public enum ProviderAuthConfigPublicSendAs
     {
         /// <summary>
-        /// form body (default), JSON body, or basic auth (id/secret in an HTTP Basic header, remaining fields in the form body)
+        /// form body (default), JSON body, or basic auth (client_id/client_secret, or username/password, in an HTTP Basic header; remaining fields in the form body)
         /// </summary>
         Basic,
         /// <summary>
-        /// form body (default), JSON body, or basic auth (id/secret in an HTTP Basic header, remaining fields in the form body)
+        /// form body (default), JSON body, or basic auth (client_id/client_secret, or username/password, in an HTTP Basic header; remaining fields in the form body)
         /// </summary>
         Form,
         /// <summary>

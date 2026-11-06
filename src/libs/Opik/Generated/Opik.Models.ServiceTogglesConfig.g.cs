@@ -186,13 +186,6 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("onlineScoringTracingEnabled")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool OnlineScoringTracingEnabled { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("annotationQueueAutomationEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool AnnotationQueueAutomationEnabled { get; set; }
@@ -250,7 +243,6 @@ namespace Opik
         /// <param name="agentInsightsEnabled"></param>
         /// <param name="agentInsightsGuidanceEnabled"></param>
         /// <param name="projectHomepageEnabled"></param>
-        /// <param name="onlineScoringTracingEnabled"></param>
         /// <param name="annotationQueueAutomationEnabled"></param>
         /// <param name="eventBridgeAlertsEnabled"></param>
         /// <param name="defaultPageSize"></param>
@@ -286,7 +278,6 @@ namespace Opik
             bool agentInsightsEnabled,
             bool agentInsightsGuidanceEnabled,
             bool projectHomepageEnabled,
-            bool onlineScoringTracingEnabled,
             bool annotationQueueAutomationEnabled,
             bool eventBridgeAlertsEnabled,
             int? defaultPageSize,
@@ -317,7 +308,6 @@ namespace Opik
             this.AgentInsightsEnabled = agentInsightsEnabled;
             this.AgentInsightsGuidanceEnabled = agentInsightsGuidanceEnabled;
             this.ProjectHomepageEnabled = projectHomepageEnabled;
-            this.OnlineScoringTracingEnabled = onlineScoringTracingEnabled;
             this.AnnotationQueueAutomationEnabled = annotationQueueAutomationEnabled;
             this.EventBridgeAlertsEnabled = eventBridgeAlertsEnabled;
             this.DefaultPageSize = defaultPageSize;

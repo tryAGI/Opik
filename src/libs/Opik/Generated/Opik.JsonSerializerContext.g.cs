@@ -259,6 +259,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.LlmAsJudgeMessageContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeMessageContent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.VideoUrl))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeModelParametersApi), TypeInfoPropertyName = "LlmAsJudgeModelParametersApi2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeOutputSchemaType), TypeInfoPropertyName = "LlmAsJudgeOutputSchemaType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterOperator), TypeInfoPropertyName = "SpanFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceFilterOperator), TypeInfoPropertyName = "TraceFilterOperator2")]
@@ -305,6 +306,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.VideoUrlWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeMessageWriteRole), TypeInfoPropertyName = "LlmAsJudgeMessageWriteRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.LlmAsJudgeMessageContentWrite>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeModelParametersWriteApi), TypeInfoPropertyName = "LlmAsJudgeModelParametersWriteApi2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeOutputSchemaWriteType), TypeInfoPropertyName = "LlmAsJudgeOutputSchemaWriteType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterWriteOperator), TypeInfoPropertyName = "SpanFilterWriteOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceFilterWriteOperator), TypeInfoPropertyName = "TraceFilterWriteOperator2")]
@@ -356,6 +358,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.VideoUrlPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeMessagePublicRole), TypeInfoPropertyName = "LlmAsJudgeMessagePublicRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.LlmAsJudgeMessageContentPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeModelParametersPublicApi), TypeInfoPropertyName = "LlmAsJudgeModelParametersPublicApi2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeOutputSchemaPublicType), TypeInfoPropertyName = "LlmAsJudgeOutputSchemaPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterPublicOperator), TypeInfoPropertyName = "SpanFilterPublicOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceFilterPublicOperator), TypeInfoPropertyName = "TraceFilterPublicOperator2")]
@@ -506,9 +509,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.EvaluatorItemCompare))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExecutionPolicyCompare))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.ExperimentItemCompare>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemCompare))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Opik.ExperimentRunSummaryCompare>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentRunSummaryCompare))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -519,6 +519,9 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentItemCompare))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Opik.ExperimentRunSummaryCompare>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExperimentRunSummaryCompare))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.EvaluatorItemCompareType), TypeInfoPropertyName = "EvaluatorItemCompareType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.JsonNodeCompare))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.JsonListStringCompare), TypeInfoPropertyName = "JsonListStringCompare2")]
@@ -1016,9 +1019,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublicType), TypeInfoPropertyName = "SpanSearchStreamRequestPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.SpanSearchStreamRequestPublicExcludeItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem), TypeInfoPropertyName = "SpanSearchStreamRequestPublicExcludeItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExistenceResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatchUpdate))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1029,6 +1029,9 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem), TypeInfoPropertyName = "SpanSearchStreamRequestPublicExcludeItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExistenceResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatchUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdateSource), TypeInfoPropertyName = "TraceUpdateSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceThreadBatchUpdate))]
@@ -1173,6 +1176,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorAction?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorDiscriminatorType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeMessageRole?), TypeInfoPropertyName = "NullableLlmAsJudgeMessageRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeModelParametersApi?), TypeInfoPropertyName = "NullableLlmAsJudgeModelParametersApi2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeOutputSchemaType?), TypeInfoPropertyName = "NullableLlmAsJudgeOutputSchemaType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterOperator?), TypeInfoPropertyName = "NullableSpanFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceFilterOperator?), TypeInfoPropertyName = "NullableTraceFilterOperator2")]
@@ -1182,6 +1186,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorWriteAction?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorWriteAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorWriteDiscriminatorType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorWriteDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeMessageWriteRole?), TypeInfoPropertyName = "NullableLlmAsJudgeMessageWriteRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeModelParametersWriteApi?), TypeInfoPropertyName = "NullableLlmAsJudgeModelParametersWriteApi2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeOutputSchemaWriteType?), TypeInfoPropertyName = "NullableLlmAsJudgeOutputSchemaWriteType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterWriteOperator?), TypeInfoPropertyName = "NullableSpanFilterWriteOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceFilterWriteOperator?), TypeInfoPropertyName = "NullableTraceFilterWriteOperator2")]
@@ -1191,6 +1196,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicAction?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorObjectObjectPublicAction2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AutomationRuleEvaluatorObjectObjectPublicDiscriminatorType?), TypeInfoPropertyName = "NullableAutomationRuleEvaluatorObjectObjectPublicDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeMessagePublicRole?), TypeInfoPropertyName = "NullableLlmAsJudgeMessagePublicRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeModelParametersPublicApi?), TypeInfoPropertyName = "NullableLlmAsJudgeModelParametersPublicApi2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.LlmAsJudgeOutputSchemaPublicType?), TypeInfoPropertyName = "NullableLlmAsJudgeOutputSchemaPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanFilterPublicOperator?), TypeInfoPropertyName = "NullableSpanFilterPublicOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceFilterPublicOperator?), TypeInfoPropertyName = "NullableTraceFilterPublicOperator2")]
@@ -1523,12 +1529,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LocalRunnerJob>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LocalRunner>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.BridgeCommandItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMetric>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMessage>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMetricWrite>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMessageWrite>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.OptimizationPublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMetricPublic>))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1539,6 +1539,12 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMetric>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMessage>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMetricWrite>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMessageWrite>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.OptimizationPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMetricPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.StudioMessagePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.PromptPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectPublic>))]
@@ -1819,6 +1825,10 @@ namespace Opik
 
                     || typeToConvert == typeof(global::Opik.LlmAsJudgeMessageRole?)
 
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersApi)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersApi?)
+
                     || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaType)
 
                     || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaType?)
@@ -1855,6 +1865,10 @@ namespace Opik
 
                     || typeToConvert == typeof(global::Opik.LlmAsJudgeMessageWriteRole?)
 
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersWriteApi)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersWriteApi?)
+
                     || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaWriteType)
 
                     || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaWriteType?)
@@ -1890,6 +1904,10 @@ namespace Opik
                     || typeToConvert == typeof(global::Opik.LlmAsJudgeMessagePublicRole)
 
                     || typeToConvert == typeof(global::Opik.LlmAsJudgeMessagePublicRole?)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersPublicApi)
+
+                    || typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersPublicApi?)
 
                     || typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaPublicType)
 
@@ -3064,6 +3082,16 @@ namespace Opik
                     return new global::Opik.JsonConverters.LlmAsJudgeMessageRoleNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersApi))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeModelParametersApiJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersApi?))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeModelParametersApiNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaType))
                 {
                     return new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaTypeJsonConverter();
@@ -3154,6 +3182,16 @@ namespace Opik
                     return new global::Opik.JsonConverters.LlmAsJudgeMessageWriteRoleNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersWriteApi))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeModelParametersWriteApiJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersWriteApi?))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeModelParametersWriteApiNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaWriteType))
                 {
                     return new global::Opik.JsonConverters.LlmAsJudgeOutputSchemaWriteTypeJsonConverter();
@@ -3242,6 +3280,16 @@ namespace Opik
                 if (typeToConvert == typeof(global::Opik.LlmAsJudgeMessagePublicRole?))
                 {
                     return new global::Opik.JsonConverters.LlmAsJudgeMessagePublicRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersPublicApi))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeModelParametersPublicApiJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.LlmAsJudgeModelParametersPublicApi?))
+                {
+                    return new global::Opik.JsonConverters.LlmAsJudgeModelParametersPublicApiNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Opik.LlmAsJudgeOutputSchemaPublicType))
