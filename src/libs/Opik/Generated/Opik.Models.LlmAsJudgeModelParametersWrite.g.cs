@@ -34,6 +34,13 @@ namespace Opik
         public global::Opik.JsonNodeWrite? CustomParameters { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("api")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.LlmAsJudgeModelParametersWriteApiJsonConverter))]
+        public global::Opik.LlmAsJudgeModelParametersWriteApi? Api { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -46,6 +53,7 @@ namespace Opik
         /// <param name="temperature"></param>
         /// <param name="seed"></param>
         /// <param name="customParameters"></param>
+        /// <param name="api"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -53,12 +61,14 @@ namespace Opik
             string name,
             double? temperature,
             int? seed,
-            global::Opik.JsonNodeWrite? customParameters)
+            global::Opik.JsonNodeWrite? customParameters,
+            global::Opik.LlmAsJudgeModelParametersWriteApi? api)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Temperature = temperature;
             this.Seed = seed;
             this.CustomParameters = customParameters;
+            this.Api = api;
         }
 
         /// <summary>

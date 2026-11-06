@@ -17,7 +17,7 @@ namespace Opik
         public string? TokenUrl { get; set; }
 
         /// <summary>
-        /// How credentials are sent: form body (default), JSON body, or basic auth (id/secret in an HTTP Basic header, remaining fields in the form body)
+        /// How credentials are sent: form body (default), JSON body, or basic auth (client_id/client_secret, or username/password, in an HTTP Basic header; remaining fields in the form body)
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("send_as")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Opik.JsonConverters.ProviderAuthConfigWriteSendAsJsonConverter))]
@@ -30,7 +30,7 @@ namespace Opik
         public global::System.Collections.Generic.IList<global::Opik.CredentialWrite>? Credentials { get; set; }
 
         /// <summary>
-        /// Field holding the token in the reply; dot-path for nested replies<br/>
+        /// Field holding the token in the reply; dot-path for nested replies. A reply that is the bare token itself (plain text or a JSON string) is used as-is and needs fallback_ttl_seconds<br/>
         /// Example: access_token
         /// </summary>
         /// <example>access_token</example>
@@ -65,13 +65,13 @@ namespace Opik
         /// Example: https://developer.api.example.com/authentication/v1/token
         /// </param>
         /// <param name="sendAs">
-        /// How credentials are sent: form body (default), JSON body, or basic auth (id/secret in an HTTP Basic header, remaining fields in the form body)
+        /// How credentials are sent: form body (default), JSON body, or basic auth (client_id/client_secret, or username/password, in an HTTP Basic header; remaining fields in the form body)
         /// </param>
         /// <param name="credentials">
         /// Fields sent to the token URL. Values flagged as secret are write-only: they read back as the '__SECRET__' sentinel
         /// </param>
         /// <param name="tokenField">
-        /// Field holding the token in the reply; dot-path for nested replies<br/>
+        /// Field holding the token in the reply; dot-path for nested replies. A reply that is the bare token itself (plain text or a JSON string) is used as-is and needs fallback_ttl_seconds<br/>
         /// Example: access_token
         /// </param>
         /// <param name="expiresField">
