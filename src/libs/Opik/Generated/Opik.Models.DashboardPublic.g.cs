@@ -34,12 +34,6 @@ namespace Opik
         public required string Name { get; set; }
 
         /// <summary>
-        /// Included only in responses
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("slug")]
-        public string? Slug { get; set; }
-
-        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
@@ -110,9 +104,6 @@ namespace Opik
         /// <param name="projectId">
         /// Project ID. Takes precedence over project_name when both are provided.
         /// </param>
-        /// <param name="slug">
-        /// Included only in responses
-        /// </param>
         /// <param name="type"></param>
         /// <param name="scope">
         /// Included only in responses
@@ -139,7 +130,6 @@ namespace Opik
             global::System.Guid? id,
             string? workspaceId,
             global::System.Guid? projectId,
-            string? slug,
             global::Opik.DashboardPublicType? type,
             global::Opik.DashboardPublicScope? scope,
             string? description,
@@ -152,7 +142,6 @@ namespace Opik
             this.WorkspaceId = workspaceId;
             this.ProjectId = projectId;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Slug = slug;
             this.Type = type;
             this.Scope = scope;
             this.Description = description;

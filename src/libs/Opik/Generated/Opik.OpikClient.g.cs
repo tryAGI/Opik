@@ -243,6 +243,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Workspace guardrail policy resources.
+        /// </summary>
+        public GuardrailPoliciesClient GuardrailPolicies => new GuardrailPoliciesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Guardrails related resources.
         /// </summary>
         public GuardrailsClient Guardrails => new GuardrailsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
