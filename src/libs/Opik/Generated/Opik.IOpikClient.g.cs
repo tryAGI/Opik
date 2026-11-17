@@ -174,6 +174,11 @@ namespace Opik
         public FeedbackDefinitionsClient FeedbackDefinitions { get; }
 
         /// <summary>
+        /// Workspace guardrail policy resources.
+        /// </summary>
+        public GuardrailPoliciesClient GuardrailPolicies { get; }
+
+        /// <summary>
         /// Guardrails related resources.
         /// </summary>
         public GuardrailsClient Guardrails { get; }

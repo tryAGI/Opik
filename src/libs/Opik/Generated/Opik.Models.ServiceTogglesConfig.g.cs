@@ -46,6 +46,13 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("guardrailsValidationsEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool GuardrailsValidationsEnabled { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("opikAIEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OpikAIEnabled { get; set; }
@@ -223,6 +230,7 @@ namespace Opik
         /// <param name="spanLlmAsJudgeEnabled"></param>
         /// <param name="spanUserDefinedMetricPythonEnabled"></param>
         /// <param name="guardrailsEnabled"></param>
+        /// <param name="guardrailsValidationsEnabled"></param>
         /// <param name="opikAIEnabled"></param>
         /// <param name="alertsEnabled"></param>
         /// <param name="welcomeWizardEnabled"></param>
@@ -258,6 +266,7 @@ namespace Opik
             bool spanLlmAsJudgeEnabled,
             bool spanUserDefinedMetricPythonEnabled,
             bool guardrailsEnabled,
+            bool guardrailsValidationsEnabled,
             bool opikAIEnabled,
             bool alertsEnabled,
             bool welcomeWizardEnabled,
@@ -288,6 +297,7 @@ namespace Opik
             this.SpanLlmAsJudgeEnabled = spanLlmAsJudgeEnabled;
             this.SpanUserDefinedMetricPythonEnabled = spanUserDefinedMetricPythonEnabled;
             this.GuardrailsEnabled = guardrailsEnabled;
+            this.GuardrailsValidationsEnabled = guardrailsValidationsEnabled;
             this.OpikAIEnabled = opikAIEnabled;
             this.AlertsEnabled = alertsEnabled;
             this.WelcomeWizardEnabled = welcomeWizardEnabled;
