@@ -363,13 +363,13 @@ namespace Opik
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -380,7 +380,7 @@ namespace Opik
 
                                 throw global::Opik.ApiException<byte[]>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_400 is { Length: > 0 } ? __content_400 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
                                     responseBody: __content_400,
                                     responseObject: __value_400,
@@ -400,13 +400,13 @@ namespace Opik
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -417,7 +417,7 @@ namespace Opik
 
                                 throw global::Opik.ApiException<byte[]>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_401 is { Length: > 0 } ? __content_401 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
                                     responseBody: __content_401,
                                     responseObject: __value_401,
@@ -460,7 +460,7 @@ namespace Opik
 
                                 throw global::Opik.ApiException.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __ex,
                                     responseBody: __content,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -768,13 +768,13 @@ namespace Opik
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -785,7 +785,7 @@ namespace Opik
 
                                 throw global::Opik.ApiException<byte[]>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_400 is { Length: > 0 } ? __content_400 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
                                     responseBody: __content_400,
                                     responseObject: __value_400,
@@ -805,13 +805,13 @@ namespace Opik
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -822,7 +822,7 @@ namespace Opik
 
                                 throw global::Opik.ApiException<byte[]>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_401 is { Length: > 0 } ? __content_401 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
                                     responseBody: __content_401,
                                     responseObject: __value_401,
@@ -869,7 +869,7 @@ namespace Opik
 
                                 throw global::Opik.ApiException.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __ex,
                                     responseBody: __content,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -1176,13 +1176,13 @@ namespace Opik
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(byte[]), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -1193,7 +1193,7 @@ namespace Opik
 
                                 throw global::Opik.ApiException<byte[]>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_400 is { Length: > 0 } ? __content_400 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
                                     responseBody: __content_400,
                                     responseObject: __value_400,
@@ -1213,13 +1213,13 @@ namespace Opik
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : (byte[]?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(byte[]), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -1230,7 +1230,7 @@ namespace Opik
 
                                 throw global::Opik.ApiException<byte[]>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_401 is { Length: > 0 } ? __content_401 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
                                     responseBody: __content_401,
                                     responseObject: __value_401,
@@ -1310,7 +1310,7 @@ namespace Opik
 
                                     throw global::Opik.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
