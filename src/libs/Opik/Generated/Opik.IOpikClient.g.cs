@@ -294,6 +294,11 @@ namespace Opik
         public TracesClient Traces { get; }
 
         /// <summary>
+        /// Generated view resources.
+        /// </summary>
+        public ViewsClient Views { get; }
+
+        /// <summary>
         /// Welcome wizard tracking resources.
         /// </summary>
         public WelcomeWizardClient WelcomeWizard { get; }

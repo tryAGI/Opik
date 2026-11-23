@@ -483,6 +483,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Generated view resources.
+        /// </summary>
+        public ViewsClient Views => new ViewsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Welcome wizard tracking resources.
         /// </summary>
         public WelcomeWizardClient WelcomeWizard => new WelcomeWizardClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
