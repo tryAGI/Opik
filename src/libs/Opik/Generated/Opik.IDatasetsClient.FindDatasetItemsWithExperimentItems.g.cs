@@ -19,8 +19,8 @@ namespace Opik
         /// <param name="experimentIds">
         /// JSON array of experiment IDs. Omit to include every regular experiment on the dataset (optimizer trial, mini-batch and mutation experiments are excluded); item filters are then evaluated against the newest version of each item that those experiments reference
         /// </param>
-        /// <param name="datasetVersion">
-        /// Dataset version hash or tag. Only experiments run against this version are included. Requires experiment_ids to be omitted. Returns 404 if the version does not exist
+        /// <param name="datasetVersions">
+        /// JSON array of dataset version hashes or tags, such as 'latest'. Only experiments run against one of these versions are included; omit for every version. Requires experiment_ids to be omitted. Returns 404 if any version does not exist
         /// </param>
         /// <param name="filters"></param>
         /// <param name="sorting"></param>
@@ -36,7 +36,7 @@ namespace Opik
             int? page = default,
             int? size = default,
             string? experimentIds = default,
-            string? datasetVersion = default,
+            string? datasetVersions = default,
             string? filters = default,
             string? sorting = default,
             string? search = default,
@@ -58,8 +58,8 @@ namespace Opik
         /// <param name="experimentIds">
         /// JSON array of experiment IDs. Omit to include every regular experiment on the dataset (optimizer trial, mini-batch and mutation experiments are excluded); item filters are then evaluated against the newest version of each item that those experiments reference
         /// </param>
-        /// <param name="datasetVersion">
-        /// Dataset version hash or tag. Only experiments run against this version are included. Requires experiment_ids to be omitted. Returns 404 if the version does not exist
+        /// <param name="datasetVersions">
+        /// JSON array of dataset version hashes or tags, such as 'latest'. Only experiments run against one of these versions are included; omit for every version. Requires experiment_ids to be omitted. Returns 404 if any version does not exist
         /// </param>
         /// <param name="filters"></param>
         /// <param name="sorting"></param>
@@ -75,7 +75,7 @@ namespace Opik
             int? page = default,
             int? size = default,
             string? experimentIds = default,
-            string? datasetVersion = default,
+            string? datasetVersions = default,
             string? filters = default,
             string? sorting = default,
             string? search = default,

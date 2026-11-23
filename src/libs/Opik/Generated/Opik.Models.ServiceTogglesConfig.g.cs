@@ -88,6 +88,13 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modelPricesEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool ModelPricesEnabled { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetVersioningEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool DatasetVersioningEnabled { get; set; }
@@ -236,6 +243,7 @@ namespace Opik
         /// <param name="welcomeWizardEnabled"></param>
         /// <param name="exportEnabled"></param>
         /// <param name="costIntelligenceEnabled"></param>
+        /// <param name="modelPricesEnabled"></param>
         /// <param name="datasetVersioningEnabled"></param>
         /// <param name="datasetExportEnabled"></param>
         /// <param name="demoDataEnabled"></param>
@@ -272,6 +280,7 @@ namespace Opik
             bool welcomeWizardEnabled,
             bool exportEnabled,
             bool costIntelligenceEnabled,
+            bool modelPricesEnabled,
             bool datasetVersioningEnabled,
             bool datasetExportEnabled,
             bool demoDataEnabled,
@@ -303,6 +312,7 @@ namespace Opik
             this.WelcomeWizardEnabled = welcomeWizardEnabled;
             this.ExportEnabled = exportEnabled;
             this.CostIntelligenceEnabled = costIntelligenceEnabled;
+            this.ModelPricesEnabled = modelPricesEnabled;
             this.DatasetVersioningEnabled = datasetVersioningEnabled;
             this.DatasetExportEnabled = datasetExportEnabled;
             this.DemoDataEnabled = demoDataEnabled;
