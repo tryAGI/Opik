@@ -155,6 +155,12 @@ namespace Opik
         public global::Opik.ExperimentItemStatus? Status { get; set; }
 
         /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dataset_item_data")]
+        public global::Opik.JsonNode? DatasetItemData { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -216,6 +222,7 @@ namespace Opik
         /// <param name="status">
         /// Included only in responses
         /// </param>
+        /// <param name="datasetItemData"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -242,7 +249,8 @@ namespace Opik
             string? description,
             global::Opik.ExecutionPolicy? executionPolicy,
             global::System.Collections.Generic.IList<global::Opik.AssertionResult>? assertionResults,
-            global::Opik.ExperimentItemStatus? status)
+            global::Opik.ExperimentItemStatus? status,
+            global::Opik.JsonNode? datasetItemData)
         {
             this.Id = id;
             this.ExperimentId = experimentId;
@@ -267,6 +275,7 @@ namespace Opik
             this.ExecutionPolicy = executionPolicy;
             this.AssertionResults = assertionResults;
             this.Status = status;
+            this.DatasetItemData = datasetItemData;
         }
 
         /// <summary>
