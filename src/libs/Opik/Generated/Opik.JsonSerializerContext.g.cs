@@ -761,6 +761,14 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.NumericalFeedbackDefinitionUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.NumericalFeedbackDefinitionUpdateVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.NumericalFeedbackDetailUpdate))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailModel))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailTrainingRun))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailModelPage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.GuardrailModel>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailTrainingRunStatus), TypeInfoPropertyName = "GuardrailTrainingRunStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailTrainingRunPage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.GuardrailTrainingRun>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailModelUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailPolicy))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailPolicyExecutionScope), TypeInfoPropertyName = "GuardrailPolicyExecutionScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.GuardrailPolicyRule>))]
@@ -1011,14 +1019,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRulePublic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRulePublicLevel), TypeInfoPropertyName = "RetentionRulePublicLevel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRulePublicRetention), TypeInfoPropertyName = "RetentionRulePublicRetention2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRuleWrite))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRuleWriteRetention), TypeInfoPropertyName = "RetentionRuleWriteRetention2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRulePagePublic))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.RetentionRulePublic>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ServiceTogglesConfig))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanBatchUpdate))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanUpdate))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanUpdateType), TypeInfoPropertyName = "SpanUpdateType2")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1029,6 +1029,14 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRuleWrite))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRuleWriteRetention), TypeInfoPropertyName = "RetentionRuleWriteRetention2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetentionRulePagePublic))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.RetentionRulePublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ServiceTogglesConfig))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanBatchUpdate))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanUpdate))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanUpdateType), TypeInfoPropertyName = "SpanUpdateType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanUpdateSource), TypeInfoPropertyName = "SpanUpdateSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanWrite))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanWriteType), TypeInfoPropertyName = "SpanWriteType2")]
@@ -1057,6 +1065,15 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.SpanSearchStreamRequestPublicExcludeItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem), TypeInfoPropertyName = "SpanSearchStreamRequestPublicExcludeItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ExistenceResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.Attempt))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttemptStatus), TypeInfoPropertyName = "AttemptStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DayCount))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.OtherStats))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.DayCount>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectTopics))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectTopicsStatus), TypeInfoPropertyName = "ProjectTopicsStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.TopicStats>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TopicStats))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceBatchUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdate))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdateSource), TypeInfoPropertyName = "TraceUpdateSource2")]
@@ -1143,6 +1160,8 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromCsvRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromJsonRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateDatasetItemsFromJsonRequestFormat), TypeInfoPropertyName = "CreateDatasetItemsFromJsonRequestFormat2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CreateGuardrailModelRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.RetrainGuardrailModelRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Opik.LocalRunnerLogEntry>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesStatus), TypeInfoPropertyName = "FindAgentInsightsIssuesStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindAgentInsightsIssuesSeverity), TypeInfoPropertyName = "FindAgentInsightsIssuesSeverity2")]
@@ -1151,6 +1170,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DownloadAttachmentEntityType), TypeInfoPropertyName = "DownloadAttachmentEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UploadAttachmentEntityType), TypeInfoPropertyName = "UploadAttachmentEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindFeedbackDefinitionsType), TypeInfoPropertyName = "FindFeedbackDefinitionsType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindGuardrailModelsLatestRunStatus), TypeInfoPropertyName = "FindGuardrailModelsLatestRunStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindGuardrailPoliciesExecutionScope), TypeInfoPropertyName = "FindGuardrailPoliciesExecutionScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ListRunnersStatus), TypeInfoPropertyName = "ListRunnersStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindReportFailuresType), TypeInfoPropertyName = "FindReportFailuresType2")]
@@ -1339,6 +1359,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FeedbackPublicDiscriminatorType?), TypeInfoPropertyName = "NullableFeedbackPublicDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FeedbackUpdateType?), TypeInfoPropertyName = "NullableFeedbackUpdateType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FeedbackUpdateDiscriminatorType?), TypeInfoPropertyName = "NullableFeedbackUpdateDiscriminatorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailTrainingRunStatus?), TypeInfoPropertyName = "NullableGuardrailTrainingRunStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailPolicyExecutionScope?), TypeInfoPropertyName = "NullableGuardrailPolicyExecutionScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailPolicyRuleType?), TypeInfoPropertyName = "NullableGuardrailPolicyRuleType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.GuardrailPolicyRuleWriteType?), TypeInfoPropertyName = "NullableGuardrailPolicyRuleWriteType2")]
@@ -1420,6 +1441,8 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FeedbackScoreBatchItemSource?), TypeInfoPropertyName = "NullableFeedbackScoreBatchItemSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublicType?), TypeInfoPropertyName = "NullableSpanSearchStreamRequestPublicType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem?), TypeInfoPropertyName = "NullableSpanSearchStreamRequestPublicExcludeItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.AttemptStatus?), TypeInfoPropertyName = "NullableAttemptStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ProjectTopicsStatus?), TypeInfoPropertyName = "NullableProjectTopicsStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceUpdateSource?), TypeInfoPropertyName = "NullableTraceUpdateSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.TraceWriteSource?), TypeInfoPropertyName = "NullableTraceWriteSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.CheckPublicName?), TypeInfoPropertyName = "NullableCheckPublicName2")]
@@ -1450,6 +1473,7 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.DownloadAttachmentEntityType?), TypeInfoPropertyName = "NullableDownloadAttachmentEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.UploadAttachmentEntityType?), TypeInfoPropertyName = "NullableUploadAttachmentEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindFeedbackDefinitionsType?), TypeInfoPropertyName = "NullableFindFeedbackDefinitionsType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindGuardrailModelsLatestRunStatus?), TypeInfoPropertyName = "NullableFindGuardrailModelsLatestRunStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindGuardrailPoliciesExecutionScope?), TypeInfoPropertyName = "NullableFindGuardrailPoliciesExecutionScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.ListRunnersStatus?), TypeInfoPropertyName = "NullableListRunnersStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Opik.FindReportFailuresType?), TypeInfoPropertyName = "NullableFindReportFailuresType2")]
@@ -1505,6 +1529,16 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Attachment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.MultipartUploadPart>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ProjectReference>))]
+    internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    ///
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceThreadFilter>))]
@@ -1529,16 +1563,6 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ToolCall>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ChatCompletionChoice>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<int>))]
-    internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
-    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.LogProb>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Message>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Tool>))]
@@ -1595,6 +1619,8 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.ScoreNamePublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.GroupDetail>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackObjectPublic>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.GuardrailModel>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.GuardrailTrainingRun>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.GuardrailPolicyRule>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.GuardrailPolicyRuleWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.GuardrailPolicyPublic>))]
@@ -1637,6 +1663,8 @@ namespace Opik
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanPublic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.FeedbackScoreBatchItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.SpanSearchStreamRequestPublicExcludeItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.DayCount>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TopicStats>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.Trace>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.TraceWrite>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Opik.CheckPublic>))]
@@ -2340,6 +2368,10 @@ namespace Opik
 
                     || typeToConvert == typeof(global::Opik.FeedbackUpdateDiscriminatorType?)
 
+                    || typeToConvert == typeof(global::Opik.GuardrailTrainingRunStatus)
+
+                    || typeToConvert == typeof(global::Opik.GuardrailTrainingRunStatus?)
+
                     || typeToConvert == typeof(global::Opik.GuardrailPolicyExecutionScope)
 
                     || typeToConvert == typeof(global::Opik.GuardrailPolicyExecutionScope?)
@@ -2664,6 +2696,14 @@ namespace Opik
 
                     || typeToConvert == typeof(global::Opik.SpanSearchStreamRequestPublicExcludeItem?)
 
+                    || typeToConvert == typeof(global::Opik.AttemptStatus)
+
+                    || typeToConvert == typeof(global::Opik.AttemptStatus?)
+
+                    || typeToConvert == typeof(global::Opik.ProjectTopicsStatus)
+
+                    || typeToConvert == typeof(global::Opik.ProjectTopicsStatus?)
+
                     || typeToConvert == typeof(global::Opik.TraceUpdateSource)
 
                     || typeToConvert == typeof(global::Opik.TraceUpdateSource?)
@@ -2783,6 +2823,10 @@ namespace Opik
                     || typeToConvert == typeof(global::Opik.FindFeedbackDefinitionsType)
 
                     || typeToConvert == typeof(global::Opik.FindFeedbackDefinitionsType?)
+
+                    || typeToConvert == typeof(global::Opik.FindGuardrailModelsLatestRunStatus)
+
+                    || typeToConvert == typeof(global::Opik.FindGuardrailModelsLatestRunStatus?)
 
                     || typeToConvert == typeof(global::Opik.FindGuardrailPoliciesExecutionScope)
 
@@ -4333,6 +4377,16 @@ namespace Opik
                     return new global::Opik.JsonConverters.FeedbackUpdateDiscriminatorTypeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Opik.GuardrailTrainingRunStatus))
+                {
+                    return new global::Opik.JsonConverters.GuardrailTrainingRunStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.GuardrailTrainingRunStatus?))
+                {
+                    return new global::Opik.JsonConverters.GuardrailTrainingRunStatusNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Opik.GuardrailPolicyExecutionScope))
                 {
                     return new global::Opik.JsonConverters.GuardrailPolicyExecutionScopeJsonConverter();
@@ -5143,6 +5197,26 @@ namespace Opik
                     return new global::Opik.JsonConverters.SpanSearchStreamRequestPublicExcludeItemNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Opik.AttemptStatus))
+                {
+                    return new global::Opik.JsonConverters.AttemptStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.AttemptStatus?))
+                {
+                    return new global::Opik.JsonConverters.AttemptStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectTopicsStatus))
+                {
+                    return new global::Opik.JsonConverters.ProjectTopicsStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.ProjectTopicsStatus?))
+                {
+                    return new global::Opik.JsonConverters.ProjectTopicsStatusNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Opik.TraceUpdateSource))
                 {
                     return new global::Opik.JsonConverters.TraceUpdateSourceJsonConverter();
@@ -5441,6 +5515,16 @@ namespace Opik
                 if (typeToConvert == typeof(global::Opik.FindFeedbackDefinitionsType?))
                 {
                     return new global::Opik.JsonConverters.FindFeedbackDefinitionsTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindGuardrailModelsLatestRunStatus))
+                {
+                    return new global::Opik.JsonConverters.FindGuardrailModelsLatestRunStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Opik.FindGuardrailModelsLatestRunStatus?))
+                {
+                    return new global::Opik.JsonConverters.FindGuardrailModelsLatestRunStatusNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Opik.FindGuardrailPoliciesExecutionScope))

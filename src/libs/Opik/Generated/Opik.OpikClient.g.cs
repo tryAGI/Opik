@@ -243,6 +243,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Guardrail models a workspace trains on its own labelled data.
+        /// </summary>
+        public GuardrailModelsClient GuardrailModels => new GuardrailModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Workspace guardrail policy resources.
         /// </summary>
         public GuardrailPoliciesClient GuardrailPolicies => new GuardrailPoliciesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
@@ -466,6 +476,16 @@ namespace Opik
         /// System usage related resource.
         /// </summary>
         public SystemUsageClient SystemUsage => new SystemUsageClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
+        /// Project topics and internal topics operations.
+        /// </summary>
+        public TopicsClient Topics => new TopicsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContextProvider = JsonSerializerContextProvider,

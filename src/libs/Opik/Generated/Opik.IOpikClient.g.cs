@@ -174,6 +174,11 @@ namespace Opik
         public FeedbackDefinitionsClient FeedbackDefinitions { get; }
 
         /// <summary>
+        /// Guardrail models a workspace trains on its own labelled data.
+        /// </summary>
+        public GuardrailModelsClient GuardrailModels { get; }
+
+        /// <summary>
         /// Workspace guardrail policy resources.
         /// </summary>
         public GuardrailPoliciesClient GuardrailPolicies { get; }
@@ -287,6 +292,11 @@ namespace Opik
         /// System usage related resource.
         /// </summary>
         public SystemUsageClient SystemUsage { get; }
+
+        /// <summary>
+        /// Project topics and internal topics operations.
+        /// </summary>
+        public TopicsClient Topics { get; }
 
         /// <summary>
         /// Trace related resources.
