@@ -53,6 +53,13 @@ namespace Opik
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("guardrailsTrainingEnabled")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool GuardrailsTrainingEnabled { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("opikAIEnabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OpikAIEnabled { get; set; }
@@ -224,6 +231,12 @@ namespace Opik
         public bool? CustomChartsEnabledForWorkspace { get; set; }
 
         /// <summary>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("topicsEnabled")]
+        public bool? TopicsEnabled { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -238,6 +251,7 @@ namespace Opik
         /// <param name="spanUserDefinedMetricPythonEnabled"></param>
         /// <param name="guardrailsEnabled"></param>
         /// <param name="guardrailsValidationsEnabled"></param>
+        /// <param name="guardrailsTrainingEnabled"></param>
         /// <param name="opikAIEnabled"></param>
         /// <param name="alertsEnabled"></param>
         /// <param name="welcomeWizardEnabled"></param>
@@ -265,6 +279,9 @@ namespace Opik
         /// <param name="customChartsEnabledForWorkspace">
         /// Included only in responses
         /// </param>
+        /// <param name="topicsEnabled">
+        /// Included only in responses
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -275,6 +292,7 @@ namespace Opik
             bool spanUserDefinedMetricPythonEnabled,
             bool guardrailsEnabled,
             bool guardrailsValidationsEnabled,
+            bool guardrailsTrainingEnabled,
             bool opikAIEnabled,
             bool alertsEnabled,
             bool welcomeWizardEnabled,
@@ -299,7 +317,8 @@ namespace Opik
             bool annotationQueueAutomationEnabled,
             bool eventBridgeAlertsEnabled,
             int? defaultPageSize,
-            bool? customChartsEnabledForWorkspace)
+            bool? customChartsEnabledForWorkspace,
+            bool? topicsEnabled)
         {
             this.PythonEvaluatorEnabled = pythonEvaluatorEnabled;
             this.TraceThreadPythonEvaluatorEnabled = traceThreadPythonEvaluatorEnabled;
@@ -307,6 +326,7 @@ namespace Opik
             this.SpanUserDefinedMetricPythonEnabled = spanUserDefinedMetricPythonEnabled;
             this.GuardrailsEnabled = guardrailsEnabled;
             this.GuardrailsValidationsEnabled = guardrailsValidationsEnabled;
+            this.GuardrailsTrainingEnabled = guardrailsTrainingEnabled;
             this.OpikAIEnabled = opikAIEnabled;
             this.AlertsEnabled = alertsEnabled;
             this.WelcomeWizardEnabled = welcomeWizardEnabled;
@@ -332,6 +352,7 @@ namespace Opik
             this.EventBridgeAlertsEnabled = eventBridgeAlertsEnabled;
             this.DefaultPageSize = defaultPageSize;
             this.CustomChartsEnabledForWorkspace = customChartsEnabledForWorkspace;
+            this.TopicsEnabled = topicsEnabled;
         }
 
         /// <summary>
