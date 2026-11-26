@@ -123,6 +123,16 @@ namespace Opik
         };
 
         /// <summary>
+        /// Free-form analytics SQL for Custom Charts.
+        /// </summary>
+        public AnalyticsQueriesClient AnalyticsQueries => new AnalyticsQueriesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Private annotation queue operations.
         /// </summary>
         public AnnotationQueuesClient AnnotationQueues => new AnnotationQueuesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
@@ -483,7 +493,7 @@ namespace Opik
         };
 
         /// <summary>
-        /// Project topics and internal topics operations.
+        /// Internal topics operations.
         /// </summary>
         public TopicsClient Topics => new TopicsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

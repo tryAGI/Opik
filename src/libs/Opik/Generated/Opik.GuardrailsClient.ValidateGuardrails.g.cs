@@ -463,7 +463,7 @@ namespace Opik
                                         h => h.Key,
                                         h => h.Value));
                             }
-                            // Could not verify with the platform that guardrails are enabled for the workspace's organization; retry later
+                            // Could not verify with the platform that guardrails are enabled for the workspace's organization, or the decision service could not run the checks; no verdict is given, retry later
                             if ((int)__response.StatusCode == 503)
                             {
                                 string? __content_503 = null;
