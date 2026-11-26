@@ -114,6 +114,11 @@ namespace Opik
         public AlertsClient Alerts { get; }
 
         /// <summary>
+        /// Free-form analytics SQL for Custom Charts.
+        /// </summary>
+        public AnalyticsQueriesClient AnalyticsQueries { get; }
+
+        /// <summary>
         /// Private annotation queue operations.
         /// </summary>
         public AnnotationQueuesClient AnnotationQueues { get; }
@@ -294,7 +299,7 @@ namespace Opik
         public SystemUsageClient SystemUsage { get; }
 
         /// <summary>
-        /// Project topics and internal topics operations.
+        /// Internal topics operations.
         /// </summary>
         public TopicsClient Topics { get; }
 
